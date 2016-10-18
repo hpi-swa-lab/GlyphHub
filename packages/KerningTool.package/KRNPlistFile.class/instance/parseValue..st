@@ -11,5 +11,5 @@ parseValue: aCollection
 		[#date] -> [ self shouldNotImplement ].
 		[#data] -> [ self shouldNotImplement ].
 		[#array] -> [ " TODO " ].
-		[#dict] -> [ self parseValueDict: first ]
+		[#dict] -> [ self parseValueDict: first into: OrderedDictionary new ]
 	}

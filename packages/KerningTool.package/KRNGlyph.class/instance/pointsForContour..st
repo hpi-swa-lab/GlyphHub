@@ -1,41 +1,27 @@
 private
 pointsForContour: anXMLNode
-	| type coord closed first segments previousCoord controlPoints elements points |
-	points := OrderedCollection new.
+	| elements previous controlPoints segments |
+	elements := anXMLNode elements.
 	segments := OrderedCollection new.
 	controlPoints := OrderedCollection new.
-	closed := true.
-	first := nil.
-	previousCoord := 0 @ 0.
+	previous := self coordFromNode: elements first.
 	
-	elements := anXMLNode elements.
-	(elements first attributeAt: #type ifAbsent: [ #offcurve ]) = #curve ifTrue: [
-		elements add: elements removeFirst ].
-	
-	elements do: [ :point |
-		type := point attributeAt: #type.
-		coord := (point attributeAt: #x) asNumber @ (point attributeAt: #y) asNumber.
-		
-		first ifNil: [ first := coord ].
-		
-		type = #move ifTrue: [
-			closed := false ].
-		type = #line ifTrue: [
-			(point attributeAt: #smooth ifAbsent: [ 'no' ]) = 'yes'
-				ifTrue: [ segments add: (LineSegment from: previousCoord to: coord) asBezier2Segment ]
-				ifFalse: [ segments add: (Bezier2Segment from: previousCoord via: coord to: coord) ]].
-		type = #curve ifTrue: [
-			self assert: 2 = controlPoints size.
-			segments addAll: (Bezier3Segment from: previousCoord via: controlPoints first and: controlPoints second to: coord) asBezier2Segments ].
-		type = #qcurve ifTrue: [
-			self assert: 1 = controlPoints size.
-			segments add: (Bezier2Segment from: previousCoord via: controlPoints first to: coord) ].
-		(type isNil or: [type = #offcurve])
-			ifTrue: [ controlPoints add: coord ]
-			ifFalse: [ previousCoord := coord. controlPoints removeAll ]].
-	
-	segments ifNotEmpty: [
-		closed ifTrue: [ segments first start: segments last end ].
-				points addAll: (segments collect: [ :s | s controlPoints ]) flatten ].
+	" we have a closed (circular) shape, so first and last points match "
+	(self typeFromNode: elements first) = #move ifFalse: [
+		elements add: elements first ].
 
-	^points
+	(self typeFromNode: elements first) = #offcurve ifTrue: [
+		elements addFirst: elements last ].
+	
+	elements allButFirstDo: [ :point | | type coord |
+		type := self typeFromNode: point.
+		coord := self coordFromNode: point.
+		
+		type = #line ifTrue: [ segments add: (LineSegment from: previous to: coord) asBezier2Segment ].
+		type = #curve ifTrue: [ segments addAll: (Bezier3Segment from: previous via: controlPoints first and: controlPoints second to: coord) asBezier2Segments ].
+		type = #qcurve ifTrue: [ segments add: (Bezier2Segment from: previous via: controlPoints first to: coord) ].
+		type = #offcurve
+			ifTrue: [ controlPoints add: coord ]
+			ifFalse: [ previous := coord. controlPoints removeAll ]].
+	
+	^(segments collect: [ :s | s controlPoints ]) flatten

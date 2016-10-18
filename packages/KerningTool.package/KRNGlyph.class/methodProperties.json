@@ -1,11 +1,18 @@
 {
 	"class" : {
-		"newForPath:" : "TB 10/18/2016 16:03" },
+		"newForPath:" : "TB 10/18/2016 23:36" },
 	"instance" : {
-		"advance" : "TB 10/18/2016 16:01",
-		"drawOn:" : "TB 10/18/2016 15:59",
-		"drawOn:scaled:" : "TB 10/18/2016 16:34",
-		"initialize" : "TB 10/18/2016 16:13",
+		"advance" : "TB 10/18/2016 23:25",
+		"coordFromNode:" : "TB 10/18/2016 23:01",
+		"drawOn:" : "TB 10/19/2016 00:17",
+		"font" : "TB 10/18/2016 23:55",
+		"font:" : "TB 10/19/2016 00:13",
+		"initialize" : "TB 10/19/2016 00:13",
 		"path" : "TB 10/18/2016 16:01",
 		"path:" : "TB 10/18/2016 16:01",
-		"pointsForContour:" : "TB 10/18/2016 16:35" } }
+		"pointsForContour:" : "TB 10/19/2016 00:31",
+		"ptSize" : "TB 10/18/2016 23:39",
+		"ptSize:" : "TB 10/19/2016 00:13",
+		"scale" : "TB 10/18/2016 23:57",
+		"typeFromNode:" : "TB 10/18/2016 23:02",
+		"updateExtent" : "TB 10/19/2016 00:13" } }

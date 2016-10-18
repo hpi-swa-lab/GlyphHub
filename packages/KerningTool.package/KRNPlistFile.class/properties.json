@@ -6,10 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"path",
-		"data" ],
+		"path" ],
 	"name" : "KRNPlistFile",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "OrderedDictionary",
 	"type" : "normal" }
