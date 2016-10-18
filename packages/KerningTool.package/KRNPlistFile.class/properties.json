@@ -1,0 +1,15 @@
+{
+	"category" : "KerningTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"path",
+		"data" ],
+	"name" : "KRNPlistFile",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
