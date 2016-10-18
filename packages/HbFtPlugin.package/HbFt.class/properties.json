@@ -1,0 +1,14 @@
+{
+	"category" : "HbFtPlugin",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "HbFt",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
