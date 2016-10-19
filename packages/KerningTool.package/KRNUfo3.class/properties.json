@@ -1,0 +1,18 @@
+{
+	"category" : "KerningTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"path",
+		"fontinfo",
+		"kerning",
+		"metainfo",
+		"glyphContents" ],
+	"name" : "KRNUfo3",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
