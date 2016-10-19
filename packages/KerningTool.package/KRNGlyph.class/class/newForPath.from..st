@@ -1,6 +1,7 @@
 as yet unclassified
-newForPath: aString
+newForPath: aString from: aFont
 	^self basicNew
 		path: aString;
+		font: aFont;
 		initialize;
 		yourself

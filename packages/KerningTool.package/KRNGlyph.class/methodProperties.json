@@ -1,14 +1,15 @@
 {
 	"class" : {
-		"newForPath:" : "TB 10/18/2016 23:36" },
+		"newForPath:from:" : "TB 10/19/2016 09:32" },
 	"instance" : {
 		"advance" : "TB 10/18/2016 23:25",
 		"coordFromNode:" : "TB 10/18/2016 23:01",
 		"curveFrom:via:to:" : "TB 10/19/2016 09:23",
+		"displaysUnicode:" : "TB 10/19/2016 09:51",
 		"drawOn:" : "TB 10/19/2016 00:17",
 		"font" : "TB 10/18/2016 23:55",
-		"font:" : "TB 10/19/2016 00:13",
-		"initialize" : "TB 10/19/2016 00:13",
+		"font:" : "TB 10/19/2016 09:33",
+		"initialize" : "TB 10/19/2016 09:55",
 		"lineFrom:to:" : "TB 10/19/2016 09:21",
 		"path" : "TB 10/18/2016 16:01",
 		"path:" : "TB 10/18/2016 16:01",
@@ -18,4 +19,5 @@
 		"qcurveFrom:via:to:" : "TB 10/19/2016 09:24",
 		"scale" : "TB 10/18/2016 23:57",
 		"typeFromNode:" : "TB 10/18/2016 23:02",
+		"unicodeCodePoints" : "TB 10/19/2016 09:43",
 		"updateExtent" : "TB 10/19/2016 00:13" } }

@@ -11,7 +11,8 @@
 		"unitsPerEm",
 		"fontHeight",
 		"ptSize",
-		"font" ],
+		"font",
+		"unicodeCodePoints" ],
 	"name" : "KRNGlyph",
 	"pools" : [
 		 ],

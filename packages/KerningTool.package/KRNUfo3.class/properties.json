@@ -10,7 +10,9 @@
 		"fontinfo",
 		"kerning",
 		"metainfo",
-		"glyphContents" ],
+		"glyphContents",
+		"glyphs",
+		"codePointsTable" ],
 	"name" : "KRNUfo3",
 	"pools" : [
 		 ],
