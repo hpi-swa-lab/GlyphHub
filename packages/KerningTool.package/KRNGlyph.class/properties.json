@@ -6,13 +6,13 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"path",
 		"glif",
 		"unitsPerEm",
 		"fontHeight",
 		"ptSize",
 		"font",
-		"unicodeCodePoints" ],
+		"unicodeCodePoints",
+		"shapes" ],
 	"name" : "KRNGlyph",
 	"pools" : [
 		 ],

@@ -1,12 +1,12 @@
 initialization
 initialize
+	| shape |
 	super initialize.
 	
-	FileDirectory default readOnlyFileNamed: self path do: [ :stream |
-		glif := (XMLDOMParser parseDocumentFrom: stream) root.
-		
-		unicodeCodePoints := OrderedCollection new.
-		glif tagsNamed: #unicode do: [ :c | unicodeCodePoints add: ('16r', (c attributeAt: #hex)) asNumber ]].
+	shapes := OrderedCollection new.
+	(glif firstTagNamed: #outline) tagsNamed: #contour do: [ :contour |
+		shape := self pointsForContour: contour.
+		shape ifNotEmpty: [ shapes add: shape asPointArray ]].
 	
 	self
 		color: Color white;

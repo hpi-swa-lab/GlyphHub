@@ -1,11 +1,6 @@
 drawing
 drawOn: aCanvas
-	| shapes shape scale |
-	shapes := OrderedCollection new.
-	(glif firstTagNamed: #outline) tagsNamed: #contour do: [ :contour |
-		shape := self pointsForContour: contour.
-		shape ifNotEmpty: [ shapes add: shape asPointArray ]].
-	
+	| scale |
 	scale := self scale.
 	
 	aCanvas asBalloonCanvas preserveStateDuring: [ :canvas |
