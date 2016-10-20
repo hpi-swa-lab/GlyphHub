@@ -12,7 +12,9 @@
 		"ptSize",
 		"font",
 		"unicodeCodePoints",
-		"shapes" ],
+		"shapes",
+		"components",
+		"transform" ],
 	"name" : "KRNGlyph",
 	"pools" : [
 		 ],
