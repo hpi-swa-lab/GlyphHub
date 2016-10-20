@@ -1,8 +1,9 @@
 as yet unclassified
-parseValue: aCollection
+readElement: anXMLNode
 	| first |
-	first := aCollection first.
+	first := anXMLNode.
 	^first tag caseOf: {
+		[#plist] -> [self readElement: first].
 		[#integer] -> [ first contentString asNumber ].
 		[#real] -> [ first contentString asNumber ].
 		[#true] -> [ true ].
@@ -10,6 +11,6 @@ parseValue: aCollection
 		[#string] -> [ first contentString ].
 		[#date] -> [ self shouldNotImplement ].
 		[#data] -> [ self shouldNotImplement ].
-		[#array] -> [ self parseValueArray: first into: OrderedCollection new ].
-		[#dict] -> [ self parseValueDict: first into: OrderedDictionary new ]
+		[#array] -> [ self readArray: first ].
+		[#dict] -> [ self readDictionary: first ]
 	}
