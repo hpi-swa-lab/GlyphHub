@@ -5,18 +5,35 @@
 #include <harfbuzz/hb.h>
 #include <harfbuzz/hb-ft.h>
 
-typedef struct {
-	FT_Library ftlib;
-} font_library_t;
-font_library_t *font_library_new();
-void font_library_free(font_library_t *l);
+#include FT_FREETYPE_H
+#include FT_CACHE_MANAGER_H
+
+const char* ftGetErrorMessage(FT_Error err);
 
 typedef struct {
-	FT_Face ft_face;
-	hb_font_t *hb_font;
+	char *face_filename;
+	int face_index;
+	int cmap_index;
 } font_t;
-font_t *font_load(font_library_t *lib, const char *file, int ptSize, int dpi);
 void font_free(font_t *f);
+
+typedef struct {
+	FT_Library ftlib;
+	FTC_Manager ftmanager;
+	FTC_SBitCache ftsbits_cache;
+	FTC_CMapCache ftcmap_cache;
+	FTC_ImageCache ftimage_cache;
+	FTC_ScalerRec scaler;
+
+	hb_buffer_t *hb_buffer;
+
+	font_t *fonts;
+	int n_fonts;
+	int max_fonts;
+} font_library_t;
+font_library_t *font_library_new();
+font_t *font_load(font_library_t *lib, const char *file);
+void font_library_free(font_library_t *l);
 
 typedef struct {
 	uint8_t *data;
@@ -30,6 +47,6 @@ surface_t *surface_new(int w, int h, int c);
 void surface_save_png(surface_t *s, const char *file);
 void surface_free(surface_t *s);
 void surface_free_externaldata(surface_t *s);
-int surface_render_text(surface_t *surface, font_t *f, const char *text);
+int surface_render_text(surface_t *surface, font_library_t *lib, font_t *f, int ptSize, int dpi, const char *text);
 
 #endif // __FONTS_H__

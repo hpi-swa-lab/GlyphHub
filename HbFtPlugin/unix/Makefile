@@ -6,6 +6,7 @@ PKGLIBS=freetype2 harfbuzz
 
 CFLAGS=-m32 \
 	   -Wall \
+	   -g \
 	   -I$(BASE)/platforms/Cross/vm \
 	   -I$(BASE)/platforms/Cross/plugins/$(PLUGIN_NAME) \
 	   -I../Cross \

@@ -7,33 +7,84 @@
 #include "stb_image_write.h"
 
 #include "Fonts.h"
-#include FT_FREETYPE_H
 #include FT_GLYPH_H
 #include FT_OUTLINE_H
+#include FT_CACHE_H
+
+const char* ftGetErrorMessage(FT_Error err)
+{
+#undef __FTERRORS_H__
+#define FT_ERRORDEF( e, v, s  )  case e: return s;
+#define FT_ERROR_START_LIST     switch (err) {
+#define FT_ERROR_END_LIST       }
+#include FT_ERRORS_H
+return "(Unknown error)";
+}
+
+
+static FT_Error face_requester(FTC_FaceID face_id,
+		FT_Library library,
+		FT_Pointer request_data,
+		FT_Face *aface) {
+	font_t *face = (font_t *) face_id;
+	return FT_New_Face(library, face->face_filename, face->face_index, aface);
+}
 
 font_library_t *font_library_new() {
 	font_library_t *l = (font_library_t *) malloc(sizeof(font_library_t));
-	if (FT_Init_FreeType(&l->ftlib)) {
-		free(l);
-		return NULL;
-	}
+	if (FT_Init_FreeType(&l->ftlib))
+		goto clean;
+
+	if (FTC_Manager_New(
+			l->ftlib,
+			0,  /* use default */
+			0,  /* use default */
+			0,  /* use default */
+			&face_requester,
+			NULL,
+			&l->ftmanager))
+		goto clean;
+
+	if (FTC_SBitCache_New(l->ftmanager, &l->ftsbits_cache))
+		goto clean;
+
+	if (FTC_ImageCache_New(l->ftmanager, &l->ftimage_cache))
+		goto clean;
+
+    if (FTC_CMapCache_New( l->ftmanager, &l->ftcmap_cache))
+		goto clean;
+
+	l->hb_buffer = hb_buffer_create();
+
 	return l;
+clean:
+	free(l);
+	return NULL;
 }
 void font_library_free(font_library_t *l) {
 	FT_Done_FreeType(l->ftlib);
+	hb_buffer_destroy(buf);
 	free(l);
 }
 
 
-font_t *font_load(font_library_t *lib, const char *file, int ptSize, int dpi) {
-	font_t *f = (font_t *) malloc(sizeof(font_t));
-	assert(!FT_New_Face(lib->ftlib, file, 0, &f->ft_face));
-	assert(!FT_Set_Char_Size(f->ft_face, 0, ptSize * 64, dpi, dpi));
-	f->hb_font = hb_ft_font_create(f->ft_face, 0);
+font_t *font_load(font_library_t *lib, const char *file) {
+	// assert(!FT_New_Face(lib->ftlib, file, 0, &f->ft_face));
+	// assert(!FT_Set_Char_Size(f->ft_face, 0, ptSize * 64, dpi, dpi));
+	if (lib->max_fonts == 0) {
+		lib->max_fonts = 16;
+		lib->fonts = calloc(sizeof(font_t), lib->n_fonts);
+	} else if (lib->n_fonts >= lib->max_fonts) {
+		lib->max_fonts *= 2;
+		lib->fonts = realloc(lib->fonts, sizeof(font_t) * lib->max_fonts);
+	}
+	font_t *f = (font_t *) &lib->fonts[lib->n_fonts++];
+	f->face_filename = strdup(file);
+	f->face_index = 0;
+	f->cmap_index = 0; // face->charmap ? FT_Get_Charmap_Index(face->charmap) : 0
 	return f;
 }
 void font_free(font_t *f) {
-	hb_font_destroy(f->hb_font);
 	free(f);
 }
 
@@ -100,24 +151,104 @@ static uint32_t blendColor(uint32_t src) {
 	return src | (src << 8) | (src << 16) | (0xFF << 24);
 }
 
-int surface_render_text(surface_t *surface, font_t *f, const char *text) {
-	hb_buffer_t *buf;
+static FT_Error renderIndex(font_library_t *lib, FTC_ScalerRec *scaler, FT_ULong index, FT_Glyph *glyf, surface_t *bitmap, int *bitmap_left, int *bitmap_top) {
+	FT_Error error;
+	int width  = scaler->width;
+	int height = scaler->height;
+
+	if (!scaler->pixel) {
+		width  = ((width * scaler->x_res + 36) / 72)  >> 6;
+		height = ((height * scaler->y_res + 36) / 72) >> 6;
+	}
+
+	if (width < 48 && height < 48) {
+		FTC_SBit sbit;
+		*glyf = NULL;
+
+		if ((error = FTC_SBitCache_LookupScaler(lib->ftsbits_cache,
+				scaler,
+				FT_LOAD_DEFAULT,
+				index,
+				&sbit,
+				NULL)))
+			return error;
+
+		if (sbit->buffer) {
+			bitmap->data = sbit->buffer;
+			bitmap->w = sbit->width;
+			bitmap->h = sbit->height;
+			bitmap->c = 1;
+			*bitmap_left = sbit->left;
+			*bitmap_top = sbit->top;
+		} else {
+			bitmap->data = NULL;
+			bitmap->w = 0;
+			bitmap->h = 0;
+			bitmap->c = 0;
+		}
+		return FT_Err_Ok;
+	}
+
+	if ((error = FTC_ImageCache_LookupScaler(lib->ftimage_cache,
+			&lib->scaler,
+			FT_LOAD_DEFAULT,
+			index,
+			glyf,
+			NULL)))
+		return error;
+
+	if ((*glyf)->format == FT_GLYPH_FORMAT_OUTLINE)
+		if ((error = FT_Glyph_To_Bitmap(glyf, FT_RENDER_MODE_NORMAL, NULL, 0)))
+			return error;
+
+	if ((*glyf)->format != FT_GLYPH_FORMAT_BITMAP)
+		return 1;
+
+	FT_BitmapGlyph bmg = (FT_BitmapGlyph) *glyf;
+	bitmap->data = bmg->bitmap.buffer;
+	bitmap->w = bmg->bitmap.width;
+	bitmap->h = bmg->bitmap.rows;
+	bitmap->c = 1;
+	*bitmap_left = bmg->left;
+	*bitmap_top = bmg->top;
+
+	return FT_Err_Ok;
+}
+
+FT_Error surface_render_text(surface_t *surface, font_library_t *lib, font_t *f, int ptSize, int dpi, const char *text) {
 	unsigned int glyph_count;
 	hb_glyph_info_t *glyph_infos;
 	hb_glyph_position_t *glyph_positions;
+	FT_Face ft_face;
+	FT_Size size;
+	FT_Error error;
 
-	buf = hb_buffer_create();
-	hb_buffer_set_content_type(buf, HB_BUFFER_CONTENT_TYPE_UNICODE);
-	hb_buffer_add_utf8(buf, text, strlen(text), 0, strlen(text));
-	hb_buffer_set_script(buf, HB_SCRIPT_LATIN);
-	hb_buffer_guess_segment_properties(buf);
+	lib->scaler.face_id = f;
+	lib->scaler.width  = (FT_UInt) ptSize * 64;
+	lib->scaler.height = (FT_UInt) ptSize * 64;
+	lib->scaler.pixel  = 0;
+	lib->scaler.x_res  = dpi;
+	lib->scaler.y_res  = dpi;
 
-	glyph_count = hb_buffer_get_length(buf);
-	glyph_infos = hb_buffer_get_glyph_infos(buf, &glyph_count);
-	hb_shape(f->hb_font, buf, NULL, 0);
-	glyph_positions = hb_buffer_get_glyph_positions(buf, &glyph_count);
+	if ((error = FTC_Manager_LookupFace(lib->ftmanager, lib->scaler.face_id, &ft_face)))
+		return error;
+	if ((error = FTC_Manager_LookupSize(lib->ftmanager, &lib->scaler, &size)))
+		return error;
 
-	int maxHeight = (int) ((f->ft_face->size->metrics.ascender - f->ft_face->size->metrics.descender) / 64.0);
+	// TODO check whether we can/should cache this too
+	hb_font_t *hb_font = hb_ft_font_create(ft_face, NULL);
+	hb_buffer_clear_contents(lib->hb_buffer);
+	hb_buffer_set_content_type(lib->hb_buffer, HB_BUFFER_CONTENT_TYPE_UNICODE);
+	hb_buffer_add_utf8(lib->hb_buffer, text, strlen(text), 0, strlen(text));
+	hb_buffer_set_script(lib->hb_buffer, HB_SCRIPT_LATIN);
+	hb_buffer_guess_segment_properties(lib->hb_buffer);
+
+	glyph_count = hb_buffer_get_length(lib->hb_buffer);
+	glyph_infos = hb_buffer_get_glyph_infos(lib->hb_buffer, &glyph_count);
+	hb_shape(hb_font, lib->hb_buffer, NULL, 0);
+	glyph_positions = hb_buffer_get_glyph_positions(lib->hb_buffer, &glyph_count);
+
+	int maxHeight = (int) ((ft_face->size->metrics.ascender - ft_face->size->metrics.descender) / 64.0);
 	int remaining_letters = 0;
 	const char *currentChar = text;
 	hb_glyph_position_t *currentGlyphPos = glyph_positions;
@@ -126,7 +257,7 @@ int surface_render_text(surface_t *surface, font_t *f, const char *text) {
 	double y = maxHeight;
 	for (unsigned int i = 0; i < glyph_count; i++) {
 		hb_codepoint_t codepoint = glyph_infos[i].codepoint;
-		// auto index = FT_Get_Char_Index(f->ft_face, codepoint);
+		// FT_UInt index = FTC_CMapCache_Lookup(lib->ftcmap_cache, (FTC_FaceID) f, f->cmap_index, codepoint);
 
 		if (remaining_letters < 0) {
 			int width = _width_of_next_word(currentChar, lastChar, currentGlyphPos, &remaining_letters);
@@ -136,36 +267,32 @@ int surface_render_text(surface_t *surface, font_t *f, const char *text) {
 			}
 		}
 
-		FT_Load_Glyph(f->ft_face, codepoint, FT_LOAD_DEFAULT);
-		FT_GlyphSlot glyph = f->ft_face->glyph;
+		FT_Glyph glyph;
+		int bitmap_left, bitmap_top;
+		surface_t bitmap;
+		renderIndex(lib, &lib->scaler, codepoint, &glyph, &bitmap, &bitmap_left, &bitmap_top);
 
-		if (glyph->format == FT_GLYPH_FORMAT_OUTLINE) {
-			FT_Render_Glyph(glyph, FT_RENDER_MODE_NORMAL);
+		if (x + currentGlyphPos->x_advance / 64.0 > surface->w) {
+			x = 0;
+			y += maxHeight;
+		}
 
-			surface_t bitmap;
-			bitmap.data = glyph->bitmap.buffer;
-			bitmap.w = glyph->bitmap.width;
-			bitmap.h = glyph->bitmap.rows;
-			bitmap.c = 1;
+		if (y + currentGlyphPos->y_advance / 64.0 > surface->h)
+			return FT_Err_Raster_Overflow;
 
-			if (x + currentGlyphPos->x_advance / 64.0 > surface->w) {
-				x = 0;
-				y += maxHeight;
-			}
-
-			if (y + currentGlyphPos->y_advance / 64.0 > surface->h)
-				return -1;
-
+		if (bitmap.data)
 			bitblt(&bitmap,
 					0,
 					0,
 					bitmap.w,
 					bitmap.h,
 					surface,
-					x + currentGlyphPos->x_offset / 64.0 + glyph->bitmap_left,
-					y - currentGlyphPos->y_offset / 64.0 - glyph->bitmap_top,
+					x + currentGlyphPos->x_offset / 64.0 + bitmap_left,
+					y - currentGlyphPos->y_offset / 64.0 - bitmap_top,
 					&blendColor);
-		}
+
+		if (glyph)
+			FT_Done_Glyph(glyph);
 
 		x += currentGlyphPos->x_advance / 64.0;
 		y -= currentGlyphPos->y_advance / 64.0;
@@ -175,8 +302,7 @@ int surface_render_text(surface_t *surface, font_t *f, const char *text) {
 		assert(x < surface->w && y < surface->h);
 	}
 
-	// hb_buffer_clear_contents(buf);
-	hb_buffer_destroy(buf);
-	return 1;
+	hb_font_destroy(hb_font);
+	return FT_Err_Ok;
 }
 
