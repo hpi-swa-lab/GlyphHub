@@ -8,7 +8,7 @@ int main() {
 	surface_t *surface = surface_new(1024, 1024, 4);
 	font_t *font = font_load(lib, "/usr/share/fonts/truetype/lobster-elementary/Lobster.ttf");
 
-	surface_render_text(surface, lib, font, 64, 96 * 2, "Das ist ein Test!");
+	surface_render_text(surface, lib, font, 52, 96 * 2, "Das ist ein langer Test-Text!");
 	surface_save_png(surface, "tests.png");
 
 	surface_free(surface);
