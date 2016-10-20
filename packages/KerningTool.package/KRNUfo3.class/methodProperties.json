@@ -1,10 +1,11 @@
 {
 	"class" : {
-		"example" : "TB 10/19/2016 09:56",
+		"example" : "TB 10/20/2016 10:31",
 		"newForPath:" : "TB 10/18/2016 21:05" },
 	"instance" : {
 		"ascender" : "TB 10/18/2016 23:59",
-		"createGlyphFor:ptSize:" : "TB 10/19/2016 09:54",
+		"createGlyphFor:ptSize:" : "TB 10/20/2016 10:30",
+		"createGlyphForUnicode:ptSize:" : "TB 10/20/2016 10:30",
 		"descender" : "TB 10/18/2016 23:59",
 		"fontinfo" : "TB 10/18/2016 23:36",
 		"height" : "TB 10/19/2016 00:12",
