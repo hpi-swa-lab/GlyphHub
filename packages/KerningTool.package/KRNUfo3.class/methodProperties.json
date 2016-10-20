@@ -1,12 +1,14 @@
 {
 	"class" : {
 		"example" : "TB 10/20/2016 10:51",
+		"exampleWindow" : "TB 10/20/2016 14:33",
 		"newForPath:" : "TB 10/18/2016 21:05" },
 	"instance" : {
 		"ascender" : "TB 10/18/2016 23:59",
 		"createGlyphFor:ptSize:" : "TB 10/20/2016 10:30",
 		"createGlyphForUnicode:ptSize:" : "TB 10/20/2016 11:41",
 		"descender" : "TB 10/18/2016 23:59",
+		"findKerningBetween:and:" : "TB 10/20/2016 14:28",
 		"fontinfo" : "TB 10/18/2016 23:36",
 		"height" : "TB 10/19/2016 00:12",
 		"initialize" : "TB 10/20/2016 11:44",

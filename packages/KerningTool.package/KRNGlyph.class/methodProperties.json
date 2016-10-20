@@ -4,6 +4,8 @@
 		"newForXML:from:" : "TB 10/20/2016 11:40" },
 	"instance" : {
 		"advance" : "TB 10/18/2016 23:25",
+		"advanceScaled" : "TB 10/20/2016 12:17",
+		"characters" : "TB 10/20/2016 13:49",
 		"coordFromNode:" : "TB 10/18/2016 23:01",
 		"curveFrom:via:to:" : "TB 10/19/2016 09:23",
 		"displaysUnicode:" : "TB 10/19/2016 09:51",
@@ -13,6 +15,7 @@
 		"glif" : "TB 10/20/2016 11:41",
 		"glif:" : "TB 10/20/2016 11:40",
 		"initialize" : "TB 10/20/2016 11:43",
+		"isSeparator" : "TB 10/20/2016 13:49",
 		"lineFrom:to:" : "TB 10/19/2016 09:21",
 		"pointsForContour:" : "TB 10/19/2016 09:28",
 		"ptSize" : "TB 10/18/2016 23:39",

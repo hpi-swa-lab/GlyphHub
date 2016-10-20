@@ -1,0 +1,14 @@
+{
+	"category" : "KerningTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"lineHeight" ],
+	"name" : "KRNParagraphLayout",
+	"pools" : [
+		 ],
+	"super" : "LayoutPolicy",
+	"type" : "normal" }
