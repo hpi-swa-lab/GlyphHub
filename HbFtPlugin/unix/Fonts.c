@@ -69,8 +69,6 @@ void font_library_free(font_library_t *l) {
 
 
 font_t *font_load(font_library_t *lib, const char *file) {
-	// assert(!FT_New_Face(lib->ftlib, file, 0, &f->ft_face));
-	// assert(!FT_Set_Char_Size(f->ft_face, 0, ptSize * 64, dpi, dpi));
 	if (lib->max_fonts == 0) {
 		lib->max_fonts = 16;
 		lib->fonts = calloc(sizeof(font_t), lib->n_fonts);
@@ -85,6 +83,7 @@ font_t *font_load(font_library_t *lib, const char *file) {
 	return f;
 }
 void font_free(font_t *f) {
+	free(f->face_filename);
 	free(f);
 }
 
@@ -127,24 +126,16 @@ static void bitblt(surface_t *source, int sx, int sy, int width, int height,
 		for (int y = 0; y < height; y++) {
 			uint32_t src = f(source->data[(sx + x + (sy + y) * source->w) * source->c]);
 			int offset = (dx + x + (dy + y) * dest->w) * dest->c;
-			memcpy(dest->data + offset, &src, dest->c);
+			// memcpy(dest->data + offset, &src, dest->c);
+			uint32_t tmp;
+			for (int i = 0; i < dest->c; i++) {
+				tmp = dest->data[offset + i] + ((unsigned char *) &src)[i];
+				if (tmp > 255)
+					tmp = 255;
+				dest->data[offset + i] = tmp;
+			}
 		}
 	}
-}
-
-static double _width_of_next_word(const char *first, const char *last, hb_glyph_position_t *p, int *word_length) {
-	double distance = 0.0;
-	*word_length = 0;
-	while (first != last &&
-			*first != ' ' &&
-			*first != '.' &&
-			*first != '!') {
-		distance += p->x_advance / 64.0;
-		p++;
-		(*word_length)++;
-		first++;
-	}
-	return distance;
 }
 
 static uint32_t blendColor(uint32_t src) {
@@ -215,6 +206,18 @@ static FT_Error renderIndex(font_library_t *lib, FTC_ScalerRec *scaler, FT_ULong
 	return FT_Err_Ok;
 }
 
+static double _width_of_next_word(hb_glyph_info_t *first, hb_glyph_info_t *last, hb_glyph_position_t *p, int *word_length) {
+	double distance = 0.0;
+	*word_length = 0;
+	while (first != last && first->codepoint != 0x03) {
+		distance += p->x_advance / 64.0;
+		p++;
+		(*word_length)++;
+		first++;
+	}
+	return distance;
+}
+
 FT_Error surface_render_text(surface_t *surface, font_library_t *lib, font_t *f, int ptSize, int dpi, const char *text) {
 	unsigned int glyph_count;
 	hb_glyph_info_t *glyph_infos;
@@ -243,24 +246,25 @@ FT_Error surface_render_text(surface_t *surface, font_library_t *lib, font_t *f,
 	hb_buffer_set_script(lib->hb_buffer, HB_SCRIPT_LATIN);
 	hb_buffer_guess_segment_properties(lib->hb_buffer);
 
-	glyph_count = hb_buffer_get_length(lib->hb_buffer);
-	glyph_infos = hb_buffer_get_glyph_infos(lib->hb_buffer, &glyph_count);
 	hb_shape(hb_font, lib->hb_buffer, NULL, 0);
-	glyph_positions = hb_buffer_get_glyph_positions(lib->hb_buffer, &glyph_count);
+	glyph_infos = hb_buffer_get_glyph_infos(lib->hb_buffer, &glyph_count);
+	glyph_positions = hb_buffer_get_glyph_positions(lib->hb_buffer, NULL);
 
 	int maxHeight = (int) ((ft_face->size->metrics.ascender - ft_face->size->metrics.descender) / 64.0);
 	int remaining_letters = 0;
-	const char *currentChar = text;
 	hb_glyph_position_t *currentGlyphPos = glyph_positions;
-	const char *lastChar = text + strlen(text);
+	hb_glyph_info_t *currentGlyphInfo = glyph_infos;
+	hb_glyph_info_t *lastGlyphInfo = glyph_infos + glyph_count;
 	double x = 0.0;
-	double y = maxHeight;
+	double y = ft_face->size->metrics.ascender / 64.0;
+	const char *cur = text;
 	for (unsigned int i = 0; i < glyph_count; i++) {
 		hb_codepoint_t codepoint = glyph_infos[i].codepoint;
 		// FT_UInt index = FTC_CMapCache_Lookup(lib->ftcmap_cache, (FTC_FaceID) f, f->cmap_index, codepoint);
 
+		cur++;
 		if (remaining_letters < 0) {
-			int width = _width_of_next_word(currentChar, lastChar, currentGlyphPos, &remaining_letters);
+			int width = _width_of_next_word(currentGlyphInfo, lastGlyphInfo, currentGlyphPos, &remaining_letters);
 			if (width < surface->w && x + width > surface->w) {
 				x = 0;
 				y += maxHeight;
@@ -296,9 +300,10 @@ FT_Error surface_render_text(surface_t *surface, font_library_t *lib, font_t *f,
 
 		x += currentGlyphPos->x_advance / 64.0;
 		y -= currentGlyphPos->y_advance / 64.0;
-		currentChar++;
 		currentGlyphPos++;
+		currentGlyphInfo++;
 		remaining_letters--;
+
 		assert(x < surface->w && y < surface->h);
 	}
 
