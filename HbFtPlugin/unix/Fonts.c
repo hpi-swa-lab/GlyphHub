@@ -120,8 +120,32 @@ void surface_free_externaldata(surface_t *s) {
 	free(s);
 }
 
-static void bitblt(surface_t *source, int sx, int sy, int width, int height,
-		surface_t *dest, int dx, int dy, uint32_t (* f)(uint32_t)) {
+/**
+ * blit entire source into dest at dx,dy transforming each
+ * value of source with f before adding onto source
+ */
+static void bitblt(surface_t *source, surface_t *dest, int dx, int dy, uint32_t (* f)(uint32_t)) {
+	int x, y, sx, sy,
+		left = dx < 0 ? 0 : dx,
+		top = dy < 0 ? 0 : dy,
+		right = (dx + source->w > dest->w) ? dest->w : dx + source->w,
+		bottom = (dy + source->h > dest->h) ? dest->h : dy + source->h;
+
+	for (x = left, sx = 0; x < right; x++, sx++) {
+		for (y = top, sy = 0; y < bottom; y++, sy++) {
+			uint32_t src = f(source->data[(sx + sy * source->w) * source->c]);
+			int offset = (x + y * dest->w) * dest->c;
+			uint32_t tmp;
+			for (int i = 0; i < dest->c; i++) {
+				tmp = dest->data[offset + i] + ((unsigned char *) &src)[i];
+				if (tmp > 255)
+					tmp = 255;
+				dest->data[offset + i] = tmp;
+			}
+		}
+	}
+
+#if 0
 	for (int x = 0; x < width; x++) {
 		for (int y = 0; y < height; y++) {
 			uint32_t src = f(source->data[(sx + x + (sy + y) * source->w) * source->c]);
@@ -136,6 +160,7 @@ static void bitblt(surface_t *source, int sx, int sy, int width, int height,
 			}
 		}
 	}
+#endif
 }
 
 static uint32_t blendColor(uint32_t src) {
@@ -286,10 +311,6 @@ FT_Error surface_render_text(surface_t *surface, font_library_t *lib, font_t *f,
 
 		if (bitmap.data)
 			bitblt(&bitmap,
-					0,
-					0,
-					bitmap.w,
-					bitmap.h,
 					surface,
 					x + currentGlyphPos->x_offset / 64.0 + bitmap_left,
 					y - currentGlyphPos->y_offset / 64.0 - bitmap_top,
