@@ -2,5 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
+		"initialiseModule" : "TB 10/21/2016 13:52",
 		"primitiveRenderBitmap" : "TB 10/18/2016 13:56",
-		"primitiveRenderString" : "TB 10/18/2016 13:57" } }
+		"primitiveRenderString" : "TB 10/18/2016 13:57",
+		"shutdownModule" : "TB 10/21/2016 13:53" } }

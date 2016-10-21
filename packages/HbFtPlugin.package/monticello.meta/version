@@ -1,1 +1,1 @@
-(name 'HbFtPlugin-TB.1' message 'Init' id '3472876f-41fa-43d5-9212-e8ae6f6b32dd' date '18 October 2016' time '2:53:56.614248 pm' author 'TB' ancestors () stepChildren ())
+(name 'HbFtPlugin-TB.2' message 'empty log message' id 'dbd5bd13-d247-4faa-9804-79ef1c737778' date '21 October 2016' time '2:08:54.308765 pm' author 'TB' ancestors ((name 'HbFtPlugin-TB.1' message 'Init' id '3472876f-41fa-43d5-9212-e8ae6f6b32dd' date '18 October 2016' time '2:53:56.614248 pm' author 'TB' ancestors () stepChildren ())) stepChildren ())

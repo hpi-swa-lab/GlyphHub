@@ -2,12 +2,20 @@
 #include "HbFtPlugin.h"
 #include "Fonts.h"
 
-sqInt sqFontsCompute(sqInt a) {
-	return 42;
+font_library_t *lib;
+
+sqInt sqFontLibraryInit() {
+	lib = font_library_new();
+	return lib ? 1 : 0;
+}
+
+sqInt sqFontLibraryShutdown() {
+	if (lib)
+		font_library_free(lib);
+	return 1;
 }
 
 sqInt sqRenderStringLen(char *srcPtr, sqInt srcLen) {
-	font_library_t *lib = font_library_new();
 	if (!lib)
 		return 0;
 
@@ -16,9 +24,9 @@ sqInt sqRenderStringLen(char *srcPtr, sqInt srcLen) {
 	str[srcLen] = 0;
 
 	surface_t *surface = surface_new(400, 600, 4);
-	font_t *font = font_load(lib, "/usr/share/fonts/truetype/roboto/hinted/Roboto-Bold.ttf", 11, 96 * 2);
+	font_t *font = font_load(lib, "/usr/share/fonts/truetype/roboto/hinted/Roboto-Bold.ttf");
 
-	surface_render_text(surface, font, str);
+	surface_render_text(surface, lib, font, 12, 96 * 2, str);
 	surface_save_png(surface, "fonts.png");
 
 	free(str);
@@ -29,17 +37,18 @@ sqInt sqRenderStringLen(char *srcPtr, sqInt srcLen) {
 	return 1;
 }
 
-char *str_nullterm(char *str, int len) {
+static char *str_nullterm(char *str, int len) {
 	char *ntstr = malloc(sizeof(char) * (len + 1));
 	strncpy(ntstr, str, len);
 	ntstr[len] = '\0';
 	return ntstr;
 }
-void str_free(char *str) {
+static void str_free(char *str) {
 	free(str);
 }
 
-sqInt sqBitmapTestWidthHeightDepthPointerStrLenPtsizeDpiFontLen(sqInt bmBitsSize,
+sqInt sqBitmapTestWidthHeightDepthPointerStrLenPtsizeDpiFontLen(
+		sqInt bmBitsSize,
 		sqInt bmWidth,
 		sqInt bmHeight,
 		sqInt bmDepth,
@@ -51,6 +60,9 @@ sqInt sqBitmapTestWidthHeightDepthPointerStrLenPtsizeDpiFontLen(sqInt bmBitsSize
 		char *_fontName,
 		int fontNameLen) {
 
+	if (!lib)
+		return 0;
+
 	int bytesPerPixel = bmDepth / 8;
 	// BGRA format
 	for (int i = 0; i < bmWidth * bmWidth * bytesPerPixel; i += bytesPerPixel) {
@@ -60,23 +72,18 @@ sqInt sqBitmapTestWidthHeightDepthPointerStrLenPtsizeDpiFontLen(sqInt bmBitsSize
 		buffer[i + 3] = 255;
 	}
 
-	font_library_t *lib = font_library_new();
-	if (!lib)
-		return 0;
-
 	char *str = str_nullterm(_str, len);
 	char *fontName = str_nullterm(_fontName, fontNameLen);
 
 	surface_t *surface = surface_new_for_data(bmWidth, bmHeight, bmDepth / 8, buffer);
-	font_t *font = font_load(lib, fontName, ptSize, dpi);
+	font_t *font = font_load(lib, fontName);
 
-	surface_render_text(surface, font, str);
+	surface_render_text(surface, lib, font, ptSize, dpi, str);
 
 	str_free(str);
 	str_free(fontName);
 	surface_free_externaldata(surface);
 	font_free(font);
-	font_library_free(lib);
 	return 0;
 }
 
