@@ -144,23 +144,6 @@ static void bitblt(surface_t *source, surface_t *dest, int dx, int dy, uint32_t 
 			}
 		}
 	}
-
-#if 0
-	for (int x = 0; x < width; x++) {
-		for (int y = 0; y < height; y++) {
-			uint32_t src = f(source->data[(sx + x + (sy + y) * source->w) * source->c]);
-			int offset = (dx + x + (dy + y) * dest->w) * dest->c;
-			// memcpy(dest->data + offset, &src, dest->c);
-			uint32_t tmp;
-			for (int i = 0; i < dest->c; i++) {
-				tmp = dest->data[offset + i] + ((unsigned char *) &src)[i];
-				if (tmp > 255)
-					tmp = 255;
-				dest->data[offset + i] = tmp;
-			}
-		}
-	}
-#endif
 }
 
 static uint32_t blendColor(uint32_t src) {
@@ -232,9 +215,23 @@ static FT_Error renderIndex(font_library_t *lib, FTC_ScalerRec *scaler, FT_ULong
 }
 
 static double _width_of_next_word(hb_glyph_info_t *first, hb_glyph_info_t *last, hb_glyph_position_t *p, int *word_length) {
+#define UTF8_IS_WHITESPACE(x) (\
+	x == 0x0003 ||					/* END OF TEXT, used by harfbuzz */\
+	(x >= 0x0009 && x <= 0x000D) ||	/* White_Space # Cc	<control-0009>..<control-000D> */\
+	x == 0x0020 ||					/* White_Space # Zs	SPACE */                         \
+	x == 0x0085 ||         			/* White_Space # Cc	<control-0085> */                \
+	x == 0x00A0 ||					/* White_Space # Zs	NO-BREAK SPACE */                \
+	x == 0x1680 ||					/* White_Space # Zs	OGHAM SPACE MARK */              \
+	x == 0x2000 ||					/* White_Space # Zs	EN QUAD..HAIR SPACE */           \
+	x == 0x2028 ||					/* White_Space # Zl	LINE SEPARATOR */                \
+	x == 0x2029 ||					/* White_Space # Zp	PARAGRAPH SEPARATOR */           \
+	x == 0x202F ||					/* White_Space # Zs	NARROW NO-BREAK SPACE */         \
+	x == 0x205F ||					/* White_Space # Zs	MEDIUM MATHEMATICAL SPACE */     \
+	x == 0x3000)					/* White_Space # Zs	IDEOGRAPHIC SPACE */
+
 	double distance = 0.0;
 	*word_length = 0;
-	while (first != last && first->codepoint != 0x03) {
+	while (first != last && !UTF8_IS_WHITESPACE(first->codepoint)) {
 		distance += p->x_advance / 64.0;
 		p++;
 		(*word_length)++;
@@ -263,7 +260,6 @@ FT_Error surface_render_text(surface_t *surface, font_library_t *lib, font_t *f,
 	if ((error = FTC_Manager_LookupSize(lib->ftmanager, &lib->scaler, &size)))
 		return error;
 
-	// TODO check whether we can/should cache this too
 	hb_font_t *hb_font = hb_ft_font_create(ft_face, NULL);
 	hb_buffer_clear_contents(lib->hb_buffer);
 	hb_buffer_set_content_type(lib->hb_buffer, HB_BUFFER_CONTENT_TYPE_UNICODE);
