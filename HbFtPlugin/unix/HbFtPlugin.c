@@ -1,8 +1,11 @@
 #include "sq.h"
 #include "HbFtPlugin.h"
-#include "Fonts.h"
 
 font_library_t *lib;
+
+font_library_t *sqFontLibraryGet() {
+	return lib;
+}
 
 sqInt sqFontLibraryInit() {
 	lib = font_library_new();

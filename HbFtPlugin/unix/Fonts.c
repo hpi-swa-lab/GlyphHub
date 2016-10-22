@@ -75,6 +75,7 @@ void font_library_free(font_library_t *l) {
 
 	FT_Done_FreeType(l->ftlib);
 	hb_buffer_destroy(l->hb_buffer);
+	FcFini();
 	free(l);
 }
 

@@ -1,8 +1,11 @@
 {
 	"class" : {
-		 },
+		"hasHeaderFile" : "TB 10/22/2016 10:07",
+		"requiresPlatformFiles" : "TB 10/22/2016 10:07" },
 	"instance" : {
+		"getString:" : "TB 10/22/2016 10:36",
 		"initialiseModule" : "TB 10/21/2016 13:52",
+		"primitiveGetFontList" : "TB 10/22/2016 10:35",
 		"primitiveRenderBitmap" : "TB 10/18/2016 13:56",
 		"primitiveRenderString" : "TB 10/18/2016 13:57",
 		"shutdownModule" : "TB 10/21/2016 13:53" } }

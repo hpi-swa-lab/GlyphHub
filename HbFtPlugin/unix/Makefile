@@ -10,6 +10,7 @@ CFLAGS=-m32 \
 	   -I$(BASE)/platforms/Cross/vm \
 	   -I$(BASE)/platforms/Cross/plugins/$(PLUGIN_NAME) \
 	   -I../Cross \
+	   -I. \
 	   -I$(BASE)/platforms/unix/vm \
 	   -I$(BASE)/src/vm \
 	   -I$(BASE)/build.linux64x64/squeak.cog.spur/build \
@@ -34,9 +35,13 @@ $(PLUGIN_NAME): $(OBJECTS)
 clean:
 	rm -f $(EXECUTABLE) $(PLUGIN_NAME) $(OBJECTS)
 
+LINK_PLATFORM=$(BASE)/platforms/unix/plugins/$(PLUGIN_NAME)
+LINK_CROSS=$(BASE)/platforms/Cross/plugins/$(PLUGIN_NAME)
 symlink:
-	ln -s $(BASE)/platforms/unix/plugins/$(PLUGIN_NAME) .
-	ln -s $(BASE)/platforms/Cross/plugins/$(PLUGIN_NAME) ../Cross
+	ln -s $(shell pwd) $(LINK_PLATFORM)
+	ln -s $(shell pwd)/../Cross $(LINK_CROSS)
+cleansymlink:
+	rm -f $(LINK_PLATFORM) $(LINK_CROSS)
 
 .PHONY: clean install
 
