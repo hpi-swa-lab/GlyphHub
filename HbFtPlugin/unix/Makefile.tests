@@ -1,5 +1,5 @@
 SOURCES=Fonts.c tests.c
-PKGLIBS=freetype2 harfbuzz
+PKGLIBS=freetype2 harfbuzz fontconfig
 
 CFLAGS=-Wall \
 	   -g \

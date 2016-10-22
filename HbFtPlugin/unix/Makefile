@@ -2,7 +2,7 @@ PLUGIN_NAME=HbFtPlugin
 SOURCES=Fonts.c HbFtPlugin.c
 PATH_TO_SQUEAK=../../../Squeak5.1-16548-32bit-201608171728-Linux
 BASE=../../../opensmalltalk-vm
-PKGLIBS=freetype2 harfbuzz
+PKGLIBS=freetype2 harfbuzz fontconfig
 
 CFLAGS=-m32 \
 	   -Wall \
@@ -33,6 +33,10 @@ $(PLUGIN_NAME): $(OBJECTS)
 
 clean:
 	rm -f $(EXECUTABLE) $(PLUGIN_NAME) $(OBJECTS)
+
+symlink:
+	ln -s $(BASE)/platforms/unix/plugins/$(PLUGIN_NAME) .
+	ln -s $(BASE)/platforms/Cross/plugins/$(PLUGIN_NAME) ../Cross
 
 .PHONY: clean install
 

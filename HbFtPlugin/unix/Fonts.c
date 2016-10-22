@@ -60,19 +60,72 @@ font_library_t *font_library_new() {
 
 	l->hb_buffer = hb_buffer_create();
 
+	l->fc_config = FcInitLoadConfigAndFonts();
+
 	return l;
 clean:
 	free(l);
 	return NULL;
 }
 void font_library_free(font_library_t *l) {
+	int i;
+
+	for (i = 0; i < l->n_fonts; i++)
+		font_free(&l->fonts[i]);
+
 	FT_Done_FreeType(l->ftlib);
 	hb_buffer_destroy(l->hb_buffer);
 	free(l);
 }
 
+void font_library_list_installed(font_library_t *lib, void (* f)(char *, char *, char *)) {
+	FcPattern* pat = FcPatternCreate();
+	FcObjectSet* os = FcObjectSetBuild(FC_FAMILY, FC_STYLE, FC_FILE, (char *) 0);
+	FcFontSet* fs = FcFontList(lib->fc_config, pat, os);
+
+	for (int i = 0; fs && i < fs->nfont; i++) {
+		FcPattern* font = fs->fonts[i];
+		FcChar8 *file, *style, *family;
+		if (FcPatternGetString(font, FC_FILE, 0, &file) == FcResultMatch &&
+			FcPatternGetString(font, FC_FAMILY, 0, &family) == FcResultMatch &&
+			FcPatternGetString(font, FC_STYLE, 0, &style) == FcResultMatch) {
+			f(file, family, style);
+			// printf("Filename: %s (family %s, style %s)\n", file, family, style);
+		}
+	}
+
+	if (fs)
+		FcFontSetDestroy(fs);
+}
+
+font_t *font_load_by_name(font_library_t *lib, const char *name) {
+	FcResult res;
+	FcPattern* pattern = FcNameParse((const FcChar8*) name);
+	FcConfigSubstitute(lib->fc_config, pattern, FcMatchPattern);
+	FcDefaultSubstitute(pattern);
+	FcChar8* file = NULL;
+	font_t *font = NULL;
+	FcPattern* font_match = FcFontMatch(lib->fc_config, pattern, &res);
+
+	if (font_match) {
+		FcPatternGetString(font_match, FC_FILE, 0, &file);
+		if (file)
+			font = font_load(lib, (char *) file);
+		FcPatternDestroy(font_match);
+	}
+
+	FcPatternDestroy(pattern);
+
+	return font;
+}
 
 font_t *font_load(font_library_t *lib, const char *file) {
+	int i;
+	for (i = 0; i < lib->n_fonts; i++) {
+		if (strcmp(file, lib->fonts[i].face_filename) == 0)
+			return &lib->fonts[i];
+	}
+
 	if (lib->max_fonts == 0) {
 		lib->max_fonts = 16;
 		lib->fonts = calloc(sizeof(font_t), lib->max_fonts);
@@ -99,6 +152,9 @@ void surface_set_black(surface_t *s) {
 		s->data[i + 2] = 0;
 		s->data[i + 3] = 0xFF;
 	}
+}
+void surface_set_transparent(surface_t *s) {
+	memset(s->data, 0, s->w * s->h * s->c);
 }
 surface_t *surface_new_for_data(int w, int h, int c, uint8_t *data) {
 	surface_t *s = (surface_t *) malloc(sizeof(surface_t));

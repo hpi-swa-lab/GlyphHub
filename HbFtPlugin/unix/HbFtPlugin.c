@@ -6,10 +6,12 @@ font_library_t *lib;
 
 sqInt sqFontLibraryInit() {
 	lib = font_library_new();
+	DEBUG("ft library init %s", lib ? "success" : "failure");
 	return lib ? 1 : 0;
 }
 
 sqInt sqFontLibraryShutdown() {
+	DEBUG("ft library free");
 	if (lib)
 		font_library_free(lib);
 	return 1;
@@ -31,7 +33,6 @@ sqInt sqRenderStringLen(char *srcPtr, sqInt srcLen) {
 
 	free(str);
 	surface_free(surface);
-	font_free(font);
 	font_library_free(lib);
 
 	return 1;
@@ -60,6 +61,12 @@ sqInt sqBitmapTestWidthHeightDepthPointerStrLenPtsizeDpiFontLen(
 		char *_fontName,
 		int fontNameLen) {
 
+	DEBUG("Start to render string on bitmap (%ix%i@%i), valid: %i",
+			bmWidth,
+			bmHeight,
+			bmDepth,
+			(int) !!lib);
+
 	if (!lib)
 		return 0;
 
@@ -76,6 +83,7 @@ sqInt sqBitmapTestWidthHeightDepthPointerStrLenPtsizeDpiFontLen(
 	char *fontName = str_nullterm(_fontName, fontNameLen);
 
 	surface_t *surface = surface_new_for_data(bmWidth, bmHeight, bmDepth / 8, buffer);
+	surface_set_transparent(surface);
 	font_t *font = font_load(lib, fontName);
 
 	surface_render_text(surface, lib, font, ptSize, dpi, str);
@@ -83,7 +91,6 @@ sqInt sqBitmapTestWidthHeightDepthPointerStrLenPtsizeDpiFontLen(
 	str_free(str);
 	str_free(fontName);
 	surface_free_externaldata(surface);
-	font_free(font);
 	return 0;
 }
 
