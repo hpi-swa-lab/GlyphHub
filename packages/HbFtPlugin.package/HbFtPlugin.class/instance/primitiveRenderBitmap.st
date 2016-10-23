@@ -6,7 +6,7 @@ primitiveRenderBitmap
 	<var: #fontNamePtr type: 'char *'>
 	<export: true>
 
-	| formOop bmBits bmBitsSize bmDepth bmHeight bmWidth result buffer fontNameLen fontNamePtr fontNameValue strLen strPtr strValue dpi fontSize |
+	| formOop bmBits bmBitsSize bmDepth bmHeight bmWidth buffer fontNameLen fontNamePtr fontNameValue strLen strPtr strValue dpi fontSize |
 	interpreterProxy methodArgumentCount = 5 ifFalse: [ ^interpreterProxy primitiveFail ].
 
 	" fetch fontName argument pointer and length "
@@ -47,7 +47,7 @@ primitiveRenderBitmap
 	(bmWidth >= 0 and: [bmHeight >= 0]) ifFalse: [ ^interpreterProxy primitiveFail ].
 	" TODO check bitmap depth for 2^n "
 	
-	result := self
+	self
 		sqBitmapTest: bmBitsSize
 		Width: bmWidth
 		Height: bmHeight

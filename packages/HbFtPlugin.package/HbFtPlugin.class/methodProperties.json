@@ -5,7 +5,9 @@
 	"instance" : {
 		"getString:" : "TB 10/22/2016 10:36",
 		"initialiseModule" : "TB 10/21/2016 13:52",
-		"primitiveGetFontList" : "TB 10/22/2016 10:35",
-		"primitiveRenderBitmap" : "TB 10/18/2016 13:56",
+		"primitiveFontGetMetrics" : "TB 10/23/2016 09:53",
+		"primitiveFontMeasureWidth" : "TB 10/23/2016 10:09",
+		"primitiveGetFontList" : "TB 10/23/2016 00:07",
+		"primitiveRenderBitmap" : "TB 10/23/2016 00:46",
 		"primitiveRenderString" : "TB 10/18/2016 13:57",
 		"shutdownModule" : "TB 10/21/2016 13:53" } }

@@ -1,0 +1,3 @@
+testing
+isSubPixelPositioned
+	^true

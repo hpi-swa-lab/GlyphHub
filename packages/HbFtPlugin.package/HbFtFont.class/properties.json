@@ -1,0 +1,20 @@
+{
+	"category" : "HbFtPlugin",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"form",
+		"familyName",
+		"pointSize",
+		"descent",
+		"ascent",
+		"height",
+		"maxAdvance" ],
+	"name" : "HbFtFont",
+	"pools" : [
+		 ],
+	"super" : "AbstractFont",
+	"type" : "normal" }

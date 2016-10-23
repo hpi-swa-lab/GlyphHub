@@ -73,8 +73,10 @@ void font_library_free(font_library_t *l) {
 	for (i = 0; i < l->n_fonts; i++)
 		font_free(&l->fonts[i]);
 
+	FTC_Manager_Done(l->ftmanager);
 	FT_Done_FreeType(l->ftlib);
 	hb_buffer_destroy(l->hb_buffer);
+	FcConfigDestroy(l->fc_config);
 	FcFini();
 	free(l);
 }
@@ -90,8 +92,7 @@ void font_library_list_installed(font_library_t *lib, void (* f)(char *, char *,
 		if (FcPatternGetString(font, FC_FILE, 0, &file) == FcResultMatch &&
 			FcPatternGetString(font, FC_FAMILY, 0, &family) == FcResultMatch &&
 			FcPatternGetString(font, FC_STYLE, 0, &style) == FcResultMatch) {
-			f(file, family, style);
-			// printf("Filename: %s (family %s, style %s)\n", file, family, style);
+			f((char *) file, (char *) family, (char *) style);
 		}
 	}
 
@@ -139,6 +140,73 @@ font_t *font_load(font_library_t *lib, const char *file) {
 	f->face_index = 0;
 	f->cmap_index = 0; // face->charmap ? FT_Get_Charmap_Index(face->charmap) : 0
 	return f;
+}
+
+static FT_Error _font_get_face_and_size(
+		font_library_t *lib,
+		font_t *f,
+		int ptSize,
+		int dpi,
+		FT_Face *face,
+		FT_Size *size) {
+	FT_Error error;
+
+	lib->scaler.face_id = f;
+	lib->scaler.width  = (FT_UInt) ptSize * 64;
+	lib->scaler.height = (FT_UInt) ptSize * 64;
+	lib->scaler.pixel  = 0;
+	lib->scaler.x_res  = dpi;
+	lib->scaler.y_res  = dpi;
+
+	if ((error = FTC_Manager_LookupFace(lib->ftmanager, lib->scaler.face_id, face)))
+		return error;
+	if ((error = FTC_Manager_LookupSize(lib->ftmanager, &lib->scaler, size)))
+		return error;
+
+	return FT_Err_Ok;
+}
+
+static void _setup_harfbuzz(
+		font_library_t *lib,
+		FT_Face ft_face,
+		const char *text,
+		hb_glyph_info_t **currentGlyphInfo,
+		hb_glyph_position_t **currentGlyphPos,
+		unsigned int *glyph_count,
+		hb_font_t **hb_font) {
+	static const hb_feature_t hb_features[] = {
+		{ HB_TAG('k','e','r','n'), 1, 0, -1  },
+		{ HB_TAG('c','l','i','g'), 1, 0, -1  },
+		{ HB_TAG('l','i','g','a'), 1, 0, -1  }
+	};
+
+	*hb_font = hb_ft_font_create(ft_face, NULL);
+	hb_buffer_clear_contents(lib->hb_buffer);
+	hb_buffer_set_content_type(lib->hb_buffer, HB_BUFFER_CONTENT_TYPE_UNICODE);
+	hb_buffer_add_utf8(lib->hb_buffer, text, strlen(text), 0, strlen(text));
+	hb_buffer_set_script(lib->hb_buffer, HB_SCRIPT_LATIN);
+	hb_buffer_guess_segment_properties(lib->hb_buffer);
+
+	hb_shape(*hb_font, lib->hb_buffer, hb_features, sizeof(hb_features) / sizeof(hb_feature_t));
+
+	*currentGlyphPos = hb_buffer_get_glyph_positions(lib->hb_buffer, glyph_count);
+	*currentGlyphInfo = hb_buffer_get_glyph_infos(lib->hb_buffer, NULL);
+}
+
+void font_get_metrics(font_library_t *lib, font_t *f, int ptSize, int dpi, int *ascender, int *descender, int *height, int *max_advance) {
+	FT_Size size;
+	FT_Face face;
+
+	_font_get_face_and_size(lib, f, ptSize, dpi, &face, &size);
+
+	if (ascender)
+		*ascender = (int) (size->metrics.ascender / 64.0);
+	if (descender)
+		*descender = (int) (size->metrics.descender / 64.0);
+	if (height)
+		*height = (int) (size->metrics.height / 64.0);
+	if (max_advance)
+		*max_advance = (int) (size->metrics.max_advance / 64.0);
 }
 void font_free(font_t *f) {
 	free(f->face_filename);
@@ -208,7 +276,7 @@ static void bitblt(surface_t *source, surface_t *dest, int dx, int dy, uint32_t 
 }
 
 static uint32_t blendColor(uint32_t src) {
-	return src | (src << 8) | (src << 16) | (0xFF << 24);
+	return src | (src << 8) | (src << 16) | (src << 24);
 }
 
 static FT_Error renderIndex(font_library_t *lib, FTC_ScalerRec *scaler, FT_ULong index, FT_Glyph *glyf, surface_t *bitmap, int *bitmap_left, int *bitmap_top) {
@@ -300,13 +368,30 @@ static double _width_of_next_word(hb_glyph_info_t *first, hb_glyph_info_t *last,
 	return distance;
 }
 
-FT_Error surface_render_text(surface_t *surface, font_library_t *lib, font_t *f, int ptSize, int dpi, const char *text) {
-	static const hb_feature_t hb_features[] = {
-		{ HB_TAG('k','e','r','n'), 1, 0, -1  },
-		{ HB_TAG('c','l','i','g'), 1, 0, -1  },
-		{ HB_TAG('l','i','g','a'), 1, 0, -1  }
-	};
+int font_measure_width(font_library_t *lib, font_t *f, int ptSize, int dpi, char *string) {
+	FT_Face face;
+	FT_Size size;
+	FT_Error error;
+	hb_glyph_info_t *currentGlyphInfo;
+	hb_glyph_position_t *currentGlyphPos;
+	unsigned int glyph_count, i;
+	hb_font_t *hb_font;
+	int width = 0;
 
+	if ((error = _font_get_face_and_size(lib, f, ptSize, dpi, &face, &size)))
+		return -1;
+
+	_setup_harfbuzz(lib, face, string, &currentGlyphInfo, &currentGlyphPos, &glyph_count, &hb_font);
+
+	for (i = 0; i < glyph_count; i++)
+		width += (currentGlyphPos++)->x_advance;
+
+	hb_font_destroy(hb_font);
+
+	return (int) (width / 64.0);
+}
+
+FT_Error surface_render_text(surface_t *surface, font_library_t *lib, font_t *f, int ptSize, int dpi, const char *text) {
 	unsigned int glyph_count, maxHeight;
 	int remainingLetters;
 	hb_glyph_info_t *currentGlyphInfo, *lastGlyphInfo;
@@ -317,29 +402,10 @@ FT_Error surface_render_text(surface_t *surface, font_library_t *lib, font_t *f,
 	FT_Error error;
 	double x, y;
 
-	lib->scaler.face_id = f;
-	lib->scaler.width  = (FT_UInt) ptSize * 64;
-	lib->scaler.height = (FT_UInt) ptSize * 64;
-	lib->scaler.pixel  = 0;
-	lib->scaler.x_res  = dpi;
-	lib->scaler.y_res  = dpi;
-
-	if ((error = FTC_Manager_LookupFace(lib->ftmanager, lib->scaler.face_id, &ft_face)))
-		return error;
-	if ((error = FTC_Manager_LookupSize(lib->ftmanager, &lib->scaler, &size)))
+	if ((error = _font_get_face_and_size(lib, f, ptSize, dpi, &ft_face, &size)))
 		return error;
 
-	hb_font = hb_ft_font_create(ft_face, NULL);
-	hb_buffer_clear_contents(lib->hb_buffer);
-	hb_buffer_set_content_type(lib->hb_buffer, HB_BUFFER_CONTENT_TYPE_UNICODE);
-	hb_buffer_add_utf8(lib->hb_buffer, text, strlen(text), 0, strlen(text));
-	hb_buffer_set_script(lib->hb_buffer, HB_SCRIPT_LATIN);
-	hb_buffer_guess_segment_properties(lib->hb_buffer);
-
-	hb_shape(hb_font, lib->hb_buffer, hb_features, sizeof(hb_features) / sizeof(hb_feature_t));
-
-	currentGlyphPos = hb_buffer_get_glyph_positions(lib->hb_buffer, &glyph_count);
-	currentGlyphInfo = hb_buffer_get_glyph_infos(lib->hb_buffer, NULL);
+	_setup_harfbuzz(lib, ft_face, text, &currentGlyphInfo, &currentGlyphPos, &glyph_count, &hb_font);
 	lastGlyphInfo = currentGlyphInfo + glyph_count;
 
 	maxHeight = (int) ((ft_face->size->metrics.ascender - ft_face->size->metrics.descender) / 64.0);

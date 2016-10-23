@@ -47,8 +47,37 @@ static char *str_nullterm(char *str, int len) {
 	ntstr[len] = '\0';
 	return ntstr;
 }
-static void str_free(char *str) {
-	free(str);
+
+sqInt sqGetFontMetrics(char *_fontName, int fontNameLen, int ptSize, int dpi, int *ascender, int *descender, int *height, int *max_advance) {
+	if (!lib)
+		return 0;
+
+	char *fontName = str_nullterm(_fontName, fontNameLen);
+	font_t *f = font_load_by_name(lib, fontName);
+	font_get_metrics(lib, f, ptSize, dpi, ascender, descender, height, max_advance);
+	free(fontName);
+	return 1;
+}
+
+sqInt sqFontMeasureWidth(char *_fontName, int fontNameLen, int ptSize, int dpi, char *_string, int stringLen) {
+	BENCH_INIT();
+	BENCH_START();
+	if (!lib)
+		return -1;
+
+
+	char *fontName = str_nullterm(_fontName, fontNameLen);
+	char *string = str_nullterm(_string, stringLen);
+
+	DEBUG("Measuring width of `%s` for %s", string, fontName);
+
+	font_t *f = font_load_by_name(lib, fontName);
+	int width = font_measure_width(lib, f, ptSize, dpi, string);
+	free(fontName);
+	free(string);
+	BENCH_END("Measuring width");
+
+	return width;
 }
 
 sqInt sqBitmapTestWidthHeightDepthPointerStrLenPtsizeDpiFontLen(
@@ -64,6 +93,8 @@ sqInt sqBitmapTestWidthHeightDepthPointerStrLenPtsizeDpiFontLen(
 		char *_fontName,
 		int fontNameLen) {
 
+	BENCH_INIT();
+	BENCH_START();
 	DEBUG("Start to render string on bitmap (%ix%i@%i), valid: %i",
 			bmWidth,
 			bmHeight,
@@ -73,28 +104,22 @@ sqInt sqBitmapTestWidthHeightDepthPointerStrLenPtsizeDpiFontLen(
 	if (!lib)
 		return 0;
 
-	int bytesPerPixel = bmDepth / 8;
-	// BGRA format
-	for (int i = 0; i < bmWidth * bmWidth * bytesPerPixel; i += bytesPerPixel) {
-		buffer[i + 0] = 0;
-		buffer[i + 1] = 0;
-		buffer[i + 2] = 0;
-		buffer[i + 3] = 255;
-	}
-
 	char *str = str_nullterm(_str, len);
 	char *fontName = str_nullterm(_fontName, fontNameLen);
 
 	surface_t *surface = surface_new_for_data(bmWidth, bmHeight, bmDepth / 8, buffer);
 	surface_set_transparent(surface);
-	font_t *font = font_load(lib, fontName);
+	font_t *font = font_load_by_name(lib, fontName);
 
 	surface_render_text(surface, lib, font, ptSize, dpi, str);
 
-	str_free(str);
-	str_free(fontName);
+	free(str);
+	free(fontName);
 	surface_free_externaldata(surface);
-	return 0;
+
+	BENCH_END("Render of bitmap");
+
+	return 1;
 }
 
 sqInt sqBitmapTestWidthHeightDepthPointerReal(sqInt bmBitsSize, sqInt bmWidth, sqInt bmHeight, sqInt bmDepth, sqInt bmBits, unsigned char *r) {
