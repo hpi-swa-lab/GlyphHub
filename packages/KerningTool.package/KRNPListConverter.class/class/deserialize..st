@@ -1,11 +1,9 @@
 as yet unclassified
 deserialize: aPath
-	| pList document |
-	pList := KRNPList new.
+	| document |
+	document := (FileStream readOnlyFileNamed: ( aPath ) do: [ :file | 
+		XMLDOMParser parseDocumentFrom: file ]).
 	
-	document := (FileStream readOnlyFileNamed: ( aPath ) do: [ :file |
-XMLDOMParser parseDocumentFrom: file]).
-	
-	pList add: (self readElement: (document firstTagNamed: #plist) elements first).
-	
-	^ pList
+	^KRNPList new
+		content: (self readElement: (document firstTagNamed: #plist) elements first);
+		yourself

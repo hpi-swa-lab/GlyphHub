@@ -1,9 +1,9 @@
 as yet unclassified
 initialize
-	fontinfo := KRNPlistFile newForPath: (self path / 'fontinfo.plist') fullName.
-	kerning := KRNPlistFile newForPath: (self path / 'kerning.plist') fullName.
-	metainfo := KRNPlistFile newForPath: (self path / 'metainfo.plist') fullName.
-	glyphContents := KRNPlistFile newForPath: (self path / 'glyphs' / 'contents.plist') fullName.
+	fontinfo := (KRNPListConverter deserialize: (self path / 'fontinfo.plist') fullName) content.
+	kerning := (KRNPListConverter deserialize: (self path / 'kerning.plist') fullName) content.
+	metainfo := (KRNPListConverter deserialize: (self path / 'metainfo.plist') fullName) content.
+	glyphContents := (KRNPListConverter deserialize: (self path / 'glyphs' / 'contents.plist') fullName) content.
 	
 	glyphs := OrderedDictionary new.
 	codePointsTable := Dictionary new.

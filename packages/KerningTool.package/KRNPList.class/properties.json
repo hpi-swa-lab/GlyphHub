@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
+		"content" ],
 	"name" : "KRNPList",
 	"pools" : [
 		 ],
-	"super" : "OrderedCollection",
+	"super" : "Object",
 	"type" : "normal" }

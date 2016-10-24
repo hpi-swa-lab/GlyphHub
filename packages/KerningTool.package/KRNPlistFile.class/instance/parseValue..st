@@ -10,6 +10,6 @@ parseValue: aCollection
 		[#string] -> [ first contentString ].
 		[#date] -> [ self shouldNotImplement ].
 		[#data] -> [ self shouldNotImplement ].
-		[#array] -> [ self parseValueArray: first into: OrderedCollection new ].
+		[#array] -> [ {} ].
 		[#dict] -> [ self parseValueDict: first into: OrderedDictionary new ]
 	}
