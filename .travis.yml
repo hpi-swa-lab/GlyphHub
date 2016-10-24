@@ -7,3 +7,8 @@ smalltalk:
   - Squeak-5.0
   - Squeak-4.6
   - Squeak-4.5
+
+before_script:
+  # Move testFiles into smalltalkCI build directory
+  - "[[ -d $SMALLTALK_CI_BUILD/BP2016H1 ]] || mkdir -p $SMALLTALK_CI_BUILD/BP2016H1"
+  - ln -s $TRAVIS_BUILD_DIR/testFiles $SMALLTALK_CI_BUILD/BP2016H1
