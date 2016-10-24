@@ -1,0 +1,9 @@
+SmalltalkCISpec {
+  #loading : [
+    SCIMetacelloLoadSpec {
+      #baseline : 'KerningTool',
+      #directory : 'packages',
+      #platforms : [ #squeak ]
+    }
+  ]
+}
