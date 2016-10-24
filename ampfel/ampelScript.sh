@@ -13,7 +13,7 @@ NEW_STATE=$(curl -s -LH "Accept: application/vnd.travis-ci.2+json" "https://api.
 if [ "$CURRENT_STATE" != "$NEW_STATE" ];
 then
 	CURRENT_STATE=$NEW_STATE;
-	if [ $CURRENT_STATE = "\"state\":\"errored\"" ]; then
+	if [ $CURRENT_STATE = "\"state\":\"failed\"" ]; then
 		sispmctl -o 2 -f 1
 	elif [ $CURRENT_STATE = "\"state\":\"passed\"" ]; then
 		sispmctl -o 1 -f 2
