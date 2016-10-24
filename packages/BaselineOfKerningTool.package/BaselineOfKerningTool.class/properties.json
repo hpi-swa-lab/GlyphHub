@@ -1,0 +1,14 @@
+{
+	"category" : "BaselineOfKerningTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "BaselineOfKerningTool",
+	"pools" : [
+		 ],
+	"super" : "BaselineOf",
+	"type" : "normal" }
