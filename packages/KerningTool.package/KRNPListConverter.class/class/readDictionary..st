@@ -8,7 +8,7 @@ readDictionary: anXMLNode
 	index := 1.
 	[index < (anXMLNode elements size)] whileTrue: [
 		dictionary
-			at: (( anXMLNode elements at: index ) contentString )
+			at: (( anXMLNode elements at: index ) contentString asSymbol )
 			put: ( self readElement: ( anXMLNode elements at: index+1 )).
 		index := index + 2 ].
 	^ dictionary
