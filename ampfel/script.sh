@@ -6,7 +6,7 @@ while true
 do 
 
 
-NEW_STATE=$(curl -s -i -H "Accept: application/vnd.travis-ci.2+json" "https://api.travis-ci.org/repos/HPI-SWA-Teaching/PrettyPrettyPrint/builds" | grep -o '"state":.[a-z\"]*' | head -1)
+NEW_STATE=$(curl -s -i -H "Accept: application/vnd.travis-ci.2+json" "https://api.travis-ci.org/repos/HPI-SWA-Teaching/BP2016H1/builds" | grep -o '"state":.[a-z\"]*' | head -1)
 
 if [ "$CURRENT_STATE" != "$NEW_STATE" ]
 then
@@ -14,8 +14,8 @@ then
 	CURRENT_STATE=$NEW_STATE
 
 	if [ "$NEW_STATE"="\"{state}\":\"passed\"" ]
-	then tg/bin/telegram-cli -W -e "chat_set_photo Test ./rotesAmpelmann.png"
-	else tg/bin/telegram-cli -W -e "chat_set_photo Test ./gruenesAmpelmann.png"
+	then tg/bin/telegram-cli -W -e "chat_set_photo BBP ./gruenesAmpelmann.png"
+	else tg/bin/telegram-cli -W -e "chat_set_photo BBP ./rotesAmpelmann.png"
 	fi
 fi
 
