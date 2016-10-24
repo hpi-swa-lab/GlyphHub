@@ -19,4 +19,5 @@ initialize
 	
 	self
 		color: Color white;
-		ptSize: 11
+		ptSize: 11;
+		position: 0 @ 0
