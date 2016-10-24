@@ -1,0 +1,15 @@
+{
+	"category" : "KerningTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"font",
+		"ptSize" ],
+	"name" : "KRNCursor",
+	"pools" : [
+		 ],
+	"super" : "Morph",
+	"type" : "normal" }

@@ -1,0 +1,19 @@
+{
+	"category" : "KerningTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"targetView",
+		"detailView",
+		"text",
+		"font",
+		"cursor",
+		"targetPtSize" ],
+	"name" : "KRNJacetKerningTool",
+	"pools" : [
+		 ],
+	"super" : "Morph",
+	"type" : "normal" }
