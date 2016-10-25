@@ -2,4 +2,8 @@
 	"class" : {
 		 },
 	"instance" : {
+		"testReadArrayDictCombination1" : "jh 10/25/2016 13:25",
+		"testReadSimpleArray1" : "jh 10/25/2016 12:14",
+		"testReadSimpleDict1" : "jh 10/25/2016 12:05",
+		"testReadSimpleInteger1" : "jh 10/25/2016 12:18",
 		"testSimpleDict1" : "jh 10/24/2016 14:29" } }
