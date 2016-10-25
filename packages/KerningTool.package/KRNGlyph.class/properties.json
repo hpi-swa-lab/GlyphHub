@@ -14,7 +14,8 @@
 		"unicodeCodePoints",
 		"shapes",
 		"components",
-		"transform" ],
+		"transform",
+		"name" ],
 	"name" : "KRNGlyph",
 	"pools" : [
 		 ],

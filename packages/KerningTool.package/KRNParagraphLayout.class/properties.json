@@ -6,7 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"lineHeight" ],
+		"lineHeight",
+		"kerning",
+		"owner" ],
 	"name" : "KRNParagraphLayout",
 	"pools" : [
 		 ],

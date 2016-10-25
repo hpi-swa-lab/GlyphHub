@@ -1,6 +1,5 @@
 {
 	"class" : {
-		"newForPath:from:" : "TB 10/19/2016 09:32",
 		"newForXML:from:" : "TB 10/20/2016 11:40" },
 	"instance" : {
 		"advance" : "TB 10/18/2016 23:25",
@@ -15,10 +14,11 @@
 		"font:" : "TB 10/19/2016 09:33",
 		"glif" : "TB 10/20/2016 11:41",
 		"glif:" : "TB 10/20/2016 11:40",
-		"initialize" : "lcj 10/24/2016 15:19",
+		"initialize" : "TB 10/25/2016 12:18",
 		"isCursor" : "TB 10/24/2016 14:05",
 		"isSeparator" : "TB 10/20/2016 13:49",
 		"lineFrom:to:" : "TB 10/19/2016 09:21",
+		"name" : "TB 10/25/2016 12:19",
 		"pointsForContour:" : "lcj 10/24/2016 11:42",
 		"ptSize" : "TB 10/18/2016 23:39",
 		"ptSize:" : "lcj 10/20/2016 16:54",

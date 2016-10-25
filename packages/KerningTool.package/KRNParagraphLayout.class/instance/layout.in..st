@@ -4,6 +4,8 @@ layout: aKRNGlyphContainer in: aRectangle
 	x := aRectangle left.
 	y := aRectangle top.
 	
+	owner := aKRNGlyphContainer.
+	
 	aKRNGlyphContainer hasSubmorphs ifFalse: [ ^self ].
 	
 	font := aKRNGlyphContainer firstSubmorph font.
@@ -16,7 +18,7 @@ layout: aKRNGlyphContainer in: aRectangle
 			ifFalse: [
 				width := glyph advanceScaled x.
 				
-				index > 1 ifTrue: [
+				(self kerning and: [index > 1]) ifTrue: [
 					width := width + ((font findKerningBetween: (glyphs at: index - 1) and: glyph) * glyph scale) ].
 				
 				width + x > aRectangle right ifTrue: [

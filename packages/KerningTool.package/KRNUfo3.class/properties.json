@@ -3,7 +3,8 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		"FiraSans" ],
+		"FiraSans",
+		"OpenBaskerville" ],
 	"commentStamp" : "",
 	"instvars" : [
 		"path",
@@ -12,7 +13,8 @@
 		"metainfo",
 		"glyphContents",
 		"glyphs",
-		"codePointsTable" ],
+		"codePointsTable",
+		"groups" ],
 	"name" : "KRNUfo3",
 	"pools" : [
 		 ],

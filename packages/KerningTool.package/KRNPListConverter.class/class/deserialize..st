@@ -1,7 +1,7 @@
 as yet unclassified
 deserialize: aPath
 	| document |
-	document := (FileStream readOnlyFileNamed: ( aPath ) do: [ :file | 
+	document := (FileStream readOnlyFileNamed: aPath do: [ :file | 
 		XMLDOMParser parseDocumentFrom: file ]).
 	
 	^KRNPList new
