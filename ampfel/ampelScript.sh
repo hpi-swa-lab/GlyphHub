@@ -15,7 +15,7 @@ then
 	CURRENT_STATE=$NEW_STATE;
 	if [ $CURRENT_STATE = "\"state\":\"passed\"" ]; then
 		sispmctl -o 1 -f 2
-
+#todo: include case for "created" and "started" states
 	else
 		sispmctl -f 1 -o 2
 	fi
