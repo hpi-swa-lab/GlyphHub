@@ -1,0 +1,39 @@
+<html>
+<head>
+  <title>Travis</title>
+</head>
+<body>
+<h1>Travis</h1>
+
+<div id="travis"> </div>
+
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+
+<script>
+var draw = function() {
+  $.ajax({
+    url: "https://api.travis-ci.org/repos/HPI-SWA-Lab/BP2016H1/builds",
+    headers: {
+      Accept: "application/vnd.travis-ci.2+json"
+    },
+    dataType: 'json',
+    success: function(data) {
+      var job_id = data.builds[0].job_ids[0];
+      $.get("https://s3.amazonaws.com/archive.travis-ci.org/jobs/"+ job_id +"/log.txt", function(log) {
+        s = log.split(/\n/).filter( ea => ea.match(/\#/)).join("\n");
+        var content = "" + new Date() +"<br><pre>" + s + "</pre>";
+        document.querySelector("#travis").innerHTML = content;
+      });
+    }
+  });
+};
+
+
+draw();
+setInterval(draw, 10000);
+</script>
+</body>
+</html>
