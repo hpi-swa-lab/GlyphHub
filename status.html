@@ -1,27 +1,19 @@
+<head>
+	<script src="src/external/system.src.js"></script>
+</head>
+
+<script>
+    System.config({
+        transpiler: 'babel',
+        babelOptions: {stage: 0, optional: ['es7.doExpressions']},
+        map: {
+            babel: 'src/external/babel-browser.js'
+        }
+    });
+    System.import('status.js');
+</script>
+
 <h1>Travis</h1>
 
 <div id="travis"> </div>
 
-<script>
-function draw() {
-fetch("https://api.travis-ci.org/repos/HPI-SWA-Lab/BP2016H1/builds", {
-	headers: {
-		Accept: "application/vnd.travis-ci.2+json"
-	}
-}).then(r => r.json()).then( json => 
-  json.builds[0].job_ids[0]
-).then( job_id => 
-  "https://s3.amazonaws.com/archive.travis-ci.org/jobs/"+ job_id +"/log.txt"
-).then(url =>
-  fetch(url).then( r => r.text())
-).then( t => {
-  s = t.split(/\n/).filter( ea => ea.match(/\#/)).join("\n")
-  document.querySelector("#travis").innerHTML = ""+ new Date() +"<br><pre>" + s +"</pre>"
-})
-  
-  setTimeout(draw, 10000)
-}
-
-
-draw()
-</script>
