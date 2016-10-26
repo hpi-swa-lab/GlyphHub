@@ -22,8 +22,9 @@ var draw = function() {
     dataType: 'json',
     success: function(data) {
       var job_id = data.builds[0].job_ids[0];
-      $.get("https://s3.amazonaws.com/archive.travis-ci.org/jobs/"+ job_id +"/log.txt", function(log) {
-        s = log.substr(log.indexOf('travis_fold:end:test_project') + 41, log.length);
+      $.get("https://api.travis-ci.org/jobs/" + job_id, function(log_data) {
+        var log = log_data.log;
+        var s = log.substr(log.indexOf('travis_fold:end:test_project') + 41, log.length);
         var content = "" + new Date() +"<br><pre>" + s + "</pre>";
         document.querySelector("#travis").innerHTML = content;
       });
