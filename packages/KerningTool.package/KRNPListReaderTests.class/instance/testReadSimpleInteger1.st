@@ -1,4 +1,4 @@
-as yet unclassified
+reading
 testReadSimpleInteger1
 	| expectedResult realResult |
 	

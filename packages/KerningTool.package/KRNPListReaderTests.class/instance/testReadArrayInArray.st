@@ -1,4 +1,4 @@
-as yet unclassified
+reading
 testReadArrayInArray
 	| expectedResult realResult |
 	

@@ -1,9 +1,14 @@
 {
 	"class" : {
 		"deserialize:" : "jh 10/26/2016 11:17",
+		"pListStart" : "jh 10/26/2016 14:12",
 		"readArray:" : "jh 10/20/2016 17:09",
 		"readDictionary:" : "jh 10/24/2016 12:22",
 		"readElement:" : "jh 10/20/2016 18:18",
-		"readElements:" : "jh 10/20/2016 17:17" },
+		"readElements:" : "jh 10/20/2016 17:17",
+		"serialize:" : "jh 10/26/2016 14:17",
+		"turnElementIntoXML:with:" : "jh 10/26/2016 15:26",
+		"write:inTag:on:" : "jh 10/26/2016 15:24",
+		"writeTagNamed:withContent:" : "jh 10/26/2016 15:10" },
 	"instance" : {
 		 } }

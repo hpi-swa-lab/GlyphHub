@@ -1,4 +1,4 @@
-as yet unclassified
+reading
 testReadSimpleDict1
 	| expectedResult realResult |
 	
