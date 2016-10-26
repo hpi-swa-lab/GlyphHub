@@ -3,6 +3,7 @@
 <div id="travis"> </div>
 
 <script>
+function draw() {
 fetch("https://api.travis-ci.org/repos/HPI-SWA-Lab/BP2016H1/builds", {
 	headers: {
 		Accept: "application/vnd.travis-ci.2+json"
@@ -15,7 +16,12 @@ fetch("https://api.travis-ci.org/repos/HPI-SWA-Lab/BP2016H1/builds", {
   fetch(url).then( r => r.text())
 ).then( t => {
   s = t.split(/\n/).filter( ea => ea.match(/\#/)).join("\n")
-  document.querySelector("#travis").innerHTML = "<pre>" + s +"</pre>"
+  document.querySelector("#travis").innerHTML = ""+ new Date() +"<br><pre>" + s +"</pre>"
 })
+  
+  setTimeout(draw, 10000)
+}
 
+
+draw()
 </script>
