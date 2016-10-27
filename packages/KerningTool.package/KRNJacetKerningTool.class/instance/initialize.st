@@ -22,7 +22,10 @@ initialize
 	buttonPanel := self createButtonPanel.
 	
 	cursor := KRNCursor new.
-	self targetPtSize: 16.
+	
+	self
+		targetPtSize: 16;
+		detailPtSize: 1.
 	
 	self
 		extent: 500 @ 500;
@@ -31,3 +34,4 @@ initialize
 		addMorph: buttonPanel fullFrame: (LayoutFrame fractions: (0 @ 1 corner: 1 @ 1) offsets: (0 @ (self buttonPanelHeight negated) corner: 0 @ 0));
 		layoutPolicy: ProportionalLayout new;
 		yourself
+	

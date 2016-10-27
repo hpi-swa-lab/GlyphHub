@@ -11,7 +11,9 @@
 		"text",
 		"font",
 		"cursor",
-		"targetPtSize" ],
+		"targetPtSize",
+		"detailPtSize",
+		"detailViewBounds" ],
 	"name" : "KRNJacetKerningTool",
 	"pools" : [
 		 ],

@@ -1,6 +1,8 @@
 as yet unclassified
 layout: aKRNGlyphContainer in: aRectangle
 	| x y font glyphs yAdvance previousGlyph width |
+	aKRNGlyphContainer owner detailViewBounds: aRectangle.
+
 	x := aRectangle left.
 	y := aRectangle top.
 	previousGlyph := nil.

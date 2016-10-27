@@ -6,8 +6,4 @@ cursorChanged: newIndex
 	stopIndex :=  startIndex + 1 clampLow: 1 high: self text size.
 	text := self text copyFrom: startIndex to: stopIndex.
 
-	self detailView removeAllMorphs.
-	text do: [ :char |
-		self detailView addMorph: ((self font createGlyphFor: char ptSize: self targetPtSize)
-			color: Color black;
-			yourself) ]
+	self updateDetailView: text

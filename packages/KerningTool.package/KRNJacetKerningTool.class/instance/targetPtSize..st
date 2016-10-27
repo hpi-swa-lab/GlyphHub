@@ -1,4 +1,4 @@
 as yet unclassified
 targetPtSize: aNumber
-	cursor ptSize: aNumber.
+	self cursor ptSize: aNumber.
 	targetPtSize := aNumber
