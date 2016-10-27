@@ -1,0 +1,3 @@
+[submodule "testFiles/open-baskerville"]
+	path = testFiles/open-baskerville
+	url = git@github.com:klepas/open-baskerville.git
