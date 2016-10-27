@@ -4,7 +4,7 @@ initialize
 	super initialize.
 	
 	transform := MatrixTransform2x3 identity.
-	name := glif attributeAt: #name ifAbsent: [ self error: 'glif name missing, invalid file' ].
+	name := (glif attributeAt: #name ifAbsent: [ self error: 'glif name missing, invalid file' ]) asSymbol.
 	
 	shapes := OrderedCollection new.
 	(glif firstTagNamed: #outline) tagsNamed: #contour do: [ :contour |

@@ -26,7 +26,7 @@ layout: aKRNGlyphContainer in: aRectangle
 				width := glyph advanceScaled x.
 				
 				(self kerning and: [previousGlyph notNil]) ifTrue: [
-					width := width + ((font findKerningBetween: previousGlyph and: glyph) * glyph scale) ].
+					x := x + ((font findKerningBetween: previousGlyph and: glyph) * glyph scale) ].
 				
 				width + x > aRectangle right ifTrue: [
 					x := aRectangle left.
