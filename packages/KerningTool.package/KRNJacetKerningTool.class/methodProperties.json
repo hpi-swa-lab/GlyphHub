@@ -1,12 +1,13 @@
 {
 	"class" : {
-		"example" : "jh 10/27/2016 15:17",
+		"example" : "jh 10/27/2016 16:34",
 		"newForFont:" : "al 10/27/2016 14:21" },
 	"instance" : {
 		"addKerning:" : "TB 10/27/2016 15:42",
 		"buttonPanelHeight" : "TB 10/24/2016 12:12",
 		"calculateDetailPtSize" : "al 10/27/2016 14:09",
-		"createButtonPanel" : "TB 10/24/2016 13:39",
+		"createButtonPanel" : "jh 10/27/2016 16:17",
+		"createToggleButton" : "jh 10/27/2016 16:34",
 		"cursor" : "al 10/27/2016 12:13",
 		"cursor:" : "al 10/27/2016 12:13",
 		"cursorChanged:" : "al 10/27/2016 15:06",
@@ -34,5 +35,6 @@
 		"targetView" : "TB 10/24/2016 11:30",
 		"text" : "TB 10/24/2016 13:41",
 		"text:" : "TB 10/27/2016 12:00",
+		"toggle" : "jh 10/27/2016 16:25",
 		"updateDetailView:" : "al 10/27/2016 15:06",
 		"wantsKeyboardFocus" : "TB 10/24/2016 13:54" } }
