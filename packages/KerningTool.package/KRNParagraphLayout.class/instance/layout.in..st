@@ -1,8 +1,9 @@
 as yet unclassified
 layout: aKRNGlyphContainer in: aRectangle
-	| x y font glyphs yAdvance |
+	| x y font glyphs yAdvance previousGlyph width |
 	x := aRectangle left.
 	y := aRectangle top.
+	previousGlyph := nil.
 	
 	owner := aKRNGlyphContainer.
 	
@@ -12,17 +13,23 @@ layout: aKRNGlyphContainer in: aRectangle
 	yAdvance := font height * aKRNGlyphContainer firstSubmorph scale * self lineHeight.
 	glyphs := aKRNGlyphContainer submorphs reverse.
 	
-	glyphs doWithIndex: [ :glyph :index | | width |
-		glyph isCursor
-			ifTrue: [ glyph layoutInBounds: (x @ y extent: 2 @ yAdvance) ]
+	glyphs do: [ :glyph |
+		glyph isGlyph
 			ifFalse: [
+				glyph layoutInBounds: (x @ y extent: 2 @ yAdvance).
+				glyph isCR ifTrue: [
+					x := aRectangle left.
+					y := y + yAdvance ]]
+			ifTrue: [
 				width := glyph advanceScaled x.
 				
-				(self kerning and: [index > 1]) ifTrue: [
-					width := width + ((font findKerningBetween: (glyphs at: index - 1) and: glyph) * glyph scale) ].
+				(self kerning and: [previousGlyph notNil]) ifTrue: [
+					width := width + ((font findKerningBetween: previousGlyph and: glyph) * glyph scale) ].
 				
 				width + x > aRectangle right ifTrue: [
 					x := aRectangle left.
 					y := y + yAdvance ].
+				
 				glyph layoutInBounds: (x @ y extent: glyph extent).
-				x := x + width ]]
+				x := x + width.
+				previousGlyph := glyph ]]
