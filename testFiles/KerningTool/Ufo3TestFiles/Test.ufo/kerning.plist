@@ -9,8 +9,17 @@
 	</dict>
 	<key>B</key>
 	<dict>
-		<key>public.ker2.V</key>
+		<key>public.kern2.V</key>
 		<integer>10</integer>
+	</dict>
+	<key>public.kern1.T</key>
+	<dict>
+		<key>U</key>
+		<integer>7</integer>
+		<key>X</key>
+		<integer>3</integer>
+		<key>public.kern2.V</key>
+		<integer>17</integer>
 	</dict>
 </dict>
 </plist>

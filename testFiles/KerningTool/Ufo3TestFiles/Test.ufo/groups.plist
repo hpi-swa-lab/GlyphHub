@@ -14,6 +14,11 @@
 		<string>B</string>
 		<string>C</string>
 	</array>
+	<key>public.kern1.T</key>
+	<array>
+		<string>T</string>
+		<string>F</string>
+	</array>
 	<key>public.kern2.V</key>
 	<array>
 		<string>W</string>

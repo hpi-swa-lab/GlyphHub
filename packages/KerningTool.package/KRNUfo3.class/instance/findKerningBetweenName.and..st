@@ -6,7 +6,7 @@ findKerningBetweenName: first and: second
 
 	groupsFirst := self groupsContaining: first select: [ :name | kerning includesKey: name ].
 	groupsSecond := self groupsContaining: second.
-
+	
 	kerning at: first ifPresent: [ :entry |
 		" glyph -> glyph "
 		entry at: second ifPresent: [ :value | ^value ].

@@ -7,4 +7,6 @@
 		"testLoadFile" : "TB 10/26/2016 17:59",
 		"testReadGroup" : "TB 10/27/2016 10:44",
 		"testResolveKerningGlyphGlyph" : "TB 10/26/2016 18:00",
-		"testResolveKerningGlyphGroup" : "TB 10/27/2016 10:44" } }
+		"testResolveKerningGlyphGroup" : "TB 10/27/2016 10:44",
+		"testResolveKerningGroupGlyph" : "TB 10/27/2016 11:41",
+		"testResolveKerningGroupGroup" : "TB 10/27/2016 11:43" } }
