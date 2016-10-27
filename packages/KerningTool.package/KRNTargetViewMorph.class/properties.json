@@ -1,0 +1,14 @@
+{
+	"category" : "KerningTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "KRNTargetViewMorph",
+	"pools" : [
+		 ],
+	"super" : "Morph",
+	"type" : "normal" }

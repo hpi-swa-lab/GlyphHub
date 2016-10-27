@@ -1,5 +1,6 @@
 {
 	"class" : {
+		"example" : "jh 10/27/2016 15:17",
 		"newForFont:" : "al 10/27/2016 14:21" },
 	"instance" : {
 		"buttonPanelHeight" : "TB 10/24/2016 12:12",
@@ -9,6 +10,9 @@
 		"cursor:" : "al 10/27/2016 12:13",
 		"cursorChanged:" : "al 10/27/2016 15:06",
 		"cursorMove:" : "al 10/27/2016 11:57",
+		"cursorMoveBehind:" : "jh 10/27/2016 15:35",
+		"cursorMoveInFrontOf:" : "jh 10/27/2016 15:35",
+		"cursorMoveTo:" : "jh 10/27/2016 14:24",
 		"detailPtSize" : "al 10/27/2016 12:10",
 		"detailPtSize:" : "al 10/27/2016 12:10",
 		"detailView" : "TB 10/24/2016 11:30",
@@ -18,8 +22,10 @@
 		"font" : "TB 10/24/2016 13:44",
 		"font:" : "TB 10/24/2016 14:23",
 		"handlesKeyboard:" : "TB 10/24/2016 13:55",
-		"initialize" : "al 10/27/2016 14:20",
-		"keyStroke:" : "TB 10/24/2016 14:21",
+		"initialize" : "jh 10/27/2016 14:58",
+		"kerning" : "jh 10/27/2016 11:33",
+		"kerning:" : "jh 10/27/2016 11:33",
+		"keyStroke:" : "jh 10/27/2016 15:40",
 		"layoutChanged" : "al 10/27/2016 14:47",
 		"open" : "TB 10/24/2016 13:40",
 		"targetPtSize" : "TB 10/24/2016 14:26",

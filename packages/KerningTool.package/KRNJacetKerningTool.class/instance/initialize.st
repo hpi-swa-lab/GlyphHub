@@ -2,8 +2,9 @@ as yet unclassified
 initialize
 	| buttonPanel |
 	super initialize.
+	self color: Color lightGray.
 	
-	targetView := Morph new
+	targetView := KRNTargetViewMorph new
 		layoutInset: 10;
 		color: Color white;
 		borderWidth: 1;
@@ -22,10 +23,7 @@ initialize
 	buttonPanel := self createButtonPanel.
 	
 	cursor := KRNCursor new.
-	
-	self
-		targetPtSize: 16;
-		detailPtSize: 1.
+	self targetPtSize: 16.
 	
 	self
 		extent: 500 @ 500;
@@ -34,4 +32,3 @@ initialize
 		addMorph: buttonPanel fullFrame: (LayoutFrame fractions: (0 @ 1 corner: 1 @ 1) offsets: (0 @ (self buttonPanelHeight negated) corner: 0 @ 0));
 		layoutPolicy: ProportionalLayout new;
 		yourself
-	

@@ -4,5 +4,5 @@ keyStroke: evt
 	key := evt keyString.
 	'<left>' = key ifTrue: [ self cursorMove: 1 ].
 	'<right>' = key ifTrue: [ self cursorMove: -1 ].
-	'<ctrl-left>' = key ifTrue: [  ].
-	'<ctrl-right>' = key ifTrue: [  ]
+	'<Ctrl-left>' = key ifTrue: [ self cursorMove: 10 ].
+	'<Ctrl-right>' = key ifTrue: [ self cursorMove: -10 ]
