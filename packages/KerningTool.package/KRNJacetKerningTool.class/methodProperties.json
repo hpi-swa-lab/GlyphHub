@@ -4,7 +4,8 @@
 	"instance" : {
 		"buttonPanelHeight" : "TB 10/24/2016 12:12",
 		"createButtonPanel" : "TB 10/24/2016 13:39",
-		"cursorMove:" : "TB 10/24/2016 15:03",
+		"cursorChanged:" : "al 10/27/2016 11:54",
+		"cursorMove:" : "al 10/27/2016 11:57",
 		"detailView" : "TB 10/24/2016 11:30",
 		"font" : "TB 10/24/2016 13:44",
 		"font:" : "TB 10/24/2016 14:23",
@@ -16,5 +17,5 @@
 		"targetPtSize:" : "TB 10/24/2016 14:26",
 		"targetView" : "TB 10/24/2016 11:30",
 		"text" : "TB 10/24/2016 13:41",
-		"text:" : "TB 10/24/2016 14:14",
+		"text:" : "al 10/27/2016 12:02",
 		"wantsKeyboardFocus" : "TB 10/24/2016 13:54" } }

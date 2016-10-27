@@ -1,5 +1,9 @@
 as yet unclassified
 cursorMove: step
+
+	| cursorIndex |
+	cursorIndex :=(targetView submorphIndexOf: cursor)+ step clampLow: 1 high: targetView submorphCount.
 	targetView
 		addMorph: cursor
-		asElementNumber: ((targetView submorphIndexOf: cursor) + step clampLow: 1 high: targetView submorphCount)
+		asElementNumber: cursorIndex.
+	self cursorChanged: cursorIndex.

@@ -8,4 +8,5 @@ text: aString
 			color: Color black;
 			yourself) ].
 	
-	targetView addMorphBack: cursor
+	targetView addMorphBack: cursor.
+	self cursorChanged: self text size
