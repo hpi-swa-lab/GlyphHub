@@ -9,8 +9,6 @@
 		"glif",
 		"unitsPerEm",
 		"fontHeight",
-		"ptSize",
-		"font",
 		"unicodeCodePoints",
 		"shapes",
 		"components",
@@ -19,5 +17,5 @@
 	"name" : "KRNGlyph",
 	"pools" : [
 		 ],
-	"super" : "RectangleMorph",
+	"super" : "KRNTextElement",
 	"type" : "normal" }

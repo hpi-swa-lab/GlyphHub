@@ -6,9 +6,10 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "KRNCursor",
+		"font",
+		"ptSize" ],
+	"name" : "KRNTextElement",
 	"pools" : [
 		 ],
-	"super" : "KRNTextElement",
+	"super" : "Morph",
 	"type" : "normal" }
