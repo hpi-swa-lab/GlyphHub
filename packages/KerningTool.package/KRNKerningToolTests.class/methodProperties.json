@@ -2,4 +2,9 @@
 	"class" : {
 		 },
 	"instance" : {
-		 } }
+		"basePath" : "TB 10/26/2016 17:09",
+		"setUp" : "TB 10/26/2016 17:59",
+		"testLoadFile" : "TB 10/26/2016 17:59",
+		"testReadGroup" : "TB 10/27/2016 10:44",
+		"testResolveKerningGlyphGlyph" : "TB 10/26/2016 18:00",
+		"testResolveKerningGlyphGroup" : "TB 10/27/2016 10:44" } }

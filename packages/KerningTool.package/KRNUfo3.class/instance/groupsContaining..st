@@ -1,3 +1,3 @@
 as yet unclassified
 groupsContaining: aGlyphName
-	^(groups associationsSelect: [ :group | group value includes: aGlyphName ]) keys
+	^self groupsContaining: aGlyphName select: [ :name | true ]
