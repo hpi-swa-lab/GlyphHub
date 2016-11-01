@@ -11,6 +11,7 @@
 		"text",
 		"font",
 		"cursor",
+		"ptSizeSlider",
 		"targetPtSize",
 		"detailPtSize",
 		"detailViewBounds" ],
