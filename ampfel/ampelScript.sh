@@ -16,6 +16,8 @@ then
 	if [ $CURRENT_STATE = "\"state\":\"passed\"" ]; then
 		sispmctl -o 1 -f 2
 #todo: include case for "created" and "started" states
+	elif [ $CURRENT_STATE = "\"state\":\"started\"" ] || [ $CURRENT_STATE = "\"state\":\"created\"" ] || [ $CURRENT_STATE = "\"state\":\"starting\"" ] || [ $CURRENT_STATE = "\"state\":\"queued\"" ]; then
+		sispmctl -o 1 -o 2
 	else
 		sispmctl -f 1 -o 2
 	fi
