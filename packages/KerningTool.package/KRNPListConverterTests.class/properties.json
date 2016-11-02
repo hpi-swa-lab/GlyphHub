@@ -7,7 +7,7 @@
 	"commentStamp" : "",
 	"instvars" : [
 		 ],
-	"name" : "KRNPListReaderTests",
+	"name" : "KRNPListConverterTests",
 	"pools" : [
 		 ],
 	"super" : "TestCase",
