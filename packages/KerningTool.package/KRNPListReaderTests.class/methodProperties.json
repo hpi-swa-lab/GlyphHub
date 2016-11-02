@@ -2,8 +2,8 @@
 	"class" : {
 		 },
 	"instance" : {
-		"helperTestParsePListToXMLString:" : "jh 10/26/2016 15:05",
-		"helperTestParseStringToXMLString:" : "jh 10/26/2016 15:05",
+		"helperTestParsePListToXMLString:" : "jh 11/2/2016 11:08",
+		"helperTestParseStringToXMLString:" : "jh 11/2/2016 11:08",
 		"testReadArrayDictCombination1" : "jh 10/25/2016 13:25",
 		"testReadArrayInArray" : "jh 10/26/2016 10:31",
 		"testReadDictInDict" : "jh 10/26/2016 10:33",
@@ -14,4 +14,6 @@
 		"testReadSimpleDict1" : "jh 10/25/2016 12:05",
 		"testReadSimpleInteger1" : "jh 10/25/2016 12:18",
 		"testSimpleDict1" : "jh 10/24/2016 14:29",
+		"testWriteSimpleArray" : "jh 11/2/2016 12:00",
+		"testWriteSimpleDict" : "jh 11/2/2016 11:56",
 		"testWriteSimpleInteger" : "jh 10/26/2016 15:03" } }
