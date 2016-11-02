@@ -12,13 +12,7 @@ initialize
 		layoutPolicy: (KRNParagraphLayout new lineHeight: 1.1; yourself);
 		yourself.
 	
-	detailView := Morph new
-		layoutInset: 10;
-		color: Color white;
-		borderWidth: 1;
-		borderColor: Color black;
-		layoutPolicy: (KRNParagraphLayout new lineHeight: 1.1; yourself);
-		yourself.
+	detailView := KRNGlyphInspectMorph new.
 	
 	buttonPanel := self createButtonPanel.
 	

@@ -1,21 +1,19 @@
 as yet unclassified
 layout: aKRNGlyphContainer in: aRectangle
-	| x y font glyphs yAdvance previousGlyph width |
+	| x y font yAdvance previousGlyph width props |
 	aKRNGlyphContainer owner detailViewBounds: aRectangle.
-
-	x := aRectangle left.
-	y := aRectangle top.
-	previousGlyph := nil.
-	
 	owner := aKRNGlyphContainer.
+	previousGlyph := nil.
 	
 	aKRNGlyphContainer hasSubmorphs ifFalse: [ ^self ].
 	
-	font := aKRNGlyphContainer firstSubmorph font.
-	yAdvance := font height * aKRNGlyphContainer firstSubmorph scale * self lineHeight.
-	glyphs := aKRNGlyphContainer submorphs reverse.
+	props := self fontLayoutPropertiesOf: aKRNGlyphContainer in: aRectangle.
+	x := props first.
+	y := props second.
+	font := props third.
+	yAdvance := props fourth.
 	
-	glyphs do: [ :glyph |
+	aKRNGlyphContainer submorphs reverseDo: [ :glyph |
 		glyph isGlyph
 			ifFalse: [
 				glyph layoutInBounds: (x @ y extent: 2 @ yAdvance).
