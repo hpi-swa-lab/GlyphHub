@@ -1,4 +1,4 @@
-as yet unclassified
+event handling
 addKerning: aNumber
 	| firstName secondName list |
 	" submorphs are added in reverse order "

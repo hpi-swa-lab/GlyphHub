@@ -1,4 +1,4 @@
-as yet unclassified
+ui-creation
 createPointSizePanel
 	^(Morph new
 		hResizing: #spaceFill;

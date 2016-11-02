@@ -1,4 +1,4 @@
-as yet unclassified
+change reporting
 cursorChanged: newIndex
 
 	| startIndex stopIndex text |

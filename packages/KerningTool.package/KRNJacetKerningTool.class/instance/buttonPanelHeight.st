@@ -1,3 +1,3 @@
-as yet unclassified
+ui-creation
 buttonPanelHeight
 	^30

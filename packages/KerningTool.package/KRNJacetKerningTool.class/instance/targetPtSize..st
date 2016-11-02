@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 targetPtSize: aNumber
 	self cursor ptSize: aNumber.
 	self ptSizeSlider setValue: aNumber.

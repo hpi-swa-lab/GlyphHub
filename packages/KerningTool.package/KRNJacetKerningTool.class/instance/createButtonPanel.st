@@ -1,4 +1,4 @@
-as yet unclassified
+ui-creation
 createButtonPanel
 	^Morph new
 		addMorph: self createPointSizePanel;

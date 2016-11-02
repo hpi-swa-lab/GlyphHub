@@ -1,4 +1,4 @@
-as yet unclassified
+ui-creation
 createPointSizeSlider
 	self ptSizeSlider: (Slider new
 		hResizing: #spaceFill;

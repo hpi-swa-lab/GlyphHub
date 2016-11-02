@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 detailViewBounds: bounds
 	(bounds = self detailViewBounds)
 		ifFalse: [ detailViewBounds := bounds.

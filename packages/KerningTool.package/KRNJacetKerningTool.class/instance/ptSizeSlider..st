@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 ptSizeSlider:  aSlider
 	ptSizeSlider := aSlider

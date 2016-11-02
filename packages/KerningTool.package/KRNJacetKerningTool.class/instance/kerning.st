@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 kerning
 	^targetView layoutPolicy kerning

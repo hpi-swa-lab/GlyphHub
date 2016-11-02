@@ -1,4 +1,4 @@
-as yet unclassified
+change reporting
 updateDetailView: aString
 
 	self detailView removeAllMorphs.
