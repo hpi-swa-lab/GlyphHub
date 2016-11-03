@@ -1,6 +1,6 @@
 ui-creation
 createPointSizeSlider
-	self ptSizeSlider: (Slider new
+	self ptSizeSlider: (SimpleSliderMorph new
 		hResizing: #spaceFill;
 		vResizing: #spaceFill;
 		minimumValue: 1;
@@ -8,5 +8,7 @@ createPointSizeSlider
 		quantum: 1;
 		setValue: 1;
 		initializeSlider;
+		target: self;
+		actionSelector: #updateTargetPtSize:;
 		yourself).
 	^self ptSizeSlider

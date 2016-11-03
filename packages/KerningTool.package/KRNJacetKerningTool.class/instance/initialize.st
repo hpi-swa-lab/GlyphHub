@@ -19,6 +19,7 @@ initialize
 	cursor := KRNCursor new.
 	
 	self
+		text: '';
 		targetPtSize: 16;
 		detailPtSize: 1;
 		extent: 500 @ 500;
