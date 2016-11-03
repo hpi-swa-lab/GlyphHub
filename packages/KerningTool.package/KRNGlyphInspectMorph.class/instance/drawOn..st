@@ -4,10 +4,10 @@ drawOn: aCanvas
 	super drawOn: aCanvas.
 	
 	props := self layoutPolicy fontLayoutPropertiesOf: self in: self layoutBounds.
-	origin := props first @ props second.
-	font := props third.
-	yAdvance := props fourth.
-	scale := props fifth.
+	origin := props first.
+	font := props second.
+	yAdvance := props third.
+	scale := props fourth.
 	
 	" morphs are in reverse order "
 	firstLetter := self submorphs second.
@@ -17,6 +17,9 @@ drawOn: aCanvas
 	
 	" baseline "
 	aCanvas line: origin + down to: self bounds topRight + down width: 1 color: Color gray.
+	
+	" account for centered layout "
+	origin := origin + (self layoutPolicy rowOffsets first @ 0).
 	
 	" kerning helpers "
 	from := origin + (firstLetter advanceScaled x @ 0).

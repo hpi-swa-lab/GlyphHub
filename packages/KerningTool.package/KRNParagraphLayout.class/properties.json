@@ -8,7 +8,15 @@
 	"instvars" : [
 		"lineHeight",
 		"kerning",
-		"owner" ],
+		"owner",
+		"center",
+		"x",
+		"y",
+		"layoutCache",
+		"rowOffsets",
+		"previousGlyph",
+		"font",
+		"fontProps" ],
 	"name" : "KRNParagraphLayout",
 	"pools" : [
 		 ],

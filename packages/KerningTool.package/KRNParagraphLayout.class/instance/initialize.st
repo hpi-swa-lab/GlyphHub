@@ -3,4 +3,5 @@ initialize
 	super initialize.
 	self
 		lineHeight: 1.0;
-		kerning: true
+		kerning: true;
+		center: false

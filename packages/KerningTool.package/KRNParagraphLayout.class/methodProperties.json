@@ -2,10 +2,14 @@
 	"class" : {
 		 },
 	"instance" : {
-		"fontLayoutPropertiesOf:in:" : "TB 11/2/2016 16:20",
-		"initialize" : "TB 10/25/2016 13:47",
+		"center" : "TB 11/3/2016 10:43",
+		"center:" : "TB 11/3/2016 10:43",
+		"fontLayoutPropertiesOf:in:" : "TB 11/3/2016 11:46",
+		"initialize" : "TB 11/3/2016 11:17",
 		"kerning" : "TB 10/25/2016 13:47",
 		"kerning:" : "TB 10/25/2016 13:50",
-		"layout:in:" : "TB 11/2/2016 11:21",
+		"layout:in:" : "TB 11/3/2016 12:14",
 		"lineHeight" : "TB 10/20/2016 12:27",
-		"lineHeight:" : "TB 10/20/2016 12:27" } }
+		"lineHeight:" : "TB 10/20/2016 12:27",
+		"nextLine:" : "TB 11/3/2016 11:48",
+		"rowOffsets" : "TB 11/3/2016 12:17" } }
