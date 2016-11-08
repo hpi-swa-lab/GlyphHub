@@ -13,5 +13,5 @@ testWriteFalse
 		yourself.
 	
 	self
-		assert: (self helperTestParsePListToXMLString: testInput)
-		equals: (self helperTestParseStringToXMLString: expectedResult)
+		assert: (KRNPListConverter serialize: testInput)
+		equals: expectedResult.

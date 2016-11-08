@@ -1,4 +1,4 @@
-as yet unclassified
+reading
 readElements: aXMLNode
 	
 	aXMLNode elements do: [ :element |

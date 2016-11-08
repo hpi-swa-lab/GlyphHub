@@ -1,0 +1,14 @@
+{
+	"category" : "KerningTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "KRNXMLPListWriter",
+	"pools" : [
+		 ],
+	"super" : "XMLWriter",
+	"type" : "normal" }

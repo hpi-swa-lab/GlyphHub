@@ -1,4 +1,4 @@
-as yet unclassified
+reading
 readDictionary: anXMLNode
 	| elements index dictionary |
 	

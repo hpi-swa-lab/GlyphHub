@@ -1,3 +1,7 @@
 *KerningTool-writing
 pListWriteOn: anXMLWriter
-	anXMLWriter stream nextPutAll: '<', (self asString), '/>'
+	anXMLWriter
+		startOpeningTag: self asString;
+		endEmptyTag: self asString;
+		outdent;
+		newLine.

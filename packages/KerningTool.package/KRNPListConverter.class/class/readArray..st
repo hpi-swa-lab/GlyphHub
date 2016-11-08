@@ -1,4 +1,4 @@
-as yet unclassified
+reading
 readArray: aXMLNode
 	| array |
 	

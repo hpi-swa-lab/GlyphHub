@@ -1,7 +1,16 @@
 *KerningTool-writing
 pListWriteOn: anXMLWriter
-	anXMLWriter stream nextPutAll: '<dict>'.
+	anXMLWriter 
+		startOpeningTag: 'dict';
+		endTag.
 	self keysAndValuesDo: [ :pListKey :pListValue |
-		anXMLWriter stream nextPutAll: '<key>',(pListKey asString),'</key>'.
-		pListValue pListWriteOn: anXMLWriter].
-	anXMLWriter stream nextPutAll: '</dict>'
+		anXMLWriter  startOpeningTag: 'key';
+			endTag;
+			pcData: (pListKey asString);
+			startClosingTag: 'key';
+			newLine.
+		pListValue pListWriteOn: anXMLWriter ].
+	anXMLWriter
+		startClosingTag: 'dict';
+		outdent;
+		newLine

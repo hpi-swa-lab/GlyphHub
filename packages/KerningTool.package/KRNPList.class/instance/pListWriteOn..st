@@ -1,5 +1,12 @@
 as yet unclassified
 pListWriteOn: anXMLWriter
-	anXMLWriter stream nextPutAll: '<plist version=''1.0''>'.
+	anXMLWriter
+		startOpeningTag: 'plist';
+		attribute: 'version' value: '1.0';
+		endTag;
+		newLine.
 	self content pListWriteOn: anXMLWriter.
-	anXMLWriter stream nextPutAll: '</plist>'
+	anXMLWriter
+		startClosingTag: 'plist';
+		outdent;
+		newLine

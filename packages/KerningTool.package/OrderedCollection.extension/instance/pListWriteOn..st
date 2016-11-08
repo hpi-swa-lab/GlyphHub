@@ -1,5 +1,11 @@
 *KerningTool-writing
 pListWriteOn: anXMLWriter
-	anXMLWriter stream nextPutAll: '<array>'.
+	anXMLWriter
+		startOpeningTag: 'array';
+		endTag;
+		newLine.
 	self do: [ :pListElement | pListElement pListWriteOn: anXMLWriter].
-	anXMLWriter stream nextPutAll: '</array>'
+	anXMLWriter
+		startClosingTag: 'array';
+		outdent;
+		newLine
