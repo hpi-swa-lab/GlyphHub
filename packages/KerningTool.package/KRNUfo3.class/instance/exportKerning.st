@@ -1,4 +1,4 @@
 as yet unclassified
 exportKerning
 
-	self exportPList: self kerning to: (self path / 'kerning.plist') fullName
+	self exportPList: (KRNPList new content: self kerning; yourself) to: (self path / 'kerning.plist') fullName
