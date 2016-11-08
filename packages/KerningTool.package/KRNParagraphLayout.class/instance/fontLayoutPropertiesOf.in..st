@@ -4,7 +4,7 @@ fontLayoutPropertiesOf: aKRNGlyphContainer in: aRectangle
 	x := aRectangle left.
 	y := aRectangle top.
 	
-	aKRNGlyphContainer hasSubmorphs ifFalse: [ ^{x @ y. nil. 0} ].
+	aKRNGlyphContainer hasSubmorphs ifFalse: [ ^{x @ y. nil. 0. 1} ].
 	
 	font := aKRNGlyphContainer firstSubmorph font.
 	yAdvance := font height * aKRNGlyphContainer firstSubmorph scale * self lineHeight.

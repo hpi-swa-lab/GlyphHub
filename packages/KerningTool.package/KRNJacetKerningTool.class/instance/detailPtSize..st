@@ -1,3 +1,3 @@
 accessing
 detailPtSize: aNumber
-	detailPtSize := aNumber
+	self detailView ptSize: aNumber

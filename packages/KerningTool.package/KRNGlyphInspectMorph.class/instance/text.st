@@ -1,0 +1,3 @@
+initialize-release
+text
+	^text

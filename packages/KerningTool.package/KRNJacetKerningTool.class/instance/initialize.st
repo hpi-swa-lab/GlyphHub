@@ -12,7 +12,9 @@ initialize
 		layoutPolicy: (KRNParagraphLayout new lineHeight: 1.1; yourself);
 		yourself.
 	
-	detailView := KRNGlyphInspectMorph new.
+	detailView := KRNGlyphInspectMorph new
+		autoScale: true;
+		yourself.
 	
 	buttonPanel := self createButtonPanel.
 	
@@ -21,7 +23,6 @@ initialize
 	self
 		text: '';
 		targetPtSize: 16;
-		detailPtSize: 1;
 		extent: 500 @ 500;
 		addMorph: detailView fullFrame: (LayoutFrame fractions: (0 @ 0 corner: 1 @ 0.5) offsets: (0 @ 0 corner: 0 @ (self buttonPanelHeight / -2)));
 		addMorph: targetView fullFrame: (LayoutFrame fractions: (0 @ 0.5 corner: 1 @ 1) offsets: (0 @ (self buttonPanelHeight / -2) corner: 0 @ (self buttonPanelHeight negated)));

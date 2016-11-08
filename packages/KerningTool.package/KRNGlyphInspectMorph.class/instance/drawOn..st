@@ -3,6 +3,8 @@ drawOn: aCanvas
 	| props font scale yAdvance down from kernMove firstLetter secondLetter kernDistance origin |
 	super drawOn: aCanvas.
 	
+	self submorphs size < 2 ifTrue: [ ^self ].
+	
 	props := self layoutPolicy fontLayoutPropertiesOf: self in: self layoutBounds.
 	origin := props first.
 	font := props second.

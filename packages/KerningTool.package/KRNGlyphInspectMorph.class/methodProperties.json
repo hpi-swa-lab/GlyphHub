@@ -2,6 +2,17 @@
 	"class" : {
 		 },
 	"instance" : {
-		"drawOn:" : "TB 11/3/2016 13:40",
-		"initialize" : "TB 11/3/2016 13:59",
-		"kerningLineStripeLength" : "TB 11/2/2016 15:45" } }
+		"autoScale" : "TB 11/8/2016 12:37",
+		"autoScale:" : "TB 11/8/2016 12:37",
+		"calculatePtSize" : "TB 11/8/2016 12:38",
+		"drawOn:" : "TB 11/8/2016 12:34",
+		"font" : "TB 11/8/2016 11:53",
+		"font:" : "TB 11/8/2016 11:52",
+		"initialize" : "TB 11/8/2016 12:39",
+		"kerningLineStripeLength" : "TB 11/2/2016 15:45",
+		"layoutChanged" : "TB 11/8/2016 12:39",
+		"ptSize" : "TB 11/8/2016 12:14",
+		"ptSize:" : "TB 11/8/2016 12:32",
+		"rebuildText" : "TB 11/8/2016 12:33",
+		"text" : "TB 11/8/2016 11:52",
+		"text:" : "TB 11/8/2016 12:31" } }

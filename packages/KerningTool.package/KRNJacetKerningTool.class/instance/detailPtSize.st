@@ -1,3 +1,3 @@
 accessing
 detailPtSize
-	^ detailPtSize
+	^self detailView ptSize

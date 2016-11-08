@@ -7,4 +7,4 @@ cursorChanged: newIndex
 	
 		shownText := self text copyFrom: startIndex to: stopIndex.
 
-		self updateDetailView: shownText ]
+		self detailView text: shownText ]
