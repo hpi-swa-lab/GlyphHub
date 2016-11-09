@@ -1,6 +1,6 @@
 initialize-release
 drawOn: aCanvas
-	| props font scale yAdvance down from kernMove firstLetter secondLetter kernDistance origin |
+	| props font scale yAdvance from kernMove firstLetter secondLetter kernDistance origin |
 	super drawOn: aCanvas.
 	
 	self submorphs size < 2 ifTrue: [ ^self ].
@@ -11,14 +11,15 @@ drawOn: aCanvas
 	yAdvance := props third.
 	scale := props fourth.
 	
+	baseline ifTrue: [ self horizontalLineAt: font ascender * scale on: aCanvas ].
+	xHeight ifTrue: [ self horizontalLineAt: font ascender - (font fontinfo at: #xHeight) * scale on: aCanvas ].
+	capHeight ifTrue: [ self horizontalLineAt: font ascender - (font fontinfo at: #capHeight) * scale on: aCanvas ].
+	
+	kerning ifFalse: [ ^self ].
+	
 	" morphs are in reverse order "
 	firstLetter := self submorphs second.
 	secondLetter := self submorphs first.
-	
-	down := 0 @ (font ascender * scale) asInteger.
-	
-	" baseline "
-	aCanvas line: origin + down to: self bounds topRight + down width: 1 color: Color gray.
 	
 	" account for centered layout "
 	origin := origin + (self layoutPolicy rowOffsets first @ 0).
@@ -47,4 +48,4 @@ drawOn: aCanvas
 		secondDashLength: self kerningLineStripeLength
 		startingOffset: 0;
 		
-		drawString: kernDistance asString at: from + kernMove + down + 6 asPoint
+		drawString: kernDistance asString at: from + kernMove + (0 @ font ascender * scale) + 6 asPoint

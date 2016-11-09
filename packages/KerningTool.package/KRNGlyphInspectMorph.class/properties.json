@@ -11,7 +11,11 @@
 		"text",
 		"font",
 		"ptSize",
-		"autoScale" ],
+		"autoScale",
+		"baseline",
+		"xHeight",
+		"capHeight",
+		"kerning" ],
 	"name" : "KRNGlyphInspectMorph",
 	"pools" : [
 		 ],

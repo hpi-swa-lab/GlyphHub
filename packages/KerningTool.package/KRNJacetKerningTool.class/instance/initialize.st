@@ -14,6 +14,8 @@ initialize
 	
 	detailView := KRNGlyphInspectMorph new
 		autoScale: true;
+		kerning: true;
+		baseline: true;
 		yourself.
 	
 	buttonPanel := self createButtonPanel.
