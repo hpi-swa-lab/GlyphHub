@@ -1,0 +1,20 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"configureControlMorph:at:" : "lcj 11/10/2016 16:53",
+		"controlPoint1" : "lcj 11/10/2016 14:18",
+		"controlPoint1:" : "lcj 11/10/2016 14:19",
+		"controlPoint2" : "lcj 11/10/2016 14:18",
+		"controlPoint2:" : "lcj 11/10/2016 14:19",
+		"createBezierShape" : "lcj 11/10/2016 16:15",
+		"drawHelperLineFrom:to:on:" : "lcj 11/10/2016 16:27",
+		"drawOn:" : "lcj 11/10/2016 16:29",
+		"endPoint" : "lcj 11/10/2016 14:18",
+		"endPoint:" : "lcj 11/10/2016 14:19",
+		"handleDropMorph:" : "lcj 11/10/2016 17:06",
+		"initialize" : "lcj 11/10/2016 16:56",
+		"relativePositionOf:" : "lcj 11/10/2016 16:04",
+		"startPoint" : "lcj 11/10/2016 15:37",
+		"startPoint:" : "lcj 11/10/2016 14:19",
+		"wantsDroppedMorph:event:" : "lcj 11/10/2016 16:41" } }

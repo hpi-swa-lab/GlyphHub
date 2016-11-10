@@ -7,7 +7,7 @@ drawOn: aCanvas
 	aCanvas asBalloonCanvas preserveStateDuring: [ :bcanvas |
 		bcanvas transformBy: (MatrixTransform2x3 withOffset: self position).
 	
-		components do: [ :glyph | glyph drawOn: bcanvas.		self haltOnce. ].
+		components do: [ :glyph | glyph drawOn: bcanvas ].
 	
 		(glif firstTagNamed: #outline) tagsNamed: #contour do: [ :contour |
 			shape := self pointsForContour: contour.

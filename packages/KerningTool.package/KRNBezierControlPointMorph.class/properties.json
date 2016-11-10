@@ -1,0 +1,17 @@
+{
+	"category" : "KerningTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"startPoint",
+		"endPoint",
+		"controlPoint1",
+		"controlPoint2" ],
+	"name" : "KRNBezierControlPointMorph",
+	"pools" : [
+		 ],
+	"super" : "Morph",
+	"type" : "normal" }
