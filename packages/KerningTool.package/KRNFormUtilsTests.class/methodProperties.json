@@ -1,0 +1,9 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"testColorToAlpha" : "TB 11/13/2016 11:36",
+		"testColorToAlphaBlackAndWhite" : "TB 11/13/2016 11:45",
+		"testColorToAlphaBlackDot" : "TB 11/13/2016 12:10",
+		"testColorToAlphaHalfEffect" : "TB 11/13/2016 11:37",
+		"testColorToAlphaNoEffect" : "TB 11/13/2016 11:36" } }
