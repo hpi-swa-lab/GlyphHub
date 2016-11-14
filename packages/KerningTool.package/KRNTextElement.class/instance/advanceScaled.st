@@ -1,3 +1,3 @@
 as yet unclassified
 advanceScaled
-	^0 @ 0
+	^self advance * self scale

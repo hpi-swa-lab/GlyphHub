@@ -1,0 +1,14 @@
+{
+	"category" : "KerningTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"glyphs" ],
+	"name" : "KRNBitmapFont",
+	"pools" : [
+		 ],
+	"super" : "KRNFont",
+	"type" : "normal" }

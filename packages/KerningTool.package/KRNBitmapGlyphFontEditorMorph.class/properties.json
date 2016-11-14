@@ -1,0 +1,16 @@
+{
+	"category" : "KerningTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"inspectView",
+		"bitmapView",
+		"font" ],
+	"name" : "KRNBitmapGlyphFontEditorMorph",
+	"pools" : [
+		 ],
+	"super" : "Morph",
+	"type" : "normal" }

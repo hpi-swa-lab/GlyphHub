@@ -16,7 +16,8 @@
 		"rowOffsets",
 		"previousGlyph",
 		"font",
-		"fontProps" ],
+		"fontProps",
+		"yAdvance" ],
 	"name" : "KRNParagraphLayout",
 	"pools" : [
 		 ],

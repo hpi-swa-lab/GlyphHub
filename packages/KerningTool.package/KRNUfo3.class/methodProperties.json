@@ -8,13 +8,12 @@
 		"openBaskerville" : "TB 10/27/2016 10:49" },
 	"instance" : {
 		"ascender" : "TB 10/18/2016 23:59",
+		"capHeight" : "TB 11/13/2016 12:45",
 		"compileToOtf" : "TB 11/2/2016 17:41",
-		"createGlyphFor:ptSize:" : "TB 10/27/2016 12:19",
 		"createGlyphForUnicode:ptSize:" : "TB 11/3/2016 13:54",
 		"descender" : "TB 10/18/2016 23:59",
 		"exportKerning" : "TB 11/7/2016 10:34",
 		"exportPList:to:" : "TB 11/7/2016 10:32",
-		"findKerningBetween:and:" : "TB 10/26/2016 17:50",
 		"findKerningBetweenName:and:" : "TB 10/27/2016 11:36",
 		"fontinfo" : "TB 10/18/2016 23:36",
 		"glyphAt:" : "lcj 10/20/2016 13:53",
@@ -22,11 +21,11 @@
 		"groups" : "TB 10/26/2016 18:03",
 		"groupsContaining:" : "TB 10/27/2016 10:39",
 		"groupsContaining:select:" : "TB 10/27/2016 09:03",
-		"height" : "TB 11/3/2016 14:01",
 		"initialize" : "TB 10/25/2016 14:39",
 		"kerning" : "TB 10/25/2016 16:43",
 		"metainfo" : "TB 10/26/2016 17:10",
 		"path" : "TB 10/18/2016 21:05",
 		"path:" : "TB 10/18/2016 21:05",
 		"tryLoadPList:" : "TB 10/25/2016 14:32",
-		"unitsPerEm" : "TB 10/18/2016 23:58" } }
+		"unitsPerEm" : "TB 10/18/2016 23:58",
+		"xHeight" : "TB 11/13/2016 12:45" } }

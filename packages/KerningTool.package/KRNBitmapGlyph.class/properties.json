@@ -1,0 +1,16 @@
+{
+	"category" : "KerningTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"form",
+		"transform",
+		"originalForm" ],
+	"name" : "KRNBitmapGlyph",
+	"pools" : [
+		 ],
+	"super" : "KRNTextElement",
+	"type" : "normal" }
