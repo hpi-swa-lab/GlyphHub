@@ -10,13 +10,26 @@ using std::endl;
 #include <opencv2/opencv.hpp>
 using namespace cv;
 
+static char *str_nullterm(char *str, int len) {
+	char *ntstr = (char *) malloc(sizeof(char) * (len + 1));
+	strncpy(ntstr, str, len);
+	ntstr[len] = '\0';
+	return ntstr;
+}
+
 extern "C" int sqDetectGlyphs(char *filename, int filenameLen, int **out, int *len)
 {
 	Mat imgray, imthres;
 	OutputArray hierarchy = {};
 	vector<vector<Point>> contours;
 
-	auto im = imread("/home/tom/glyphs_small.png");
+	char *f = str_nullterm(filename, filenameLen);
+	auto im = imread(f);
+	free(f);
+
+	if (!im.data)
+		return 1;
+
 	cvtColor(im, imgray, CV_BGR2GRAY);
 	fastNlMeansDenoising(imgray, imgray, 10);
 	erode(imgray, imgray, getStructuringElement(MORPH_RECT, Size(7, 7)));
@@ -47,11 +60,16 @@ extern "C" int sqDetectGlyphs(char *filename, int filenameLen, int **out, int *l
 	}), boundRect.end());
 
 	*out = (int *) malloc(sizeof(int) * 4 * boundRect.size());
+	*len = boundRect.size();
+
+	if (!*out)
+		return 1;
+
 	for (unsigned int i = 0; i < boundRect.size() * 4; i += 4) {
-		*out[i + 0] = boundRect[i].tl().x;
-		*out[i + 1] = boundRect[i].tl().y;
-		*out[i + 2] = boundRect[i].br().x;
-		*out[i + 3] = boundRect[i].br().y;
+		(*out)[i + 0] = boundRect[i].tl().x;
+		(*out)[i + 1] = boundRect[i].tl().y;
+		(*out)[i + 2] = boundRect[i].br().x;
+		(*out)[i + 3] = boundRect[i].br().y;
 	}
 
 	return 0;

@@ -1,0 +1,14 @@
+{
+	"category" : "KerningTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "GlyphDetect",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
