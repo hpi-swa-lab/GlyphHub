@@ -17,15 +17,24 @@ static char *str_nullterm(char *str, int len) {
 	return ntstr;
 }
 
+#ifdef TEST
+int main(int argc, char **argv) {
+	auto im = imread(argv[1]);
+	// dummy variables because we don't actually read anything
+	int *a, b;
+	int **out = &a;
+	int *len = &b;
+#else
 extern "C" int sqDetectGlyphs(char *filename, int filenameLen, int **out, int *len)
 {
-	Mat imgray, imthres;
-	OutputArray hierarchy = {};
-	vector<vector<Point>> contours;
-
 	char *f = str_nullterm(filename, filenameLen);
 	auto im = imread(f);
 	free(f);
+#endif
+
+	Mat imgray, imthres;
+	OutputArray hierarchy = {};
+	vector<vector<Point>> contours;
 
 	if (!im.data)
 		return 1;
@@ -66,11 +75,19 @@ extern "C" int sqDetectGlyphs(char *filename, int filenameLen, int **out, int *l
 		return 1;
 
 	for (unsigned int i = 0; i < boundRect.size() * 4; i += 4) {
-		(*out)[i + 0] = boundRect[i].tl().x;
-		(*out)[i + 1] = boundRect[i].tl().y;
-		(*out)[i + 2] = boundRect[i].br().x;
-		(*out)[i + 3] = boundRect[i].br().y;
+		(*out)[i + 0] = boundRect[i / 4].tl().x;
+		(*out)[i + 1] = boundRect[i / 4].tl().y;
+		(*out)[i + 2] = boundRect[i / 4].br().x;
+		(*out)[i + 3] = boundRect[i / 4].br().y;
 	}
+
+#ifdef TEST
+	for (int i = 0; i < *len; i++) {
+		auto first = &((*out)[i * 4]);
+		rectangle(im, Point(first[0], first[1]), Point(first[2], first[3]), Scalar(255, 255, 0), 2, 8, 0);
+	}
+	imwrite("out.png", im);
+#endif
 
 	return 0;
 }
