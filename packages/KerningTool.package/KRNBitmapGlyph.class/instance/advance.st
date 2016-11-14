@@ -1,3 +1,3 @@
 as yet unclassified
 advance
-	^self extent
+	^originalForm extent * transform scale

@@ -1,8 +1,8 @@
 {
 	"class" : {
-		 },
+		"exampleFont" : "TB 11/14/2016 15:14" },
 	"instance" : {
 		"addGlyph:" : "TB 11/13/2016 23:23",
-		"initialize" : "TB 11/14/2016 14:48",
+		"initialize" : "TB 11/14/2016 15:18",
 		"open" : "TB 11/13/2016 12:43",
 		"path:" : "TB 11/14/2016 14:49" } }

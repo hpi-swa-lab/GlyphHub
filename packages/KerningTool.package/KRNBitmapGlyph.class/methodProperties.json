@@ -1,18 +1,22 @@
 {
 	"class" : {
-		"newForForm:from:" : "TB 11/13/2016 23:26" },
+		"newForForm:from:" : "TB 11/14/2016 17:15" },
 	"instance" : {
-		"advance" : "TB 11/13/2016 23:27",
-		"drawOn:" : "TB 11/13/2016 23:53",
+		"advance" : "TB 11/14/2016 17:29",
+		"drawOn:" : "TB 11/14/2016 17:30",
 		"extent:" : "TB 11/13/2016 23:43",
 		"form" : "TB 11/13/2016 12:55",
-		"form:" : "TB 11/14/2016 09:28",
+		"form:" : "TB 11/14/2016 16:53",
+		"formOrigin" : "TB 11/14/2016 17:38",
+		"formScale" : "TB 11/14/2016 17:20",
 		"hasNoScaleOrRotation" : "TB 11/14/2016 09:41",
-		"initialize" : "TB 11/14/2016 09:18",
-		"isFlexMorph" : "TB 11/14/2016 09:06",
+		"initialize" : "TB 11/14/2016 17:25",
+		"isFlexMorph" : "TB 11/14/2016 16:55",
 		"isGlyph" : "TB 11/13/2016 22:58",
-		"preferredExtent" : "TB 11/14/2016 09:44",
+		"preferredExtent" : "TB 11/14/2016 17:50",
+		"ptSize:" : "TB 11/14/2016 17:12",
 		"rotationDegrees:" : "TB 11/14/2016 09:26",
-		"scaleToMatch:" : "TB 11/14/2016 09:49",
-		"updateForm" : "TB 11/14/2016 09:33",
-		"worldBoundsForHalo" : "TB 11/14/2016 09:44" } }
+		"scaleToMatch:" : "TB 11/14/2016 18:08",
+		"setConstrainedPosition:hangOut:" : "TB 11/14/2016 18:15",
+		"updateForm" : "TB 11/14/2016 17:20",
+		"worldBoundsForHalo" : "TB 11/14/2016 16:55" } }
