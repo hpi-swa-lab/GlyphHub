@@ -19,6 +19,6 @@ initialize
 			yourself) ].
 	
 	self
-		color: Color white;
 		ptSize: 11;
+		color: Color white;
 		position: 0 @ 0

@@ -1,0 +1,14 @@
+{
+	"category" : "KerningTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"ExampleBitmap" ],
+	"commentStamp" : "",
+	"instvars" : [
+		"formPicked" ],
+	"name" : "KRNBitmapGlyphPickerMorph",
+	"pools" : [
+		 ],
+	"super" : "ImageMorph",
+	"type" : "normal" }

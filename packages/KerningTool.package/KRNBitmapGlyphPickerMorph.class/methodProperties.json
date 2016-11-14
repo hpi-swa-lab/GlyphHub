@@ -1,0 +1,9 @@
+{
+	"class" : {
+		"exampleBitmap" : "TB 11/13/2016 12:17",
+		"freeExampleBitmap" : "TB 11/13/2016 22:03" },
+	"instance" : {
+		"drawOn:" : "TB 11/13/2016 12:26",
+		"initialize" : "TB 11/13/2016 22:03",
+		"onFormPickedDo:" : "TB 11/13/2016 12:34",
+		"pickRegion:" : "TB 11/13/2016 13:38" } }

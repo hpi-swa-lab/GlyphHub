@@ -11,6 +11,6 @@ nextLine: aRectangle
 	
 	rowOffsets add: offset.
 	
-	x := fontProps first x.
-	y := y + fontProps third.
+	x := aRectangle left.
+	y := y + yAdvance.
 	previousGlyph := nil

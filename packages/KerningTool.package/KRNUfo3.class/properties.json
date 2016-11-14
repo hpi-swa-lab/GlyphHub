@@ -18,5 +18,5 @@
 	"name" : "KRNUfo3",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "KRNFont",
 	"type" : "normal" }

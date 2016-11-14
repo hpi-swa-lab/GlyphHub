@@ -1,0 +1,15 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"ascender" : "TB 11/13/2016 12:48",
+		"capHeight" : "TB 11/13/2016 12:46",
+		"createGlyphFor:ptSize:" : "TB 11/13/2016 12:48",
+		"createGlyphForUnicode:ptSize:" : "TB 11/13/2016 12:48",
+		"descender" : "TB 11/13/2016 12:48",
+		"findKerningBetween:and:" : "TB 11/13/2016 12:49",
+		"findKerningBetweenName:and:" : "TB 11/13/2016 12:50",
+		"height" : "TB 11/13/2016 23:21",
+		"scaleAtPtSize:" : "TB 11/13/2016 23:30",
+		"unitsPerEm" : "TB 11/13/2016 12:51",
+		"xHeight" : "TB 11/13/2016 12:46" } }
