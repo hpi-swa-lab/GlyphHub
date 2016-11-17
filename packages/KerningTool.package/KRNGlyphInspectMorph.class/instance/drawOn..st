@@ -2,6 +2,7 @@ initialize-release
 drawOn: aCanvas
 	| scale from kernMove firstLetter secondLetter kernDistance origin |
 	super drawOn: aCanvas.
+	self changed.
 	
 	origin := self layoutBounds origin.
 	scale := self font scaleAtPtSize: self ptSize.
