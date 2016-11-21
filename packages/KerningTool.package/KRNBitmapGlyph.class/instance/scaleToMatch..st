@@ -5,5 +5,7 @@ scaleToMatch: aPoint
 	scale := (aPoint - self referencePosition) r / (self bounds bottomRight - self referencePosition) r.
 	transform := transform withScale: scale.
 	
-	self updateForm.
-	self changed
+	self
+		updateForm;
+		persistTransformInFont;
+		changed

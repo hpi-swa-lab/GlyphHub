@@ -1,6 +1,7 @@
 {
 	"class" : {
-		"exampleFont" : "TB 11/14/2016 15:14" },
+		"exampleFont" : "TB 11/14/2016 15:14",
+		"freeExampleFont" : "TB 11/21/2016 10:27" },
 	"instance" : {
 		"addGlyph:" : "TB 11/13/2016 23:23",
 		"initialize" : "TB 11/14/2016 15:18",

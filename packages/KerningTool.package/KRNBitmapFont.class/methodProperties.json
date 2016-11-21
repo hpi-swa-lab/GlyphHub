@@ -2,13 +2,14 @@
 	"class" : {
 		 },
 	"instance" : {
-		"addGlyph:for:" : "TB 11/13/2016 23:25",
+		"addGlyph:for:" : "TB 11/21/2016 10:18",
 		"ascender" : "TB 11/13/2016 23:13",
 		"capHeight" : "TB 11/13/2016 23:40",
-		"createGlyphForUnicode:ptSize:" : "TB 11/13/2016 23:22",
+		"createGlyphForUnicode:ptSize:" : "TB 11/21/2016 10:27",
 		"descender" : "TB 11/13/2016 23:41",
 		"findKerningBetweenName:and:" : "TB 11/13/2016 23:22",
 		"glyphs" : "TB 11/14/2016 15:16",
 		"initialize" : "TB 11/13/2016 23:24",
 		"unitsPerEm" : "TB 11/13/2016 23:13",
+		"updateGlyph:transform:" : "TB 11/21/2016 10:26",
 		"xHeight" : "TB 11/13/2016 23:42" } }

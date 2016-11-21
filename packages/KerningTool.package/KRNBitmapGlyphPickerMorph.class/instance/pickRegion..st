@@ -8,3 +8,4 @@ pickRegion: aRegion
 	formPicked value: (self image contentsOfArea: rect).
 
 	self image fill: rect fillColor: Color transparent.
+	self changed

@@ -1,6 +1,6 @@
 {
 	"class" : {
-		"newForForm:from:" : "TB 11/14/2016 17:15" },
+		"newForForm:from:unicode:" : "TB 11/21/2016 10:26" },
 	"instance" : {
 		"advance" : "TB 11/14/2016 17:29",
 		"drawOn:" : "TB 11/14/2016 17:30",
@@ -13,10 +13,15 @@
 		"initialize" : "TB 11/14/2016 17:25",
 		"isFlexMorph" : "TB 11/14/2016 16:55",
 		"isGlyph" : "TB 11/13/2016 22:58",
+		"persistTransformInFont" : "TB 11/21/2016 10:31",
 		"preferredExtent" : "TB 11/14/2016 17:50",
 		"ptSize:" : "TB 11/14/2016 17:12",
-		"rotationDegrees:" : "TB 11/14/2016 09:26",
-		"scaleToMatch:" : "TB 11/14/2016 18:08",
-		"setConstrainedPosition:hangOut:" : "TB 11/14/2016 18:15",
+		"rotationDegrees:" : "TB 11/21/2016 10:29",
+		"scaleToMatch:" : "TB 11/21/2016 10:29",
+		"setConstrainedPosition:hangOut:" : "TB 11/21/2016 10:29",
+		"transform" : "TB 11/21/2016 10:23",
+		"transform:" : "TB 11/21/2016 10:23",
+		"unicode" : "TB 11/21/2016 10:27",
+		"unicode:" : "TB 11/21/2016 10:27",
 		"updateForm" : "TB 11/14/2016 17:20",
 		"worldBoundsForHalo" : "TB 11/14/2016 16:55" } }
