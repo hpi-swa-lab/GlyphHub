@@ -2,6 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
+		"advanceOf:" : "TB 11/25/2016 00:38",
 		"ascender" : "TB 11/13/2016 12:48",
 		"capHeight" : "TB 11/13/2016 12:46",
 		"createGlyphFor:ptSize:" : "TB 11/13/2016 12:48",
@@ -11,5 +12,6 @@
 		"findKerningBetweenName:and:" : "TB 11/13/2016 12:50",
 		"height" : "TB 11/13/2016 23:21",
 		"scaleAtPtSize:" : "TB 11/13/2016 23:30",
+		"thumbnailForm:" : "TB 11/25/2016 00:51",
 		"unitsPerEm" : "TB 11/13/2016 12:51",
 		"xHeight" : "TB 11/13/2016 12:46" } }
