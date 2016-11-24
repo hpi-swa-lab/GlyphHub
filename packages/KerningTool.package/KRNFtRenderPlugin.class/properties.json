@@ -3,13 +3,12 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		"FancyFont",
-		"LinesFont" ],
+		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"glyphs" ],
-	"name" : "KRNBitmapFont",
+		 ],
+	"name" : "KRNFtRenderPlugin",
 	"pools" : [
 		 ],
-	"super" : "KRNFont",
+	"super" : "InterpreterPlugin",
 	"type" : "normal" }

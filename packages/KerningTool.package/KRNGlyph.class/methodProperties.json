@@ -1,6 +1,7 @@
 {
 	"class" : {
-		"newForXML:from:" : "TB 10/20/2016 11:40" },
+		"newForXML:from:" : "TB 10/20/2016 11:40",
+		"pointTypeMappings" : "TB 11/24/2016 14:40" },
 	"instance" : {
 		"advance" : "TB 10/18/2016 23:25",
 		"characters" : "TB 10/20/2016 13:49",
@@ -8,9 +9,11 @@
 		"coordFromNode:" : "TB 10/18/2016 23:01",
 		"curveFrom:via:to:" : "lcj 11/10/2016 15:10",
 		"displaysUnicode:" : "TB 10/19/2016 09:51",
-		"drawOn:" : "lcj 11/10/2016 14:51",
+		"drawOn:" : "TB 11/24/2016 14:13",
+		"drawOn:at:" : "TB 11/24/2016 14:15",
 		"font" : "TB 10/18/2016 23:55",
 		"font:" : "TB 10/19/2016 09:33",
+		"ftForm" : "TB 11/24/2016 14:40",
 		"glif" : "TB 10/20/2016 11:41",
 		"glif:" : "TB 10/20/2016 11:40",
 		"initialize" : "TB 11/13/2016 13:00",

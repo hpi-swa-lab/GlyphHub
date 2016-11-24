@@ -3,13 +3,16 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		"FancyFont",
-		"LinesFont" ],
+		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"glyphs" ],
-	"name" : "KRNBitmapFont",
+		"contours",
+		"cachedPoints",
+		"cachedContours",
+		"cachedTags",
+		"cachedNumContours" ],
+	"name" : "KRNOutline",
 	"pools" : [
 		 ],
-	"super" : "KRNFont",
+	"super" : "Object",
 	"type" : "normal" }

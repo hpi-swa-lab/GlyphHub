@@ -1,0 +1,8 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"assert:equalsContent:" : "TB 11/23/2016 16:42",
+		"testOutlineSmalltalkToC" : "TB 11/23/2016 16:46",
+		"testRenderWithoutException" : "TB 11/24/2016 11:18",
+		"testSimpleCurveRenderWithoutException" : "TB 11/24/2016 11:18" } }

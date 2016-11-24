@@ -2,11 +2,7 @@ as yet unclassified
 initialize
 	super initialize.
 
-	font := self class exampleFont.
-
 	inspectView := KRNGlyphInspectMorph new
-		font: font;
-		text: (font glyphs keys collect: [ :unicode | Unicode charFromUnicode: unicode ]);
 		autoScale: true;
 		baseline: true;
 		xHeight: true;

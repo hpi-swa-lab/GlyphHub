@@ -1,15 +1,14 @@
 {
-	"category" : "KerningTool",
+	"category" : "KerningTool-Tests",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		"FancyFont",
-		"LinesFont" ],
+		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"glyphs" ],
-	"name" : "KRNBitmapFont",
+		 ],
+	"name" : "KRNFtRenderTests",
 	"pools" : [
 		 ],
-	"super" : "KRNFont",
+	"super" : "TestCase",
 	"type" : "normal" }

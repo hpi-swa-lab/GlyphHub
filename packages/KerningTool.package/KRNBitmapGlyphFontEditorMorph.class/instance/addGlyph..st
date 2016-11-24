@@ -1,7 +1,7 @@
 as yet unclassified
 addGlyph: aForm
-	| character |
-	character := UIManager default request: 'Enter corresponding charater'.
+	| characters |
+	characters := UIManager default request: 'Enter corresponding charater(s)'.
 	
-	font addGlyph: aForm for: character first asUnicode.
-	inspectView text: inspectView text, character
+	characters do: [ :character | font addGlyph: aForm for: character asUnicode ].
+	inspectView text: inspectView text, characters

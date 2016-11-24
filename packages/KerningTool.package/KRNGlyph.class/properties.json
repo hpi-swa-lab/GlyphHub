@@ -3,12 +3,10 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		 ],
+		"PointTypeMappings" ],
 	"commentStamp" : "",
 	"instvars" : [
 		"glif",
-		"unitsPerEm",
-		"fontHeight",
 		"unicodeCodePoints",
 		"shapes",
 		"components",

@@ -1,8 +1,10 @@
 {
 	"class" : {
-		 },
+		"fancyFont" : "TB 11/21/2016 10:53",
+		"linesFont" : "TB 11/21/2016 11:01" },
 	"instance" : {
 		"addGlyph:for:" : "TB 11/21/2016 10:18",
+		"addSpace" : "TB 11/21/2016 11:13",
 		"ascender" : "TB 11/13/2016 23:13",
 		"capHeight" : "TB 11/13/2016 23:40",
 		"createGlyphForUnicode:ptSize:" : "TB 11/21/2016 10:27",
