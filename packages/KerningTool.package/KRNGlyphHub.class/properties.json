@@ -1,0 +1,15 @@
+{
+	"category" : "KerningTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"fontList",
+		"fontDetails" ],
+	"name" : "KRNGlyphHub",
+	"pools" : [
+		 ],
+	"super" : "Morph",
+	"type" : "normal" }
