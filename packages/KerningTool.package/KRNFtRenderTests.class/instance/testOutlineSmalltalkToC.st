@@ -11,4 +11,4 @@ testOutlineSmalltalkToC
 	self
 		assert: {100. 100. 400. 400. 200. 200. 30. 40. 10. 10. 70. 300. 300. 500. 60. 60. 10. 10. 4. 6. 1. 1. 100. 1000} equalsContent: outline cachedPoints;
 		assert: {2. 4. 9. 11} equalsContent: outline cachedContours;
-		assert: {2. 2. 2. 2. 2. 2. 2. 2. 2. 2. 2. 2} equalsContent: outline cachedTags
+		assert: {1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1} equalsContent: outline cachedTags

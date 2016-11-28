@@ -1,5 +1,5 @@
 accessing
-ftForm
+outline
 	| outline c form |
 	outline := KRNOutline new.
 	
@@ -13,6 +13,6 @@ ftForm
 			outline addContour: c ]].
 	
 	form := Form extent: (self advance x @ self font height * self scale) ceiling depth: 32.
-	KRNFtRender renderContours: outline on: form at: (0 @ self font ascender * self scale) floor.
+	"KRNFtRender renderContours: outline on: form at: (0 @ self font ascender * self scale) floor."
 	
-	^form
+	^outline
