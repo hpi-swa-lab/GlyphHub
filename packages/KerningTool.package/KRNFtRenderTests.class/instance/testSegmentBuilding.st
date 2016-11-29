@@ -16,9 +16,9 @@ testSegmentBuilding
 		{#cubic. {0 @ 0. 0 @ 1000. 1000 @ 2000. 2000 @ 2000}}.
 		{#line. {2000 @ 2000. 50 @ 30}}.
 		{#conic. {50 @ 30. 100 @ 100. 300 @ 300. 350 @ 350. 400 @ 400}}.
-		{#conic. {400 @ 400. 300 @ 300. 200 @ 200}}
+		{#conic. {400 @ 400. 300 @ 300. 200 @ 200}}.
 	}.
 	
-	contour segmentsDo: [ :type :points |
-		self assert: type equals: stream next first.
-		self assert: points equalsContent: stream last second ]
+	contour segments do: [ :segment |
+		self assert: stream next first equals: segment first.
+		self assert: stream last second equalsContent: segment second ]

@@ -137,6 +137,21 @@ sqInt sqRenderContours(uint8_t *first_pixel,
 	out.flags = FT_OUTLINE_SMART_DROPOUTS | FT_OUTLINE_INCLUDE_STUBS;
 	out.tags = tags;
 
+	printf("Contour.\n");
+	printf("\tPoints:\n");
+	for (int i = 0; i < n_points; i++) {
+		printf("\t\t%lix%li @%d\n", out.points[i].x, out.points[i].y, out.tags[i]);
+	}
+	printf("\tContours:\n");
+	for (int i = 0; i < n_contours; i++) {
+		printf("\t\t%i\n", out.contours[i]);
+	}
+
+	if ((fterr = FT_Outline_Check(&out))) {
+		printf("FT_Outline_Check() failed err=%d (%s)\n", fterr, ftGetErrorMessage(fterr));
+		return 1;
+	}
+
 	if ((fterr = FT_Outline_Render(ft_library, &out, &ftr_params))) {
 		printf("FT_Outline_Render() failed err=%d (%s)\n", fterr, ftGetErrorMessage(fterr));
 		return 1;

@@ -1,3 +1,3 @@
 drawing
 drawOn: aCanvas
-	self drawOn: aCanvas at: self innerBounds origin
+	self drawOn: aCanvas at: self innerBounds origin color: Color black

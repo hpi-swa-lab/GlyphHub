@@ -1,6 +1,9 @@
 as yet unclassified
 segments
-	| list |
+	| addBlock list |
 	list := OrderedCollection new.
-	self segmentsDo: [ :segment | list add: segment ].
+	addBlock := [].
+	
+	self segmentsDoLine: [ :p | list add: {#line. p} ] cubic: [ :p | list add: {#cubic. p} ] conic: [ :p | list add: {#conic. p} ].
+	
 	^list
