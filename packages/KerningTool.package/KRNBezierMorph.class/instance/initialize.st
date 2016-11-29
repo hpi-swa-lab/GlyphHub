@@ -2,16 +2,16 @@ accessing
 initialize
 	super initialize.
 	self
-		startPoint: KRNBezierControlPointMorph new;  
+		startPoint: (KRNBezierControlPointMorph newOn: self);  
 		addMorph: self startPoint;
 		
-		controlPoint1: KRNBezierControlPointMorph new;
+		controlPoint1: (KRNBezierControlPointMorph newOn: self);
 		addMorph: self controlPoint1;
 		
-		controlPoint2: KRNBezierControlPointMorph new;
+		controlPoint2: (KRNBezierControlPointMorph newOn: self);
 		addMorph: self controlPoint2;
 		
-		endPoint: KRNBezierControlPointMorph new;
+		endPoint: (KRNBezierControlPointMorph newOn: self);
 		addMorph: self endPoint;
 		
 		extent: 200@200;

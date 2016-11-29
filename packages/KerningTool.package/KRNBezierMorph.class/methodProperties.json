@@ -2,7 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"configureControlMorph:at:" : "lcj 11/10/2016 16:53",
+		"acceptDroppingMorph:event:" : "ek 11/29/2016 15:41",
 		"controlPoint1" : "lcj 11/10/2016 14:18",
 		"controlPoint1:" : "lcj 11/10/2016 14:19",
 		"controlPoint2" : "lcj 11/10/2016 14:18",
@@ -12,8 +12,8 @@
 		"drawOn:" : "lcj 11/10/2016 16:29",
 		"endPoint" : "lcj 11/10/2016 14:18",
 		"endPoint:" : "lcj 11/10/2016 14:19",
-		"handleDropMorph:" : "lcj 11/10/2016 17:06",
-		"initialize" : "lcj 11/10/2016 16:56",
+		"handleDropMorph:" : "ek 11/29/2016 15:42",
+		"initialize" : "ek 11/29/2016 15:46",
 		"relativePositionOf:" : "lcj 11/10/2016 16:04",
 		"startPoint" : "lcj 11/10/2016 15:37",
 		"startPoint:" : "lcj 11/10/2016 14:19",
