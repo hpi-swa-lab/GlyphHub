@@ -10,8 +10,8 @@ outline
 				c points add: {
 					((self coordFromNode: element) * self ptSize * 64 / self font unitsPerEm) floor.
 					self class pointTypeMappings at: (self typeFromNode: element)} ].
-			(c points last second == #cubicOffCurve or: [c points last second == #conicOffCurve])
-				ifTrue: [ c points add: c points removeFirst ].
+			
+			c points first second == #cubicOffCurve ifTrue: [ c points addFirst: c points removeLast ].
 			outline addContour: c ]].
 	
 	^outline

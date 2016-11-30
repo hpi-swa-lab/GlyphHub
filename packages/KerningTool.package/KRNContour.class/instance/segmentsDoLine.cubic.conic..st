@@ -3,6 +3,9 @@ segmentsDoLine: aLineBlock cubic: aCubicBlock conic: aConicBlock
 	| previous source stream |
 	source := self points copy.
 	
+	(source last second == #cubicOffCurve or: [source second == #conicOffCurve])
+		ifTrue: [ source add: source removeFirst ].
+	
 	" since we want full elements with start and end, we need to wrap around "
 	source addFirst: source last.
 	

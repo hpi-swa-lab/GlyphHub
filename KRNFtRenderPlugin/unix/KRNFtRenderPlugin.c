@@ -34,9 +34,18 @@ typedef struct _spanner_baton_t {
 	uint32_t gshift;
 	uint32_t bshift;
 	uint32_t ashift;
+
+	float red;
+	float green;
+	float blue;
+	float alpha;
 } spanner_baton_t;
 
 #define MIN(x, y) ((x) < (y) ? (x) : (y))
+
+uint8_t blendComponent(float component, uint8_t coverage) {
+	return (uint8_t) (component * coverage);
+}
 
 /* This spanner does read/modify/write, trading performance for accuracy.
    The color here is simply half coverage value in all channels,
@@ -52,11 +61,12 @@ void spanner_rw(int y, int count, const FT_Span* spans, void *user) {
 		return;
 
 	for (int i = 0; i < count; i++) {
+		uint8_t coverage = spans[i].coverage;
 		uint32_t color =
-			/*((spans[i].coverage) << baton->rshift) |
-			((spans[i].coverage) << baton->gshift) |
-			((spans[i].coverage) << baton->bshift) |*/
-			((spans[i].coverage) << baton->ashift);
+			(blendComponent(baton->red, 255) << baton->rshift) |
+			(blendComponent(baton->green, 255) << baton->gshift) |
+			(blendComponent(baton->blue, 255) << baton->bshift) |
+			(blendComponent(baton->alpha, coverage) << baton->ashift);
 
 		uint32_t *start = scanline + spans[i].x;
 		if (unlikely start + spans[i].len > baton->last_pixel)
@@ -100,14 +110,26 @@ sqInt sqRenderContours(uint8_t *first_pixel,
 		sqInt n_points,
 		long *points,
 		short *contours,
-		char *tags) {
+		char *tags,
+		float red,
+		float green,
+		float blue,
+		float alpha) {
 
 	FT_Error fterr;
 
 	if (!init()) {
-		printf("INIT FAILED D:\n");
-		return 1;
+		return 2;
 	}
+
+	/*int i = 0;
+	while (first_pixel != last_pixel) {
+		if (i % 4 == 0)
+			*first_pixel = 255;
+		first_pixel++;
+		i++;
+	}
+	return 0;*/
 
 	spanner_baton_t stuffbaton;
 
@@ -128,6 +150,10 @@ sqInt sqRenderContours(uint8_t *first_pixel,
 	stuffbaton.rshift = 16;
 	stuffbaton.gshift = 8;
 	stuffbaton.bshift = 0;
+	stuffbaton.red = red;
+	stuffbaton.green = green;
+	stuffbaton.blue = blue;
+	stuffbaton.alpha = alpha;
 
 	FT_Outline out;
 	out.n_contours = n_contours;
@@ -137,6 +163,7 @@ sqInt sqRenderContours(uint8_t *first_pixel,
 	out.flags = FT_OUTLINE_SMART_DROPOUTS | FT_OUTLINE_INCLUDE_STUBS;
 	out.tags = tags;
 
+#if 0
 	printf("Contour.\n");
 	printf("\tPoints:\n");
 	for (int i = 0; i < n_points; i++) {
@@ -151,6 +178,7 @@ sqInt sqRenderContours(uint8_t *first_pixel,
 		printf("FT_Outline_Check() failed err=%d (%s)\n", fterr, ftGetErrorMessage(fterr));
 		return 1;
 	}
+#endif
 
 	if ((fterr = FT_Outline_Render(ft_library, &out, &ftr_params))) {
 		printf("FT_Outline_Render() failed err=%d (%s)\n", fterr, ftGetErrorMessage(fterr));
