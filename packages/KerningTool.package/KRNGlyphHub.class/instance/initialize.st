@@ -9,17 +9,11 @@ initialize
 		vResizing: #spaceFill;
 		yourself.
 
-	{KRNUfo3 openBaskerville. KRNUfo3 openBaskerville} do: [ :font | 
-		fontList addMorph: (SimpleButtonMorph new
-			removeAllMorphs;
-			layoutInset: 24;
-			hResizing: #shrinkWrap;
-			vResizing: #shrinkWrap;
-			addMorph: font asMorph
-			yourself) ].
+	self createFontList.
 
 	fontDetails := Morph new
-		color: Color lightGray;
+		layoutPolicy: TableLayout new;  
+		color: Color white;
 		hResizing: #spaceFill;
 		vResizing: #spaceFill;
 		yourself.

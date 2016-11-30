@@ -3,13 +3,13 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		"Fonts" ],
+		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"fontList",
-		"fontDetails",
-		"selectedFont" ],
-	"name" : "KRNGlyphHub",
+		"text",
+		"ptSize",
+		"font" ],
+	"name" : "KRNStringMorph",
 	"pools" : [
 		 ],
 	"super" : "Morph",

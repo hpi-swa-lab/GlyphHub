@@ -1,6 +1,14 @@
 {
 	"class" : {
-		 },
+		"fonts" : "TB 11/30/2016 16:22",
+		"register:font:" : "TB 11/30/2016 16:23",
+		"unregisterFont:" : "TB 11/30/2016 16:37" },
 	"instance" : {
-		"initialize" : "TB 11/25/2016 01:22",
-		"open" : "TB 11/25/2016 01:01" } }
+		"addFont" : "TB 11/30/2016 16:36",
+		"createFontDetailView" : "TB 11/30/2016 17:31",
+		"createFontList" : "TB 11/30/2016 16:56",
+		"createFontListButton" : "TB 11/30/2016 17:18",
+		"initialize" : "TB 11/30/2016 17:16",
+		"open" : "TB 11/25/2016 01:01",
+		"openScanEditor" : "TB 11/30/2016 17:30",
+		"selectFont:" : "TB 11/30/2016 16:54" } }

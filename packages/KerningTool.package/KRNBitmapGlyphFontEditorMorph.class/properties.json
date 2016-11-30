@@ -8,7 +8,8 @@
 	"instvars" : [
 		"inspectView",
 		"bitmapView",
-		"font" ],
+		"font",
+		"bitmapViewContainer" ],
 	"name" : "KRNBitmapGlyphFontEditorMorph",
 	"pools" : [
 		 ],

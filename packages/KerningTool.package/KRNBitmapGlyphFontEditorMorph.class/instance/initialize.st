@@ -1,6 +1,7 @@
 as yet unclassified
 initialize
 	super initialize.
+	self color: Color lightGray.
 
 	inspectView := KRNGlyphInspectMorph new
 		autoScale: true;

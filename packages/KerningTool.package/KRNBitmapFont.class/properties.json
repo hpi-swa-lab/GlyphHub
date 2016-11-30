@@ -7,7 +7,8 @@
 		"LinesFont" ],
 	"commentStamp" : "",
 	"instvars" : [
-		"glyphs" ],
+		"glyphs",
+		"name" ],
 	"name" : "KRNBitmapFont",
 	"pools" : [
 		 ],
