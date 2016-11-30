@@ -1,12 +1,15 @@
 {
 	"class" : {
-		"newFrom:" : "TB 11/24/2016 15:08:28" },
+		"newFrom:" : "TB 11/30/2016 12:22:49",
+		"newOn:" : "ek 11/29/2016 15:44" },
 	"instance" : {
 		"bezierMorph" : "TB 11/24/2016 15:08:28",
 		"bezierMorph:" : "TB 11/24/2016 15:08:28",
 		"handlesMouseDown:" : "lcj 11/10/2016 16:49",
 		"initialize" : "lcj 11/10/2016 16:53",
-		"mouseDown:" : "lcj 11/10/2016 16:51",
-		"mouseMove:" : "TB 11/24/2016 15:08:28",
-		"ref" : "TB 11/24/2016 15:08:28",
-		"ref:" : "TB 11/24/2016 15:08:28" } }
+		"justDroppedInto:event:" : "ek 11/29/2016 15:42",
+		"mouseDown:" : "ek 11/29/2016 15:39",
+		"mouseMove:" : "ek 11/29/2016 15:39",
+		"ref" : "ek 11/29/2016 15:39",
+		"ref:" : "TB 11/24/2016 15:08:28",
+		"wantsToBeDroppedInto:" : "ek 11/29/2016 15:42" } }

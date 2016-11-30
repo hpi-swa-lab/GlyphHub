@@ -1,3 +1,4 @@
 as yet unclassified
-mouseDown: anEvent
-	self enableDragNDrop: true
+mouseDown: evt
+	ref := self topLeft - evt position
+	"evt hand waitForClicksOrDrag: self event: evt"
