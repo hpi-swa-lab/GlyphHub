@@ -1,0 +1,3 @@
+accessing
+wantsToBeDroppedInto: aMorph
+	^ true
