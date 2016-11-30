@@ -1,5 +1,5 @@
 instance creation
-newOn: aBezierMorph
-	^ self new
+newFrom: aBezierMorph
+	^ self new 
 		bezierMorph: aBezierMorph;
 		yourself

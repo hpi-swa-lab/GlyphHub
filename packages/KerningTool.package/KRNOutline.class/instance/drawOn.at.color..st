@@ -12,6 +12,7 @@ drawOn: aCanvas at: aPoint color: aColor
 		canvas
 			aaLevel: 4;
 			transformBy: (MatrixTransform2x3 withOffset: aPoint);
+			" convert from 26.6 pixels to real pixels "
 			transformBy: (MatrixTransform2x3 withScale: (1 / 64.0) @ (1 / -64.0));
 			drawGeneralBezierShape: self balloonPointsForOutline
 			color: aColor

@@ -1,4 +1,4 @@
 as yet unclassified
-mouseMove: evt
-	self topLeft: evt position - ref.
-	self bezierMorph changed
+mouseMove: anEvent
+	self topLeft:  anEvent position - self ref.
+	self owner changed

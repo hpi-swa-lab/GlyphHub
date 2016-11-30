@@ -7,6 +7,6 @@ drawOn: aCanvas at: aPoint color: aColor
 	canvas := FormCanvas on: form.
 	
 	self outline drawOn: canvas at: (0 @ self font ascender * self scale) floor color: aColor.
-	components do: [ :glyph | glyph drawOn: canvas at: glyph transform offset color: aColor ].
+	components do: [ :glyph | glyph drawOn: canvas at: glyph transform offset * self scale color: aColor ].
 	
-	aCanvas translucentImage: form at: self innerBounds origin
+	aCanvas translucentImage: form at: aPoint
