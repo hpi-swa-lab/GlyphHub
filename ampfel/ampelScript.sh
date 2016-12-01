@@ -8,7 +8,7 @@ while true
 do 
 
 
-NEW_STATE=$(curl -s -LH "Accept: application/vnd.travis-ci.2+json" "https://api.travis-ci.org/repos/HPI-SWA-Lab/BP2016H1/builds" | grep -o '"state":.[a-z\"]*' | head -n 1);
+NEW_STATE=$(curl -s -LH "Accept: application/vnd.travis-ci.2+json" "https://api.travis-ci.org/repos/HPI-SWA-Lab/BP2016H1/builds" | grep -oP '{.*?"branch":"master".*?}' | grep -o '"state":.[a-z\"]*' | head -1)
 
 if [ "$CURRENT_STATE" != "$NEW_STATE" ];
 then

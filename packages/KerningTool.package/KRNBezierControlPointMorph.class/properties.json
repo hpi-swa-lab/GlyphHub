@@ -14,5 +14,5 @@
 	"name" : "KRNBezierControlPointMorph",
 	"pools" : [
 		 ],
-	"super" : "Morph",
+	"super" : "CircleMorph",
 	"type" : "normal" }

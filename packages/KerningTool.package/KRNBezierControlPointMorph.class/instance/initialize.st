@@ -3,6 +3,7 @@ initialize
 	super initialize.
 	
 	self
-		extent: 5 asPoint;
+		extent: 8 asPoint;
 		color: Color red;
-		borderColor: nil
+		borderColor: nil;
+		borderWidth: 0

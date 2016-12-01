@@ -1,4 +1,4 @@
 as yet unclassified
 mouseDown: evt
-	ref := self topLeft - evt position
+	self ref: self center - evt position
 	"evt hand waitForClicksOrDrag: self event: evt"

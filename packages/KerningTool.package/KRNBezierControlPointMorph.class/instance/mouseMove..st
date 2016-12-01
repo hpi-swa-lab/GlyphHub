@@ -1,4 +1,4 @@
 as yet unclassified
 mouseMove: evt
-	self topLeft: evt position - ref.
+	self center: evt position - ref.
 	self bezierMorph changed
