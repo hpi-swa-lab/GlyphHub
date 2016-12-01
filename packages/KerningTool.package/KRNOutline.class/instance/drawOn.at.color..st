@@ -17,4 +17,4 @@ drawOn: aCanvas at: aPoint color: aColor
 			drawGeneralBezierShape: self balloonPointsForOutline
 			color: aColor
 			borderWidth: 0
-			borderColor: nil ]] value
+			borderColor: nil ]]

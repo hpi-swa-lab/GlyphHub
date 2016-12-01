@@ -4,7 +4,7 @@ createFontListButton
 		layoutInset: 24;
 		color: Color lightGray;
 		hResizing: #rigid;
-		width: 200;
+		width: 350;
 		vResizing: #shrinkWrap;
 		removeAllMorphs;
 		yourself
