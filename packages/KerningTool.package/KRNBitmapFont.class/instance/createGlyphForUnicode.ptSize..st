@@ -1,8 +1,10 @@
 as yet unclassified
 createGlyphForUnicode: unicode ptSize: aNumber
-	| glyph |
-	glyph := glyphs at: unicode ifAbsent: [ ^KRNTextElement new font: self; ptSize: 20; yourself ].
-	^(KRNBitmapGlyph newForForm: glyph first from: self unicode: unicode)
+	| glyph val |
+	val := unicode.
+	glyphs at: val ifAbsent: [ val := (Unicode charFromUnicode: val) asUppercase asUnicode ].
+	glyph := glyphs at: val ifAbsent: [ ^KRNTextElement new font: self; ptSize: aNumber; yourself ].
+	^(KRNBitmapGlyph newForForm: glyph first from: self unicode: val)
 		transform: glyph second;
 		ptSize: aNumber;
 		yourself

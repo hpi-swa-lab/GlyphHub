@@ -10,4 +10,4 @@ testRenderWithoutException
 	
 	form := Form extent: 1000 @ 1000 depth: 32.
 	
-	KRNFtRender renderContours: outline on: form at:  80 @ 80
+	outline drawOn: (FormCanvas on: form) at:  80 @ 80 color: Color red

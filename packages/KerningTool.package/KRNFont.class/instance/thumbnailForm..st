@@ -1,18 +1,19 @@
 as yet unclassified
 thumbnailForm: aNumber
-	| canvas form letterA ptSize verticalCenter |
+	| canvas form letterA ptSize verticalCenter letters |
 	form := Form extent: aNumber asPoint depth: 32.
 	canvas := FormCanvas on: form.
 	
-	ptSize := aNumber / ((self advanceOf: $A) x + (self advanceOf: $a) x / self unitsPerEm).
+	letters := self thumbnailGlyphs ifEmpty: [ ^form ].
+	ptSize := aNumber / ((self advanceOf: letters first) x + (self advanceOf: letters second) x / self unitsPerEm).
 	verticalCenter := aNumber / 2 - (self height * (self scaleAtPtSize: ptSize) / 2).
 	
-	letterA := (self createGlyphFor: $A ptSize: ptSize)
+	letterA := (self createGlyphFor: letters first ptSize: ptSize)
 		position: 0 @ verticalCenter;
 		drawOn: canvas;
 		yourself.
 	
-	(self createGlyphFor: $a ptSize: ptSize)
+	(self createGlyphFor: letters second ptSize: ptSize)
 		position: letterA extent x @ verticalCenter;
 		drawOn: canvas.
 	
