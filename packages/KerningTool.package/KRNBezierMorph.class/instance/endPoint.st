@@ -1,4 +1,4 @@
 accessing
 endPoint
 
-	^ endPoint
+	^ endPoint center

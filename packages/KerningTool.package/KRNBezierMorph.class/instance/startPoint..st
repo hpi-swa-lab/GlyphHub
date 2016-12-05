@@ -1,4 +1,4 @@
 accessing
 startPoint: aPoint
 
-	startPoint := aPoint
+	startPoint center: aPoint

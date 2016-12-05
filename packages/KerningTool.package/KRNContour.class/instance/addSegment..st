@@ -1,3 +1,3 @@
 as yet unclassified
 addSegment: aSegment
-	self addMorph: aSegment
+	self addMorphBack: aSegment

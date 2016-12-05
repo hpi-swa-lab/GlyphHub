@@ -1,7 +1,7 @@
 drawing
 drawHelperLineFrom: aPoint to: anotherPoint on: aCanvas
 	aCanvas
-		line: (self relativePositionOf: aPoint)
-		to: (self relativePositionOf: anotherPoint)
+		line: aPoint - self position
+		to: anotherPoint -  self position
 		width: 1
 		color: Color gray

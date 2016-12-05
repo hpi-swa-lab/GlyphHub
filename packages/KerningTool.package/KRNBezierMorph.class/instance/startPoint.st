@@ -1,4 +1,4 @@
 accessing
 startPoint
 
-	^ startPoint
+	^ startPoint center

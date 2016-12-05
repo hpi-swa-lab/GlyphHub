@@ -1,4 +1,6 @@
 as yet unclassified
 mouseDown: evt
-	self ref: self center - evt position
-	"evt hand waitForClicksOrDrag: self event: evt"
+	self ref: self center - evt position.
+	
+	evt shiftPressed ifTrue: [
+		self changed: #closeContourRequested with: self ]

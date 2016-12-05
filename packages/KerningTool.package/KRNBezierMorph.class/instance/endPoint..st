@@ -1,4 +1,4 @@
 accessing
 endPoint: aPoint
 
-	endPoint := aPoint
+	endPoint center: aPoint
