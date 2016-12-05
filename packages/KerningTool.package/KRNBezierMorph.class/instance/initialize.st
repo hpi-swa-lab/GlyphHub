@@ -9,7 +9,7 @@ initialize
 	
 	self pointMorphs do: [ :p | p addDependent: self ].
 	
-	self borderColor: Color green; borderWidth: 3.
+	"self borderColor: Color green; borderWidth: 3."
 	
 	self
 		addMorph: self startPoint;
