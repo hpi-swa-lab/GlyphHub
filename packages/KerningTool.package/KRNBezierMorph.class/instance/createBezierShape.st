@@ -1,4 +1,4 @@
-accessing
+drawing
 createBezierShape
 	| shape curve |
 	shape := OrderedCollection new.

@@ -1,4 +1,4 @@
-accessing
+drawing
 drawHelperLineFrom: aPoint to: anotherPoint on: aCanvas
 	aCanvas
 		line: (self relativePositionOf: aPoint)

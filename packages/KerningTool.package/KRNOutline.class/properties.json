@@ -6,7 +6,6 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"contours",
 		"cachedPoints",
 		"cachedContours",
 		"cachedTags",
@@ -14,5 +13,5 @@
 	"name" : "KRNOutline",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "Morph",
 	"type" : "normal" }

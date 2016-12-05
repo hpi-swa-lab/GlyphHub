@@ -1,12 +1,12 @@
 as yet unclassified
 refreshCachedData
 	| totalOfPoints pointIndex tagMappings |
-	totalOfPoints := contours inject: 0 into: [ :sum :contour | sum + contour points size ].
+	totalOfPoints := self contours inject: 0 into: [ :sum :contour | sum + contour points size ].
 	
 	cachedPoints := IntegerArray new: totalOfPoints * 2.
-	cachedContours := ShortIntegerArray new: contours size.
+	cachedContours := ShortIntegerArray new: self contours size.
 	cachedTags := ByteArray new: totalOfPoints.
-	cachedNumContours := contours size.
+	cachedNumContours := self contours size.
 	
 	pointIndex := 0.
 	
@@ -17,7 +17,7 @@ refreshCachedData
 		#cubicOffCurve -> 2r00000010
 	} as: Dictionary.
 	
-	contours withIndexDo: [ :contour :contourIndex |
+	self contours withIndexDo: [ :contour :contourIndex |
 		contour points do: [ :point |
 			cachedPoints
 				at: pointIndex * 2 + 1 put: point first x;

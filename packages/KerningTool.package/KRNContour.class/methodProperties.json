@@ -2,10 +2,12 @@
 	"class" : {
 		 },
 	"instance" : {
+		"addSegment:" : "JH 12/5/2016 11:07",
 		"curveTo:via:and:" : "TB 11/23/2016 15:40",
-		"initialize" : "TB 11/23/2016 15:35",
+		"initialize" : "JH 12/5/2016 11:19",
 		"lineTo:" : "TB 11/23/2016 15:40",
 		"points" : "TB 11/24/2016 11:29",
 		"qcurveTo:via:" : "TB 11/23/2016 15:39",
 		"segments" : "TB 11/28/2016 18:07",
-		"segmentsDoLine:cubic:conic:" : "TB 11/30/2016 12:14" } }
+		"segmentsDoLine:cubic:conic:" : "JH 12/5/2016 11:09",
+		"syncPoints" : "JH 12/5/2016 11:09" } }

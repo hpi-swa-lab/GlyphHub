@@ -2,15 +2,14 @@
 	"class" : {
 		 },
 	"instance" : {
-		"addContour:" : "TB 11/23/2016 15:55",
+		"addContour:" : "JH 12/5/2016 11:05",
 		"balloonPointsForContour:" : "TB 11/30/2016 12:15",
 		"balloonPointsForContour:on:" : "TB 11/28/2016 17:38",
 		"balloonPointsForOutline" : "TB 11/28/2016 17:19",
 		"cachedContours" : "TB 11/23/2016 16:30",
 		"cachedPoints" : "TB 11/23/2016 16:30",
 		"cachedTags" : "TB 11/23/2016 16:30",
-		"contours" : "TB 11/28/2016 16:29",
+		"contours" : "JH 12/5/2016 11:05",
 		"drawOn:at:color:" : "TB 12/1/2016 11:51",
-		"initialize" : "TB 11/23/2016 15:56",
 		"primRenderContours:on:at:red:green:blue:alpha:" : "TB 11/29/2016 13:30",
-		"refreshCachedData" : "TB 11/24/2016 11:06" } }
+		"refreshCachedData" : "JH 12/5/2016 11:06" } }
