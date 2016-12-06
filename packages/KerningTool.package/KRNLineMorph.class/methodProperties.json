@@ -1,8 +1,9 @@
 {
 	"class" : {
-		 },
+		"newFrom:to:" : "TB 12/6/2016 18:53" },
 	"instance" : {
 		"controlPoint1" : "TB 12/6/2016 18:40",
 		"controlPoint2" : "TB 12/6/2016 18:40",
 		"drawOn:" : "TB 12/6/2016 18:37",
-		"initialize" : "TB 12/6/2016 18:38" } }
+		"initialize" : "TB 12/6/2016 18:38",
+		"points" : "TB 12/6/2016 18:59" } }

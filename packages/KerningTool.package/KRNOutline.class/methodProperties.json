@@ -11,5 +11,9 @@
 		"cachedTags" : "TB 11/23/2016 16:30",
 		"contours" : "JH 12/5/2016 11:05",
 		"drawOn:at:color:" : "TB 12/1/2016 11:51",
+		"initialize" : "TB 12/6/2016 18:56",
+		"layoutChanged" : "TB 12/6/2016 19:22",
 		"primRenderContours:on:at:red:green:blue:alpha:" : "TB 11/29/2016 13:30",
-		"refreshCachedData" : "JH 12/5/2016 11:06" } }
+		"refreshCachedData" : "JH 12/5/2016 11:06",
+		"syncMorphs" : "TB 12/6/2016 18:52",
+		"updateExtent" : "TB 12/6/2016 19:37" } }

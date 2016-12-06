@@ -4,13 +4,14 @@
 	"instance" : {
 		"addLineSegmentFrom:to:" : "TB 12/6/2016 18:31",
 		"addSegment:" : "TB 12/6/2016 17:33",
-		"addSmoothSegmentFrom:to:" : "TB 12/6/2016 18:03",
+		"addSmoothSegmentFrom:to:" : "TB 12/6/2016 18:57",
 		"close" : "TB 12/6/2016 13:03",
 		"closed" : "TB 12/6/2016 12:59",
 		"closed:" : "TB 12/6/2016 12:59",
 		"curveTo:via:and:" : "TB 11/23/2016 15:40",
 		"handlesMouseDown:" : "TB 12/5/2016 15:24",
-		"initialize" : "TB 12/6/2016 13:00",
+		"initialize" : "TB 12/6/2016 18:56",
+		"layoutChanged" : "TB 12/6/2016 19:21",
 		"lineTo:" : "TB 11/23/2016 15:40",
 		"mouseDown:" : "TB 12/6/2016 18:35",
 		"points" : "TB 11/24/2016 11:29",
@@ -18,4 +19,6 @@
 		"removedMorph:" : "TB 12/6/2016 18:18",
 		"segments" : "TB 11/28/2016 18:07",
 		"segmentsDoLine:cubic:conic:" : "TB 12/6/2016 11:41",
-		"syncPoints" : "TB 12/6/2016 11:42" } }
+		"syncMorphs" : "TB 12/6/2016 19:05",
+		"syncPoints" : "TB 12/6/2016 11:42",
+		"updateExtent" : "TB 12/6/2016 19:30" } }

@@ -5,6 +5,7 @@ addSmoothSegmentFrom: aPoint to: anotherPoint
 		startPoint: aPoint;
 		endPoint: anotherPoint;
 		yourself.
+	
 	self addSegment: segment.
 	
 	segment findInitialControlPointPositions
