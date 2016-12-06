@@ -2,6 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
+		"addLineSegmentFrom:to:" : "TB 12/6/2016 18:31",
 		"addSegment:" : "TB 12/6/2016 17:33",
 		"addSmoothSegmentFrom:to:" : "TB 12/6/2016 18:03",
 		"close" : "TB 12/6/2016 13:03",
@@ -11,7 +12,7 @@
 		"handlesMouseDown:" : "TB 12/5/2016 15:24",
 		"initialize" : "TB 12/6/2016 13:00",
 		"lineTo:" : "TB 11/23/2016 15:40",
-		"mouseDown:" : "TB 12/6/2016 11:25",
+		"mouseDown:" : "TB 12/6/2016 18:35",
 		"points" : "TB 11/24/2016 11:29",
 		"qcurveTo:via:" : "TB 11/23/2016 15:39",
 		"removedMorph:" : "TB 12/6/2016 18:18",

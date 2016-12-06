@@ -1,0 +1,14 @@
+{
+	"category" : "KerningTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "KRNLineMorph",
+	"pools" : [
+		 ],
+	"super" : "KRNBezierMorph",
+	"type" : "normal" }
