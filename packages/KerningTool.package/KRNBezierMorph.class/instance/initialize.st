@@ -2,26 +2,21 @@ initialize-release
 initialize
 	super initialize.
 	
-	startPoint := KRNBezierControlPointMorph newOn: self.
-	controlPoint1 := KRNBezierControlPointMorph newOn: self.
-	controlPoint2 := KRNBezierControlPointMorph newOn: self.
-	endPoint := KRNBezierControlPointMorph newOn: self.
+	startPoint := KRNBezierControlPointMorph new.
+	controlPoint1 := KRNBezierControlPointMorph new.
+	controlPoint2 := KRNBezierControlPointMorph new.
+	endPoint := KRNBezierControlPointMorph new.
+	
 	closed := false.
 	
-	self pointMorphs do: [ :p | p addDependent: self ].
-	
-	"self borderColor: Color green; borderWidth: 3."
+	self pointMorphs do: [ :p |
+		p addDependent: self.
+		self addMorph: p ].
 	
 	self
-		addMorph: startPoint;
-		addMorph: controlPoint1;
-		addMorph: controlPoint2;
-		addMorph: endPoint;
-		color: Color transparent.
-	
-	self startPoint: 0@100.
-	self controlPoint1: 0@0.
-	self controlPoint2: 100@0.
-	self endPoint: 100@100.
-	
-	self updateExtent
+		color: Color transparent;
+		startPoint: 0@100;
+		controlPoint1: 0@0;
+		controlPoint2: 100@0;
+		endPoint: 100@100;
+		updateExtent

@@ -1,14 +1,10 @@
 initialize-release
-update: aParameter with: aPoint
+update: aParameter with: anObject
 	super update: aParameter.
 	
-	(aParameter == #closeContourRequested and: [aPoint == startPoint and: [self == self owner firstSubmorph]]) ifTrue: [ | segment |
+	(aParameter == #closeContourRequested and: [anObject == startPoint and: [self == self owner firstSubmorph]]) ifTrue: [ 
 		closed := true.
-		segment := KRNBezierMorph new startPoint: (self owner lastSubmorph endPoint); endPoint: (self owner firstSubmorph startPoint).
-		self owner addSegment: segment.
-		segment smoothControlPoints ].
+		self owner addSmoothSegmentFrom: self owner lastSubmorph endPoint to: self owner firstSubmorph startPoint ].
 	
 	aParameter == #pointMoved ifTrue: [
-		self
-			syncConnections;
-			updateExtent ]
+		self syncConnections: anObject ]

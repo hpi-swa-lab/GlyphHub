@@ -1,4 +1,4 @@
-event handling
+accessing
 points
 	^{	{self controlPoint1. #cubicOffCurve}.
 		{self controlPoint2. #cubicOffCurve}.

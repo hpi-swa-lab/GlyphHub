@@ -4,4 +4,4 @@ drawHelperLineFrom: aPoint to: anotherPoint on: aCanvas
 		line: aPoint - self position
 		to: anotherPoint -  self position
 		width: 1
-		color: Color gray
+		color: Color lightGray

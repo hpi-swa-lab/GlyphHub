@@ -1,4 +1,7 @@
 as yet unclassified
 mouseMove: evt
-	self center: evt position - ref.
-	self changed: #pointMoved with: self
+	| delta |
+	delta := evt position - ref.
+	self center: self center + delta.
+	ref := evt position.
+	self changed: #pointMoved with: delta
