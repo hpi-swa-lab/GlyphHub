@@ -1,4 +1,4 @@
 accessing
 controlPoint2: aPoint
-
-	controlPoint2 center: aPoint
+	controlPoint2 center: aPoint.
+	self updateExtent

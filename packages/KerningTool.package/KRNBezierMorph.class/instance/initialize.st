@@ -7,8 +7,6 @@ initialize
 	controlPoint2 := KRNBezierControlPointMorph new.
 	endPoint := KRNBezierControlPointMorph new.
 	
-	closed := false.
-	
 	self pointMorphs do: [ :p |
 		p addDependent: self.
 		self addMorph: p ].

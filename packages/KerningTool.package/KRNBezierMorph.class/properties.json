@@ -9,8 +9,7 @@
 		"startPoint",
 		"endPoint",
 		"controlPoint1",
-		"controlPoint2",
-		"closed" ],
+		"controlPoint2" ],
 	"name" : "KRNBezierMorph",
 	"pools" : [
 		 ],

@@ -1,4 +1,4 @@
-initialize-release
+event handling
 updateExtent
 	| x y oldBounds delta |
 	

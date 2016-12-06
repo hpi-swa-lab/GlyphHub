@@ -1,10 +1,28 @@
-initialize-release
-syncConnections: delta
-	(self submorphBefore ifNil: [ closed ifTrue: [ self owner lastSubmorph ] ifFalse: [ nil ]]) ifNotNilDo: [ :prev |
-		prev  
-			endPoint: self startPoint;
-			updateExtent ].
+event handling
+syncConnections: pointAndDelta
+	| delta point prev next |
+	point := pointAndDelta first.
+	delta := pointAndDelta second.
 	
-	self submorphAfter ifNotNilDo: [ :next | next startPoint: self endPoint. next updateExtent ].
+	prev := self previousSegment ifNil: [ KRNBezierMorph new ].
+	next := self nextSegment ifNil: [ KRNBezierMorph new ].
 	
+	point == startPoint ifTrue: [
+		prev endPoint: self startPoint; controlPoint2: prev controlPoint2 + delta.
+		self controlPoint1: self controlPoint1 + delta ].
+	
+	point == endPoint ifTrue: [
+		next startPoint: self endPoint; controlPoint1: next controlPoint1 + delta.
+		self controlPoint2: self controlPoint2 + delta ].
+	
+	point == controlPoint1 ifTrue: [
+		prev smoothControlPoints.
+		"prev controlPoint2: prev controlPoint2 - delta" ].
+	
+	point == controlPoint2 ifTrue: [
+		next smoothControlPoints
+		"next controlPoint1: next controlPoint1 - delta "].
+	
+	next updateExtent.
+	prev updateExtent.
 	self updateExtent
