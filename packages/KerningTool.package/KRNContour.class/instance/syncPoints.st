@@ -1,3 +1,5 @@
-as yet unclassified
+segments
 syncPoints
-	points := self submorphs gather: [ :segment | segment points ]
+	^self hasSubmorphs
+		ifTrue: [ self submorphs gather: [ :segment | segment points ]]
+		ifFalse: [ points ]

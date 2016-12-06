@@ -1,3 +1,3 @@
 as yet unclassified
 addContour: aContour
-	self addMorph: aContour
+	self addMorphBack: aContour

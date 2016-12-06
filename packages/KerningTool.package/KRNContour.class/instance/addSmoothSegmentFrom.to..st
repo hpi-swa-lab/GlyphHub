@@ -1,4 +1,4 @@
-as yet unclassified
+segments
 addSmoothSegmentFrom: aPoint to: anotherPoint
 	| segment |
 	segment := KRNBezierMorph new

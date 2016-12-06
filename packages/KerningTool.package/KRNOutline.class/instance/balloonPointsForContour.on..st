@@ -1,6 +1,6 @@
 as yet unclassified
-balloonPointsForContour: aCollection on: aStream
-	aCollection
+balloonPointsForContour: aContour on: aStream
+	aContour
 		segmentsDoLine: [:points |
 			aStream nextPutAll: ((LineSegment from: points first to: points last) asBezier2Segment controlPoints)]
 	 	cubic: [:points | 

@@ -1,3 +1,3 @@
-as yet unclassified
+segments
 addSegment: aSegment
 	self addMorphBack: aSegment

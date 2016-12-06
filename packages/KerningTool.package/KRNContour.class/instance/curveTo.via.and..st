@@ -1,4 +1,4 @@
-as yet unclassified
+segments
 curveTo: aPoint via: aSecondPoint and: aThirdPoint
 	points
 		add: {aSecondPoint. #cubicOffCurve};

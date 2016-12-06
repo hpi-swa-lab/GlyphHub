@@ -1,8 +1,7 @@
-as yet unclassified
+segments
 segmentsDoLine: aLineBlock cubic: aCubicBlock conic: aConicBlock
 	| previous source stream |
-	self syncPoints.
-	source := self points copy.
+	source := self syncPoints copy.
 	
 	(source last second == #cubicOffCurve or: [source second == #conicOffCurve])
 		ifTrue: [ source add: source removeFirst ].

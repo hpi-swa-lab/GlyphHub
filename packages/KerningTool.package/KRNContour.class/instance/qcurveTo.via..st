@@ -1,4 +1,4 @@
-as yet unclassified
+segments
 qcurveTo: aPoint via: aListOfPoints
 	points
 		addAll: (aListOfPoints collect: [ :point | {point. #conicOffCurve}]);
