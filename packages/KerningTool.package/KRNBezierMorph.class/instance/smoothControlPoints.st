@@ -1,14 +1,11 @@
 event handling
 smoothControlPoints
-	| offset |
 	self owner ifNil: [ ^self ].
 	
-	offset := 100 asPoint.
+	self startPointMorph smooth ifTrue: [  
+		self previousSegment
+			ifNotNilDo: [ :previous | self controlPoint1: self startPoint + previous endPoint - previous controlPoint2 ] ].
 	
-	self controlPoint1: self startPoint + (self previousSegment
-		ifNotNilDo: [ :previous | offset := previous endPoint - previous controlPoint2 ]
-		ifNil: [ offset ]).
-	
-	self controlPoint2: self endPoint + (self nextSegment
-		ifNotNilDo: [ :next | next startPoint - next controlPoint1 ]
-		ifNil: [ offset ])
+	self endPointMorph smooth ifTrue: [
+		self nextSegment
+			ifNotNilDo: [ :next | self controlPoint2: self endPoint + next startPoint - next controlPoint1 ] ]

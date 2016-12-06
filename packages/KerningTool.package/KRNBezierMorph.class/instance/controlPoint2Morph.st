@@ -1,0 +1,3 @@
+accessing
+controlPoint2Morph
+	^controlPoint2

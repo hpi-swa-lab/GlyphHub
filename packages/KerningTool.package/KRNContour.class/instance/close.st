@@ -1,4 +1,4 @@
-initialize-release
+event handling
 close
 	closed ifFalse: [
 		self

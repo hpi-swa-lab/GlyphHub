@@ -1,7 +1,8 @@
-as yet unclassified
+event handling
 mouseMove: evt
 	| delta |
-	delta := evt position - ref.
-	self center: self center + delta.
-	ref := evt position.
-	self changed: #pointMoved with: {self. delta}
+	evt redButtonPressed ifTrue: [
+		delta := evt position - ref.
+		self center: self center + delta.
+		ref := evt position.
+		self changed: #pointMoved with: {self. delta} ]

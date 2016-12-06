@@ -1,9 +1,9 @@
-as yet unclassified
+initialize-release
 initialize 
 	super initialize.
 	
 	self
 		extent: 16 asPoint;
-		color: Color red;
 		borderColor: nil;
+		smooth: true;
 		borderWidth: 0

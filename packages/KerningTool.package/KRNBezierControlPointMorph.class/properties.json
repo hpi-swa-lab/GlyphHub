@@ -10,7 +10,8 @@
 		"endPoint",
 		"controlPoint1",
 		"controlPoint2",
-		"ref" ],
+		"ref",
+		"smooth" ],
 	"name" : "KRNBezierControlPointMorph",
 	"pools" : [
 		 ],

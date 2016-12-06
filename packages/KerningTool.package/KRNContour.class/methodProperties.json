@@ -2,8 +2,8 @@
 	"class" : {
 		 },
 	"instance" : {
-		"addSegment:" : "TB 12/5/2016 15:45",
-		"addSmoothSegmentFrom:to:" : "TB 12/6/2016 11:25",
+		"addSegment:" : "TB 12/6/2016 17:33",
+		"addSmoothSegmentFrom:to:" : "TB 12/6/2016 18:03",
 		"close" : "TB 12/6/2016 13:03",
 		"closed" : "TB 12/6/2016 12:59",
 		"closed:" : "TB 12/6/2016 12:59",
@@ -14,6 +14,7 @@
 		"mouseDown:" : "TB 12/6/2016 11:25",
 		"points" : "TB 11/24/2016 11:29",
 		"qcurveTo:via:" : "TB 11/23/2016 15:39",
+		"removedMorph:" : "TB 12/6/2016 18:18",
 		"segments" : "TB 11/28/2016 18:07",
 		"segmentsDoLine:cubic:conic:" : "TB 12/6/2016 11:41",
 		"syncPoints" : "TB 12/6/2016 11:42" } }

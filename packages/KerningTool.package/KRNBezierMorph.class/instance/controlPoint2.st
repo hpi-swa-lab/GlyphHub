@@ -1,4 +1,3 @@
 accessing
 controlPoint2
-
-	^ controlPoint2 center
+	^controlPoint2 center

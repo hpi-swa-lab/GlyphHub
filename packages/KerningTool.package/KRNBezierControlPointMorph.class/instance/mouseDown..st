@@ -1,6 +1,10 @@
-as yet unclassified
+event handling
 mouseDown: evt
 	ref := evt position.
 	
-	evt shiftPressed ifTrue: [
+	evt yellowButtonPressed ifTrue: [
+		self smooth: self smooth not.
+		self changed: #smooth with: self ].
+	
+	(evt redButtonPressed and: [evt shiftPressed]) ifTrue: [
 		self changed: #closeContourRequested with: self ]
