@@ -1,5 +1,5 @@
 accessing
-outline
+computeOutline
 	| outline c |
 	outline := KRNOutline new.
 	
@@ -14,4 +14,4 @@ outline
 			c points first second == #cubicOffCurve ifTrue: [ c points addFirst: c points removeLast ].
 			outline addContour: c ]].
 	
-	^outline
+	self outline: outline

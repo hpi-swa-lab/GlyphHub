@@ -14,11 +14,12 @@ initialize
 	components := OrderedCollection new.
 	(glif firstTagNamed: #outline) tagsNamed: #component do: [ :component | | key |
 		key := component attributeAt: #base.
-		components add: ((KRNGlyph newForXML: (self font glyphAt: key) from: self font)
+		components add: ((KRNVectorGlyph newForXML: (self font glyphAt: key) from: self font)
 			transform: (self transformFromNode: component);
 			yourself) ].
 	
 	self
 		ptSize: 11;
 		color: Color white;
-		position: 0 @ 0
+		position: 0 @ 0;
+		computeOutline

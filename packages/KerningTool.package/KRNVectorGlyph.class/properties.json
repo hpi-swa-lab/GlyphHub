@@ -11,8 +11,9 @@
 		"shapes",
 		"components",
 		"transform",
-		"name" ],
-	"name" : "KRNGlyph",
+		"name",
+		"outline" ],
+	"name" : "KRNVectorGlyph",
 	"pools" : [
 		 ],
 	"super" : "KRNTextElement",
