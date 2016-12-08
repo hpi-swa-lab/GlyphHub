@@ -1,0 +1,16 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"addNewContour:" : "lcj 12/8/2016 12:10",
+		"addNewLineSegment:" : "lcj 12/8/2016 16:52",
+		"addNewSegment:" : "lcj 12/8/2016 12:23",
+		"contourAtPoint:" : "lcj 12/8/2016 15:37",
+		"handlesMouseDown:" : "lcj 12/8/2016 11:40",
+		"initialize" : "lcj 12/8/2016 13:45",
+		"mouseDown:" : "lcj 12/8/2016 17:09",
+		"outline" : "lcj 12/8/2016 11:23",
+		"outline:" : "lcj 12/8/2016 11:24",
+		"selectedContour" : "lcj 12/8/2016 12:20",
+		"selectedContour:" : "lcj 12/8/2016 12:19",
+		"selectedPoint:" : "lcj 12/8/2016 16:46" } }

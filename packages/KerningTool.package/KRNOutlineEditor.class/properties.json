@@ -6,13 +6,10 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"cachedPoints",
-		"cachedContours",
-		"cachedTags",
-		"cachedNumContours",
-		"lockLayoutChanged",
-		"editor" ],
-	"name" : "KRNOutline",
+		"outline",
+		"background",
+		"selectedContour" ],
+	"name" : "KRNOutlineEditor",
 	"pools" : [
 		 ],
 	"super" : "Morph",

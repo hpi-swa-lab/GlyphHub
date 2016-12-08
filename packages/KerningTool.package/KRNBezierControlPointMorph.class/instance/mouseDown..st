@@ -6,5 +6,7 @@ mouseDown: evt
 		self smooth: self smooth not.
 		self changed: #smooth with: self ].
 	
+	evt redButtonPressed ifTrue: [ self notifyEditor ].
+	
 	(evt redButtonPressed and: [evt shiftPressed]) ifTrue: [
 		self changed: #closeContourRequested with: self ]

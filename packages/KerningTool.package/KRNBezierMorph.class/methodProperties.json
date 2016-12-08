@@ -2,6 +2,7 @@
 	"class" : {
 		"newFrom:via:and:to:" : "TB 12/6/2016 18:53" },
 	"instance" : {
+		"contour" : "lcj 12/8/2016 16:43",
 		"controlPoint1" : "TB 12/6/2016 17:17",
 		"controlPoint1:" : "TB 12/6/2016 16:35",
 		"controlPoint1Morph" : "TB 12/6/2016 17:17",
@@ -11,6 +12,7 @@
 		"createBezierShape" : "TB 12/5/2016 16:21",
 		"drawHelperLineFrom:to:on:" : "TB 12/6/2016 11:35",
 		"drawOn:" : "lcj 11/10/2016 16:29",
+		"editor" : "lcj 12/8/2016 13:46",
 		"endPoint" : "TB 12/5/2016 15:37",
 		"endPoint:" : "TB 12/6/2016 16:36",
 		"endPointMorph" : "TB 12/6/2016 17:05",
