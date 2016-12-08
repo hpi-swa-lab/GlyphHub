@@ -1,7 +1,11 @@
 as yet unclassified
 updateExtent
-	"self hasSubmorphs ifTrue: [ | oldBounds delta |
+	lockLayoutChanged ifTrue: [ ^self ].
+	
+	self hasSubmorphs ifTrue: [ | oldBounds delta |
+		lockLayoutChanged := true.
 		oldBounds := self bounds.
 		self bounds: (Rectangle merging: (self submorphs collect: [ :morph | morph bounds ])).
-		
-		delta := self bounds origin - oldBounds origin ]"
+		delta := oldBounds origin - self bounds origin.
+		self submorphsDo: [ :s | s position: s position + delta ].
+		lockLayoutChanged := false ]

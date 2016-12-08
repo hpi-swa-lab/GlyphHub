@@ -1,3 +1,6 @@
 as yet unclassified
-layoutChanged
-	self updateExtent
+layoutChanged 
+	super layoutChanged.
+	
+	lockLayoutChanged ifFalse: [
+		self updateExtent ]

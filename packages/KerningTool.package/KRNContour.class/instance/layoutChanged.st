@@ -1,4 +1,6 @@
 segments
 layoutChanged 
 	super layoutChanged.
-	self updateExtent
+	
+	lockLayoutChanged ifFalse: [
+		self updateExtent ]

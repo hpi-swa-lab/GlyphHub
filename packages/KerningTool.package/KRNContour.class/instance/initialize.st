@@ -3,4 +3,5 @@ initialize
 	super initialize.
 	self color: Color transparent.
 	points := OrderedCollection new.
-	closed := false
+	closed := false.
+	lockLayoutChanged := false

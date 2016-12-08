@@ -2,6 +2,7 @@ segments
 syncMorphs
 	| p scale |
 	scale := 0.03.
+	
 	self
 		removeAllMorphs;
 		segmentsDoLine: [ :points |

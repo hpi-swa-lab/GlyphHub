@@ -9,7 +9,8 @@
 		"cachedPoints",
 		"cachedContours",
 		"cachedTags",
-		"cachedNumContours" ],
+		"cachedNumContours",
+		"lockLayoutChanged" ],
 	"name" : "KRNOutline",
 	"pools" : [
 		 ],
