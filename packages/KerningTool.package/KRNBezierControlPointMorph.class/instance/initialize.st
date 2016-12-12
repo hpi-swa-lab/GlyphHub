@@ -2,8 +2,10 @@ initialize-release
 initialize 
 	super initialize.
 	
+	handleType := #auto.
+	
 	self
 		extent: 12 asPoint;
 		borderColor: nil;
-		handleType: #auto;
-		borderWidth: 0
+		borderWidth: 0;
+		selected: false

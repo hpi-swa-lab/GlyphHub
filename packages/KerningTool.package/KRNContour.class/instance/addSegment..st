@@ -1,3 +1,5 @@
 segments
 addSegment: aSegment
-	self addMorphBack: aSegment
+	self addMorphBack: (aSegment
+		color: self color;
+		yourself)

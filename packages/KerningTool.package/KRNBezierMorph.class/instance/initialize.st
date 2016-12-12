@@ -12,7 +12,7 @@ initialize
 		self addMorph: p ].
 	
 	self
-		color: Color transparent;
+		color: Color black;
 		startPoint: 0@100;
 		controlPoint1: 0@0;
 		controlPoint2: 100@0;

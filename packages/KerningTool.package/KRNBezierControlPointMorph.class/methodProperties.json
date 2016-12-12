@@ -5,9 +5,12 @@
 		"contour" : "lcj 12/8/2016 16:43",
 		"editor" : "lcj 12/8/2016 13:47",
 		"handleType" : "TB 12/8/2016 13:22",
-		"handleType:" : "lcj 12/12/2016 11:07",
+		"handleType:" : "TB 12/12/2016 14:27",
 		"handlesMouseDown:" : "lcj 11/10/2016 16:49",
-		"initialize" : "TB 12/12/2016 13:41",
+		"initialize" : "TB 12/12/2016 14:29",
 		"mouseDown:" : "TB 12/12/2016 11:53",
 		"mouseMove:" : "TB 12/6/2016 18:08",
-		"notifyEditor" : "TB 12/9/2016 15:05" } }
+		"notifyEditor" : "TB 12/9/2016 15:05",
+		"selected" : "TB 12/12/2016 14:26",
+		"selected:" : "TB 12/12/2016 14:27",
+		"updateColor" : "TB 12/12/2016 14:28" } }
