@@ -1,0 +1,3 @@
+as yet unclassified
+toggleWinding
+	self selectedContour toggleWinding
