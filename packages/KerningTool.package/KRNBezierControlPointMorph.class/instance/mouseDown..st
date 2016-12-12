@@ -3,8 +3,8 @@ mouseDown: evt
 	ref := evt position.
 	
 	evt yellowButtonPressed ifTrue: [
-		self smooth: self smooth not.
-		self changed: #smooth with: self ].
+		self handleType: (self handleType = #auto ifTrue: [#free] ifFalse: [#auto]).
+		self changed: #handleType with: self ].
 	
 	evt redButtonPressed ifTrue: [ self notifyEditor ].
 	

@@ -5,9 +5,9 @@ update: aParameter with: anObject
 	(aParameter == #closeContourRequested and: [anObject == startPoint and: [self == self owner firstSubmorph]]) ifTrue: [ 
 		self owner close ].
 	
-	aParameter == #smooth ifTrue: [
-		(anObject == startPoint or: [anObject == controlPoint1]) ifTrue: [ self markStartSmooth: anObject smooth ].
-		(anObject == endPoint or: [anObject == controlPoint2]) ifTrue: [ self markEndSmooth: anObject smooth ].
+	aParameter == #handleType ifTrue: [
+		(anObject == startPoint or: [anObject == controlPoint1]) ifTrue: [ self handleTypeStart:  anObject handleType ].
+		(anObject == endPoint or: [anObject == controlPoint2]) ifTrue: [ self handleTypeEnd: anObject handleType ].
 		self smoothControlPoints ].
 	
 	aParameter == #pointMoved ifTrue: [ self syncConnections: anObject ]

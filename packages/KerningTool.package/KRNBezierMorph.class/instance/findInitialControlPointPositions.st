@@ -1,6 +1,6 @@
 initialize-release
 findInitialControlPointPositions
-	self startPointMorph smooth
+	(self startPointMorph handleType = #auto or: [self startPointMorph handleType = #aligned])
 		ifTrue: [ self smoothControlPoints ]
 		ifFalse: [
 			self previousSegment ifNotNilDo: [ :previous |

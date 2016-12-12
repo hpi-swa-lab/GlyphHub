@@ -1,3 +1,3 @@
 accessing
 notifyEditor
-	self editor selectedPoint: self
+	self editor ifNotNilDo: [ :editor | editor selectedPoint: self ]

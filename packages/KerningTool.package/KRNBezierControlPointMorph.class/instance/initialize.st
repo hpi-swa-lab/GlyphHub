@@ -5,5 +5,5 @@ initialize
 	self
 		extent: 12 asPoint;
 		borderColor: nil;
-		smooth: true;
+		handleType: #free;
 		borderWidth: 0

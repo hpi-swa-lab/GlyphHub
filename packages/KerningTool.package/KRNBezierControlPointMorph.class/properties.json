@@ -11,7 +11,8 @@
 		"controlPoint1",
 		"controlPoint2",
 		"ref",
-		"smooth" ],
+		"smooth",
+		"handleType" ],
 	"name" : "KRNBezierControlPointMorph",
 	"pools" : [
 		 ],
