@@ -1,3 +1,5 @@
 as yet unclassified
 addNewSegment: aPoint
-	self selectedContour addSmoothSegmentFrom: self selectedContour lastSubmorph endPoint to: aPoint 
+	self deselectPointFrom: self selectedContour.
+	self selectedContour addSmoothSegmentFrom: self selectedContour lastSubmorph endPoint to: aPoint.
+	self selectPointFrom: self selectedContour

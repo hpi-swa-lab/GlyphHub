@@ -7,7 +7,4 @@ mouseDown: anEvent
 				] ifNotNil: [
 				self addNewSegment: anEvent position ]    
 			] ifFalse: [
-			self selectedContour: nil ]].
-	anEvent shiftPressed ifTrue: [
-		anEvent yellowButtonPressed ifTrue: [
-			self addNewLineSegment: anEvent position] ] 
+			self selectedContour: nil ]]

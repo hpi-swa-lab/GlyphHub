@@ -1,7 +1,10 @@
 as yet unclassified
 addNewContour: aPoint
-	outline addContour: (KRNContour new
+	| newContour |
+	newContour := (KRNContour new
 		extent: 600 asPoint;
 		addSegment: KRNBezierMorph new;
 		position: aPoint; 
-		yourself ) 
+		yourself ).
+	outline addContour: newContour.
+	self selectedContour: newContour
