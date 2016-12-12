@@ -2,10 +2,18 @@ event handling
 smoothControlPoints
 	self owner ifNil: [ ^self ].
 	
-	(#(auto aligned) includes: self startPointMorph handleType) ifTrue: [  
-		self previousSegment
-			ifNotNilDo: [ :previous | self controlPoint1: self startPoint + previous endPoint - previous controlPoint2 ] ].
+	self previousSegment
+		ifNotNilDo: [ :previous |
+			self controlPoint1: (self
+				smoothControlPoint: self controlPoint1
+				anchor: self startPoint
+				otherControl: previous controlPoint2
+				handleType: self startPointMorph handleType) ].
 	
-	(#(auto aligned) includes: self endPointMorph handleType) ifTrue: [
-		self nextSegment
-			ifNotNilDo: [ :next | self controlPoint2: self endPoint + next startPoint - next controlPoint1 ] ]
+	self nextSegment
+		ifNotNilDo: [ :next |
+			self controlPoint2: (self
+				smoothControlPoint: self controlPoint2
+				anchor: self endPoint
+				otherControl: next controlPoint1
+				handleType: self endPointMorph handleType) ]

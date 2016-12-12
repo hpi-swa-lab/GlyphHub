@@ -3,8 +3,11 @@ mouseDown: evt
 	ref := evt position.
 	
 	evt yellowButtonPressed ifTrue: [
-		self handleType: (self handleType = #auto ifTrue: [#free] ifFalse: [#auto]).
-		self changed: #handleType with: self ].
+		KRNHandleTypePickerMorph new
+			openFor: self;
+			onSelected: [ :type |
+				self handleType: type.
+				self changed: #handleType with: self ]].
 	
 	evt redButtonPressed ifTrue: [ self notifyEditor ].
 	

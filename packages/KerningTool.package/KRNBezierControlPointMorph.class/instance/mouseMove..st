@@ -1,4 +1,4 @@
-event handling
+initialize-release
 mouseMove: evt
 	| delta |
 	evt redButtonPressed ifTrue: [

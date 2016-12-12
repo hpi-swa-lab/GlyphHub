@@ -8,6 +8,8 @@ update: aParameter with: anObject
 	aParameter == #handleType ifTrue: [
 		(anObject == startPoint or: [anObject == controlPoint1]) ifTrue: [ self handleTypeStart:  anObject handleType ].
 		(anObject == endPoint or: [anObject == controlPoint2]) ifTrue: [ self handleTypeEnd: anObject handleType ].
-		self smoothControlPoints ].
+		self
+			smoothControlPoints;
+			updateExtent ].
 	
 	aParameter == #pointMoved ifTrue: [ self syncConnections: anObject ]
