@@ -3,17 +3,15 @@
 		 },
 	"instance" : {
 		"addNewContour:" : "lcj 12/12/2016 11:11",
-		"addNewLineSegment:" : "lcj 12/12/2016 11:26",
-		"addNewSegment:" : "lcj 12/12/2016 11:25",
+		"addNewLineSegment:" : "lcj 12/12/2016 14:47",
+		"addNewSegment:" : "lcj 12/12/2016 14:48",
 		"contourAtPoint:" : "lcj 12/8/2016 15:37",
-		"deselectPointFrom:" : "TB 12/12/2016 14:28",
 		"handlesMouseDown:" : "lcj 12/8/2016 11:40",
-		"initialize" : "lcj 12/8/2016 13:45",
-		"mouseDown:" : "lcj 12/12/2016 12:10",
+		"initialize" : "lcj 12/12/2016 14:49",
+		"mouseDown:" : "lcj 12/12/2016 14:36",
 		"outline" : "lcj 12/8/2016 11:23",
 		"outline:" : "lcj 12/8/2016 11:24",
-		"selectPointFrom:" : "TB 12/12/2016 14:28",
 		"selectedContour" : "lcj 12/8/2016 12:20",
-		"selectedContour:" : "lcj 12/12/2016 11:25",
+		"selectedContour:" : "lcj 12/12/2016 14:45",
 		"selectedPoint:" : "lcj 12/12/2016 11:13",
-		"yellowButtonActivity:" : "lcj 12/12/2016 12:10" } }
+		"yellowButtonActivity:" : "lcj 12/12/2016 14:38" } }

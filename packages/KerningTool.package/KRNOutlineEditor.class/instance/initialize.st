@@ -10,4 +10,5 @@ initialize
 			addContour: (KRNContour new
   				extent: 600 @ 600; 
   				addSegment: KRNBezierMorph new)).
+	selectedContour := KRNNullContour new.
 	self addMorph: outline  

@@ -1,0 +1,14 @@
+{
+	"category" : "KerningTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "KRNNullContour",
+	"pools" : [
+		 ],
+	"super" : "KRNContour",
+	"type" : "normal" }

@@ -4,4 +4,4 @@ drawOn: aCanvas
 		line: self startPoint  
 		to: self endPoint
 		width: 1
-		color: Color black
+		color: self color

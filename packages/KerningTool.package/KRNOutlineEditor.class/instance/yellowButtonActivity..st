@@ -1,3 +1,3 @@
 as yet unclassified
 yellowButtonActivity: shiftState
-	shiftState ifTrue: [ self addNewLineSegment: ActiveHand position ]
+	shiftState ifTrue: [ self selectedContour canAppendTo ifTrue: [ self addNewLineSegment: ActiveHand position ]]

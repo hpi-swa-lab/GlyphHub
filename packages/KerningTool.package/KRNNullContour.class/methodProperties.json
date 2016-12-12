@@ -1,0 +1,26 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"addLineSegmentFrom:to:" : "lcj 12/12/2016 14:42",
+		"addSegment:" : "lcj 12/12/2016 14:42",
+		"addSmoothSegmentFrom:to:" : "lcj 12/12/2016 14:42",
+		"canAppendTo" : "lcj 12/12/2016 14:34",
+		"close" : "lcj 12/12/2016 14:25",
+		"curveTo:via:and:" : "lcj 12/12/2016 14:25",
+		"deselectEndPointMorph" : "lcj 12/12/2016 14:41",
+		"detectHandleTypes" : "lcj 12/12/2016 14:24",
+		"detectHandleTypesBetween:and:" : "lcj 12/12/2016 14:24",
+		"initialize" : "lcj 12/12/2016 14:10",
+		"layoutChanged" : "lcj 12/12/2016 14:24",
+		"lineTo:" : "lcj 12/12/2016 14:23",
+		"maximumExtent" : "lcj 12/12/2016 14:23",
+		"points" : "lcj 12/12/2016 14:23",
+		"qcurveTo:via:" : "lcj 12/12/2016 14:22",
+		"removedMorph:" : "lcj 12/12/2016 14:22",
+		"segments" : "lcj 12/12/2016 14:22",
+		"segmentsDoLine:cubic:conic:" : "lcj 12/12/2016 14:21",
+		"selectEndPointMorph" : "lcj 12/12/2016 14:41",
+		"syncMorphs" : "lcj 12/12/2016 14:20",
+		"syncPoints" : "lcj 12/12/2016 14:20",
+		"updateExtent" : "lcj 12/12/2016 14:19" } }
