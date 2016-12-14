@@ -3,4 +3,6 @@ initialize
 	super initialize.
 	self color: Color transparent.
 	self lockLayoutChanged: false.
-	self editor: nil
+	self editor: nil.
+	
+	snappingLines := OrderedCollection new

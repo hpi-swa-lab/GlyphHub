@@ -13,7 +13,8 @@
 		"ref",
 		"smooth",
 		"handleType",
-		"selected" ],
+		"selected",
+		"unsnappedPosition" ],
 	"name" : "KRNBezierControlPointMorph",
 	"pools" : [
 		 ],

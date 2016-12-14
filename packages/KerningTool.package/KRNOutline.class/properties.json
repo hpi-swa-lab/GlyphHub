@@ -11,7 +11,9 @@
 		"cachedTags",
 		"cachedNumContours",
 		"lockLayoutChanged",
-		"editor" ],
+		"editor",
+		"movingPoint",
+		"snappingLines" ],
 	"name" : "KRNOutline",
 	"pools" : [
 		 ],
