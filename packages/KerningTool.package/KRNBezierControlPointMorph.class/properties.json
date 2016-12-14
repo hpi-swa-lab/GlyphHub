@@ -11,6 +11,7 @@
 		"controlPoint1",
 		"controlPoint2",
 		"ref",
+		"origin",
 		"smooth",
 		"handleType",
 		"selected",

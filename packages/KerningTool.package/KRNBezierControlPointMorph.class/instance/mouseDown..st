@@ -1,6 +1,7 @@
 event handling
 mouseDown: evt
 	ref := self center - evt position.
+	origin := self center.
 	
 	evt yellowButtonPressed ifTrue: [
 		KRNHandleTypePickerMorph new
