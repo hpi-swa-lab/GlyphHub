@@ -1,3 +1,3 @@
 event handling
 contour
-	^ self owner ifNotNil: [ self owner ]
+	^ self owner ifNil: [ KRNNullContour new ] ifNotNil: [ self owner ]

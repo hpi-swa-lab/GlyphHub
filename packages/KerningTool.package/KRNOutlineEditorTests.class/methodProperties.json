@@ -1,0 +1,9 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"testAddingNewContour" : "lcj 12/15/2016 11:11",
+		"testAppendingLineToContour" : "lcj 12/15/2016 11:13",
+		"testAppendingToContour" : "lcj 12/15/2016 11:14",
+		"testToggleWinding" : "lcj 12/15/2016 10:53",
+		"testToggleWindingCorrectHandleTypes" : "lcj 12/15/2016 16:36" } }

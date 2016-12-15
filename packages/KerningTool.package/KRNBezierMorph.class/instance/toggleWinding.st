@@ -1,4 +1,6 @@
 event handling
 toggleWinding
-	self switchStartEndPoints.
-	self switchControlPoints
+	self switchControlPoints.
+	self switchStartEndPoints
+	
+	
