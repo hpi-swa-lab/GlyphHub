@@ -5,4 +5,6 @@ handleTypeEnd: aHandleType
 	
 	 self nextSegment ifNotNilDo: [ :segment |
 		segment startPointMorph handleType: aHandleType.
-		segment controlPoint1Morph handleType: aHandleType ]
+		segment controlPoint1Morph handleType: aHandleType ].
+	
+	self updateHandleTypeOfNextCurve

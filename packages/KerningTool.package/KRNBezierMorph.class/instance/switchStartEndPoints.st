@@ -1,6 +1,10 @@
 event handling
 switchStartEndPoints
-	| temp |
+	| temp tempHandleType |
+	"self halt."
 	temp := self startPoint.
+	tempHandleType := self startPointMorph handleType.
 	self startPoint: self endPoint.
-	self endPoint: temp
+	self handleTypeStart: self endPointMorph handleType.  
+	self endPoint: temp.
+	self handleTypeEnd: tempHandleType

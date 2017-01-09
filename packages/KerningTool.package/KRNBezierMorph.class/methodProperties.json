@@ -2,7 +2,7 @@
 	"class" : {
 		"newFrom:via:and:to:" : "TB 12/6/2016 18:53" },
 	"instance" : {
-		"contour" : "lcj 12/8/2016 16:43",
+		"contour" : "lcj 12/15/2016 12:00",
 		"controlPoint1" : "TB 12/6/2016 17:17",
 		"controlPoint1:" : "TB 12/6/2016 16:35",
 		"controlPoint1Morph" : "TB 12/6/2016 17:17",
@@ -17,8 +17,8 @@
 		"endPoint:" : "TB 12/6/2016 16:36",
 		"endPointMorph" : "TB 12/6/2016 17:05",
 		"findInitialControlPointPositions" : "TB 12/8/2016 13:27",
-		"handleTypeEnd:" : "TB 12/8/2016 13:16",
-		"handleTypeStart:" : "TB 12/8/2016 13:19",
+		"handleTypeEnd:" : "lcj 12/15/2016 12:24",
+		"handleTypeStart:" : "lcj 12/15/2016 12:24",
 		"hasHandleAt:" : "TB 12/12/2016 14:09",
 		"initialize" : "TB 12/12/2016 14:21",
 		"isCurve" : "TB 12/8/2016 12:23",
@@ -36,9 +36,11 @@
 		"startPoint:" : "TB 12/6/2016 16:36",
 		"startPointMorph" : "TB 12/6/2016 17:05",
 		"switchControlPoints" : "lcj 12/12/2016 15:45",
-		"switchStartEndPoints" : "lcj 12/12/2016 15:44",
+		"switchStartEndPoints" : "lcj 12/15/2016 12:22",
 		"syncAllConnections" : "TB 12/6/2016 18:16",
 		"syncConnections:" : "TB 12/12/2016 13:06",
-		"toggleWinding" : "lcj 12/12/2016 16:05",
+		"toggleWinding" : "lcj 12/15/2016 12:16",
 		"update:with:" : "TB 12/12/2016 13:38",
-		"updateExtent" : "JH 12/5/2016 14:40" } }
+		"updateExtent" : "JH 12/5/2016 14:40",
+		"updateHandleTypeOfNextCurve" : "lcj 12/15/2016 12:49",
+		"updateHandleTypeOfPreviousCurve" : "lcj 12/15/2016 12:49" } }

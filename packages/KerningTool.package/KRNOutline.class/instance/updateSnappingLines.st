@@ -13,7 +13,6 @@ updateSnappingLines
 			(moving unsnappedPosition onLineFrom: from to: to within: self snappingDistance) ifTrue: [
 				lines add: {from. to. line second x = 0 ifTrue: [#y] ifFalse: [#x]} ]]]].
 
-	Transcript show: lines; cr.
 	(snappingLines hasEqualElements: lines) ifFalse: [ self changed ].    
 
 	^snappingLines := lines
