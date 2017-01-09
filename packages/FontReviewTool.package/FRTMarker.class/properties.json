@@ -1,0 +1,16 @@
+{
+	"category" : "FontReviewTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "lcj 1/9/2017 12:12",
+	"instvars" : [
+		"unicodePoints",
+		"features",
+		"projectId" ],
+	"name" : "FRTMarker",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

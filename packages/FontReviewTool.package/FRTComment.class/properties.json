@@ -1,0 +1,17 @@
+{
+	"category" : "FontReviewTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"marker",
+		"text",
+		"image",
+		"isAddressed" ],
+	"name" : "FRTComment",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
