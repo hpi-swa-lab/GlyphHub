@@ -4,13 +4,13 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "lcj 1/9/2017 12:12",
+	"commentStamp" : "",
 	"instvars" : [
-		"unicodePoints",
-		"features",
-		"version",
-		"fontProject" ],
-	"name" : "FRTMarker",
+		"isOpen",
+		"comments",
+		"marker",
+		"ancestor" ],
+	"name" : "FRTCommentThread",
 	"pools" : [
 		 ],
 	"super" : "Object",

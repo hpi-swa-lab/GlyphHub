@@ -1,4 +1,4 @@
 as yet unclassified
 initialize
 	super initialize.
-	self isAddressed: false
+	self isRead false

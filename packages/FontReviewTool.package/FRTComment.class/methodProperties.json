@@ -2,12 +2,11 @@
 	"class" : {
 		 },
 	"instance" : {
+		"dateTime" : "lcj 1/9/2017 16:39",
 		"image" : "lcj 1/9/2017 12:21",
 		"image:" : "lcj 1/9/2017 12:21",
-		"initialize" : "lcj 1/9/2017 12:22",
-		"isAddressed" : "lcj 1/9/2017 12:21",
-		"isAddressed:" : "lcj 1/9/2017 12:21",
-		"marker" : "lcj 1/9/2017 12:19",
-		"marker:" : "lcj 1/9/2017 12:19",
+		"initialize" : "lcj 1/9/2017 16:39",
+		"isRead" : "lcj 1/9/2017 16:34",
+		"isRead:" : "lcj 1/9/2017 16:34",
 		"text" : "lcj 1/9/2017 12:20",
 		"text:" : "lcj 1/9/2017 12:20" } }

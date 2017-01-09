@@ -6,10 +6,10 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"marker",
 		"text",
 		"image",
-		"isAddressed" ],
+		"isRead",
+		"dateTime" ],
 	"name" : "FRTComment",
 	"pools" : [
 		 ],
