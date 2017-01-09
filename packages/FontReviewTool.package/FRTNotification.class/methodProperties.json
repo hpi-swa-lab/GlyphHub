@@ -1,0 +1,8 @@
+{
+	"class" : {
+		"width" : "TB 1/9/2017 12:27" },
+	"instance" : {
+		"drawOn:" : "TB 1/9/2017 12:17",
+		"handlesMouseDown:" : "TB 1/9/2017 16:17",
+		"initialize" : "TB 1/9/2017 12:27",
+		"mouseDown:" : "TB 1/9/2017 16:16" } }
