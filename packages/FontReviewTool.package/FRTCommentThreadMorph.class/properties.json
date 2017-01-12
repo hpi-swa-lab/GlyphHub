@@ -10,7 +10,8 @@
 		"isOpen",
 		"commentsList",
 		"title",
-		"comments" ],
+		"comments",
+		"commentTextInput" ],
 	"name" : "FRTCommentThreadMorph",
 	"pools" : [
 		 ],

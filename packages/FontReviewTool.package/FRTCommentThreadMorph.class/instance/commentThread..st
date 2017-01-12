@@ -12,5 +12,8 @@ commentThread: aCommentThread
 	
 	title text: (titleText append: (Text string: '(On version 0.0.1)' attribute: TextColor gray)).
 	
+	comments removeAllMorphs.
 	aCommentThread comments reverseDo: [ :comment |
-		comments addMorphFront: comment asMorph ]
+		comments addMorphFront: comment asMorph ].
+	
+	self allMorphsDo: [ :s | s layoutChanged ]

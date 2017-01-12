@@ -24,8 +24,7 @@ initialize
 		addMorphBack: image;  
 		addMorphBack: textContainer.
 	
-	text := TextMorph new
-		wrapFlag: true;
+	text := UiLabel new
 		vResizing: #shrinkWrap;
 		hResizing: #spaceFill;
 		lock: true;

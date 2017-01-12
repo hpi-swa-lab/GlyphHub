@@ -14,15 +14,19 @@ initialize
 		hResizing: #shrinkWrap;
 		yourself.
 	
+	commentTextInput := UiLineEdit new
+		hResizing: #spaceFill;
+		vResizing: #rigid;
+		height: 48;
+		yourself.
+	
+	self connect: commentTextInput signal: #returnPressed: toSelector: #onInputReturnPressed:.
+	
 	comments := self createContainer
 		vResizing: #shrinkWrap;
 		hResizing: #spaceFill;
-		addMorphBack: (UiTextEdit new
-			hResizing: #spaceFill;
-			vResizing: #rigid;
-			height: 48;
-			yourself);
-			yourself.
+		addMorphBack: commentTextInput;
+		yourself.
 	
 	commentsList := UiScrollArea new
 		hResizing: #spaceFill;
@@ -31,7 +35,7 @@ initialize
 		verticalScrollBarPolicy: #asNeeded;
 		widgetResizable: true;  
 		widget: comments;
-		yourself.    
+		yourself.
 	
 	self
 		changeTableLayout;
