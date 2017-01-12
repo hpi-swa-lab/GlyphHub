@@ -6,11 +6,11 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"commentThread",
-		"isOpen",
-		"commentsList",
-		"title" ],
-	"name" : "FRTCommentThreadMorph",
+		"image",
+		"text",
+		"meta",
+		"comment" ],
+	"name" : "FRTCommentMorph",
 	"pools" : [
 		 ],
 	"super" : "UiContainer",

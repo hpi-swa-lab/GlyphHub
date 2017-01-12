@@ -1,6 +1,5 @@
 as yet unclassified
 initialize
-	| done title commentsList |
 	super initialize.
 	
 	title := UiLabel new
@@ -10,7 +9,7 @@ initialize
 		hResizing: #spaceFill;
 		yourself.
 	
-	done := UiCheckBox new
+	isOpen := UiCheckBox new
 		text: 'Done';
 		vResizing: #shrinkWrap;
 		hResizing: #shrinkWrap;
@@ -25,9 +24,6 @@ initialize
 		widget: (self createContainer
 			vResizing: #shrinkWrap;
 			hResizing: #spaceFill;
-			addMorphBack: (self createComment: 'Hi, this is a very long comment that spreads on multiple lines' author: 'tom' date: DateAndTime now);
-			addMorphBack: (self createComment: 'blah' author: 'not_tom' date: DateAndTime noon);
-			addMorphBack: (self createComment: 'blub' author: 'tom' date: DateAndTime new);
 			addMorphBack: (UiTextEdit new
 				hResizing: #spaceFill;
 				vResizing: #rigid;
@@ -46,6 +42,6 @@ initialize
 		addMorphBack: (self createContainer
 			listDirection: #leftToRight;
 			addMorphBack: title;
-			addMorphBack: done;
+			addMorphBack: isOpen;
 			yourself);
 		addMorphBack: commentsList

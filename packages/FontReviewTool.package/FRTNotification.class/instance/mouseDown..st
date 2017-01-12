@@ -1,3 +1,4 @@
 as yet unclassified
 mouseDown: anEvent
-	FRTCommentThreadMorph new open
+	(FRTCommentThreadMorph for: commentThread) open.
+	self delete
