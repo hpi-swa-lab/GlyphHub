@@ -1,11 +1,14 @@
 {
 	"class" : {
-		 },
+		"example1" : "lcj 1/12/2017 10:55" },
 	"instance" : {
 		"asMorph" : "TB 1/12/2017 10:56",
+		"author" : "lcj 1/12/2017 10:53",
+		"author:" : "lcj 1/12/2017 10:53",
 		"dateTime" : "lcj 1/9/2017 16:39",
+		"dateTime:" : "lcj 1/12/2017 10:34",
 		"image" : "lcj 1/9/2017 12:21",
-		"image:" : "lcj 1/9/2017 12:21",
+		"image:" : "lcj 1/12/2017 10:53",
 		"initialize" : "lcj 1/9/2017 16:39",
 		"isRead" : "lcj 1/9/2017 16:34",
 		"isRead:" : "lcj 1/9/2017 16:34",

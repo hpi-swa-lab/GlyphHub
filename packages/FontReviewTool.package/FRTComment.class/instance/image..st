@@ -1,3 +1,3 @@
 as yet unclassified
-image: anImageMorph
-	image := anImageMorph 
+image: aForm
+	image := aForm

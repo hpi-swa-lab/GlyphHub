@@ -1,11 +1,13 @@
 {
 	"class" : {
-		 },
+		"example1" : "lcj 1/12/2017 11:11" },
 	"instance" : {
+		"addFeature:" : "lcj 1/12/2017 11:10",
 		"features" : "lcj 1/9/2017 12:11",
-		"features:" : "lcj 1/9/2017 12:11",
 		"fontProject" : "lcj 1/9/2017 16:32",
 		"fontProject:" : "lcj 1/9/2017 16:31",
+		"initialize" : "lcj 1/12/2017 11:11",
 		"unicodePoints" : "lcj 1/9/2017 12:09",
-		"unicodePoints:" : "lcj 1/9/2017 12:10",
-		"version" : "lcj 1/9/2017 16:32" } }
+		"unicodePoints:" : "lcj 1/12/2017 11:05",
+		"version" : "lcj 1/9/2017 16:32",
+		"version:" : "lcj 1/12/2017 11:07" } }

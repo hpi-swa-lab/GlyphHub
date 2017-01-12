@@ -1,3 +1,3 @@
 as yet unclassified
-unicodePoints: aCollection
-	unicodePoints := aCollection
+unicodePoints: aString
+	unicodePoints := aString

@@ -9,7 +9,8 @@
 		"isOpen",
 		"comments",
 		"marker",
-		"ancestor" ],
+		"ancestor",
+		"title" ],
 	"name" : "FRTCommentThread",
 	"pools" : [
 		 ],

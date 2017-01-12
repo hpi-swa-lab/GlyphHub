@@ -9,7 +9,8 @@
 		"text",
 		"image",
 		"isRead",
-		"dateTime" ],
+		"dateTime",
+		"author" ],
 	"name" : "FRTComment",
 	"pools" : [
 		 ],

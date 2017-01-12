@@ -1,11 +1,16 @@
 {
 	"class" : {
-		 },
+		"example1" : "lcj 1/12/2017 11:00" },
 	"instance" : {
 		"addComment:" : "lcj 1/9/2017 17:01",
+		"ancestor" : "lcj 1/12/2017 10:58",
+		"ancestor:" : "lcj 1/12/2017 10:58",
 		"asMorph" : "TB 1/12/2017 10:36",
 		"comments" : "lcj 1/9/2017 17:02",
-		"initialize" : "lcj 1/9/2017 16:39",
+		"initialize" : "lcj 1/12/2017 11:00",
 		"isOpen" : "lcj 1/9/2017 16:35",
 		"isOpen:" : "lcj 1/9/2017 16:35",
-		"marker" : "lcj 1/9/2017 17:02" } }
+		"marker" : "lcj 1/9/2017 17:02",
+		"marker:" : "lcj 1/12/2017 10:56",
+		"title" : "lcj 1/12/2017 10:56",
+		"title:" : "lcj 1/12/2017 10:56" } }
