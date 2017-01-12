@@ -1,0 +1,21 @@
+{
+	"category" : "KerningTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"PointTypeMappings" ],
+	"commentStamp" : "",
+	"instvars" : [
+		"glif",
+		"unicodeCodePoints",
+		"shapes",
+		"components",
+		"transform",
+		"name",
+		"outline",
+		"advance" ],
+	"name" : "KRNVectorData",
+	"pools" : [
+		 ],
+	"super" : "KRNGlyphData",
+	"type" : "normal" }

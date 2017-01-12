@@ -6,9 +6,12 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"glyphFlyweights" ],
-	"name" : "KRNFont",
+		"form",
+		"transform",
+		"originalForm",
+		"unicode" ],
+	"name" : "KRNBitmapData",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "KRNGlyphData",
 	"type" : "normal" }

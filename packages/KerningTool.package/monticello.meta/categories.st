@@ -1,2 +1,2 @@
-SystemOrganization addCategory: #'KerningTool-Tests'!
 SystemOrganization addCategory: #KerningTool!
+SystemOrganization addCategory: #'KerningTool-Tests'!

@@ -4,7 +4,7 @@ createGlyphForUnicode: unicode ptSize: aNumber
 	val := unicode.
 	glyphs at: val ifAbsent: [ val := (Unicode charFromUnicode: val) asUppercase asUnicode ].
 	glyph := glyphs at: val ifAbsent: [ ^KRNTextElement new font: self; ptSize: aNumber; yourself ].
-	^(KRNBitmapGlyph newForForm: glyph first from: self unicode: val)
+	^(KRNBitmapData newForForm: glyph first from: self unicode: val)
 		transform: glyph second;
 		ptSize: aNumber;
 		yourself

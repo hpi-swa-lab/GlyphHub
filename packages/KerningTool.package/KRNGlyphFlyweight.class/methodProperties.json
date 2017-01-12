@@ -1,0 +1,15 @@
+{
+	"class" : {
+		"newFrom:from:" : "JH 1/9/2017 11:32" },
+	"instance" : {
+		"add:withRenderData:" : "JH 12/12/2016 14:47",
+		"advance" : "JH 12/15/2016 11:05",
+		"drawOn:" : "JH 12/12/2016 14:56",
+		"glyphDataObject" : "JH 12/12/2016 14:16",
+		"glyphDataObject:" : "JH 12/12/2016 14:16",
+		"initialize" : "JH 12/14/2016 16:13",
+		"isGlyph" : "JH 12/15/2016 10:45",
+		"name" : "JH 1/12/2017 10:36",
+		"ptSize:" : "JH 12/14/2016 16:25",
+		"renderDataAt:" : "JH 12/12/2016 15:01",
+		"updateExtent" : "JH 12/14/2016 16:45" } }

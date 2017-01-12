@@ -2,4 +2,4 @@ as yet unclassified
 tryLoadPList: aName
 	^(self path fileExists: aName)
 		ifTrue: [ (KRNPListConverter deserialize: (self path / aName) fullName) content ]
-		ifFalse: [ nil ]
+		ifFalse: [ OrderedDictionary new ]

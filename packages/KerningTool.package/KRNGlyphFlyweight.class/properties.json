@@ -6,9 +6,10 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"glyphFlyweights" ],
-	"name" : "KRNFont",
+		"glyphDataObject",
+		"renderData" ],
+	"name" : "KRNGlyphFlyweight",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "KRNTextElement",
 	"type" : "normal" }
