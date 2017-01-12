@@ -1,10 +1,9 @@
 as yet unclassified
 initialize
+	| commentsList |
 	super initialize.
 	
 	title := UiLabel new
-		text: (((self title, ' ') asText allBold addAttribute: (TextFontReference toFont: (StrikeFont familyName: 'Bitmap DejaVu Sans' pointSize: 20)))
-			append: (Text string: '(On version 0.0.1)' attribute: TextColor gray));
 		vResizing: #shrinkWrap;
 		hResizing: #spaceFill;
 		yourself.
@@ -15,21 +14,23 @@ initialize
 		hResizing: #shrinkWrap;
 		yourself.
 	
+	comments := self createContainer
+		vResizing: #shrinkWrap;
+		hResizing: #spaceFill;
+		addMorphBack: (UiTextEdit new
+			hResizing: #spaceFill;
+			vResizing: #rigid;
+			height: 48;
+			yourself);
+			yourself.
+	
 	commentsList := UiScrollArea new
 		hResizing: #spaceFill;
 		vResizing: #spaceFill;
 		horizontalScrollBarPolicy: #alwaysOff;
 		verticalScrollBarPolicy: #asNeeded;
 		widgetResizable: true;  
-		widget: (self createContainer
-			vResizing: #shrinkWrap;
-			hResizing: #spaceFill;
-			addMorphBack: (UiTextEdit new
-				hResizing: #spaceFill;
-				vResizing: #rigid;
-				height: 48;
-				yourself);
-				yourself)
+		widget: comments;
 		yourself.    
 	
 	self

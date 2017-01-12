@@ -14,7 +14,6 @@ createComment: aComment
 		yourself.
 	
 	meta := UiLabel new
-		text: '@', aComment author, ' - ', (self printDate: aComment dateTime);
 		vResizing: #shrinkWrap;
 		hResizing: #spaceFill;
 		color: Color gray;

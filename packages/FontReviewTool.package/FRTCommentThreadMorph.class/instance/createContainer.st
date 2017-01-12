@@ -3,6 +3,6 @@ createContainer
 	^UiContainer new
 		vResizing: #shrinkWrap;
 		hResizing: #spaceFill;
-		changeTableLayout;  
+		changeTableLayout;
 		listDirection: #topToBottom;
 		yourself

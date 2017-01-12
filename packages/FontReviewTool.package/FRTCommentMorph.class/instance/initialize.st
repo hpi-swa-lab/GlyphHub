@@ -1,7 +1,8 @@
 as yet unclassified
 initialize
-	| container textContainer outer |
-	outer := self createContainer.
+	| container textContainer |
+	super initialize.
+	
 	container := self createContainer listDirection: #leftToRight; yourself.
 	textContainer := self createContainer.
 	
@@ -22,15 +23,6 @@ initialize
 	container
 		addMorphBack: image;  
 		addMorphBack: textContainer.
-		
-	outer
-		addMorphBack: container;
-		addMorphBack: (Morph new
-			vResizing: #rigid;
-			height: 1;
-			color: (Color gray: 0.7);
-			hResizing: #spaceFill;
-			yourself).
 	
 	text := TextMorph new
 		wrapFlag: true;
@@ -43,4 +35,15 @@ initialize
 		addMorphBack: text;
 		addMorphBack: meta.
 	
-	^outer
+	self
+		vResizing: #shrinkWrap;
+		hResizing: #spaceFill;
+		changeTableLayout;
+		listDirection: #topToBottom;
+		addMorphBack: container;
+		addMorphBack: (Morph new
+			vResizing: #rigid;
+			height: 1;
+			color: (Color gray: 0.7);
+			hResizing: #spaceFill;
+			yourself).

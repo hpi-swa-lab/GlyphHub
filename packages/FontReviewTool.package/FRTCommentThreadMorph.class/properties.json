@@ -9,7 +9,8 @@
 		"commentThread",
 		"isOpen",
 		"commentsList",
-		"title" ],
+		"title",
+		"comments" ],
 	"name" : "FRTCommentThreadMorph",
 	"pools" : [
 		 ],

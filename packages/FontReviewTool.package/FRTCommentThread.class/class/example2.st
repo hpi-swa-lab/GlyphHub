@@ -1,8 +1,8 @@
 as yet unclassified
-example1
+example2
 	^FRTCommentThread new
 		isOpen: true;
-		title: 'This is wrong!';
+		title: 'More contrast';
 		ancestor: nil;
 		marker: FRTMarker example1;
 		addComment: FRTComment example1;

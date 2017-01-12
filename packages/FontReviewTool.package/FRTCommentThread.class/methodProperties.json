@@ -1,6 +1,8 @@
 {
 	"class" : {
-		"example1" : "lcj 1/12/2017 11:00" },
+		"example1" : "TB 1/12/2017 11:29",
+		"example2" : "TB 1/12/2017 11:53",
+		"example3" : "TB 1/12/2017 11:54" },
 	"instance" : {
 		"addComment:" : "lcj 1/9/2017 17:01",
 		"ancestor" : "lcj 1/12/2017 10:58",
