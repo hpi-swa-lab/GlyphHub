@@ -1,12 +1,15 @@
 {
 	"class" : {
-		"example1" : "lcj 1/12/2017 11:11" },
+		"example1" : "TB 1/16/2017 13:37",
+		"example2" : "TB 1/16/2017 13:37" },
 	"instance" : {
 		"addFeature:" : "lcj 1/12/2017 11:10",
 		"features" : "lcj 1/9/2017 12:11",
-		"fontProject" : "lcj 1/9/2017 16:32",
-		"fontProject:" : "lcj 1/9/2017 16:31",
+		"fontProject" : "TB 1/16/2017 14:55",
+		"fontProject:" : "TB 1/16/2017 11:50",
+		"increaseVersion" : "TB 1/16/2017 13:38",
 		"initialize" : "lcj 1/12/2017 11:11",
+		"renderGlyphs" : "TB 1/16/2017 14:39",
 		"unicodePoints" : "lcj 1/9/2017 12:09",
 		"unicodePoints:" : "lcj 1/12/2017 11:05",
 		"version" : "lcj 1/9/2017 16:32",

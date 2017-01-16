@@ -2,6 +2,7 @@
 	"class" : {
 		"fonts" : "TB 11/30/2016 16:22",
 		"register:font:" : "TB 11/30/2016 16:23",
+		"reloadOpenBaskerville" : "TB 1/16/2017 11:43",
 		"unregisterFont:" : "TB 11/30/2016 16:37" },
 	"instance" : {
 		"addFont" : "TB 12/1/2016 10:51",

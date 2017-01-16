@@ -1,3 +1,3 @@
 as yet unclassified
-fontProject: aNumber
-	fontProject := aNumber 
+fontProject: aFontProject
+	fontProject := aFontProject 
