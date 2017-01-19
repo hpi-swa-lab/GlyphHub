@@ -1,7 +1,7 @@
 segments
 syncMorphs
 	| p scale |
-	scale := 0.03.
+	scale := 1/64.
 	
 	self
 		removeAllMorphs;
@@ -12,4 +12,5 @@ syncMorphs
 			p := points collect: [ :point | point x @ point y negated * scale ].
 			self addSegment: (KRNBezierMorph newFrom: p first via: p second and: p third to: p fourth) ]
 		conic: [ :points |  ];
-		detectHandleTypes   
+		detectHandleTypes;
+		updateExtent 
