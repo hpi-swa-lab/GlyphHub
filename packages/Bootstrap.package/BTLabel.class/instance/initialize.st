@@ -2,6 +2,7 @@ as yet unclassified
 initialize
 	super initialize.
 	text := ''.
-	layout := 0.
+	layout := self primLayoutCreate.
+	self primLayout: layout font: 'Roboto 12'.
 
 	self color: Color white

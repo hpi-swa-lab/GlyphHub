@@ -4,10 +4,13 @@
 	"instance" : {
 		"color" : "TB 2/3/2017 09:01",
 		"color:" : "TB 2/3/2017 09:01",
-		"drawOn:" : "TB 2/3/2017 09:56",
-		"extent:" : "TB 2/3/2017 09:59",
-		"initialize" : "TB 2/3/2017 09:58",
+		"drawOn:" : "TB 2/3/2017 10:51",
+		"extent:" : "TB 2/3/2017 10:52",
+		"initialize" : "TB 2/3/2017 10:50",
+		"primLayout:font:" : "TB 2/3/2017 10:49",
 		"primLayout:heightForWidth:" : "TB 2/3/2017 00:59",
-		"primRenderLayout:bitmap:string:fontSize:dpi:fontName:origin:color:" : "TB 2/3/2017 09:57",
+		"primLayout:text:" : "TB 2/3/2017 10:50",
+		"primLayoutCreate" : "TB 2/3/2017 10:50",
+		"primLayoutRender:form:origin:color:" : "TB 2/3/2017 10:49",
 		"text" : "TB 2/2/2017 15:58",
-		"text:" : "TB 2/3/2017 09:02" } }
+		"text:" : "TB 2/3/2017 10:51" } }

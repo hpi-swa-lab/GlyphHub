@@ -3,5 +3,8 @@
 		"hasHeaderFile" : "TB 2/2/2017 23:25",
 		"requiresPlatformFiles" : "TB 2/2/2017 23:25" },
 	"instance" : {
+		"primitiveCreateLayout" : "TB 2/3/2017 10:29",
 		"primitiveLayoutHeightForWidth" : "TB 2/3/2017 09:34",
-		"primitiveRenderBitmapColored" : "TB 2/3/2017 09:55" } }
+		"primitiveLayoutRender" : "TB 2/3/2017 10:47",
+		"primitiveLayoutSetFont" : "TB 2/3/2017 10:47",
+		"primitiveLayoutSetText" : "TB 2/3/2017 10:42" } }
