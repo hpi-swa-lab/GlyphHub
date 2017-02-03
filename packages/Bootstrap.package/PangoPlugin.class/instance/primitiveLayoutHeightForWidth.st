@@ -4,7 +4,7 @@ primitiveLayoutHeightForWidth
 	<var: #layout type: 'PangoLayout *'>
 	<export: true>
 
-	| layout width height |
+	| layout width height ptOop xOop yOop |
 	interpreterProxy methodArgumentCount = 2 ifFalse: [ ^interpreterProxy primitiveFail ].
 
 	layout := self cCoerce: (interpreterProxy stackIntegerValue: 1) to: 'PangoLayout*'.
@@ -14,7 +14,14 @@ primitiveLayoutHeightForWidth
 	self cCode: 'pango_layout_set_width(layout, width * PANGO_SCALE)'.
 	self cCode: 'pango_layout_get_pixel_size(layout, &width, &height)'.
 	
-	interpreterProxy failed ifTrue: [ ^interpreterProxy primitiveFail ].
-	interpreterProxy
-		pop: (interpreterProxy methodArgumentCount + 1)
-		thenPush: (interpreterProxy integerObjectOf: height)
+	" create a point "
+	ptOop := interpreterProxy instantiateClass: interpreterProxy classPoint indexableSize: 0.
+	interpreterProxy pushRemappableOop: ptOop.
+	xOop := interpreterProxy positive32BitIntegerFor: width.
+	interpreterProxy pushRemappableOop: xOop.
+	yOop := interpreterProxy positive32BitIntegerFor: height.
+	xOop := interpreterProxy popRemappableOop.
+	ptOop := interpreterProxy popRemappableOop.
+	interpreterProxy storePointer: 0 ofObject: ptOop withValue: xOop.
+	interpreterProxy storePointer: 1 ofObject: ptOop withValue: yOop.
+	^interpreterProxy pop: interpreterProxy methodArgumentCount + 1 thenPush: ptOop

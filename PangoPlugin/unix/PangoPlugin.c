@@ -1,13 +1,6 @@
 #include "sq.h"
 #include "PangoPlugin.h"
 
-static char *str_nullterm(char *str, int len) {
-	char *ntstr = malloc(sizeof(char) * (len + 1));
-	strncpy(ntstr, str, len);
-	ntstr[len] = '\0';
-	return ntstr;
-}
-
 PangoContext *context = NULL;
 
 PangoContext *ensureContext() {
@@ -37,6 +30,8 @@ PangoLayout *sqCreateLayout() {
 	return pango_layout_new(ensureContext());
 }
 
+cairo_surface_t *surface;
+
 void sqLayoutRenderWidthHeightDepthPointerXYColor(
 		PangoLayout *layout,
 		sqInt bmWidth,
@@ -47,17 +42,8 @@ void sqLayoutRenderWidthHeightDepthPointerXYColor(
 		double y,
 		sqInt color) {
 
-#if 0
-	BENCH_INIT();
-	BENCH_START();
-	DEBUG("Start to render string on bitmap (%ix%i@%i), valid: %i",
-			bmWidth,
-			bmHeight,
-			bmDepth,
-			(int) !!lib);
-#endif
-
-	cairo_surface_t *surface = cairo_image_surface_create_for_data(buffer,
+	// TODO investigate initializing this only once
+	surface = cairo_image_surface_create_for_data(buffer,
 			CAIRO_FORMAT_ARGB32,
 			bmWidth,
 			bmHeight,
@@ -75,7 +61,5 @@ void sqLayoutRenderWidthHeightDepthPointerXYColor(
 
 	cairo_surface_destroy(surface);
 	cairo_destroy(cr);
-
-	// BENCH_END("Render of bitmap");
 }
 

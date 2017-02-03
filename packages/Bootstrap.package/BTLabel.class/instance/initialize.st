@@ -3,6 +3,6 @@ initialize
 	super initialize.
 	text := ''.
 	layout := self primLayoutCreate.
-	self primLayout: layout font: 'Roboto 12'.
+	self primLayout: layout font: 'Open Sans 16'.
 
 	self color: Color white
