@@ -1,0 +1,14 @@
+{
+	"category" : "Bootstrap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"layout" ],
+	"name" : "AAAAAA",
+	"pools" : [
+		 ],
+	"super" : "Morph",
+	"type" : "normal" }

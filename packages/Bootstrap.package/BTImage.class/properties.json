@@ -1,0 +1,18 @@
+{
+	"category" : "Bootstrap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"scalingMode",
+		"form",
+		"cachedForm",
+		"fillMode",
+		"borderColor" ],
+	"name" : "BTImage",
+	"pools" : [
+		 ],
+	"super" : "BTWidget",
+	"type" : "normal" }

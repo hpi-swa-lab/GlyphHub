@@ -1,0 +1,15 @@
+{
+	"category" : "Bootstrap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"label",
+		"colorType" ],
+	"name" : "BTAlert",
+	"pools" : [
+		 ],
+	"super" : "BTWidget",
+	"type" : "normal" }

@@ -1,0 +1,17 @@
+SOURCES=Fonts.c tests.c
+PKGLIBS=freetype2 harfbuzz fontconfig
+
+CFLAGS=-Wall \
+	   -g \
+		$(shell env PKG_CONFIG_PATH=/usr/lib/i386-linux-gnu/pkgconfig pkg-config --cflags $(PKGLIBS))
+LDLIBS=$(shell env PKG_CONFIG_PATH=/usr/lib/i386-linux-gnu/pkgconfig pkg-config --libs $(PKGLIBS))
+
+OBJS=$(SOURCES:.c=.o)
+EXEC=tests
+
+$(EXEC): $(OBJS)
+
+clean:
+	rm -f $(OBJS) $(EXEC)
+
+.PHONY: clean

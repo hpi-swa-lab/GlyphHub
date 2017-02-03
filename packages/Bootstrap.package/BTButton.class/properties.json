@@ -1,0 +1,15 @@
+{
+	"category" : "Bootstrap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"colorType",
+		"label" ],
+	"name" : "BTButton",
+	"pools" : [
+		 ],
+	"super" : "BTWidget",
+	"type" : "normal" }
