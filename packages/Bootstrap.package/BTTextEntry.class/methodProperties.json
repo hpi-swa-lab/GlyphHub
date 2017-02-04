@@ -1,0 +1,14 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"drawOn:" : "TB 2/4/2017 02:17",
+		"handlesKeyboard:" : "TB 2/4/2017 02:17",
+		"handlesMouseDown:" : "TB 2/4/2017 02:18",
+		"hasFocus" : "TB 2/4/2017 02:12",
+		"initialize" : "TB 2/4/2017 02:15",
+		"keyStroke:" : "TB 2/4/2017 02:23",
+		"keyboardFocusChange:" : "TB 2/4/2017 02:15",
+		"mouseDown:" : "TB 2/4/2017 02:20",
+		"wantsKeyboardFocus" : "TB 2/4/2017 02:11",
+		"wouldAcceptKeyboardFocusUponTab" : "TB 2/4/2017 02:11" } }

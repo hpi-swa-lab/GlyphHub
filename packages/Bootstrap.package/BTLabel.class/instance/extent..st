@@ -2,4 +2,4 @@ as yet unclassified
 extent: aPoint
 	| desired |
 	desired := self primLayout: layout heightForWidth: aPoint x.
-	super extent: desired
+	super extent: desired + (self layoutInset * 2)

@@ -3,7 +3,8 @@ initialize
 	super initialize.
 	
 	label := BTLabel new text: 'Primary'.
-	
+	hovered := true.	
+
 	self
 		changeTableLayout;
 		vResizing: #shrinkWrap;

@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"layout" ],
+		 ],
 	"name" : "AAAAAA",
 	"pools" : [
 		 ],
-	"super" : "Morph",
+	"super" : "BTPage",
 	"type" : "normal" }

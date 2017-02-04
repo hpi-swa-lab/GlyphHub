@@ -1,6 +1,6 @@
 as yet unclassified
 drawOn: aCanvas
-	| bordered rounded |
+	| bordered rounded colors |
 	(self owner notNil and: [self owner class == BTButtonGroup])
 		ifTrue: [
 			rounded := {false. false. false. false}.
@@ -14,9 +14,15 @@ drawOn: aCanvas
 			rounded := {true. true. true. true}.
 			bordered := {true. true. true. true} ].
 	
+	colors := (BTWidget colorsForType: colorType).
+	hovered ifTrue: [
+		colors
+			at: #background put: ((colors at: #background) adjustBrightness: -0.1);
+			at: #border put: ((colors at: #border) adjustBrightness: -0.12) ].
+	
 	BTWidget
 		drawBackgroundOn: aCanvas
 		bounds: self bounds
-		colors: (BTWidget colorsForType: colorType)
+		colors: colors
 		rounded: rounded
 		bordered: bordered

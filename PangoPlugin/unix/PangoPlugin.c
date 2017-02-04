@@ -1,11 +1,14 @@
 #include "sq.h"
 #include "PangoPlugin.h"
+#include <fontconfig/fontconfig.h>
 
 PangoContext *context = NULL;
 
 PangoContext *ensureContext() {
 	if (context)
 		return context;
+
+	FcConfigAppFontAddFile(FcConfigGetCurrent(), (const FcChar8 *) "/home/tom/tmp/FontAwesome.otf");
 
 	PangoFontMap *fontmap;
 
@@ -50,13 +53,14 @@ void sqLayoutRenderWidthHeightDepthPointerXYColor(
 			bmWidth * bmDepth / 8);
 
 	double alpha = (color & 0xFF000000 >> 24) / 255.0;
-	double red = (color & 0x00FF0000 >> 16) / 255.0;
-	double green = (color & 0x0000FF00 >> 8) / 255.0;
-	double blue = (color & 0x000000FF) / 255.0;
+	double red   = (color & 0x00FF0000 >> 16) / 255.0;
+	double green = (color & 0x0000FF00 >>  8) / 255.0;
+	double blue  = (color & 0x000000FF >>  0) / 255.0;
+	// printf("%f %f %f %f\n", red, green, blue, alpha);
 
 	cairo_t *cr = cairo_create(surface);
 	cairo_move_to(cr, x, y);
-	cairo_set_source_rgba(cr, red, green, blue, alpha);
+	cairo_set_source_rgb(cr, red, green, blue);
 	pango_cairo_show_layout(cr, layout);
 
 	cairo_surface_destroy(surface);

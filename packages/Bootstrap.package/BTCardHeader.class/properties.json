@@ -1,0 +1,14 @@
+{
+	"category" : "Bootstrap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "BTCardHeader",
+	"pools" : [
+		 ],
+	"super" : "BTWidget",
+	"type" : "normal" }
