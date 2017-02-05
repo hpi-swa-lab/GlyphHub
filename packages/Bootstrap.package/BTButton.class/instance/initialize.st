@@ -2,14 +2,9 @@ as yet unclassified
 initialize
 	super initialize.
 	
-	label := BTLabel new text: 'Primary'.
-	hovered := true.	
-
+	label := BTLabel new text: 'Click me'.
+	
 	self
-		changeTableLayout;
-		vResizing: #shrinkWrap;
-		hResizing: #shrinkWrap;
-		layoutInset: 12 @ 6;
-		listCentering: #center;
-		addMorph: label;
+		add: label;
+		padding: 16 @ 8;
 		colorType: #primary

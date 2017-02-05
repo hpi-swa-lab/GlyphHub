@@ -1,3 +1,6 @@
 [submodule "testFiles/open-baskerville"]
 	path = testFiles/open-baskerville
 	url=https://github.com/klepas/open-baskerville.git
+[submodule "assets/Font-Awesome"]
+	path = assets/Font-Awesome
+	url = https://github.com/FortAwesome/Font-Awesome.git

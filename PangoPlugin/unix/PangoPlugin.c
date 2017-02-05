@@ -3,12 +3,34 @@
 #include <fontconfig/fontconfig.h>
 
 PangoContext *context = NULL;
+GSList *layouts = NULL;
+
+void _sqRegisterCustomFontLen(char *font) {
+	FcConfigAppFontAddFile(FcConfigGetCurrent(), (const FcChar8 *) font);
+}
+
+void _sqRegisterCustomFontDirectory(char *directory) {
+	FcConfigAppFontAddFile(FcConfigGetCurrent(), (const FcChar8 *) directory);
+}
+
+void sqRegisterCustomFontLen(char *font, int len) {
+	char *str = g_strndup(font, len);
+	_sqRegisterCustomFontLen(str);
+	g_free(str);
+}
+
+void sqRegisterCustomFontDirectory(char *directory, int len) {
+	char *str = g_strndup(directory, len);
+	_sqRegisterCustomFontDirectory(str);
+	g_free(str);
+}
 
 PangoContext *ensureContext() {
 	if (context)
 		return context;
 
-	FcConfigAppFontAddFile(FcConfigGetCurrent(), (const FcChar8 *) "/home/tom/tmp/FontAwesome.otf");
+	// IDEA: adding FileDirectory default upon init
+	// _sqRegisterCustomFontLen("/home/tom/tmp/FontAwesome.otf");
 
 	PangoFontMap *fontmap;
 
@@ -30,10 +52,19 @@ PangoContext *ensureContext() {
 }
 
 PangoLayout *sqCreateLayout() {
-	return pango_layout_new(ensureContext());
+	PangoLayout *layout = pango_layout_new(ensureContext());
+	layouts = g_slist_prepend(layouts, layout);
+	return layout;
 }
 
-cairo_surface_t *surface;
+void sqPangoShutdown() {
+	while (layouts) {
+		g_object_unref(layouts->data);
+		layouts = layouts->next;
+	}
+	g_slist_free(layouts);
+	g_object_unref(context);
+}
 
 void sqLayoutRenderWidthHeightDepthPointerXYColor(
 		PangoLayout *layout,
@@ -46,13 +77,13 @@ void sqLayoutRenderWidthHeightDepthPointerXYColor(
 		sqInt color) {
 
 	// TODO investigate initializing this only once
-	surface = cairo_image_surface_create_for_data(buffer,
+	cairo_surface_t *surface = cairo_image_surface_create_for_data(buffer,
 			CAIRO_FORMAT_ARGB32,
 			bmWidth,
 			bmHeight,
 			bmWidth * bmDepth / 8);
 
-	double alpha = (color & 0xFF000000 >> 24) / 255.0;
+	// double alpha = (color & 0xFF000000 >> 24) / 255.0;
 	double red   = (color & 0x00FF0000 >> 16) / 255.0;
 	double green = (color & 0x0000FF00 >>  8) / 255.0;
 	double blue  = (color & 0x000000FF >>  0) / 255.0;

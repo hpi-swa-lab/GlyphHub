@@ -11,3 +11,8 @@ void sqLayoutRenderWidthHeightDepthPointerXYColor(
 		sqInt color);
 
 PangoLayout *sqCreateLayout();
+
+void sqRegisterCustomFontLen(char *font, int len);
+void sqRegisterCustomFontDirectory(char *directory, int len);
+
+void sqPangoShutdown();

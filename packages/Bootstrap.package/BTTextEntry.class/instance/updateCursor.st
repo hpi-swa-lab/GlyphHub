@@ -1,6 +1,4 @@
 as yet unclassified
 updateCursor
-	| data |
-	data := self primLayout: layout cursorPos: cursor.
-	cursorRect := data first extent: data second.
+	cursorRect := (self layout cursorRectAt: cursor) first.
 	self changed

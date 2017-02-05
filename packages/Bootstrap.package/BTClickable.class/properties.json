@@ -1,0 +1,15 @@
+{
+	"category" : "Bootstrap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"hovered",
+		"do" ],
+	"name" : "BTClickable",
+	"pools" : [
+		 ],
+	"super" : "BTWidget",
+	"type" : "normal" }

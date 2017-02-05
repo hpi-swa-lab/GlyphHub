@@ -1,0 +1,5 @@
+as yet unclassified
+extent: aPoint
+	| max |
+	max := aPoint x max: aPoint y.
+	super extent: max asPoint

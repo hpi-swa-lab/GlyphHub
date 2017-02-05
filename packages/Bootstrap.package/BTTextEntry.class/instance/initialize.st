@@ -8,4 +8,6 @@ initialize
 	
 	super initialize.
 	
-	self layoutInset: 12 @ 8
+	self
+		padding: 12 @ 8;
+		fillMode: #fill

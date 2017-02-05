@@ -7,10 +7,9 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"colorType",
-		"label",
-		"hovered" ],
+		"label" ],
 	"name" : "BTButton",
 	"pools" : [
 		 ],
-	"super" : "BTWidget",
+	"super" : "BTClickable",
 	"type" : "normal" }

@@ -10,5 +10,5 @@
 	"name" : "BTIcon",
 	"pools" : [
 		 ],
-	"super" : "BTWidget",
+	"super" : "BTLabel",
 	"type" : "normal" }

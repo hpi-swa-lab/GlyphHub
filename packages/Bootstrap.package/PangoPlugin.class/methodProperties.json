@@ -4,12 +4,19 @@
 		"requiresPlatformFiles" : "TB 2/2/2017 23:25" },
 	"instance" : {
 		"createPointX:y:" : "TB 2/4/2017 11:40",
+		"ensureLayout:" : "TB 2/5/2017 17:37",
 		"extractPoint:index:" : "TB 2/5/2017 10:17",
+		"initialiseModule" : "TB 2/5/2017 23:49",
 		"primitiveCreateLayout" : "TB 2/3/2017 10:29",
 		"primitiveLayoutGetCursorPos" : "TB 2/4/2017 12:28",
-		"primitiveLayoutHeightForWidth" : "TB 2/4/2017 14:53",
+		"primitiveLayoutGetPixelSize" : "TB 2/5/2017 22:00",
 		"primitiveLayoutMoveCursorVisually" : "TB 2/4/2017 11:36",
 		"primitiveLayoutPositionToIndex" : "TB 2/5/2017 10:25",
 		"primitiveLayoutRender" : "TB 2/3/2017 10:47",
-		"primitiveLayoutSetFont" : "TB 2/3/2017 10:47",
-		"primitiveLayoutSetText" : "TB 2/4/2017 00:17" } }
+		"primitiveLayoutSetFont" : "TB 2/5/2017 16:45",
+		"primitiveLayoutSetHeight" : "TB 2/5/2017 19:52",
+		"primitiveLayoutSetText" : "TB 2/4/2017 00:17",
+		"primitiveLayoutSetWidth" : "TB 2/5/2017 19:53",
+		"primitiveRegisterCustomFont" : "TB 2/5/2017 16:41",
+		"primitiveRegisterCustomFontDirectory" : "TB 2/5/2017 23:59",
+		"shutdownModule" : "TB 2/5/2017 16:39" } }

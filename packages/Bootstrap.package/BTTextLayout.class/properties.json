@@ -6,9 +6,13 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "BTLayout",
+		"layout",
+		"font",
+		"width",
+		"text",
+		"height" ],
+	"name" : "BTTextLayout",
 	"pools" : [
 		 ],
-	"super" : "LayoutPolicy",
+	"super" : "Object",
 	"type" : "normal" }

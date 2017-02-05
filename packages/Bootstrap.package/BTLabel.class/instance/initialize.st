@@ -1,10 +1,9 @@
 as yet unclassified
 initialize
-	layout := self primLayoutCreate.
+	layout := BTTextLayout new font: 'Roboto 16'; yourself.
 	text := ''.
 	fillMode := #fixed.
 
 	super initialize.
-	self primLayout: layout font: 'Roboto 20'.
-
+	
 	self color: (Color fromString: '#111111').

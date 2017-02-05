@@ -1,0 +1,14 @@
+{
+	"category" : "Bootstrap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"icon" ],
+	"name" : "BTFloatingActionButton",
+	"pools" : [
+		 ],
+	"super" : "BTClickable",
+	"type" : "normal" }
