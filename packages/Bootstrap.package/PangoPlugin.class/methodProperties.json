@@ -3,8 +3,13 @@
 		"hasHeaderFile" : "TB 2/2/2017 23:25",
 		"requiresPlatformFiles" : "TB 2/2/2017 23:25" },
 	"instance" : {
+		"createPointX:y:" : "TB 2/4/2017 11:40",
+		"extractPoint:index:" : "TB 2/5/2017 10:17",
 		"primitiveCreateLayout" : "TB 2/3/2017 10:29",
-		"primitiveLayoutHeightForWidth" : "TB 2/3/2017 11:09",
+		"primitiveLayoutGetCursorPos" : "TB 2/4/2017 12:28",
+		"primitiveLayoutHeightForWidth" : "TB 2/4/2017 14:53",
+		"primitiveLayoutMoveCursorVisually" : "TB 2/4/2017 11:36",
+		"primitiveLayoutPositionToIndex" : "TB 2/5/2017 10:25",
 		"primitiveLayoutRender" : "TB 2/3/2017 10:47",
 		"primitiveLayoutSetFont" : "TB 2/3/2017 10:47",
 		"primitiveLayoutSetText" : "TB 2/4/2017 00:17" } }

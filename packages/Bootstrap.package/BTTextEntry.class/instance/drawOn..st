@@ -9,5 +9,9 @@ drawOn: aCanvas
 				ifTrue: [BTWidget colorPrimary adjustBrightness: 0.25]
 				ifFalse: [Color black alpha: 0.15])} as: Dictionary).
 	
-	super drawOn: aCanvas
-
+	super drawOn: aCanvas.
+	
+	focused ifTrue: [
+		aCanvas
+			fillRectangle: (self layoutBounds origin + cursorRect origin extent: 2 @ cursorRect extent y )
+			fillStyle: Color red ]

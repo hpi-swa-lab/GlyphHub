@@ -1,5 +1,12 @@
 as yet unclassified
 extent: aPoint
-	| desired |
-	desired := self primLayout: layout heightForWidth: aPoint x.
-	super extent: desired + (self layoutInset * 2)
+	| desired width layoutInset |
+	layoutInset := self layoutInset class = Rectangle
+		ifTrue: [ (self layoutInset left + self layoutInset right) @ (self layoutInset top + self layoutInset bottom) ]
+		ifFalse: [ self layoutInset asPoint * 2 ].
+	
+	width := fillMode = #fixed ifTrue: [-1] ifFalse: [aPoint x - layoutInset x].
+	desired := self primLayout: layout heightForWidth: width.
+	width := fillMode = #fill ifTrue: [aPoint x] ifFalse: [desired x + layoutInset x].
+	
+	super extent: width @ (desired y + layoutInset y)
