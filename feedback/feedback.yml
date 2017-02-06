@@ -1,0 +1,247 @@
+feedback:
+    - author: John Hudson
+      tags: Technique and Theory
+      replies: 8
+      content: "I'm looking at a number of extended Cyrillic diacritic letters, i.e. characters used for non-Slavic languages, and am wondering about the appropriate/preferred style of the breve mark in these glyphs. The characters in question are
+          
+          04C1 Ӂ CYRILLIC CAPITAL LETTER ZHE WITH BREVE
+          04C2 ӂ CYRILLIC SMALL LETTER ZHE WITH BREVE
+          04D0 Ӑ CYRILLIC CAPITAL LETTER A WITH BREVE
+          04D1 ӑ CYRILLIC SMALL LETTER A WITH BREVE
+          04D6 Ӗ CYRILLIC CAPITAL LETTER IE WITH BREVE
+          04D7 ӗ CYRILLIC SMALL LETTER IE WITH BREVE
+          
+          The form of breve sign used for the Slavic characters
+          
+          0419 Й CYRILLIC CAPITAL LETTER SHORT I
+          0439 й CYRILLIC SMALL LETTER SHORT I
+          040E Ў CYRILLIC CAPITAL LETTER SHORT U
+          045E ў CYRILLIC SMALL LETTER SHORT U
+          
+          is conventionally larger than the Latin breve, and stylistically quite different in serif types. I am wondering whether it is appropriate to carry this convention across the extended Cyrillic diacritic characters, i.e. to have a single Cyrillic-specific breve form, or if any of the language communities using these characters have a preference for a breve that follows the Latin model? Anyone have any information?
+          
+          Fig. Typical stylistic difference between Latin (left) and Cyrillic (right) breve forms in serif type:"
+      picture: 01.png
+      source: http://typedrawers.com/discussion/1958/extended-cyrillic-breve-form
+    - author: James Puckett
+      tags: Technique and Theory
+      replies: 11
+      content: "I’m looking for an accurate list of letters in the Vietnamese alphabet. The list built into Glyphs seems to be incomplete, as do Adobe’s fonts. For example, trying to set Genesis with fonts that support Vietnamese often results in ḿ ṇ ṛ missing. Online lists of the Vietnamese alphabet are often missing these and other letters, like ø. The Scriptsource list of characters for Vietnamese fonts contains many characters not in Vietnamese because it includes complete codepages containing characters used in Vietnam. Is there a reliable list somewhere? Are ḿ ṇ ṛ and ø just errors in old text?"
+      source: http://typedrawers.com/discussion/1956/an-accurate-vietnamese-alphabet
+    - author: James Puckett
+      tags: Technique and Theory
+      replies: 5
+      content: "Are the following unicode points used for anything? It seems like they would have been combined with other letters to create ŧ, ł, ø, etc. in a font that doesn’t support these glyphs. Would adding them to a font today serve a purpose?
+          u+0035 Short Stroke
+          u+0036 Long Stroke
+          u+0037 Short Slash
+          u+0038 Long Slash
+          
+          And the same for U+0312, Combining turned comma above. Is that just for creating ģ?"
+      source: http://typedrawers.com/discussion/1953/u-0035-u-0038
+    - author: Andreas Stötzner
+      tags: Technique and Theory
+      content: "I wonder what the actual names of these two graphical shapes would be. I mean terms of the sort ‘cross’, ‘triangle’ etcª.
+          Suggestions in whatever language appreciated."
+      picture: 02.png
+      replies: 21
+      source: http://typedrawers.com/discussion/1702/names-for-graphic-shapes
+    - author: AbiRasheed
+      content: "Looking for a second opinion with kerning/tracking/etc on this one, [link](broken link...) to image.  Does each word look centered to the banner? I'm trying to match the space around the words to be uniform for both of them but it's proving to be difficult because BREWS is slightly wider than VIEWS and because of the kerning. How bad is the kerning too?  Thoughts? Thanks"
+      title: Spacing Issues
+      source: http://typedrawers.com/discussion/1470/spacing-issues
+      replies: 0
+      tags: Technique and Theory
+    - author: Chris Lozos
+      title: Sloping math symbols in italic faces, is it normal?
+      content: "When creating an italic face, I have always sloped the math symbols along with the figures since this makes the most sense to me. But, I recently looked at Neue Haas Unica Pro Bold Italic, a recent release, and I was surprised to find that the math symbols were upright, as if they were upright roman!  Is this odd?  New thinking? Appropriate?"
+      replies: 34
+      source: http://typedrawers.com/discussion/1246/sloping-math-symbols-in-italic-faces-is-it-normal
+    - author: Michiel Drost
+      title: "Typeface Name Check"
+      content: How do I check if the name I want to give to a new typeface is not used yet?
+      replies: 42
+      source: http://typedrawers.com/discussion/821/typeface-name-check
+    - author: Japser de Waard
+      title: Oldstyle currencies?
+      content: "I know that a lot of typedesigners include down-sized currency symbols to work with the oldstyle numerals, but it always looks a bit odd to me. I feel like it makes sense from a typedesigner's perspective, but it's maybe too unusual for people to actually use it. Do you include them? Do you have examples where it does work?
+
+      FS Brabo is one of my favourites, but this £ isn't really working for me. It just seems awkwardly small:"
+      picture: 03.png
+      replies: 20
+      source: http://typedrawers.com/discussion/1882/oldstyle-currencies
+    - author: "Katy Mawhood"
+      content: "An author has requested three CJK glyph variations, but I cannot find them in the IVD charts. Is there anywhere I can look to find these, before I create them as alternates? The glyph shape is critical to the text (see below). Thanks  :)
+
+          The archaic writing of the names of the trigrams are generally the same or in phonetically or graphical related versions of those found in hexagram texts. A few examples include, Qian 乾 is written <Glyph 1>;… Zhen 震 is written as <Glyph 2>. Two regional variants that also appear in the Wangjiatai Guicang include Li 離is written as Luo 羅, Kan 坎 is written as <Glyph 3> (read as Lao 勞).[1] So as not to confuse readers, the trigrams in this study are referred to by their traditional names.
+
+
+          Glyph 1, Qian 乾 ‎4E7E
+          [picture here]
+          Glyph 2, Zhen 震 ‎9707
+          [picture here]
+          Glyph 3, Kan 坎 ‎574E
+          [picture here]"
+      picture: 04.png
+      replies: 3
+      source: http://typedrawers.com/discussion/1743/cjk-ideograph-variation-or-wheres-wally-in-cjk
+    - author: Martin Silvertant
+      title: Where can I observe a list of languages for the locl feature?
+      content: I can't seem to find a list with languages for the locl feature. Is there such a list?
+      source: http://typedrawers.com/discussion/1726/where-can-i-observe-a-list-of-languages-for-the-locl-feature
+      replies: 2
+    - author: Stephen Benedict
+      replies: 26
+      title: Sailboat - a Grotesque
+      content: "I began designing this typeface (my first) last November, and would really like to get some critiques by people who are more experienced. My only type education is Designing Type by Karen Cheng, which I began reading last November, and otherwise I’m only familiar with typography from Bringhurst and general online reading. So please by all means tear it apart.
+
+          Concept:
+
+          For a while I’ve been trying out various typefaces for one that would match the landscape and community I am in. This area began to be developed towards the beginning of the last century, near a lake in the mountains where sailing, swimming, etc., are popular. I came across Bold Monday’s Trio Grotesk which seemed to match perfectly, but it was too eccentric and too wide (doesn’t fit with the many tall trees in this area as well as the significant human presence).
+
+      So I began designing this font with these traits in mind: civilized but used to the outdoors; reminiscent of monospace typewriter fonts to recall the roots and simplicity of the community (some of the printed materials in this area were typeset with typewriters).
+
+          Its intended use is print, ideally both display and body text, but at the moment it displays poorly at small sizes (see page 4 of PDF) so unless I can fix that it may only be suited to display usage.
+
+          It is obviously a work in progress, but I thought it would be better to get feedback now rather than later. Your thoughts?"
+      picture: 05.jpg
+      source: http://typedrawers.com/discussion/1944/sailboat-a-grotesque
+      title: Cyrillic script variations and the importance of localisation
+      comments:
+          - author: Christian Thalmann
+          - content: "I rather like its flavor and its backstory. First impressions:
+              Lowercase spacing is much too loose; hence the unexpected behavior at text sizes.
+              The rounds often seem too «pointy», i.e. diamond-shaped, in particular in /O and /c. 
+              Does the stroke width oscillate in a quadrupole pattern, i.e. become broader in the diagonals, in the round strokes?
+              Widths feel a bit inconsistent, with e.g. /M/R/a/m on the wide end and /G/H/L/T on the narrow end.
+              /a feels a bit droopy, foot of /t timid, head of /f short.
+              Serif on /7 feels out of character to me."
+  - author: Krista Radoeva
+    tags: Knowledge Share
+    source: http://www.fontsmith.com/blog/2016/10/12/cyrillic-script-variations-and-the-importance-of-localisation
+    picture: 06.png
+    content: "[...] Localised forms aren’t offered with every Pro font and are an underused feature for those that do. Besides the character count, there are also differences in the way some letters look. Countries with different history and development of writing and printing, have also developed different forms of the same alphabet. For example, in Bulgaria mass printing arrived much later than in Russia, so the shapes of the Bulgarian Cyrillic are more influenced by handwriting and calligraphy.
+        An example of the differences between Russian forms (in grey) and Bulgarian forms (in pink) in FS Sally Pro (a Roman serif typeface): [...]"
+  - author: Friedrich Althausen
+    tags: ""
+    source: https://groups.google.com/forum/#!topic/googlefonts-discuss/Go-5M1Dj5vQ
+    title: »Vollkorn« version 4 by Friedrich Althausen
+    content: "Hello. 
+I am Friedrich Althausen.
+I am the designer of »Vollkorn« (vollkorn-typeface.com) and planning to release version 4 still in 2016.
+I live and work near Berlin, Germany.
+
+I am looking for help on reviewing my Cyrillic designs because I have only small experience in this field.
+(How are font files usually shared here?)"
+    replies: 44
+    comments:
+      - picture: 07.png
+        content: "Happy New Year!
+
+          Here is a good read on BGR forms for reference
+          http://www.fontsmith.com/blog/2016/10/12/cyrillic-script-variations-and-the-importance-of-localisation
+
+          I have reviewed the italic. Some comments are also relevant for Roman. (Ertick-cy, and Д BGR)."
+        author: Alexei Vanyashin 
+      - picture: 08.png
+        author: Friedrich Althausen
+        content: "Happy new year!
+            I just uploaded corrected files after your comments, @alexeiva.
+            I noticed, that Vollkorn could need a \"be-cy.loclSRB\" in Roman style.
+            Which construction fits best?"
+      - picture: 09.png
+        content: "You are right that there are two conventions for this glyph. 1 is a simpler choice, only I would suggest rounding the junction of the pennant's base.
+
+For the 2 option the base should be rounder and closer to /о but not δ (delta). A good example of this version is Adobe Minion (image)."
+        author: Alexei Vanyashin 
+      - author: Alexei Vanyashin 
+        content: "In the locl feature add this code on line 48 after script cyrl; :
+
+language SRB;
+sub be-cy by be-cy.loclSRB;"
+      - author: Alexei Vanyashin 
+        picture: 10.png
+      - author: Alexei Vanyashin 
+        picture: 11.png
+      - author: Alexei Vanyashin 
+        picture: 12.png
+  - content: "Hi!
+
+Attached are the first characters of Alegreya Devanagari.
+We would appreciate any comments or reviews :)
+
+Also you can contribute with the project on Github:
+https://github.com/juandelperal/alegreya-devanagari
+
+
+Thanks!
+Sol and Juan"
+    author: juandelperal
+    title: Feedback on Alegreya Devanagari
+    replies: 34
+    source: https://groups.google.com/forum/#!searchin/googlefonts-discuss/sol$20matas%7Csort:relevance/googlefonts-discuss/JM3_eQTTmVY/lJ-QMmgKBiMJ
+    comments:
+      - content: "Hi!
+
+Wow, I think it looks fantastic at reading size - great proportions, spacing.
+
+But your drawings are much lumpier than your Latin. I think you should crisp them up. There are a few pointy areas on the Ka, and some other characters, and the \"ink fill\" in the corner of where the verticals and horizontal top line meet are a too heavy - they don't match your Latin.
+
+If you need more specific notes, let me know! 
+
+Looks great!
+
+-E"
+      author: Erin McLaughlin
+    - content: "Thank you very much Erin! =)
+
+For this first stage we would like to receive some feedback about 
+the basic concepts: structure, proportions, stroke and spacing.
+We would like to lay the groundwork to continue with the other glyphs.
+
+Lots of thanks!
+
+Sincerely,
+Juan and Sol."
+      author: SOL
+    - content: "I think all of those things (structure, proportions, stroke and spacing.) are just perfect!! Keep going! The drawing contrast/curve issues were the only problem I saw.
+
+(maybe others will have issues? I don't see any)
+
+Here are the characters you might want to make sure you have in your next round:
+
+पावकिमीनुफूभरसगदह  र्मों ड्ड (height extremes)   and if time, यथधआछड
+
+They will open up some new challenges.
+
+-Erin"
+    author: Erin McLaughlin
+  - content: "Hey you two,
+
+Some points:
+
+I think that the out-stroke on the bottom of your Ha should not flare out. That doesn’t make sense to me, from a  writing perspective. That kind of flare does make sense of the Ra. But on the Ha, I think it is too much!
+
+The middle of Ka and especially Pha are too dark. It looks like the characters have been written with one-too-many strokes. Why not try to have the bottom-left strokes of Ka and Pha continue in one fluid visible motion over to the top right-hand of those letters? It would make each character look like single, more coherent glyphs, rather than characters with distinctly separate left and right halves. Perhaps this means that you will have to tinker with Pa, Va, Ba and maybe Kha a little as well.
+
+The Latin and the Devanagari seem to be harmonising with each other very nicely! Good work.
+
+Best,
+Dan"
+    author: Dan Reynolds
+  - content: "Hi,
+I have a few suggestions
+- make the circular part of द smaller. It appears big as compared to other characters.
+- knots of म, भ can be bigger / vertically longer. they look small especially at smaller sizes.
+- you can try a version of र स which are more vertically balanced (rather than the tail sticking out too much on the right)
+- the ध that you have designed will be very similar to घ
+- the tail of ह can be shorter. ह can also be wider
+- counters of क can be smaller
+- the widths of the 2 vertical lines in म are very different. They can be visually consistent. Similarly the horizontal stroke is currently thinner than the shirorekha, it needs to be of the same width or thicker.
+- the vertical bar can be further away from the initial part of अ
+- in the ञ the lower stroke in the extending upwards can be shorter 
+- the upper portion of the  ी matra should be wider or less curved in. Ideally the matra should land on the vertical bar of the character for which it is used. Its Ok if the matra does not touch the shirorekha but it should visually appear to land on the vertical bar.
+
+Regards
+Noopur"
+    author: Noopur Datye
