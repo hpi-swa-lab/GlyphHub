@@ -1,3 +1,3 @@
 as yet unclassified
-newFor: anIconSymbol
+icon: anIconSymbol
 	^self new icon: anIconSymbol; yourself
