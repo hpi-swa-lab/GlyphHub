@@ -21,7 +21,7 @@ feedback:
           is conventionally larger than the Latin breve, and stylistically quite different in serif types. I am wondering whether it is appropriate to carry this convention across the extended Cyrillic diacritic characters, i.e. to have a single Cyrillic-specific breve form, or if any of the language communities using these characters have a preference for a breve that follows the Latin model? Anyone have any information?
           
           Fig. Typical stylistic difference between Latin (left) and Cyrillic (right) breve forms in serif type:"
-      picture: 01.png
+      picture: t_01.png
       source: http://typedrawers.com/discussion/1958/extended-cyrillic-breve-form
     - author: James Puckett
       tags: Technique and Theory
@@ -43,7 +43,7 @@ feedback:
       tags: Technique and Theory
       content: "I wonder what the actual names of these two graphical shapes would be. I mean terms of the sort ‘cross’, ‘triangle’ etcª.
           Suggestions in whatever language appreciated."
-      picture: 02.png
+      picture: t_02.png
       replies: 21
       source: http://typedrawers.com/discussion/1702/names-for-graphic-shapes
     - author: AbiRasheed
@@ -67,7 +67,7 @@ feedback:
       content: "I know that a lot of typedesigners include down-sized currency symbols to work with the oldstyle numerals, but it always looks a bit odd to me. I feel like it makes sense from a typedesigner's perspective, but it's maybe too unusual for people to actually use it. Do you include them? Do you have examples where it does work?
 
       FS Brabo is one of my favourites, but this £ isn't really working for me. It just seems awkwardly small:"
-      picture: 03.png
+      picture: t_03.png
       replies: 20
       source: http://typedrawers.com/discussion/1882/oldstyle-currencies
     - author: "Katy Mawhood"
@@ -82,7 +82,7 @@ feedback:
           [picture here]
           Glyph 3, Kan 坎 ‎574E
           [picture here]"
-      picture: 04.png
+      picture: t_04.png
       replies: 3
       source: http://typedrawers.com/discussion/1743/cjk-ideograph-variation-or-wheres-wally-in-cjk
     - author: Martin Silvertant
@@ -104,12 +104,12 @@ feedback:
           Its intended use is print, ideally both display and body text, but at the moment it displays poorly at small sizes (see page 4 of PDF) so unless I can fix that it may only be suited to display usage.
 
           It is obviously a work in progress, but I thought it would be better to get feedback now rather than later. Your thoughts?"
-      picture: 05.jpg
+      picture: t_05.jpg
       source: http://typedrawers.com/discussion/1944/sailboat-a-grotesque
       title: Cyrillic script variations and the importance of localisation
       comments:
           - author: Christian Thalmann
-          - content: "I rather like its flavor and its backstory. First impressions:
+            content: "I rather like its flavor and its backstory. First impressions:
               Lowercase spacing is much too loose; hence the unexpected behavior at text sizes.
               The rounds often seem too «pointy», i.e. diamond-shaped, in particular in /O and /c. 
               Does the stroke width oscillate in a quadrupole pattern, i.e. become broader in the diagonals, in the round strokes?
@@ -119,7 +119,7 @@ feedback:
   - author: Krista Radoeva
     tags: Knowledge Share
     source: http://www.fontsmith.com/blog/2016/10/12/cyrillic-script-variations-and-the-importance-of-localisation
-    picture: 06.png
+    picture: t_06.png
     content: "[...] Localised forms aren’t offered with every Pro font and are an underused feature for those that do. Besides the character count, there are also differences in the way some letters look. Countries with different history and development of writing and printing, have also developed different forms of the same alphabet. For example, in Bulgaria mass printing arrived much later than in Russia, so the shapes of the Bulgarian Cyrillic are more influenced by handwriting and calligraphy.
         An example of the differences between Russian forms (in grey) and Bulgarian forms (in pink) in FS Sally Pro (a Roman serif typeface): [...]"
   - author: Friedrich Althausen
@@ -135,7 +135,7 @@ I am looking for help on reviewing my Cyrillic designs because I have only small
 (How are font files usually shared here?)"
     replies: 44
     comments:
-      - picture: 07.png
+      - picture: t_07.png
         content: "Happy New Year!
 
           Here is a good read on BGR forms for reference
@@ -143,13 +143,13 @@ I am looking for help on reviewing my Cyrillic designs because I have only small
 
           I have reviewed the italic. Some comments are also relevant for Roman. (Ertick-cy, and Д BGR)."
         author: Alexei Vanyashin 
-      - picture: 08.png
+      - picture: t_08.png
         author: Friedrich Althausen
         content: "Happy new year!
             I just uploaded corrected files after your comments, @alexeiva.
             I noticed, that Vollkorn could need a \"be-cy.loclSRB\" in Roman style.
             Which construction fits best?"
-      - picture: 09.png
+      - picture: t_09.png
         content: "You are right that there are two conventions for this glyph. 1 is a simpler choice, only I would suggest rounding the junction of the pennant's base.
 
 For the 2 option the base should be rounder and closer to /о but not δ (delta). A good example of this version is Adobe Minion (image)."
@@ -160,11 +160,11 @@ For the 2 option the base should be rounder and closer to /о but not δ (delta)
 language SRB;
 sub be-cy by be-cy.loclSRB;"
       - author: Alexei Vanyashin 
-        picture: 10.png
+        picture: t_10.png
       - author: Alexei Vanyashin 
-        picture: 11.png
+        picture: t_11.png
       - author: Alexei Vanyashin 
-        picture: 12.png
+        picture: t_12.png
   - content: "Hi!
 
 Attached are the first characters of Alegreya Devanagari.
