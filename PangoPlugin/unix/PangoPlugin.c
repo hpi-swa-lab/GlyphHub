@@ -66,14 +66,13 @@ void sqPangoShutdown() {
 	g_object_unref(context);
 }
 
-void sqLayoutRenderWidthHeightDepthPointerXYColor(
+void sqLayoutRenderWidthHeightDepthPointerTransformColor(
 		PangoLayout *layout,
 		sqInt bmWidth,
 		sqInt bmHeight,
 		sqInt bmDepth,
 		unsigned char *buffer,
-		double x,
-		double y,
+		float *matrix,
 		sqInt color) {
 
 	// TODO investigate initializing this only once
@@ -83,14 +82,18 @@ void sqLayoutRenderWidthHeightDepthPointerXYColor(
 			bmHeight,
 			bmWidth * bmDepth / 8);
 
-	// double alpha = (color & 0xFF000000 >> 24) / 255.0;
+	double alpha = (color & 0xFF000000 >> 24) / 255.0;
 	double red   = (color & 0x00FF0000 >> 16) / 255.0;
 	double green = (color & 0x0000FF00 >>  8) / 255.0;
 	double blue  = (color & 0x000000FF >>  0) / 255.0;
 	// printf("%f %f %f %f\n", red, green, blue, alpha);
 
 	cairo_t *cr = cairo_create(surface);
-	cairo_move_to(cr, x, y);
+	// cairo_move_to(cr, matrix[2], matrix[5]);
+	cairo_matrix_t m;
+	cairo_matrix_init(&m, matrix[0], matrix[3], matrix[1], matrix[4], matrix[2], matrix[5]);
+
+	cairo_transform(cr, &m);
 	cairo_set_source_rgb(cr, red, green, blue);
 	pango_cairo_show_layout(cr, layout);
 

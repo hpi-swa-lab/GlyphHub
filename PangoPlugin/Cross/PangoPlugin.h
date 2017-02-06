@@ -1,13 +1,12 @@
 #include <pango/pangocairo.h>
 
-void sqLayoutRenderWidthHeightDepthPointerXYColor(
+void sqLayoutRenderWidthHeightDepthPointerTransformColor(
 		PangoLayout *layout,
 		sqInt bmWidth,
 		sqInt bmHeight,
 		sqInt bmDepth,
 		unsigned char *buffer,
-		double x,
-		double y,
+		float *matrix,
 		sqInt color);
 
 PangoLayout *sqCreateLayout();

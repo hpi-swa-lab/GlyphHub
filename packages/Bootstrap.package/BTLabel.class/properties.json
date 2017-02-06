@@ -9,7 +9,8 @@
 		"text",
 		"layout",
 		"textColor",
-		"fillMode" ],
+		"fillMode",
+		"angle" ],
 	"name" : "BTLabel",
 	"pools" : [
 		 ],
