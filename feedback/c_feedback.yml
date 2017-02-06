@@ -1,0 +1,159 @@
+feedback:
+  - author: Sol Matas
+    replies: 16
+    content: "Hello colleagues,
+
+        I am working on Bitter, expanding the project to 9 instances.
+
+        I spent the last week designing the Thin and the Black masters.
+        Attached you can find a .gif with images of the Latin set I’ve been working on.
+        I am making some changes as you can see in the /x/.
+
+      Tomorrow:
+        I will be focused on Numerals, all number related glyphs and symbols.
+
+        Sincerely,
+
+        Sol"
+    picture: c_01.gif
+    source: https://groups.google.com/forum/#!topic/googlefonts-discuss/Z_BHvgSV7IE
+    comments:
+        - author: Alexei Vanyashin
+          content: "Thank you Sol!
+
+            This is great! 
+
+            I wonder if your more unusual 'x' could find a place in the default glyph set in these more extreme weights, and be available as a stylistic alternate in the middle weights? :)"
+    
+  - author: Kalapi Gajjar-Bordawekar
+    replies: 9
+    content: "Hello all, 
+
+        This past week i've been working on expanding Pablo Impallari's Cabin to the Google Pro glyph-set.
+
+        While working on the expansion I came across an interesting problem. On all the fonts I have worked on up until Cabin, there was minimal to no additional work required with regards to the existing glyphs (and their outlines) especially in the core Latin character-set. Unfortunately in Cabin, there are many instances where additional work needs to be done to raise the over-all quality of the typeface. 
+
+        Some examples of original outlines (inferiors-Bold):
+
+        A before/after of reworked outlines:
+
+        I wanted to ask Pablo, Omer, and Dave of their opinions on performing such changes. They might take an extra 3-4 days but will result in a high-quality, large-family Pro typeface. 
+
+
+        Best, 
+
+        Kalapi" 
+    picure: c_02.gif
+    source: https://groups.google.com/forum/#!topic/googlefonts-discuss/ffrWS1g72Wo
+
+  - author: MrDo
+    replies: 1
+    content: "Hello, first time poster and Font newbie here.
+
+        I have an existing font I want to extend.  The font has a 'basic' western alphabet only.  (I have permission from the creator.)
+
+        I have FontLab, and have done a couple basic tutorials.  My questions are:
+
+        1.  Given a list of countries (and or languages), how do i determine exactly which alphabets are needed?  For example Greece, i understand has special special Greek characters.  Is this a whole new alphabet?  Just a few characters past western basic set?  Is there a resource somewhere for this?
+
+        2.  Given the source .vfb file in FontLab, how do i go about extending it properly?  (I know how to bring in letters from Illustrator thanks to this tut: https://www.youtube.com/watch?v=yI-7e4nRNus   But its for new fonts.   I dont have a 'template' for the new characters in my existing font.  Where do the new shapes GO?  How do i ensure they are in the proper order / ascii code or whatever?
+
+        3.  Finally, once i have it BUILT, how do i go about actually using it in Photoshop or Illustrator etc.?   Even characters like the '£ ' (which is in the current set), is unaccessable from my USA keyboard.  Any suggestion for working w/ these fonts once Im' done?
+
+
+        Sorry for the deluge of basic questions; hopefully the answers will benefit others also,  
+
+        Thanks in advance!
+
+        -Mr Do.
+
+        Also (for #1 above)   
+
+        According to http://www.evertype.com/alphabets/,  for Europe there is this list:
+
+        Latin, Greek, Cyrillic, Armenian, Hebrew, Arabic, and Georgian
+
+        But my research on Google Fonts shows this list:
+
+        ·        Cyrrilic
+        ·        Cyrrilic Extended
+        ·        Greek
+        ·        Greek Extended
+        ·        Khmer
+        ·        Latin
+        ·        Latin Extended
+        ·        Vietnamese
+
+        WhWhich is correct for Europe?"
+    source: https://groups.google.com/forum/#!topic/googlefonts-discuss/7AgT9xztQAw
+    comments:
+      - author: Marc Foley
+        content: "Hey Mr Do,
+            1.  Given a list of countries (and or languages), how do i determine exactly which alphabets are needed?  For example Greece, i understand has special special Greek characters.  Is this a whole new alphabet?  Just a few characters past western basic set?  Is there a resource somewhere for this?
+
+            http://www.unicode.org is your friend ;)
+
+            Here's the codepage for Greek
+
+            2.  Given the source .vfb file in FontLab, how do i go about extending it properly?  (I know how to bring in letters from Illustrator thanks to this tut: https://www.youtube.com/watch?v=yI-7e4nRNus   But its for new fonts.   I dont have a 'template' for the new characters in my existing font.  Where do the new shapes GO?  How do i ensure they are in the proper order / ascii code or whatever?
+
+            I don't recommend drawing in Illustrator then converting. You usually end up with conversion errors due to diff grid sizes. Draw directly in FontLab.
+             
+            3.  Finally, once i have it BUILT, how do i go about actually using it in Photoshop or Illustrator etc.?   Even characters like the '£ ' (which is in the current set), is unaccessable from my USA keyboard.  Any suggestion for working w/ these fonts once Im' done?
+
+            You can change your keyboard layout if you need pound sterling ;)
+             
+
+            Sorry for the deluge of basic questions; hopefully the answers will benefit others also,  
+
+            np
+
+            Regards,
+            Marc"
+            
+  - author: Jacques Le Bailly
+    replies: 40
+    content: "Hi all,
+
+The next few weeks I will be working on Nunito. 
+
+Nunito is a rounded Neo Grotesque font designed by Vernon Adams. Nunito is a Sans Serif with rounded terminals. According to the description on Google fonts, Nunito has been designed mainly to be used as a display font but is useable as a text font too. The overall character is good and somewhat vibrant and/or lively.
+
+I have made a deck for Nunito and my proposal how to improve Nunito.
+https://docs.google.com/presentation/d/1ZdkBTLfAfKsN2ACSBRVrBiDLWJIqGp1HJYjlm19M7U4/edit?ts=57a488ec#slide=id.g15a03d75bb_0_15
+
+On this thread I will post updates on the design process."
+    source: https://groups.google.com/forum/#!topic/googlefonts-discuss/eIWeNyhXal0
+    comments:
+        - author: Dave Crossland 
+          content: "Hi
+
+Thomas had a great idea to use fontreach to check out popular (Alexa Top 1M domains) examples of the fonts in use, and I just  checked http://www.fontreach.com/#font:Nunito and found these (work safe! ;) sites using Nunito. 
+
+http://www.girlsgogames.com
+
+http://www.topuniversities.com
+
+http://www.meetme.com (http://www.meetmecorp.com)
+
+As you can see, it is used in headlines but it is also used extensively in body text too, so I think moving the design more towards display type, and respacing tighter, could go too far. 
+
+On the other hand, resolutions (especially of mobile devices which make up a huge percentage of web page views in 2016) are going up up up and so many of the fonts released in 2010-2012 like Nunito were intentionally spaced a little loose to account for the lower resolutions of the day. 
+
+So, I'm not offering specific advice about if your sketches are too tightly spaced; my point is only that I'd like you to not move the design too far towards display and ensure it is still working well for these sites in text. 
+
+From your sketches (reposted below) I think your spacing is better, but perhaps just a tiny bit too tight in the Black. The Thin looks good.
+
+I think generally its better to err towards looser spacing as typographers are accustomed to tracking in at larger sizes, than thinking to track out at smaller sizes. 
+
+
+And going back to the websites, I have a good way to test work in progress in just this 'live' situation! :) 
+
+Sadly http://somadesign.ca/projects/fontfriend/ no longer works, but it made it easy to test a font on your machine in any webpage - https://vimeo.com/8243800 shows it off. 
+
+I wondered if there was anything else - http://typewonder.com is a more slick approach, but doesn't allow you to toggle the fonts in use on the page, or add local fonts. (https://webfonter.fontshop.com/?url=http://www.meetmecorp.com/ is a FontShop one but seems to use less reliable techniques; it also doesn't allow local fonts to be used - so I just fixed it :) 
+
+You can grab the bookmarklet link from in the top text of https://davelab6.github.io/font-friend/ and it should then work as explained at the end of the video :) 
+
+The font data never leaves your computer so you can use this little tool with peace of mind :) "
+          picture: c_03.png 
