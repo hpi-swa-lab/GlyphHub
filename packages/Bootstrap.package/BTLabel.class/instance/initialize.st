@@ -4,7 +4,7 @@ initialize
 	text := ''.
 	angle := 0.
 	fillMode := #fixed.
-
+	
 	super initialize.
 	
 	self color: (Color fromString: '#111111').

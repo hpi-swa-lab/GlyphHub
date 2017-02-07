@@ -1,7 +1,7 @@
 as yet unclassified
 drawOn: aCanvas
 	| bordered rounded colors |
-	(self owner notNil and: [self owner class == BTButtonGroup])
+	(self owner notNil and: [self owner isButtonGroup])
 		ifTrue: [
 			rounded := {false. false. false. false}.
 			bordered := {true. false. true. true}.

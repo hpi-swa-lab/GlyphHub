@@ -1,0 +1,20 @@
+{
+	"category" : "Bootstrap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"container",
+		"collapsed",
+		"transitionDuration",
+		"endTime",
+		"endHeight",
+		"startHeight",
+		"animating" ],
+	"name" : "BTCollapsible",
+	"pools" : [
+		 ],
+	"super" : "BTWidget",
+	"type" : "normal" }

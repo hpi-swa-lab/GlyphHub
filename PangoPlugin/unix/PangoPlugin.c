@@ -89,7 +89,6 @@ void sqLayoutRenderWidthHeightDepthPointerTransformColor(
 	// printf("%f %f %f %f\n", red, green, blue, alpha);
 
 	cairo_t *cr = cairo_create(surface);
-	// cairo_move_to(cr, matrix[2], matrix[5]);
 	cairo_matrix_t m;
 	cairo_matrix_init(&m, matrix[0], matrix[3], matrix[1], matrix[4], matrix[2], matrix[5]);
 
