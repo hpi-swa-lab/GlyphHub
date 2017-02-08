@@ -1,11 +1,10 @@
 as yet unclassified
 card
 	| body header content |
-	"content := BTImage new scalingMode: #rigid; extent: 200 asPoint; path: FileDirectory default / 'cat.jpg'."
-	content := Morph new extent: 200 asPoint.
+	content := BTImage new scalingMode: #rigid; extent: 200 asPoint; path: FileDirectory default / 'cat.jpg'.
 	body := BTCollapsible new add: (BTPage fit add: content).
 	header := BTCardHeader new
-		add: (Morph new extent: 16 asPoint);
+		add: (BTLabel text: 'This is a cat');
 		do: [ body toggleCollapsed ];
 		yourself.
 	

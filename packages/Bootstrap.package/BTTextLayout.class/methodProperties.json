@@ -5,6 +5,7 @@
 		"shutDown" : "TB 2/5/2017 23:55",
 		"startUp" : "TB 2/6/2017 11:24" },
 	"instance" : {
+		"comeFullyUpOnReload:" : "TB 2/5/2017 22:07",
 		"cursorRectAt:" : "TB 2/5/2017 19:46",
 		"drawOn:origin:color:" : "TB 2/6/2017 14:49",
 		"drawOn:transform:color:" : "TB 2/6/2017 14:50",

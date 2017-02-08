@@ -6,7 +6,6 @@ animate
 	height := self easeInOutCubicFrom: startHeight to: endHeight at: progress.
 	
 	container offset: 0 @ (widgetHeight - height).
-	self extent: self extent x @ height.
 	
 	progress >= 1.0 ifTrue: [
 		animating := false.

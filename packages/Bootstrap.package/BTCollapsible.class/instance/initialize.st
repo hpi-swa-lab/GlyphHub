@@ -4,10 +4,13 @@ initialize
 		color: Color transparent;
 		yourself.
 	
-	super initialize.
-
-	transitionDuration := 200.
+	transitionDuration := 250.
 	animating := false.
 	collapsed := false.
 	
-	self addMorph: container; hResizing: #spaceFill; vResizing: #spaceFill
+	super initialize.
+	
+	self
+		addMorph: container;
+		hResizing: #shrinkWrap;
+		vResizing: #shrinkWrap
