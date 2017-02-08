@@ -1,7 +1,0 @@
-as yet unclassified
-drawOn: aForm origin: aPoint color: aColor
-	self
-		primLayoutRender: self layout
-		form: aForm
-		origin: (MatrixTransform2x3 withOffset: aPoint)
-		color: (aColor pixelWordForDepth: 32)

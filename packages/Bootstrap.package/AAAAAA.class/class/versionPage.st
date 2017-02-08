@@ -9,9 +9,10 @@ versionPage
 			add: (BTLabel text: '10. Feb 2017')).
 	
 	a := BTCard collapsible: 'A - Capital A' content: (BTLabel text: '<span size="60000">A</span>').
-	c := BTCard collapsible: 'C - Captital C' content: (Morph new extent: 300 asPoint).
-	shortO := BTCard collapsible: 'ऒ - Short O' content: (Morph new extent: 300 asPoint).
-	ta := BTCard collapsible: 'त - Ta' content: (Morph new extent: 300 asPoint).
+	c := BTCard collapsible: 'C - Captital C' content: (BTLabel text: '<span size="60000">C</span>').
+	shortO := BTCard collapsible: 'ऒ - Short O' content: (BTLabel text: '<span size="60000">ऒ</span>').
+	ta := BTCard collapsible: 'त - Ta' content: (BTLabel text: '<span size="60000">त</span>').
+	{a. c. shortO. ta} do: [ :l | l width: 300 ].
 	
 	^BTPage topLevel
 		add: author;
