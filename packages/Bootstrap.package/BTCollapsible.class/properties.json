@@ -12,7 +12,8 @@
 		"endTime",
 		"endHeight",
 		"startHeight",
-		"animating" ],
+		"animating",
+		"widgetHeight" ],
 	"name" : "BTCollapsible",
 	"pools" : [
 		 ],

@@ -3,7 +3,7 @@ initialize
 	super initialize.
 	
 	self
-		color: Color white;
+		color: Color transparent;
 		layoutInset: BTWidget spacing;
 		cellInset: BTWidget spacing;
 		listCentering: #topLeft;

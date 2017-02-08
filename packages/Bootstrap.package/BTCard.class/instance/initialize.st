@@ -4,4 +4,6 @@ initialize
 
 	self
 		changeTableLayout;
+		hResizing: #shrinkWrap;
+		vResizing: #shrinkWrap;
 		layoutInset: 1

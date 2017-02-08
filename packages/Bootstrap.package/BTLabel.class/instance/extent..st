@@ -1,7 +1,6 @@
 as yet unclassified
 extent: aPoint
 	| desired width layoutInset |
-	Transcript show: aPoint; cr.
 	layoutInset := self layoutInset class = Rectangle
 		ifTrue: [ (self layoutInset left + self layoutInset right) @ (self layoutInset top + self layoutInset bottom) ]
 		ifFalse: [ self layoutInset asPoint * 2 ].

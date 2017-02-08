@@ -2,12 +2,14 @@
 	"class" : {
 		 },
 	"instance" : {
-		"add:" : "TB 2/8/2017 00:35",
-		"animate" : "TB 2/8/2017 00:45",
+		"add:" : "TB 2/8/2017 12:12",
+		"animate" : "TB 2/8/2017 10:40",
 		"collapsed" : "TB 2/8/2017 00:18",
-		"collapsed:" : "TB 2/8/2017 00:49",
-		"extent:" : "TB 2/8/2017 00:44",
-		"initialize" : "TB 2/8/2017 00:43",
+		"collapsed:" : "TB 2/8/2017 11:58",
+		"easeInOutCubicFrom:to:at:" : "TB 2/8/2017 10:36",
+		"extent:" : "TB 2/8/2017 12:07",
+		"initialize" : "TB 2/8/2017 12:13",
+		"layoutChanged" : "TB 2/8/2017 11:54",
+		"toggleCollapsed" : "TB 2/8/2017 11:44",
 		"transitionDuration" : "TB 2/8/2017 00:19",
-		"transitionDuration:" : "TB 2/8/2017 00:19",
-		"wantsStep" : "TB 2/8/2017 00:37" } }
+		"transitionDuration:" : "TB 2/8/2017 00:19" } }

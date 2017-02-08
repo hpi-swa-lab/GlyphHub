@@ -5,4 +5,5 @@ initialize
 	self
 		changeTableLayout;
 		vResizing: #shrinkWrap;
-		hResizing: #spaceFill
+		hResizing: #spaceFill;
+		padding: 20 @ 12

@@ -1,12 +1,13 @@
 as yet unclassified
 initialize
+	container := TransformMorph new
+		color: Color transparent;
+		yourself.
+	
 	super initialize.
 
 	transitionDuration := 200.
 	animating := false.
 	collapsed := false.
-	container := TransformMorph new
-		color: Color transparent;
-		yourself.
 	
-	self addMorph: container
+	self addMorph: container; hResizing: #spaceFill; vResizing: #spaceFill

@@ -1,7 +1,6 @@
 as yet unclassified
-topLevel
+fit
 	^self new
 		hResizing: #shrinkWrap;
 		vResizing: #shrinkWrap;
-		color: BTWidget backgroundColor;
 		yourself
