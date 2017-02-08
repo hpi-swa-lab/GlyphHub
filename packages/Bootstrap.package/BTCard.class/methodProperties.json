@@ -1,6 +1,6 @@
 {
 	"class" : {
-		 },
+		"collapsible:content:" : "TB 2/8/2017 18:30" },
 	"instance" : {
 		"drawOn:" : "TB 2/3/2017 18:00",
 		"initialize" : "TB 2/8/2017 11:27" } }

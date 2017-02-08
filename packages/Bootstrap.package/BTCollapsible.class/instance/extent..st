@@ -4,7 +4,7 @@ extent: aPoint
 	fullSize := animating or: [collapsed not].
 	
 	size := container hasSubmorphs
-		ifFalse: [ aPoint ]
+		ifFalse: [ aPoint x @ (fullSize ifTrue: [aPoint y] ifFalse: [0])]
 		ifTrue: [ container firstSubmorph extent x @ (fullSize
 			ifFalse: [0]
 			ifTrue: [container firstSubmorph extent y]) ].

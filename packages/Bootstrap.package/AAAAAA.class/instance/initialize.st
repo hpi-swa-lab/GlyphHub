@@ -2,7 +2,7 @@ as yet unclassified
 initialize
 	super initialize.
 	
-	self hResizing: #shrinkWrap; vResizing: #shrinkWrap.
+	self hResizing: #shrinkWrap; vResizing: #shrinkWrap; color: BTWidget backgroundColor.
 	
 	self add: (BTButtonGroup new
 		colorType: #secondary;
