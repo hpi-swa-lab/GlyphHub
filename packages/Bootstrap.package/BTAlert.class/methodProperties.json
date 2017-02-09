@@ -1,7 +1,8 @@
 {
 	"class" : {
-		 },
+		"text:" : "TB 2/6/2017 12:06" },
 	"instance" : {
-		"colorType:" : "TB 2/2/2017 17:11",
+		"addedMorph:" : "TB 2/6/2017 12:12",
+		"colorType:" : "TB 2/6/2017 12:10",
 		"drawOn:" : "TB 2/2/2017 17:08",
-		"initialize" : "TB 2/2/2017 17:16" } }
+		"initialize" : "TB 2/6/2017 13:07" } }

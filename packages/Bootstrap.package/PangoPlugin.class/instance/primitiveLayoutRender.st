@@ -1,36 +1,35 @@
 as yet unclassified
 primitiveLayoutRender
-	" layout, form, point, color "
+	" layout, form, point, color, clipX, clipY, clipWidth, clipHeight "
 	" color must be converted to number via pixelWordForDepth:32 first "
 	<var: #buffer type: 'unsigned char *'>
-	<var: #strPtr type: 'char *'>
-	<var: #fontNamePtr type: 'char *'>
 	<var: #layout type: 'PangoLayout *'>
-	<var: #x type: 'double'>
-	<var: #y type: 'double'>
+	<var: #matrix type: 'float *'>
+	<var: #clipX type: 'float'>
+	<var: #clipY type: 'float'>
+	<var: #clipWidth type: 'float'>
+	<var: #clipHeight type: 'float'>
 	<export: true>
 
-	| formOop bmBits bmDepth bmHeight bmWidth buffer layout color pointOop x y xOop yOop |
-	interpreterProxy methodArgumentCount = 4 ifFalse: [ ^interpreterProxy primitiveFailFor: 111 ].
+	| formOop bmBits bmDepth bmHeight bmWidth buffer layout color matrix clipHeight clipWidth clipX clipY |
+	interpreterProxy methodArgumentCount = 8 ifFalse: [ ^interpreterProxy primitiveFailFor: 111 ].
+
+	" fetch the clip rect "
+	clipHeight := interpreterProxy stackFloatValue: 0.
+	clipWidth := interpreterProxy stackFloatValue: 1.
+	clipY := interpreterProxy stackFloatValue: 2.
+	clipX := interpreterProxy stackFloatValue: 3.
 
 	" fetch the color "
-	color := interpreterProxy stackPositiveMachineIntegerValue: 0.
+	color := interpreterProxy stackPositiveMachineIntegerValue: 4.
 	interpreterProxy failed ifTrue: [ ^interpreterProxy primitiveFailFor: 112 ].
-
-	" fetch point x and y "
-	pointOop := interpreterProxy stackValue: 1.
-	xOop := interpreterProxy fetchPointer: 0 ofObject: pointOop.
-	yOop := interpreterProxy fetchPointer: 1 ofObject: pointOop.
-	x := (interpreterProxy isIntegerObject: xOop)
-		ifTrue: [interpreterProxy integerValueOf: xOop]
-		ifFalse: [interpreterProxy floatValueOf: xOop].
-	y := (interpreterProxy isIntegerObject: yOop)
-		ifTrue: [interpreterProxy integerValueOf: yOop]
-		ifFalse: [interpreterProxy floatValueOf: yOop].
+	
+	" fetch transform matrix "
+	matrix := self loadArgumentMatrix: (interpreterProxy stackObjectValue: 5).
 	interpreterProxy failed ifTrue: [ ^interpreterProxy primitiveFailFor: 102 ].
-
+	
 	" fetch form argument and verify "
-	formOop := interpreterProxy stackObjectValue: 2.
+	formOop := interpreterProxy stackObjectValue: 6.
 	(interpreterProxy isPointers: formOop) ifFalse: [ ^interpreterProxy primitiveFailFor: 106 ].
 	(interpreterProxy slotSizeOf: formOop) < 5 ifTrue: [ ^interpreterProxy primitiveFailFor: 106 ].
 	
@@ -47,7 +46,7 @@ primitiveLayoutRender
 	(bmWidth >= 0 and: [bmHeight >= 0]) ifFalse: [ ^interpreterProxy primitiveFailFor: 109 ].
 	" TODO check bitmap depth for 32 "
 	
-	layout := self cCoerce: (interpreterProxy stackIntegerValue: 3) to: 'PangoLayout*'.
+	layout := self cCoerce: (interpreterProxy stackIntegerValue: 7) to: 'PangoLayout*'.
 
 	self
 		sqLayoutRender: layout
@@ -55,9 +54,12 @@ primitiveLayoutRender
 		Height: bmHeight
 		Depth: bmDepth
 		Pointer: buffer
-		X: x
-		Y: y
-		Color: color.
+		Transform: matrix
+		Color: color
+		ClipX: clipX
+		ClipY: clipY
+		ClipWidth: clipWidth
+		ClipHeight: clipHeight.
 
 	interpreterProxy failed ifTrue: [ ^interpreterProxy primitiveFailFor: 110 ].
 	interpreterProxy pop: interpreterProxy methodArgumentCount

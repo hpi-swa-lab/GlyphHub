@@ -66,15 +66,18 @@ void sqPangoShutdown() {
 	g_object_unref(context);
 }
 
-void sqLayoutRenderWidthHeightDepthPointerXYColor(
+void sqLayoutRenderWidthHeightDepthPointerTransformColorClipXClipYClipWidthClipHeight(
 		PangoLayout *layout,
 		sqInt bmWidth,
 		sqInt bmHeight,
 		sqInt bmDepth,
 		unsigned char *buffer,
-		double x,
-		double y,
-		sqInt color) {
+		float *matrix,
+		sqInt color,
+		float clipX,
+		float clipY,
+		float clipWidth,
+		float clipHeight) {
 
 	// TODO investigate initializing this only once
 	cairo_surface_t *surface = cairo_image_surface_create_for_data(buffer,
@@ -83,14 +86,21 @@ void sqLayoutRenderWidthHeightDepthPointerXYColor(
 			bmHeight,
 			bmWidth * bmDepth / 8);
 
-	// double alpha = (color & 0xFF000000 >> 24) / 255.0;
+	double alpha = (color & 0xFF000000 >> 24) / 255.0;
 	double red   = (color & 0x00FF0000 >> 16) / 255.0;
 	double green = (color & 0x0000FF00 >>  8) / 255.0;
 	double blue  = (color & 0x000000FF >>  0) / 255.0;
 	// printf("%f %f %f %f\n", red, green, blue, alpha);
 
 	cairo_t *cr = cairo_create(surface);
-	cairo_move_to(cr, x, y);
+	cairo_matrix_t m;
+	cairo_matrix_init(&m, matrix[0], matrix[3], matrix[1], matrix[4], matrix[2], matrix[5]);
+
+	printf("%f %f %f %f\n", clipX, clipY, clipWidth, clipHeight);
+	cairo_rectangle(cr, clipX, clipY, clipWidth, clipHeight);
+	cairo_clip(cr);
+
+	cairo_transform(cr, &m);
 	cairo_set_source_rgb(cr, red, green, blue);
 	pango_cairo_show_layout(cr, layout);
 

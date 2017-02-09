@@ -1,6 +1,5 @@
 as yet unclassified
 primitiveRegisterCustomFontDirectory
-	<var: #layout type: 'PangoLayout *'>
 	<var: #strPtr type: 'char *'>
 	<export: true>
 

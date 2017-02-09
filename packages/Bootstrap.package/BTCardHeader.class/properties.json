@@ -10,5 +10,5 @@
 	"name" : "BTCardHeader",
 	"pools" : [
 		 ],
-	"super" : "BTWidget",
+	"super" : "BTClickable",
 	"type" : "normal" }

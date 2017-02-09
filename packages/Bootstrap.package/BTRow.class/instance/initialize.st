@@ -4,5 +4,5 @@ initialize
 
 	self
 		listDirection: #leftToRight;
-		layoutInset: 0 @ BTWidget spacing;
+		padding: 0 @ BTWidget spacing;
 		vResizing: #shrinkWrap

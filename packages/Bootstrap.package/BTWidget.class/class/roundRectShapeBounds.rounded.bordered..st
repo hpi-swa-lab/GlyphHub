@@ -4,7 +4,7 @@ roundRectShapeBounds: aRectangle rounded: rounded bordered: bordered
 	radius := rounded collect: [ :r | r ifTrue: [BTWidget borderRadius] ifFalse: [0]].
 	circle := radius collect: [ :r | r * 0.5522847 ].
 	points := OrderedCollection new.
-
+	
 	bordered first ifTrue: [
 		" top left corner "
 		points

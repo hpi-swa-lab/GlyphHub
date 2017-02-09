@@ -1,0 +1,14 @@
+{
+	"category" : "Bootstrap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "BTListGroupItem",
+	"pools" : [
+		 ],
+	"super" : "BTClickable",
+	"type" : "normal" }
