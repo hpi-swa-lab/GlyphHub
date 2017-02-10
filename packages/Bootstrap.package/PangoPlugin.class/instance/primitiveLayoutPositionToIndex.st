@@ -24,7 +24,9 @@ primitiveLayoutPositionToIndex
 	int ix = (int) x * PANGO_SCALE;
 	int iy = (int) y * PANGO_SCALE;
 	success = pango_layout_xy_to_index(layout, ix, iy, &index, &trailing);
-	printf("%f %f %i %i %i\n", x, y, success, ix, iy)'.
+	
+	const char *text = pango_layout_get_text(layout);
+	index = g_utf8_pointer_to_offset(text, text + index)'.
 	
 	out := interpreterProxy instantiateClass: (interpreterProxy classArray) indexableSize: 3.
 	interpreterProxy storePointer: 0 ofObject: out withValue: (interpreterProxy integerObjectOf: success).

@@ -12,8 +12,10 @@ primitiveLayoutGetCursorPos
 	self cCode: '
 	PangoRectangle strongRect;
 	PangoRectangle weakRect;
-	pango_layout_get_cursor_pos(layout, index, &strongRect, &weakRect)'.
-
+	const char *text = pango_layout_get_text(layout);
+	int offset = g_utf8_offset_to_pointer (text, index) - text;
+	pango_layout_get_cursor_pos(layout, offset, &strongRect, &weakRect)'.
+	
 	out := interpreterProxy instantiateClass: (interpreterProxy classArray) indexableSize: 4.
 	interpreterProxy
 		storePointer: 0
@@ -37,8 +39,8 @@ primitiveLayoutGetCursorPos
 		storePointer: 3
 		ofObject: out
 		withValue: (self
-			createPointX: (self cCode: 'weakRect.width')
-			y: (self cCode: 'weakRect.height')).
+			createPointX: (self cCode: 'PANGO_PIXELS(weakRect.width)')
+			y: (self cCode: 'PANGO_PIXELS(weakRect.height)')).
 	
 	interpreterProxy failed ifTrue: [ ^interpreterProxy primitiveFail ].
 	interpreterProxy pop: (interpreterProxy methodArgumentCount + 1) thenPush: out

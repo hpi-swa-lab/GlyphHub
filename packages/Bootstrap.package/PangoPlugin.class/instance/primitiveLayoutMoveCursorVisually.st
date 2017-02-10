@@ -15,7 +15,13 @@ primitiveLayoutMoveCursorVisually
 	newIndex := 0.
 	newTrailing := 0.
 	
-	self cCode: 'pango_layout_move_cursor_visually(layout, strong, index, trailing, direction, &newIndex, &newTrailing)'.
+	self cCode: '
+	const char *text = pango_layout_get_text(layout);
+	int offset = g_utf8_offset_to_pointer (text, index) - text;
+	
+	pango_layout_move_cursor_visually(layout, strong, offset, trailing, direction, &newIndex, &newTrailing);
+	
+	newIndex = g_utf8_pointer_to_offset(text, text + newIndex)'.
 
 	out := interpreterProxy instantiateClass: (interpreterProxy classArray) indexableSize: 2.
 	interpreterProxy storePointer: 0 ofObject: out withValue: (interpreterProxy integerObjectOf: newIndex).
