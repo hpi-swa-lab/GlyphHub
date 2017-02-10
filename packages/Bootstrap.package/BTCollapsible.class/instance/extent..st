@@ -11,5 +11,4 @@ extent: aPoint
 	
 	super extent: size.
 	
-	container extent: size.
-	owner ifNotNil: [ owner layoutChanged ]
+	container extent: size

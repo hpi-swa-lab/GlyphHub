@@ -1,0 +1,16 @@
+{
+	"category" : "Bootstrap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"tags",
+		"input",
+		"inputBadge" ],
+	"name" : "BTTagList",
+	"pools" : [
+		 ],
+	"super" : "BTWidget",
+	"type" : "normal" }

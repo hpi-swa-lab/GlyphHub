@@ -8,6 +8,4 @@ initialize
 	
 	super initialize.
 	
-	self
-		padding: 12 @ 8;
-		fillMode: #fill
+	self fillMode: #fill

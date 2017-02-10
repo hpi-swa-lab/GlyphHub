@@ -10,7 +10,9 @@
 		"focused",
 		"disabled",
 		"cursor",
-		"cursorRect" ],
+		"cursorRect",
+		"returnDo",
+		"escapeDo" ],
 	"name" : "BTTextEntry",
 	"pools" : [
 		 ],

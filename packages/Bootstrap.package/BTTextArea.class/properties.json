@@ -1,0 +1,14 @@
+{
+	"category" : "Bootstrap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "BTTextArea",
+	"pools" : [
+		 ],
+	"super" : "BTTextEntry",
+	"type" : "normal" }

@@ -4,6 +4,7 @@ initialize
 	text := ''.
 	angle := 0.
 	fillMode := #fixed.
+	styleAttributes := Dictionary new.
 	
 	super initialize.
 	

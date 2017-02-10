@@ -1,3 +1,10 @@
 as yet unclassified
 text: aString
-	label text: '<span size="smaller" weight="700">', aString, '</span>'
+	label ifNil: [
+		label := BTLabel new
+			color: Color white;
+			styleAttributes: self class styleAttributes;
+			yourself.
+		self add: label ].
+	
+	label text: aString

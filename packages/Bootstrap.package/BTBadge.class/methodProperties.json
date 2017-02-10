@@ -1,10 +1,11 @@
 {
 	"class" : {
+		"styleAttributes" : "TB 2/10/2017 15:00",
 		"text:" : "TB 2/4/2017 01:08" },
 	"instance" : {
 		"colorType" : "TB 2/4/2017 00:36",
 		"colorType:" : "TB 2/4/2017 00:36",
 		"drawOn:" : "TB 2/4/2017 00:41",
-		"initialize" : "TB 2/4/2017 02:05",
+		"initialize" : "TB 2/10/2017 14:42",
 		"text" : "TB 2/4/2017 00:36",
-		"text:" : "TB 2/4/2017 01:08" } }
+		"text:" : "TB 2/10/2017 15:02" } }

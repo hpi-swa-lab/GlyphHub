@@ -1,0 +1,14 @@
+{
+	"category" : "Bootstrap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"app" ],
+	"name" : "BTApplication",
+	"pools" : [
+		 ],
+	"super" : "AnimMorphicProject",
+	"type" : "normal" }
