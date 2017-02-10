@@ -2,5 +2,8 @@ as yet unclassified
 add: aWidget
 	container removeAllMorphs.
 	container addMorph: aWidget.
-	container offset: 0 @ aWidget extent y.
+	
+	container offset: (collapsed
+		ifTrue: [ 0 @ aWidget extent y ]
+		ifFalse: [ 0 @ 0 ]).
 	fullBounds := nil

@@ -22,6 +22,6 @@ versionPage
 		add: (BTLabel subcategoryHeader: 'Latin');
 		add: a;
 		add: c;
-		add: (BTLabel subcategoryHeader: 'Devagari');
+		add: (BTLabel subcategoryHeader: 'Devanagari');
 		add: shortO;
 		add: ta

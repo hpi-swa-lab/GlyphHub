@@ -1,0 +1,151 @@
+feedback:
+    - author:
+      tags: "Type Design Critiques"
+      replies:
+      content:
+        "
+        "
+      title:
+      picture: e_zahl.datei
+      source: http://typedrawers.com/
+      comments:
+        - content:
+            "
+            "
+          author:
+    - author: Christian Thalmann
+      tags: Type Design Critiques
+      replies: 140
+      content:
+        "Example Text"
+      title: Freitag — toying around with a geometric display sans
+      picture: e_01.jpg
+      source: http://typedrawers.com/discussion/1138/freitag-toying-around-with-a-geometric-display-sans
+      comments:
+        - content:
+            "I like the first of your double storey g's, but the second one's ear looks like a diacritic. I also like your /A and think you should keep it, but what are you going to do about U+2C6D (Ɑ)?"
+          author: Christian Munk
+    - author: Andreas Stötzner
+    tags: "Type Design Critiques"
+    replies: 2
+    content:
+      "I don’t know if anyone noticed it earlier, I did only recently. Those bits – serifs? aerifs?? – change their position dependent on the air flow direction.
+      Funny idea, actually."
+    title: An aerographic detail
+    picture: e_02.jpg
+    source: http://typedrawers.com/discussion/1927/an-aerographic-detail
+    comments:
+      - content:
+          "Not quite the same, but reminds me of TFAvian."
+        author: Mark Simonson
+    - author: Vasil Stanev
+    tags: "Type Design Critiques"
+    replies: 10
+    content:
+      "Hello,
+
+      I have been drawing ornaments for years and decided to make a font similar to my previous project Floralis, but this time based on a personal face and not an existing font (and more mature I hope, with a better similarity between the letters). I drew the solids in FontForge and the ornaments by hand, then scanned and traced. I uploaded some solids to WhatTheFont and as far as I can gather, there is no previous exact match (could be, there is always this possibility).
+
+      I plan on expanding the Basic Latin to a full set, so I post this here to get the Basic right before moving on. Have not yet decided on the lowercase, probably will be small caps based on the solids, maybe not."
+    title: Ornamental Initials
+    picture: e_03.png
+    source: http://typedrawers.com/discussion/1663/ornamental-initials
+    comments:
+      - content:
+          "I feel the ornaments follow the lettershapes too strictly. Looking at the Floralis font, I see a freedom in the merging of lettershape and floral ornament. Even though Floralis uses Bodoni as a base, there are plenty of places where the the ornament breaks free from the bounds adding a certain liveliness. This adds charm and personality to a typeface (or set of initials) which hopefully helps it's commercial aspect.
+
+          I think an important decision is: Will this be a set of initials or a display typeface? Both require (and allow) totally different design solutions (in the first for instance, readability and uniformity is of lesser importance). Seeing you are planning for a full Basic Latin set, I think you are going for the second?
+
+          On some places ornaments are added outside the 'mould' (the C and Z for instance) but on other letters the serifs are sharply cut, which results in small 'fill-in' blocks that feel out of place. Perhaps be a good idea to let more serifs flow beyond the 'edge' of the letter (as for instance, done at the top of the 'K') to break the mould. This could also be done on the vertical 'sharp-cut' areas.
+
+          Some of the letterforms also don't go that well being ornamented, for instance the Q looks cluttered (I think it would be better to start the tail from the bottom). and the beak of the S is too small and black. Of course the base letters needs quite a bit of finishing, but I'll focus on the main concept.
+
+          I like the idea of being able to use the different versions together, but I think the initials could use some more personality without becoming a shape filled (or traced) with patterns. Otherwise you are in danger of not standing out from other ornamental fonts."
+        author: Arthur Reinders Folmer
+      - content:
+          "Aside from fixing a few letterforms, I think you should have this inverted, it works better on a darker bg and use that as promotional material so people see how effective it is. On a white bg though it looks like a pattern fill basically rather than individual elements making up the shape. "
+        author: AbiRasheed
+      - picture: e_04.png
+        content:
+          "Thank you all, immensely helpful. :D"
+        author: Vasil Stanev
+    - author: Vasil Stanev
+      tags: "Type Design Critiques"
+      replies: 13
+      content:
+      "Bugazoo is a Garamond-based letterbat, all caps font where every creature tells you it's name and kind, an artist interpretation of various cryptids from around the world. A personal project, it is intended for kid's monster books, Initials of fairy-tale books and the like, and for teaching children their ABC's (intended to be sold on MyFonts). I plan a full set with punctuation, numbers,diacritics and special characters. Problem is I do not know how to find mythical beasts starting with Ntilde, Oslash, AE etc., so I rely on people on the board to give me a hint or two, it being international.
+
+      For those wondering why their favorite cryptid isn't on the list, it goes
+        Amphibaena
+        Banshee
+        Cocatrice
+        Dragon
+        Echidna
+        Fairy
+        Gnome
+        Harpies
+        Imp
+        (Jersey) Devil
+        Kappa
+        Lamia
+        Mora
+        Nymph
+        Ourobouros
+        Phoenix
+        Quetzalcoatl
+        Roh (Arab)
+        Snakebeast (personal)
+        Troll
+        Unicorn
+        Vampire
+        Witch
+        n/a [xomster]
+        Yale
+        World War Z
+
+      My idea was to pair the font with Garamond without using outlines or plagiarizing (hence the serifs are slightly different), so for example a Brothers Grimm Fairy talescould be set in Garamond and with Initials in Bugazoo.
+
+      A lot of work went into this. What do you think?"
+      title: Bugazoo letterbat
+      picture: e_05.png
+      source: http://typedrawers.com/discussion/1772/bugazoo-letterbat
+      comments:
+        - content:
+            "I'm interested to see the added characters such as numerals and special characters and your approach and thought behind them. For the AE and other characters you could also use inspiration from it's origins (Such as Norse, Germanic or other storytelling origins) I don't think they should have to fit one-on-one as a "first letter" to work.
+
+            I like the subtle style (although I believe some letters could be more outspoken in the transformation from Garamond to Myth, especially letters such as the G, H and O) Some of the detailing seems to vary per glyph though, is this intended? (for instance, the Q has a detailed body with extra linework while the U is quite solid.) Might be worthwhile to bring them all to the same level."
+          author: Arthur Reinders Folmer
+        - picture: e_06.png
+          content:
+            ""
+          author: Vasil Stanev
+        - picture: e_07.png
+          content:
+            "I thought more about it and decided to make the expanded Latin as versions of the basic one. Else every user may complain that their native monster isn't in the alphabet and I would have to make versions for Aacute, Egrave, then alternates and it will become messy. Maybe in a later Pro version, eventually.
+
+            Considering sameness of style, that's pretty hard to obtain. I accept the comment but intend to live it at this for the moment. Considering H, and overall in the font, on an advice by a painter I tried to reduce "gags" to three or less per letter. So it's two heads and a fish tail, the rest is plain letter.
+
+            Some very WIP work:"
+          author: Vasil Stanev
+      - author: orenwatson
+        tags: "Type Design Critiques"
+        replies: 3
+        content:
+          "I first started making this font because I wanted a font that:
+            - Was monospace, with correct cjk widths for all characters as per Unicode.
+            - Was bitmap, or pixeled, in other words, did not result in purple edges on LCD monitors because of cleartype.
+            - Had a high unicode range, with support of various scripts, symbols, etc.
+            - Was geometric with simple letter forms devoid of ornament.
+            I started by using fontstruct.com, and later figured out how to use fontforge, once I exceeded that site's limitations on size. From time to time I've added things, and lately I've been working on adding more Kanji to the font's repertoire.
+            The result is this:
+            http://www.orenwatson.be/fontdemo.htm
+
+            I'm still unsure of many of the letter forms however, as many of the languages I have very little knowledge of besides comparing letter forms in various other fonts and handwritten examples. If any person can see anything wrong in this, please point it out.
+          "
+        title:
+        source: http://typedrawers.com/
+        comments:
+          - content:
+              "
+              "
+            author:
