@@ -7,7 +7,7 @@ void sqLayoutRenderWidthHeightDepthPointerTransformColorClipXClipYClipWidthClipH
 		sqInt bmDepth,
 		unsigned char *buffer,
 		float *matrix,
-		sqInt color,
+		unsigned int color,
 		float clipX,
 		float clipY,
 		float clipWidth,
@@ -17,5 +17,6 @@ PangoLayout *sqCreateLayout();
 
 void sqRegisterCustomFontLen(char *font, int len);
 void sqRegisterCustomFontDirectory(char *directory, int len);
+void sqSetDpi(int dpi);
 
 void sqPangoShutdown();

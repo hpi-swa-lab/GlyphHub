@@ -1,3 +1,3 @@
 as yet unclassified
 spacing
-	^15
+	^15 * self scalingFactor

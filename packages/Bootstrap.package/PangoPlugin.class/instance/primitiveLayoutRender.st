@@ -5,6 +5,7 @@ primitiveLayoutRender
 	<var: #buffer type: 'unsigned char *'>
 	<var: #layout type: 'PangoLayout *'>
 	<var: #matrix type: 'float *'>
+	<var: #color type: 'unsigned int'>
 	<var: #clipX type: 'float'>
 	<var: #clipY type: 'float'>
 	<var: #clipWidth type: 'float'>

@@ -1,10 +1,10 @@
 {
 	"class" : {
-		"arrowTipSize" : "TB 2/10/2017 14:20",
+		"arrowTipSize" : "TB 2/12/2017 00:20",
 		"backgroundColor" : "TB 2/3/2017 18:00",
 		"backgroundColorSecondary" : "TB 2/3/2017 17:58",
 		"borderColor" : "TB 2/3/2017 17:59",
-		"borderRadius" : "TB 2/2/2017 21:38",
+		"borderRadius" : "TB 2/12/2017 00:20",
 		"circleShape:" : "TB 2/6/2017 12:00",
 		"colorBorderPrimary" : "TB 2/2/2017 16:08",
 		"colorBorderSecondary" : "TB 2/2/2017 16:09",
@@ -25,7 +25,9 @@
 		"linkColor" : "TB 2/8/2017 18:22",
 		"roundRectShapeBounds:rounded:bordered:" : "TB 2/6/2017 11:57",
 		"roundRectShapeWithTipBounds:rounded:bordered:" : "TB 2/10/2017 14:20",
-		"spacing" : "TB 2/2/2017 17:18",
+		"scalingFactor" : "TB 2/12/2017 00:42",
+		"scalingFactor:" : "TB 2/12/2017 00:44",
+		"spacing" : "TB 2/12/2017 00:21",
 		"stateColorDanger" : "TB 2/2/2017 17:12",
 		"stateColorFor:" : "TB 2/2/2017 17:02",
 		"stateColorInfo" : "TB 2/2/2017 17:11",
@@ -33,6 +35,9 @@
 		"stateColorWarning" : "TB 2/2/2017 17:11" },
 	"instance" : {
 		"add:" : "TB 2/8/2017 17:57",
+		"add:at:" : "TB 2/12/2017 00:35",
+		"add:oppositeTo:" : "TB 2/11/2017 09:45",
+		"detach" : "TB 2/11/2017 23:57",
 		"initialize" : "TB 2/2/2017 16:24",
 		"insert:before:" : "TB 2/10/2017 16:41",
 		"isButtonGroup" : "TB 2/2/2017 17:28",
@@ -40,4 +45,6 @@
 		"isLastChild" : "TB 2/2/2017 17:31",
 		"isListGroup" : "TB 2/7/2017 23:46",
 		"isNthChild:" : "TB 2/2/2017 17:31",
-		"padding:" : "TB 2/5/2017 22:54" } }
+		"padding:" : "TB 2/12/2017 00:11",
+		"remove:" : "TB 2/11/2017 23:55",
+		"size:" : "TB 2/12/2017 00:35" } }

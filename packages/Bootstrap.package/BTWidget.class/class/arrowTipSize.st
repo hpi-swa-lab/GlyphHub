@@ -1,3 +1,3 @@
 as yet unclassified
 arrowTipSize
-	^11
+	^11 * self scalingFactor

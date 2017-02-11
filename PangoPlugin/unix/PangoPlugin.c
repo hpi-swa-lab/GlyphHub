@@ -37,9 +37,9 @@ PangoContext *ensureContext() {
 	fontmap = pango_cairo_font_map_get_default ();
 	context = pango_font_map_create_context (fontmap);
 
-	pango_cairo_context_set_resolution (context, 96);
+	pango_cairo_context_set_resolution(context, 96);
 	pango_context_set_language(context, pango_language_from_string("de"));
-	pango_context_set_base_dir (context, PANGO_DIRECTION_LTR);
+	pango_context_set_base_dir(context, PANGO_DIRECTION_LTR);
 
 	cairo_font_options_t *font_options = cairo_font_options_create();
 	cairo_font_options_set_hint_metrics(font_options, CAIRO_HINT_METRICS_ON);
@@ -49,6 +49,10 @@ PangoContext *ensureContext() {
 	pango_cairo_context_set_font_options(context, font_options);
 
 	return context;
+}
+
+void sqSetDpi(int dpi) {
+	pango_cairo_context_set_resolution(ensureContext(), dpi);
 }
 
 PangoLayout *sqCreateLayout() {
@@ -73,7 +77,7 @@ void sqLayoutRenderWidthHeightDepthPointerTransformColorClipXClipYClipWidthClipH
 		sqInt bmDepth,
 		unsigned char *buffer,
 		float *matrix,
-		sqInt color,
+		unsigned int color,
 		float clipX,
 		float clipY,
 		float clipWidth,
@@ -86,17 +90,16 @@ void sqLayoutRenderWidthHeightDepthPointerTransformColorClipXClipYClipWidthClipH
 			bmHeight,
 			bmWidth * bmDepth / 8);
 
-	double alpha = (color & 0xFF000000 >> 24) / 255.0;
-	double red   = (color & 0x00FF0000 >> 16) / 255.0;
-	double green = (color & 0x0000FF00 >>  8) / 255.0;
-	double blue  = (color & 0x000000FF >>  0) / 255.0;
-	// printf("%f %f %f %f\n", red, green, blue, alpha);
+	double alpha = ((color & 0xFF000000) >> 24) / 255.0;
+	double red   = ((color & 0x00FF0000) >> 16) / 255.0;
+	double green = ((color & 0x0000FF00) >>  8) / 255.0;
+	double blue  = ((color & 0x000000FF) >>  0) / 255.0;
+	// printf("%u --> %f %f %f %f\n", color, red, green, blue, alpha);
 
 	cairo_t *cr = cairo_create(surface);
 	cairo_matrix_t m;
 	cairo_matrix_init(&m, matrix[0], matrix[3], matrix[1], matrix[4], matrix[2], matrix[5]);
 
-	printf("%f %f %f %f\n", clipX, clipY, clipWidth, clipHeight);
 	cairo_rectangle(cr, clipX, clipY, clipWidth, clipHeight);
 	cairo_clip(cr);
 

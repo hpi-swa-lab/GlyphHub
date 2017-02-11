@@ -2,8 +2,10 @@
 	"class" : {
 		"initialize" : "TB 2/6/2017 00:34",
 		"primRegisterCustomFontDirectory:" : "TB 2/6/2017 00:00",
+		"primSetDpi:" : "TB 2/12/2017 00:19",
 		"shutDown" : "TB 2/5/2017 23:55",
-		"startUp" : "TB 2/6/2017 11:24" },
+		"startUp" : "TB 2/12/2017 00:44",
+		"updateDpi" : "TB 2/12/2017 00:44" },
 	"instance" : {
 		"cursorRectAt:" : "TB 2/5/2017 19:46",
 		"drawOn:transform:color:clip:" : "TB 2/8/2017 19:45",
@@ -34,4 +36,4 @@
 		"text" : "TB 2/5/2017 19:42",
 		"text:" : "TB 2/5/2017 19:42",
 		"width" : "TB 2/5/2017 19:42",
-		"width:" : "TB 2/5/2017 19:55" } }
+		"width:" : "TB 2/12/2017 00:46" } }

@@ -1,3 +1,5 @@
 as yet unclassified
 padding: aPointOrRectangle
-	self layoutInset: aPointOrRectangle
+	self layoutInset: (aPointOrRectangle class = Rectangle
+		ifTrue: [aPointOrRectangle expandBy: BTWidget scalingFactor]
+		ifFalse: [aPointOrRectangle * BTWidget scalingFactor])

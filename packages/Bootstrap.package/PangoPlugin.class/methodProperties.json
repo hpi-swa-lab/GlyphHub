@@ -14,11 +14,12 @@
 		"primitiveLayoutGetPixelSize" : "TB 2/5/2017 22:00",
 		"primitiveLayoutMoveCursorVisually" : "TB 2/10/2017 12:10",
 		"primitiveLayoutPositionToIndex" : "TB 2/10/2017 12:06",
-		"primitiveLayoutRender" : "TB 2/8/2017 19:04",
+		"primitiveLayoutRender" : "TB 2/12/2017 00:28",
 		"primitiveLayoutSetFont" : "TB 2/5/2017 16:45",
 		"primitiveLayoutSetHeight" : "TB 2/5/2017 19:52",
 		"primitiveLayoutSetText" : "TB 2/4/2017 00:17",
 		"primitiveLayoutSetWidth" : "TB 2/5/2017 19:53",
 		"primitiveRegisterCustomFont" : "TB 2/5/2017 16:41",
 		"primitiveRegisterCustomFontDirectory" : "TB 2/6/2017 14:32",
+		"primitiveSetDpi" : "TB 2/12/2017 00:18",
 		"shutdownModule" : "TB 2/5/2017 16:39" } }

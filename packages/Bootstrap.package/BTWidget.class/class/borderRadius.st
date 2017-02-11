@@ -1,3 +1,3 @@
 as yet unclassified
 borderRadius
-	^4
+	^4 * self scalingFactor

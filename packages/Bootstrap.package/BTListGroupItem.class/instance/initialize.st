@@ -4,4 +4,6 @@ initialize
 
 	self
 		padding: 20 @ 12;
-		hResizing: #spaceFill
+		hResizing: #spaceFill;
+		listDirection: #leftToRight;
+		changeTableLayout

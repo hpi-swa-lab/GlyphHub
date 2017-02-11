@@ -1,7 +1,5 @@
 as yet unclassified
 drawOn: aCanvas
-	super drawOn: aCanvas.
-	  
 	BTWidget
 		drawBackgroundOn: aCanvas
 		bounds: self bounds
@@ -9,4 +7,6 @@ drawOn: aCanvas
 			#background -> Color white.
 			#border -> (focused
 				ifTrue: [BTWidget colorPrimary adjustBrightness: 0.25]
-				ifFalse: [Color black alpha: 0.15])} as: Dictionary).  
+				ifFalse: [Color black alpha: 0.15])} as: Dictionary).
+	
+	super drawOn: aCanvas

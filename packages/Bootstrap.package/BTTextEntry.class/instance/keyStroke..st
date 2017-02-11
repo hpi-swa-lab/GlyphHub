@@ -16,6 +16,8 @@ keyStroke: anEvent
 		^self cursor: 0 ].
 	key = '<end>' ifTrue: [
 		^self cursor: self text size ].
+	key = '<tab>' ifTrue: [
+		^self tabHitWithEvent: anEvent ].
 	key = '<escape>' ifTrue: [
 		^escapeDo ifNotNil: [ escapeDo valueWithEnoughArguments: {self}  ]].
 	key = '<cr>' ifTrue: [
