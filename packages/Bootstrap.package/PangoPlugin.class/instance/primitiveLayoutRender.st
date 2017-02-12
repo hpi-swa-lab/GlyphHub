@@ -1,6 +1,6 @@
 as yet unclassified
 primitiveLayoutRender
-	" layout, form, point, color, clipX, clipY, clipWidth, clipHeight "
+	" layout, form, point, color, fillColor, clipX, clipY, clipWidth, clipHeight, start, end "
 	" color must be converted to number via pixelWordForDepth:32 first "
 	<var: #buffer type: 'unsigned char *'>
 	<var: #layout type: 'PangoLayout *'>
@@ -12,8 +12,8 @@ primitiveLayoutRender
 	<var: #clipHeight type: 'float'>
 	<export: true>
 
-	| formOop bmBits bmDepth bmHeight bmWidth buffer layout color matrix clipHeight clipWidth clipX clipY end start |
-	interpreterProxy methodArgumentCount = 10 ifFalse: [ ^interpreterProxy primitiveFailFor: 111 ].
+	| formOop bmBits bmDepth bmHeight bmWidth buffer layout color matrix clipHeight clipWidth clipX clipY end start fillColor |
+	interpreterProxy methodArgumentCount = 11 ifFalse: [ ^interpreterProxy primitiveFailFor: 111 ].
 
 	" fetch the glyph bounds "
 	end := interpreterProxy stackIntegerValue: 0.
@@ -28,15 +28,18 @@ primitiveLayoutRender
 	interpreterProxy failed ifTrue: [ ^interpreterProxy primitiveFailFor: 117 ].
 
 	" fetch the color "
-	color := interpreterProxy stackPositiveMachineIntegerValue: 6.
+	color := interpreterProxy stackPositiveMachineIntegerValue: 7.
 	interpreterProxy failed ifTrue: [ ^interpreterProxy primitiveFailFor: 112 ].
+
+	fillColor := interpreterProxy stackPositiveMachineIntegerValue: 6.
+	interpreterProxy failed ifTrue: [ ^interpreterProxy primitiveFailFor: 119 ].
 	
 	" fetch transform matrix "
-	matrix := self loadArgumentMatrix: (interpreterProxy stackObjectValue: 7).
+	matrix := self loadArgumentMatrix: (interpreterProxy stackObjectValue: 8).
 	interpreterProxy failed ifTrue: [ ^interpreterProxy primitiveFailFor: 102 ].
 	
 	" fetch form argument and verify "
-	formOop := interpreterProxy stackObjectValue: 8.
+	formOop := interpreterProxy stackObjectValue: 9.
 	(interpreterProxy isPointers: formOop) ifFalse: [ ^interpreterProxy primitiveFailFor: 106 ].
 	(interpreterProxy slotSizeOf: formOop) < 5 ifTrue: [ ^interpreterProxy primitiveFailFor: 106 ].
 	
@@ -53,7 +56,7 @@ primitiveLayoutRender
 	(bmWidth >= 0 and: [bmHeight >= 0]) ifFalse: [ ^interpreterProxy primitiveFailFor: 109 ].
 	" TODO check bitmap depth for 32 "
 	
-	layout := self cCoerce: (interpreterProxy stackIntegerValue: 9) to: 'PangoLayout*'.
+	layout := self cCoerce: (interpreterProxy stackIntegerValue: 10) to: 'PangoLayout*'.
 
 	self
 		sqLayoutRender: layout
@@ -63,6 +66,7 @@ primitiveLayoutRender
 		Pointer: buffer
 		Transform: matrix
 		Color: color
+		FillColor: fillColor
 		ClipX: clipX
 		ClipY: clipY
 		ClipWidth: clipWidth

@@ -1,5 +1,5 @@
 as yet unclassified
-drawOn: aCanvas from: aNumber to: anotherNumber color: aColor
+drawOn: aCanvas from: aNumber to: anotherNumber color: aColor fillColor: anotherColor
 	| transform |
 	transform := self angle ~= 0
 		ifTrue: [
@@ -12,6 +12,7 @@ drawOn: aCanvas from: aNumber to: anotherNumber color: aColor
 		drawOn: aCanvas form
 		transform: transform
 		color: aColor
+		fillColor: anotherColor
 		clip: (aCanvas clipRect translateBy: aCanvas origin)
 		start: aNumber
 		end: anotherNumber

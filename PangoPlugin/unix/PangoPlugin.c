@@ -5,11 +5,11 @@
 PangoContext *context = NULL;
 GSList *layouts = NULL;
 
-void _sqRegisterCustomFontLen(char *font) {
+static void _sqRegisterCustomFontLen(char *font) {
 	FcConfigAppFontAddFile(FcConfigGetCurrent(), (const FcChar8 *) font);
 }
 
-void _sqRegisterCustomFontDirectory(char *directory) {
+static void _sqRegisterCustomFontDirectory(char *directory) {
 	FcConfigAppFontAddFile(FcConfigGetCurrent(), (const FcChar8 *) directory);
 }
 
@@ -25,7 +25,7 @@ void sqRegisterCustomFontDirectory(char *directory, int len) {
 	g_free(str);
 }
 
-PangoContext *ensureContext() {
+static PangoContext *ensureContext() {
 	if (context)
 		return context;
 
@@ -53,6 +53,12 @@ PangoContext *ensureContext() {
 
 void sqSetDpi(int dpi) {
 	pango_cairo_context_set_resolution(ensureContext(), dpi);
+
+	GSList *l = layouts;
+	while (l) {
+		pango_layout_context_changed(l->data);
+		l = l->next;
+	}
 }
 
 PangoLayout *sqCreateLayout() {
@@ -70,7 +76,72 @@ void sqPangoShutdown() {
 	g_object_unref(context);
 }
 
-void sqLayoutRenderWidthHeightDepthPointerTransformColorClipXClipYClipWidthClipHeightStartEnd(
+/* Given a layout, a start and end glyph index into its text, this function
+ * emits several rectangles for the selection ranging from start to end via
+ * its cb
+ */
+static void selection_rectangles(
+		PangoLayout *layout,
+		int start,
+		int end,
+		void (*cb)(double x, double y, double width, double height, void *userdata),
+		void *userdata) {
+
+	const char *text = pango_layout_get_text(layout);
+	start = g_utf8_offset_to_pointer(text, start) - text;
+	end = g_utf8_offset_to_pointer(text, end) - text;
+
+	int lines = pango_layout_get_line_count(layout);
+
+	for (int i = 0; i < lines; i++) {
+		PangoLayoutLine *line;
+		PangoRectangle start_rect;
+		int n_ranges, *ranges, line_start, line_end;
+
+		line = pango_layout_get_line_readonly(layout, i);
+		pango_layout_line_x_to_index(line, G_MAXINT, &line_end, NULL);
+		pango_layout_line_x_to_index(line, 0, &line_start, NULL);
+
+		if (line_end < start)
+			continue;
+
+		pango_layout_line_get_x_ranges(line, start, end, &ranges, &n_ranges);
+		pango_layout_index_to_pos(layout, line_start, &start_rect);
+
+		for (int r = 0; r < n_ranges; r++) {
+			double range_x = (double) ranges[r * 2] / PANGO_SCALE;
+			double range_width = ((double) ranges[r * 2 + 1] - (double) ranges[r * 2]) / PANGO_SCALE;
+
+			cb(range_x,
+				PANGO_PIXELS(start_rect.y),
+				range_width,
+				PANGO_PIXELS(start_rect.height),
+				userdata);
+		}
+
+		g_free(ranges);
+
+		if (end >= line_start && end <= line_end)
+			break;
+	}
+}
+
+static void clip_rectangle(double x, double y, double width, double height, void *userdata) {
+	cairo_t *cr = (cairo_t *) userdata;
+
+	cairo_rectangle(cr, x, y, width, height);
+}
+
+static void set_source_rgba_from_uint(cairo_t *cr, unsigned int color) {
+	double alpha = ((color & 0xFF000000) >> 24) / 255.0;
+	double red   = ((color & 0x00FF0000) >> 16) / 255.0;
+	double green = ((color & 0x0000FF00) >>  8) / 255.0;
+	double blue  = ((color & 0x000000FF) >>  0) / 255.0;
+
+	cairo_set_source_rgba(cr, red, green, blue, alpha);
+}
+
+void sqLayoutRenderWidthHeightDepthPointerTransformColorFillColorClipXClipYClipWidthClipHeightStartEnd(
 		PangoLayout *layout,
 		sqInt bmWidth,
 		sqInt bmHeight,
@@ -78,6 +149,7 @@ void sqLayoutRenderWidthHeightDepthPointerTransformColorClipXClipYClipWidthClipH
 		unsigned char *buffer,
 		float *matrix,
 		unsigned int color,
+		unsigned int fillColor,
 		float clipX,
 		float clipY,
 		float clipWidth,
@@ -92,12 +164,6 @@ void sqLayoutRenderWidthHeightDepthPointerTransformColorClipXClipYClipWidthClipH
 			bmHeight,
 			bmWidth * bmDepth / 8);
 
-	double alpha = ((color & 0xFF000000) >> 24) / 255.0;
-	double red   = ((color & 0x00FF0000) >> 16) / 255.0;
-	double green = ((color & 0x0000FF00) >>  8) / 255.0;
-	double blue  = ((color & 0x000000FF) >>  0) / 255.0;
-	// printf("%u --> %f %f %f %f\n", color, red, green, blue, alpha);
-
 	cairo_t *cr = cairo_create(surface);
 	cairo_matrix_t m;
 	cairo_matrix_init(&m, matrix[0], matrix[3], matrix[1], matrix[4], matrix[2], matrix[5]);
@@ -105,27 +171,16 @@ void sqLayoutRenderWidthHeightDepthPointerTransformColorClipXClipYClipWidthClipH
 	cairo_rectangle(cr, clipX, clipY, clipWidth, clipHeight);
 	cairo_clip(cr);
 
+	cairo_transform(cr, &m);
+
 	if (start >= 0 || end >= 0) {
-		const char *text;
-		PangoRectangle startRect, endRect;
-
-		text = pango_layout_get_text(layout);
-		start = g_utf8_offset_to_pointer(text, start) - text;
-		end = g_utf8_offset_to_pointer(text, end) - text;
-
-		pango_layout_get_cursor_pos(layout, start, &startRect, NULL);
-		pango_layout_get_cursor_pos(layout, end, &endRect, NULL);
-
-		cairo_rectangle(cr,
-			PANGO_PIXELS(startRect.x) + matrix[2],
-			PANGO_PIXELS(startRect.y) + matrix[5],
-			PANGO_PIXELS(endRect.x - startRect.x),
-			PANGO_PIXELS(endRect.height));
+		selection_rectangles(layout, start, end, clip_rectangle, cr);
+		set_source_rgba_from_uint(cr, fillColor);
+		cairo_fill_preserve(cr);
 		cairo_clip(cr);
 	}
 
-	cairo_transform(cr, &m);
-	cairo_set_source_rgba(cr, red, green, blue, alpha);
+	set_source_rgba_from_uint(cr, color);
 	pango_cairo_show_layout(cr, layout);
 
 	cairo_surface_destroy(surface);

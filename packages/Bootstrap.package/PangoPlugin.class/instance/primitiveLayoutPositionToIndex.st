@@ -1,6 +1,5 @@
 as yet unclassified
 primitiveLayoutPositionToIndex
-	" set the given width on the layout and return the height needed "
 	<var: #layout type: 'PangoLayout *'>
 	<var: #x type: 'float'>
 	<var: #y type: 'float'>
@@ -23,10 +22,9 @@ primitiveLayoutPositionToIndex
 	self cCode: '
 	int ix = (int) x * PANGO_SCALE;
 	int iy = (int) y * PANGO_SCALE;
-	success = pango_layout_xy_to_index(layout, ix, iy, &index, &trailing);
-	
-	const char *text = pango_layout_get_text(layout);
-	index = g_utf8_pointer_to_offset(text, text + index)'.
+	success = pango_layout_xy_to_index(layout, ix, iy, &index, &trailing)'.
+
+	index := self byteOffsetToIndex: layout offset: index.
 	
 	out := interpreterProxy instantiateClass: (interpreterProxy classArray) indexableSize: 3.
 	interpreterProxy storePointer: 0 ofObject: out withValue: (interpreterProxy integerObjectOf: success).
