@@ -1,7 +1,10 @@
 as yet unclassified
 deleteAfterCursor
-	cursor = self text size ifTrue: [ ^self ].
+	| selection |
+	selection := self selectionBounds.
+	" if we have no selection, we mark the character after cursor "
+	self hasSelection ifFalse: [ selection at: 1 put: (selection first + 1 min: self text size) ].
 	
-	text := (text first: cursor), (text allButFirst: cursor + 1).
+	text := (text first: selection first), (text allButFirst: selection second).
 	self updateText: text.
-	self cursor: self cursor
+	self placeCursorAt: selection first

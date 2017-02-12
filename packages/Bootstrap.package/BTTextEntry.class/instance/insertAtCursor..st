@@ -1,4 +1,8 @@
 as yet unclassified
 insertAtCursor: aString
-	text := (text first: cursor), aString, (text allButFirst: cursor).
+	| selection |
+	selection := self selectionBounds.
+	
+	text := (text first: selection first), aString, (text allButFirst: selection second).
+	self placeCursorAt: selection first.
 	self updateText: text

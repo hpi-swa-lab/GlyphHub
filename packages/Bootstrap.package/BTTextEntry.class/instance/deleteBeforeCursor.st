@@ -1,7 +1,10 @@
 as yet unclassified
 deleteBeforeCursor
-	cursor = 0 ifTrue: [ ^self ].
+	| selection |
+	selection := self selectionBounds.
+	" if we have no selection, we mark the character before cursor "
+	self hasSelection ifFalse: [ selection at: 1 put: (selection first - 1 max: 0) ].
 	
-	text := (text first: cursor - 1), (text allButFirst: cursor).
+	text := (text first: selection first), (text allButFirst: selection second).
 	self updateText: text.
-	self cursor: self cursor - 1
+	self placeCursorAt: selection first

@@ -12,7 +12,9 @@
 		"cursor",
 		"cursorRect",
 		"returnDo",
-		"escapeDo" ],
+		"escapeDo",
+		"selectionBound",
+		"selectionBoundRect" ],
 	"name" : "BTTextEntry",
 	"pools" : [
 		 ],
