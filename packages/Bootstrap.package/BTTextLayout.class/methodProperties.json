@@ -8,7 +8,8 @@
 		"updateDpi" : "TB 2/12/2017 00:44" },
 	"instance" : {
 		"cursorRectAt:" : "TB 2/5/2017 19:46",
-		"drawOn:transform:color:clip:" : "TB 2/8/2017 19:45",
+		"drawOn:transform:color:clip:" : "TB 2/12/2017 08:45",
+		"drawOn:transform:color:clip:start:end:" : "TB 2/12/2017 08:44",
 		"extent" : "TB 2/5/2017 19:55",
 		"font" : "TB 2/5/2017 19:40",
 		"font:" : "TB 2/5/2017 19:40",
@@ -31,7 +32,7 @@
 		"primLayoutCreate" : "TB 2/5/2017 23:49",
 		"primLayoutLogicalAttributes:" : "TB 2/9/2017 15:37",
 		"primLayoutPixelSize:" : "TB 2/5/2017 19:54",
-		"primLayoutRender:form:origin:color:clipX:clipY:clipWidth:clipHeight:" : "TB 2/8/2017 19:08",
+		"primLayoutRender:form:origin:color:clipX:clipY:clipWidth:clipHeight:start:end:" : "TB 2/12/2017 08:44",
 		"restoreAfterLoad" : "TB 2/5/2017 23:55",
 		"text" : "TB 2/5/2017 19:42",
 		"text:" : "TB 2/5/2017 19:42",

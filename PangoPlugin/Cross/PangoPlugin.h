@@ -1,6 +1,6 @@
 #include <pango/pangocairo.h>
 
-void sqLayoutRenderWidthHeightDepthPointerTransformColorClipXClipYClipWidthClipHeight(
+void sqLayoutRenderWidthHeightDepthPointerTransformColorClipXClipYClipWidthClipHeightStartEnd(
 		PangoLayout *layout,
 		sqInt bmWidth,
 		sqInt bmHeight,
@@ -11,7 +11,9 @@ void sqLayoutRenderWidthHeightDepthPointerTransformColorClipXClipYClipWidthClipH
 		float clipX,
 		float clipY,
 		float clipWidth,
-		float clipHeight);
+		float clipHeight,
+		int start,
+		int end);
 
 PangoLayout *sqCreateLayout();
 

@@ -20,6 +20,10 @@ keyStroke: anEvent
 		^self cursor: 0 ].
 	key = '<end>' ifTrue: [
 		^self cursor: self text size ].
+	key = '<Shift-home>' ifTrue: [
+		^self selectionBound: self cursor; cursor: 0 ].
+	key = '<Shift-end>' ifTrue: [
+		^self selectionBound: self cursor; cursor: self text size ].
 	key = '<tab>' ifTrue: [
 		^self tabHitWithEvent: anEvent ].
 	key = '<Cmd-a>' ifTrue: [
@@ -29,7 +33,7 @@ keyStroke: anEvent
 	key = '<Cmd-v>' ifTrue: [
 		^self insertAtCursor: Clipboard clipboardText ].
 	key = '<Cmd-x>' ifTrue: [
-		^Clipboard clipboardText: self selectedText ].
+		Clipboard clipboardText: self selectedText. ^self deleteBeforeCursor ].
 	key = '<escape>' ifTrue: [
 		^escapeDo ifNotNil: [ escapeDo valueWithEnoughArguments: {self}  ]].
 	key = '<cr>' ifTrue: [

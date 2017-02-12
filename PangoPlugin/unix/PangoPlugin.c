@@ -70,7 +70,7 @@ void sqPangoShutdown() {
 	g_object_unref(context);
 }
 
-void sqLayoutRenderWidthHeightDepthPointerTransformColorClipXClipYClipWidthClipHeight(
+void sqLayoutRenderWidthHeightDepthPointerTransformColorClipXClipYClipWidthClipHeightStartEnd(
 		PangoLayout *layout,
 		sqInt bmWidth,
 		sqInt bmHeight,
@@ -81,7 +81,9 @@ void sqLayoutRenderWidthHeightDepthPointerTransformColorClipXClipYClipWidthClipH
 		float clipX,
 		float clipY,
 		float clipWidth,
-		float clipHeight) {
+		float clipHeight,
+		int start,
+		int end) {
 
 	// TODO investigate initializing this only once
 	cairo_surface_t *surface = cairo_image_surface_create_for_data(buffer,
@@ -103,8 +105,27 @@ void sqLayoutRenderWidthHeightDepthPointerTransformColorClipXClipYClipWidthClipH
 	cairo_rectangle(cr, clipX, clipY, clipWidth, clipHeight);
 	cairo_clip(cr);
 
+	if (start >= 0 || end >= 0) {
+		const char *text;
+		PangoRectangle startRect, endRect;
+
+		text = pango_layout_get_text(layout);
+		start = g_utf8_offset_to_pointer(text, start) - text;
+		end = g_utf8_offset_to_pointer(text, end) - text;
+
+		pango_layout_get_cursor_pos(layout, start, &startRect, NULL);
+		pango_layout_get_cursor_pos(layout, end, &endRect, NULL);
+
+		cairo_rectangle(cr,
+			PANGO_PIXELS(startRect.x) + matrix[2],
+			PANGO_PIXELS(startRect.y) + matrix[5],
+			PANGO_PIXELS(endRect.x - startRect.x),
+			PANGO_PIXELS(endRect.height));
+		cairo_clip(cr);
+	}
+
 	cairo_transform(cr, &m);
-	cairo_set_source_rgb(cr, red, green, blue);
+	cairo_set_source_rgba(cr, red, green, blue, alpha);
 	pango_cairo_show_layout(cr, layout);
 
 	cairo_surface_destroy(surface);

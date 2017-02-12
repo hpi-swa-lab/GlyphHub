@@ -12,25 +12,31 @@ primitiveLayoutRender
 	<var: #clipHeight type: 'float'>
 	<export: true>
 
-	| formOop bmBits bmDepth bmHeight bmWidth buffer layout color matrix clipHeight clipWidth clipX clipY |
-	interpreterProxy methodArgumentCount = 8 ifFalse: [ ^interpreterProxy primitiveFailFor: 111 ].
+	| formOop bmBits bmDepth bmHeight bmWidth buffer layout color matrix clipHeight clipWidth clipX clipY end start |
+	interpreterProxy methodArgumentCount = 10 ifFalse: [ ^interpreterProxy primitiveFailFor: 111 ].
+
+	" fetch the glyph bounds "
+	end := interpreterProxy stackIntegerValue: 0.
+	start := interpreterProxy stackIntegerValue: 1.
+	interpreterProxy failed ifTrue: [ ^interpreterProxy primitiveFailFor: 118 ].
 
 	" fetch the clip rect "
-	clipHeight := interpreterProxy stackFloatValue: 0.
-	clipWidth := interpreterProxy stackFloatValue: 1.
-	clipY := interpreterProxy stackFloatValue: 2.
-	clipX := interpreterProxy stackFloatValue: 3.
+	clipHeight := interpreterProxy stackFloatValue: 2.
+	clipWidth := interpreterProxy stackFloatValue: 3.
+	clipY := interpreterProxy stackFloatValue: 4.
+	clipX := interpreterProxy stackFloatValue: 5.
+	interpreterProxy failed ifTrue: [ ^interpreterProxy primitiveFailFor: 117 ].
 
 	" fetch the color "
-	color := interpreterProxy stackPositiveMachineIntegerValue: 4.
+	color := interpreterProxy stackPositiveMachineIntegerValue: 6.
 	interpreterProxy failed ifTrue: [ ^interpreterProxy primitiveFailFor: 112 ].
 	
 	" fetch transform matrix "
-	matrix := self loadArgumentMatrix: (interpreterProxy stackObjectValue: 5).
+	matrix := self loadArgumentMatrix: (interpreterProxy stackObjectValue: 7).
 	interpreterProxy failed ifTrue: [ ^interpreterProxy primitiveFailFor: 102 ].
 	
 	" fetch form argument and verify "
-	formOop := interpreterProxy stackObjectValue: 6.
+	formOop := interpreterProxy stackObjectValue: 8.
 	(interpreterProxy isPointers: formOop) ifFalse: [ ^interpreterProxy primitiveFailFor: 106 ].
 	(interpreterProxy slotSizeOf: formOop) < 5 ifTrue: [ ^interpreterProxy primitiveFailFor: 106 ].
 	
@@ -47,7 +53,7 @@ primitiveLayoutRender
 	(bmWidth >= 0 and: [bmHeight >= 0]) ifFalse: [ ^interpreterProxy primitiveFailFor: 109 ].
 	" TODO check bitmap depth for 32 "
 	
-	layout := self cCoerce: (interpreterProxy stackIntegerValue: 7) to: 'PangoLayout*'.
+	layout := self cCoerce: (interpreterProxy stackIntegerValue: 9) to: 'PangoLayout*'.
 
 	self
 		sqLayoutRender: layout
@@ -60,7 +66,9 @@ primitiveLayoutRender
 		ClipX: clipX
 		ClipY: clipY
 		ClipWidth: clipWidth
-		ClipHeight: clipHeight.
+		ClipHeight: clipHeight
+		Start: start
+		End: end.
 
 	interpreterProxy failed ifTrue: [ ^interpreterProxy primitiveFailFor: 110 ].
 	interpreterProxy pop: interpreterProxy methodArgumentCount
