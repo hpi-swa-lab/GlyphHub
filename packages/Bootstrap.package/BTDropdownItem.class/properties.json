@@ -6,9 +6,10 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "BTPopover",
+		"label",
+		"action" ],
+	"name" : "BTDropdownItem",
 	"pools" : [
 		 ],
-	"super" : "BTFloatingDialog",
+	"super" : "BTClickable",
 	"type" : "normal" }

@@ -6,8 +6,8 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "BTPopover",
+		"selectedDo" ],
+	"name" : "BTDropdown",
 	"pools" : [
 		 ],
 	"super" : "BTFloatingDialog",

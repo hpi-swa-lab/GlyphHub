@@ -7,8 +7,8 @@
 	"commentStamp" : "",
 	"instvars" : [
 		 ],
-	"name" : "BTPopover",
+	"name" : "BTFloatingDialog",
 	"pools" : [
 		 ],
-	"super" : "BTFloatingDialog",
+	"super" : "BTWidget",
 	"type" : "normal" }
