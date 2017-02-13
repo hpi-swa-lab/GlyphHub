@@ -6,4 +6,6 @@ example1
 		ancestor: nil;
 		marker: FRTMarker example1;
 		addComment: FRTComment example1;
-		addComment: FRTComment example2
+		addComment: FRTComment example2;
+		addTag: 'Kerning';
+		addTag: 'Consistency'

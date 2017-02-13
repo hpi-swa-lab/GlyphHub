@@ -37,9 +37,10 @@
 	"instance" : {
 		"add:" : "TB 2/8/2017 17:57",
 		"add:at:" : "TB 2/12/2017 00:35",
-		"add:oppositeTo:" : "TB 2/11/2017 09:45",
+		"add:oppositeTo:" : "al 2/13/2017 15:40",
+		"alignItems:" : "al 2/13/2017 16:27",
 		"detach" : "TB 2/11/2017 23:57",
-		"initialize" : "TB 2/2/2017 16:24",
+		"initialize" : "al 2/13/2017 15:39",
 		"insert:before:" : "TB 2/10/2017 16:41",
 		"isButtonGroup" : "TB 2/2/2017 17:28",
 		"isFirstChild" : "TB 2/2/2017 19:50",
@@ -48,4 +49,6 @@
 		"isNthChild:" : "TB 2/2/2017 17:31",
 		"padding:" : "TB 2/12/2017 00:11",
 		"remove:" : "TB 2/11/2017 23:55",
-		"size:" : "TB 2/12/2017 00:35" } }
+		"size:" : "TB 2/12/2017 00:35",
+		"spacing:" : "al 2/13/2017 16:00",
+		"withPadding" : "al 2/13/2017 16:18" } }

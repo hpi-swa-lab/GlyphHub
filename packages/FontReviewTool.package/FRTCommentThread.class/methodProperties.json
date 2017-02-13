@@ -1,18 +1,21 @@
 {
 	"class" : {
-		"example1" : "TB 1/12/2017 11:29",
-		"example2" : "TB 1/12/2017 11:53",
-		"example3" : "TB 1/12/2017 11:54" },
+		"example1" : "al 2/13/2017 17:12",
+		"example2" : "al 2/13/2017 17:11",
+		"example3" : "al 2/13/2017 17:12" },
 	"instance" : {
 		"addComment:" : "lcj 1/9/2017 17:01",
+		"addTag:" : "al 2/13/2017 17:07",
 		"ancestor" : "lcj 1/12/2017 10:58",
 		"ancestor:" : "lcj 1/12/2017 10:58",
 		"asMorph" : "TB 1/12/2017 10:36",
+		"asWidget" : "al 2/13/2017 15:04",
 		"comments" : "lcj 1/9/2017 17:02",
-		"initialize" : "lcj 1/12/2017 11:00",
+		"initialize" : "al 2/13/2017 17:07",
 		"isOpen" : "lcj 1/9/2017 16:35",
 		"isOpen:" : "lcj 1/9/2017 16:35",
 		"marker" : "lcj 1/9/2017 17:02",
 		"marker:" : "lcj 1/12/2017 10:56",
+		"tags" : "al 2/13/2017 17:06",
 		"title" : "lcj 1/12/2017 10:56",
 		"title:" : "lcj 1/12/2017 10:56" } }

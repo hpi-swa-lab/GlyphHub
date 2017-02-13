@@ -1,13 +1,13 @@
 {
-	"category" : "Bootstrap",
+	"category" : "FontReviewTool",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "BTRow",
+		"comment" ],
+	"name" : "FRTCommentWidget",
 	"pools" : [
 		 ],
 	"super" : "BTPage",

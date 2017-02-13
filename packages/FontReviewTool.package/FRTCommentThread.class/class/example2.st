@@ -6,4 +6,5 @@ example2
 		ancestor: nil;
 		marker: FRTMarker example1;
 		addComment: FRTComment example1;
-		addComment: FRTComment example2
+		addComment: FRTComment example2;
+		addTag: 'OpenType'

@@ -1,7 +1,8 @@
 {
 	"class" : {
-		"fit" : "TB 2/8/2017 11:47",
+		"row" : "al 2/13/2017 16:20",
+		"sizing:vertical:" : "al 2/13/2017 16:14",
 		"topLevel" : "TB 2/12/2017 16:53" },
 	"instance" : {
-		"collapse" : "TB 2/3/2017 23:04",
-		"initialize" : "TB 2/8/2017 11:34" } }
+		"initialize" : "al 2/13/2017 16:16",
+		"vertical:" : "al 2/13/2017 16:19" } }

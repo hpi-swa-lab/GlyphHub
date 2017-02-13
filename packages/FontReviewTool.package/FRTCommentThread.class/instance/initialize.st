@@ -1,4 +1,5 @@
 as yet unclassified
 initialize
 	self isOpen: true.
-	comments := OrderedCollection new  
+	comments := OrderedCollection new.
+	tags := OrderedCollection new

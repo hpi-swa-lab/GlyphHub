@@ -4,8 +4,7 @@ initialize
 	
 	self
 		color: Color transparent;
-		layoutInset: BTWidget spacing;
-		cellInset: BTWidget spacing;
+		spacing: BTWidget spacing;
 		listCentering: #topLeft;
 		wrapCentering: #topLeft;
 		cellPositioning: #topLeft;

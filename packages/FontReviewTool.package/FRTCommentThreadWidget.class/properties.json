@@ -6,14 +6,13 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"isOpen",
-		"comments",
-		"marker",
-		"ancestor",
-		"title",
-		"tags" ],
-	"name" : "FRTCommentThread",
+		"image",
+		"text",
+		"meta",
+		"comment",
+		"commentThread" ],
+	"name" : "FRTCommentThreadWidget",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "BTPage",
 	"type" : "normal" }

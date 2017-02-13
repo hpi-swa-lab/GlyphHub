@@ -2,7 +2,7 @@ as yet unclassified
 login
 	| loginPage loginButton window loader |
 	loginButton := BTButton label: 'Login'.
-	loginPage := BTPage fit
+	loginPage := BTPage new
 		add: (BTLabel heading: 'Login to the FONT_WIKI');
 		add: (BTTextArea placeholder: 'Username');
 		add: (BTPasswordArea placeholder: 'Password');
