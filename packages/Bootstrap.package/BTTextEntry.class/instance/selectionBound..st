@@ -1,4 +1,4 @@
-as yet unclassified
+selection
 selectionBound: aNumber
 	selectionBound := aNumber.
 

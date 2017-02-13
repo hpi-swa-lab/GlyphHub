@@ -1,4 +1,4 @@
-as yet unclassified
+selection
 selectedText
 	| selection |
 	selection := self selectionBounds.

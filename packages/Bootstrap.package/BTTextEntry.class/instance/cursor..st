@@ -1,5 +1,7 @@
-as yet unclassified
+cursor
 cursor: aNumber
 	cursor := aNumber.
 
-	self updateCursor
+	self
+		updateCursor;
+		resetBlinkCursor

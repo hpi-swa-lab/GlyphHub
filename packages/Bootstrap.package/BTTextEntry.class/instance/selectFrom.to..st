@@ -1,4 +1,4 @@
-as yet unclassified
+selection
 selectFrom: aNumber to: anotherNumber
 	self
 		cursor: anotherNumber;

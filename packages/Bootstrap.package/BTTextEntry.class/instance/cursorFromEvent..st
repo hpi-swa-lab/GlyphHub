@@ -1,7 +1,8 @@
-as yet unclassified
+cursor
 cursorFromEvent: anEvent
-	" catch case where we would jump at cursor pos of the placeholder "
 	| data index position trailing |
+	
+	" catch case where we would jump at cursor pos of the placeholder "
 	self text ifEmpty: [ ^0 ].
 	
 	position := anEvent position - self layoutBounds origin.

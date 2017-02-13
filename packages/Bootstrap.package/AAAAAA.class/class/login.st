@@ -5,7 +5,7 @@ login
 	loginPage := BTPage fit
 		add: (BTLabel heading: 'Login to the FONT_WIKI');
 		add: (BTTextArea placeholder: 'Username');
-		add: (BTTextArea placeholder: 'Password');
+		add: (BTPasswordArea placeholder: 'Password');
 		add: loginButton.
 
 	loader := BTLoader new.

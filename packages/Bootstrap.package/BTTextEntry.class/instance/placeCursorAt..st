@@ -1,3 +1,3 @@
-as yet unclassified
+cursor
 placeCursorAt: aNumber
 	self selectFrom: aNumber to: aNumber

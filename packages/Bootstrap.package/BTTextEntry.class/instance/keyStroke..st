@@ -1,4 +1,4 @@
-as yet unclassified
+event handling
 keyStroke: anEvent
 	| key |
 	key := anEvent keyString.

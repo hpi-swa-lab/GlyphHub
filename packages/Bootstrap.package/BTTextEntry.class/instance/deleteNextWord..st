@@ -1,4 +1,4 @@
-as yet unclassified
+editing
 deleteNextWord: direction
 	| end nextWord start |
 	self hasSelection ifTrue: [ ^self deleteAfterCursor ].

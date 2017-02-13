@@ -1,3 +1,3 @@
-as yet unclassified
+selection
 clearSelection
 	self selectionBound: self cursor

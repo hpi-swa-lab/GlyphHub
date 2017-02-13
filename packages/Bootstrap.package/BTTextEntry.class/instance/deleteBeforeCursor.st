@@ -1,4 +1,4 @@
-as yet unclassified
+editing
 deleteBeforeCursor
 	| selection |
 	selection := self selectionBounds.

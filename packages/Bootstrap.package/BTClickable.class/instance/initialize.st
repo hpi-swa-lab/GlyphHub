@@ -3,6 +3,7 @@ initialize
 	super initialize.
 	
 	hovered := false.
+	active := false.
 	do := [].
 	
 	self

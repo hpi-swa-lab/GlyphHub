@@ -1,3 +1,3 @@
-as yet unclassified
+selection
 hasSelection
 	^self selectionBound ~= self cursor

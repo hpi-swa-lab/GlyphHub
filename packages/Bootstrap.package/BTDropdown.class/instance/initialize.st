@@ -2,7 +2,7 @@ as yet unclassified
 initialize
 	super initialize.
 	
-	selectedDo := [ :action | ].
+	selectedDo := [ :action :label | ].
 	
 	self
 		padding: 1 @ 8;

@@ -4,4 +4,5 @@ topLevel
 		hResizing: #rigid;
 		vResizing: #rigid;
 		color: BTWidget backgroundColor;
+		beSticky;
 		yourself

@@ -1,0 +1,18 @@
+{
+	"category" : "Bootstrap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"suggestions",
+		"suggestionsPromise",
+		"suggestionsList",
+		"topHit",
+		"activeSuggestion" ],
+	"name" : "BTTextCompletion",
+	"pools" : [
+		 ],
+	"super" : "BTTextArea",
+	"type" : "normal" }

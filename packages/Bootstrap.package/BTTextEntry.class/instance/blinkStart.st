@@ -1,0 +1,3 @@
+cursor
+blinkStart
+	^blinkStart

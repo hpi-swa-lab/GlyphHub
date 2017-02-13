@@ -1,4 +1,4 @@
 as yet unclassified
 drawOn: aCanvas
-	hovered ifTrue: [
+	(hovered or: [active]) ifTrue: [
 		aCanvas fillRectangle: self bounds fillStyle: BTWidget grayLighter ]

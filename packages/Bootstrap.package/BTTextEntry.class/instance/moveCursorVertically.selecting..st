@@ -1,4 +1,4 @@
-as yet unclassified
+cursor
 moveCursorVertically: aNumber selecting: aBoolean
 	" negative numbers move up, positive down "
 	| data line |

@@ -1,3 +1,3 @@
-as yet unclassified
+event handling
 mouseMove: anEvent
 	self cursor: (self cursorFromEvent: anEvent)

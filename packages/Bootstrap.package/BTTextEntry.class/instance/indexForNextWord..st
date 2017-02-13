@@ -1,4 +1,4 @@
-as yet unclassified
+cursor
 indexForNextWord: direction
 	| attributes index boundary |
 	attributes := self layout logicalAttributes.

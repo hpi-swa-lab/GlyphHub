@@ -14,7 +14,9 @@
 		"returnDo",
 		"escapeDo",
 		"selectionBound",
-		"selectionBoundRect" ],
+		"selectionBoundRect",
+		"drawCursor",
+		"blinkStart" ],
 	"name" : "BTTextEntry",
 	"pools" : [
 		 ],

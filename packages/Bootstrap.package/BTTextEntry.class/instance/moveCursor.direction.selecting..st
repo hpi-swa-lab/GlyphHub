@@ -1,4 +1,4 @@
-as yet unclassified
+cursor
 moveCursor: isStrong direction: aNumber selecting: aBoolean
 	| data |
 	" we're leaving a selection, don't actually move any bounds, just collapse them "

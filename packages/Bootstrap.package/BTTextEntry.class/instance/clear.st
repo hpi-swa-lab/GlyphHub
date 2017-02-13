@@ -1,3 +1,3 @@
-as yet unclassified
+editing
 clear
 	self text: ''

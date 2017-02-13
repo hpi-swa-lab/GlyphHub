@@ -1,0 +1,18 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"confirmCompletion" : "TB 2/13/2017 00:42",
+		"displaySuggestions:" : "TB 2/13/2017 00:53",
+		"initialize" : "TB 2/13/2017 00:49",
+		"keyStroke:" : "TB 2/13/2017 00:45",
+		"keyboardFocusChange:" : "TB 2/13/2017 01:10",
+		"markupForResult:" : "TB 2/13/2017 00:41",
+		"moveActiveSuggestion:" : "TB 2/13/2017 00:43",
+		"outOfWorld:" : "TB 2/12/2017 23:49",
+		"selected:" : "TB 2/12/2017 23:48",
+		"showSuggestions" : "TB 2/12/2017 23:09",
+		"suggestionsList:" : "TB 2/12/2017 23:14",
+		"suggestionsPromise:" : "TB 2/12/2017 23:13",
+		"updateSuggestions" : "TB 2/13/2017 00:51",
+		"updateText:" : "TB 2/12/2017 23:45" } }

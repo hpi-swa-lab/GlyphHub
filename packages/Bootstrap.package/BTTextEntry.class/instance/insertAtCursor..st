@@ -1,4 +1,4 @@
-as yet unclassified
+editing
 insertAtCursor: aString
 	| selection |
 	selection := self selectionBounds.
