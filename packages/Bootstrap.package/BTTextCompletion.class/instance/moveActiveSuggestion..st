@@ -1,6 +1,6 @@
 as yet unclassified
 moveActiveSuggestion: aDirection
-	| suggestionItem text |
+	| suggestionItem suggestionText |
 	activeSuggestion ~= 0 ifTrue: [
 		(suggestions submorphs at: activeSuggestion) active: false ].
 	
@@ -11,7 +11,7 @@ moveActiveSuggestion: aDirection
 
 	suggestionItem := (suggestions submorphs at: activeSuggestion) active: true.
 
-	text := suggestionItem firstSubmorph plainText.
+	suggestionText := suggestionItem firstSubmorph plainText.
 	self
-		internalText: text;
-		placeCursorAt: text size
+		internalText: suggestionText;
+		placeCursorAt: suggestionText size
