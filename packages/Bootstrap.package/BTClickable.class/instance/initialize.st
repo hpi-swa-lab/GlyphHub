@@ -2,11 +2,10 @@ as yet unclassified
 initialize
 	super initialize.
 	
-	hovered := false.
-	active := false.
-	do := [].
-	
 	self
+		hovered: false;
+		active: false;
+		do: [];
 		changeTableLayout;
 		vResizing: #shrinkWrap;
 		hResizing: #shrinkWrap;

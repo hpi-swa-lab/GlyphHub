@@ -1,0 +1,14 @@
+{
+	"category" : "FontReviewTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "FRTEditorWidget",
+	"pools" : [
+		 ],
+	"super" : "BTTopLevel",
+	"type" : "normal" }

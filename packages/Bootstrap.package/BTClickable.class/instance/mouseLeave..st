@@ -1,4 +1,4 @@
 as yet unclassified
 mouseLeave: anEvent
-	hovered := false.
+	self hovered: false.
 	self changed

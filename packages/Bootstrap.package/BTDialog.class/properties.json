@@ -1,0 +1,14 @@
+{
+	"category" : "Bootstrap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"titleLabel" ],
+	"name" : "BTDialog",
+	"pools" : [
+		 ],
+	"super" : "BTCard",
+	"type" : "normal" }

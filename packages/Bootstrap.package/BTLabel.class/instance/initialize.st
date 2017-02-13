@@ -8,4 +8,4 @@ initialize
 	
 	super initialize.
 	
-	self color: (Color fromString: '#111111').
+	self color: BTWidget foregroundColor

@@ -1,0 +1,14 @@
+{
+	"category" : "Bootstrap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "BTNotification",
+	"pools" : [
+		 ],
+	"super" : "BTAlert",
+	"type" : "normal" }

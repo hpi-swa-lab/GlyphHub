@@ -1,4 +1,4 @@
 as yet unclassified
 mouseEnter: anEvent
-	hovered := true.
+	self hovered: true.
 	self changed
