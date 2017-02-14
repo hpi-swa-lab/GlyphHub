@@ -10,7 +10,8 @@
 		"font",
 		"width",
 		"text",
-		"height" ],
+		"height",
+		"ellipsize" ],
 	"name" : "BTTextLayout",
 	"pools" : [
 		 ],

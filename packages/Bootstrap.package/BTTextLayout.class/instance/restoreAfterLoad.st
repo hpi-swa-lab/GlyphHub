@@ -4,4 +4,5 @@ restoreAfterLoad
 	font ifNotNil: [ self font: font ].
 	height ifNotNil: [ self height: height ].	
 	width ifNotNil: [ self width: width ].
-	text ifNotNil: [ self text: text ]
+	text ifNotNil: [ self text: text ].
+	ellipsize ifNotNil: [ self ellipsize: ellipsize ]

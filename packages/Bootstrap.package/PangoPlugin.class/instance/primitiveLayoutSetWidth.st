@@ -10,6 +10,6 @@ primitiveLayoutSetWidth
 	width := interpreterProxy stackIntegerValue: 0.
 	interpreterProxy failed ifTrue: [ ^interpreterProxy primitiveFailFor: 100 ].
 	
-	self cCode: 'pango_layout_set_width(layout, width == -1 ? -1 : width * PANGO_SCALE)'.
+	self cCode: 'pango_layout_set_width(layout, width < 0 ? width : width * PANGO_SCALE)'.
 	
 	^interpreterProxy pop: interpreterProxy methodArgumentCount
