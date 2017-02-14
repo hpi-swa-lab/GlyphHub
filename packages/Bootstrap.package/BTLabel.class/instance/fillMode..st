@@ -3,7 +3,6 @@ fillMode: aMode
 	" one of #fill, #shrink, #fixed "
 	fillMode := aMode.
 
-	self hResizing: (aMode = #fill
-		ifTrue: [ #spaceFill ]
-		ifFalse: [ #shrinkWrap ]).
-	self vResizing: #shrinkWrap
+	self
+		hResizing: (aMode = #fill ifTrue: [#spaceFill] ifFalse: [#shrinkWrap]);
+		vResizing: #shrinkWrap

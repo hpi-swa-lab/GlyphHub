@@ -3,7 +3,8 @@ initialize
 	layout := BTTextLayout new font: 'Roboto 12'; yourself.
 	text := ''.
 	angle := 0.
-	fillMode := #fixed.
 	styleAttributes := Dictionary new.
+	
+	self fillMode: #fixed.
 	
 	super initialize

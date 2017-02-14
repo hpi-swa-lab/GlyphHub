@@ -3,7 +3,7 @@ testFillModeRigid
 	| container label fixedWidth |
 	label := (BTLabel text: 'lorem ipsum dolor sit amet consecutor amed si drandum ran clericum sicum') fillMode: #rigid.
 
-	container := BTTopLevel new extent: 100 asPoint; add: label; fullBounds; yourself.
+	container := BTTopLevel new extent: 100 asPoint; padding: 0; add: label; fullBounds; yourself.
 	fixedWidth := label width.
 	
 	self assert: fixedWidth equals: label width.
