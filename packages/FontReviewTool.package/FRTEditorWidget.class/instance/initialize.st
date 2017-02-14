@@ -16,7 +16,9 @@ initialize
 		yourself.
 	
 	{FRTCommentThread example1. FRTCommentThread example2. FRTCommentThread example3} do: [ :thread |
-		overlay add: ((BTLabel small: (BTLabel linkMarkup: thread title)) fillMode: #fill) ].
+		overlay add: ((BTLabel small: (BTLabel linkMarkup: thread title))
+			fillMode: #fill;
+			ellipsize: #end) ].
 	
 	overlay
 		add: BTWidget verticalSpacer;
