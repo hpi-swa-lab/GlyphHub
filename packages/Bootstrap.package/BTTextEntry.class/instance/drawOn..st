@@ -4,7 +4,7 @@ drawOn: aCanvas
 
 	self hasSelection ifTrue: [ | selection |
 		selection := self selectionBounds.
-		self drawOn: aCanvas from: selection first to: selection second color: Color white fillColor: BTWidget selectionColor ].
+		self drawOn: aCanvas from: selection first to: selection second color: Color white fillColor: BTColorScheme selectionColor ].
 	
 	(focused and: [drawCursor and: [self hasSelection not]]) ifTrue: [
 		aCanvas

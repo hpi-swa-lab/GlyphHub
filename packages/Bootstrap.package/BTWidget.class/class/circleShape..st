@@ -1,4 +1,4 @@
-as yet unclassified
+drawing
 circleShape: diameter
 	| circle radius |
 	radius := diameter  / 2.0.

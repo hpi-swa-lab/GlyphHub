@@ -8,4 +8,4 @@ initialize
 	
 	super initialize.
 	
-	self color: BTWidget foregroundColor
+	self color: BTColorScheme secondary foreground  

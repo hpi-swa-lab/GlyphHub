@@ -3,6 +3,6 @@ topLevel
 	^self new
 		hResizing: #rigid;
 		vResizing: #rigid;
-		color: BTWidget backgroundColor;
+		color: BTColorScheme secondary background;
 		beSticky;
 		yourself

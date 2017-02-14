@@ -1,0 +1,14 @@
+{
+	"category" : "Bootstrap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"colorType" ],
+	"name" : "BTCheckbox",
+	"pools" : [
+		 ],
+	"super" : "BTIconButton",
+	"type" : "normal" }

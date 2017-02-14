@@ -7,6 +7,6 @@ initialize
 		vResizing: #shrinkWrap;
 		hResizing: #spaceFill;
 		vertical: false;
-		justifyItems: #left;  
+		alignItems: #(start center);
 		spacing: BTWidget spacing;
 		padding: 20 @ 12

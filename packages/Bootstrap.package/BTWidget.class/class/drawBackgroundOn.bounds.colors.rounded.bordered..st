@@ -1,4 +1,4 @@
-as yet unclassified
+drawing
 drawBackgroundOn: aCanvas bounds: aRectangle colors: aColorSet rounded: rounded bordered: bordered
 	self
 		drawBackgroundOn: aCanvas

@@ -3,4 +3,4 @@ colorType: aType
 	colorType := aType.
 
 	self hasSubmorphs ifTrue: [
-		self firstSubmorph color: ((BTWidget colorsForType: colorType) at: #foreground) ]
+		self firstSubmorph color: (BTColorScheme type: colorType mode: #invert) foreground ]

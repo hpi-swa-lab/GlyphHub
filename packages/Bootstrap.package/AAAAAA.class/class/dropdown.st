@@ -10,4 +10,4 @@ dropdown
 		selectedDo: [ :action | Transcript show: 'Selected '; show: action; cr ];
 		attachTo: button.
 	
-	^BTPage topLevel size: 500 asPoint; add: button
+	^BTTopLevel new size: 500 asPoint; add: button

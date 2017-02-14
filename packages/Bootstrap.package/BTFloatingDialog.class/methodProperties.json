@@ -1,9 +1,10 @@
 {
 	"class" : {
-		"open:for:" : "TB 2/12/2017 15:04" },
+		 },
 	"instance" : {
 		"attachTo:" : "TB 2/12/2017 15:31",
 		"handlesMouseDown:" : "TB 2/12/2017 15:29",
+		"keyboardFocusColor" : "TB 2/14/2017 15:04",
 		"mouseDown:" : "TB 2/12/2017 15:34",
 		"openFor:event:" : "TB 2/12/2017 15:32",
 		"openPositionFor:" : "TB 2/12/2017 15:15",

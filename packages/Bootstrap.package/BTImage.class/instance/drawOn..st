@@ -14,8 +14,8 @@ drawOn: aCanvas
 			origin: self innerBounds origin;
 			yourself.
 		
-		BTWidget drawBackgroundOn: aCanvas bounds: self innerBounds colors: ({
-			#background -> bitmap.
-			#border -> borderColor
-		} as: Dictionary) ]
+		BTWidget
+			drawBackgroundOn: aCanvas
+			bounds: self innerBounds
+			colors: (BTColorScheme secondary background: bitmap) ]
 		"aCanvas drawImage: targetForm at: (self innerBounds extent / 2) - (targetForm extent / 2) + self innerBounds origin ]"

@@ -1,4 +1,4 @@
-as yet unclassified
+drawing
 drawBackgroundOn: aCanvas bounds: aRectangle colors: aColorSet rounded: rounded bordered: bordered shapeSelector: aSelector
 	| r |
 	r := aRectangle insetBy: (Rectangle
@@ -11,11 +11,11 @@ drawBackgroundOn: aCanvas bounds: aRectangle colors: aColorSet rounded: rounded 
 		aaLevel: 4;
 		
 		drawBezier3Shape: ((self perform: aSelector with: r with: rounded with: #(true true true true)) collect: [ :po | po + r origin ])
-		color: (aColorSet at: #background)
+		color: (aColorSet background)
 		borderWidth: 0
 		borderColor: nil;
 		
 		drawBezier3Shape: ((self perform: aSelector with: r with: rounded with: bordered) collect: [ :po | po + r origin ])
 		color: nil
 		borderWidth: 1
-		borderColor: (aColorSet at: #border)
+		borderColor: (aColorSet border)

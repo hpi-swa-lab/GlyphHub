@@ -1,4 +1,4 @@
-as yet unclassified
+drawing
 drawBackgroundWithTipOn: aCanvas bounds: aRectangle colors: aColorSet
 	self
 		drawBackgroundOn: aCanvas

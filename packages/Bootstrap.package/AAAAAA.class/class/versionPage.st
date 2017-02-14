@@ -1,8 +1,8 @@
 as yet unclassified
 versionPage
 	| author a c shortO ta |
-	author := BTRow new
-		add: (BTImage new scalingMode: #rigid; extent: 64 asPoint; path: FileDirectory default / 'penguin.png');
+	author := BTPage row
+		add: (BTImage new scalingMode: #rigid; extent: 64 asPoint; path: FileDirectory default / 'BP2016H1' / 'assets' / 'penguin.png');
 		add: (BTPage new
 			padding: 0;
 			add: (BTLabel bold: 'Tom Beckmann');
@@ -14,10 +14,11 @@ versionPage
 	ta := BTCard collapsible: 'त - Ta' content: (BTLabel text: '<span size="60000">त</span>').
 	{a. c. shortO. ta} do: [ :l | l width: 300 ].
 	
-	^BTPage topLevel
+	^BTTopLevel new
+		size: 600 asPoint;
 		add: author;
 		add: (BTLabel pageHeader: 'Bitter Devanagari 0.1');
-		add: (BTLabel text: 'In this update I incorporated the feedback from ', (BTLabel linkMarkup: '@font_master2323') ,' from here ', (BTLabel linkMarkup: '#125'));
+		add: ((BTLabel text: 'In this update I incorporated the feedback from ', (BTLabel linkMarkup: '@font_master2323') ,' from here ', (BTLabel linkMarkup: '#125')) fillMode: #fill);
 		add: (BTLabel categoryHeader: 'Changes');
 		add: (BTLabel subcategoryHeader: 'Latin');
 		add: a;

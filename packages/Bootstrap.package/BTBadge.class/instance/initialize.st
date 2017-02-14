@@ -6,5 +6,5 @@ initialize
 		changeTableLayout;
 		vResizing: #shrinkWrap;
 		hResizing: #shrinkWrap;
-		colorType: #primary;
-		layoutInset: 6 @ 4
+		colorType: #secondary;
+		padding: 6 @ 4

@@ -1,0 +1,16 @@
+{
+	"category" : "Bootstrap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"foreground",
+		"background",
+		"border" ],
+	"name" : "BTColorScheme",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

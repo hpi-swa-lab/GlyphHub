@@ -2,7 +2,7 @@ as yet unclassified
 login
 	| loginPage loginButton window loader |
 	loginButton := BTButton label: 'Login'.
-	loginPage := BTPage new
+	loginPage := (BTPage sizing: #(shrinkWrap shrinkWrap) vertical: true)
 		add: (BTLabel heading: 'Login to the FONT_WIKI');
 		add: (BTTextArea placeholder: 'Username');
 		add: (BTPasswordArea placeholder: 'Password');
@@ -10,9 +10,8 @@ login
 
 	loader := BTLoader new.
 
-	window := BTPage topLevel
-		listCentering: #center;
-		wrapCentering: #center;
+	window := BTTopLevel new
+		alignItems: #(center center);
 		size: 600 asPoint;
 		add: loginPage;
 		yourself.

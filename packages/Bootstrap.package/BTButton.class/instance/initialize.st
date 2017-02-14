@@ -7,4 +7,4 @@ initialize
 	self
 		add: label;
 		padding: 16 @ 8;
-		colorType: #primary
+		colorType: #secondary

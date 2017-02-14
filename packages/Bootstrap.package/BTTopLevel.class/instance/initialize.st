@@ -7,5 +7,7 @@ initialize
 	self
 		hResizing: #rigid;
 		vResizing: #rigid;
-		color: BTWidget backgroundColor;
+		size: 500 asPoint;  
+		withPadding;
+		color: BTColorScheme secondary background;
 		beSticky

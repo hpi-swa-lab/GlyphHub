@@ -17,8 +17,6 @@ drawOn: aCanvas
 	BTWidget
 		drawBackgroundOn: aCanvas
 		bounds: self bounds
-		colors: ({
-			#background -> (hovered ifTrue: [BTWidget grayLighter] ifFalse: [BTWidget backgroundColor]).
-			#border -> BTWidget grayLighter} as: Dictionary)
+		colors: (BTColorScheme secondary hovered: hovered)
 		rounded: rounded
 		bordered: bordered

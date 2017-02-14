@@ -10,5 +10,5 @@
 	"name" : "AAAAAA",
 	"pools" : [
 		 ],
-	"super" : "BTPage",
+	"super" : "BTTopLevel",
 	"type" : "normal" }

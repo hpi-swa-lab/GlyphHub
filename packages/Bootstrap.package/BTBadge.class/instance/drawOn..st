@@ -3,4 +3,4 @@ drawOn: aCanvas
 	BTWidget
 		drawBackgroundOn: aCanvas
 		bounds: self bounds
-		colors: (BTWidget colorsForType: colorType)
+		colors: (BTColorScheme type: colorType mode: #invert)
