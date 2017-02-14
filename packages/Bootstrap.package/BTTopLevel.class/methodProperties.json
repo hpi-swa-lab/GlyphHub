@@ -2,8 +2,9 @@
 	"class" : {
 		 },
 	"instance" : {
+		"colorMode" : "TB 2/14/2017 18:50",
 		"displayNotification:type:" : "TB 2/13/2017 15:35",
 		"displayNotification:type:for:" : "TB 2/13/2017 15:35",
-		"initialize" : "TB 2/14/2017 15:09",
+		"initialize" : "TB 2/14/2017 18:02",
 		"isTopLevel" : "TB 2/13/2017 14:23",
 		"topLevel" : "TB 2/13/2017 14:24" } }

@@ -1,7 +1,7 @@
 as yet unclassified
 drawOn: aCanvas
 	| bordered rounded |
-	(self owner notNil and: [self owner isButtonGroup])
+	(self parent notNil and: [self parent isButtonGroup])
 		ifTrue: [
 			rounded := {false. false. false. false}.
 			bordered := {true. false. true. true}.
@@ -17,6 +17,6 @@ drawOn: aCanvas
 	BTWidget
 		drawBackgroundOn: aCanvas
 		bounds: self bounds
-		colors: ((BTColorScheme type: colorType) hovered: hovered)
+		colors: self colorScheme
 		rounded: rounded
 		bordered: bordered

@@ -3,9 +3,11 @@
 		 },
 	"instance" : {
 		"attachTo:" : "TB 2/12/2017 15:31",
+		"colorMode" : "TB 2/14/2017 18:51",
 		"handlesMouseDown:" : "TB 2/12/2017 15:29",
+		"initialize" : "TB 2/14/2017 18:51",
 		"keyboardFocusColor" : "TB 2/14/2017 15:04",
-		"mouseDown:" : "TB 2/12/2017 15:34",
+		"mouseDown:" : "TB 2/14/2017 18:51",
 		"openFor:event:" : "TB 2/12/2017 15:32",
 		"openPositionFor:" : "TB 2/12/2017 15:15",
 		"targetOffset" : "TB 2/12/2017 15:03",

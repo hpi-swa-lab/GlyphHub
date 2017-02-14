@@ -8,8 +8,7 @@
 	"instvars" : [
 		"tags",
 		"input",
-		"inputBadge",
-		"colorType" ],
+		"inputBadge" ],
 	"name" : "BTTagList",
 	"pools" : [
 		 ],

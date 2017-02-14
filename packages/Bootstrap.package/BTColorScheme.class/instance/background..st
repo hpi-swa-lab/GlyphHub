@@ -1,3 +1,3 @@
-as yet unclassified
+colors
 background: aColor
-	background := aColor
+	^self copy privateBackground: aColor

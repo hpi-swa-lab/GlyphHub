@@ -6,4 +6,4 @@ initialize
 		changeTableLayout;
 		hResizing: #shrinkWrap;
 		vResizing: #shrinkWrap;
-		listDirection: #leftToRight
+		vertical: false  

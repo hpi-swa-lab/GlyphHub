@@ -9,4 +9,4 @@ drawOn: aCanvas
 	(focused and: [drawCursor and: [self hasSelection not]]) ifTrue: [
 		aCanvas
 			fillRectangle: (self layoutBounds origin + cursorRect origin extent: 1 @ cursorRect extent y)
-			fillStyle: self color ]
+			fillStyle: self colorScheme foreground ]

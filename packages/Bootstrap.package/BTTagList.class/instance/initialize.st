@@ -2,18 +2,15 @@ as yet unclassified
 initialize
 	super initialize.
 	
-	colorType := #secondary.
 	tags := OrderedCollection new.
-	
-	inputBadge := BTBadge new colorType: colorType.
+	inputBadge := BTBadge new.
 	
 	input := BTTextEntry new
 		styleAttributes: BTBadge styleAttributes;
 		fillMode: #fixed;
-		color: Color white;
 		placeholder: 'New Tag ...';
 		returnDo: [
-			self insert: ((BTBadge text: input text) colorType: colorType) before: inputBadge.
+			self insert: (BTBadge text: input text) before: inputBadge.
 			self tags add: input text.
 			input clear.
 			nil ];

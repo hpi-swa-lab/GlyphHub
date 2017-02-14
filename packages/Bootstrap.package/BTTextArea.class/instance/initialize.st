@@ -2,4 +2,6 @@ as yet unclassified
 initialize
 	super initialize.
 	
-	self padding: 12 @ 8
+	self
+		colorScheme: (BTColorScheme type: #secondary);
+		padding: 12 @ 8

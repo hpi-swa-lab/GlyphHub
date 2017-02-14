@@ -9,5 +9,6 @@ initialize
 		vResizing: #rigid;
 		size: 500 asPoint;  
 		withPadding;
-		color: BTColorScheme secondary background;
+		colorType: #secondary;  
+		color: self colorScheme background;
 		beSticky

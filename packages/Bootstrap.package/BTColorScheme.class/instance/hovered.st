@@ -1,6 +1,5 @@
-as yet unclassified
+variations
 hovered
-	^self class
-		fg: self foreground
-		bg: (self background adjustBrightness: -0.15)
-		border: self border
+	^self background
+		ifNotNil: [ self background: (self background adjustBrightness: -0.15) ]
+		ifNil: [ self foreground: (self foreground adjustBrightness: -0.15) ]

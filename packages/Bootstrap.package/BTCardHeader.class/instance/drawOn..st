@@ -3,6 +3,6 @@ drawOn: aCanvas
 	BTWidget
 		drawBackgroundOn: aCanvas
 		bounds: self bounds
-		colors: (BTColorScheme secondary: #darker)  
+		colors: self colorScheme
 		rounded: {true. true. false. false}
 		bordered: {false. false. true. false}

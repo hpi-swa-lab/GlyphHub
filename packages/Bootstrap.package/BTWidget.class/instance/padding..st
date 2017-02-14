@@ -1,4 +1,4 @@
-as yet unclassified
+layout
 padding: aPointOrRectangle
 	self layoutInset: (aPointOrRectangle class = Rectangle
 		ifTrue: [aPointOrRectangle expandBy: BTWidget scalingFactor]

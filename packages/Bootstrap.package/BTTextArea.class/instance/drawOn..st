@@ -3,6 +3,6 @@ drawOn: aCanvas
 	BTWidget
 		drawBackgroundOn: aCanvas
 		bounds: self bounds
-		colors: (BTColorScheme secondary focused: focused).
+		colors: (self colorScheme focused: focused).
 	
 	super drawOn: aCanvas

@@ -1,3 +1,3 @@
-as yet unclassified
+hierarchy
 addTo: aWidget
 	aWidget addMorphBack: self

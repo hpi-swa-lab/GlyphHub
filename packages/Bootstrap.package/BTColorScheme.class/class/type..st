@@ -1,4 +1,4 @@
 initialize-release
 type: aType
 	" see type:mode: "
-	^self perform: aType
+	^self type: aType mode: #normal

@@ -5,7 +5,6 @@ initialize
 	self
 		size: 600 @ 800;
 		add: (BTButtonGroup new
-			colorType: #secondary;
 			add: (BTButton icon: #list);
 			add: (BTButton icon: #th_large));
 		add: (BTLabel heading: 'Does this A look fat to you?');

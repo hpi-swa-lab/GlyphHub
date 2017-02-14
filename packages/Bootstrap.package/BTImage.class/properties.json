@@ -9,8 +9,7 @@
 		"scalingMode",
 		"form",
 		"cachedForm",
-		"fillMode",
-		"borderColor" ],
+		"fillMode" ],
 	"name" : "BTImage",
 	"pools" : [
 		 ],

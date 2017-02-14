@@ -1,3 +1,3 @@
-as yet unclassified
+hierarchy
 topLevel
-	^self owner topLevel
+	^self parent topLevel

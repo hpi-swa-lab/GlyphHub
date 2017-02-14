@@ -1,3 +1,3 @@
-as yet unclassified
+layout
 spacing: aNumber
 	self cellInset: aNumber * BTWidget scalingFactor

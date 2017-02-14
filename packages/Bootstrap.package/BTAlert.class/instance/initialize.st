@@ -6,6 +6,7 @@ initialize
 		changeTableLayout;
 		vResizing: #shrinkWrap;
 		hResizing: #spaceFill;
-		listCentering: #center;
-		layoutInset: 20 @ 12;
-		colorType: #success
+		vertical: false;  
+		alignItems: #(start center);
+		padding: 20 @ 12;
+		colorType: #warning

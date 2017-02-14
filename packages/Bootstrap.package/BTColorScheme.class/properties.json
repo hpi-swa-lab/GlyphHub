@@ -4,11 +4,13 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "TB 2/14/2017 20:02",
 	"instvars" : [
 		"foreground",
 		"background",
-		"border" ],
+		"border",
+		"mode",
+		"colorType" ],
 	"name" : "BTColorScheme",
 	"pools" : [
 		 ],

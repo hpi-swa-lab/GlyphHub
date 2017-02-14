@@ -1,3 +1,3 @@
-as yet unclassified
+variations
 hovered: aBoolean
-	aBoolean ifTrue: [ ^self hovered ] ifFalse: [ ^self ]
+	^aBoolean ifTrue: [ self hovered ] ifFalse: [ self ]

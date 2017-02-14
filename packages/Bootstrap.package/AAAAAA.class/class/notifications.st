@@ -1,7 +1,7 @@
 as yet unclassified
 notifications
 	| toplevel |
-	toplevel := BTTopLevel new size: 500 asPoint.
+	toplevel := BTTopLevel new.
 	
 	toplevel add: ((BTButton label: 'Show notification' icon: #flag) do: [ :button |
 		button topLevel displayNotification: ((BTIcon icon: #life_ring), ' Critical Failure') type: #danger ]).

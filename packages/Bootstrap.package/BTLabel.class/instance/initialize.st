@@ -6,6 +6,4 @@ initialize
 	fillMode := #fixed.
 	styleAttributes := Dictionary new.
 	
-	super initialize.
-	
-	self color: BTColorScheme secondary foreground  
+	super initialize

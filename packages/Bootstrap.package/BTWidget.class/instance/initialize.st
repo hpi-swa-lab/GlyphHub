@@ -1,5 +1,7 @@
-as yet unclassified
+initialize-release
 initialize
 	super initialize.
 	
-	self color: Color transparent
+	self
+		color: Color transparent;
+		colorScheme: #inherit

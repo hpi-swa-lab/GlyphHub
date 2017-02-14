@@ -1,3 +1,3 @@
-as yet unclassified
+testing
 isLastChild
 	^self owner lastSubmorph == self

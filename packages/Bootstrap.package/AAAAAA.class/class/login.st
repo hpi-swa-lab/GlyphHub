@@ -1,7 +1,7 @@
 as yet unclassified
 login
 	| loginPage loginButton window loader |
-	loginButton := BTButton label: 'Login'.
+	loginButton := (BTButton label: 'Login') colorType: #primary.
 	loginPage := (BTPage sizing: #(shrinkWrap shrinkWrap) vertical: true)
 		add: (BTLabel heading: 'Login to the FONT_WIKI');
 		add: (BTTextArea placeholder: 'Username');

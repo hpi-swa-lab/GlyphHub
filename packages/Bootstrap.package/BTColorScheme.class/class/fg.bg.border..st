@@ -1,7 +1,7 @@
 initialize-release
 fg: aForegroundColor bg: aBackgroundColor border: aBorderColor
 	^self new
-		foreground: aForegroundColor;
-		background: aBackgroundColor;
-		border: aBorderColor;
+		privateForeground: aForegroundColor;
+		privateBackground: aBackgroundColor;
+		privateBorder: aBorderColor;
 		yourself

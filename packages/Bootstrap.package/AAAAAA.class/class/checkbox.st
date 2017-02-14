@@ -3,4 +3,4 @@ checkbox
 	| box |
 	box := BTCheckbox new.
 	
-	^BTPage topLevel size: 500 asPoint; add: box
+	^BTTopLevel new add: box

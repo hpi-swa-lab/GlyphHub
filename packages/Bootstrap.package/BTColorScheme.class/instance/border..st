@@ -1,3 +1,3 @@
-as yet unclassified
+colors
 border: aColor
-	border := aColor
+	^self copy privateBorder: aColor

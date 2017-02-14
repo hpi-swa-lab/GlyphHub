@@ -1,4 +1,4 @@
-as yet unclassified
+layout
 alignItems: aCollection
 	" a pair (horizontal, vertical) or #center, #start, #end, #fill.
 	

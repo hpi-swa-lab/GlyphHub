@@ -6,7 +6,6 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"colorType",
 		"label" ],
 	"name" : "BTButton",
 	"pools" : [

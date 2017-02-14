@@ -1,3 +1,3 @@
 as yet unclassified
-color
-	^textColor
+colorMode
+	^#darker

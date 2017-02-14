@@ -8,7 +8,6 @@
 	"instvars" : [
 		"text",
 		"layout",
-		"textColor",
 		"fillMode",
 		"angle",
 		"styleAttributes" ],

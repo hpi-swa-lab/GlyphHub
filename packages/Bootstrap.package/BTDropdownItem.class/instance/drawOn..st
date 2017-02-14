@@ -3,4 +3,4 @@ drawOn: aCanvas
 	(hovered or: [active]) ifTrue: [
 		aCanvas
 			fillRectangle: self bounds
-			fillStyle: BTColorScheme secondary hovered background ]
+			fillStyle: self colorScheme background ]
