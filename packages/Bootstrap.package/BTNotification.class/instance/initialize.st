@@ -2,4 +2,4 @@ as yet unclassified
 initialize
 	super initialize.
 	
-	self hResizing: #shrinkWrap
+	self minSize: 150 @ 0; ignoreLayout: true

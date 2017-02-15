@@ -4,5 +4,6 @@ initialize
 	
 	self
 		color: Color transparent;
-		spacing: BTWidget spacing;  
+		spacing: BTWidget spacing;
+		vertical: true;
 		withLayout

@@ -5,6 +5,7 @@ placeChildrenOf: aWidget in: newBounds additionalSpace: leftOverPrimary hasExpan
 	
 	" put submorphs at their places "
 	aWidget submorphs withIndexDo: [ :m :index | | box minSize |
+		m ignoreLayout ifFalse: [
 		minSize := aCollection at: index.
 		
 		aWidget vertical
@@ -19,5 +20,4 @@ placeChildrenOf: aWidget in: newBounds additionalSpace: leftOverPrimary hasExpan
 					newBounds height.
 				position := position + box width + aNumber ].
 		
-		Transcript show: aWidget class name; show: ' giving '; show: m; show: ' '; show: box extent; show: ' space'; cr.
-		self applyAlignmentFor: m atSize: minSize in: box ]
+		self applyAlignmentFor: m atSize: minSize in: box ]]

@@ -6,7 +6,7 @@ Transcript clear.
 	container := BTTopLevel new
 		extent: 100 asPoint;
 		padding: 0;
-		add: ((BTPage sizing: #(spaceFill spaceFill) vertical: false) add: label);
+		add: ((BTPage new align: #(expand expand); vertical: false) add: label);
 		fullBounds;
 		yourself.
 	

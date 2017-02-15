@@ -1,5 +1,6 @@
 as yet unclassified
 extent: aPoint
+	self layout width: aPoint x.
 	super extent: aPoint
 	"| desired width layoutInset |
 	layoutInset := self layoutInset class = Rectangle

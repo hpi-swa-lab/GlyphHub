@@ -13,5 +13,4 @@ applyAlignmentFor: aWidget atSize: aPoint in: aBox
 	aWidget align first == #end ifTrue: [ destBox := destBox translateBy: aBox width - aPoint x @ 0 ].
 	aWidget align second == #end ifTrue: [ destBox := destBox translateBy: 0 @ (aBox height - aPoint y) ].
 	
-	Transcript show: 'Assigning '; show: destBox extent; cr.
 	aWidget bounds: destBox

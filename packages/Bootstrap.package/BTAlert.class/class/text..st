@@ -1,5 +1,5 @@
 as yet unclassified
 text: aString
 	^self new
-		add: (BTLabel text: aString);
+		add: ((BTLabel text: aString) fillMode: #fill);
 		yourself

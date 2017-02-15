@@ -3,10 +3,9 @@
 		"exampleCenteredBox" : "TB 2/15/2017 18:17",
 		"exampleHeightForWidth" : "TB 2/15/2017 18:24" },
 	"instance" : {
-		"applyAlignmentFor:atSize:in:" : "TB 2/15/2017 18:51",
+		"applyAlignmentFor:atSize:in:" : "TB 2/15/2017 23:21",
 		"flipPoint:for:" : "TB 2/15/2017 11:51",
-		"layout:in:" : "TB 2/15/2017 18:44",
-		"minimumSizeOf:in:" : "TB 2/15/2017 18:46",
-		"minimumSizeOfChild:in:" : "TB 2/15/2017 18:32",
-		"placeChildrenOf:in:additionalSpace:hasExpanders:spacing:minSizes:" : "TB 2/15/2017 18:44",
+		"layout:in:" : "TB 2/15/2017 23:40",
+		"minimumSizeOf:in:" : "TB 2/15/2017 23:35",
+		"placeChildrenOf:in:additionalSpace:hasExpanders:spacing:minSizes:" : "TB 2/15/2017 23:20",
 		"sizeOf:in:" : "TB 2/15/2017 18:45" } }

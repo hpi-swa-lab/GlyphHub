@@ -11,7 +11,8 @@ minimumSizeOf: aWidget in: newBounds
 	
 	" determine which our children wants to expand and what minimum they will require "
 	aWidget submorphsDo: [ :m | | size |
-		size := self minimumSizeOfChild: m in: newBounds.
+		m ignoreLayout ifFalse: [
+		size := m minSizeForWidth: newBounds width.
 		minSizes add: size.
 		(m align at: primary) == #expand ifTrue: [ numberOfExpandingPrimary := numberOfExpandingPrimary + 1 ].
 		(m align at: secondary) == #expand ifTrue: [ numberOfExpandingSecondary := numberOfExpandingSecondary + 1 ].
@@ -21,9 +22,10 @@ minimumSizeOf: aWidget in: newBounds
 				requiredSizeSecondary := requiredSizeSecondary max: size y ]
 			ifTrue: [
 				requiredSizePrimary := requiredSizePrimary + size y.
-				requiredSizeSecondary := requiredSizeSecondary max: size x ]].
+				requiredSizeSecondary := requiredSizeSecondary max: size x ]]].
 	
-	requiredSizePrimary := requiredSizePrimary + (aWidget submorphCount - 1 * aWidget spacing).
+	aWidget hasSubmorphs ifTrue: [
+		requiredSizePrimary := requiredSizePrimary + (aWidget submorphCount - 1 * aWidget spacing) ].
 	
 	" grow if we can't fit all our children, shrink if none of our children want to expand and neither do we "
 	primarySize := aWidget vertical ifTrue: [newBounds height] ifFalse: [newBounds width].

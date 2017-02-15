@@ -10,7 +10,8 @@
 		"minSize",
 		"vertical",
 		"align",
-		"spacing" ],
+		"spacing",
+		"ignoreLayout" ],
 	"name" : "BTWidget",
 	"pools" : [
 		 ],

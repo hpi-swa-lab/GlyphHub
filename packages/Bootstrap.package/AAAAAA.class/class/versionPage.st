@@ -2,9 +2,9 @@ as yet unclassified
 versionPage
 	| author a c shortO ta |
 	author := BTPage row
-		add: (BTImage new scalingMode: #rigid; extent: 64 asPoint; path: FileDirectory default / 'BP2016H1' / 'assets' / 'penguin.png');
+		add: (BTImage new scalingMode: #rigid; minSize: 64 asPoint; path: FileDirectory default / 'BP2016H1' / 'assets' / 'penguin.png');
 		add: (BTPage new
-			padding: 0;
+			align: #(expand start);
 			add: (BTLabel bold: 'Tom Beckmann');
 			add: (BTLabel text: '10. Feb 2017')).
 	
