@@ -7,4 +7,5 @@ example2
 		marker: FRTMarker example1;
 		addComment: FRTComment example1;
 		addComment: FRTComment example2;
-		addTag: 'OpenType'
+		addTag: 'OpenType';
+		addLanguage: 'French'

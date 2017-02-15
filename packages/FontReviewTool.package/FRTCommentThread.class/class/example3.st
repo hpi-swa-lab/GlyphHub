@@ -7,4 +7,5 @@ example3
 		marker: FRTMarker example1;
 		addComment: FRTComment example1;
 		addComment: FRTComment example2;
-		addTag: 'Outline mistake'
+		addTag: 'Outline mistake';
+		addLanguage: 'Hindi'

@@ -4,10 +4,12 @@ comment: aComment
 	| textContentMorph metaInfoMorph badgeMorph|
 	comment := aComment.
 	
-	badgeMorph := BTBadge text: '42'. "TODO change to BTRow & read from collection from FRTComment"
+	badgeMorph := BTPage row.
+	(aComment author tagListForLanguages: aComment thread languages) do: [:each |
+		badgeMorph add: (BTBadge text: each type: #success)].
 	
 	metaInfoMorph := BTPage row.
-	metaInfoMorph add: badgeMorph oppositeTo: (BTLabel  secondary: '@', aComment author, ' - ', (self printDate: aComment dateTime)).
+	metaInfoMorph add: badgeMorph oppositeTo: (BTLabel  secondary: '@', aComment author username, ' - ', (self printDate: aComment dateTime)).
 	
 	textContentMorph := BTPage sizing: #(spaceFill shrinkWrap) vertical: true.
 	textContentMorph
@@ -15,5 +17,5 @@ comment: aComment
 		add: metaInfoMorph.
 	
 	self
-		add: (BTImage new scalingMode: #rigid; extent: 64 asPoint; path: FileDirectory default / 'BP2016H1' / 'assets' / 'penguin.png');
+		add: ((BTImage form: aComment author avatar) scalingMode: #rigid; extent: 64 asPoint);
 		add:  textContentMorph

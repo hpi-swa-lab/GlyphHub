@@ -8,4 +8,6 @@ example1
 		addComment: FRTComment example1;
 		addComment: FRTComment example2;
 		addTag: 'Kerning';
-		addTag: 'Consistency'
+		addTag: 'Consistency';
+		addLanguage: 'German';
+		addLanguage: 'Austrian'

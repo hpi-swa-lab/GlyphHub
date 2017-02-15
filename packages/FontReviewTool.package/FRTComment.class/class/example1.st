@@ -5,4 +5,4 @@ example1
 		dateTime: DateAndTime now;
 		text: 'The triangle should be a line';
 		image: (Form fromFileNamed: (FileDirectory default / 'BP2016H1' / 'notification_sample.png') fullName);
-		author: 'Vincent Connare'
+		author: FRTUser example1
