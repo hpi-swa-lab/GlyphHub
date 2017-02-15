@@ -3,10 +3,8 @@ initialize
 	super initialize.
 	
 	self
-		changeTableLayout;
-		vResizing: #shrinkWrap;
-		hResizing: #spaceFill;
-		vertical: false;  
-		alignItems: #(start center);
+		withLayout;
+		align: #(expand start);
+		vertical: false;
 		padding: 20 @ 12;
 		colorType: #warning

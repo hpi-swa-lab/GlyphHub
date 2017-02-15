@@ -5,4 +5,5 @@ restoreAfterLoad
 	height ifNotNil: [ self height: height ].	
 	width ifNotNil: [ self width: width ].
 	text ifNotNil: [ self text: text ].
-	ellipsize ifNotNil: [ self ellipsize: ellipsize ]
+	ellipsize ifNotNil: [ self ellipsize: ellipsize ].
+	wrap ifNotNil: [ self wrap: wrap ]

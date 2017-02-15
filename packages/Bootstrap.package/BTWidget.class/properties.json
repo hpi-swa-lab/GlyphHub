@@ -6,7 +6,11 @@
 		"ScalingFactor" ],
 	"commentStamp" : "TB 2/14/2017 17:50",
 	"instvars" : [
-		"colorScheme" ],
+		"colorScheme",
+		"minSize",
+		"vertical",
+		"align",
+		"spacing" ],
 	"name" : "BTWidget",
 	"pools" : [
 		 ],

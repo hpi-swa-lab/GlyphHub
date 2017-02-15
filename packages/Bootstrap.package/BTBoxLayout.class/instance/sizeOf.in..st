@@ -1,0 +1,20 @@
+as yet unclassified
+sizeOf: aWidget in: aBox
+	| data leftOverPrimary newBounds numberOfExpandingPrimary numberOfExpandingSecondary requiredSizePrimary requiredSizeSecondary availableSizePrimary minSizes |
+	data := self minimumSizeOf: aWidget in: aBox.
+	newBounds := data first.
+	requiredSizePrimary := data second.
+	requiredSizeSecondary := data third.
+	numberOfExpandingPrimary := data fourth.
+	numberOfExpandingSecondary := data fifth.
+	minSizes := data sixth.
+	
+	newBounds := newBounds origin extent: (newBounds extent max: aWidget minSizeRequest).
+	
+	" check how much left-over space we have. if we have expanding children, only those get to have left-over space "
+	availableSizePrimary := aWidget vertical ifTrue: [newBounds height] ifFalse: [newBounds width].
+	leftOverPrimary := availableSizePrimary - requiredSizePrimary / (numberOfExpandingPrimary > 0
+		ifTrue: [numberOfExpandingPrimary]
+		ifFalse: (aWidget submorphCount)).
+	
+	^{newBounds. leftOverPrimary. numberOfExpandingPrimary. minSizes}

@@ -11,6 +11,6 @@ primitiveLayoutSetWrap
 	mode := interpreterProxy stackIntegerValue: 0.
 	interpreterProxy failed ifTrue: [ ^interpreterProxy primitiveFailFor: 100 ].
 	
-	self cCode: 'pango_layout_set_ellipsize(layout, mode)'.
+	self cCode: 'pango_layout_set_wrap(layout, mode)'.
 	
 	^interpreterProxy pop: interpreterProxy methodArgumentCount

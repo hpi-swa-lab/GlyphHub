@@ -1,3 +1,3 @@
 layout
 spacing: aNumber
-	self cellInset: aNumber * BTWidget scalingFactor
+	spacing := aNumber * BTWidget scalingFactor

@@ -1,25 +1,25 @@
 as yet unclassified
 login
-	| loginPage loginButton window loader |
+	| loginPage loginButton window loader loginBox |
 	loginButton := (BTButton label: 'Login') colorType: #primary.
-	loginPage := (BTPage sizing: #(shrinkWrap shrinkWrap) vertical: true)
+	loginBox := (BTPage new vertical: true; align: #(center center))
 		add: (BTLabel heading: 'Login to the FONT_WIKI');
 		add: (BTTextArea placeholder: 'Username');
 		add: (BTPasswordArea placeholder: 'Password');
 		add: loginButton.
-
-	loader := BTLoader new.
-
+	loginPage := (BTPage new align: #(expand expand)) add: loginBox.
+	
+	loader := BTLoader new align: #(center center).
+	
 	window := BTTopLevel new
-		alignItems: #(center center);
 		size: 600 asPoint;
 		add: loginPage;
 		yourself.
-
+	
 	loginButton do: [
-		window remove: loginPage; add: loader.
+		loginPage remove: loginBox; add: loader.
 		[	(Delay forSeconds: 1) wait.
-			loginPage add: ((BTAlert text: (BTIcon icon: #exclamation_triangle), ' Invalid login provided.') colorType: #danger) at: 2.
-			window remove: loader; add: loginPage ] fork. ].
+			loginBox add: ((BTAlert text: (BTIcon icon: #exclamation_triangle), ' Invalid login provided.') colorType: #danger) at: 2.
+			loginPage remove: loader; add: loginBox ] fork. ].
 	
 	^window

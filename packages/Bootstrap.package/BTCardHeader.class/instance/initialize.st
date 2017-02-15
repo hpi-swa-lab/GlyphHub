@@ -3,10 +3,7 @@ initialize
 	super initialize.
 
 	self
-		changeTableLayout;
-		vResizing: #shrinkWrap;
-		hResizing: #spaceFill;
+		align: #(start expand);
 		vertical: false;
-		alignItems: #(start center);
 		spacing: BTWidget spacing;
 		padding: 20 @ 12

@@ -5,6 +5,7 @@ initialize
 	activeNotifications := OrderedCollection new.
 	
 	self
+		layoutPolicy: BTBoxLayout new;
 		hResizing: #rigid;
 		vResizing: #rigid;
 		size: 500 asPoint;  
