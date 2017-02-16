@@ -10,7 +10,7 @@ testNestedHorizontalAndVerticalSingleChildExpanding
 	
 	self
 		assert: 100 asPoint equals: child extent;
-		assert: 100 asPoint equals: vertical extent;
+		assert: 600 asPoint equals: vertical extent;
 		assert: 600 asPoint equals: horizontal extent.
 		
 	vertical extent: 5 asPoint; fullBounds.

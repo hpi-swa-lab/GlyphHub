@@ -1,11 +1,12 @@
 {
 	"class" : {
 		"exampleCenteredBox" : "TB 2/15/2017 18:17",
-		"exampleHeightForWidth" : "TB 2/15/2017 18:24" },
+		"exampleHeightForWidth" : "TB 2/15/2017 18:24",
+		"exampleSimpleChat" : "TB 2/16/2017 12:50" },
 	"instance" : {
 		"applyAlignmentFor:atSize:in:" : "TB 2/15/2017 23:21",
 		"flipPoint:for:" : "TB 2/15/2017 11:51",
 		"layout:in:" : "TB 2/15/2017 23:40",
-		"minimumSizeOf:in:" : "TB 2/16/2017 09:29",
+		"minimumSizeOf:in:" : "TB 2/16/2017 12:50",
 		"placeChildrenOf:in:additionalSpace:hasExpanders:spacing:minSizes:" : "TB 2/15/2017 23:20",
 		"sizeOf:in:" : "TB 2/16/2017 09:37" } }
