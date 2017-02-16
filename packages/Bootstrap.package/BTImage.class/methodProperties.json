@@ -2,15 +2,15 @@
 	"class" : {
 		 },
 	"instance" : {
-		"drawOn:" : "TB 2/14/2017 18:09",
-		"extent:" : "TB 2/13/2017 18:21",
+		"drawOn:" : "TB 2/16/2017 08:50",
+		"extent:" : "TB 2/16/2017 08:40",
 		"fillMode" : "TB 2/2/2017 21:01",
 		"fillMode:" : "TB 2/2/2017 21:01",
 		"form" : "TB 2/2/2017 20:52",
-		"form:" : "TB 2/13/2017 18:21",
+		"form:" : "TB 2/16/2017 08:44",
 		"formAtExtent:" : "TB 2/2/2017 21:08",
 		"initialize" : "TB 2/14/2017 18:04",
+		"minSizeForWidth:" : "TB 2/16/2017 08:46",
 		"path:" : "TB 2/2/2017 21:14",
 		"scalingMode" : "TB 2/2/2017 20:51",
-		"scalingMode:" : "TB 2/13/2017 18:21",
-		"updateExtent" : "TB 2/13/2017 18:21" } }
+		"scalingMode:" : "TB 2/16/2017 08:43" } }

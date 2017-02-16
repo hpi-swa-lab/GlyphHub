@@ -5,7 +5,7 @@ drawOn: aCanvas
 		| targetForm |
 		targetForm := scalingMode caseOf: {
 			[#full] -> [self formAtExtent: self form extent].
-			[#rigid] -> [self formAtExtent: (self innerBounds extent)].
+			[#fixed] -> [self formAtExtent: (self innerBounds extent)].
 			[#shrink] -> [self formAtExtent: (self innerBounds extent min: form extent)].
 			[#fill] -> [self formAtExtent: self innerBounds extent] }.
 		

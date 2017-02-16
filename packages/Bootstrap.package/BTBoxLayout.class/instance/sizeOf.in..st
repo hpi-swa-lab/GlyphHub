@@ -15,6 +15,6 @@ sizeOf: aWidget in: aBox
 	availableSizePrimary := aWidget vertical ifTrue: [newBounds height] ifFalse: [newBounds width].
 	leftOverPrimary := availableSizePrimary - requiredSizePrimary / (numberOfExpandingPrimary > 0
 		ifTrue: [numberOfExpandingPrimary]
-		ifFalse: (aWidget submorphCount)).
+		ifFalse: [aWidget submorphCount]).
 	
 	^{newBounds. leftOverPrimary. numberOfExpandingPrimary. minSizes}

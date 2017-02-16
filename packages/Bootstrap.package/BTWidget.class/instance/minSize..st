@@ -1,4 +1,4 @@
 layout
 minSize: aPoint
-	minSize := aPoint * BTWidget scalingFactor.
+	minSize := aPoint asPoint * BTWidget scalingFactor.
 	self layoutChanged

@@ -2,7 +2,7 @@ as yet unclassified
 versionPage
 	| author a c shortO ta |
 	author := BTPage row
-		add: (BTImage new scalingMode: #rigid; minSize: 64 asPoint; path: FileDirectory default / 'BP2016H1' / 'assets' / 'penguin.png');
+		add: (BTImage new scalingMode: #fixed; minSize: 64 asPoint; path: FileDirectory default / 'BP2016H1' / 'assets' / 'penguin.png');
 		add: (BTPage new
 			align: #(expand start);
 			add: (BTLabel bold: 'Tom Beckmann');
@@ -26,3 +26,4 @@ versionPage
 		add: (BTLabel subcategoryHeader: 'Devanagari');
 		add: shortO;
 		add: ta
+		yourself

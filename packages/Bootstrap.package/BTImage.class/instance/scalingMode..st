@@ -1,11 +1,6 @@
 as yet unclassified
 scalingMode: aMode
-	" one of #rigid, #shrink, #fill, #full "
-	| resizing |
+	" one of #fixed, #shrink, #fill, #full "
 	scalingMode := aMode.
 
-	resizing := (scalingMode == #rigid or: [scalingMode == #full])
-		ifTrue: [ #rigid ]
-		ifFalse: [ #spaceFill ].
-
-	self	hResizing: resizing;	vResizing: resizing; updateExtent
+	self flag: #todo

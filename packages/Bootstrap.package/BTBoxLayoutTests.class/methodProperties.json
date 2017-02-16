@@ -10,6 +10,7 @@
 		"tearDown" : "TB 2/16/2017 00:03",
 		"testAlignCenter" : "TB 2/15/2017 16:17",
 		"testAlignEnd" : "TB 2/15/2017 16:17",
+		"testExpandingInExpandingWithAnotherChild" : "TB 2/16/2017 09:26",
 		"testNestedHorizontalAndVerticalSingleChild" : "TB 2/15/2017 13:43",
 		"testNestedHorizontalAndVerticalSingleChildExpanding" : "TB 2/15/2017 14:55",
 		"testNestedTwoColumns" : "TB 2/15/2017 14:57",
