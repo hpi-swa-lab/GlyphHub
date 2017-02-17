@@ -1,13 +1,11 @@
 as yet unclassified
 sizeOf: aWidget in: aBox
-	| data leftOverPrimary newBounds numberOfExpandingPrimary numberOfExpandingSecondary requiredSizePrimary requiredSizeSecondary availableSizePrimary minSizes |
+	| data leftOverPrimary newBounds numberOfExpandingPrimary requiredSizePrimary availableSizePrimary minSizes |
 	data := self minimumSizeOf: aWidget in: aBox.
 	newBounds := data first.
 	requiredSizePrimary := data second.
-	requiredSizeSecondary := data third.
-	numberOfExpandingPrimary := data fourth.
-	numberOfExpandingSecondary := data fifth.
-	minSizes := data sixth.
+	numberOfExpandingPrimary := data third.
+	minSizes := data fourth.
 	
 	newBounds := newBounds origin extent: (newBounds extent max: aWidget minSizeRequest).
 	

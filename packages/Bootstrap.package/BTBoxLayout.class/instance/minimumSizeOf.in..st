@@ -1,48 +1,28 @@
 as yet unclassified
 minimumSizeOf: aWidget in: newBounds
-	| numberOfExpandingPrimary numberOfExpandingSecondary requiredSizePrimary requiredSizeSecondary primary secondary primarySize secondarySize newPrimarySize newSecondarySize minSizes spacing |
-	primary := aWidget vertical ifTrue: [2] ifFalse: [1].
-	secondary := aWidget vertical ifFalse: [2] ifTrue: [1].
-	requiredSizePrimary := 0.
+	| numberOfExpanding requiredSizePrimary requiredSizeSecondary primarySize newPrimarySize minSizes spacing |
 	requiredSizeSecondary := 0.
-	numberOfExpandingPrimary := 0.
-	numberOfExpandingSecondary := 0.
+	numberOfExpanding := 0.
 	minSizes := OrderedCollection new.
 	primarySize := aWidget vertical ifTrue: [newBounds height] ifFalse: [newBounds width].
-	secondarySize := aWidget vertical ifFalse: [newBounds height] ifTrue: [newBounds width].
-	spacing := aWidget hasSubmorphs
-		ifTrue: [ aWidget submorphCount - 1 * aWidget spacing ]
-		ifFalse: [ 0 ].
+	spacing := self requiredSpacingIn: aWidget.
+	requiredSizePrimary := spacing.
 	
 	" determine which our children wants to expand and what minimum they will require "
 	aWidget submorphsDo: [ :m | | size |
 		m ignoreLayout ifFalse: [
-		size := m minSizeForWidth: newBounds width - spacing.
-		"Transcript show: aWidget class name; show: ' in '; show: m class name; show: ' got '; show: size; cr."
-		minSizes add: size.
-		(m align at: primary) == #expand ifTrue: [ numberOfExpandingPrimary := numberOfExpandingPrimary + 1 ].
-		(m align at: secondary) == #expand ifTrue: [ numberOfExpandingSecondary := numberOfExpandingSecondary + 1 ].
-		aWidget vertical
-			ifFalse: [
-				requiredSizePrimary := requiredSizePrimary + size x.
-				requiredSizeSecondary := requiredSizeSecondary max: size y ]
-			ifTrue: [
-				requiredSizePrimary := requiredSizePrimary + size y.
-				requiredSizeSecondary := requiredSizeSecondary max: size x ]]].
-	
-	requiredSizePrimary := requiredSizePrimary + spacing.
+			m expand ifTrue: [ numberOfExpanding := numberOfExpanding + 1 ].
+			size := minSizes add: (m minSizeForWidth: newBounds width - spacing).
+			size := self flipPoint: size for: aWidget.
+			requiredSizePrimary := requiredSizePrimary + size y.
+			requiredSizeSecondary := requiredSizeSecondary max: size x ]].
 	
 	" grow if we can't fit all our children, shrink if none of our children want to expand and neither do we "
-	newPrimarySize := ((numberOfExpandingPrimary > 0 or: [(aWidget align at: primary) == #expand])
+	newPrimarySize := ((numberOfExpanding > 0 or: [aWidget expand])
 		ifTrue: [ (primarySize max: requiredSizePrimary) ]
 		ifFalse: [ requiredSizePrimary ]).
-	newSecondarySize := ((numberOfExpandingSecondary > 0 or: [(aWidget align at: secondary) == #expand])
-		ifTrue: [ (secondarySize max: requiredSizeSecondary) ]
-		ifFalse: [ requiredSizeSecondary ]).
-	Transcript show: 'Required to fit '; show: aWidget class name; show: ': '; show: requiredSizePrimary @ requiredSizeSecondary; show: ' requested: '; show: newPrimarySize @ newSecondarySize; cr.
-	^{newBounds origin extent: (self flipPoint: newPrimarySize @ newSecondarySize for: aWidget).
+	
+	^{newBounds origin extent: (self flipPoint: newPrimarySize @ requiredSizeSecondary for: aWidget).
 		requiredSizePrimary.
-		requiredSizeSecondary.
-		numberOfExpandingPrimary.
-		numberOfExpandingSecondary.
+		numberOfExpanding.
 		minSizes}

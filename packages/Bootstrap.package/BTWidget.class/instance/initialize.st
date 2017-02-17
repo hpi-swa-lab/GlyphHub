@@ -5,6 +5,7 @@ initialize
 	minSize := 0 @ 0.
 	vertical := false.
 	spacing := 0.
+	expand := false.
 	ignoreLayout := false.
 	align := #(start start).
 	

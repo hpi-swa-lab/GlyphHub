@@ -9,7 +9,7 @@ testTwoChildrenExpandNotExpand
 	| child1 child2 topLevel |
 	self horizontalAndVerticalDo: [ :vertical |  
 		child1 := BTWidget new color: Color red; minSize: 50 asPoint.
-		child2 := BTWidget new color: Color green; align: (vertical ifTrue: [#(start expand)] ifFalse: [#(expand start)]); minSize: (self flipPoint: 0 @ 100).
+		child2 := BTWidget new color: Color green; align: (vertical ifTrue: [#(start fill)] ifFalse: [#(fill start)]); expand: true; minSize: (self flipPoint: 0 @ 100).
 		topLevel := BTTopLevel new add: child1; add: child2; extent: (self flipPoint: 600 @ 100); vertical: vertical; spacing: 0; padding: 0; fullBounds; yourself.
 		
 		self

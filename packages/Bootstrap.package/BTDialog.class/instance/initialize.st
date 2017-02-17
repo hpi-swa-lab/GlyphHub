@@ -11,4 +11,5 @@ initialize
 		colorType: #secondary;
 		add: (BTCardHeader new
 			add: ((BTIconButton icon: #remove) do: [ self delete ]);
-			add: titleLabel)
+			add: titleLabel;
+			initiateDragOf: self)

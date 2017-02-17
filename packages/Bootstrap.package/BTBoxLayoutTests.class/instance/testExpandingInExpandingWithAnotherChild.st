@@ -1,11 +1,12 @@
 bugs
 testExpandingInExpandingWithAnotherChild
 	| inner outer child sizeAssertions topLevel |
-	inner := BTWidget new withLayout; align: #(expand start).
+	inner := BTWidget new withLayout; align: #(fill start); expand: true.
 	child := BTWidget new color: Color red; minSize: 30.
 	outer := BTWidget new
 		withLayout;
-		align: #(expand start);
+		align: #(fill start);
+		expand: true;
 		add: child;
 		add: inner.
 

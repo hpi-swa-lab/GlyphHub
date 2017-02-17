@@ -12,11 +12,11 @@ placeChildrenOf: aWidget in: newBounds additionalSpace: leftOverPrimary hasExpan
 			ifTrue: [
 				box := (newBounds left @ position) extent:
 					newBounds width @
-					((m align second == #expand or: [aBoolean not]) ifTrue: [ minSize y + leftOverPrimary ] ifFalse: [ minSize y ]).
+					((m expand or: [aBoolean not]) ifTrue: [ minSize y + leftOverPrimary ] ifFalse: [ minSize y ]).
 				position := position + box height + aNumber ]
 			ifFalse: [
 				box := (position @ newBounds top) extent:
-					((m align first == #expand or: [aBoolean not]) ifTrue: [ minSize x + leftOverPrimary ] ifFalse: [ minSize x ]) @
+					((m expand or: [aBoolean not]) ifTrue: [ minSize x + leftOverPrimary ] ifFalse: [ minSize x ]) @
 					newBounds height.
 				position := position + box width + aNumber ].
 		
