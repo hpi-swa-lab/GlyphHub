@@ -4,6 +4,8 @@ testAlignCenter
 	data := self setupAlignTest: #(center center).
 	child := data first.
 	topLevel := data second.
+	topLevel openInWorld.
+	Transcript show: child align; cr.
 	
 	self
 		assert: 100 asPoint equals: topLevel extent;

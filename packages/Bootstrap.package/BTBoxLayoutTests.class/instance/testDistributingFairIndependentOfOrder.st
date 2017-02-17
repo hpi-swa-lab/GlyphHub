@@ -5,9 +5,9 @@ testDistributingFairIndependentOfOrder
 	  medium children before the other medium children in size "
 	| largeChild mediumChild1 mediumChild2 mediumChild3 smallChild topLevel |
 	smallChild := self widget minSize: 10 asPoint; maxSize: 10 asPoint.
-	mediumChild1 := self widget minSize: 20 @ 10; maxSize: 50 @ 10 asPoint.
-	mediumChild2 := self widget minSize: 20 @ 10; maxSize: 50 @ 10 asPoint.
-	mediumChild3 := self widget minSize: 20 @ 10; maxSize: 50 @ 10 asPoint.
+	mediumChild1 := self widget minSize: 20 @ 10; maxSize: 50 @ 10.
+	mediumChild2 := self widget minSize: 20 @ 10; maxSize: 50 @ 10.
+	mediumChild3 := self widget minSize: 20 @ 10; maxSize: 50 @ 10.
 	largeChild := self widget minSize: 40 @ 10; maxSize: 100 @ 10.
 	topLevel := self horizontalTopLevel
 		size: 200 @ 10;

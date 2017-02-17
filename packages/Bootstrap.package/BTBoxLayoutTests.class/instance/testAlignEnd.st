@@ -4,6 +4,7 @@ testAlignEnd
 	data := self setupAlignTest: #(end end).
 	child := data first.
 	topLevel := data second.
+	topLevel openInWorld.
 	
 	self
 		assert: 100 asPoint equals: topLevel extent;

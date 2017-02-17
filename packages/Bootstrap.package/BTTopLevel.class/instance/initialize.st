@@ -5,11 +5,10 @@ initialize
 	activeNotifications := OrderedCollection new.
 	
 	self
+		" note: inherits vertical: true "
 		layoutPolicy: BTBoxLayout new;
-		hResizing: #rigid;
-		vResizing: #rigid;
-		size: 500 asPoint;  
+		size: 600 asPoint;
 		withPadding;
-		colorType: #secondary;  
+		colorType: #secondary;
 		color: self colorScheme background;
 		beSticky

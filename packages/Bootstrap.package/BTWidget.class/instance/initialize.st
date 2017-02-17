@@ -1,6 +1,5 @@
 initialize-release
 initialize
-	| maxSize |
 	super initialize.
 	
 	minSize := 0 @ 0.

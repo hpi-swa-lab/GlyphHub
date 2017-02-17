@@ -1,3 +1,0 @@
-layout
-heightForWidth
-	^true
