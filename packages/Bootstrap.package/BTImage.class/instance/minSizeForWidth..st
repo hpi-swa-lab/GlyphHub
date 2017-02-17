@@ -1,7 +1,7 @@
 as yet unclassified
 minSizeForWidth: aNumber
-	(self minSizeRequest isZero not or: [self form isNil])
-		ifTrue: [ ^self minSizeRequest ].
+	(self minSize isZero not or: [self form isNil])
+		ifTrue: [ ^self minSize ].
 	
 	self scalingMode == #full
 		ifTrue: [ ^self form extent ]

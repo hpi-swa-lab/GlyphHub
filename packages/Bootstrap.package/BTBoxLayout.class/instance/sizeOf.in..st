@@ -7,7 +7,7 @@ sizeOf: aWidget in: aBox
 	numberOfExpandingPrimary := data third.
 	minSizes := data fourth.
 	
-	newBounds := newBounds origin extent: (newBounds extent max: aWidget minSizeRequest).
+	newBounds := newBounds origin extent: (newBounds extent max: aWidget minSize).
 	
 	" check how much left-over space we have. if we have expanding children, only those get to have left-over space "
 	availableSizePrimary := aWidget vertical ifTrue: [newBounds height] ifFalse: [newBounds width].

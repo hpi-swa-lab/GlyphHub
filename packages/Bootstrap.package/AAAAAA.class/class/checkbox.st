@@ -1,6 +1,5 @@
 as yet unclassified
 checkbox
-	| box |
-	box := BTCheckbox new.
-	
-	^BTTopLevel new add: box
+	^BTTopLevel new
+		add: BTCheckbox new;
+		add: (BTCheckbox new colorType: #danger)

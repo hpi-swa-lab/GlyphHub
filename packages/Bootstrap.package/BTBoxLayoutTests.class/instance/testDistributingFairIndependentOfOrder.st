@@ -21,7 +21,7 @@ testDistributingFairIndependentOfOrder
 
 	self
 		assert: smallChild minSize + (0 @ 0) equals: smallChild extent;
-		assert: mediumChild1 + (23 @ 0) equals: mediumChild1 extent;
-		assert: mediumChild2 + (23 @ 0) equals: mediumChild2 extent;
-		assert: mediumChild3 + (22 @ 0) equals: mediumChild3 extent;
-		assert: largeChild + (22 @ 0) equals: largeChild extent
+		assert: mediumChild1 minSize + (23 @ 0) equals: mediumChild1 extent;
+		assert: mediumChild2 minSize + (23 @ 0) equals: mediumChild2 extent;
+		assert: mediumChild3 minSize + (22 @ 0) equals: mediumChild3 extent;
+		assert: largeChild minSize + (22 @ 0) equals: largeChild extent

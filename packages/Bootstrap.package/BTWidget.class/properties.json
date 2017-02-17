@@ -12,7 +12,8 @@
 		"align",
 		"spacing",
 		"ignoreLayout",
-		"expand" ],
+		"expand",
+		"maxSize" ],
 	"name" : "BTWidget",
 	"pools" : [
 		 ],
