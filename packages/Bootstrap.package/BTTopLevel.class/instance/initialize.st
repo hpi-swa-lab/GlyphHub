@@ -7,6 +7,7 @@ initialize
 	self
 		" note: inherits vertical: true "
 		layoutPolicy: BTBoxLayout new;
+		align: #(start start);
 		size: 600 asPoint;
 		withPadding;
 		colorType: #secondary;

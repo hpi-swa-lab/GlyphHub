@@ -1,21 +1,13 @@
 as yet unclassified
 preferredSizeOf: aWidget in: aPoint
-	| numberOfExpanding requiredSizePrimary requiredSizeSecondary primarySize spacing sizes minSize |
-	requiredSizeSecondary := 0.
-	numberOfExpanding := 0.
-	sizes := OrderedCollection new.
-	primarySize := (self flipPoint: aPoint for: aWidget) x.
-	spacing := self requiredSpacingIn: aWidget.
-	requiredSizePrimary := spacing.
+	| numberOfExpanding sizes minSize natSize data |
+	data := self preferredSizeOfChildren: aWidget in: aPoint.
+	minSize := data first first.
+	natSize := data first second.
+	numberOfExpanding := data second.
+	sizes := data third.
 	
-	" determine which of our children want to expand and what minimum they will require "
-	aWidget submorphsDo: [ :m | | size |
-		m ignoreLayout ifFalse: [
-			m expand ifTrue: [ numberOfExpanding := numberOfExpanding + 1 ].
-			size := sizes add: (m preferredSizeForWidth: aPoint x - spacing).
-			minSize := self flipPoint: size first for: aWidget.
-			requiredSizePrimary := requiredSizePrimary + size first x.
-			requiredSizeSecondary := requiredSizeSecondary max: size first y ]].
+	natSize := (data first second max: minSize) max:
+		(self flipPoint: (((aWidget align first == #fill or: [numberOfExpanding > 0 and: [aWidget vertical not]]) ifTrue: [aPoint x] ifFalse: [0]) @ ((aWidget align second == #fill or: [numberOfExpanding > 0 and: [aWidget vertical]]) ifTrue: [aPoint y] ifFalse: [0])) for: aWidget).
 	
-	minSize := (self flipPoint: requiredSizePrimary @ requiredSizeSecondary for: aWidget).
-	^{{minSize. minSize max: aPoint}. numberOfExpanding. sizes}
+	^{aWidget adjustPreferredSize: {minSize. natSize}. numberOfExpanding. sizes}

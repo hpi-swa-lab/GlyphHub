@@ -1,15 +1,16 @@
 aligning
-testAlignCenter
+testAlignCenterExpanded
 	| child data topLevel |
 	data := self setupAlignTest: #(center center).
-	child := data first.
+	child := data first expand: true.
 	topLevel := data second.
 	topLevel fullBounds; yourself.
+	topLevel openInWorld.
 	
 	self
 		assert: 100 asPoint equals: topLevel extent;
 		assert: 50 asPoint equals: child extent;
-		assert: 0 @ 25 equals: child position - topLevel position.
+		assert: 25 asPoint equals: child position - topLevel position.
 	
 	child align: #(start center).
 	topLevel fullBounds.

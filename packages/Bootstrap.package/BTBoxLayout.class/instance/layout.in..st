@@ -1,6 +1,7 @@
 as yet unclassified
 layout: aWidget in: aBox
 	| data |
+	Transcript show: 'START LAYOUT '; show: aWidget class name; cr.
 	data := self sizeOf: aWidget in: aBox extent.
 	
 	aWidget layoutBounds: (aBox origin extent: data first).

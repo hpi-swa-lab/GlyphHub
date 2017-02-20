@@ -5,10 +5,11 @@
 		"exampleSimpleChat" : "TB 2/16/2017 12:50" },
 	"instance" : {
 		"applyAlignmentFor:atSize:in:" : "TB 2/17/2017 09:39",
-		"distributeLeftOver:for:among:" : "TB 2/17/2017 17:46",
+		"distributeLeftOver:for:among:" : "TB 2/17/2017 23:57",
 		"flipPoint:for:" : "TB 2/17/2017 10:10",
-		"layout:in:" : "TB 2/17/2017 17:29",
-		"placeChildrenOf:in:expanderSpace:minSizes:" : "TB 2/17/2017 17:31",
-		"preferredSizeOf:in:" : "TB 2/17/2017 16:22",
+		"layout:in:" : "TB 2/18/2017 18:55",
+		"placeChildrenOf:in:expanderSpace:minSizes:" : "TB 2/20/2017 11:56",
+		"preferredSizeOf:in:" : "TB 2/20/2017 12:10",
+		"preferredSizeOfChildren:in:" : "TB 2/20/2017 12:10",
 		"requiredSpacingIn:" : "TB 2/17/2017 10:22",
-		"sizeOf:in:" : "TB 2/17/2017 17:45" } }
+		"sizeOf:in:" : "TB 2/20/2017 12:11" } }

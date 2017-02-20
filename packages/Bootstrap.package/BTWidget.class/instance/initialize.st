@@ -8,7 +8,7 @@ initialize
 	spacing := 0.
 	expand := false.
 	ignoreLayout := false.
-	align := #(start start).
+	align := #(fill fill).
 	
 	self
 		color: Color transparent;

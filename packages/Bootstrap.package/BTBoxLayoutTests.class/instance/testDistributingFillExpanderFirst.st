@@ -1,8 +1,8 @@
 distributing-space
 testDistributingFillExpanderFirst
 	| topLevel child1 child2 |
-	child1 := self widget expand: true; minSize: 10 asPoint; maxSize: 300 asPoint.
-	child2 := self widget minSize: 10 asPoint; maxSize: 20 asPoint.
+	child1 := self widgetWithNaturalSize expand: true; minSize: 10 asPoint.
+	child2 := self widgetWithNaturalSize minSize: 10 asPoint; naturalSize: 20 asPoint.
 	
 	topLevel := self horizontalTopLevel
 		size: 200 @ 10;
@@ -12,6 +12,6 @@ testDistributingFillExpanderFirst
 		yourself.
 
 	self
-		assert: 190 @ 10 equals: child1;
-		assert:  10 @ 10 equals: child2;
-		assert: 200 @ 10 equals: topLevel
+		assert: 180 @ 10 equals: child1 extent;
+ 		assert:  20 @ 10 equals: child2 extent;
+		assert: 200 @ 10 equals: topLevel extent
