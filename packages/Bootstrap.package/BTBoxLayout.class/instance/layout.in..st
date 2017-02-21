@@ -1,11 +1,11 @@
 as yet unclassified
 layout: aWidget in: aBox
-	| containerSize minNatAndChildSizes expanderCount childSizes totalMin leftOverSpace extraExpanderSpace offset hasExpandersInNonLayoutDirection |
+	| containerSize minNatAndChildSizes expanderCount childSizes totalMin leftOverSpace extraExpanderSpace offset hasExpandersInNonLayoutDirection totalNat |
 	vertical := aWidget vertical.
-	
 	containerSize := aBox extent.
 	minNatAndChildSizes := self preferredChildrenSizeOf: aWidget in: containerSize.
 	totalMin := minNatAndChildSizes first.
+	totalNat := minNatAndChildSizes second.
 	childSizes := minNatAndChildSizes third.
 	containerSize := containerSize max: totalMin.
 	expanderCount := aWidget submorphs count: [ :child | self expandsInLayoutDirection: child ].
@@ -17,9 +17,12 @@ layout: aWidget in: aBox
 		resizeContainer: aWidget
 		withCurrent: containerSize
 		min: (aWidget vertical
-				ifTrue: [(hasExpandersInNonLayoutDirection ifTrue: [containerSize x] ifFalse: [totalMin x]) @ (expanderCount > 0 ifTrue: [containerSize y] ifFalse: [containerSize y - leftOverSpace])]
-				ifFalse: [(expanderCount > 0 ifTrue: [containerSize x] ifFalse: [containerSize x - leftOverSpace]) @ (hasExpandersInNonLayoutDirection ifTrue: [containerSize y] ifFalse: [totalMin y])])
+				ifTrue: [(hasExpandersInNonLayoutDirection ifTrue: [containerSize x] ifFalse: [totalNat x clampLow: totalMin x high: containerSize x]) @ (expanderCount > 0 ifTrue: [containerSize y] ifFalse: [containerSize y - leftOverSpace])]
+				ifFalse: [(expanderCount > 0 ifTrue: [containerSize x] ifFalse: [containerSize x - leftOverSpace]) @ (hasExpandersInNonLayoutDirection ifTrue: [containerSize y] ifFalse: [totalNat y clampLow: totalMin y high: containerSize y])])
 		origin: aBox origin.
+	self fillToNaturalSizeInNonLayoutDirection: childSizes for: aWidget to: containerSize.
+	
+	" add call to a function that, given the widget a width, will return its final height "
 	
 	offset := 0 asPoint.
 	aWidget submorphs doWithIndex: [ :child :index | | childSize childBounds expandedChildSize |

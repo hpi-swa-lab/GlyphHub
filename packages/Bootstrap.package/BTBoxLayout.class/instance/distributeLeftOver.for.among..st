@@ -20,7 +20,7 @@ distributeLeftOver: aNumber for: aWidget among: aCollection
 			sizes := aCollection at: (spreading at: index).
 			glue := (extraSpace + index - 1 / index) floor.
 			gap := (self flipPoint: sizes second - sizes first for: aWidget) x.
-			extra := (self flipPoint: (glue min: gap) @ 0 for: aWidget) x.
+			extra := glue min: gap.
 			sizes at: 1 put: (sizes at: 1) + (self flipPoint: extra @ 0 for: aWidget).
 			extraSpace := extraSpace - extra ]].
 	
