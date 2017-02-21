@@ -4,7 +4,7 @@ testTripleNestedBox
 	| topLevel inner outer |
 	inner := self horizontalContainer align: #(center center); expand: true; minSize: 100 asPoint.
 	outer := self horizontalContainer align: #(fill fill); expand: true; add: inner.
-	topLevel := self verticalTopLevel add: outer; fullBounds; yourself.
+	topLevel := self horizontalTopLevel add: outer; fullBounds; yourself.
 	
 	self
 		assert: 600 @ 100 equals: topLevel extent;

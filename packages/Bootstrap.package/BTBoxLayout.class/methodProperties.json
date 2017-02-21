@@ -6,10 +6,9 @@
 	"instance" : {
 		"applyAlignmentFor:atSize:in:" : "TB 2/17/2017 09:39",
 		"distributeLeftOver:for:among:" : "TB 2/17/2017 23:57",
+		"expandsInLayoutDirection:" : "TB 2/21/2017 17:35",
 		"flipPoint:for:" : "TB 2/17/2017 10:10",
-		"layout:in:" : "TB 2/18/2017 18:55",
-		"placeChildrenOf:in:expanderSpace:minSizes:" : "TB 2/20/2017 11:56",
-		"preferredSizeOf:in:" : "TB 2/20/2017 12:10",
-		"preferredSizeOfChildren:in:" : "TB 2/20/2017 12:10",
-		"requiredSpacingIn:" : "TB 2/17/2017 10:22",
-		"sizeOf:in:" : "TB 2/20/2017 12:11" } }
+		"hasExpandersInNonLayoutDirection:" : "TB 2/21/2017 17:55",
+		"layout:in:" : "TB 2/21/2017 18:20",
+		"preferredChildrenSizeOf:in:" : "TB 2/21/2017 16:23",
+		"resizeContainer:withCurrent:min:origin:" : "TB 2/21/2017 17:01" } }
