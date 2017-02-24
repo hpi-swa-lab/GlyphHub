@@ -7,7 +7,7 @@ testLabel
 		topLevel := (self topLevel: vertical)
 			add: label;
 			extent: widthForTwoLines @ 600;
-		 fullBounds;
+			fullBounds;
 			yourself.
 		
 		self

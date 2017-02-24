@@ -7,7 +7,7 @@ login
 		add: (BTTextArea placeholder: 'Username');
 		add: (BTPasswordArea placeholder: 'Password');
 		add: loginButton.
-	loginPage := (BTPage new align: #(expand expand)) add: loginBox.
+	loginPage := (BTPage new align: #(fill fill)) add: loginBox.
 	
 	loader := BTLoader new align: #(center center).
 	

@@ -6,10 +6,11 @@
 	"instance" : {
 		"applyAlignmentFor:atSize:in:" : "TB 2/17/2017 09:39",
 		"distributeLeftOver:for:among:" : "TB 2/21/2017 22:32",
-		"expandsInLayoutDirection:" : "TB 2/21/2017 17:35",
+		"expandsInLayoutDirection:" : "TB 2/24/2017 18:06",
 		"fillToNaturalSizeInNonLayoutDirection:for:to:" : "TB 2/21/2017 22:53",
 		"flipPoint:for:" : "TB 2/17/2017 10:10",
-		"hasExpandersInNonLayoutDirection:" : "TB 2/21/2017 17:55",
-		"layout:in:" : "TB 2/21/2017 23:28",
+		"hasExpandersInNonLayoutDirection" : "TB 2/24/2017 18:04",
+		"layout:in:" : "TB 2/24/2017 18:24",
+		"preferredChildrenSizeOf:" : "TB 2/24/2017 18:10",
 		"preferredChildrenSizeOf:in:" : "TB 2/21/2017 16:23",
 		"resizeContainer:withCurrent:min:origin:" : "TB 2/21/2017 17:01" } }

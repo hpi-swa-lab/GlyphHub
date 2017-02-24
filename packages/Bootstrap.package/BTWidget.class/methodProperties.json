@@ -32,6 +32,7 @@
 		"detach" : "TB 2/11/2017 23:57",
 		"expand" : "TB 2/17/2017 09:26",
 		"expand:" : "TB 2/17/2017 09:26",
+		"hasHeightForWidth" : "TB 2/24/2017 17:38",
 		"ignoreLayout" : "TB 2/15/2017 22:45",
 		"ignoreLayout:" : "TB 2/15/2017 22:45",
 		"initialize" : "TB 2/17/2017 22:52",
@@ -51,6 +52,7 @@
 		"padding:" : "TB 2/12/2017 00:11",
 		"paddingAsPoint" : "TB 2/15/2017 23:46",
 		"parent" : "TB 2/14/2017 19:28",
+		"preferredSize" : "TB 2/24/2017 17:46",
 		"preferredSizeForWidth:" : "TB 2/21/2017 16:27",
 		"remove:" : "TB 2/11/2017 23:55",
 		"size:" : "TB 2/12/2017 00:35",
@@ -59,6 +61,6 @@
 		"topLevel" : "TB 2/14/2017 19:29",
 		"vertical" : "TB 2/15/2017 10:42",
 		"vertical:" : "TB 2/15/2017 10:41",
-		"wantsExpandIn:" : "TB 2/21/2017 18:03",
+		"wantsExpandIn:" : "TB 2/24/2017 18:07",
 		"withLayout" : "TB 2/15/2017 12:02",
 		"withPadding" : "al 2/13/2017 16:18" } }
