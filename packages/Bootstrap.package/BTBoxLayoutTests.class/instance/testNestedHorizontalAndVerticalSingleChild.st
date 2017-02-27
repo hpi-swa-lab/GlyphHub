@@ -3,7 +3,7 @@ testNestedHorizontalAndVerticalSingleChild
 	| child horizontal vertical |
 	child := self widget minSize: 100 asPoint.
 	vertical := self verticalContainer add: child.
-	horizontal := self horizontalTopLevel add: vertical; fullBounds; yourself.
+	horizontal := self horizontalTopLevel add: vertical; fit.
 	
 	self
 		assert: 100 asPoint equals: child extent;

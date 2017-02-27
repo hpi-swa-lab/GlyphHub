@@ -8,7 +8,7 @@ testExpandingInExpandingWithAnotherChild
 		add: child;
 		add: inner.
 	
-	topLevel := self horizontalTopLevel add: outer; fullBounds; yourself.
+	topLevel := self horizontalTopLevel add: outer; fit.
 	
 	sizeAssertions := [
 		self

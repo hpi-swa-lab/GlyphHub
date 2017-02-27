@@ -1,7 +1,7 @@
 distributing-space
 testDistributingFillExpanderFirst
 	| topLevel child1 child2 |
-	child1 := self widgetWithNaturalSize expand: true; minSize: 10 asPoint.
+	child1 := self widgetWithNaturalSize expand: true; minSize: 10 asPoint; align: #(fill fill).
 	child2 := self widgetWithNaturalSize minSize: 10 asPoint; naturalSize: 20 asPoint.
 	
 	topLevel := self horizontalTopLevel

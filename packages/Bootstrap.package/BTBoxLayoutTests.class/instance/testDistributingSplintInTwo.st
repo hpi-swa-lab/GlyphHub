@@ -8,9 +8,8 @@ testDistributingSplintInTwo
 		size: 200 @ 10;
 		add: child1;
 		add: child2;
-		fullBounds;
-		yourself.
-
+		fit.
+	
 	self
 		assert: 200 @ 10 equals: topLevel extent;
 		assert: 100 @ 10 equals: child1 extent;

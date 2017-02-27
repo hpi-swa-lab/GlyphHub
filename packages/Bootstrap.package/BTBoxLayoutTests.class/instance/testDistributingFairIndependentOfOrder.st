@@ -20,6 +20,7 @@ testDistributingFairIndependentOfOrder
 		yourself.
 
 	self
+		assert: 200 @ 10 equals: topLevel extent;
 		assert: smallChild minSize + (0 @ 0) equals: smallChild extent;
 		assert: mediumChild1 minSize + (23 @ 0) equals: mediumChild1 extent;
 		assert: mediumChild2 minSize + (23 @ 0) equals: mediumChild2 extent;

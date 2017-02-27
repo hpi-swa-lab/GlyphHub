@@ -1,3 +1,3 @@
 as yet unclassified
-preferredSizeForWidth: aNumber
+preferredSize
 	^self adjustPreferredSize: {minSize. naturalSize}

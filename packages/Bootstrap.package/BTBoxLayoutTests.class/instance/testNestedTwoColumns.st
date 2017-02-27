@@ -5,11 +5,11 @@ testNestedTwoColumns
 	# #########
 	   
 	   #########"
-	child := BTWidget new minSize: 50 asPoint.
-	row1 := BTWidget new minSize: 100 asPoint; align: #(fill start).
-	row2 := BTWidget new minSize: 100 asPoint; align: #(fill start).
-	rows := BTWidget new vertical: true; align: #(fill start); expand: true; withLayout; add: row1; add: row2.
-	topLevel := BTTopLevel new extent: 600 asPoint; vertical: false; spacing: 0; padding: 0; add: child; add: rows; fullBounds; yourself.
+	child := self widget minSize: 50 asPoint.
+	row1 := self widget minSize: 100 asPoint; align: #(fill start).
+	row2 := self widget minSize: 100 asPoint; align: #(fill start).
+	rows := self verticalContainer align: #(fill start); expand: true; add: row1; add: row2.
+	topLevel := self horizontalTopLevel add: child; add: rows; fit.
 	
 	self
 		assert: 600 @ 200 equals: topLevel extent;

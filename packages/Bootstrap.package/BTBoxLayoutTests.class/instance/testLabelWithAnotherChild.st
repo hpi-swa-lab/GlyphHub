@@ -8,7 +8,7 @@ testLabelWithAnotherChild
 			add: label;
 			add: child;
 			extent: 600 asPoint;
-		 fullBounds;
+			fit;
 			yourself.
 	
 		linesAtSize := label numberOfLetters * BTFakeLabel letterWidth // topLevel extent x.

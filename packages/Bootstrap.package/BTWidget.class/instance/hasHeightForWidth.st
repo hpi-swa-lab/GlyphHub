@@ -1,3 +1,3 @@
 layout
 hasHeightForWidth
-	^false
+	^self submorphs anySatisfy: [ :child | child hasHeightForWidth ]

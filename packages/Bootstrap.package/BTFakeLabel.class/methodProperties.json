@@ -4,8 +4,10 @@
 		"lineHeight" : "TB 2/21/2017 23:34",
 		"sensibleMinWidth" : "TB 2/21/2017 23:57" },
 	"instance" : {
-		"adjustHeight:forWidth:" : "TB 2/22/2017 00:27",
 		"drawOn:" : "TB 2/21/2017 23:51",
+		"hasHeightForWidth" : "TB 2/27/2017 11:31",
+		"heightForWidth:" : "TB 2/27/2017 16:55",
 		"numberOfLetters" : "TB 2/21/2017 23:34",
 		"numberOfLetters:" : "TB 2/21/2017 23:34",
-		"preferredSizeForWidth:" : "TB 2/22/2017 00:09" } }
+		"preferredSize" : "TB 2/27/2017 16:56",
+		"singleLineWidth" : "TB 2/27/2017 11:39" } }

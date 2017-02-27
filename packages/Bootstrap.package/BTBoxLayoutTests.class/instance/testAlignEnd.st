@@ -4,7 +4,7 @@ testAlignEnd
 	data := self setupAlignTest: #(end end).
 	child := data first.
 	topLevel := data second.
-	topLevel fullBounds; yourself.
+	topLevel fit; fullBounds; yourself.
 	
 	self
 		assert: 100 asPoint equals: topLevel extent;

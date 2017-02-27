@@ -9,19 +9,19 @@ distributeLeftOver: aNumber for: aWidget among: aCollection
 	spreading sort: [ :index1 :index2 | | sizes1 sizes2 delta1 delta2 delta |
 		sizes1 := aCollection at: index1.
 		sizes2 := aCollection at: index2.
-		delta1 := sizes1 second - sizes1 first.
-		delta2 := sizes2 second - sizes2 first.
-		delta := (self flipPoint: delta2 - delta1 for: aWidget) x.
+		delta1 := sizes1 naturalSize - sizes1 minSize.
+		delta2 := sizes2 naturalSize - sizes2 minSize.
+		delta := delta2 - delta1.
 		delta == 0 ifTrue: [delta := index2 - index1].
 		delta < 0 ].
 	
-	(1 to: aCollection size) reverseDo: [ :index | | sizes extra gap glue |
+	(1 to: aCollection size) reverseDo: [ :index | | item extra gap glue |
 		extraSpace > 0 ifTrue: [
-			sizes := aCollection at: (spreading at: index).
+			item := aCollection at: (spreading at: index).
 			glue := (extraSpace + index - 1 / index) floor.
-			gap := (self flipPoint: sizes second - sizes first for: aWidget) x.
+			gap := item naturalSize - item minSize.
 			extra := glue min: gap.
-			sizes at: 1 put: (sizes at: 1) + (self flipPoint: extra @ 0 for: aWidget).
+			item finalSize: item finalSize + extra.
 			extraSpace := extraSpace - extra ]].
 	
 	^extraSpace

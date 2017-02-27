@@ -2,9 +2,9 @@ spacing
 testSpacingTwoChildren
 	| child1 child2 topLevel |
 	self horizontalAndVerticalDo: [ :vertical |
-		child1 := BTWidget new color: Color red; minSize: 100 asPoint.
-		child2 := BTWidget new color: Color green; minSize: 100 asPoint.
-		topLevel := BTTopLevel new add: child1; add: child2; extent: 200 @ 100; vertical: vertical; spacing: 20; padding: 0; fullBounds; yourself.
+		child1 := self widget minSize: 100 asPoint.
+		child2 := self widget minSize: 100 asPoint.
+		topLevel := (self topLevel: vertical) add: child1; add: child2; extent: 200 @ 100; spacing: 20; fit.
 		
 		self
 			assert: 100 asPoint equals: child1 extent;

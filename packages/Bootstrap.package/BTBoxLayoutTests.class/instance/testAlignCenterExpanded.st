@@ -4,7 +4,7 @@ testAlignCenterExpanded
 	data := self setupAlignTest: #(center center).
 	child := data first expand: true.
 	topLevel := data second.
-	topLevel fullBounds; yourself.
+	topLevel fit; fullBounds; yourself.
 	
 	self
 		assert: 100 asPoint equals: topLevel extent;
