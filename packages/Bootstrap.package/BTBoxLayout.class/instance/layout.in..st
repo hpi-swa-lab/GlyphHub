@@ -2,6 +2,9 @@ as yet unclassified
 layout: aWidget in: aBox
 	| nonLayoutDirectionMin offset preferred minSize |
 	preferred := self preferredSizeFor: aWidget width: aBox width.
+	preferred first x > aBox width ifTrue: [
+		" fixme. ouch. can anyone think of a better way to accomodate for children forcing a larger min width? "
+		preferred := self preferredSizeFor: aWidget width: preferred first x ].
 	
 	vertical ifTrue: [ | stillLeftOver extraExpanderSpace |
 		stillLeftOver := self distributeLeftOver: aBox height - totalMin among: childItems.
@@ -10,7 +13,6 @@ layout: aWidget in: aBox
 	
 	minSize := (preferred first max: aBox extent) max: aWidget minSize.
 	nonLayoutDirectionMin := (self flipPoint: minSize) y.
-	
 	aBox extent ~= minSize ifTrue: [ aWidget layoutBounds: (aBox origin extent: minSize) ].
 	
 	offset := 0.

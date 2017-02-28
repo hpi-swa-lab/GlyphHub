@@ -44,7 +44,7 @@ preferredSizeFor: aWidget width: aNumber
 	nonLayoutDirectionMinSize := 0.
 	nonLayoutDirectionNatSize := 0.
 	childItems do: [ :item | | sizes |
-		sizes := item nonLayoutDirectionSizesForWidth: aNumber.
+		sizes := item nonLayoutDirectionSizesForWidth: (vertical ifTrue: [aNumber] ifFalse: [item finalSize]).
 		nonLayoutDirectionMinSize := nonLayoutDirectionMinSize max: sizes first.
 		nonLayoutDirectionNatSize := nonLayoutDirectionNatSize max: sizes second ].
 	
