@@ -1,12 +1,21 @@
 as yet unclassified
 layout: aWidget in: aBox
-	| minSize nonLayoutDirectionMin |
-	self setupDataFor: aWidget.
-	self placeChildren: childItems of: aWidget space: (vertical ifTrue: [aBox height] ifFalse: [aBox width]).
+	| nonLayoutDirectionMin offset preferred minSize |
+	preferred := self preferredSizeFor: aWidget width: aBox width.
 	
-	nonLayoutDirectionMin := nonLayoutDirectionSizes first max: (vertical ifTrue: [aBox width] ifFalse: [aBox height]).
-	minSize := ((self flipPoint: totalMin @ nonLayoutDirectionMin) max: aBox extent) max: aWidget minSize.
+	vertical ifTrue: [ | stillLeftOver extraExpanderSpace |
+		stillLeftOver := self distributeLeftOver: aBox height - totalMin among: childItems.
+		extraExpanderSpace := (expanderCount < 1 ifTrue: [0] ifFalse: [stillLeftOver / expanderCount]) floor.
+		childItems do: [ :item | item finalSize: item finalSize + (item expanding ifTrue: [extraExpanderSpace] ifFalse: [0]) ]].
+	
+	minSize := (preferred first max: aBox extent) max: aWidget minSize.
+	nonLayoutDirectionMin := (self flipPoint: minSize) y.
 	
 	aBox extent ~= minSize ifTrue: [ aWidget layoutBounds: (aBox origin extent: minSize) ].
 	
-	childItems do: [ :child | child applyAlignmentWithOffset: aBox origin in: nonLayoutDirectionMin ]
+	offset := 0.
+	childItems do: [ :child |
+		child
+			offset: offset;
+			applyAlignmentWithOffset: aBox origin in: nonLayoutDirectionMin.
+		offset := offset + child finalSize + aWidget spacing ]

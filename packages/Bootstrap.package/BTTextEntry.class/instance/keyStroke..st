@@ -2,8 +2,7 @@ event handling
 keyStroke: anEvent
 	| key |
 	key := anEvent keyString.
-
-	Transcript show: key; cr.
+	
 	key = '<backspace>' ifTrue: [
 		^self deleteBeforeCursor ].
 	key = '<delete>' ifTrue: [

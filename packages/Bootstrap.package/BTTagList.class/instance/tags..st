@@ -1,6 +1,6 @@
 as yet unclassified
 tags: aCollectionOfStrings
-	tags := aCollectionOfStrings.
+	tags := aCollectionOfStrings asOrderedCollection.
 	
 	self removeAllMorphs.
 	

@@ -3,7 +3,7 @@ initialize
 	super initialize.
 
 	self
-		align: #(start expand);
+		align: #(fill start);
 		vertical: false;
 		spacing: BTWidget spacing;
 		padding: 20 @ 12

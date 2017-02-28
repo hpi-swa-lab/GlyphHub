@@ -6,6 +6,6 @@ keyboardFocusChange: weHaveFocus
 
 	focused
 		ifTrue: [ self startBlinking ]
-		ifFalse: [ self stopBlinking ].
+		ifFalse: [ self stopBlinking; clearSelection ].
 	
 	self updateCursor

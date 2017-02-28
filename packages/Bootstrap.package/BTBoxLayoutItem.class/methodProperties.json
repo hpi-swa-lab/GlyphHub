@@ -2,19 +2,21 @@
 	"class" : {
 		 },
 	"instance" : {
-		"applyAlignmentWithOffset:in:" : "TB 2/28/2017 10:28",
+		"applyAlignmentWithOffset:in:" : "TB 2/28/2017 19:00",
 		"expanding" : "TB 2/27/2017 13:23",
 		"expanding:" : "TB 2/27/2017 13:23",
 		"finalSize" : "TB 2/27/2017 12:38",
 		"finalSize:" : "TB 2/27/2017 12:38",
+		"inVerticalLayout:" : "TB 2/28/2017 17:59",
 		"maxSize" : "TB 2/27/2017 12:37",
 		"maxSize:" : "TB 2/27/2017 13:23",
 		"minSize" : "TB 2/27/2017 12:37",
 		"minSize:" : "TB 2/27/2017 13:23",
 		"naturalSize" : "TB 2/27/2017 12:38",
 		"naturalSize:" : "TB 2/27/2017 13:23",
+		"nonLayoutDirectionSizesForWidth:" : "TB 2/28/2017 19:31",
 		"offset" : "TB 2/27/2017 13:25",
 		"offset:" : "TB 2/27/2017 13:24",
-		"updateInDirection:" : "TB 2/27/2017 16:21",
+		"takeWidth:" : "TB 2/28/2017 18:24",
 		"widget" : "TB 2/27/2017 13:24",
 		"widget:" : "TB 2/27/2017 13:50" } }

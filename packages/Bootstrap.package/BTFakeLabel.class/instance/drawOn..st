@@ -12,6 +12,6 @@ drawOn: aCanvas
 		aCanvas fillRectangle: rect fillStyle: Color black.
 
 		x := x + self class letterWidth.
-		x >= self layoutBounds width ifTrue: [
+		x + self class letterWidth >= self layoutBounds width ifTrue: [
 			x := 0.
 			y := y + self class lineHeight ]]

@@ -12,5 +12,4 @@ initialize
 	
 	self
 		addMorph: container;
-		hResizing: #shrinkWrap;
-		vResizing: #shrinkWrap
+		padding: BTWidget spacing

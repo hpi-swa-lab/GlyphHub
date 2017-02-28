@@ -1,6 +1,10 @@
 as yet unclassified
 scalingMode: aMode
-	" one of #fixed, #shrink, #fill, #full "
+	" one of
+		#fixed (take exactly minSize)
+		#shrink (anything between minSize and our own size)
+		#fill (anything upward of our minSize)
+		#full (exactly our own size) "
+	
 	scalingMode := aMode.
-
-	self flag: #todo
+	self layoutChanged

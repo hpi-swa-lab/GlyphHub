@@ -7,8 +7,7 @@ testLabel
 		topLevel := (self topLevel: vertical)
 			add: label;
 			extent: widthForTwoLines @ 600;
-			fit;
-			openInWorld.
+			fit.
 		
 		self
 			assert: widthForTwoLines @ (2 * BTFakeLabel lineHeight) equals: topLevel extent ]

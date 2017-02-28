@@ -7,7 +7,7 @@ dropdown
 		add: (BTDropdownItem label: 'Settings' action: #settings);
 		add: (BTDropdownItem label: 'Profile' action: #profile);
 		add: (BTDropdownItem label: 'Logout' action: #logout);
-		selectedDo: [ :action | Transcript show: 'Selected '; show: action; cr ];
+		selectedDo: [ :action | " we got selected " ];
 		attachTo: button.
 	
 	^BTTopLevel new size: 500 asPoint; add: button

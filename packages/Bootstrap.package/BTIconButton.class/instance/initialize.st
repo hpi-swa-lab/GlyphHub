@@ -1,6 +1,6 @@
 as yet unclassified
 initialize
-	icon := BTIcon new align: #(center center).
+	icon := BTIcon new align: #(center center); expand: true.
 	
 	super initialize.
 	

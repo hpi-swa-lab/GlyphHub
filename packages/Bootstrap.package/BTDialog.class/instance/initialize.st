@@ -5,8 +5,6 @@ initialize
 	titleLabel := BTLabel text: 'Dialog'.
 	
 	self
-		vResizing: #rigid;
-		hResizing: #rigid;
 		size: 300 @ 200;
 		colorType: #secondary;
 		add: (BTCardHeader new

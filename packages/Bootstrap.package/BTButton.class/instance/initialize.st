@@ -6,4 +6,5 @@ initialize
 	
 	self
 		add: label;
-		padding: 16 @ 8
+		padding: 16 @ 8;
+		align: #(start start)  
