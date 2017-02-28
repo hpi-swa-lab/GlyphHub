@@ -3,11 +3,11 @@ placeChildren: aCollection of: aWidget space: aNumber
 	| containerSize leftOverSpace extraExpanderSpace offset |
 	containerSize := (aNumber max: totalMin) max: (self flipPoint: aWidget minSize) x.
 	
-	" apply special hfw rules :o "
 	(hasHeightForWidth and: [vertical]) ifTrue: [
 		aCollection do: [ :child |
-			child hasHeightForWidth ifTrue: [
-				child naturalSize: (child heightForWidth: aNumber) first ]]].
+			child widget hasHeightForWidth ifTrue: [ | size |
+				size := (child widget heightForWidth: aNumber) first.
+				child minSize: size; naturalSize: size; finalSize: size ]]].
 	
 	leftOverSpace := self distributeLeftOver: aNumber - totalMin for: aWidget among: aCollection.
 	extraExpanderSpace := (expanderCount < 1 ifTrue: [0] ifFalse: [leftOverSpace / expanderCount]) floor.

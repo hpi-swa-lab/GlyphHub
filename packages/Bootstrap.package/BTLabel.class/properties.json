@@ -10,7 +10,8 @@
 		"layout",
 		"fillMode",
 		"angle",
-		"styleAttributes" ],
+		"styleAttributes",
+		"layoutWidth" ],
 	"name" : "BTLabel",
 	"pools" : [
 		 ],

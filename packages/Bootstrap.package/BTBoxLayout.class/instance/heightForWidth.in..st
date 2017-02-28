@@ -1,12 +1,14 @@
 as yet unclassified
 heightForWidth: aNumber in: aWidget
 	| height minHeight |
+	self setupDataFor: aWidget.
+	  
 	aWidget vertical
 		ifTrue: [
 			" simply ask each widget for its height using the given width "
 			height := minHeight := aWidget spacing * (aWidget submorphCount - 1).
-			self submorphsDo: [ :child | | childHeight | 
-				childHeight := child heightForWidth: aNumber.
+			childItems do: [ :child | | childHeight | 
+				childHeight := child widget heightForWidth: aNumber.
 				
 				minHeight := minHeight + childHeight first.
 				height := height + childHeight second ]]
