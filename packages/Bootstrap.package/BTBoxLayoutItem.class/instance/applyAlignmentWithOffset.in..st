@@ -11,7 +11,7 @@ applyAlignmentWithOffset: offsetPoint in: nonLayoutSize
 		ifFalse: [
 			wanted := (wanted x min: finalSize) @ (wanted y min: nonLayoutSize).
 			widget hasHeightForWidth ifTrue: [
-				wanted := wanted x @ (widget heightForWidth: wanted x) ]].
+				wanted := wanted x @ (widget heightForWidth: wanted x) first ]].
 	
 	destBox := offsetPoint + (vertical ifTrue: [0 @ offset] ifFalse: [offset @ 0]) extent: wanted.
 	

@@ -7,7 +7,7 @@ placeChildren: aCollection of: aWidget space: aNumber
 	(hasHeightForWidth and: [vertical]) ifTrue: [
 		aCollection do: [ :child |
 			child hasHeightForWidth ifTrue: [
-				child finalSize: (child heightForWidth: aNumber) first ]]].
+				child naturalSize: (child heightForWidth: aNumber) first ]]].
 	
 	leftOverSpace := self distributeLeftOver: aNumber - totalMin for: aWidget among: aCollection.
 	extraExpanderSpace := (expanderCount < 1 ifTrue: [0] ifFalse: [leftOverSpace / expanderCount]) floor.

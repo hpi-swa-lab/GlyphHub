@@ -4,7 +4,7 @@ heightForWidth: aNumber in: aWidget
 	aWidget vertical
 		ifTrue: [
 			" simply ask each widget for its height using the given width "
-			height  :=minHeight := aWidget spacing * (aWidget submorphCount - 1).
+			height := minHeight := aWidget spacing * (aWidget submorphCount - 1).
 			self submorphsDo: [ :child | | childHeight | 
 				childHeight := child heightForWidth: aNumber.
 				
@@ -15,7 +15,7 @@ heightForWidth: aNumber in: aWidget
 			height := minHeight := 0.
 			items := self placeChildren: childItems copy of: aWidget space: aNumber.
 			items do: [ :child | | childHeight |
-				childHeight := child heightForWidth: aNumber.
+				childHeight := child widget heightForWidth: aNumber.
 				
 				minHeight := minHeight max: childHeight first.
 				height := height max: childHeight second ]].
