@@ -6,5 +6,5 @@ initialize
 		colorScheme: #inherit;
 		checked: false;
 		align: #(start start);
-		do: [ self checked: self checked not ];
+		do: [ self toggleChecked ];
 		minSize: 22 asPoint

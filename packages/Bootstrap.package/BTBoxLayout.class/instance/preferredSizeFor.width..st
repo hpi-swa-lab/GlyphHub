@@ -8,7 +8,7 @@ preferredSizeFor: aWidget width: aNumber
 	totalMin := totalNat := spacing.
 	
 	" initialize our list of items, count expanders "
-	childItems := (aWidget submorphs select: [ :child | child ignoreLayout not and: [child visible and: [child isWidget]]]) collect: [ :child | | item  |
+	childItems := aWidget layoutChildren collect: [ :child | | item  |
 		item := BTBoxLayoutItem new widget: child.
 		item inVerticalLayout: aWidget vertical.
 		(expand first and: [expand second]) ifFalse: [ | childExpand |

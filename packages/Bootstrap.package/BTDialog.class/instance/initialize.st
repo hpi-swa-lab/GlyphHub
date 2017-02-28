@@ -2,7 +2,7 @@ as yet unclassified
 initialize
 	super initialize.
 	
-	titleLabel := BTLabel text: 'Dialog'.
+	titleLabel := (BTLabel text: 'Dialog') expand: true.
 	
 	self
 		size: 300 @ 200;

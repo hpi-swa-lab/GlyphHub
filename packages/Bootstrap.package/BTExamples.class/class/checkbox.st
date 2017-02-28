@@ -6,4 +6,5 @@ checkbox
 		add: (BTCheckbox new colorType: #primary);
 		add: (BTCheckbox new colorType: #success);
 		add: (BTCheckbox new colorType: #info);
-		add: (BTCheckbox new colorType: #warning)
+		add: (BTCheckbox new colorType: #warning);
+		add: (BTCheckboxWithLabel label: 'Check me to win!')

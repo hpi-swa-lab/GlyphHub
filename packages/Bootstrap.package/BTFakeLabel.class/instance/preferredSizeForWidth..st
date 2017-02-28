@@ -6,5 +6,4 @@ preferredSizeForWidth: aNumber
 	height := linesNat * self class lineHeight.
 	min := aNumber @ height.
 	
-	Transcript show: aNumber; show: ' -> '; show: {min. required @ self class lineHeight max: min}; cr.
 	^{min. required @ self class lineHeight max: min}

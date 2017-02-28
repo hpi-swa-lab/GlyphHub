@@ -2,7 +2,7 @@ as yet unclassified
 sizeForWidth: aNumber
 	| size |
 	self layout width: (fillMode = #fixed ifTrue: [-1] ifFalse: [aNumber]).
-	size := self layout extent.
+	size := self actualSize.
 	
 	self layout width: layoutWidth.
 	

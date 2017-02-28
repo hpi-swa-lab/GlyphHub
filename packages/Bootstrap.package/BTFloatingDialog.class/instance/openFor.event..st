@@ -4,6 +4,7 @@ openFor: aTargetWidget event: anEvent
 		position: (self openPositionFor: aTargetWidget);
 		openInWorld.
 
-	anEvent hand
-		newMouseFocus: self;
-		newKeyboardFocus: self
+	anEvent ifNotNilDo: [ :event |  
+		event hand
+			newMouseFocus: self;
+			newKeyboardFocus: self ]

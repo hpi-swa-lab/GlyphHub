@@ -1,14 +1,15 @@
 {
-	"category" : "Bootstrap-Tests",
+	"category" : "Bootstrap",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "BTLabelTests",
+		"check",
+		"label" ],
+	"name" : "BTCheckboxWithLabel",
 	"pools" : [
 		 ],
-	"super" : "TestCase",
+	"super" : "BTClickable",
 	"type" : "normal" }

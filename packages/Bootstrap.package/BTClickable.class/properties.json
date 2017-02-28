@@ -9,7 +9,8 @@
 		"hovered",
 		"do",
 		"active",
-		"initiateDragOf" ],
+		"initiateDragOf",
+		"hoveredDo" ],
 	"name" : "BTClickable",
 	"pools" : [
 		 ],
