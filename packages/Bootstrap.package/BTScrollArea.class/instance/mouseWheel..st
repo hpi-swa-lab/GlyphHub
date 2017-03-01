@@ -1,4 +1,4 @@
 as yet unclassified
 mouseWheel: anEvent
-	anEvent isWheelUp ifTrue: [ container offset: container offset + 10 ].
-	anEvent isWheelDown ifTrue: [ container offset: container offset - 10 ]
+	anEvent isWheelUp ifTrue: [ self scrollOffset: self scrollOffset - (0 @ self class scrollSpeed) ].
+	anEvent isWheelDown ifTrue: [ self scrollOffset: self scrollOffset + (0 @ self class scrollSpeed) ]

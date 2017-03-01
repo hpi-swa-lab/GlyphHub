@@ -5,7 +5,7 @@ testScrollingBounds
 	scroll := BTScrollArea new policy: #(scroll scroll); minSize: 100 @ 10; add: child.
 	topLevel := self horizontalTopLevel add: scroll; shrink.
 	
-	scroll scrollTo: 9999 asPoint.
+	scroll scrollOffset: 9999 asPoint.
 	
 	self
-		assert: 0 @ 90 equals: scroll firstSubmorph offset
+		assert: 0 @ 90 equals: scroll scrollOffset

@@ -6,10 +6,8 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"container",
-		"policy",
-		"scrollBars" ],
-	"name" : "BTScrollArea",
+		 ],
+	"name" : "BTScrollBar",
 	"pools" : [
 		 ],
 	"super" : "BTWidget",

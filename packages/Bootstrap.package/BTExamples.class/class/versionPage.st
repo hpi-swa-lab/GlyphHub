@@ -16,6 +16,7 @@ versionPage
 	
 	^BTTopLevel new
 		size: 600 asPoint;
+		add: (BTScrollArea new add: (BTPage new 
 		add: author;
 		add: (BTLabel pageHeader: 'Bitter Devanagari 0.1');
 		add: (BTLabel text: 'In this update I incorporated the feedback from ', (BTLabel linkMarkup: '@font_master2323') ,' from here ', (BTLabel linkMarkup: '#125'));
@@ -25,5 +26,5 @@ versionPage
 		add: c;
 		add: (BTLabel subcategoryHeader: 'Devanagari');
 		add: shortO;
-		add: ta
+		add: ta));
 		yourself
