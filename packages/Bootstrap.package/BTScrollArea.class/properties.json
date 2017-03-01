@@ -1,0 +1,15 @@
+{
+	"category" : "Bootstrap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"container",
+		"policy" ],
+	"name" : "BTScrollArea",
+	"pools" : [
+		 ],
+	"super" : "BTWidget",
+	"type" : "normal" }

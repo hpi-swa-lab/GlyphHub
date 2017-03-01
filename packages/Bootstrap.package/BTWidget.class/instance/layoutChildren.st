@@ -1,3 +1,3 @@
 layout
 layoutChildren
-	^self submorphs select: [ :child | child ignoreLayout not and: [child visible and: [child isWidget]]]
+	^self submorphs select: [ :child | child isWidget and: [child visible and: [child ignoreLayout not]]]
