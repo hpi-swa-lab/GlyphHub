@@ -1,0 +1,4 @@
+as yet unclassified
+wrap
+	wrap == false ifTrue: [^#never].
+	^self layout wrap

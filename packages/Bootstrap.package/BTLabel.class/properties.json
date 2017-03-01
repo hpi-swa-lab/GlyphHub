@@ -8,10 +8,10 @@
 	"instvars" : [
 		"text",
 		"layout",
-		"fillMode",
 		"angle",
 		"styleAttributes",
-		"layoutWidth" ],
+		"layoutWidth",
+		"wrap" ],
 	"name" : "BTLabel",
 	"pools" : [
 		 ],

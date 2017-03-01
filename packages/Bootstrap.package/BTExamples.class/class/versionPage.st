@@ -18,7 +18,7 @@ versionPage
 		size: 600 asPoint;
 		add: author;
 		add: (BTLabel pageHeader: 'Bitter Devanagari 0.1');
-		add: ((BTLabel text: 'In this update I incorporated the feedback from ', (BTLabel linkMarkup: '@font_master2323') ,' from here ', (BTLabel linkMarkup: '#125')) fillMode: #fill);
+		add: (BTLabel text: 'In this update I incorporated the feedback from ', (BTLabel linkMarkup: '@font_master2323') ,' from here ', (BTLabel linkMarkup: '#125'));
 		add: (BTLabel categoryHeader: 'Changes');
 		add: (BTLabel subcategoryHeader: 'Latin');
 		add: a;

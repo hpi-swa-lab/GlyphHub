@@ -1,0 +1,14 @@
+{
+	"category" : "Bootstrap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "BTLink",
+	"pools" : [
+		 ],
+	"super" : "BTClickableWithText",
+	"type" : "normal" }

@@ -4,4 +4,4 @@ icon: anIcon
 		icon: anIcon;
 		extent: icon actualSize.
 	
-	self minSize: (self extent max: self minSize)
+	self minSize: (self extent max: self minSize) / BTWidget scalingFactor

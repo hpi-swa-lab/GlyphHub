@@ -6,10 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"isVerticalTest",
-		"previousScalingFactor" ],
+		"isVerticalTest" ],
 	"name" : "BTBoxLayoutTests",
 	"pools" : [
 		 ],
-	"super" : "TestCase",
+	"super" : "BTTestCase",
 	"type" : "normal" }

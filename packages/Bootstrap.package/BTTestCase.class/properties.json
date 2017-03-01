@@ -1,0 +1,14 @@
+{
+	"category" : "Bootstrap-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"previousScalingFactor" ],
+	"name" : "BTTestCase",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

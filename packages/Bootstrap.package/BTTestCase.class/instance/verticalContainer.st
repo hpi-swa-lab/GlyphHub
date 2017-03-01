@@ -1,4 +1,4 @@
-utilities
+as yet unclassified
 verticalContainer
 	^BTWidget new
 		withLayout;

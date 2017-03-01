@@ -11,17 +11,16 @@ initialize
 		color: (Color fromString: '#ebebeb');
 		extent: 139 @ 304;
 		position: 910 @ 468;
-		disableTableLayout: true;
-		withPadding;
-		yourself.
+		ignoreLayout: true;
+		withPadding.
 	
-	{FRTCommentThread example1. FRTCommentThread example2. FRTCommentThread example3} do: [ :thread |
-		overlay add: ((BTLabel small: (BTLabel linkMarkup: thread title))
-			fillMode: #fill;
-			ellipsize: #end) ].
+	{FRTCommentThread example1. FRTCommentThread example2. FRTCommentThread example3} do: [ :thread | | link |
+		link := (BTLink text: thread title) do: [ thread asWidget openInWorld ].
+		link label ellipsize: #end.
+		overlay add: link ].
 	
 	overlay
-		add: BTWidget verticalSpacer;
+		add: BTWidget spacer;
 		add: (BTButton label: 'Publish a Snap' icon: #share) small.
 	
 	self

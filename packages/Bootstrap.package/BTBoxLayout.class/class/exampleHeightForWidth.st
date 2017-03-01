@@ -1,3 +1,3 @@
 as yet unclassified
 exampleHeightForWidth
-	BTTopLevel new add: ((BTLabel text: 'lorem ipsum dolor sit amet consetetur arum darum dolore imit census clericus lapradus') fillMode: #fill); openInWorld
+	BTTopLevel new add: (BTLabel text: 'lorem ipsum dolor sit amet consetetur arum darum dolore imit census clericus lapradus'); openInWorld

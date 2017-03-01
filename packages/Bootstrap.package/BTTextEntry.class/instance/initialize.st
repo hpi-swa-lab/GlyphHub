@@ -8,6 +8,4 @@ initialize
 	placeholder := ''.
 	drawCursor := true.
 	
-	super initialize.
-	
-	self fillMode: #fill
+	super initialize

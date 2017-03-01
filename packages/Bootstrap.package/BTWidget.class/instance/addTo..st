@@ -1,3 +1,3 @@
 hierarchy
 addTo: aWidget
-	aWidget addMorphBack: self
+	aWidget add: self

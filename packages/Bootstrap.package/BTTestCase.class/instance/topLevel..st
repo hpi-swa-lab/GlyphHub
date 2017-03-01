@@ -1,4 +1,4 @@
-utilities
+as yet unclassified
 topLevel: aBooleanVertical
 	^BTTopLevel new
 		extent: 600 asPoint;

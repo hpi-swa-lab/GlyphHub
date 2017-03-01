@@ -18,8 +18,9 @@
 	"instance" : {
 		"add:" : "TB 2/8/2017 17:57",
 		"add:at:" : "TB 2/12/2017 00:35",
+		"add:before:" : "TB 3/1/2017 09:54",
 		"add:oppositeTo:" : "TB 2/28/2017 21:15",
-		"addTo:" : "TB 2/13/2017 15:05",
+		"addTo:" : "TB 3/1/2017 09:53",
 		"adjustPreferredSize:" : "TB 2/20/2017 12:05",
 		"align" : "TB 2/15/2017 13:59",
 		"align:" : "TB 2/28/2017 22:44",
@@ -34,7 +35,6 @@
 		"ignoreLayout" : "TB 2/15/2017 22:45",
 		"ignoreLayout:" : "TB 2/28/2017 22:44",
 		"initialize" : "TB 2/17/2017 22:52",
-		"insert:before:" : "TB 2/10/2017 16:41",
 		"isButtonGroup" : "TB 2/2/2017 17:28",
 		"isFirstChild" : "TB 2/2/2017 19:50",
 		"isLastChild" : "TB 2/2/2017 17:31",

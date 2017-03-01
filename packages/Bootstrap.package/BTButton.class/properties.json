@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"label" ],
+		 ],
 	"name" : "BTButton",
 	"pools" : [
 		 ],
-	"super" : "BTClickable",
+	"super" : "BTClickableWithText",
 	"type" : "normal" }

@@ -8,14 +8,14 @@ comment: aComment
 	(aComment author tagListForLanguages: aComment thread languages) do: [:each |
 		badgeMorph add: (BTBadge text: each type: #success)].
 	
-	metaInfoMorph := BTPage row.
-	metaInfoMorph add: badgeMorph oppositeTo: (BTLabel  secondary: '@', aComment author username, ' - ', (self printDate: aComment dateTime)).
+	metaInfoMorph := BTPage new
+		add: badgeMorph
+		oppositeTo: (BTLabel secondary: '@', aComment author username, ' - ', (self printDate: aComment dateTime)).
 	
-	textContentMorph := BTPage sizing: #(spaceFill shrinkWrap) vertical: true.
-	textContentMorph
+	textContentMorph := BTPage new
 		add: (BTLabel  text: aComment text);
 		add: metaInfoMorph.
 	
 	self
-		add: ((BTImage form: aComment author avatar) scalingMode: #rigid; extent: 64 asPoint);
-		add:  textContentMorph
+		add: ((BTImage form: aComment author avatar) scalingMode: #fixed; minSize: 64);
+		add: textContentMorph

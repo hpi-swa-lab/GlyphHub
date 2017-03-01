@@ -7,11 +7,11 @@ initialize
 	
 	input := BTTextEntry new
 		styleAttributes: BTBadge styleAttributes;
-		fillMode: #fixed;
+		wrap: #never;
 		placeholder: 'New Tag ...';
 		returnDo: [
 			input text ifNotEmpty: [
-				self insert: (BTBadge text: input text) before: inputBadge.
+				self add: (BTBadge text: input text) before: inputBadge.
 				self tags add: input text.
 				input clear ].
 			nil ];

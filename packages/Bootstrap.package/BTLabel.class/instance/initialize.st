@@ -5,9 +5,8 @@ initialize
 	angle := 0.
 	styleAttributes := Dictionary new.
 	layoutWidth := -1.
+	wrap := true.
 	
-	self
-		fillMode: #fixed;
-		minSize: 80.  
+	self minSize: 80.  
 	
 	super initialize

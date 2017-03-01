@@ -8,7 +8,7 @@ commentThread: aCommentThread
 	tagsMorph := BTPage row.
 	aCommentThread tags do: [ :each | tagsMorph add: (BTBadge text: each) ].
 	
-	content := (BTPage sizing: #(spaceFill spaceFill) vertical: true)
+	content := BTPage new
 		withPadding;
 		add: tagsMorph.
 	
