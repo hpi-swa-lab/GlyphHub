@@ -1,0 +1,9 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"initialize" : "al 3/1/2017 18:49",
+		"isNavigation" : "al 3/1/2017 17:47",
+		"makeActive:" : "al 3/1/2017 18:51",
+		"tabSwitchedDo" : "al 3/1/2017 18:27",
+		"tabSwitchedDo:" : "al 3/1/2017 18:27" } }
