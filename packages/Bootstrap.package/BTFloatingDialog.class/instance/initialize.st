@@ -2,4 +2,6 @@ as yet unclassified
 initialize
 	super initialize.
 	
-	self colorType: #secondary  
+	self
+		colorType: #secondary;
+		withLayout

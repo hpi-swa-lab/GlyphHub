@@ -2,8 +2,4 @@
 	"class" : {
 		 },
 	"instance" : {
-		"checkBlink" : "TB 2/6/2017 00:24",
-		"drawOn:at:" : "TB 2/6/2017 00:29",
-		"pendBlink" : "TB 2/6/2017 00:25",
-		"resetBlinkTime" : "TB 2/6/2017 00:21",
-		"shouldBlink" : "TB 2/6/2017 00:22" } }
+		"drawOn:at:" : "TB 2/6/2017 00:29" } }

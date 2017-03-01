@@ -10,18 +10,16 @@ initialize
 		fillMode: #fixed;
 		placeholder: 'New Tag ...';
 		returnDo: [
-			self insert: (BTBadge text: input text) before: inputBadge.
-			self tags add: input text.
-			input clear.
+			input text ifNotEmpty: [
+				self insert: (BTBadge text: input text) before: inputBadge.
+				self tags add: input text.
+				input clear ].
 			nil ];
 		yourself.
 	
 	inputBadge add: input.
 	
 	self
-		changeTableLayout;
-		listDirection: #leftToRight;
-		cellInset: (BTWidget spacing / 2) floor;
-		hResizing: #shrinkWrap;  
-		vResizing: #shrinkWrap;  
+		withLayout;
+		padding: (BTWidget spacing / 2) floor;
 		add: inputBadge

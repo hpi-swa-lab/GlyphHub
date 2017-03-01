@@ -3,7 +3,6 @@ initialize
 	super initialize.
 
 	self
-		changeTableLayout;
-		hResizing: #shrinkWrap;
-		vResizing: #shrinkWrap;
-		layoutInset: 1
+		padding: 1;
+		withLayout;
+		vertical: true

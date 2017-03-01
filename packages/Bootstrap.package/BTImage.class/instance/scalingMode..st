@@ -1,11 +1,10 @@
 as yet unclassified
 scalingMode: aMode
-	" one of #rigid, #shrink, #fill, #full "
-	| resizing |
+	" one of
+		#fixed (take exactly minSize)
+		#shrink (anything between minSize and our own size)
+		#fill (anything upward of our minSize)
+		#full (exactly our own size) "
+	
 	scalingMode := aMode.
-
-	resizing := (scalingMode == #rigid or: [scalingMode == #full])
-		ifTrue: [ #rigid ]
-		ifFalse: [ #spaceFill ].
-
-	self	hResizing: resizing;	vResizing: resizing; updateExtent
+	self layoutChanged

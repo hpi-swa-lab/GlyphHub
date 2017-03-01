@@ -2,4 +2,6 @@ as yet unclassified
 initialize
 	super initialize.
 
-	self scalingMode: #shrink
+	self
+		scalingMode: #shrink;
+		align: #(start start)

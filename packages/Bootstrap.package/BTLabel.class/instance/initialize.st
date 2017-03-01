@@ -4,7 +4,10 @@ initialize
 	text := ''.
 	angle := 0.
 	styleAttributes := Dictionary new.
+	layoutWidth := -1.
 	
-	self fillMode: #fixed.
+	self
+		fillMode: #fixed;
+		minSize: 80.  
 	
 	super initialize

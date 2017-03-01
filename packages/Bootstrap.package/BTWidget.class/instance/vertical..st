@@ -1,3 +1,4 @@
 layout
 vertical: aBoolean
-	self listDirection: (aBoolean ifTrue: [#topToBottom] ifFalse: [#leftToRight])
+	vertical := aBoolean.
+	self layoutChanged

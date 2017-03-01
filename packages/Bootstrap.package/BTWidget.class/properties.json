@@ -4,9 +4,16 @@
 		 ],
 	"classvars" : [
 		"ScalingFactor" ],
-	"commentStamp" : "TB 2/14/2017 17:50",
+	"commentStamp" : "TB 2/17/2017 14:47",
 	"instvars" : [
-		"colorScheme" ],
+		"colorScheme",
+		"minSize",
+		"vertical",
+		"align",
+		"spacing",
+		"ignoreLayout",
+		"expand",
+		"maxSize" ],
 	"name" : "BTWidget",
 	"pools" : [
 		 ],

@@ -4,8 +4,9 @@ displayNotification: aString type: aColorType for: aDuration
 	newNotification := (BTNotification text: aString type: aColorType)
 		displayFor: aDuration
 		onDismiss: [ :notification | activeNotifications remove: notification ];
-		disableTableLayout: true;
 		addTo: self;
+		extent: 1 @ 1;
+		fullBounds;
 		bottomRight: self layoutBounds bottomRight.
 	
 	activeNotifications

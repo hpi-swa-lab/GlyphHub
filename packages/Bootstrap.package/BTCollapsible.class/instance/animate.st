@@ -9,5 +9,5 @@ animate
 	
 	progress >= 1.0 ifTrue: [
 		animating := false.
-		self extent: self extent.
+		self layoutChanged.
 		self stopSteppingSelector: #animate ]

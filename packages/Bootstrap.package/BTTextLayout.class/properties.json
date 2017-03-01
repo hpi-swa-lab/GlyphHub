@@ -11,7 +11,8 @@
 		"width",
 		"text",
 		"height",
-		"ellipsize" ],
+		"ellipsize",
+		"wrap" ],
 	"name" : "BTTextLayout",
 	"pools" : [
 		 ],

@@ -1,0 +1,15 @@
+{
+	"category" : "Bootstrap-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"isVerticalTest",
+		"previousScalingFactor" ],
+	"name" : "BTBoxLayoutTests",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

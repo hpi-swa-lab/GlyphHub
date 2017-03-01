@@ -1,3 +1,5 @@
 as yet unclassified
 row
-	^self sizing: #(spaceFill shrinkWrap) vertical: false
+	^self new
+		vertical: false;
+		yourself

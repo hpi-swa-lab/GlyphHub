@@ -6,7 +6,4 @@ initialize
 	
 	self
 		padding: 1 @ 8;
-		vResizing: #shrinkWrap;
-		hResizing: #shrinkWrap;
-		changeTableLayout;
-		listDirection: #topToBottom
+		vertical: true

@@ -1,4 +1,4 @@
-drawing
+utilities
 roundRectShapeBounds: aRectangle rounded: rounded bordered: bordered
 	| circle points radius |
 	radius := rounded collect: [ :r | r ifTrue: [BTWidget borderRadius] ifFalse: [0]].

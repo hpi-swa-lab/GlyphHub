@@ -1,0 +1,15 @@
+{
+	"category" : "Bootstrap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"check",
+		"label" ],
+	"name" : "BTCheckboxWithLabel",
+	"pools" : [
+		 ],
+	"super" : "BTClickable",
+	"type" : "normal" }

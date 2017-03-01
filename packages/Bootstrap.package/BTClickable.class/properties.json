@@ -8,7 +8,9 @@
 	"instvars" : [
 		"hovered",
 		"do",
-		"active" ],
+		"active",
+		"initiateDragOf",
+		"hoveredDo" ],
 	"name" : "BTClickable",
 	"pools" : [
 		 ],
