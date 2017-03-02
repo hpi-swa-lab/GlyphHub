@@ -4,5 +4,5 @@ initialize
 
 	self
 		padding: 20 @ 12;
-		align: #(start end);
+		align: #(start fill);
 		do: [ self parent makeActive: self ]

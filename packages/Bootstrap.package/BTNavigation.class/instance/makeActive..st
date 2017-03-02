@@ -1,5 +1,6 @@
 as yet unclassified
 makeActive: newActiveTab
-	| oldActiveTab |
-	oldActiveTab := submorphs detect: [:each | each active] ifNone: [ nil ].
-	self tabSwitchedDo valueWithEnoughArguments: { newActiveTab . oldActiveTab }
+	currentTab ifNotNil: [currentTab active: false].
+	newActiveTab active: true.
+	self tabSwitchedDo cull: newActiveTab cull: currentTab.
+	currentTab := newActiveTab

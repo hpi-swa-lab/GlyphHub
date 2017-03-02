@@ -1,9 +1,10 @@
 {
 	"class" : {
-		 },
+		"tabs:" : "al 3/2/2017 12:33" },
 	"instance" : {
-		"initialize" : "al 3/1/2017 18:49",
+		"addTab:" : "al 3/2/2017 12:27",
+		"initialize" : "al 3/2/2017 16:28",
 		"isNavigation" : "al 3/1/2017 17:47",
-		"makeActive:" : "al 3/1/2017 18:51",
+		"makeActive:" : "al 3/2/2017 15:39",
 		"tabSwitchedDo" : "al 3/1/2017 18:27",
 		"tabSwitchedDo:" : "al 3/1/2017 18:27" } }

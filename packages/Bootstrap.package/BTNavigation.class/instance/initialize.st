@@ -4,7 +4,5 @@ initialize
 	
 	self
 		withLayout;
-		tabSwitchedDo: [:new :old |
-			old ifNotNil: [ old active: false ].
-			new active: true ]
-	
+		vertical: false;
+		tabSwitchedDo: []

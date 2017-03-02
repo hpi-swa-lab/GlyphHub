@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"currentTab",
-		"tabSwitchedDo" ],
-	"name" : "BTNavigation",
+		"navigationBar",
+		"stackedContainer" ],
+	"name" : "BTPageNavigation",
 	"pools" : [
 		 ],
 	"super" : "BTWidget",
