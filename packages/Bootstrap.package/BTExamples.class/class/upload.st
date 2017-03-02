@@ -2,40 +2,27 @@ as yet unclassified
 upload
 	| window uploadBox scriptTagArea uploadArea tagArea tagTextArea |
 	
-	tagArea := (BTWidget new
-				withLayout;
-				vertical: false;
-				add: (BTBadge text: 'Latin' type: #info);
-				yourself).
-				
+	tagArea := BTPage row spacing: 0; add: (BTBadge text: 'Latin' type: #info).
+	
 	tagTextArea := ((BTTextAreaWithLabel
-			text: 'Tag scripts and languages'
-			placeholder: 'Start Typing for Autocomplete' 
-			suggestions: {'Latin'. 'Greek'. 'Japanese'. 'German'. 'English'. 'Esperanto'. 'Spanish'. 'French'})).
+		text: 'Tag scripts and languages'
+		placeholder: 'Start Typing for Autocomplete' 
+		textAreaClass: BTTextCompletion)).
+	tagTextArea textArea suggestionsList: {'Latin'. 'Greek'. 'Japanese'. 'German'. 'English'. 'Esperanto'. 'Spanish'. 'French'}.
 	tagTextArea textArea returnDo: [ tagArea add: (BTBadge text: (tagTextArea textArea text) type: #info).
 		tagTextArea textArea text: '' ].
 	
-	scriptTagArea := BTWidget new
-		withLayout;
-		vertical: true;
+	scriptTagArea := BTPage new
 		spacing: BTWidget spacing / 4;
 		add: (tagTextArea
 			add: tagArea).
 				
-	uploadArea := BTWidget new
-		withLayout;
-		vertical: false;
-		spacing: BTWidget spacing;
-		add: (BTWidget new
-			withLayout;
-			vertical: true;
-			spacing: BTWidget spacing;
+	uploadArea := BTPage row
+		add: (BTPage column
 			expand: true;
 			add: (BTLabel bold: 'Upload from File');
-			add: ((BTButton icon: #upload) colorType: #primary));
-		add: (BTWidget new
-			withLayout;
-			vertical: true;
+			add: (((BTButton icon: #upload) colorType: #primary) align: #(center center)));
+		add: (BTPage column
 			spacing: BTWidget spacing / 2;
 			expand: true;
 			add: (BTTextAreaWithLabel text: 'or link a Github repository' placeholder: 'https://github.com/...'  );

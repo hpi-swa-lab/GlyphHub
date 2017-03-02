@@ -2,10 +2,11 @@
 	"class" : {
 		"text:" : "lcj 3/2/2017 11:38",
 		"text:placeholder:" : "lcj 3/2/2017 12:11",
-		"text:placeholder:suggestions:" : "lcj 3/2/2017 12:26" },
+		"text:placeholder:textAreaClass:" : "lcj 3/2/2017 17:33" },
 	"instance" : {
-		"addSuggestions:" : "lcj 3/2/2017 12:24",
-		"initialize" : "lcj 3/2/2017 11:40",
+		"initialize" : "lcj 3/2/2017 17:30",
 		"placeholder:" : "lcj 3/2/2017 11:43",
 		"text:" : "lcj 3/2/2017 11:35",
-		"textArea" : "lcj 3/2/2017 14:36" } }
+		"textArea" : "lcj 3/2/2017 14:36",
+		"textAreaClass" : "lcj 3/2/2017 17:31",
+		"textAreaClass:" : "lcj 3/2/2017 17:27" } }

@@ -4,7 +4,7 @@ initialize
 	
 	"set default text in case someone forgets to set text"
 	label := BTLabel bold: 'No Text Set'.
-	textArea := BTTextArea new.
+	textArea := self textAreaClass new.
 	
 	self
 		withLayout;
