@@ -1,18 +1,26 @@
 as yet unclassified
 upload
-	| window uploadBox scriptTagArea uploadArea |
+	| window uploadBox scriptTagArea uploadArea tagArea tagTextArea |
 	
-	scriptTagArea := BTWidget new
-			withLayout;
-			vertical: true;
-			spacing: BTWidget spacing / 4;
-			add: (BTTextAreaWithLabel text: 'Scripts, Languages' placeholder: 'Start Typing for Autocomplete'  suggestions: {'Latin'. 'Greek'. 'Japanese'. 'German'. 'English'. 'Esperanto'. 'Spanish'. 'French'});
-			add: (BTWidget new
+	tagArea := (BTWidget new
 				withLayout;
 				vertical: false;
-				add: (BTBadge text: 'French' type: #info);
 				add: (BTBadge text: 'Latin' type: #info);
 				yourself).
+				
+	tagTextArea := ((BTTextAreaWithLabel
+			text: 'Tag scripts and languages'
+			placeholder: 'Start Typing for Autocomplete' 
+			suggestions: {'Latin'. 'Greek'. 'Japanese'. 'German'. 'English'. 'Esperanto'. 'Spanish'. 'French'})).
+	tagTextArea textArea returnDo: [ tagArea add: (BTBadge text: (tagTextArea textArea text) type: #info).
+		tagTextArea textArea text: '' ].
+	
+	scriptTagArea := BTWidget new
+		withLayout;
+		vertical: true;
+		spacing: BTWidget spacing / 4;
+		add: (tagTextArea
+			add: tagArea).
 				
 	uploadArea := BTWidget new
 		withLayout;
