@@ -3,4 +3,4 @@ mouseDown: anEvent
 	initiateDragOf ifNotNilDo: [ :widget |
 		anEvent hand grabMorph: widget ].
 	
-	do valueWithEnoughArguments: {self. anEvent}
+	self triggerClicked: anEvent

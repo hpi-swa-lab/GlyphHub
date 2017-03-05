@@ -11,8 +11,6 @@
 		"disabled",
 		"cursor",
 		"cursorRect",
-		"returnDo",
-		"escapeDo",
 		"selectionBound",
 		"selectionBoundRect",
 		"drawCursor",

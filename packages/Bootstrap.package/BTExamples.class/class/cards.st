@@ -8,7 +8,7 @@ cards
 		body := BTCollapsible new add: (BTPage new add: content).
 		header := BTCardHeader new
 			add: (BTLabel text: 'This is a cat');
-			do: [ body toggleCollapsed ];
+			when: #clicked send: #toggleCollapsed to: body;
 			yourself.
 	
 		topLevel add: (BTCard new

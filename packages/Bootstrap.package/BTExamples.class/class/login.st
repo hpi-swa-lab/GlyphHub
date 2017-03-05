@@ -15,10 +15,10 @@ login
 		add: loginBox;
 		yourself.
 	
-	loginButton do: [
+	loginButton when: #clicked evaluate: [ :event |
 		window remove: loginBox; add: loader.
 		[	(Delay forSeconds: 1) wait.
 			loginBox add: ((BTAlert text: (BTIcon icon: #exclamation_triangle), ' Invalid login provided.') colorType: #danger) at: 2.
 			window remove: loader; add: loginBox ] fork. ].
-	
+
 	^window

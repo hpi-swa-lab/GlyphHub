@@ -6,7 +6,8 @@ initialize
 	self
 		stackedContainer: BTStackedContainer new;
 		navigationBar: BTNavigation new.
-	self navigationBar tabSwitchedDo: [:new | self stackedContainer selectWidgetAt: (self navigationBar submorphs indexOf: new)].
+	self navigationBar when: #tabSwitched evaluate: [ :new :old |
+		self stackedContainer selectWidgetAt: (self navigationBar submorphs indexOf: new) ].
 		
 	self
 		withLayout;

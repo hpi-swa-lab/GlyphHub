@@ -9,8 +9,9 @@ upload
 		placeholder: 'Start Typing for Autocomplete' 
 		textAreaClass: BTTextCompletion)).
 	tagTextArea textArea suggestionsList: {'Latin'. 'Greek'. 'Japanese'. 'German'. 'English'. 'Esperanto'. 'Spanish'. 'French'}.
-	tagTextArea textArea returnDo: [ tagArea add: (BTBadge text: (tagTextArea textArea text) type: #info).
-		tagTextArea textArea text: '' ].
+	tagTextArea textArea when: #confirmed evaluate: [ :text |
+		tagArea add: (BTBadge text: text type: #info).
+		tagTextArea textArea clear ].
 	
 	scriptTagArea := BTPage new
 		spacing: BTWidget spacing / 4;

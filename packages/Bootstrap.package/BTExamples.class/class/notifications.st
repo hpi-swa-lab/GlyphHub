@@ -4,11 +4,8 @@ notifications
 	toplevel := BTTopLevel new.
 	
 	toplevel
-		add: BTPage new;
-		add: (((BTButton label: 'Show notification' icon: #flag) do: [ :button |
-			button topLevel
-				displayNotification: ((BTIcon icon: #life_ring), ' Critical Failure')
-				type: #danger ])).
+		add: (((BTButton label: 'Show notification' icon: #flag)
+			when: #clicked evaluate: [ :event | toplevel displayNotification: (BTIcon icon: #life_ring), ' Critical Failure' type: #danger ])).
 	
 	toplevel displayNotification: 'I''m staying.' type: #success.
 	

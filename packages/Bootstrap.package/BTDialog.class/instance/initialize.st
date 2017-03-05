@@ -8,6 +8,6 @@ initialize
 		size: 300 @ 200;
 		colorType: #secondary;
 		add: (BTCardHeader new
-			add: ((BTIconButton icon: #remove) do: [ self delete ]);
+			add: ((BTIconButton icon: #remove) when: #clicked send: #delete to: self);
 			add: titleLabel;
 			initiateDragOf: self)

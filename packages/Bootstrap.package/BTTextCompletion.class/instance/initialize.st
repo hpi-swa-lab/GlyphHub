@@ -3,9 +3,7 @@ initialize
 	super initialize.
 	
 	activeSuggestion := 0.
-
-	" default handler to block newlines. feel free to override! "
-	self returnDo: [ nil ].
 	
-	suggestions := BTDropdown new selectedDo: [ :action :label |
-		self selected: label firstSubmorph plainText ]
+	self when: #confirmed send: #selected: to: self.
+	
+	suggestions := BTDropdown new when: #selected send: #selectedEvent:action:item: to: self

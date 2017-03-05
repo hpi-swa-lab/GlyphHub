@@ -9,10 +9,10 @@ initialize
 		styleAttributes: BTBadge styleAttributes;
 		wrap: #never;
 		placeholder: 'New Tag ...';
-		returnDo: [
-			input text ifNotEmpty: [
-				self add: (BTBadge text: input text) before: inputBadge.
-				self tags add: input text.
+		when: #confirmed evaluate: [ :text |
+			text ifNotEmpty: [
+				self add: (BTBadge text: text) before: inputBadge.
+				self tags add: text.
 				input clear ].
 			nil ];
 		yourself.

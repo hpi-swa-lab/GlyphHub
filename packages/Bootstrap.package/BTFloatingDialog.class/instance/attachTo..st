@@ -1,7 +1,7 @@
 as yet unclassified
 attachTo: aClickable
 	" makes the given clickable toggle this dialog "
-	aClickable do: [ :clickable :event |
+	aClickable when: #clicked evaluate: [ :event |
 		self owner
-			ifNil: [ self openFor: clickable event: event ]
+			ifNil: [ self openFor: aClickable event: event ]
 			ifNotNil: [ self delete ]]

@@ -4,5 +4,4 @@ initialize
 	
 	self
 		withLayout;
-		vertical: false;
-		tabSwitchedDo: []
+		vertical: false

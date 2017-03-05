@@ -5,5 +5,4 @@ initialize
 	self
 		hovered: false;
 		active: false;
-		do: [];
 		withLayout

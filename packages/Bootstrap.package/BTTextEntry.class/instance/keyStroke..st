@@ -54,9 +54,9 @@ keyStroke: anEvent
 	key = '<Cmd-x>' ifTrue: [
 		Clipboard clipboardText: self selectedText. ^self deleteBeforeCursor ].
 	key = '<escape>' ifTrue: [
-		^escapeDo ifNotNil: [ escapeDo valueWithEnoughArguments: {self}  ]].
+		^self triggerCancelled ].
 	key = '<cr>' ifTrue: [
-		returnDo ifNotNil: [ (returnDo valueWithEnoughArguments: {self}) ifNil: [ ^self ]]].
+		(self triggerConfirmed: self text) ifFalse: [ ^self ]].
 	
 	(anEvent controlKeyPressed or: [anEvent commandKeyPressed]) ifFalse: [
 		self insertAtCursor: anEvent keyCharacter.

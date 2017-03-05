@@ -3,8 +3,7 @@
 		"tabs:" : "al 3/2/2017 12:33" },
 	"instance" : {
 		"addTab:" : "al 3/2/2017 12:27",
-		"initialize" : "al 3/2/2017 16:28",
+		"initialize" : "TB 3/3/2017 15:14",
 		"isNavigation" : "al 3/1/2017 17:47",
-		"makeActive:" : "al 3/2/2017 15:39",
-		"tabSwitchedDo" : "al 3/1/2017 18:27",
-		"tabSwitchedDo:" : "al 3/1/2017 18:27" } }
+		"makeActive:" : "TB 3/3/2017 15:15",
+		"triggerTabSwitched:oldTab:" : "TB 3/3/2017 15:14" } }

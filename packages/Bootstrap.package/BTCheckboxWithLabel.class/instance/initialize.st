@@ -6,7 +6,7 @@ initialize
 	label := BTLabel new.
 	
 	self
-		do: [ self toggleChecked ];
+		when: #clicked send: #toggleChecked to: self;
 		add: check;
 		add: label;
 		spacing: BTWidget spacing / 2
