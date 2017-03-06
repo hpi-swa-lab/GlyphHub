@@ -1,4 +1,4 @@
-as yet unclassified
+widgets
 widget
 	^BTWidget new
 		color: self randomColor;

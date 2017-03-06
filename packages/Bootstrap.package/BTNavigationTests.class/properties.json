@@ -10,5 +10,5 @@
 	"name" : "BTNavigationTests",
 	"pools" : [
 		 ],
-	"super" : "BTTestCase",
+	"super" : "BTEventTestCase",
 	"type" : "normal" }

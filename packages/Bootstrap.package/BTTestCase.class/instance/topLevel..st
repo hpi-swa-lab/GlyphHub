@@ -1,4 +1,4 @@
-as yet unclassified
+widgets
 topLevel: aBooleanVertical
 	^BTTopLevel new
 		extent: 600 asPoint;

@@ -1,3 +1,3 @@
-as yet unclassified
+widgets
 horizontalTopLevel
 	^self topLevel: false

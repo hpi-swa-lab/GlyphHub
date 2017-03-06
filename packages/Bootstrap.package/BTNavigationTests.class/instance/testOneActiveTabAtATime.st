@@ -10,7 +10,8 @@ testOneActiveTabAtATime
 	navigation submorphsDo: [:each | self assert: each active not ].
 	
 	navigation makeActive: navigation firstSubmorph.
-	navigation submorphs third triggerEvent: #clicked with: nil.
+
+	self click: navigation submorphs third.
 	
 	self
 		assert: navigation submorphs first active not;

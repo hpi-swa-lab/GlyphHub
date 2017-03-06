@@ -1,3 +1,5 @@
-as yet unclassified
+running
 tearDown
+	super tearDown.
+	
 	BTWidget scalingFactor: previousScalingFactor

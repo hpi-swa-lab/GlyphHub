@@ -1,9 +1,8 @@
-as yet unclassified
+initialize-release
 initialize
 	super initialize.
 	
 	activeSuggestion := 0.
-	
-	self when: #confirmed send: #selected: to: self.
+	onlyCompletions := false.
 	
 	suggestions := BTDropdown new when: #selected send: #selectedEvent:action:item: to: self

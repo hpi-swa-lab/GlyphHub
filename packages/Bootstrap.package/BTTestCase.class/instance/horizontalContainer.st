@@ -1,4 +1,4 @@
-as yet unclassified
+widgets
 horizontalContainer
 	^BTWidget new
 		withLayout;

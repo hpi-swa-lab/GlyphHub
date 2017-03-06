@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 placeholder: aString
 	placeholder := aString.
 	

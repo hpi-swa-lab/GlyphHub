@@ -1,0 +1,8 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"testNotReceived" : "TB 3/6/2017 15:06",
+		"testNotReceivedNegated" : "TB 3/6/2017 15:11",
+		"testReceived" : "TB 3/6/2017 15:12",
+		"testReceivedNegated" : "TB 3/6/2017 15:12" } }

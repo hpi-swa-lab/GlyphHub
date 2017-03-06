@@ -2,11 +2,14 @@
 	"class" : {
 		 },
 	"instance" : {
+		"addSpy:" : "TB 3/6/2017 12:10",
+		"checkSpies" : "TB 3/6/2017 13:14",
+		"expect:" : "TB 3/6/2017 11:16",
 		"horizontalContainer" : "TB 3/1/2017 09:06",
 		"horizontalTopLevel" : "TB 3/1/2017 09:06",
 		"randomColor" : "TB 3/1/2017 09:06",
-		"setUp" : "TB 3/1/2017 09:07",
-		"tearDown" : "TB 3/1/2017 09:07",
+		"setUp" : "TB 3/6/2017 12:10",
+		"tearDown" : "TB 3/6/2017 13:31",
 		"topLevel:" : "TB 3/1/2017 09:05",
 		"verticalContainer" : "TB 3/1/2017 09:05",
 		"verticalTopLevel" : "TB 3/1/2017 09:05",

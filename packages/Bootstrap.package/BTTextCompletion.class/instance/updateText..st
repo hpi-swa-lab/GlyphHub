@@ -1,6 +1,6 @@
 as yet unclassified
 updateText: aString
-	self showSuggestions; updateSuggestions.
+	self updateSuggestions.
 	
 	topHit
 		ifNil: [ super updateText: aString ]

@@ -1,4 +1,4 @@
-as yet unclassified
+text
 updateText: aString
 	super updateText: (aString ifEmpty: [ | secondaryColor |
 		secondaryColor := (self colorScheme foreground) printHtmlString.

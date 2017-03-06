@@ -1,4 +1,4 @@
-as yet unclassified
+text
 internalText: aString
 	| prefix |
 	prefix := '' writeStream.

@@ -4,13 +4,14 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "TB 3/6/2017 13:41",
 	"instvars" : [
 		"suggestions",
 		"suggestionsPromise",
 		"suggestionsList",
 		"topHit",
-		"activeSuggestion" ],
+		"activeSuggestion",
+		"onlyCompletions" ],
 	"name" : "BTTextCompletion",
 	"pools" : [
 		 ],

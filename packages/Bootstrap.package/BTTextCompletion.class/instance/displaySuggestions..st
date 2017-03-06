@@ -9,7 +9,7 @@ displaySuggestions: aCollection
 	
 	aCollection
 		ifEmpty: [ ^suggestions delete ]
-		ifNotEmpty: [ self showSuggestions ].
+		ifNotEmpty: [ self openSuggestionPopup ].
 	
 	aCollection do: [ :suggestion |
 		suggestions add: (BTDropdownItem label: (self markupForResult: suggestion first) action: suggestion second)].

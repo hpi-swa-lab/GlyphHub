@@ -1,4 +1,4 @@
-as yet unclassified
+text
 plainText
 	| in out |
 	self text ifEmpty: [^self text].

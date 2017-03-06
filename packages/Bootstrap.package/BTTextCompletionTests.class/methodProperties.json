@@ -1,0 +1,15 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"completionWidget" : "TB 3/6/2017 11:32",
+		"displayedSuggestions" : "TB 3/6/2017 11:33",
+		"setUp" : "TB 3/6/2017 12:09",
+		"tearDown" : "TB 3/6/2017 11:37",
+		"testAllowExactMatch" : "TB 3/6/2017 13:49",
+		"testAllowFreeText" : "TB 3/6/2017 13:32",
+		"testArrowSelectSuggestion" : "TB 3/6/2017 18:35",
+		"testDisallowEmptyText" : "TB 3/6/2017 18:12",
+		"testDisallowFreeText" : "TB 3/6/2017 18:14",
+		"testSuggestionsFiltered" : "TB 3/6/2017 11:37",
+		"testTabSelectSuggestion" : "TB 3/6/2017 18:15" } }
