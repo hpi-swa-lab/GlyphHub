@@ -7,6 +7,6 @@ subject: anObject event: aSymbol arguments: aCollection negated: aBoolean
 		negated: aBoolean;
 		yourself.
 	
-	anObject when: aSymbol send: #received:a:b:c:d:e:f:g:h: to: class.
+	anObject when: aSymbol send: #a:b:c:d:e:f:g:h: to: class.
 	
 	^class

@@ -2,6 +2,9 @@
 	"class" : {
 		 },
 	"instance" : {
+		"testCorrectArguments" : "TB 3/6/2017 18:57",
+		"testIncorrectArguments" : "TB 3/6/2017 18:57",
+		"testNoArgumentsEvent" : "TB 3/6/2017 18:50",
 		"testNotReceived" : "TB 3/6/2017 15:06",
 		"testNotReceivedNegated" : "TB 3/6/2017 15:11",
 		"testReceived" : "TB 3/6/2017 15:12",
