@@ -1,0 +1,14 @@
+{
+	"category" : "FontReviewTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"marker" ],
+	"name" : "FRTSingleGlyphWidget",
+	"pools" : [
+		 ],
+	"super" : "BTWidget",
+	"type" : "normal" }
