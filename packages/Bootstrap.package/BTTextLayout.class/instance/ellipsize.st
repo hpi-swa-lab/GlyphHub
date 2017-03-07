@@ -1,3 +1,3 @@
 as yet unclassified
 ellipsize
-	^ellipsize
+	^self subclassResponsibility

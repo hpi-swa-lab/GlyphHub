@@ -1,3 +1,3 @@
 cursor
 cursor
-	^cursor
+	^self layout cursor

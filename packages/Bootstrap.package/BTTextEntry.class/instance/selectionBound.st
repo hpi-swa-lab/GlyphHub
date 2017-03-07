@@ -1,3 +1,3 @@
 selection
 selectionBound
-	^selectionBound
+	^self layout selectionBound

@@ -1,11 +1,9 @@
 as yet unclassified
 logicalAttributes
-	| bits |
-	bits := self primLayoutLogicalAttributes: self layout.
-	
-	^bits collect: [ :bitfield | | field |
-		field := -1.
-		#(lineBreak
+	" returns an array corresponding to each character in the text. in each slot,
+	  there is a list of attributes that match on this particular character.
+	  Possible attributes:
+			lineBreak
 			mandatoryBreak
 			charBreak
 			whiteSpace
@@ -17,6 +15,5 @@ logicalAttributes
 			sentenceEnd
 			backspaceDeletesCharacter
 			expandableSpace
-			wordBoundary) select: [ :name |
-			field := field + 1.
-			(bitfield bitAnd: (1 bitShift: field)) ~= 0 ]]
+			wordBoundary"
+	^self subclassResponsibility

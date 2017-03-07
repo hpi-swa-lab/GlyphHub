@@ -1,0 +1,19 @@
+{
+	"category" : "Bootstrap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"selectionBound",
+		"cursor",
+		"width",
+		"paragraph",
+		"text",
+		"origin" ],
+	"name" : "BTMorphicTextLayout",
+	"pools" : [
+		 ],
+	"super" : "BTTextLayout",
+	"type" : "normal" }

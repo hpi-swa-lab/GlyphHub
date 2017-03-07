@@ -1,3 +1,3 @@
 selection
 hasSelection
-	^self selectionBound ~= self cursor
+	^self layout hasSelection

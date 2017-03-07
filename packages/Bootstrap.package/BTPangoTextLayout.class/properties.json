@@ -1,0 +1,22 @@
+{
+	"category" : "Bootstrap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"layout",
+		"font",
+		"width",
+		"text",
+		"height",
+		"ellipsize",
+		"wrap",
+		"cursor",
+		"selectionBound" ],
+	"name" : "BTPangoTextLayout",
+	"pools" : [
+		 ],
+	"super" : "BTTextLayout",
+	"type" : "normal" }

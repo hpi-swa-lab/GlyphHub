@@ -1,5 +1,5 @@
 as yet unclassified
-drawOn: aCanvas from: aNumber to: anotherNumber color: aColor fillColor: anotherColor
+drawOn: aCanvas selectionColor: aColor selectionFillColor: anotherColor drawCursor: aBoolean
 	| transform |
 	transform := self angle ~= 0
 		ifTrue: [
@@ -9,10 +9,11 @@ drawOn: aCanvas from: aNumber to: anotherNumber color: aColor fillColor: another
 		ifFalse: [ MatrixTransform2x3 withOffset: self layoutBounds origin + aCanvas origin ].
 	
 	self layout
-		drawOn: aCanvas form
+		fullDrawOn: aCanvas
 		transform: transform
-		color: aColor
-		fillColor: anotherColor
+		color: self colorScheme foreground
+		fillColor: self colorScheme background
+		selectionColor: aColor
+		selectionFillColor: anotherColor
 		clip: (aCanvas clipRect translateBy: aCanvas origin)
-		start: aNumber
-		end: anotherNumber
+		drawCursor: aBoolean

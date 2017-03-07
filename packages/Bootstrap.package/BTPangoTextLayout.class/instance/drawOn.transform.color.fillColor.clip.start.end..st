@@ -1,8 +1,8 @@
 as yet unclassified
-drawOn: aForm transform: aTransform color: aColor fillColor: anotherColor clip: aRectangle start: aNumber end: anotherNumber
+drawOn: aCanvas transform: aTransform color: aColor fillColor: anotherColor clip: aRectangle start: aNumber end: anotherNumber
 	self
 		primLayoutRender: self layout
-		form: aForm
+		form: aCanvas form
 		origin: aTransform asMatrixTransform2x3
 		color: (aColor pixelWordForDepth: 32)
 		fillColor: (anotherColor pixelWordForDepth: 32)

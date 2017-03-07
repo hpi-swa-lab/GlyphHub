@@ -7,8 +7,8 @@
 	"commentStamp" : "",
 	"instvars" : [
 		 ],
-	"name" : "BTTextMorph",
+	"name" : "BTMarkupParser",
 	"pools" : [
 		 ],
-	"super" : "BTWidget",
+	"super" : "Object",
 	"type" : "normal" }

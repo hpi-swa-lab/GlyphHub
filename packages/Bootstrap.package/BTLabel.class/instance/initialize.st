@@ -1,6 +1,6 @@
 as yet unclassified
 initialize
-	layout := BTTextLayout new font: 'Roboto 12'; yourself.
+	layout := self class textLayoutClass new font: 'Roboto 12'; yourself.
 	text := ''.
 	angle := 0.
 	styleAttributes := Dictionary new.

@@ -1,3 +1,4 @@
 as yet unclassified
 lineNumberOfIndex: aNumber
-	^self primLayout: self layout lineNumberOfIndex: aNumber
+	" return the line number at the given character index "
+	^self subclassResponsibility
