@@ -36,7 +36,7 @@ keyStroke: anEvent
 	key = '<Shift-end>' ifTrue: [
 		^self selectionBound: self cursor; cursor: self text size ].
 	key = '<tab>' ifTrue: [
-		^self tabHitWithEvent: anEvent ].
+		^self pasteUpMorphHandlingTabAmongFields ifNotNilDo: [ :p | p tabHitWithEvent: anEvent ]].
 	key = '<Ctrl-left>' ifTrue: [
 		^self moveToNextWord: -1 selecting: false ].
 	key = '<Ctrl-Shift-left>' ifTrue: [

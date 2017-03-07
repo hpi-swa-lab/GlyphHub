@@ -1,14 +1,16 @@
 {
-	"category" : "Bootstrap",
+	"category" : "Bootstrap-Tests",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"primaryFormClickable" ],
-	"name" : "BTPage",
+		"window",
+		"inputs",
+		"button" ],
+	"name" : "BTFormTests",
 	"pools" : [
 		 ],
-	"super" : "BTWidget",
+	"super" : "BTEventTestCase",
 	"type" : "normal" }
