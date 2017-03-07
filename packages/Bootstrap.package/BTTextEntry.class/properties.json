@@ -14,7 +14,8 @@
 		"selectionBound",
 		"selectionBoundRect",
 		"drawCursor",
-		"blinkStart" ],
+		"blinkStart",
+		"multiLine" ],
 	"name" : "BTTextEntry",
 	"pools" : [
 		 ],

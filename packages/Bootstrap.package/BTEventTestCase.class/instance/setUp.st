@@ -11,7 +11,7 @@ setUp
 		instVarNamed: #canvas
 		put: (Form extent: 300@200 depth: 32) getCanvas. 
 
-	hand := UiTestHandMorph new.
+	hand := BTTestHandMorph new.
 	world
 		removeHand: world firstHand; "the default hand"
 		addHand: hand

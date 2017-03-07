@@ -14,5 +14,4 @@ internalText: aString
 	prefix nextPut: $>.
 	
 	self layout text: (prefix contents, aString, '</span>') squeakToUtf8.
-	self extent: self extent.
 	self layoutChanged

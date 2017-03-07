@@ -7,5 +7,6 @@ initialize
 	cursorRect := 0 @ 0 extent: 0 @ 0.
 	placeholder := ''.
 	drawCursor := true.
+	multiLine := false.
 	
 	super initialize

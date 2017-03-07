@@ -56,7 +56,7 @@ keyStroke: anEvent
 	key = '<escape>' ifTrue: [
 		^self triggerCancelled ].
 	key = '<cr>' ifTrue: [
-		(self triggerConfirmed: self text) ifFalse: [ ^self ]].
+		self multiLine ifFalse: [ ^self triggerConfirmed: self text ]].
 	
 	(anEvent controlKeyPressed or: [anEvent commandKeyPressed]) ifFalse: [
 		self insertAtCursor: anEvent keyCharacter.
