@@ -13,7 +13,7 @@ check: aTestCase
 				self negated ifTrue: [' not'] ifFalse: ['']}) ].
 	
 	expectedArguments ifNotNil: [
-		(expectedArguments hasEqualElements: actualArguments) ifFalse: [
+		(self arguments: expectedArguments match: actualArguments) ifFalse: [
 			aTestCase
 				assert: false
 				description: ('Expected arguments {2} from {1} to be {3}' format: {

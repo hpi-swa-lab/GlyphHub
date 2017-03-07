@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 initiateDragOf: aWidget
 	initiateDragOf := aWidget

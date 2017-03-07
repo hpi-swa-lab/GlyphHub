@@ -1,6 +1,6 @@
-as yet unclassified
+event handling
 mouseEnter: anEvent
 	self
-		triggerHovered: true event: anEvent;
 		hovered: true;
+		triggerHovered: true event: anEvent;
 		changed

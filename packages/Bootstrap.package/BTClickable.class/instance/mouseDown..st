@@ -1,6 +1,6 @@
-as yet unclassified
+event handling
 mouseDown: anEvent
 	initiateDragOf ifNotNilDo: [ :widget |
 		anEvent hand grabMorph: widget ].
 	
-	self triggerClicked: anEvent
+	hadMouseDown := true

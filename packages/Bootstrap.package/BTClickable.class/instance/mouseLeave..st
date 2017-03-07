@@ -1,6 +1,8 @@
-as yet unclassified
+event handling
 mouseLeave: anEvent
+	hadMouseDown := false.
+	
 	self
-		triggerHovered: false event: anEvent;
 		hovered: false;
+		triggerHovered: false event: anEvent;
 		changed

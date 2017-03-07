@@ -1,6 +1,6 @@
 as yet unclassified
 doesNotUnderstand: aMessage
-	fulfilled := fulfilled not.
+	fulfilled := negated ifTrue: [false] ifFalse: [true].
 	
 	self arguments
 		ifNotNilDo: [ :expected |

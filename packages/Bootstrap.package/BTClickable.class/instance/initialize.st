@@ -1,6 +1,8 @@
-as yet unclassified
+initialize-release
 initialize
 	super initialize.
+	
+	hadMouseDown := false.
 	
 	self
 		hovered: false;

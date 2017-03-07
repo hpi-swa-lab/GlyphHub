@@ -1,0 +1,11 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"clickableWidget" : "TB 3/6/2017 21:27",
+		"setUp" : "TB 3/6/2017 21:27",
+		"testHovered" : "TB 3/6/2017 22:10",
+		"testMouseDownAndUp" : "TB 3/6/2017 21:39",
+		"testMouseLeftWhileClicked" : "TB 3/6/2017 21:46",
+		"testOnlyMouseDown" : "TB 3/6/2017 21:39",
+		"testOnlyMouseUp" : "TB 3/6/2017 22:13" } }
