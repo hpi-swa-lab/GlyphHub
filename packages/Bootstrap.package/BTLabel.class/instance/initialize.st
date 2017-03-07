@@ -7,5 +7,4 @@ initialize
 	layoutWidth := -1.
 	wrap := true.
 	
-	super initialize.
-	self minSize: 80.
+	super initialize
