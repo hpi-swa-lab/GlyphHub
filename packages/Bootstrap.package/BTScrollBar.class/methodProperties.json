@@ -2,4 +2,6 @@
 	"class" : {
 		 },
 	"instance" : {
-		"drawOn:" : "TB 3/1/2017 18:38" } }
+		"drawOn:" : "TB 3/1/2017 18:38",
+		"handlesMouseDown:" : "TB 3/2/2017 10:44",
+		"mouseDown:" : "TB 3/2/2017 10:48" } }
