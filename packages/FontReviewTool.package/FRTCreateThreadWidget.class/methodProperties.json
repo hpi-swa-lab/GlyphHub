@@ -2,7 +2,8 @@
 	"class" : {
 		 },
 	"instance" : {
-		"initialize" : "TB 3/9/2017 09:10",
+		"initialize" : "TB 3/9/2017 09:21",
 		"openCurveEditor:" : "TB 3/9/2017 09:11",
+		"openFilePicker:" : "TB 3/9/2017 09:21",
 		"openSketchEditor:" : "TB 3/9/2017 08:50",
 		"text" : "TB 3/9/2017 08:40" } }
