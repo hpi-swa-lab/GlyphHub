@@ -7,7 +7,7 @@ selectionColor: aSelectionColor
 selectionFillColor: aSelectionFillColor
 clip: aRectangle
 drawCursor: aBoolean
-	self drawOn: aCanvas transform: aTransform color: aColor fillColor: aFillColor clip: aRectangle start: -1 end: -1.
+	self drawOn: aCanvas transform: aTransform color: aColor fillColor: (aFillColor ifNil: [Color transparent]) clip: aRectangle start: -1 end: -1.
 	
 	self hasSelection ifTrue: [ | selection |
 		selection := self selectionBounds.
