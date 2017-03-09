@@ -1,7 +1,7 @@
 {
 	"class" : {
 		"example1" : "al 2/15/2017 13:46",
-		"example2" : "al 2/15/2017 13:47",
+		"example2" : "al 3/7/2017 16:19",
 		"example3" : "al 2/15/2017 13:48" },
 	"instance" : {
 		"addComment:" : "al 2/15/2017 13:56",
@@ -11,6 +11,7 @@
 		"ancestor:" : "lcj 1/12/2017 10:58",
 		"asMorph" : "TB 1/12/2017 10:36",
 		"asWidget" : "al 2/13/2017 15:04",
+		"author" : "al 3/7/2017 16:13",
 		"comments" : "lcj 1/9/2017 17:02",
 		"initialize" : "al 2/15/2017 13:45",
 		"isOpen" : "lcj 1/9/2017 16:35",

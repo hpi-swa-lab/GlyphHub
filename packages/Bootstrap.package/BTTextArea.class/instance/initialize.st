@@ -3,5 +3,5 @@ initialize
 	super initialize.
 	
 	self
-		colorScheme: (BTColorScheme type: #secondary);
+		colorScheme: (BTColorScheme colorType: #secondary);
 		padding: 12 @ 8

@@ -1,0 +1,15 @@
+{
+	"category" : "Bootstrap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "al 3/7/2017 14:19",
+	"instvars" : [
+		"items",
+		"maxMinWidth" ],
+	"name" : "BTDescriptionList",
+	"pools" : [
+		 ],
+	"super" : "BTWidget",
+	"type" : "normal" }

@@ -1,3 +1,3 @@
 colors
-colorType: aType
-	self colorScheme: (BTColorScheme type: aType mode: self colorMode)
+colorType: aColorType
+	self colorScheme: (BTColorScheme colorType: aColorType mode: self colorMode)

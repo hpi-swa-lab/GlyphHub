@@ -8,7 +8,7 @@ upload
 		text: 'Tag scripts and languages'
 		placeholder: 'Start Typing for Autocomplete' 
 		textAreaClass: BTTextCompletion)).
-	tagTextArea textArea suggestionsList: {'Latin'. 'Greek'. 'Japanese'. 'German'. 'English'. 'Esperanto'. 'Spanish'. 'French'}; onlyCompletions: true.
+	tagTextArea textArea suggestionsList: {'Latin'. 'Greek'. 'Japanese'. 'German'. 'English'. 'Esperanto'. 'Spanish'. 'French'. 'Klingon'}; onlyCompletions: true.
 	tagTextArea textArea when: #confirmed evaluate: [ :text |
 		tagArea add: (BTBadge text: text type: #info).
 		tagTextArea textArea clear ].

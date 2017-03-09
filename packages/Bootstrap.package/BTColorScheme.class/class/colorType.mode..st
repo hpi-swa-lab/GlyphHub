@@ -1,8 +1,8 @@
 initialize-release
-type: aType mode: aMode
+colorType: aColorType mode: aMode
 	" aType: one of #secondary, #primary, #success, #warning, #danger, #info.
 	  aMode: one of #normal, #state, #invert, #outline, (#darker: only for #secondary) "
-	^(self perform: (aType asString, ':') asSymbol with: aMode)
-		privateType: aType;
+	^(self perform: (aColorType asString, ':') asSymbol with: aMode)
+		privateColorType: aColorType;
 		privateMode: aMode;
 		yourself

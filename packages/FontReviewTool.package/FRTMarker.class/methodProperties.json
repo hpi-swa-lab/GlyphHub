@@ -1,7 +1,8 @@
 {
 	"class" : {
 		"example1" : "TB 1/16/2017 13:37",
-		"example2" : "TB 1/16/2017 13:37" },
+		"example2" : "TB 1/16/2017 13:37",
+		"example3" : "al 3/7/2017 16:57" },
 	"instance" : {
 		"addFeature:" : "lcj 1/12/2017 11:10",
 		"features" : "lcj 1/9/2017 12:11",
