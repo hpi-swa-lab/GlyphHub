@@ -1,0 +1,3 @@
+*Bootstrap-testing
+isBTModel
+	^false

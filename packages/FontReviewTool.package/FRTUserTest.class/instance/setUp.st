@@ -2,7 +2,7 @@ as yet unclassified
 setUp
 
 	user := FRTUser new
-				name: 'John Doe';
+				username: 'John Doe';
 				avatarFromPath: FileDirectory default / 'BP2016H1' / 'assets' / 'penguin.png';
 				addTag: 'Engineer';
 				addLanguage: 'Language1' expertiseLevel: 'Beginner';

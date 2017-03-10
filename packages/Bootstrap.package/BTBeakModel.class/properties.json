@@ -1,0 +1,14 @@
+{
+	"category" : "Bootstrap-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"color" ],
+	"name" : "BTBeakModel",
+	"pools" : [
+		 ],
+	"super" : "BTModel",
+	"type" : "normal" }

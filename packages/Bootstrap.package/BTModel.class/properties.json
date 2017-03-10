@@ -1,0 +1,15 @@
+{
+	"category" : "Bootstrap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"Backend" ],
+	"commentStamp" : "",
+	"instvars" : [
+		"id",
+		"dirtyFields" ],
+	"name" : "BTModel",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

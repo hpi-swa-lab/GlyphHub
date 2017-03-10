@@ -1,0 +1,17 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"setUp" : "TB 3/10/2017 15:19",
+		"testAssignField" : "TB 3/10/2017 16:38",
+		"testAssociations1to1Strong" : "TB 3/10/2017 17:07",
+		"testAssociations1to1Weak" : "TB 3/10/2017 17:07",
+		"testAssociations1toN" : "TB 3/10/2017 13:47",
+		"testAssociationsNtoM" : "TB 3/10/2017 13:47",
+		"testDelete" : "TB 3/10/2017 16:33",
+		"testEmptyCreate" : "TB 3/10/2017 16:33",
+		"testLoad" : "TB 3/10/2017 16:33",
+		"testLoadAll" : "TB 3/10/2017 16:33",
+		"testSaveNew" : "TB 3/10/2017 16:37",
+		"testSaveUpdate" : "TB 3/10/2017 16:38",
+		"testValidations" : "TB 3/10/2017 13:46" } }

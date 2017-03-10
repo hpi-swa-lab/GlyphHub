@@ -1,0 +1,17 @@
+{
+	"category" : "Bootstrap-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"name",
+		"age",
+		"beak",
+		"significantOther" ],
+	"name" : "BTPenguinModel",
+	"pools" : [
+		 ],
+	"super" : "BTModel",
+	"type" : "normal" }
