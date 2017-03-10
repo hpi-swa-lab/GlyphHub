@@ -2,13 +2,14 @@ as yet unclassified
 upload
 	| window uploadBox scriptTagArea uploadArea tagArea tagTextArea |
 	
-	tagArea := BTPage row spacing: 0; add: (BTBadge text: 'Latin' type: #info).
+	tagArea := BTPage row spacing: 0.
 	
 	tagTextArea := ((BTTextAreaWithLabel
 		text: 'Tag scripts and languages'
 		placeholder: 'Start Typing for Autocomplete' 
 		textAreaClass: BTTextCompletion)).
-	tagTextArea textArea suggestionsList: {'Latin'. 'Greek'. 'Japanese'. 'German'. 'English'. 'Esperanto'. 'Spanish'. 'French'. 'Klingon'}; onlyCompletions: true.
+		
+	tagTextArea textArea suggestionsList: {'Latin'. 'Greek'. 'Japanese'. 'German'. 'English'. 'Esperanto'. 'Spanish'. 'French'. 'Klingon'}.
 	tagTextArea textArea when: #confirmed evaluate: [ :text |
 		tagArea add: (BTBadge text: text type: #info).
 		tagTextArea textArea clear ].

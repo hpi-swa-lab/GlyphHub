@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"tags" ],
-	"name" : "BTTagList",
+		 ],
+	"name" : "BTTag",
 	"pools" : [
 		 ],
-	"super" : "BTWidget",
+	"super" : "BTBadge",
 	"type" : "normal" }

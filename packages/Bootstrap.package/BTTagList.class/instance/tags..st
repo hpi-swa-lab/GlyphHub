@@ -1,9 +1,9 @@
 as yet unclassified
 tags: aCollectionOfStrings
-	tags := aCollectionOfStrings asOrderedCollection.
+	| newTags |
 	
+	tags := OrderedCollection new.
+	newTags := aCollectionOfStrings asOrderedCollection.
 	self removeAllMorphs.
 	
-	tags do: [ :tag | self add: (BTBadge text: tag) ].
-	
-	self add: inputBadge
+	newTags do: [ :tag | self addTag: tag ]

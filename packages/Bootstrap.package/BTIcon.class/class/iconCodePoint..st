@@ -4,4 +4,4 @@ iconCodePoint: anIconSymbol
 		(self perform: method) at: anIconSymbol ifPresent: [ :code |
 			^Character codePoint: code ]].
 
-	^''
+	^ self error:'Icon does not exist!'

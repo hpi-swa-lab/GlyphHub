@@ -1,3 +1,3 @@
 as yet unclassified
 text
-	^label text
+	^label ifNotNil: [label text] ifNil: ''

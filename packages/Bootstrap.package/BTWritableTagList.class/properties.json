@@ -6,9 +6,10 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"tags" ],
-	"name" : "BTTagList",
+		"input",
+		"inputBadge" ],
+	"name" : "BTWritableTagList",
 	"pools" : [
 		 ],
-	"super" : "BTWidget",
+	"super" : "BTTagList",
 	"type" : "normal" }

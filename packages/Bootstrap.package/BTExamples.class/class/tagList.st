@@ -1,4 +1,5 @@
 as yet unclassified
 tagList
 	^BTTopLevel new
-		add: (BTTagList new tags: {'First Tag'. 'Second Tag'})
+		add: (BTWritableTagList new tags: {'First Tag'. 'Second Tag'} asOrderedCollection);
+		add: (BTTagList new tags: {'First Tag'. 'Second Tag'} asOrderedCollection)

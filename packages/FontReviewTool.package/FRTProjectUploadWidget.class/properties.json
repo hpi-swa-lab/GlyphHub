@@ -1,0 +1,14 @@
+{
+	"category" : "FontReviewTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"LanguageSuggestions" ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "FRTProjectUploadWidget",
+	"pools" : [
+		 ],
+	"super" : "BTTopLevel",
+	"type" : "normal" }
