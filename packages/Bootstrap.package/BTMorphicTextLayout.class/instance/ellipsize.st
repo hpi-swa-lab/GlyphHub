@@ -1,3 +1,4 @@
 as yet unclassified
 ellipsize
-	self flag: #todo
+	self flag: #todo.
+	^#none

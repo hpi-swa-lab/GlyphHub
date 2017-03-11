@@ -3,7 +3,7 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		 ],
+		"ModuleAvailable" ],
 	"commentStamp" : "",
 	"instvars" : [
 		"layout",

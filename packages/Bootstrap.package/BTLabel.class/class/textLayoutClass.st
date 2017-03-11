@@ -1,3 +1,3 @@
 as yet unclassified
 textLayoutClass
-	^BTPangoTextLayout
+	^BTPangoTextLayout available ifTrue: [BTPangoTextLayout] ifFalse: [BTMorphicTextLayout]

@@ -1,10 +1,11 @@
 {
 	"class" : {
+		"available" : "TB 3/11/2017 13:13",
 		"initialize" : "TB 2/6/2017 00:34",
-		"primRegisterCustomFontDirectory:" : "TB 2/6/2017 00:00",
+		"primRegisterCustomFontDirectory:" : "TB 3/11/2017 13:12",
 		"primSetDpi:" : "TB 2/12/2017 00:19",
 		"shutDown" : "TB 2/5/2017 23:55",
-		"startUp" : "TB 2/12/2017 00:44",
+		"startUp" : "TB 3/11/2017 13:13",
 		"updateDpi" : "TB 2/12/2017 00:44" },
 	"instance" : {
 		"cursor" : "TB 3/7/2017 12:47",
