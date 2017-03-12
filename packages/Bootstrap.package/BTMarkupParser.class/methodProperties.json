@@ -1,5 +1,16 @@
 {
 	"class" : {
-		"strip:" : "TB 3/7/2017 14:54" },
+		"attributeFor:value:" : "TB 3/12/2017 21:01",
+		"baseFontSize" : "TB 3/12/2017 17:21",
+		"defaultFontAtSize:" : "TB 3/12/2017 20:44",
+		"markupToText:" : "TB 3/12/2017 14:44",
+		"nextTagFrom:to:" : "TB 3/12/2017 16:47",
+		"parseAttributeValueFrom:" : "TB 3/12/2017 17:15",
+		"parseColor:" : "TB 3/12/2017 20:39",
+		"parseFontSize:" : "TB 3/12/2017 20:48",
+		"parseTagAttributesFrom:" : "TB 3/12/2017 20:50",
+		"strip:" : "TB 3/12/2017 13:57",
+		"unescape:" : "TB 3/12/2017 15:29",
+		"unescapeNextHtmlEntityFrom:" : "TB 3/12/2017 13:57" },
 	"instance" : {
 		 } }

@@ -1,13 +1,15 @@
-as yet unclassified
+converting
 strip: aString
 	| in out |
-	self flag: #todo. " unescape html entities "
-	
 	out := '' writeStream.
 	in := aString readStream.
 
 	[in atEnd] whileFalse: [
-		out nextPutAll: (in upTo: $<).
-		in upTo: $> ].
+		in peek = $<
+			ifTrue: [ in unCommand ]
+			ifFalse: [
+				in peek = $&
+					ifTrue: [ out nextPut: (self unescapeNextHtmlEntityFrom: in) ]
+					ifFalse: [ out nextPut: in next ]]].
 
 	^out contents

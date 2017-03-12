@@ -23,6 +23,7 @@ drawCursor: aBoolean
 	
 	area := aTransform offset extent: self extent.
 	
-	aCanvas
-		fillRectangle: area fillStyle: aFillColor;
-		paragraph: p bounds: area color: aColor
+	aFillColor ifNotNilDo: [ :color |
+		aCanvas fillRectangle: area fillStyle: color ].
+	
+	aCanvas paragraph: p bounds: area color: aColor
