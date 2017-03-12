@@ -1,0 +1,15 @@
+{
+	"category" : "Bootstrap-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"createDate",
+		"parent" ],
+	"name" : "BTEggModel",
+	"pools" : [
+		 ],
+	"super" : "BTModel",
+	"type" : "normal" }

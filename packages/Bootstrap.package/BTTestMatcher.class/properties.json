@@ -6,13 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"negated",
-		"subject",
-		"testCase",
-		"operator",
-		"expectedValue" ],
+		"testCase" ],
 	"name" : "BTTestMatcher",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "BTMatcher",
 	"type" : "normal" }

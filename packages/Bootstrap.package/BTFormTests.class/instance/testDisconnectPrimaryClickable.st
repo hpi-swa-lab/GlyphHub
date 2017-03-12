@@ -1,7 +1,7 @@
 as yet unclassified
 testDisconnectPrimaryClickable
-	(self expect: inputs first) to; send: #confirmed.
-	(self expect: button) toNot; send: #clicked.
+	(self expect: inputs first) to send: #confirmed.
+	(self expect: button) to not send: #clicked.
 	
 	" unset the button as primary clickable "
 	window primaryFormClickable: nil.

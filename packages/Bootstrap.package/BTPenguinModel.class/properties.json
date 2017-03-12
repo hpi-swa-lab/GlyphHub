@@ -9,7 +9,9 @@
 		"name",
 		"age",
 		"beak",
-		"significantOther" ],
+		"significantOther",
+		"eggs",
+		"favoritePubs" ],
 	"name" : "BTPenguinModel",
 	"pools" : [
 		 ],

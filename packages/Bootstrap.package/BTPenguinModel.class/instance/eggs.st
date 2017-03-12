@@ -1,3 +1,3 @@
 as yet unclassified
-toNot
-	self not
+eggs
+	^eggs

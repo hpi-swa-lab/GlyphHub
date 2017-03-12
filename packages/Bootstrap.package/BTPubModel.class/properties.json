@@ -1,0 +1,15 @@
+{
+	"category" : "Bootstrap-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"name",
+		"penguins" ],
+	"name" : "BTPubModel",
+	"pools" : [
+		 ],
+	"super" : "BTModel",
+	"type" : "normal" }

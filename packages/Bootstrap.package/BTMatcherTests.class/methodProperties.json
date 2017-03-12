@@ -1,0 +1,8 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"testPromiseReject" : "TB 3/12/2017 08:20",
+		"testPromiseRejectWith" : "TB 3/12/2017 08:25",
+		"testPromiseResolve" : "TB 3/12/2017 08:30",
+		"testPromiseResolveWith" : "TB 3/12/2017 08:29" } }

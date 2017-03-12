@@ -4,10 +4,6 @@ assert: aBoolean operator: anOperator expected: anExpectedValue
 	actual := subject.
 	expected := anExpectedValue.
 	
-	testCase
+	self
 		assert: (negated ifTrue: [ aBoolean not ] ifFalse: [ aBoolean ])
-		description: ('Expected {1} to{3} {4} {2}' format: {
-			actual printString.
-			expected ifNil: [''] ifNotNil: [expected printString].
-			negated ifTrue: [' not'] ifFalse: [''].
-			anOperator})
+		description: (self formatAssertionActual: actual expected: expected negated: negated operator: anOperator)

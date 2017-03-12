@@ -3,7 +3,7 @@ testOnlyMouseDown
 	| clickable |
 	clickable := self clickableWidget.
 
-	(self expect: clickable) toNot; send: #clicked.
+	(self expect: clickable) to not send: #clicked.
  	
 	self
 		mousePress: clickable buttons: #(left);
