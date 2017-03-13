@@ -1,10 +1,17 @@
 {
 	"class" : {
-		 },
+		"firstPage:" : "TB 3/13/2017 12:52",
+		"new" : "TB 3/13/2017 12:52" },
 	"instance" : {
 		"app" : "TB 2/10/2017 16:01",
 		"app:" : "TB 2/10/2017 16:19",
 		"displaySizeChanged" : "TB 2/10/2017 16:06",
 		"finalEnterActions:" : "TB 2/10/2017 16:13",
 		"finalLeaveActions:" : "TB 2/10/2017 16:07",
+		"header" : "TB 3/13/2017 14:30",
+		"initializeWithPage:" : "TB 3/13/2017 14:27",
+		"navigationStack" : "TB 3/13/2017 12:42",
+		"openPage" : "TB 3/13/2017 12:50",
+		"openPage:" : "TB 3/13/2017 14:27",
+		"privateOpenPage:" : "TB 3/13/2017 14:27",
 		"resizeApp" : "TB 2/10/2017 16:06" } }

@@ -6,11 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"navigationStack",
-		"header",
-		"openPage" ],
-	"name" : "BTApplication",
+		"app" ],
+	"name" : "BTApplicationProject",
 	"pools" : [
 		 ],
-	"super" : "BTTopLevel",
+	"super" : "AnimMorphicProject",
 	"type" : "normal" }

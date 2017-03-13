@@ -6,11 +6,10 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"navigationStack",
-		"header",
-		"openPage" ],
-	"name" : "BTApplication",
+		"stack",
+		"current" ],
+	"name" : "BTNavigationStack",
 	"pools" : [
 		 ],
-	"super" : "BTTopLevel",
+	"super" : "Object",
 	"type" : "normal" }

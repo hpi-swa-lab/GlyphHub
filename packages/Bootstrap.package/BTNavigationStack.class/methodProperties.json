@@ -1,0 +1,15 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"canGoBack" : "TB 3/13/2017 11:25",
+		"canGoForward" : "TB 3/13/2017 11:25",
+		"current:" : "TB 3/13/2017 14:15",
+		"go:" : "TB 3/13/2017 14:25",
+		"goBack" : "TB 3/13/2017 14:25",
+		"goBack:" : "TB 3/13/2017 14:25",
+		"goForward" : "TB 3/13/2017 11:26",
+		"goForward:" : "TB 3/13/2017 14:25",
+		"initialize" : "TB 3/13/2017 11:27",
+		"open:" : "TB 3/13/2017 14:25",
+		"triggerOpened:" : "TB 3/13/2017 14:03" } }
