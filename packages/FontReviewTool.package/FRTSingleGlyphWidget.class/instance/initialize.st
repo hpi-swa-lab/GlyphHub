@@ -36,7 +36,6 @@ initialize
 		commentThreadArea add: (FRTCommentThreadPreviewWidget commentThread: each)].
 	
 	self
-		withLayout;
 		vertical: true;
 		spacing: BTWidget spacing;
 		add: headingArea;

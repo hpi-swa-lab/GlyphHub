@@ -1,14 +1,14 @@
 {
-	"category" : "FontReviewTool",
+	"category" : "Bootstrap",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"marker" ],
-	"name" : "FRTSingleGlyphWidget",
+		 ],
+	"name" : "BTApplicationPage",
 	"pools" : [
 		 ],
-	"super" : "BTApplicationPage",
+	"super" : "BTPage",
 	"type" : "normal" }
