@@ -3,14 +3,14 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		"Backend" ],
+		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"id",
-		"dirtyFields",
-		"querying" ],
-	"name" : "BTModel",
+		"querying",
+		"field",
+		"owner" ],
+	"name" : "BTModelList",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "OrderedCollection",
 	"type" : "normal" }

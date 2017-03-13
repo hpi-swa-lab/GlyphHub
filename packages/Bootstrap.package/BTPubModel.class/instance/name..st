@@ -1,5 +1,3 @@
 as yet unclassified
 name: aString
-	name := aString.
-
-	self fieldDirty: #name
+	self update: #name with: aString

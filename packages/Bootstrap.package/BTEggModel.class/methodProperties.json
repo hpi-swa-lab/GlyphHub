@@ -1,8 +1,9 @@
 {
 	"class" : {
-		 },
+		"associations" : "TB 3/13/2017 17:11",
+		"modelName" : "TB 3/13/2017 16:49" },
 	"instance" : {
 		"createDate" : "TB 3/11/2017 14:46",
-		"createDate:" : "TB 3/11/2017 14:46",
+		"createDate:" : "TB 3/13/2017 16:41",
 		"parent" : "TB 3/11/2017 14:58",
-		"parent:" : "TB 3/12/2017 07:25" } }
+		"parent:" : "TB 3/13/2017 16:31" } }

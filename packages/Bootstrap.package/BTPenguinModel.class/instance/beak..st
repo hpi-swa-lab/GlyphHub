@@ -1,5 +1,3 @@
 as yet unclassified
 beak: aBeak
-	beak := aBeak.
-	
-	self fieldDirty: #beak
+	self update: #beak with: aBeak

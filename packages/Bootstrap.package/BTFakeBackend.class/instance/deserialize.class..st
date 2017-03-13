@@ -1,11 +1,5 @@
 as yet unclassified
-deserialize: aDictionary class: aClass
-	| model |
-	model := aClass new markAllDirty: false.
-	
-	aClass instVarNames do: [ :name |
-		model instVarNamed: name put: (aDictionary at: name asString ifAbsent: [nil]) ].
-	
-	model privateId: (aDictionary at: 'id').
-	
-	^model
+deserialize: aDictionaryOrList class: aClass
+	^aDictionaryOrList isBTModelList
+		ifTrue: [ aDictionaryOrList collect: [ :dict | self deserializeEntity: dict class: aClass  ] ]
+		ifFalse: [ self deserializeEntity: aDictionaryOrList class: aClass  ]

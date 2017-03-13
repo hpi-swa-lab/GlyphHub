@@ -1,17 +1,18 @@
 {
 	"class" : {
+		"associations" : "TB 3/13/2017 16:51",
 		"modelName" : "TB 3/10/2017 16:34" },
 	"instance" : {
 		"age" : "TB 3/10/2017 16:36",
-		"age:" : "TB 3/10/2017 16:37",
+		"age:" : "TB 3/13/2017 16:38",
 		"beak" : "TB 3/10/2017 16:38",
-		"beak:" : "TB 3/10/2017 16:38",
+		"beak:" : "TB 3/13/2017 16:38",
 		"eggs" : "TB 3/11/2017 14:50",
 		"favoritePubs" : "TB 3/11/2017 15:41",
 		"name" : "TB 3/10/2017 16:36",
-		"name:" : "TB 3/10/2017 16:36",
+		"name:" : "TB 3/13/2017 16:39",
 		"privateEggs:" : "TB 3/11/2017 14:51",
 		"privateFavoritePubs:" : "TB 3/11/2017 15:41",
 		"significantOther" : "TB 3/10/2017 16:43",
-		"significantOther:" : "TB 3/10/2017 17:07",
+		"significantOther:" : "TB 3/13/2017 16:40",
 		"validateAge:" : "al 3/13/2017 14:15" } }

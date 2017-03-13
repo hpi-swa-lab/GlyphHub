@@ -3,6 +3,6 @@ initialize
 	super initialize.
 	
 	tables := Dictionary new.
-	idCounter := 1.
+	idCounter := 2.
 	
 	self initTestData
