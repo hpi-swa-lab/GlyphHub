@@ -7,5 +7,4 @@ expectedFailures
 		testLoadAllRemove
 		testLoadBy
 		testPopulated1toN
-		testValidations
 		testValidationsInAssociation)

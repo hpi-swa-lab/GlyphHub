@@ -1,15 +1,15 @@
 {
-	"category" : "Bootstrap-Tests",
+	"category" : "Bootstrap",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"tables",
-		"idCounter" ],
-	"name" : "BTFakeBackend",
+		"model",
+		"field" ],
+	"name" : "BTModelValidationMatcher",
 	"pools" : [
 		 ],
-	"super" : "BTModelBackend",
+	"super" : "BTMatcher",
 	"type" : "normal" }

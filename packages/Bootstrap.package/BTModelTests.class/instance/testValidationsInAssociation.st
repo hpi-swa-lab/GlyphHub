@@ -8,4 +8,4 @@ testValidationsInAssociation
 
 	(self expect: penguin isValid) to be: false.
 	(self expect: (penguin saveTo: backend)) to reject.
-	(self expect: (penguin isCreated)) to be: false
+	(self expect: penguin isCreated) to be: false

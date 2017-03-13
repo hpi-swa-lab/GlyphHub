@@ -1,3 +1,3 @@
 as yet unclassified
 validateAge: aNumber
-	(self expect: aNumber) to beGreaterEqualsThan: 0
+	self age ifNotNil: [(self expect: aNumber field: #age) to beGreaterEqualsThan: 0]

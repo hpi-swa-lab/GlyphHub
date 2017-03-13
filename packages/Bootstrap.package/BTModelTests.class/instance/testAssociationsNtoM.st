@@ -15,7 +15,7 @@ testAssociationsNtoM
 	assertions := [
 		(self expect: private favoritePubs) to containExactly: {iceFloe}.
 		(self expect: rico favoritePubs) to containExactly: {iceFloe. freezingIcebear}.
-		(self expect: paula favoritePubs) to containExactly: {iceFloe}.
+		(self expect: paula favoritePubs) to containExactly: {freezingIcebear}.
 		(self expect: iceFloe penguins) to containExactly: {rico. private}.
 		(self expect: freezingIcebear) to containExactly: {rico. paula} ].
 
