@@ -6,5 +6,5 @@ testPopulated1toN
 	penguin eggs add: BTEggModel new.
 	penguin saveTo: backend.
 	
-	egg := (BTEggModel load: 1 from: backend) value.
-	(self expect: egg parent) to be: penguin
+	egg := (BTEggModel loadAllFrom: backend) value first.
+	(self expect: egg parent id) to equal: penguin id

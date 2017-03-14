@@ -1,8 +1,7 @@
 as yet unclassified
 saveAssociationsTo: aBackend
-	| field |
-	self class instVarNames do: [ :name |
+	^Promise all: ((self class instVarNames collect: [ :name | | field |
 		field := self instVarNamed: name.
-		field isBTModel ifTrue: [
-			self flag: #todo. " gather all the returned promises and return only when all are done "
-			field saveTo: aBackend ]]
+		((field isBTModel or: [field isBTModelList]) and: [field querying not])
+				ifTrue: [ field saveTo: aBackend ]
+				ifFalse: [ nil ]]) select: [ :promise | promise notNil ])

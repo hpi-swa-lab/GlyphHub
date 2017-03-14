@@ -1,7 +1,7 @@
 as yet unclassified
 testAssociations1toN
 	| penguin |
-	penguin := (BTPenguinModel load: 1 from: backend) value.
+	penguin := (BTPenguinModel load: 1 populate: #(eggs) from: backend) value.
 	
 	(self expect: penguin eggs) to beEmpty.
 	
@@ -11,8 +11,8 @@ testAssociations1toN
 	
 	(self expect: penguin eggs first parent) to be: penguin.
 	
-	penguin saveTo: backend.
+	self safePromise: (penguin saveTo: backend).
 	
-	penguin := (BTPenguinModel load: 1 from: backend) value.
+	penguin := (BTPenguinModel load: 1 populate: #(eggs) from: backend) value.
 	(self expect: penguin eggs size) to be: 2.
-	(self expect: penguin eggs first parent) to be: penguin
+	(self expect: penguin eggs first parent id) to equal: penguin id

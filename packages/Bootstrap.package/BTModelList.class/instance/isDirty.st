@@ -1,3 +1,4 @@
 as yet unclassified
 isDirty
-	^self anySatisfy: [ :entity | entity isDirty ]
+	querying := true.
+	^[self anySatisfy: [ :entity | entity isDirty ]] ensure: [querying := false]

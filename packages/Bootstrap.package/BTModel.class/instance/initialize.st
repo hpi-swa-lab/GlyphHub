@@ -10,4 +10,5 @@ initialize
 		markAllDirty: true.
 	
 	self class associations keysAndValuesDo: [ :field :association |
-		association third = #many ifTrue: [ self instVarNamed: field put: (BTModelList forField: field owner: self) ]]
+		association third = #many ifTrue: [
+			self instVarNamed: field put: (BTModelList forField: field owner: self) ]]

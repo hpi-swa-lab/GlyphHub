@@ -1,3 +1,3 @@
-as yet unclassified
+load-all
 loadAllFrom: aBackend
-	^aBackend loadAllFrom: self modelName class: self
+	^self loadAllFrom: aBackend populate: #all

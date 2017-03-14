@@ -1,3 +1,3 @@
-as yet unclassified
+load-all
 loadAll
-	^self loadAllFrom: self defaultBackend  
+	^self loadAllPopulate: #all

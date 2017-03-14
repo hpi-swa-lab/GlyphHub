@@ -4,7 +4,9 @@ deserializeEntity: aDictionary class: aClass
 	model := aClass new markAllDirty: false.
 	
 	aClass instVarNames do: [ :name |
-		aDictionary at: name asString ifPresent: [ :value | model instVarNamed: name put: value ]].
+		aDictionary
+			at: name asString
+			ifPresent: [ :value | model instVarNamed: name put: value ]].
 	
 	model privateId: (aDictionary at: 'id').
 	

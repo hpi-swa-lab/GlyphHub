@@ -1,3 +1,3 @@
-as yet unclassified
+load-id
 load: aNumber
-	^self load: aNumber from: self defaultBackend
+	^self load: aNumber populate: #all

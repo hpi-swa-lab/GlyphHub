@@ -1,3 +1,3 @@
-as yet unclassified
+load-id
 load: aNumber from: aBackend
-	^(aBackend loadBy: #id value: aNumber from: self modelName class: self) then: [ :models | models first ]
+	^self load: aNumber populate: #all from: aBackend

@@ -1,3 +1,3 @@
-as yet unclassified
+load-by
 loadBy: aField value: anObject from: aBackend
-	^aBackend loadBy: aField value: anObject from: self modelName class: self
+	^self loadBy: aField value: anObject from: aBackend populate: #all

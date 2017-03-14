@@ -4,6 +4,9 @@ saveTo: aBackend
 	self isValid ifFalse: [ ^Promise new rejectWith: self ].
 	
 	^(aBackend save: self to: self class modelName) then: [ :model |
-		model
+		querying := true.
+		self flag: #todo. "chain promises correctly"
+		[model
 			markAllDirty: false;
-			saveAssociationsTo: aBackend ] ifRejected: [ :error | error signal ]
+			saveAssociationsTo: aBackend] ensure: [querying := false].
+		model ]
