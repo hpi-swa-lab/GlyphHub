@@ -1,4 +1,4 @@
-as yet unclassified
+examples
 upload
 	| window uploadBox scriptTagArea uploadArea tagArea tagTextArea |
 	

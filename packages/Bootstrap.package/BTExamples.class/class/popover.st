@@ -1,4 +1,4 @@
-as yet unclassified
+examples
 popover
 	| button1 button2 |
 	button1 := BTButton label: (BTIcon icon: #medkit), ' Hit me!'.

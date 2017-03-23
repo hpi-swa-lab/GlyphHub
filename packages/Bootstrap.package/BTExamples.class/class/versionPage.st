@@ -1,4 +1,4 @@
-as yet unclassified
+examples
 versionPage
 	| author a c shortO ta |
 	author := BTPage row

@@ -1,4 +1,4 @@
-as yet unclassified
+examples
 notifications
 	| toplevel |
 	toplevel := BTTopLevel new.

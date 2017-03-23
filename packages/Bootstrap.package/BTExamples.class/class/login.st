@@ -1,4 +1,4 @@
-as yet unclassified
+examples
 login
 	| loginButton window loader loginBox |
 	loginButton := (BTButton label: 'Login') colorType: #primary.

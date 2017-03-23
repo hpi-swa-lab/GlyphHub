@@ -1,4 +1,4 @@
-as yet unclassified
+examples
 listGroup
 	| group |
 	group := BTListGroup new.

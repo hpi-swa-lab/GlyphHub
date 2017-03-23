@@ -1,4 +1,4 @@
-as yet unclassified
+examples
 typeahead
 	| input |
 	input := BTTextCompletion new suggestionsList: {{'Andorra'. #ad}. {'Germany'. #de}. {'France'. #fr}. {'Albania'. #ab}. {'Argentina'. #ag}. {'Austria'. #au}. {'Australia'. #as}}.

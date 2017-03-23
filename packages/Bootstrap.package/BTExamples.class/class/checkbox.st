@@ -1,4 +1,4 @@
-as yet unclassified
+examples
 checkbox
 	^BTTopLevel new
 		add: BTCheckbox new;

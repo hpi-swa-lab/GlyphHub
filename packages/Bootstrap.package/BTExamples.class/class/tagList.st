@@ -1,4 +1,4 @@
-as yet unclassified
+examples
 tagList
 	^BTTopLevel new
 		add: (BTWritableTagList new tags: {'First Tag'. 'Second Tag'} asOrderedCollection);

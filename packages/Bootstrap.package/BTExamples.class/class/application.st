@@ -1,4 +1,4 @@
-as yet unclassified
+examples
 application
 	| app page3 page2 page1 |
 	page1 := BTPage new.

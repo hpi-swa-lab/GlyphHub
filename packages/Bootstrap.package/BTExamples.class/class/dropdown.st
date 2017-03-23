@@ -1,4 +1,4 @@
-as yet unclassified
+examples
 dropdown
 	| button dropdown |
 	button := (BTButton label: 'Your Name ', (BTIcon icon: #caret_down)).
