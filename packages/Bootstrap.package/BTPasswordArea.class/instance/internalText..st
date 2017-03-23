@@ -1,4 +1,4 @@
-as yet unclassified
+text
 internalText: aString
 	self text
 		ifEmpty: [ super internalText: aString ]

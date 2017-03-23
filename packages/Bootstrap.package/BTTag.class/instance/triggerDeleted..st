@@ -1,3 +1,3 @@
-as yet unclassified
+events
 triggerDeleted: anEvent
 	self triggerEvent: #deleted

@@ -1,3 +1,3 @@
-as yet unclassified
+primitives
 primSetDpi: aNumber
 	<primitive: 'primitiveSetDpi' module: 'PangoPlugin' error: code>

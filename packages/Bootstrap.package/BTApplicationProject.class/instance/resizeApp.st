@@ -1,3 +1,3 @@
-as yet unclassified
+displaying
 resizeApp
 	app bounds: self world bounds

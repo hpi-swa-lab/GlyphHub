@@ -1,4 +1,4 @@
-as yet unclassified
+layout
 layout: aWidget in: aBox
 	| nonLayoutDirectionMin offset preferred minSize |
 	preferred := self preferredSizeFor: aWidget width: aBox width.

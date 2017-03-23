@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 querying
 	" answer whether there is currently a query being performed on me. this is here to break cycles, e.g.
 	

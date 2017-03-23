@@ -1,4 +1,4 @@
-as yet unclassified
+instance creation
 contents: aCollection
 	| result |
 	result := self new.

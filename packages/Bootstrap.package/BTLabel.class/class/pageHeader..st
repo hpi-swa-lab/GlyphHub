@@ -1,4 +1,4 @@
-as yet unclassified
+instance creation
 pageHeader: aString
 	^self new
 		pageHeader: aString;

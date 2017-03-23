@@ -1,4 +1,4 @@
-as yet unclassified
+fields
 update: aField with: anObject foreignField: aForeignField
 	self instVarNamed: aField put: anObject.
 	

@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 text: aString
 	super text: aString.
 	

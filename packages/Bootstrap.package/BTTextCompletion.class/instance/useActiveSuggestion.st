@@ -1,4 +1,4 @@
-as yet unclassified
+suggestions
 useActiveSuggestion
 	(topHit isNil and: [activeSuggestion = 0]) ifTrue: [^self].
 	

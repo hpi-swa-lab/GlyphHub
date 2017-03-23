@@ -1,7 +1,5 @@
-A BTDescriptionList is xxxxxxxxx.
+A BTDescriptionList is a container for building tabular-like displays of key-value data.
 
-Instance Variables
-	items:		<Object>
-
+## Interna
 items
 	- collection of tuples <keyword, description>

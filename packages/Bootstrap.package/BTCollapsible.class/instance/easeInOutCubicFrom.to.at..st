@@ -1,4 +1,4 @@
-as yet unclassified
+animation
 easeInOutCubicFrom: a to: b at: aNumber
 	| c t |
 	c := b - a.

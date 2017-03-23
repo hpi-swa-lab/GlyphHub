@@ -1,4 +1,4 @@
-as yet unclassified
+primitives
 createPointX: x y: y
 	| ptOop xOop yOop |
 	ptOop := interpreterProxy instantiateClass: interpreterProxy classPoint indexableSize: 0.

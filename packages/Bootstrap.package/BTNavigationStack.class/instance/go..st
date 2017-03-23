@@ -1,4 +1,4 @@
-as yet unclassified
+navigation
 go: aNumber
 	| new |
 	new := current + aNumber clampLow: 1 high: stack size.

@@ -1,4 +1,4 @@
-as yet unclassified
+private
 distributeLeftOver: aNumber among: aCollection
 	| spreading extraSpace |
 	aNumber <= 0 ifTrue: [^0].

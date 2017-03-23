@@ -1,3 +1,3 @@
-as yet unclassified
+constants
 maximumContainerExtent
 	^9999999 asPoint.

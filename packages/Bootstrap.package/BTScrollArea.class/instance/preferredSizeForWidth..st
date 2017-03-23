@@ -1,4 +1,4 @@
-as yet unclassified
+layout
 preferredSizeForWidth: aNumber
 	| preferred |
 	container hasSubmorphs ifFalse: [{0 asPoint. 0 asPoint}].

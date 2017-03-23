@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 ellipsize: aMode
 	" one of #none, #start, #middle, #end "
 	ellipsize := aMode.

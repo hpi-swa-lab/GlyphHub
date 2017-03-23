@@ -1,4 +1,4 @@
-as yet unclassified
+assertions
 assert: aBoolean description: aString
 	aBoolean ifFalse: [ BTModelValidationFailure new
 			model: self model;

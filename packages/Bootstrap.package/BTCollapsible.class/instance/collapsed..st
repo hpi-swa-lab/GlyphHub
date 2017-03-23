@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 collapsed: aBoolean
 	aBoolean == collapsed ifTrue: [^self].
 	collapsed := aBoolean.

@@ -1,4 +1,4 @@
-as yet unclassified
+primitives
 primitiveLayoutSetEllipsize
 	" layout, mode (0->NONE, 1->START, 2->MIDDLE, 3->END)"
 	<var: #layout type: 'PangoLayout *'>

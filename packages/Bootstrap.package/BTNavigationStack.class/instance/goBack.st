@@ -1,3 +1,3 @@
-as yet unclassified
+navigation
 goBack
 	^self goBack: 1

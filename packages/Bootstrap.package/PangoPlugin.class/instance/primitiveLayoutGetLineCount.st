@@ -1,4 +1,4 @@
-as yet unclassified
+primitives
 primitiveLayoutGetLineCount
 	<var: #layout type: 'PangoLayout *'>
 	<export: true>

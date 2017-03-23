@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 scrollOffset: aPoint
 	container offset: (self clampScrollOffset: aPoint).
 	

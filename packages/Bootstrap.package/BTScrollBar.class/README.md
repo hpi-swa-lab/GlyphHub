@@ -1,0 +1,1 @@
+A BTScrollBar is a simple scrollbar.

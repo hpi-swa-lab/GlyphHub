@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 checked: aBoolean
 	checked := aBoolean.
 	

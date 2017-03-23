@@ -1,4 +1,4 @@
-as yet unclassified
+layout
 updateScrollBars
 	| isVertical width offset size |
 	container hasSubmorphs ifFalse: [

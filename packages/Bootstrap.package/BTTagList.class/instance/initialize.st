@@ -1,4 +1,4 @@
-as yet unclassified
+initialize-release
 initialize
 	super initialize.
 	
@@ -6,4 +6,4 @@ initialize
 	
 	self
 		withLayout;
-		padding: (BTWidget spacing / 2) floor
+		padding: BTWidget spacing / 2

@@ -1,4 +1,4 @@
-as yet unclassified
+icons
 icons1
 	^{
 		#glass -> 16rf000.

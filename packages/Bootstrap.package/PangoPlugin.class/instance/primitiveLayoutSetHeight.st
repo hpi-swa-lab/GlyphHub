@@ -1,4 +1,4 @@
-as yet unclassified
+primitives
 primitiveLayoutSetHeight
 	<var: #layout type: 'PangoLayout *'>
 	<export: true>

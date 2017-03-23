@@ -1,3 +1,3 @@
-as yet unclassified
+testing
 canGoForward
 	^current < stack size

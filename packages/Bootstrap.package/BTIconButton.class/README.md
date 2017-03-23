@@ -1,0 +1,1 @@
+A BTIconButton is a button without background only containing an icon. It changes color on hovering.

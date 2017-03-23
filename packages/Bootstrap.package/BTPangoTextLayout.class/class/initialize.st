@@ -1,4 +1,4 @@
-as yet unclassified
+class initialization
 initialize
 	super initialize.
 	Smalltalk addToStartUpList: self after: FileDirectory.

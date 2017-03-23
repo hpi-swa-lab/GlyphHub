@@ -1,4 +1,4 @@
-as yet unclassified
+drawing
 drawOn: aCanvas from: aNumber to: anotherNumber color: aColor fillColor: anotherColor
 	| transform |
 	transform := self angle ~= 0

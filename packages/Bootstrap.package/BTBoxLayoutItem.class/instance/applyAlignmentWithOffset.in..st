@@ -1,4 +1,4 @@
-as yet unclassified
+layout
 applyAlignmentWithOffset: offsetPoint in: nonLayoutSize
 	| destBox wanted available preferred |
 	available := finalSize @ nonLayoutSize.

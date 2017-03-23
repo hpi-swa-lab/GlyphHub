@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 text
 	^label ifNotNil: [label text] ifNil: ''

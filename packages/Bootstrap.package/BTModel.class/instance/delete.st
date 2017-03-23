@@ -1,3 +1,3 @@
-as yet unclassified
+operations
 delete
 	^self deleteFrom: self class defaultBackend

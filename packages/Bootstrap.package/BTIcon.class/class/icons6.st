@@ -1,4 +1,4 @@
-as yet unclassified
+icons
 icons6
 	^{
 		#transgender_alt -> 16rf225.

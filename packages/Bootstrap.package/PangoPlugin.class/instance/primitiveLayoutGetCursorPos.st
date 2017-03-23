@@ -1,4 +1,4 @@
-as yet unclassified
+primitives
 primitiveLayoutGetCursorPos
 	<var: #layout type: 'PangoLayout *'>
 	<export: true>

@@ -1,4 +1,4 @@
-as yet unclassified
+private
 current: aNumber
 	(stack at: current) leaving.
 	current := aNumber.

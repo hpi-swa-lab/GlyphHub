@@ -1,4 +1,4 @@
-as yet unclassified
+assertions
 assert: aBoolean operator: anOperator expected: anExpectedValue
 	| actual expected |
 	actual := subject.

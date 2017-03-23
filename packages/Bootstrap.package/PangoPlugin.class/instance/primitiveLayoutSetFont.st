@@ -1,4 +1,4 @@
-as yet unclassified
+primitives
 primitiveLayoutSetFont
 	" set the given width on the layout and return the height needed "
 	<var: #layout type: 'PangoLayout *'>

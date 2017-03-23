@@ -1,3 +1,3 @@
-as yet unclassified
+matching
 contain: aCollection
 	^self assert: (subject includesAllOf: aCollection) operator: 'contain the same as' expected: aCollection

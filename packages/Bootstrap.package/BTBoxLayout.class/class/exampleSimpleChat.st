@@ -1,4 +1,4 @@
-as yet unclassified
+examples
 exampleSimpleChat
 	| window picture text |
 	picture := BTWidget new color: Color green; minSize: 64 asPoint.

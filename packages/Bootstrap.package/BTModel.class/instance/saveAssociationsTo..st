@@ -1,4 +1,4 @@
-as yet unclassified
+operations
 saveAssociationsTo: aBackend
 	^Promise all: ((self class instVarNames collect: [ :name | | field |
 		field := self instVarNamed: name.

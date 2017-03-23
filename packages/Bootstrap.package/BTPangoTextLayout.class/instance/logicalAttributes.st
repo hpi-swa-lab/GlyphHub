@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 logicalAttributes
 	| bits |
 	bits := self primLayoutLogicalAttributes: self layout.

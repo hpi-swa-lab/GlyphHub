@@ -1,4 +1,4 @@
-as yet unclassified
+primitives
 primitiveLayoutSetSpacing
 	<var: #layout type: 'PangoLayout *'>
 	<export: true>

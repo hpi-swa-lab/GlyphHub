@@ -1,4 +1,4 @@
-as yet unclassified
+drawing
 drawOn: aCanvas
 	(hovered or: [active]) ifTrue: [
 		aCanvas

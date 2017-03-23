@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 wrap
 	^self subclassResponsibility

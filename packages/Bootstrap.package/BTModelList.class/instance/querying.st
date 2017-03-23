@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 querying
 	^querying ifNil: [false]

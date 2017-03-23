@@ -1,4 +1,4 @@
-as yet unclassified
+cursor
 indexAtLine: aNumber x: anotherNumber
 	| line p |
 	p := self paragraph.

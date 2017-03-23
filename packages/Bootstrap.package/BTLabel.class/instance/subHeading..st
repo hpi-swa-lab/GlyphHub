@@ -1,3 +1,3 @@
-as yet unclassified
+styling
 subHeading: aString
 	self text: '<span size="large">', aString, '</span>'

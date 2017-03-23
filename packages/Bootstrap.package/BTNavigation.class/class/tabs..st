@@ -1,4 +1,4 @@
-as yet unclassified
+instance creation
 tabs: aCollection
 	| result |
 	result := self new.

@@ -1,4 +1,4 @@
-as yet unclassified
+geometry
 extent: aPoint
 	layoutWidth := aPoint x.
 	self layout width: aPoint x.

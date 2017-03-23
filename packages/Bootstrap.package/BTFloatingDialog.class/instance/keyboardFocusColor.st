@@ -1,3 +1,3 @@
-as yet unclassified
+drawing
 keyboardFocusColor
 	^nil

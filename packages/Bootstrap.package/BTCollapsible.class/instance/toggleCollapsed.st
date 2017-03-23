@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 toggleCollapsed
 	self collapsed: self collapsed not

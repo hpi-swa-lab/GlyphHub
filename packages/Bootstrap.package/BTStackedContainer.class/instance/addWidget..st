@@ -1,3 +1,3 @@
-as yet unclassified
+hierarchy
 addWidget: aWidget
 	self widgets add: aWidget

@@ -1,3 +1,3 @@
-as yet unclassified
+matching
 equal: anObject
 	^self assert: subject = anObject operator: 'equal' expected: anObject

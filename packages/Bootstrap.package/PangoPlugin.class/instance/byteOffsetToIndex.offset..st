@@ -1,4 +1,4 @@
-as yet unclassified
+primitives
 byteOffsetToIndex: layout offset: offset
 	<var: #layout type: 'PangoLayout *'>
 	| index |

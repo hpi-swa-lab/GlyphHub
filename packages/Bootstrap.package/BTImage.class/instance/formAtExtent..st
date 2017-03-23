@@ -1,4 +1,4 @@
-as yet unclassified
+layout
 formAtExtent: aPoint
 	^(cachedForm notNil and: [cachedForm extent = aPoint])
 		ifTrue: [ ^cachedForm ]

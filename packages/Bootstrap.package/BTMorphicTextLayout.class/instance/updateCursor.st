@@ -1,4 +1,4 @@
-as yet unclassified
+cursor
 updateCursor
 	| bounds p |
 	cursor ifNil: [ ^self ].

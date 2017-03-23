@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 angle: aNumberInDegrees
 	angle := aNumberInDegrees

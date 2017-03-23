@@ -1,0 +1,1 @@
+A BTModelList is an OrderedCollection that keeps track of its objects state. Use in conjunction with BTModel.

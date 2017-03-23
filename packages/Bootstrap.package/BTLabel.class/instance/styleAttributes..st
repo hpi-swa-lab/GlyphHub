@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 styleAttributes: aDictionary
 	styleAttributes := aDictionary

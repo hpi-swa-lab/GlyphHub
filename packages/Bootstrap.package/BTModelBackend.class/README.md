@@ -1,0 +1,1 @@
+A BTModelBackend is an abstract class defining the interface to be implemented by a backend that can save and load data for a BTModel.

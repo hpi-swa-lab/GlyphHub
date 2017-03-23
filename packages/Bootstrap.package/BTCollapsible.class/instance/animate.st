@@ -1,4 +1,4 @@
-as yet unclassified
+animation
 animate
 	| progress height |
 	progress := 1.0 - (endTime - Time millisecondClockValue / transitionDuration) min: 1.0.

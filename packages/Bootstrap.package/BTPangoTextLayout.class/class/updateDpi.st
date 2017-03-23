@@ -1,3 +1,3 @@
-as yet unclassified
+system startup
 updateDpi
 	self primSetDpi: BTWidget scalingFactor * 96

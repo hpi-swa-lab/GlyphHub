@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 numberOfLines
 	^self primLayoutLineCount: self layout

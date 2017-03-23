@@ -1,4 +1,4 @@
-as yet unclassified
+layout
 preferredSizeForWidth: aNumber  
 	| fullSize |
 	fullSize := animating or: [collapsed not].

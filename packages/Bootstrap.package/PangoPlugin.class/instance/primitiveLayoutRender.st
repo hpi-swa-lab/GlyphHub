@@ -1,4 +1,4 @@
-as yet unclassified
+primitives
 primitiveLayoutRender
 	" layout, form, point, color, fillColor, clipX, clipY, clipWidth, clipHeight, start, end "
 	" color must be converted to number via pixelWordForDepth:32 first "

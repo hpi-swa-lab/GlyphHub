@@ -1,4 +1,4 @@
-as yet unclassified
+displaying
 hoverAttachTo: aClickable
 	" makes the given clickable toggle this dialog whenever the mouse enters and leaves it "
 	aClickable when: #hovered evaluate: [ :hovered :event |

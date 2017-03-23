@@ -1,4 +1,4 @@
-as yet unclassified
+layout
 nonLayoutDirectionSizesForWidth: aNumber
 	| preferred |
 	preferred := self widget preferredSizeForWidth: (vertical ifTrue: [aNumber] ifFalse: [aNumber max: self finalSize]).

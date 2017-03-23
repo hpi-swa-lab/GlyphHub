@@ -1,4 +1,4 @@
-as yet unclassified
+displaying
 attachTo: aClickable
 	" makes the given clickable toggle this dialog "
 	aClickable when: #clicked evaluate: [ :event |

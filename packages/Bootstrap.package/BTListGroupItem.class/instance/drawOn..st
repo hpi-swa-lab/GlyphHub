@@ -1,4 +1,4 @@
-as yet unclassified
+drawing
 drawOn: aCanvas
 	| bordered rounded |
 	(self parent notNil and: [self parent isListGroup])

@@ -1,4 +1,4 @@
-as yet unclassified
+instance creation
 bold: aString
 	^self new
 		bold: aString;

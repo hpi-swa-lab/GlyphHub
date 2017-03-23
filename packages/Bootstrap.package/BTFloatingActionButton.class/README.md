@@ -1,0 +1,1 @@
+A BTFloatingActionButton is a round button containing a single icon. Refer to material design guidelines if you're not sure why you would use that.

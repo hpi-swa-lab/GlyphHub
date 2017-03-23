@@ -1,4 +1,4 @@
-accessing
+navigation
 updateBreadcrumbs
 	breadcrumbs removeAllMorphs.
 		

@@ -1,4 +1,4 @@
-as yet unclassified
+text
 updateText: aString
 	self updateSuggestions.
 	

@@ -1,1 +1,1 @@
-An AAAAAA is Application Appliance Assertion Alligning Automatic Audition.
+A collection of examples employing hopefully all the widgets.

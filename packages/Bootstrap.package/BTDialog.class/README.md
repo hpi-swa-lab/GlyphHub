@@ -1,0 +1,1 @@
+A BTDialog is a toplevel window that may display contextual content to the user, with widgets that they may interact with.

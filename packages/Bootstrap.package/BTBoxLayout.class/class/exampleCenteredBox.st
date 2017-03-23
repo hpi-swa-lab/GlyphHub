@@ -1,4 +1,4 @@
-as yet unclassified
+examples
 exampleCenteredBox
 	| window loginPage loginBox |
 	loginBox := (BTPage new vertical: true; align: #(center center)) color: Color green; minSize: 100 asPoint.

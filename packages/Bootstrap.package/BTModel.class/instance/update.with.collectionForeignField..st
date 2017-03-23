@@ -1,4 +1,4 @@
-as yet unclassified
+fields
 update: aField with: anObject collectionForeignField: aForeignField
 	| current collection |
 	current := self instVarNamed: aField.  

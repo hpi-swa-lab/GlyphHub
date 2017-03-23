@@ -1,4 +1,4 @@
-as yet unclassified
+primitives
 primLayoutCreate
 	<primitive: 'primitiveCreateLayout' module: 'PangoPlugin' error: code>
 	^self primitiveFailed

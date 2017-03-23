@@ -1,3 +1,3 @@
-as yet unclassified
+operations
 save: aModel to: aString
 	^self subclassResponsibility

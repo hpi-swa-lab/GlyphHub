@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 scalingMode: aMode
 	" one of
 		#fixed (take exactly minSize)

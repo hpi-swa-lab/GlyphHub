@@ -1,4 +1,4 @@
-as yet unclassified
+layout
 preferredSizeForWidth: aNumber
 	| size |
 	size := self firstSubmorph extent.

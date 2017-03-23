@@ -1,4 +1,4 @@
-as yet unclassified
+drawing
 drawOn: aForm transform: aTransform color: aColor fillColor: anotherColor clip: aRectangle start: aNumber end: anotherNumber
 	self
 		primLayoutRender: self layout

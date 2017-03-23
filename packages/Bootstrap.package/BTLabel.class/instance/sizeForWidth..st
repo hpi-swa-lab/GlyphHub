@@ -1,4 +1,4 @@
-as yet unclassified
+geometry
 sizeForWidth: aNumber
 	| size |
 	self layout width: aNumber.

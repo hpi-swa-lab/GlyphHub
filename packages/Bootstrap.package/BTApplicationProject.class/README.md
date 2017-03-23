@@ -1,0 +1,1 @@
+A BTApplicationProject is a Project subclass that removes most of squeak's interface (topbar etc) and only displays a single toplevel.

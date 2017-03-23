@@ -1,4 +1,4 @@
-as yet unclassified
+layout
 preferredSizeFor: aWidget width: aNumber
 	| spacing stillLeftOver extraExpanderSpace nonLayoutDirectionMinSize nonLayoutDirectionNatSize |
 	vertical := aWidget vertical.

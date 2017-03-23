@@ -1,4 +1,4 @@
-as yet unclassified
+primitives
 primitiveRegisterCustomFontDirectory
 	<var: #strPtr type: 'char *'>
 	<export: true>

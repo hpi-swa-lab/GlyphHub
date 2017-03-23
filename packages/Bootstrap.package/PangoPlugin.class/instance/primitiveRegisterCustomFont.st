@@ -1,4 +1,4 @@
-as yet unclassified
+primitives
 primitiveRegisterCustomFont
 	" needs to be called before sqPangoInit() "
 	<var: #strPtr type: 'char *'>

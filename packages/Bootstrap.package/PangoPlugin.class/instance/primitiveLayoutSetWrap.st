@@ -1,4 +1,4 @@
-as yet unclassified
+primitives
 primitiveLayoutSetWrap
 	" layout, mode (0->WORD, 1->CHAR, 2->WORD_CHAR)"
 	<var: #layout type: 'PangoLayout *'>

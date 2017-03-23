@@ -1,4 +1,4 @@
-as yet unclassified
+matching
 rejectWith: anObject
 	" awaits rejection of a promise with a specific argument "
 	self waitForPromise: subject.

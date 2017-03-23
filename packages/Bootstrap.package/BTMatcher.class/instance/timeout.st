@@ -1,3 +1,3 @@
-as yet unclassified
+constants
 timeout
 	^2000

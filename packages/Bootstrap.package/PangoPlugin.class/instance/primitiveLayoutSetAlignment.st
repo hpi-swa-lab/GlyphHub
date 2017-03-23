@@ -1,4 +1,4 @@
-as yet unclassified
+primitives
 primitiveLayoutSetAlignment
 	" layout, mode (0->LEFT, 1->CENTER, 2->RIGHT)"
 	<var: #layout type: 'PangoLayout *'>

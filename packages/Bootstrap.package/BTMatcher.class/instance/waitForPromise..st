@@ -1,4 +1,4 @@
-as yet unclassified
+private
 waitForPromise: aPromise
 	" waits for `timeout` msecs for the promise to reject or resolve "
 	| delay sema |

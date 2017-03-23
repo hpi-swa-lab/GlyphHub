@@ -1,0 +1,1 @@
+A BTPageNavigation is the full package when it comes to having tabs. It displays tabs and pages below them.

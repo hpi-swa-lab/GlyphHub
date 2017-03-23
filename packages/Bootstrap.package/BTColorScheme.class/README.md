@@ -1,5 +1,7 @@
 A BTColorScheme is a triple of foreground, background and border colors. It is immutable, all functions create a copy that apply the requested changes. Since ColorSchemes are linked in various places, mutating one will lead to undefined and most likely unwated behavior.
 
+The way immutability is implemented here is also found in Color.
+
 # Modes and types
 Types are one set of semantic colors, such as #danger for red or #success for green. Modes are modifiers for these sets that make them work in different contexts, such as light-on-dark vs dark-on-light settings.
 

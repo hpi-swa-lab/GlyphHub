@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 transitionDuration: aNumber
 	transitionDuration := aNumber

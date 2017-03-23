@@ -1,3 +1,3 @@
-as yet unclassified
+displaying
 displayIn: aWidget
 	self displayIn: aWidget onDismiss:  []

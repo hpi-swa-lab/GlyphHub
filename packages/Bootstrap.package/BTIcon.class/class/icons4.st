@@ -1,4 +1,4 @@
-as yet unclassified
+icons
 icons4
 	^{
 		#compass -> 16rf14e.

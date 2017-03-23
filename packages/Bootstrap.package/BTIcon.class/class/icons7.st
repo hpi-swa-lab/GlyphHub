@@ -1,4 +1,4 @@
-as yet unclassified
+icons
 icons7
 	^{
 		#shopping_basket -> 16rf291.

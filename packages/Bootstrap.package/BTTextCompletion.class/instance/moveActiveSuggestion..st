@@ -1,4 +1,4 @@
-as yet unclassified
+suggestions
 moveActiveSuggestion: aDirection
 	| suggestionItem suggestionText |
 	activeSuggestion ~= 0 ifTrue: [

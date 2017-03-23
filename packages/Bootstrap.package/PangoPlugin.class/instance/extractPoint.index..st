@@ -1,4 +1,4 @@
-as yet unclassified
+primitives
 extractPoint: pointOop index: aNumber
 	| xOop |
 	<returnTypeC: 'float'>

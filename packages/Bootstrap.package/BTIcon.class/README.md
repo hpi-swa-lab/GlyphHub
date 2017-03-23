@@ -1,0 +1,1 @@
+A BTIcon is a label that only displays a single icon.

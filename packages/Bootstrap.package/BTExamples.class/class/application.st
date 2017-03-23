@@ -1,11 +1,11 @@
 examples
 application
 	| app page3 page2 page1 |
-	page1 := BTPage new.
+	page1 := BTApplicationPage new.
 	app := BTApplication firstPage: page1.
 	
-	page3 := BTPage new add: (BTLabel heading: 'Page 3!').
-	page2 := BTPage new
+	page3 := BTApplicationPage new add: (BTLabel heading: 'Page 3!').
+	page2 := BTApplicationPage new
 		add: (BTLabel heading: 'Page 2!');
 		add: ((BTButton label: 'To Page 3') when: #clickedNoEvent send: #openPage: to: app with: page3).
 	page1

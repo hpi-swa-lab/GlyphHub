@@ -1,4 +1,4 @@
-as yet unclassified
+primitives
 primitiveLayoutGetPixelSize
 	<var: #layout type: 'PangoLayout *'>
 	<export: true>

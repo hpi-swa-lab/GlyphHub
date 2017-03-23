@@ -1,4 +1,4 @@
-as yet unclassified
+layout
 preferredSizeForWidth: aNumber
 	| min nat |
 	nat := self sizeForWidth: -1.

@@ -1,4 +1,4 @@
-as yet unclassified
+initialize-release
 initialize
 	layout := self class textLayoutClass new font: 'Roboto 12'; yourself.
 	text := ''.

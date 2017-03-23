@@ -1,3 +1,3 @@
-as yet unclassified
+translation
 hasHeaderFile
 	^true

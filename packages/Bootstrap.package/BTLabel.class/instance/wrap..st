@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 wrap: aMode
 	" one of #never, #char, #word_char, #word. default to #word "
 	aMode == #never

@@ -1,4 +1,4 @@
-as yet unclassified
+instance creation
 icon: anIcon
 	^self new
 		icon: anIcon;

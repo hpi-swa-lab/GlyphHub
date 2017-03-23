@@ -1,4 +1,4 @@
-as yet unclassified
+layout
 clampScrollOffset: aPoint
 	^container hasSubmorphs
 		ifFalse: [ 0 asPoint ]

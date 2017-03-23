@@ -1,4 +1,4 @@
-as yet unclassified
+matching
 resolve
 	" awaits resolve of a promise "
 	self waitForPromise: subject.

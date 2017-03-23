@@ -1,0 +1,1 @@
+A BTPopover is your typical popover or speechbubble widget. You can attach it to buttons.

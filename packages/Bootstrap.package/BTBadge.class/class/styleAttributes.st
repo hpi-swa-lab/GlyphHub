@@ -1,4 +1,4 @@
-as yet unclassified
+styling
 styleAttributes
 	^{
 		'size' -> 'smaller'.

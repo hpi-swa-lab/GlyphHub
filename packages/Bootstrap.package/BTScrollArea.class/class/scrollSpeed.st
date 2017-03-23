@@ -1,3 +1,3 @@
-as yet unclassified
+constants
 scrollSpeed
 	^20 * BTWidget scalingFactor

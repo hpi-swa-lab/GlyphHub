@@ -1,4 +1,4 @@
-as yet unclassified
+primitives
 primitiveLayoutSetSingleParagraphMode
 	<var: #layout type: 'PangoLayout *'>
 	<export: true>

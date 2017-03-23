@@ -1,4 +1,4 @@
-as yet unclassified
+adding
 add: aModel
 	super add: aModel.
 	

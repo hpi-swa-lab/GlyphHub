@@ -1,4 +1,4 @@
-as yet unclassified
+navigation
 open: aPage
 	current ~= stack size ifTrue: [ | outdated |
 		outdated := stack size - current.

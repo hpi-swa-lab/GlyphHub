@@ -1,4 +1,4 @@
-as yet unclassified
+layout
 inVerticalLayout: aBoolean
 	vertical := aBoolean.
 	

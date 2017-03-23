@@ -1,4 +1,4 @@
-as yet unclassified
+primitives
 primitiveLayoutIndexAtLine
 	" layout, line, xOffset "
 	<var: #layout type: 'PangoLayout *'>

@@ -1,4 +1,4 @@
-as yet unclassified
+testing
 isValid
 	querying := true.
 	[self class instVarNames do: [:varName | | validationMethod current |

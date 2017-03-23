@@ -1,3 +1,3 @@
-as yet unclassified
+fields
 markAllDirty: aBoolean
 	dirtyFields atAllPut: aBoolean

@@ -1,4 +1,4 @@
-as yet unclassified
+primitives
 initialiseModule
 	<export: true>
 	^true

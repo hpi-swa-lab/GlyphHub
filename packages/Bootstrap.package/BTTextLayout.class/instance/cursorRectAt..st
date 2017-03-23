@@ -1,4 +1,4 @@
-as yet unclassified
+cursor
 cursorRectAt: index
 	" returns strong and weak cursor rectangles for cursor position at index "
 	| data |

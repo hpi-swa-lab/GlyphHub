@@ -1,4 +1,4 @@
-as yet unclassified
+suggestions
 updateSuggestions
 	suggestionsList ifNotNil: [
 		self displaySuggestions: (suggestionsList select: [ :suggestion |

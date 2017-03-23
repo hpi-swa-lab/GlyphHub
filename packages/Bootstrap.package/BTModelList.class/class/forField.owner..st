@@ -1,4 +1,4 @@
-as yet unclassified
+instance creation
 forField: aField owner: aModel
 	^self new
 		field: aField;

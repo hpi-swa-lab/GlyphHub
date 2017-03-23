@@ -1,4 +1,4 @@
-as yet unclassified
+drawing
 drawOn: aCanvas selectionColor: aColor selectionFillColor: anotherColor drawCursor: aBoolean
 	| transform |
 	transform := self angle ~= 0

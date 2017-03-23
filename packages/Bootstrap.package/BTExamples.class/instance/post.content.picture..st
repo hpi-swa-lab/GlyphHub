@@ -1,4 +1,4 @@
-as yet unclassified
+initialize-release
 post: authorLine content: content picture: picture
 	^BTPage row
 		add: (BTImage new scalingMode: #fixed; minSize: 64 asPoint; path: FileDirectory default / 'BP2016H1' / 'assets' / picture);

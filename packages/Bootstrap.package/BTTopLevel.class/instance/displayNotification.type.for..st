@@ -1,4 +1,4 @@
-as yet unclassified
+notifications
 displayNotification: aString type: aColorType for: aDuration
 	| newNotification |
 	newNotification := (BTNotification text: aString type: aColorType)

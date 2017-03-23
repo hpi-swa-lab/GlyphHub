@@ -1,4 +1,4 @@
-as yet unclassified
+primitives
 loadArgumentMatrix: matrix
 	"Load the argument matrix"
 	<returnTypeC: 'float *'>

@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 makeActive: newActiveTab
 	currentTab ifNotNil: [currentTab active: false].
 	newActiveTab active: true.

@@ -1,0 +1,1 @@
+A BTTopLevel is a page suitable to be the topmost owner of a widget hierarchy. It can display notifications.

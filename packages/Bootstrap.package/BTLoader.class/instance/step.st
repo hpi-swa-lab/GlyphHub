@@ -1,4 +1,4 @@
-as yet unclassified
+stepping and presenter
 step
 	angle := angle + 3.
 	self changed

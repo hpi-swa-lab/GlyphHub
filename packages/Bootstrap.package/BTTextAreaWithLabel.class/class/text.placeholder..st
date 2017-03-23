@@ -1,4 +1,4 @@
-as yet unclassified
+instance creation
 text: aString placeholder: anotherString
 	^ self new
 		text: aString;

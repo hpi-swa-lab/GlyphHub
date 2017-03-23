@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 font: aFont
 	self flag: #todo

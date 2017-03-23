@@ -1,4 +1,4 @@
-as yet unclassified
+primitives
 primitiveLayoutMoveCursorVisually
 	" primLayout: layout moveCursor: strong index: index trailing: trailing direction: direction "
 	<var: #layout type: 'PangoLayout *'>

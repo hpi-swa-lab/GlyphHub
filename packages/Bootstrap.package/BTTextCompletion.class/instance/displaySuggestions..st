@@ -1,4 +1,4 @@
-as yet unclassified
+suggestions
 displaySuggestions: aCollection
 	suggestions removeAllMorphs.
 	activeSuggestion := 0.

@@ -1,4 +1,4 @@
-as yet unclassified
+instance creation
 label: aString action: aSymbol
 	^self new
 		action: aSymbol;

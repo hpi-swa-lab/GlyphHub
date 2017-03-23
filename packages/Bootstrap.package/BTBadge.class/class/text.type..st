@@ -1,4 +1,4 @@
-as yet unclassified
+instance creation
 text: aString type: aType
 	
 	^self new

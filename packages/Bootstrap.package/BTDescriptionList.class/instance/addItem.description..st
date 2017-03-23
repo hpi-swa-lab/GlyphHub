@@ -1,4 +1,4 @@
-as yet unclassified
+items
 addItem: aKey description: aString
 	| keyLabel newWidth row |
 	items add: {aKey. aString}.

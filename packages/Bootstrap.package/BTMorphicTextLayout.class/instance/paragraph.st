@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 paragraph
 	^paragraph ifNil: [
 		paragraph := NewParagraph new

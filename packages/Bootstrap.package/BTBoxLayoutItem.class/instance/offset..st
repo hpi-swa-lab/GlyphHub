@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 offset: aNumber
 	offset := aNumber

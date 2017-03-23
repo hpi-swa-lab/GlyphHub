@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 logicalAttributes
 	" returns an array corresponding to each character in the text. in each slot,
 	  there is a list of attributes that match on this particular character.

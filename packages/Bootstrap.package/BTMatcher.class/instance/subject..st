@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 subject: anObject
 	subject := anObject

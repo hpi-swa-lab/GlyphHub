@@ -1,0 +1,1 @@
+A BTMorphContainer is a container for arbitrary morphs, making sure their extent is honored within a BTBoxLayout.

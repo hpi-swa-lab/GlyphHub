@@ -1,4 +1,4 @@
-as yet unclassified
+initialize-release
 initialize
 	container := TransformMorph new
 		color: Color transparent;

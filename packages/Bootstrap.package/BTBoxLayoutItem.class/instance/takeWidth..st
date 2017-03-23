@@ -1,4 +1,4 @@
-as yet unclassified
+layout
 takeWidth: aNumber
 	| preferred |
 	preferred := self widget preferredSizeForWidth: aNumber.

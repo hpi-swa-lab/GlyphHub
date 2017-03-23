@@ -1,4 +1,4 @@
-as yet unclassified
+suggestions
 isValidCompletion: aString
 	^aString notEmpty and:
 		[activeSuggestion ~= 0 or: 

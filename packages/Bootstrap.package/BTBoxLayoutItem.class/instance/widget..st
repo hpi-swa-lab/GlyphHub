@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 widget: aWidget
 	widget := aWidget

@@ -1,4 +1,4 @@
-as yet unclassified
+primitives
 primitiveLayoutPositionToIndex
 	<var: #layout type: 'PangoLayout *'>
 	<var: #x type: 'float'>

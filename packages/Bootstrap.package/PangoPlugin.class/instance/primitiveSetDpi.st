@@ -1,4 +1,4 @@
-as yet unclassified
+primitives
 primitiveSetDpi
 	<export: true>
 	| dpi |

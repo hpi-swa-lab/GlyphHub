@@ -1,4 +1,4 @@
-as yet unclassified
+primitives
 shutdownModule
 	<export: true>
 	self sqPangoShutdown

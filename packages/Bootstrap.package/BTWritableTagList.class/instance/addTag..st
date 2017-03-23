@@ -1,4 +1,4 @@
-as yet unclassified
+hierarchy
 addTag: aString
 	self tags add: aString.
 	self 

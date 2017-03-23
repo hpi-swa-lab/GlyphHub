@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 font: aString
 	^self subclassResponsibility

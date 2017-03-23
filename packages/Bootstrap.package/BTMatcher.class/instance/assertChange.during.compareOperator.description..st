@@ -1,4 +1,4 @@
-as yet unclassified
+assertions
 assertChange: aSelectorOrBlock during: aBlock compareOperator: aSelector description: aString
 	| newValue oldValue |
 	oldValue := aSelectorOrBlock isBlock ifTrue: [aSelectorOrBlock value: subject] ifFalse: [subject perform: aSelectorOrBlock].

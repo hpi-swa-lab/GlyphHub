@@ -1,4 +1,4 @@
-as yet unclassified
+primitives
 primitiveLayoutLineNumberOfIndex
 	" layout, index "
 	<var: #layout type: 'PangoLayout *'>

@@ -1,3 +1,3 @@
-as yet unclassified
+events
 triggerOpened: aPage
 	self triggerEvent: #opened with: aPage

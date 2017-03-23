@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 ellipsize
 	self flag: #todo.
 	^#none

@@ -1,4 +1,4 @@
-as yet unclassified
+primitives
 primitiveCreateLayout
 	<var: #layout type: 'PangoLayout *'>
 	<export: true>

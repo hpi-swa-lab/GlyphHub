@@ -1,4 +1,4 @@
-as yet unclassified
+icons
 icons2
 	^{
 		#exclamation_circle -> 16rf06a.

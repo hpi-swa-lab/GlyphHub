@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 modelName
 	^self subclassResponsibility

@@ -1,3 +1,3 @@
-as yet unclassified
+operations
 save 
 	^self saveTo: self class defaultBackend

@@ -1,4 +1,4 @@
-as yet unclassified
+instance creation
 path: aFileDirectory
 
 	^ self new

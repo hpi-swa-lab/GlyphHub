@@ -1,4 +1,4 @@
-as yet unclassified
+operations
 saveTo: aBackend
 	self isDirty ifFalse: [ ^Promise unit: self ].
 	self isValid ifFalse: [ ^Promise new rejectWith: self ].

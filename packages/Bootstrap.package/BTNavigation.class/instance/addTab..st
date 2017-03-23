@@ -1,3 +1,3 @@
-as yet unclassified
+hierarchy
 addTab: aString
 	self add: (BTTab text: aString)

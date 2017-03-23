@@ -1,3 +1,3 @@
-as yet unclassified
+navigation
 goForward: aNumber
 	^self go: aNumber

@@ -1,4 +1,4 @@
-as yet unclassified
+geometry
 extent: aPoint
 	| max |
 	max := aPoint x max: aPoint y.

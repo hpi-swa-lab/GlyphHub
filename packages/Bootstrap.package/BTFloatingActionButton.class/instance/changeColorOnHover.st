@@ -1,3 +1,3 @@
-as yet unclassified
+colors
 changeColorOnHover
 	^true

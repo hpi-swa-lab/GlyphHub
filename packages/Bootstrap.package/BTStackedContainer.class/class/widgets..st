@@ -1,4 +1,4 @@
-as yet unclassified
+instance creation
 widgets: aCollection
 	| result |
 	result := self new.

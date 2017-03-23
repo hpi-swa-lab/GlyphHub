@@ -1,4 +1,4 @@
-as yet unclassified
+instance creation
 heading: aString
 	^self new
 		heading: aString;

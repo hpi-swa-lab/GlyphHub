@@ -1,3 +1,3 @@
-as yet unclassified
+text
 text: aString
 	label bold: aString

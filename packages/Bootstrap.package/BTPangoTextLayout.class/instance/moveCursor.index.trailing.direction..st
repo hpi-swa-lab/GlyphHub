@@ -1,4 +1,4 @@
-as yet unclassified
+cursor
 moveCursor: strong index: index trailing: trailing direction: direction
 	" move the strong or weak cursor based on graphemes.
 	  index denotes the actual index into the graphemes, trailing denotes an

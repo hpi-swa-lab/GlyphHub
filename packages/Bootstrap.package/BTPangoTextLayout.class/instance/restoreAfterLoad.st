@@ -1,4 +1,4 @@
-as yet unclassified
+initialize-release
 restoreAfterLoad
 	layout := 0.
 	font ifNotNil: [ self font: font ].

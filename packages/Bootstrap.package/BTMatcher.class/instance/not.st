@@ -1,3 +1,3 @@
-as yet unclassified
+matching
 not
 	negated := negated not

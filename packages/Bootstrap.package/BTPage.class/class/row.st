@@ -1,4 +1,4 @@
-as yet unclassified
+instance creation
 row
 	^self new
 		vertical: false;

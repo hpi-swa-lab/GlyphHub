@@ -1,4 +1,4 @@
-as yet unclassified
+instance creation
 collapsible: aString content:  aWidget
 	| content header |
 	header := BTCardHeader new add: (BTLabel text: aString).

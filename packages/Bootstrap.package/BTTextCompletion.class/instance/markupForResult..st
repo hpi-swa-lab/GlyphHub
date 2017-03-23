@@ -1,4 +1,4 @@
-as yet unclassified
+text
 markupForResult: aString
 	| end start |
 	start := aString findString: self text startingAt: 1 caseSensitive: false.

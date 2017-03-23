@@ -1,0 +1,1 @@
+A BTModelValidationFailure is the exception thrown by a BTModelValidationMatcher.

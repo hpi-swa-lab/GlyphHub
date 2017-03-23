@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 text: aString
 	label ifNil: [
 		label := BTLabel new
