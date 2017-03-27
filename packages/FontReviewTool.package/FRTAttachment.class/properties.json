@@ -1,0 +1,18 @@
+{
+	"category" : "FontReviewTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"comment",
+		"type",
+		"data1",
+		"data2",
+		"annotation" ],
+	"name" : "FRTAttachment",
+	"pools" : [
+		 ],
+	"super" : "BTModel",
+	"type" : "normal" }

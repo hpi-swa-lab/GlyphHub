@@ -1,3 +1,3 @@
 as yet unclassified
-author: aString
-	author := aString 
+author: anAuthor
+	self update: #author with: anAuthor foreignField: #comments

@@ -7,13 +7,9 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"text",
-		"image",
-		"isRead",
-		"dateTime",
-		"author",
-		"thread" ],
+		"author" ],
 	"name" : "FRTComment",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "BTModel",
 	"type" : "normal" }

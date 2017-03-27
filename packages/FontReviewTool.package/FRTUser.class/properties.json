@@ -6,7 +6,7 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"name",
+		"userName",
 		"password" ],
 	"name" : "FRTUser",
 	"pools" : [

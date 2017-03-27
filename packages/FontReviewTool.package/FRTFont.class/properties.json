@@ -1,0 +1,15 @@
+{
+	"category" : "FontReviewTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"fontName",
+		"family" ],
+	"name" : "FRTFont",
+	"pools" : [
+		 ],
+	"super" : "BTModel",
+	"type" : "normal" }

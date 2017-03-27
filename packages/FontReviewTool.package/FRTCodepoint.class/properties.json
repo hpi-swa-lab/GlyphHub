@@ -1,0 +1,17 @@
+{
+	"category" : "FontReviewTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"unicodeValue",
+		"features",
+		"pointSize",
+		"font" ],
+	"name" : "FRTCodepoint",
+	"pools" : [
+		 ],
+	"super" : "BTModel",
+	"type" : "normal" }

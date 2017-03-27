@@ -1,0 +1,16 @@
+{
+	"category" : "FontReviewTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"glyphName",
+		"versionHash",
+		"font" ],
+	"name" : "FRTGlyph",
+	"pools" : [
+		 ],
+	"super" : "BTModel",
+	"type" : "normal" }

@@ -32,7 +32,7 @@ initialize
 	
 	commentThreadArea := BTPage column.
 	
-	{FRTCommentThread example1 . FRTCommentThread example2} do: [:each |
+	{FRTCommentThreadOld example1 . FRTCommentThreadOld example2} do: [:each |
 		commentThreadArea add: (FRTCommentThreadPreviewWidget commentThread: each)].
 	
 	self
