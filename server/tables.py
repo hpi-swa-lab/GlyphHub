@@ -14,7 +14,7 @@ class CommonColumns(Base):
 
 class User(CommonColumns):
     __tablename__ = 'user'
-    name = Column(String(120))
+    userName = Column(String(120))
     password = Column(String(120))
     fonts = relationship('Font', back_populates='author')
 
@@ -37,7 +37,7 @@ class SampleText(CommonColumns):
 
 class Family(CommonColumns):
     __tablename__ = 'family'
-    name = Column(String(300))
+    familyName = Column(String(300))
     fonts = relationship('Font', back_populates='family')
 
 tag_font_association_table = Table('tag_font_association', Base.metadata,
@@ -46,7 +46,7 @@ tag_font_association_table = Table('tag_font_association', Base.metadata,
 
 class Font(CommonColumns):
     __tablename__ = 'font'
-    name = Column(String(300))
+    fontName = Column(String(300))
     family_id = Column(Integer, ForeignKey('family._id'))
     author_id = Column(Integer, ForeignKey('user._id'))
     family = relationship('Family', back_populates='fonts')
@@ -56,7 +56,7 @@ class Font(CommonColumns):
 
 class Glyph(CommonColumns):
     __tablename__ = 'glyph'
-    name = Column(String(300))
+    glyphName = Column(String(300))
     version_hash = Column(String(40))
     font_id = Column(Integer, ForeignKey('font._id'))
     font = relationship('Font', back_populates='glyphs')
@@ -80,9 +80,9 @@ class Thread(CommonColumns):
 
 class Codepoint(CommonColumns):
     __tablename__ = 'codepoint'
-    value = Column(Integer)
+    unicodeValue = Column(Integer)
     features = Column(Text)
-    size = Column(Float)
+    pointSize = Column(Float)
     thread_id = Column('thread_id', Integer, ForeignKey('thread._id'))
     font_id = Column('font_id', Integer, ForeignKey('font._id'))
     thread = relationship('Thread', back_populates='codepoints')
