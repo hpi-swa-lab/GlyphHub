@@ -10,5 +10,5 @@
 	"name" : "BTApplicationProject",
 	"pools" : [
 		 ],
-	"super" : "AnimMorphicProject",
+	"super" : "MorphicProject",
 	"type" : "normal" }
