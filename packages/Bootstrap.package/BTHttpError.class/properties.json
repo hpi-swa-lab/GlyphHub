@@ -1,0 +1,15 @@
+{
+	"category" : "Bootstrap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"response",
+		"statusCode" ],
+	"name" : "BTHttpError",
+	"pools" : [
+		 ],
+	"super" : "Exception",
+	"type" : "normal" }
