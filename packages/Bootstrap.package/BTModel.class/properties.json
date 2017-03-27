@@ -7,7 +7,7 @@
 	"commentStamp" : "TB 3/23/2017 12:09",
 	"instvars" : [
 		"id",
-		"dirtyFields",
+		"dirtyFlags",
 		"querying" ],
 	"name" : "BTModel",
 	"pools" : [

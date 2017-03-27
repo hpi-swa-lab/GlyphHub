@@ -2,7 +2,7 @@ testing
 isDirty
 	querying := true.
 	
-	[dirtyFields with: self class instVarNames do: [ :dirty :field | | data |
+	[dirtyFlags with: self class instVarNames do: [ :dirty :field | | data |
 		dirty ifTrue: [ ^true ].
 		
 		data := self instVarNamed: field.

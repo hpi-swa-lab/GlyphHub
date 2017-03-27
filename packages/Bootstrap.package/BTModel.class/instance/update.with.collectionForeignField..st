@@ -11,4 +11,4 @@ update: aField with: anObject collectionForeignField: aForeignField
 	
 	(collection includes: self) ifFalse: [ collection add: self ].
 	
-	self fieldDirty: aField
+	self flagFieldAsDirty: aField

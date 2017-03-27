@@ -5,4 +5,4 @@ update: aField with: anObject foreignField: aForeignField
 	(anObject notNil and: [(anObject perform: aForeignField) ~~ self]) ifTrue: [
 		anObject perform: (aForeignField numArgs: 1) with: self ].
 	
-	self fieldDirty: aField
+	self flagFieldAsDirty: aField

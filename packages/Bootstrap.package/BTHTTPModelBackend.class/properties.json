@@ -1,0 +1,14 @@
+{
+	"category" : "Bootstrap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "BTHTTPModelBackend",
+	"pools" : [
+		 ],
+	"super" : "BTModelBackend",
+	"type" : "normal" }

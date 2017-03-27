@@ -1,3 +1,3 @@
 fields
 markAllDirty: aBoolean
-	dirtyFields atAllPut: aBoolean
+	dirtyFlags atAllPut: aBoolean

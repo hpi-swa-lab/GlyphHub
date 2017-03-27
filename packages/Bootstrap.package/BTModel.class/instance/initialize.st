@@ -2,7 +2,7 @@ initialize-release
 initialize
 	super initialize.
 	
-	dirtyFields := Array new: self numberOfFields.
+	dirtyFlags := Array new: self numberOfFields.
 	querying := false.
 	
 	self
