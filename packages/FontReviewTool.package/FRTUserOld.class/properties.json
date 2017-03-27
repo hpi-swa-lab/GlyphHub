@@ -6,10 +6,12 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"name",
-		"password" ],
-	"name" : "FRTUser",
+		"username",
+		"avatar",
+		"languages",
+		"tags" ],
+	"name" : "FRTUserOld",
 	"pools" : [
 		 ],
-	"super" : "BTModel",
+	"super" : "Object",
 	"type" : "normal" }

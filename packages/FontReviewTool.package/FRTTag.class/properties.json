@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"name",
-		"password" ],
-	"name" : "FRTUser",
+		"text",
+		"type" ],
+	"name" : "FRTTag",
 	"pools" : [
 		 ],
 	"super" : "BTModel",

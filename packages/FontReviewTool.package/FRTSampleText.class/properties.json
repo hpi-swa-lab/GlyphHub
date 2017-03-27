@@ -6,9 +6,10 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"name",
-		"password" ],
-	"name" : "FRTUser",
+		"title",
+		"text",
+		"author" ],
+	"name" : "FRTSampleText",
 	"pools" : [
 		 ],
 	"super" : "BTModel",

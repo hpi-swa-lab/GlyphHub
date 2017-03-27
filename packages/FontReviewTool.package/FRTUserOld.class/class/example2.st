@@ -1,7 +1,7 @@
 as yet unclassified
 example2
 
-	^ FRTUser new
+	^ FRTUserOld new
 				username: 'Johanna Doe';
 				avatarFromPath: FileDirectory default / 'BP2016H1' / 'assets' / 'penguin2.jpg';
 				addTag: 'Designer';

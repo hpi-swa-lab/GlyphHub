@@ -5,4 +5,4 @@ example2
 		dateTime: DateAndTime now;
 		text: 'a comment here';
 		image: (Form fromFileNamed: (FileDirectory default / 'BP2016H1' / 'notification_sample.png') fullName);
-		author: FRTUser example2
+		author: FRTUserOld example2
