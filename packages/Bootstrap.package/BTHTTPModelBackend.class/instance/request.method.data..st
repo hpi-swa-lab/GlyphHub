@@ -5,7 +5,7 @@ request: path method: method data: anObject
 	| promise |
 	promise := Promise new.
 	[ | client req res url data |
-		url := self class backendURL, path.
+		url := self apiRootUrl, path.
 		data := anObject ifNotNil: [ anObject asJsonString squeakToUtf8 ] ifNil: [ '' ].
 		client := WebClient new initializeFromUrl: url.
 		req := (client requestWithUrl: url)
