@@ -4,7 +4,10 @@
 	"instance" : {
 		"apiRootUrl" : "TB 3/28/2017 14:02",
 		"apiRootUrl:" : "TB 3/28/2017 14:02",
+		"delete:from:" : "JH 3/28/2017 18:02",
 		"initialize" : "TB 3/28/2017 14:02",
-		"loadAllFrom:class:populate:" : "TB 3/28/2017 12:44",
-		"request:method:data:" : "TB 3/28/2017 14:03",
-		"save:to:" : "JH 3/28/2017 11:47" } }
+		"loadAllFrom:into:populate:" : "JH 3/28/2017 14:49",
+		"loadFrom:where:equals:into:populate:" : "JH 3/28/2017 14:03",
+		"loadFrom:where:into:populate:" : "JH 3/28/2017 13:55",
+		"request:method:data:" : "JH 3/28/2017 18:06",
+		"save:to:" : "JH 3/28/2017 14:11" } }

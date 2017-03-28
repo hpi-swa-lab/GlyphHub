@@ -2,8 +2,8 @@
 	"class" : {
 		 },
 	"instance" : {
-		"delete:from:" : "TB 3/10/2017 15:55",
-		"load:from:populate:" : "TB 3/14/2017 08:51",
-		"loadAllFrom:class:populate:" : "TB 3/14/2017 08:51",
-		"loadBy:value:from:class:populate:" : "TB 3/14/2017 08:51",
-		"save:to:" : "TB 3/10/2017 16:05" } }
+		"delete:from:" : "JH 3/28/2017 14:11",
+		"load:from:populate:" : "JH 3/28/2017 14:11",
+		"loadAllFrom:into:populate:" : "JH 3/28/2017 14:14",
+		"loadFrom:where:equals:into:populate:" : "JH 3/28/2017 13:39",
+		"save:to:" : "JH 3/28/2017 14:12" } }

@@ -1,3 +1,3 @@
 operations
-save: aModel to: aString
+save: aModel to: aTableNameString
 	^self subclassResponsibility

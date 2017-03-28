@@ -1,5 +1,5 @@
 as yet unclassified
-loadAllFrom: aString class: aClass populate: aCollection
+loadAllFrom: aString into: aClass populate: aCollection
 	| models |
 	models := (tables at: aString) collect: [ :entity | self deserialize: entity class: aClass ].
 

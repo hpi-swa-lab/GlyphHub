@@ -2,10 +2,10 @@ as yet unclassified
 testNewUser
 	| count userPromise |
 	count := self countUsers.
-	userPromise := FRTUser new
+	userPromise := self safePromise: (FRTUser new
 		userName: 'ME';
 		password: 'BLALALA';
-		saveTo: backend.
+		saveTo: backend).
 	
 	(self expect: userPromise) to resolve.
 	

@@ -1,7 +1,7 @@
-as yet unclassified
-save: aModel to: aTable
+operations
+save: aModel to: aTableNameString
 	^ (self
-		request: aTable
+		request: aTableNameString
 		method: (aModel id == 0 ifTrue: ['POST'] ifFalse: ['PUT'])
 		data: aModel dirtyFieldsAndValues)
 		

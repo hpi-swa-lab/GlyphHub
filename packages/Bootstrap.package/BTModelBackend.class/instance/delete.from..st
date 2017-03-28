@@ -1,3 +1,3 @@
 operations
-delete: aNumber from: aString
+delete: aNumber from: aTableNameString
 	^self subclassResponsibility
