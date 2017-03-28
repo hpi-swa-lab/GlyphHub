@@ -9,4 +9,5 @@ loadAllFrom: aString class: aClass populate: aCollection
 		instance := aClass new.
 		aClass instVarNames do: [:name |
 			instance instVarNamed: name put: (item at: name asString)].
+		instance privateId: (item at: '_id').
 		instance])
