@@ -6,7 +6,7 @@
 		"expectedFailures" : "TB 3/28/2017 12:59",
 		"setUp" : "TB 3/28/2017 14:22",
 		"tearDown" : "TB 3/28/2017 14:01",
-		"testDeleteUser" : "TB 3/28/2017 12:44",
+		"testDeleteUser" : "TB 3/28/2017 14:49",
 		"testGetUser" : "TB 3/28/2017 12:31",
 		"testGetUsers" : "TB 3/28/2017 12:42",
 		"testNewUser" : "TB 3/28/2017 14:34" } }

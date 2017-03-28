@@ -6,7 +6,7 @@ open
 	port := self ephemeralPort.
 	
 	" route for easy check whether we managed to start (FIXME feel free to do this better) "
-	server addService: '/alive' action: [ :req| req send200Response: 'ok' ].
+	server addService: '/alive' action: [ :req | req send200Response: 'ok' ].
 	
 	{userTable. fontTable} with: #('user' 'font') do: [ :table :tableName |
 		" GET and POST to the collection, e.g. /user "
