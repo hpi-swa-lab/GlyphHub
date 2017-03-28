@@ -1,0 +1,14 @@
+{
+	"category" : "FontReviewTool-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"server" ],
+	"name" : "FRTServerCommunicationTest",
+	"pools" : [
+		 ],
+	"super" : "BTTestCase",
+	"type" : "normal" }
