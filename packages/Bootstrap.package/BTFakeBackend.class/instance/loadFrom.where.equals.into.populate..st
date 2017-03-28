@@ -1,7 +1,7 @@
 as yet unclassified
-loadBy: aSelector value: aValue from: aString class: aClass populate: aCollection
+loadFrom: aTableNameString where: aSelector equals: aValue into: aClass populate: aCollection
 	| models |
-	models := ((tables at: aString)
+	models := ((tables at: aTableNameString)
 		select: [ :e | (e at: aSelector asString ifAbsent: [nil]) = aValue ])
 		collect: [ :e | self deserialize: e class: aClass ].
 	
