@@ -2,8 +2,11 @@
 	"class" : {
 		 },
 	"instance" : {
-		"expectedFailures" : "TB 3/28/2017 12:10",
-		"setUp" : "TB 3/28/2017 11:44",
-		"tearDown" : "TB 3/28/2017 11:44",
-		"testGetUser" : "TB 3/28/2017 11:51",
-		"testGetUsers" : "TB 3/28/2017 11:48" } }
+		"countUsers" : "TB 3/28/2017 13:02",
+		"expectedFailures" : "TB 3/28/2017 12:59",
+		"setUp" : "TB 3/28/2017 14:22",
+		"tearDown" : "TB 3/28/2017 14:01",
+		"testDeleteUser" : "TB 3/28/2017 12:44",
+		"testGetUser" : "TB 3/28/2017 12:31",
+		"testGetUsers" : "TB 3/28/2017 12:42",
+		"testNewUser" : "TB 3/28/2017 14:34" } }

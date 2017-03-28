@@ -1,3 +1,3 @@
 as yet unclassified
 expectedFailures
-	^#(testGetUser)
+	^#(testGetUser testDeleteUser)

@@ -1,6 +1,12 @@
 as yet unclassified
 open
+	" starts the server and returns the port it's running on "
+	| port |
 	server := WebServer reset default.
+	port := self ephemeralPort.
+	
+	" route for easy check whether we managed to start (FIXME feel free to do this better) "
+	server addService: '/alive' action: [ :req| req send200Response: 'ok' ].
 	
 	{userTable. fontTable} with: #('user' 'font') do: [ :table :tableName |
 		" GET and POST to the collection, e.g. /user "
@@ -9,16 +15,17 @@ open
 			req method = 'POST' ifTrue: [ | item |
 				item := Json readFrom: req content readStream.
 				item at: '_id' put: (table at: '_items') size + 1.
-				(table at: '_items') add: item.
+				(table at: '_items' put: ((table at: '_items') copyWith: item)).
+				self addItemRoutesFor: item table: table tableName: tableName.  
 				req send200Response: '{"_id":', (item at: '_id'), '}' contentType: 'application/json' ]].
 		
 		" GET and DELETE to the item, e.g. /user/2 "
 		(table at: '_items') do: [ :item |
-			server addService: '/', tableName, '/', (item at: '_id') action: [ :req |
-				req method = 'GET' ifTrue: [ req send200Response: item asJsonString contentType: 'application/json' ].
-				req method = 'DELETE' ifTrue: [ | failed |
-					failed := false.
-					(table at: '_items') remove: item ifAbsent: [ failed := true. req send404Response ].
-					failed ifFalse: [ req send200Response: '' contentType: 'application/json' ]]]]].
+			self addItemRoutesFor: item table: table tableName: tableName ]].
 	
-	server listenOn: 8000
+	server listenOn: port.
+	
+	(WebClient new timeout: 1; httpGet: 'http://127.0.0.1:', port asString, '/alive') code = 200
+		ifFalse: [ self error: 'Mock server failed to start properly' ].
+		
+	^port

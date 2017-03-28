@@ -6,7 +6,8 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"server" ],
+		"server",
+		"backend" ],
 	"name" : "FRTServerCommunicationTest",
 	"pools" : [
 		 ],
