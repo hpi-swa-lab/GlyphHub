@@ -12,10 +12,10 @@ join: aModelsList class: aClass populate: aCollection
 			association := associations at: field.
 			
 			children := self
-				loadBy: ((association first associations at: association second ifAbsent: [#single]) third == #many ifTrue: ['id'] ifFalse: [association second])
-				value: (association third == #single ifTrue: [current] ifFalse: [model id])
-				from: association first modelName
-				class: association first
+				loadFrom: association first modelName
+				where: ((association first associations at: association second ifAbsent: [#single]) third == #many ifTrue: ['id'] ifFalse: [association second])
+				equals: (association third == #single ifTrue: [current] ifFalse: [model id])
+				into: association first
 				populate: #().
 			
 			children value do: [ :childModel | childModel instVarNamed: association second put: model ].

@@ -1,0 +1,16 @@
+{
+	"category" : "FontReviewTool-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "TB 3/28/2017 11:43",
+	"instvars" : [
+		"server",
+		"userTable",
+		"fontTable" ],
+	"name" : "FRTFakeRestServer",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

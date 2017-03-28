@@ -1,0 +1,11 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"countUsers" : "JH 3/28/2017 17:17",
+		"setUp" : "TB 3/28/2017 14:22",
+		"tearDown" : "TB 3/28/2017 14:01",
+		"testDeleteUser" : "TB 3/28/2017 14:49",
+		"testGetUser" : "TB 3/28/2017 12:31",
+		"testGetUsers" : "TB 3/28/2017 12:42",
+		"testNewUser" : "JH 3/28/2017 17:16" } }

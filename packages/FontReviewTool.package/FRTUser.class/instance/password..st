@@ -1,3 +1,3 @@
 as yet unclassified
 password: aString
-	self update: #update with: aString
+	self update: #password with: aString

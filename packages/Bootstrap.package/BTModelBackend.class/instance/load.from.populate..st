@@ -1,3 +1,8 @@
 operations
-load: aNumber from: aString populate: aCollection
-	^self loadBy: #id value: aNumber from: aString class: self populate: aCollection
+load: aNumber from: aTableNameString populate: aCollection
+	^self
+		loadFrom: aTableNameString
+		where: #id
+		equals: aNumber
+		into: self
+		populate: aCollection

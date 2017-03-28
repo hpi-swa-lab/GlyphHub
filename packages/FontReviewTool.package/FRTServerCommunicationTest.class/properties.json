@@ -1,14 +1,15 @@
 {
-	"category" : "Bootstrap",
+	"category" : "FontReviewTool-Tests",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"apiRootUrl" ],
-	"name" : "BTHTTPModelBackend",
+		"server",
+		"backend" ],
+	"name" : "FRTServerCommunicationTest",
 	"pools" : [
 		 ],
-	"super" : "BTModelBackend",
+	"super" : "BTTestCase",
 	"type" : "normal" }
