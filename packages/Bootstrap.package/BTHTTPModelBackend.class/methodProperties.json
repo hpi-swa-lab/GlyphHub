@@ -4,10 +4,13 @@
 	"instance" : {
 		"apiRootUrl" : "TB 3/28/2017 14:02",
 		"apiRootUrl:" : "TB 3/28/2017 14:02",
+		"apiToken" : "TB 3/28/2017 18:10",
+		"apiToken:" : "TB 3/28/2017 18:11",
 		"delete:from:" : "JH 3/28/2017 18:02",
-		"initialize" : "TB 3/28/2017 14:02",
+		"initialize" : "TB 3/28/2017 18:10",
 		"loadAllFrom:into:populate:" : "JH 3/28/2017 14:49",
 		"loadFrom:where:equals:into:populate:" : "JH 3/28/2017 14:03",
 		"loadFrom:where:into:populate:" : "JH 3/28/2017 13:55",
-		"request:method:data:" : "JH 3/28/2017 18:06",
+		"login:password:" : "TB 3/28/2017 18:20",
+		"request:method:data:" : "TB 3/28/2017 18:39",
 		"save:to:" : "JH 3/28/2017 14:11" } }

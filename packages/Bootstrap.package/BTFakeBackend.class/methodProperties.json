@@ -9,6 +9,7 @@
 		"initialize" : "TB 3/13/2017 15:06",
 		"join:class:populate:" : "JH 3/28/2017 13:26",
 		"loadAllFrom:into:populate:" : "JH 3/28/2017 14:14",
+		"loadBy:value:from:class:populate:" : "TB 3/14/2017 09:04",
 		"loadFrom:where:equals:into:populate:" : "JH 3/28/2017 18:17",
 		"save:to:" : "al 3/13/2017 11:23",
 		"serialize:" : "TB 3/14/2017 08:23",

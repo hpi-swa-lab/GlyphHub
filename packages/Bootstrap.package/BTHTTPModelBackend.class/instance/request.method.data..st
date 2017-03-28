@@ -12,6 +12,7 @@ request: path method: method data: anObject
 			headerAt: 'Accept-Encoding' put: 'gzip';
 			headerAt: 'Content-Type' put: 'application/json';
 			headerAt: 'Content-Length' put: data size;
+			headerAt: 'Authorization' put: self apiToken;
 			method: method;
 			yourself.
 		
