@@ -1,3 +1,3 @@
 operations
 saveTo: aBackend
-	^Promise all: (self collect: [ :entity | entity saveTo: aBackend ])
+	^BTPromise all: (self collect: [ :entity | entity saveTo: aBackend ])

@@ -1,7 +1,7 @@
 operations
 saveTo: aBackend
-	self isDirty ifFalse: [ ^Promise unit: self ].
-	self isValid ifFalse: [ ^Promise new rejectWith: self ].
+	self isDirty ifFalse: [ ^BTPromise unit: self ].
+	self isValid ifFalse: [ ^BTPromise new rejectWith: self ].
 	
 	^(aBackend save: self to: self class modelName) then: [ :model |
 		querying := true.

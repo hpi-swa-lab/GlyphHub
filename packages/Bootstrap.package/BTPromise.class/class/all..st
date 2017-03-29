@@ -3,7 +3,7 @@ all: aCollection
 	" resolve when all Promises in aCollection are resolved. If any reject, the returned promise immediately rejects as well, with the error of the first rejected promise "
 	| grouped pending result |
 	pending := aCollection size.
-	grouped := Promise new.
+	grouped := self new.
 	result := aCollection copy.
 	
 	aCollection doWithIndex: [ :promise :index |

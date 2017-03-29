@@ -3,7 +3,7 @@ request: path method: method data: anObject
 	" pass in a path such as '/user', a method such as 'GET' or 'POST' and data, like a Dictionary, or nil.
 	  Returns a Promise that resolves with the decoded JSON or rejects with a BTHttpError "
 	| promise isJsonResponse |
-	promise := Promise new.
+	promise := BTPromise new.
 	[ | client request response url data |
 		url := self apiRootUrl, path.
 		data := anObject ifNotNil: [ anObject asJsonString squeakToUtf8 ] ifNil: [ '' ].
@@ -17,6 +17,7 @@ request: path method: method data: anObject
 			yourself.
 		
 		response := client sendRequest: request content: data readStream size: data size.
+		
 		(isJsonResponse := response content ~= '' and: [response isSuccess])
 			ifTrue: [data := Json readFrom: response content readStream].
 		
@@ -24,7 +25,7 @@ request: path method: method data: anObject
 			ifTrue: [ promise resolveWith: data ]
 			ifFalse: [
 				promise rejectWith: (BTHttpError new
-					response: data;
+					response: response;
 					messageText: (isJsonResponse ifTrue: [(data at: '_error') at: 'message'] ifFalse: [data]);
 					statusCode: response code;  
 					yourself) ].

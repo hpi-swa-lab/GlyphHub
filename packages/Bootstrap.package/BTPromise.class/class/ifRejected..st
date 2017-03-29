@@ -1,3 +1,3 @@
 instance creation
 ifRejected: aBlock
-	^ Promise basicNew initializeWithIfRejected: aBlock.
+	^ self basicNew initializeWithIfRejected: aBlock.

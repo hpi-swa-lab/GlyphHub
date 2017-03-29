@@ -1,7 +1,7 @@
 operations
 save: aModel to: aTableNameString
 	^ (self
-		request: aTableNameString
+		request: (aModel id == 0 ifTrue: [aTableNameString] ifFalse: [aTableNameString, '/', aModel id])
 		method: (aModel id == 0 ifTrue: ['POST'] ifFalse: ['PUT'])
 		data: aModel dirtyFieldsAndValues)
 		

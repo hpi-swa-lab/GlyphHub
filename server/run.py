@@ -1,4 +1,10 @@
+import sys
+if sys.version_info < (3, 0):
+    sys.stdout.write("Sorry, requires Python 3.x, not Python 2.x\n")
+    sys.exit(1)
+
 from eve import Eve
+
 from eve.auth import TokenAuth
 from eve_sqlalchemy import SQL
 
@@ -8,8 +14,8 @@ from views import register_views
 
 class TokenAuth2(TokenAuth):
     def check_auth(self, token, allowed_roles, resource, method):
-        """First we are verifying if the token is valid. Next
-        we are checking if user is authorized for given roles.
+        """
+        First we are verifying if the token is valid.
         """
 
         login_name = tables.User.verify_auth_token(token)

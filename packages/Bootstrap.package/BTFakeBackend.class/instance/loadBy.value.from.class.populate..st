@@ -7,4 +7,4 @@ loadBy: aSelector value: aValue from: aString class: aClass populate: aCollectio
 	
 	self join: models class: aClass populate: aCollection.
 	
-	^Promise unit: models
+	^BTPromise unit: models

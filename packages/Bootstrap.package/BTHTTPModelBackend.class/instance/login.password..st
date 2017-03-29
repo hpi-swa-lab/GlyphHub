@@ -4,4 +4,4 @@ login: aUserNameString password: aPasswordString
 		request: '/login'
 		method: 'POST'
 		data: ({'userName' -> aUserNameString. 'password' -> aPasswordString} as: Dictionary))
-		then: [ :response | self apiToken: (response at: 'token') ]  
+		then: [ :response | self apiToken: (response at: 'token') ]

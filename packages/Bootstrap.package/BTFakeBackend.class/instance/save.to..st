@@ -10,4 +10,4 @@ save: aModel to: aString
 				at: ((tables at: aString) findFirst: [ :entity | (entity at: 'id') = aModel id])
 				put: (self serialize: aModel) ].
 	
-	^Promise unit: aModel
+	^BTPromise unit: aModel

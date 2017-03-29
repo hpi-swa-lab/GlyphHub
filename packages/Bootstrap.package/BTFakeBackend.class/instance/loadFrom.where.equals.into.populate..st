@@ -7,4 +7,4 @@ loadFrom: aTableNameString where: aSelector equals: aValue into: aClass populate
 	
 	self join: models class: aClass populate: aCollection.
 	
-	^Promise unit: models
+	^BTPromise unit: models

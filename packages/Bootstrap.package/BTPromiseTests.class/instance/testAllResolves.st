@@ -1,8 +1,8 @@
 as yet unclassified
 testAllResolves
 	| a b grouped |
-	a := Promise new.
-	b := Promise new.
+	a := BTPromise new.
+	b := BTPromise new.
 
 	grouped := (Promise all: {a. b}).
 

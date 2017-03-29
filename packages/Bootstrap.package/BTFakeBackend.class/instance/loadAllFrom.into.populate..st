@@ -5,4 +5,4 @@ loadAllFrom: aString into: aClass populate: aCollection
 
 	self join: models class: aClass populate: aCollection.
 	
-	^Promise unit: models
+	^BTPromise unit: models
