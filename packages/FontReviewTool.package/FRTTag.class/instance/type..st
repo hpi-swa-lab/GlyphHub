@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 type: aString
 	self update: #type with: aString

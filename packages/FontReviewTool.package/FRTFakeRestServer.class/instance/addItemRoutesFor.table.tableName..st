@@ -1,4 +1,4 @@
-as yet unclassified
+private
 addItemRoutesFor: anItemDictionary table: aTableDictionary tableName: aString
 	server
 		addService: '/', aString, '/', (anItemDictionary at: '_id')

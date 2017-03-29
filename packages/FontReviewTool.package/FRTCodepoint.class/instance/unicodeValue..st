@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 unicodeValue: aNumber
 	self update: #unicodeValue with: aNumber

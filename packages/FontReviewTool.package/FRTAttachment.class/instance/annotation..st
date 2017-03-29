@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 annotation: aString
 	self update: #annotation with: aString  

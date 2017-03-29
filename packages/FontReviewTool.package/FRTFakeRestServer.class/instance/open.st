@@ -1,4 +1,4 @@
-as yet unclassified
+initialize-release
 open
 	" starts the server and returns the port it's running on "
 	| port |

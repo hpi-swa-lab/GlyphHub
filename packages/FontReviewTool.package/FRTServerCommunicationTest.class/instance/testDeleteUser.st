@@ -1,4 +1,4 @@
-as yet unclassified
+testing
 testDeleteUser
 	| userPromise count |
 	userPromise := FRTUser loadAllFrom: backend.

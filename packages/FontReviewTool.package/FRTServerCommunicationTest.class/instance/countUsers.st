@@ -1,4 +1,4 @@
-as yet unclassified
+helper
 countUsers
 	| promise |
 	promise := self safePromise: (FRTUser loadAllFrom: backend).

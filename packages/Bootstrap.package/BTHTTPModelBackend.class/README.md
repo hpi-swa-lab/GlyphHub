@@ -1,0 +1,1 @@
+A BTHTTPModelBackend implements a BTModelBackend that calls to a RESTful server. Set its apiRootUrl to configure where the requests are sent to. Supports login via the login:password: method. The returned auth token is saved in this instance.

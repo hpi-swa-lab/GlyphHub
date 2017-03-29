@@ -1,3 +1,3 @@
-as yet unclassified
+initialize-release
 close
 	server destroy

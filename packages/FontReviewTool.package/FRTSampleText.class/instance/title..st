@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 title: aString
 	self update: #title with: aString

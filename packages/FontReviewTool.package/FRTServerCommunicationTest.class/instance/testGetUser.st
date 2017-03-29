@@ -1,4 +1,4 @@
-as yet unclassified
+testing
 testGetUser
 	| userPromise |
 	userPromise := FRTUser load: 1 from: backend.

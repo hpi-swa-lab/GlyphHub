@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 fontName: aString
 	self update: #fontName with: aString

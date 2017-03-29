@@ -1,4 +1,4 @@
-as yet unclassified
+testing
 testUpdateUser
 	| count userPromise user |
 	count := self countUsers.

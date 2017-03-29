@@ -1,0 +1,1 @@
+A BTHttpError is returned for an unsuccessful HTTP request.

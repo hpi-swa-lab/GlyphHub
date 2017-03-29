@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 userName: aString
 	self update: #userName with: aString

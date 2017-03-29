@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 pointSize: aNumber
 	self update: #pointSize with: aNumber
