@@ -1,7 +1,6 @@
 testing
 testUpdateUser
-	| count userPromise user |
-	count := self countUsers.
+	| userPromise user |
 	userPromise := self safePromise: (FRTUser load: 1 from: backend).
 	
 	(self expect: userPromise) to resolve.
