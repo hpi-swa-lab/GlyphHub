@@ -7,6 +7,7 @@ from sqlalchemy.orm import relationship
 from tag import tag_font_association_table
 from common import CommonColumns
 import config
+import hb_convert
 
 class Font(CommonColumns):
     __tablename__ = 'font'
@@ -22,6 +23,9 @@ class Font(CommonColumns):
     def isGlyphsFile(self):
         return self.path.endswith('.glyphs')
 
+    def isUFOFile(self):
+        return self.path.endswith('.ufo')
+
     def sourceFolderPath(self):
         """Path to the folder containing all the font sources"""
         return os.path.join(config.FONT_UPLOAD_FOLDER, str(self._id))
@@ -36,9 +40,6 @@ class Font(CommonColumns):
         if not os.path.exists(folder):
             os.makedirs(folder)
 
-    def isUFOFile(self):
-        return self.path.endswith('.ufo')
-
     def convertFontAfterUpload(self):
         typeParam = None
         if self.isGlyphsFile():
@@ -46,5 +47,8 @@ class Font(CommonColumns):
         if self.isUFOFile():
             typeParam = "-u"
 
-        subprocess.run(["fontmake", typeParam, self.path, "-o", "otf"],
+        subprocess.run(["fontmake", typeParam, self.path, "--no-production-names", "-o", "otf"],
                 cwd=self.sourceFolderPath())
+
+    def convert(self, unicodePoints):
+        return hb_convert.system(self.path, unicodePoints)

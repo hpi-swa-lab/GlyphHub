@@ -1,0 +1,143 @@
+#include <Python.h>
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
+#include <hb.h>
+#include <hb-ft.h>
+
+#define FONT_SIZE 36
+#define MARGIN (FONT_SIZE * .5)
+
+const char* ftGetErrorMessage(FT_Error err)
+{
+#undef __FTERRORS_H__
+#define FT_ERRORDEF( e, v, s  )  case e: return s;
+#define FT_ERROR_START_LIST     switch (err) {
+#define FT_ERROR_END_LIST       }
+#include FT_ERRORS_H
+return "(Unknown error)";
+}
+
+
+static PyObject *
+hb_convert_system(PyObject *self, PyObject *args)
+{
+	const char *fontfile;
+	const char *text;
+	if (!PyArg_ParseTuple(args, "ss", &fontfile, &text))
+		return NULL;
+
+	/* Initialize FreeType and create FreeType font face. */
+	FT_Library ft_library;
+	FT_Face ft_face;
+	FT_Error ft_error;
+
+	if ((ft_error = FT_Init_FreeType (&ft_library))) {
+		printf("Error initializing ft: %s\n", ftGetErrorMessage(ft_error));
+		return Py_None;
+	}
+	if ((ft_error = FT_New_Face (ft_library, fontfile, 0, &ft_face))) {
+		printf("Error loading font face: %s\n", ftGetErrorMessage(ft_error));
+		return Py_None;
+	}
+	if ((ft_error = FT_Set_Char_Size (ft_face, FONT_SIZE*64, FONT_SIZE*64, 0, 0))) {
+		printf("Error settings font size: %s\n", ftGetErrorMessage(ft_error));
+		return Py_None;
+	}
+
+	/* Create hb-ft font. */
+	hb_font_t *hb_font;
+	hb_font = hb_ft_font_create (ft_face, NULL);
+
+	/* Create hb-buffer and populate. */
+	hb_buffer_t *hb_buffer;
+	hb_buffer = hb_buffer_create ();
+	hb_buffer_add_utf8 (hb_buffer, text, -1, 0, -1);
+	hb_buffer_guess_segment_properties (hb_buffer);
+
+	/* Shape it! */
+	hb_shape (hb_font, hb_buffer, NULL, 0);
+
+	/* Get glyph information and positions out of the buffer. */
+	unsigned int len = hb_buffer_get_length (hb_buffer);
+	hb_glyph_info_t *info = hb_buffer_get_glyph_infos (hb_buffer, NULL);
+
+	/* Print them out as is. */
+	
+	PyObject *glyph_list = PyList_New(len);
+
+	for (unsigned int i = 0; i < len; i++)
+	{
+		PyObject *tuple, *glyphname, *cluster;
+
+		hb_codepoint_t gid   = info[i].codepoint;
+		unsigned int cluster_int = info[i].cluster;
+		char glyphname_string[32];
+		hb_font_get_glyph_name (hb_font, gid, glyphname_string, sizeof (glyphname_string));
+
+		tuple = PyTuple_New(2);
+		glyphname = PyUnicode_FromString(glyphname_string);
+		cluster = PyLong_FromUnsignedLong(cluster_int);
+
+		PyTuple_SetItem(tuple, 0, glyphname);
+		PyTuple_SetItem(tuple, 1, cluster);
+
+		PyList_SetItem(glyph_list, i, tuple);
+		}
+
+	hb_buffer_destroy (hb_buffer);
+	hb_font_destroy (hb_font);
+
+	FT_Done_Face (ft_face);
+	FT_Done_FreeType (ft_library);
+
+	return glyph_list;
+}
+
+static PyMethodDef HbConvertMethods[] = {
+    {"system",  hb_convert_system, METH_VARARGS,
+     "Execute a shell command."},
+    {NULL, NULL, 0, NULL}        /* Sentinel */
+};
+
+static struct PyModuleDef hb_convert_module = {
+	PyModuleDef_HEAD_INIT,
+	"hb_convert",   /* name of module */
+	NULL, /* module documentation, may be NULL */
+	-1,       /* size of per-interpreter state of the module,
+				 or -1 if the module keeps state in global variables. */
+	HbConvertMethods
+
+};
+PyMODINIT_FUNC
+PyInit_hb_convert(void)
+{
+    return PyModule_Create(&hb_convert_module);
+}
+
+int main(int argc, char *argv[])
+{
+    wchar_t *program = Py_DecodeLocale(argv[0], NULL);
+    if (program == NULL) {
+        fprintf(stderr, "Fatal error: cannot decode argv[0]\n");
+        exit(1);
+    }
+
+    /* Add a built-in module, before Py_Initialize */
+    PyImport_AppendInittab("hb_convert", PyInit_hb_convert);
+
+    /* Pass argv[0] to the Python interpreter */
+    Py_SetProgramName(program);
+
+    /* Initialize the Python interpreter.  Required. */
+    Py_Initialize();
+
+    /* Optionally import the module; alternatively,
+       import can be deferred until the embedded script
+       imports it. */
+    PyImport_ImportModule("hb_convert");
+
+    PyMem_RawFree(program);
+    return 0;
+}

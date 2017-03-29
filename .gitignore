@@ -1,3 +1,4 @@
 *.o
 *.pyc
 server/uploads
+server/cmodules/build

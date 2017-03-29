@@ -12,7 +12,6 @@ from eve_sqlalchemy import SQL
 import tables
 from views import register_views
 
-
 class TokenAuth2(TokenAuth):
     def check_auth(self, token, allowed_roles, resource, method):
         """
