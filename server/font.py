@@ -1,8 +1,12 @@
-from common import CommonColumns
+import subprocess
+import os
+
 from sqlalchemy import Column, Integer, ForeignKey, String, Text
 from sqlalchemy.orm import relationship
+
 from tag import tag_font_association_table
-import subprocess
+from common import CommonColumns
+import config
 
 class Font(CommonColumns):
     __tablename__ = 'font'
@@ -17,6 +21,20 @@ class Font(CommonColumns):
 
     def isGlyphsFile(self):
         return self.path.endswith('.glyphs')
+
+    def sourceFolderPath(self):
+        """Path to the folder containing all the font sources"""
+        return os.path.join(config.FONT_UPLOAD_FOLDER, str(self._id))
+
+    def sourcePath(self):
+        """Path to the original uploaded font file"""
+        return os.path.join(self.sourceFolderPath(), self.path)
+
+    def ensureSourceFolderExists(self):
+        """Ensure that the folder at sourceFolderPath exists"""
+        folder = self.sourceFolderPath()
+        if not os.path.exists(folder):
+            os.makedirs(folder)
 
     def isUFOFile(self):
         return self.path.endswith('.ufo')
