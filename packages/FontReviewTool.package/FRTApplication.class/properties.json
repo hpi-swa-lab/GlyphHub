@@ -1,0 +1,14 @@
+{
+	"category" : "FontReviewTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "al 3/29/2017 14:25",
+	"instvars" : [
+		"backend" ],
+	"name" : "FRTApplication",
+	"pools" : [
+		 ],
+	"super" : "BTApplication",
+	"type" : "normal" }

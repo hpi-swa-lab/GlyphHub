@@ -1,0 +1,16 @@
+{
+	"class" : {
+		"example1" : "TB 3/27/2017 16:23",
+		"example2" : "TB 3/27/2017 16:23" },
+	"instance" : {
+		"addLanguage:expertiseLevel:" : "al 2/15/2017 11:59",
+		"addTag:" : "al 2/15/2017 11:28",
+		"avatar" : "al 2/15/2017 11:27",
+		"avatar:" : "al 2/15/2017 11:27",
+		"avatarFromPath:" : "al 2/15/2017 11:44",
+		"initialize" : "al 2/15/2017 11:31",
+		"languages" : "al 2/15/2017 11:27",
+		"tagListForLanguages:" : "al 2/15/2017 12:11",
+		"tags" : "al 2/15/2017 11:27",
+		"username" : "al 2/15/2017 12:30",
+		"username:" : "al 2/15/2017 12:29" } }

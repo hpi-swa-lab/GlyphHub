@@ -1,0 +1,19 @@
+{
+	"category" : "FontReviewTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"text",
+		"image",
+		"isRead",
+		"dateTime",
+		"author",
+		"thread" ],
+	"name" : "FRTCommentOld",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

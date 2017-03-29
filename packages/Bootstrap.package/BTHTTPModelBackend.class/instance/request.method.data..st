@@ -18,6 +18,7 @@ request: path method: method data: anObject
 		
 		response := client sendRequest: request content: data readStream size: data size.
 		
+		self flag: #TODO. "make sure this doesnt completely kill everyting if we send back a non-json response"
 		(isJsonResponse := response content ~= '' and: [response isSuccess])
 			ifTrue: [data := Json readFrom: response content readStream].
 		

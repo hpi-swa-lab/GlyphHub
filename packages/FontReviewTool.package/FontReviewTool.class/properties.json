@@ -1,0 +1,14 @@
+{
+	"category" : "FontReviewTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "FontReviewTool",
+	"pools" : [
+		 ],
+	"super" : "UiContainer",
+	"type" : "normal" }

@@ -1,0 +1,19 @@
+{
+	"category" : "FontReviewTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "al 3/29/2017 14:30",
+	"instvars" : [
+		"loginFailedAlert",
+		"usernameField",
+		"passwordField",
+		"loginButton",
+		"loginBox",
+		"loader" ],
+	"name" : "FRTLoginPage",
+	"pools" : [
+		 ],
+	"super" : "BTApplicationPage",
+	"type" : "normal" }

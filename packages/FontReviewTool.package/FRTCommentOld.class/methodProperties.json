@@ -1,0 +1,20 @@
+{
+	"class" : {
+		"example1" : "TB 3/27/2017 17:09",
+		"example2" : "TB 3/27/2017 17:09" },
+	"instance" : {
+		"asMorph" : "TB 1/12/2017 10:56",
+		"asWidget" : "al 2/13/2017 15:03",
+		"author" : "lcj 1/12/2017 10:53",
+		"author:" : "lcj 1/12/2017 10:53",
+		"dateTime" : "lcj 1/9/2017 16:39",
+		"dateTime:" : "lcj 1/12/2017 10:34",
+		"image" : "lcj 1/9/2017 12:21",
+		"image:" : "lcj 1/12/2017 10:53",
+		"initialize" : "TB 1/12/2017 11:17",
+		"isRead" : "lcj 1/9/2017 16:34",
+		"isRead:" : "lcj 1/9/2017 16:34",
+		"text" : "lcj 1/9/2017 12:20",
+		"text:" : "lcj 1/9/2017 12:20",
+		"thread" : "al 2/15/2017 13:56",
+		"thread:" : "al 2/15/2017 13:57" } }

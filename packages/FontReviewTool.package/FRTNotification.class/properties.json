@@ -1,0 +1,16 @@
+{
+	"category" : "FontReviewTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"commentThread",
+		"image",
+		"text" ],
+	"name" : "FRTNotification",
+	"pools" : [
+		 ],
+	"super" : "UiContainer",
+	"type" : "normal" }

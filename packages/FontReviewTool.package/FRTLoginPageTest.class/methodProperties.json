@@ -1,0 +1,10 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"setUp" : "al 3/29/2017 16:15",
+		"tearDown" : "al 3/29/2017 15:23",
+		"testCorrectingWrongCredentials" : "al 3/29/2017 16:29",
+		"testNonExistingUser" : "al 3/29/2017 16:26",
+		"testRightCredentials" : "al 3/29/2017 16:26",
+		"testWrongPassword" : "al 3/29/2017 16:24" } }
