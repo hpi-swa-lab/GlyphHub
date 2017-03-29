@@ -57,6 +57,7 @@ def register_views(app):
 
         font.ensureSourceFolderExists()
         fontFile.save(font.sourcePath())
+        font.convertFontAfterUpload()
 
         session.commit()
 

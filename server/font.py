@@ -39,8 +39,12 @@ class Font(CommonColumns):
     def isUFOFile(self):
         return self.path.endswith('.ufo')
 
-    def convertFontForUpload(self):
+    def convertFontAfterUpload(self):
+        typeParam = None
         if self.isGlyphsFile():
-            subprocess.run(["fontmake", "-g", self.path, "-o", "otf"])
+            typeParam = "-g"
         if self.isUFOFile():
-            subprocess.run(["fontmake", "-u", self.path, "-o", "otf"])
+            typeParam = "-u"
+
+        subprocess.run(["fontmake", typeParam, self.path, "-o", "otf"],
+                cwd=self.sourceFolderPath())
