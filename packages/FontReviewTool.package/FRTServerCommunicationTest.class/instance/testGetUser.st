@@ -1,3 +1,6 @@
 as yet unclassified
 testGetUser
-	(self expect: (FRTUser load: 1 from: backend)) to resolve
+	| userPromise |
+	userPromise := FRTUser load: 1 from: backend.
+	(self expect: userPromise) to resolve.
+	(self expect: userPromise value class) to be: FRTUser
