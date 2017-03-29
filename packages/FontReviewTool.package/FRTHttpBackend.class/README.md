@@ -1,0 +1,1 @@
+A FRTHttpBackend is a subclass of a BTHTTPModelBackend adding various methods specific to our backend.

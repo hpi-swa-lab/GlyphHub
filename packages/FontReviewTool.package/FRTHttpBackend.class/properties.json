@@ -1,0 +1,14 @@
+{
+	"category" : "FontReviewTool-Models",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "TB 3/29/2017 18:04",
+	"instvars" : [
+		 ],
+	"name" : "FRTHttpBackend",
+	"pools" : [
+		 ],
+	"super" : "BTHTTPModelBackend",
+	"type" : "normal" }
