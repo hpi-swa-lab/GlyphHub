@@ -13,7 +13,7 @@ open
 				item := Json readFrom: req content readStream.
 				((item at: 'userName') = 'peter' and: [(item at: 'password') = 'geheim'])
 					ifTrue: [
-						req send200Response: '{"token":"sadasdasdasdasd"}']
+						req send200Response: '{"token":"sadasdasdasdasd","user_id":1}']
 					ifFalse: [
 						req sendResponse: (WebResponse newResponse protocol: 'HTTP/1.1' code: 401) content: '']]
 			ifFalse: [req sendResponse: (WebResponse newResponse protocol: 'HTTP/1.1' code: 401) content: '']].

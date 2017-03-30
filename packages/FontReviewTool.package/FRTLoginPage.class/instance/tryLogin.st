@@ -9,7 +9,7 @@ tryLogin
 		then: [:data |
 			self loginBox remove: self loginFailedAlert.
 			self topLevel openPage: BTApplicationPage new]
-		ifRejected: [ :error | self loginBox add: self loginFailedAlert at: 2. error ].
+		ifRejected: [ :error | self loginBox add: self loginFailedAlert at: 2 ].
 	
 	self
 		remove: self loader;

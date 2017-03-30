@@ -5,7 +5,7 @@ loadFrom: aTableNameString where: aSelector equals: aValue into: aClass populate
 	table := self camelCaseToUnderscore: aTableNameString.  
 	
 	aSelector == #id ifTrue: [
-		^(self request: table, '/', aValue method: 'GET' data: nil)
+		^(self request: table, '/', aValue, '?', (self populateString: aCollection) method: 'GET' data: nil)
 			then: [ :item | BTModelList with: (self jsonToModel: item modelClass: aClass) ]].
 	
 	whereEqualsDict := OrderedDictionary new
