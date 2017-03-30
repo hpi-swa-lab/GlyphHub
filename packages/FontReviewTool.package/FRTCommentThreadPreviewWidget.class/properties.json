@@ -4,9 +4,13 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "TB 3/30/2017 15:22",
 	"instvars" : [
-		"commentThread" ],
+		"commentThread",
+		"commentPreview",
+		"threadTitle",
+		"commentCount",
+		"author" ],
 	"name" : "FRTCommentThreadPreviewWidget",
 	"pools" : [
 		 ],

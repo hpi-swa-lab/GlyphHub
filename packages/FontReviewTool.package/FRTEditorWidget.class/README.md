@@ -1,0 +1,1 @@
+A FRTEditorWidget is a mockup containing a screenshot of Glyphs, overlayed by some widgets of ours.

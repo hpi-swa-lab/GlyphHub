@@ -9,7 +9,8 @@
 		"navigationStack",
 		"header",
 		"openPage",
-		"breadcrumbs" ],
+		"breadcrumbs",
+		"contentContainer" ],
 	"name" : "BTApplication",
 	"pools" : [
 		 ],

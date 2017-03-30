@@ -1,8 +1,8 @@
 {
 	"class" : {
-		"for:" : "al 2/13/2017 14:22" },
+		 },
 	"instance" : {
 		"comment" : "al 2/13/2017 14:31",
-		"comment:" : "TB 3/1/2017 10:17",
-		"initialize" : "al 2/13/2017 16:19",
+		"comment:" : "TB 3/30/2017 15:22",
+		"initialize" : "TB 3/30/2017 14:45",
 		"printDate:" : "al 2/13/2017 14:31" } }

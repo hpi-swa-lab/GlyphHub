@@ -1,8 +1,8 @@
-operations
+private
 jsonToModel: aDictionary modelClass: aClass
 	| instance |
 	instance := aClass new.
 	aClass instVarNames do: [ :name |
-		instance instVarNamed: name put: (aDictionary at: name asString)].
+		instance instVarNamed: name put: (aDictionary at: (self camelCaseToUnderscore: name asString))].
 	instance privateId: (aDictionary at: '_id').
 	^instance

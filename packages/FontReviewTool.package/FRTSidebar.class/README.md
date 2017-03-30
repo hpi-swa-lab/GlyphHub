@@ -1,0 +1,1 @@
+A FRTSidebar is the sidebar appearing on the left of a FRTTApplication.

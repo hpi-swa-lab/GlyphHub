@@ -1,0 +1,1 @@
+A FRTUploadPage display the page where a font may be uploaded.

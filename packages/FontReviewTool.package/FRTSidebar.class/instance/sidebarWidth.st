@@ -1,0 +1,3 @@
+constants
+sidebarWidth
+	^300

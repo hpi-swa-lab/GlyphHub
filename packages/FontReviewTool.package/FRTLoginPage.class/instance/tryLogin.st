@@ -1,4 +1,4 @@
-logic
+callback
 tryLogin
 	| promise |
 	self

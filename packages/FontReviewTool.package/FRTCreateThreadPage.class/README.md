@@ -1,0 +1,1 @@
+A FRTCreateThreadPage is the page where a user may create a new thread on a list of glyphs.

@@ -1,0 +1,1 @@
+A FRTThreadPage displays a thread and its comments.

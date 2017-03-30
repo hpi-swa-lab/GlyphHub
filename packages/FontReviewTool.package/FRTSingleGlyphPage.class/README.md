@@ -1,0 +1,1 @@
+A FRTSingleGlyphPage displays a single glyph and previews of its comment threads.

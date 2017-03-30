@@ -1,0 +1,14 @@
+{
+	"category" : "Bootstrap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "BTDivider",
+	"pools" : [
+		 ],
+	"super" : "BTWidget",
+	"type" : "normal" }
