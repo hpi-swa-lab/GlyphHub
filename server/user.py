@@ -51,8 +51,9 @@ class User(CommonColumns):
         return ''.join(random.sample(string.ascii_letters, 12))
 
     def encrypt(self, password):
-        """Encrypt password using hashlib and current salt.
-        """
+        "we currently store passwords as plain text"
+        #"""Encrypt password using hashlib and current salt.
+        #"""
         #return str(hashlib.sha1((password + str(self.salt)).encode('utf-8')).hexdigest())
         return password
 

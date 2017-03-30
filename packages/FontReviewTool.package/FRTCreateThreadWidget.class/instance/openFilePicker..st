@@ -1,3 +1,3 @@
-as yet unclassified
+navigation
 openFilePicker: anEvent
 	FileChooser example3

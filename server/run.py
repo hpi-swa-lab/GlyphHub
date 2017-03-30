@@ -12,7 +12,7 @@ from eve_sqlalchemy import SQL
 import tables
 from views import register_views
 
-class TokenAuth2(TokenAuth):
+class TokenAuth(TokenAuth):
     def check_auth(self, token, allowed_roles, resource, method):
         """
         First we are verifying if the token is valid.
@@ -28,7 +28,7 @@ class TokenAuth2(TokenAuth):
         else:
             return False
 
-app = Eve(data = SQL, auth=TokenAuth2)
+app = Eve(data = SQL, auth=TokenAuth)
 
 db = app.data.driver
 tables.Base.metadata.bind = db.engine

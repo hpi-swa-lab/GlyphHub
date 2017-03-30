@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 comment: aComment
 	
 	| textContentMorph metaInfoMorph badgeMorph|

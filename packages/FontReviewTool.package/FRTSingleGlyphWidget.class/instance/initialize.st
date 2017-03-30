@@ -1,4 +1,4 @@
-as yet unclassified
+initialize-release
 initialize
 	| headingArea  glyphArea glyphDetailArea glyphDetailList commentThreadArea glyphDetailButtonRow |
 	super initialize.

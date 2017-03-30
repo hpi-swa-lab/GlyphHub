@@ -2,9 +2,10 @@
 	"class" : {
 		 },
 	"instance" : {
+		"login:password:expectSuccessfulLogIn:" : "lcj 3/30/2017 11:31",
 		"setUp" : "al 3/29/2017 16:15",
 		"tearDown" : "al 3/29/2017 15:23",
-		"testCorrectingWrongCredentials" : "al 3/29/2017 16:29",
-		"testNonExistingUser" : "al 3/29/2017 16:26",
-		"testRightCredentials" : "al 3/29/2017 16:26",
-		"testWrongPassword" : "al 3/29/2017 16:24" } }
+		"testCorrectingWrongCredentials" : "lcj 3/30/2017 11:32",
+		"testNonExistingUser" : "lcj 3/30/2017 11:32",
+		"testRightCredentials" : "lcj 3/30/2017 11:33",
+		"testWrongPassword" : "lcj 3/30/2017 11:33" } }

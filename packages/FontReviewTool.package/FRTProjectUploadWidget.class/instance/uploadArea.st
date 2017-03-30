@@ -1,4 +1,4 @@
-as yet unclassified
+ui
 uploadArea
 	^BTPage row
 		add: (BTPage column

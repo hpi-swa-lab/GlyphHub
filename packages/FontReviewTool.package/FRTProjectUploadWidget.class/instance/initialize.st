@@ -1,4 +1,4 @@
-as yet unclassified
+initialize-release
 initialize
 	^ BTTopLevel new
 		add: (BTLabel heading: 'Upload new Project');

@@ -1,4 +1,4 @@
-as yet unclassified
+navigation
 openSketchEditor: anEvent
 	| preview |
 	preview := (BTLabel text: '<span size="100000">', self text, '</span>')

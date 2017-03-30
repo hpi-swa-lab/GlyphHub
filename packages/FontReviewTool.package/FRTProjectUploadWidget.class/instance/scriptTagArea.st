@@ -1,4 +1,4 @@
-as yet unclassified
+ui
 scriptTagArea
 	| tagArea labeledTextArea |
 	tagArea := BTPage row spacing: 0.

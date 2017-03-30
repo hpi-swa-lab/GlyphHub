@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 commentThread: aCommentThread
 	| tagsMorph content |	
 	commentThread := aCommentThread.
