@@ -1,6 +1,9 @@
 {
 	"class" : {
+		"associations" : "TB 3/30/2017 17:39",
 		"modelName" : "TB 3/30/2017 13:41" },
 	"instance" : {
 		"familyName" : "TB 3/27/2017 17:18",
-		"familyName:" : "TB 3/27/2017 17:18" } }
+		"familyName:" : "TB 3/27/2017 17:18",
+		"fonts" : "TB 3/30/2017 17:35",
+		"fonts:" : "TB 3/30/2017 17:38" } }

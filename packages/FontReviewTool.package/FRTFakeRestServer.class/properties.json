@@ -8,7 +8,9 @@
 	"instvars" : [
 		"server",
 		"userTable",
-		"fontTable" ],
+		"fontTable",
+		"familyReply",
+		"commentReply" ],
 	"name" : "FRTFakeRestServer",
 	"pools" : [
 		 ],
