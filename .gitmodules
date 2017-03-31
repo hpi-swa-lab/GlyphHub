@@ -6,4 +6,4 @@
 	url = https://github.com/FortAwesome/Font-Awesome.git
 [submodule "martel"]
 	path = martel
-	url = git@github.com:typeoff/martel.git
+	url = https://github.com/typeoff/martel.git
