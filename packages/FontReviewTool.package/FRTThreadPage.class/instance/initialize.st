@@ -3,7 +3,9 @@ initialize
 	super initialize.
 	
 	title := BTLabel new.
-	tagArea := BTPage row.
+	tagArea := (BTPage row)
+		spacing: BTWidget spacing / 3;
+		yourself.
 	commentArea := BTPage column.
 	
 	self

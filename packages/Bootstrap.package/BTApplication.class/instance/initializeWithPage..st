@@ -18,6 +18,7 @@ initializeWithPage: aPage
 	
 	contentContainer := BTPage row
 		expand: true;
+		spacing: 0;
 		add: aPage.
 	
 	self initialize.

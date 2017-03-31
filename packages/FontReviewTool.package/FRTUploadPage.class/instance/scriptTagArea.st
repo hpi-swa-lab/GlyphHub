@@ -1,7 +1,7 @@
 initialize-release
 scriptTagArea
-	| tagArea labeledTextArea |
-	tagArea := BTPage row spacing: 0.
+	| tagList labeledTextArea |
+	tagList := BTTagList new.
 	
 	labeledTextArea := ((BTTextAreaWithLabel
 		text: 'Tag scripts and languages'
@@ -10,10 +10,10 @@ scriptTagArea
 	
 	labeledTextArea textArea suggestionsList: self scriptList.
 	labeledTextArea textArea when: #confirmed evaluate: [ :text |
-		tagArea add: (BTBadge text: text type: #info).
+		tagList addTag: text.
 		labeledTextArea textArea clear ].
 	
 	^ BTPage new
 		spacing: BTWidget spacing / 4;
 		add: (labeledTextArea
-			add: tagArea)
+			add: tagList)

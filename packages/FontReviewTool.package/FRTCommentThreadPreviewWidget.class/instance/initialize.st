@@ -5,6 +5,7 @@ initialize
 	commentPreview := BTLabel new.
 	threadTitle := BTLabel new.
 	commentCount := BTButton new.
+	author := BTLabel new.
 	
 	self
 		withLayout;
