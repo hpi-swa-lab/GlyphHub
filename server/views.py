@@ -2,7 +2,6 @@ import json
 import os
 import base64
 import re
-import fnmatch
 
 from flask import request, jsonify, current_app
 from werkzeug.exceptions import Unauthorized
