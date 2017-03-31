@@ -51,20 +51,23 @@ class Family(CommonColumns):
         session = app.data.driver.session
         session.commit()
 
-        ufo_path = os.path.join(self.sourceFolderPath(), 'master_ufo')
-        otf_path = os.path.join(self.sourceFolderPath(), 'master_otf')
+        src_ufo_path = os.path.join(self.sourceFolderPath(), 'master_ufo')
+        src_otf_path = os.path.join(self.sourceFolderPath(), 'master_otf')
         
-        for root, dirs, files in os.walk(ufo_path):
+        for root, dirs, files in os.walk(src_ufo_path):
             for name in dirs:
                 if name.endswith('.ufo'):
                     font = Font(font_name=name[:-4], family_id=self._id, author_id=user._id)
                     self.fonts.append(font)
                     session.commit()
-                    shutil.move(os.path.join(ufo_path, name), os.path.join(font.sourceFolderPath(), 'ufo'))
-                    print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx')
-                    print(font.convert("abc"))
-                    """TODO: uncomment when OTF files are generated"""
-                    #shutil.move(os.path.join(otf_path, name[:-4], '.otf'), os.path.join(font.sourceFolderPath(), 'otf'))
+
+                    otf_filename = name[:-4] + '.otf'
+                    dest_ufo_path = os.path.join(font.sourceFolderPath(), 'ufo')
+                    dest_otf_path = os.path.join(font.sourceFolderPath(), 'otf')
+
+                    shutil.move(os.path.join(src_ufo_path, name), dest_ufo_path)
+                    os.makedirs(dest_otf_path)
+                    shutil.move(os.path.join(src_otf_path, otf_filename), os.path.join(dest_otf_path,  otf_filename))
                     
-        shutil.rmtree(ufo_path)
-        shutil.rmtree(otf_path)
+        shutil.rmtree(src_ufo_path)
+        shutil.rmtree(src_otf_path)
