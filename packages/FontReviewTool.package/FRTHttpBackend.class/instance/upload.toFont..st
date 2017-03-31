@@ -17,6 +17,7 @@ upload: aFileStream toFont: anIdNumber
 			crlf;
 			nextPutAll: '--'; nextPutAll: boundary; nextPutAll: '--' ].
 	
+	"not sending JSON here because flask can ideally handle the multipart/form-data format"
 	^self
 		request: 'font/', anIdNumber, '/upload'
 		method: 'POST'
