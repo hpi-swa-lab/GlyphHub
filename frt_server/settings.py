@@ -1,4 +1,4 @@
-from tables import *
+from frt_server.tables import *
 from eve.utils import config
 
 ID_FIELD = '_id'
@@ -6,8 +6,8 @@ config.ID_FIELD = ID_FIELD
 
 DEBUG = True
 SQLALCHEMY_TRACK_MODIFICATIONS = False
-SQLALCHEMY_RECORD_QUERIES = DEBUG
-SQLALCHEMY_ECHO = DEBUG
+SQLALCHEMY_RECORD_QUERIES = False
+SQLALCHEMY_ECHO = False
 SQLALCHEMY_DATABASE_URI = 'sqlite://'
 RESOURCE_METHODS = ['GET', 'POST']
 ITEM_METHODS = ['GET', 'PUT', 'DELETE']

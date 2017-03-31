@@ -1,5 +1,11 @@
+*.so
 *.o
 *.pyc
-server/uploads
-server/cmodules/build
-server/src
+frt_server/uploads
+frt_server/src
+
+.eggs
+*.egg
+*.egg-info
+src
+build

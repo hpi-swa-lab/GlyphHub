@@ -4,10 +4,10 @@ import os
 from sqlalchemy import Column, Integer, ForeignKey, String, Text
 from sqlalchemy.orm import relationship
 
-from tag import tag_font_association_table
-from common import CommonColumns
-import config
-import hb_convert
+from frt_server.tag import tag_font_association_table
+from frt_server.common import CommonColumns
+import frt_server.config
+import frt_server.hb_convert
 
 class Font(CommonColumns):
     __tablename__ = 'font'
@@ -22,7 +22,7 @@ class Font(CommonColumns):
 
     def sourceFolderPath(self):
         """Path to the folder containing all the font sources"""
-        return os.path.join(config.FONT_UPLOAD_FOLDER, str(self._id))
+        return os.path.join(frt_server.config.FONT_UPLOAD_FOLDER, str(self._id))
 
     def ensureSourceFolderExists(self):
         """Ensure that the folder at sourceFolderPath exists"""

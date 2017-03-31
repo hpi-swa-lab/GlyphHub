@@ -1,4 +1,4 @@
-from tables import *
+from frt_server.tables import *
 
 fira = Font(font_name='Fira Sans Regular', family_id=1, author_id=1, path='../martel/DevanagariMasters_still_in_development/Martel Devanagari-Regular.ufo')
 fira.tags.append(Tag(text='#pretty', type='opinion'))

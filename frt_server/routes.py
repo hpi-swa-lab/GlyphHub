@@ -8,7 +8,7 @@ from flask import request, jsonify, current_app
 from werkzeug.exceptions import Unauthorized
 from eve.auth import requires_auth
 
-from tables import User, Font, Family
+from frt_server.tables import User, Font, Family
 
 def register_views(app):
     @app.route('/login', methods=['POST'])
@@ -18,6 +18,9 @@ def register_views(app):
         password matches - token is generated and returned.
         """
         data = request.get_json()
+        if not data:
+            return jsonify({'error': 'Missing credentials'}), 400
+
         user_name = data.get('userName')
         password = data.get('password')
 
@@ -56,6 +59,9 @@ def register_views(app):
     def convertUnicode(fontId):
         session = app.data.driver.session
         font = session.query(Font).get(fontId)
+        if not font:
+            return jsonify({'error': 'Associated font does not exist'}), 400
+
         data = request.get_json()
         unicodeText = data.get('unicode')
         if not unicodeText:

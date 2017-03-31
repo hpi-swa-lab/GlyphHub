@@ -1,7 +1,8 @@
-from common import CommonColumns
 from sqlalchemy import Column, ForeignKey, String, Text
 from sqlalchemy.orm import relationship
 from sqlalchemy.orm import column_property, relationship, validates
+
+from frt_server.common import CommonColumns
 
 import hashlib
 import string

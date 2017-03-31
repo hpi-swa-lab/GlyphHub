@@ -1,9 +1,10 @@
 from sqlalchemy import Column, String
 from sqlalchemy.orm import relationship
-from common import CommonColumns
-from font import Font
 
-import config
+from frt_server.common import CommonColumns
+from frt_server.font import Font
+import frt_server.config
+
 import os
 import subprocess
 import shutil
@@ -23,7 +24,7 @@ class Family(CommonColumns):
 
     def sourceFolderPath(self):
         """Path to the folder containing all the family sources"""
-        return os.path.join(config.FAMILY_UPLOAD_FOLDER, str(self._id))
+        return os.path.join(frt_server.config.FAMILY_UPLOAD_FOLDER, str(self._id))
 
     def ensureSourceFolderExists(self):
         """Ensure that the folder at sourceFolderPath exists"""
@@ -32,6 +33,7 @@ class Family(CommonColumns):
             os.makedirs(folder)
 
     def convertFontAfterUpload(self, filename):
+        """invoke fontmake in our source folder. no cleanup performed after"""
         typeParam = None
         if self.isGlyphsFile(filename):
             typeParam = "-g"
@@ -40,34 +42,38 @@ class Family(CommonColumns):
 
         subprocess.run(["fontmake", typeParam, filename, "--no-production-names", "-o", "otf"],
                 cwd=self.sourceFolderPath())
-    
+
     def processFile(self, familyFile, app, user):
+        """convert a glyphs file to ufo and otf, create all associated Font entities"""
         sanitized_filename = secure_filename(familyFile.filename)
-        
+
         self.ensureSourceFolderExists()
         familyFile.save(os.path.join(self.sourceFolderPath(), sanitized_filename))
         self.convertFontAfterUpload(sanitized_filename)
-        
+
         session = app.data.driver.session
         session.commit()
 
-        src_ufo_path = os.path.join(self.sourceFolderPath(), 'master_ufo')
-        src_otf_path = os.path.join(self.sourceFolderPath(), 'master_otf')
-        
-        for root, dirs, files in os.walk(src_ufo_path):
-            for name in dirs:
-                if name.endswith('.ufo'):
-                    font = Font(font_name=name[:-4], family_id=self._id, author_id=user._id)
-                    self.fonts.append(font)
-                    session.commit()
+        sourceUfoPath = os.path.join(self.sourceFolderPath(), 'master_ufo')
+        sourceOtfPath = os.path.join(self.sourceFolderPath(), 'master_otf')
 
-                    otf_filename = name[:-4] + '.otf'
-                    dest_ufo_path = os.path.join(font.sourceFolderPath(), 'ufo')
-                    dest_otf_path = os.path.join(font.sourceFolderPath(), 'otf')
+        for _, directories, _ in os.walk(sourceUfoPath):
+            for fileName in directories:
+                if not fileName.endswith('.ufo'):
+                    continue
 
-                    shutil.move(os.path.join(src_ufo_path, name), dest_ufo_path)
-                    os.makedirs(dest_otf_path)
-                    shutil.move(os.path.join(src_otf_path, otf_filename), os.path.join(dest_otf_path,  otf_filename))
-                    
-        shutil.rmtree(src_ufo_path)
-        shutil.rmtree(src_otf_path)
+                fontName = fileName[:-4]
+                font = Font(font_name=fontName, family_id=self._id, author_id=user._id)
+                self.fonts.append(font)
+                session.commit()
+
+                otfFilename = fontName + '.otf'
+                targetUfoPath = os.path.join(font.sourceFolderPath(), 'ufo')
+                targetOtfPath = os.path.join(font.sourceFolderPath(), 'otf')
+
+                shutil.move(os.path.join(sourceUfoPath, fileName), targetUfoPath)
+                os.makedirs(targetOtfPath)
+                shutil.move(os.path.join(sourceOtfPath, otfFilename), os.path.join(targetOtfPath, otfFilename))
+
+        shutil.rmtree(sourceUfoPath)
+        shutil.rmtree(sourceOtfPath)

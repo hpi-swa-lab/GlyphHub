@@ -4,11 +4,11 @@ from eve_sqlalchemy.decorators import registerSchema
 
 import enum
 
-from user import User
-from font import Font
-from tag import Tag, tag_sample_text_association_table, tag_thread_association_table
-from family import Family
-from common import CommonColumns, Base
+from frt_server.user import User
+from frt_server.font import Font
+from frt_server.tag import Tag, tag_sample_text_association_table, tag_thread_association_table
+from frt_server.family import Family
+from frt_server.common import CommonColumns, Base
 
 class SampleText(CommonColumns):
     __tablename__ = 'sample_text'

@@ -1,4 +1,4 @@
-from common import CommonColumns, Base
+from frt_server.common import CommonColumns, Base
 from sqlalchemy import Table, Column, Integer, ForeignKey, String
 from sqlalchemy.orm import relationship
 
