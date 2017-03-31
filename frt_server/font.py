@@ -35,4 +35,4 @@ class Font(CommonColumns):
         for root, dirs, files in os.walk(otf_path):
             for name in files:
                 if name.endswith('.otf'):
-                    return hb_convert.system(os.path.join(otf_path, name), unicodePoints)
+                    return hb_convert.to_glyphnames(os.path.join(otf_path, name), unicodePoints)

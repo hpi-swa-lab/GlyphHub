@@ -21,7 +21,7 @@ return "(Unknown error)";
 
 
 static PyObject *
-hb_convert_system(PyObject *self, PyObject *args)
+hb_convert_to_glyphnames(PyObject *self, PyObject *args)
 {
 	const char *fontfile;
 	const char *text;
@@ -63,12 +63,11 @@ hb_convert_system(PyObject *self, PyObject *args)
 	unsigned int len = hb_buffer_get_length (hb_buffer);
 	hb_glyph_info_t *info = hb_buffer_get_glyph_infos (hb_buffer, NULL);
 
-	/* Print them out as is. */
-	
+	/* Put glyphs and clusters into list */
+
 	PyObject *glyph_list = PyList_New(len);
 
-	for (unsigned int i = 0; i < len; i++)
-	{
+	for (unsigned int i = 0; i < len; i++) {
 		PyObject *tuple, *glyphname, *cluster;
 
 		hb_codepoint_t gid   = info[i].codepoint;
@@ -84,7 +83,7 @@ hb_convert_system(PyObject *self, PyObject *args)
 		PyTuple_SetItem(tuple, 1, cluster);
 
 		PyList_SetItem(glyph_list, i, tuple);
-		}
+	}
 
 	hb_buffer_destroy (hb_buffer);
 	hb_font_destroy (hb_font);
@@ -95,12 +94,14 @@ hb_convert_system(PyObject *self, PyObject *args)
 	return glyph_list;
 }
 
+/* definition of python methods, consisting of {name, functionality, interpreter flags, documentation string} */
 static PyMethodDef HbConvertMethods[] = {
-    {"system",  hb_convert_system, METH_VARARGS,
+    {"to_glyphnames",  hb_convert_to_glyphnames, METH_VARARGS,
      "Execute a shell command."},
     {NULL, NULL, 0, NULL}        /* Sentinel */
 };
 
+/* definition of our python module, named "hb_convert" */
 static struct PyModuleDef hb_convert_module = {
 	PyModuleDef_HEAD_INIT,
 	"hb_convert",   /* name of module */
@@ -108,7 +109,6 @@ static struct PyModuleDef hb_convert_module = {
 	-1,       /* size of per-interpreter state of the module,
 				 or -1 if the module keeps state in global variables. */
 	HbConvertMethods
-
 };
 PyMODINIT_FUNC
 PyInit_hb_convert(void)

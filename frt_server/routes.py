@@ -2,7 +2,6 @@ import json
 import os
 import base64
 import re
-import fnmatch
 
 from flask import request, jsonify, current_app
 from werkzeug.exceptions import Unauthorized
@@ -66,6 +65,7 @@ def register_views(app):
         unicodeText = data.get('unicode')
         if not unicodeText:
             return jsonify({'error': 'No unicode text provided'}), 400
+        if not font:
+            return jsonify({'error': 'Associated font does not exist'}), 400
 
         return json.dumps(font.convert(unicodeText)), 200
-
