@@ -51,3 +51,15 @@ def register_views(app):
 
         family.processFile(familyFile, app, current_user)
         return '', 200
+
+    @app.route('/font/<fontId>/convert', methods=['POST'])
+    def convertUnicode(fontId):
+        session = app.data.driver.session
+        font = session.query(Font).get(fontId)
+        data = request.get_json()
+        unicodeText = data.get('unicode')
+        if not unicodeText:
+            return jsonify({'error': 'No unicode text provided'}), 400
+
+        return json.dumps(font.convert(unicodeText)), 200
+
