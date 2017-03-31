@@ -7,7 +7,7 @@ save: aModel to: aString
 			(tables at: aString) add: (self serialize: aModel) ]
 		ifFalse: [
 			(tables at: aString)
-				at: ((tables at: aString) findFirst: [ :entity | (entity at: 'id') = aModel id])
-				put: (self serialize: aModel) ].
+				removeAllSuchThat: [ :entity | (entity at: 'id') ~= aModel id ];
+				add: (self serialize: aModel) ].
 	
 	^BTPromise unit: aModel

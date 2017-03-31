@@ -1,6 +1,8 @@
 navigation
 go: aNumber
 	| new |
+	stack ifEmpty: [ ^nil ].
+	
 	new := current + aNumber clampLow: 1 high: stack size.
 	new ~= current ifTrue: [ self current: new ].
 	

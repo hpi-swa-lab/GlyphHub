@@ -8,9 +8,10 @@
 	"instvars" : [
 		"querying",
 		"field",
-		"owner" ],
+		"owner",
+		"hasRemovedElements" ],
 	"name" : "BTModelList",
 	"pools" : [
 		 ],
-	"super" : "OrderedCollection",
+	"super" : "Set",
 	"type" : "normal" }

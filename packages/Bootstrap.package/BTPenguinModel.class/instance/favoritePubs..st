@@ -1,3 +1,3 @@
 as yet unclassified
-privateFavoritePubs: aModelList
+favoritePubs: aModelList
 	favoritePubs := aModelList

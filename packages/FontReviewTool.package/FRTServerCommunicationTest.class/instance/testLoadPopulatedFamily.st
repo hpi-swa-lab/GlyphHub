@@ -10,4 +10,4 @@ testLoadPopulatedFamily
 	(self expect: family class) to be: FRTFamily.
 	(self expect: family fonts) to not be: nil.
 	(self expect: family fonts size) to equal: 2.
-	(self expect: family fonts first class) to be: FRTFont
+	(self expect: family fonts anyOne class) to be: FRTFont

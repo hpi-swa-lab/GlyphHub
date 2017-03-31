@@ -5,4 +5,4 @@ load: aNumber populate: aCollection from: aBackend
 		where: #id
 		equals: aNumber
 		into: self
-		populate: aCollection) then: [ :models | models first ]
+		populate: aCollection) then: [ :models | models anyOne ]

@@ -23,7 +23,7 @@ join: aModelsList class: aClass populate: aCollection
 			model
 				instVarNamed: field
 				put: (association third == #single
-					ifTrue: [ children value ifEmpty: [nil] ifNotEmptyDo: #first ]
+					ifTrue: [ children value ifEmpty: [nil] ifNotEmptyDo: #anyOne ]
 					ifFalse: [
 						children value
 							field: field;
