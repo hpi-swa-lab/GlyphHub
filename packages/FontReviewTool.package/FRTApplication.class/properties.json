@@ -6,7 +6,9 @@
 		 ],
 	"commentStamp" : "al 3/29/2017 14:25",
 	"instvars" : [
-		"backend" ],
+		"backend",
+		"sidebar",
+		"user" ],
 	"name" : "FRTApplication",
 	"pools" : [
 		 ],

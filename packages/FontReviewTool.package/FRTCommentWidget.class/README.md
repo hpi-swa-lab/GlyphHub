@@ -1,0 +1,1 @@
+A FRTCommentWidget displays a single comment along with its author and date.

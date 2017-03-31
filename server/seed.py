@@ -14,6 +14,7 @@ entities = [
     User(user_name='Tom', password='safepwissafe'),
     Family(family_name='Fira'),
     fira,
+    Font(font_name='Fira Sans Bold', family_id=1, author_id=1, path='../martel/DevanagariMasters_still_in_development/Martel Devanagari-Regular.ufo'),
     thread1,
     Codepoint(unicode_value=0x0041, point_size=12.5, features='liga', thread_id=1, font_id=1),
     Codepoint(unicode_value=0x0061, point_size=12.5, features='liga', thread_id=1, font_id=1),

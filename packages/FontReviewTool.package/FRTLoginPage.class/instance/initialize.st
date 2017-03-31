@@ -10,7 +10,7 @@ initialize
 		usernameField: (BTTextArea placeholder: 'Username');
 		passwordField: (BTPasswordArea placeholder: 'Password');
 		loginBox: ((BTPage new vertical: true; expand: true; align: #(center center))
-			add: (BTLabel heading: 'Login to the FONT_WIKI');
+			add: (BTLabel heading: 'Login to the Font Review Tool');
 			add: self usernameField;
 			add: self passwordField;
 			add: self loginButton;

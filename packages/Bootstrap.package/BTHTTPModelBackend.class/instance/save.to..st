@@ -1,7 +1,11 @@
 operations
 save: aModel to: aTableNameString
+	| table |
+	table := self camelCaseToUnderscore: aTableNameString.
 	^ (self
-		request: (aModel id == 0 ifTrue: [aTableNameString] ifFalse: [aTableNameString, '/', aModel id])
+		request: (aModel id == 0
+			ifTrue: [table]
+			ifFalse: [table, '/', aModel id])
 		method: (aModel id == 0 ifTrue: ['POST'] ifFalse: ['PUT'])
 		data: aModel dirtyFieldsAndValues)
 		

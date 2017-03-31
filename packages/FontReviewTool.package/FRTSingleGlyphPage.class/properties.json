@@ -1,0 +1,15 @@
+{
+	"category" : "FontReviewTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "TB 3/30/2017 15:20",
+	"instvars" : [
+		"glyphName",
+		"glyph" ],
+	"name" : "FRTSingleGlyphPage",
+	"pools" : [
+		 ],
+	"super" : "BTApplicationPage",
+	"type" : "normal" }

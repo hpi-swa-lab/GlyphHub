@@ -14,10 +14,10 @@ initialize
 		ignoreLayout: true;
 		withPadding.
 	
-	{FRTCommentThreadOld example1. FRTCommentThreadOld example2. FRTCommentThreadOld example3} do: [ :thread | | link |
+	"{FRTCommentThreadOld example1. FRTCommentThreadOld example2. FRTCommentThreadOld example3} do: [ :thread | | link |
 		link := (BTLink text: thread title) when: #clickedNoEvent evaluate: [ thread asWidget openInWorld ].
 		link label ellipsize: #end.
-		overlay add: link ].
+		overlay add: link ]."
 	
 	overlay
 		add: BTWidget spacer;

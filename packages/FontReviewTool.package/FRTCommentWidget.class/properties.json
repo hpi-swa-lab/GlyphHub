@@ -4,9 +4,12 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "TB 3/30/2017 15:21",
 	"instvars" : [
-		"comment" ],
+		"comment",
+		"image",
+		"commentText",
+		"metaInfo" ],
 	"name" : "FRTCommentWidget",
 	"pools" : [
 		 ],

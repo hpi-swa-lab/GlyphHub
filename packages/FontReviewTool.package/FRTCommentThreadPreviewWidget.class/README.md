@@ -1,0 +1,1 @@
+A FRTCommentThreadPreviewWidget displays the first comment and meta information of a thread.

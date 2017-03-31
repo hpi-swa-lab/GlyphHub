@@ -27,7 +27,7 @@ def register_views(app):
             users = app.data.driver.session.query(User).filter_by(user_name = user_name).all()
             if users and users[0].check_password(password):
                 token = users[0].generate_auth_token()
-                return jsonify({'token': token.decode('ascii')})
+                return jsonify({'token': token.decode('ascii'), 'user_id': users[0]._id})
         raise Unauthorized('Wrong username and/or password.')
 
     @app.route('/family/<familyId>/upload', methods=['POST'])

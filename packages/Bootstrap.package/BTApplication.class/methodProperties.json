@@ -1,14 +1,16 @@
 {
 	"class" : {
-		"firstPage:" : "TB 3/13/2017 12:52",
+		"firstPage:" : "TB 3/30/2017 13:19",
 		"new" : "TB 3/13/2017 12:52" },
 	"instance" : {
 		"app" : "TB 2/10/2017 16:01",
 		"app:" : "TB 2/10/2017 16:19",
+		"contentContainer" : "TB 3/30/2017 13:17",
 		"header" : "TB 3/13/2017 14:30",
-		"initializeWithPage:" : "al 3/13/2017 15:51",
+		"initializeWithPage:" : "JH 3/30/2017 15:58",
 		"navigationStack" : "TB 3/13/2017 12:42",
 		"openPage" : "TB 3/13/2017 12:50",
 		"openPage:" : "TB 3/13/2017 14:27",
-		"privateOpenPage:" : "al 3/13/2017 16:03",
+		"privateOpenPage:" : "TB 3/30/2017 13:17",
+		"searchbarWidth" : "TB 3/30/2017 14:56",
 		"updateBreadcrumbs" : "al 3/13/2017 16:00" } }

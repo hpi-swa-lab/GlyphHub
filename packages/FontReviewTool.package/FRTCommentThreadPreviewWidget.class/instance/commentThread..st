@@ -1,17 +1,8 @@
 accessing
 commentThread: aCommentThread
-	| headerArea |
 	commentThread := aCommentThread.
 	
-	self removeAllMorphs.
-	headerArea := BTPage row.
-	headerArea
-		add: ((BTLabel bold: aCommentThread title));
-		add: ((BTLabel secondary: 'by ', aCommentThread author username)) oppositeTo: (BTButton label: aCommentThread comments size asString,' comments').
-	
-	self
-		withLayout;
-		vertical: true;
-		padding: BTWidget spacing / 2;
-		add: headerArea;
-		add: (BTLabel text: commentThread comments first text)
+	commentPreview text: commentThread comments first text.
+	threadTitle bold: aCommentThread title.
+	author secondary: 'by ', aCommentThread author userName.
+	commentCount text: aCommentThread comments size asString, ' comments'

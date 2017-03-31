@@ -1,6 +1,6 @@
 private
 privateOpenPage: aPage
-	self
+	self contentContainer
 		remove: openPage;
 		add: aPage.
 	
