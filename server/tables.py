@@ -18,16 +18,17 @@ class SampleText(CommonColumns):
     author = relationship(User)
     tags = relationship('Tag', secondary=tag_sample_text_association_table)
 
+thread_glyph_association_table = Table('thread_glyph_association', Base.metadata,
+    Column('thread_id', Integer, ForeignKey('thread._id')),
+    Column('glyph_id', Integer, ForeignKey('glyph._id')))
+
 class Glyph(CommonColumns):
     __tablename__ = 'glyph'
     glyph_name = Column(String(300))
     version_hash = Column(String(40))
     font_id = Column(Integer, ForeignKey('font._id'))
     font = relationship('Font', back_populates='glyphs')
-
-thread_glyph_association_table = Table('thread_glyph_association', Base.metadata,
-    Column('thread_id', Integer, ForeignKey('thread._id')),
-    Column('glyph_id', Integer, ForeignKey('glyph._id')))
+    threads = relationship('Thread', secondary=thread_glyph_association_table)
 
 class Thread(CommonColumns):
     __tablename__ = 'thread'
