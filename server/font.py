@@ -20,19 +20,9 @@ class Font(CommonColumns):
     author = relationship('User', back_populates='fonts')
     path = Column(String(300))
 
-    def isGlyphsFile(self):
-        return self.path.endswith('.glyphs')
-
-    def isUFOFile(self):
-        return self.path.endswith('.ufo')
-
     def sourceFolderPath(self):
         """Path to the folder containing all the font sources"""
         return os.path.join(config.FONT_UPLOAD_FOLDER, str(self._id))
-
-    def sourcePath(self):
-        """Path to the original uploaded font file"""
-        return os.path.join(self.sourceFolderPath(), self.path)
 
     def ensureSourceFolderExists(self):
         """Ensure that the folder at sourceFolderPath exists"""
@@ -40,15 +30,9 @@ class Font(CommonColumns):
         if not os.path.exists(folder):
             os.makedirs(folder)
 
-    def convertFontAfterUpload(self):
-        typeParam = None
-        if self.isGlyphsFile():
-            typeParam = "-g"
-        if self.isUFOFile():
-            typeParam = "-u"
-
-        subprocess.run(["fontmake", typeParam, self.path, "--no-production-names", "-o", "otf"],
-                cwd=self.sourceFolderPath())
-
     def convert(self, unicodePoints):
-        return hb_convert.system(self.path, unicodePoints)
+        otf_path = os.path.join(self.sourceFolderPath(), 'otf')
+        for root, dirs, files in os.walk(otf_path):
+            for name in files:
+                if name.endswith('.otf'):
+                    return hb_convert.system(os.path.join(otf_path, name), unicodePoints)

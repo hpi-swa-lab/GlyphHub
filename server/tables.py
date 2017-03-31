@@ -7,6 +7,7 @@ import enum
 from user import User
 from font import Font
 from tag import Tag, tag_sample_text_association_table, tag_thread_association_table
+from family import Family
 from common import CommonColumns, Base
 
 class SampleText(CommonColumns):
@@ -16,11 +17,6 @@ class SampleText(CommonColumns):
     author_id = Column(Integer, ForeignKey('user._id'))
     author = relationship(User)
     tags = relationship('Tag', secondary=tag_sample_text_association_table)
-
-class Family(CommonColumns):
-    __tablename__ = 'family'
-    family_name = Column(String(300))
-    fonts = relationship('Font', back_populates='family')
 
 class Glyph(CommonColumns):
     __tablename__ = 'glyph'

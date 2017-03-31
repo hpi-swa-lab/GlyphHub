@@ -24,6 +24,7 @@ class TokenAuth(TokenAuth):
             if not users:
                 return False
             user = users[0]
+            self.set_request_auth_value(user)
             return user.isAuthorized(allowed_roles)
         else:
             return False

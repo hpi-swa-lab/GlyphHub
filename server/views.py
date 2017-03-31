@@ -2,14 +2,13 @@ import json
 import os
 import base64
 import re
+import fnmatch
 
-from flask import request, jsonify
+from flask import request, jsonify, current_app
 from werkzeug.exceptions import Unauthorized
-from werkzeug.utils import secure_filename
 from eve.auth import requires_auth
 
-from tables import User, Font
-
+from tables import User, Font, Family
 
 def register_views(app):
     @app.route('/login', methods=['POST'])
@@ -31,35 +30,24 @@ def register_views(app):
                 return jsonify({'token': token.decode('ascii')})
         raise Unauthorized('Wrong username and/or password.')
 
-    @app.route('/font/<fontId>/upload', methods=['POST'])
+    @app.route('/family/<familyId>/upload', methods=['POST'])
     @requires_auth('font')
-    def uploadFont(fontId):
-        """Upload handler for fonts
-        """
-        # TODO verify that only the font's author can upload new versions
-        # ideally this would happen in our TokenAuth based on the resource
+    def uploadFamily(familyId):
+        current_user = current_app.auth.get_request_auth_value()
         if 'file' not in request.files:
             return jsonify({'error': 'No file given'}), 400
-
-        fontFile = request.files['file']
-        if fontFile.filename == '':
+   
+        familyFile = request.files['file']
+        if familyFile.filename == '':
             return jsonify({'error': 'Invalid file given'}), 400
 
-        if not re.match(r"^.*(\.ufo\.zip|\.glyphs)$", fontFile.filename):
+        if not re.match(r"^.*(\.ufo\.zip|\.glyphs)$", familyFile.filename):
             return jsonify({'error': 'Invalid file format'}), 400
 
         session = app.data.driver.session
-        font = session.query(Font).get(fontId)
-        if not font:
-            return jsonify({'error': 'Associated font does not exist'}), 400
+        family = session.query(Family).get(familyId)
+        if not family:
+            return jsonify({'error': 'Associated family does not exist'}), 400
 
-        font.path = secure_filename(fontFile.filename)
-
-        font.ensureSourceFolderExists()
-        fontFile.save(font.sourcePath())
-        font.convertFontAfterUpload()
-
-        session.commit()
-
+        family.processFile(familyFile, app, current_user)
         return '', 200
-
