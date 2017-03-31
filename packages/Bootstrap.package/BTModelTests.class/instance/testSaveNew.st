@@ -1,9 +1,11 @@
 as yet unclassified
 testSaveNew
-	| model |
-	model := (BTPenguinModel new
+	| modelPromise |
+	modelPromise := self safePromise: (BTPenguinModel new
 		name: 'Rico';
-		saveTo: backend) value.
+		saveTo: backend).
 	
-	(self expect: model isDirty) to be: false.
-	(self expect: model id) to not equal: 0
+	(self expect: modelPromise) to resolve.
+	
+	(self expect: modelPromise value isDirty) to be: false.
+	(self expect: modelPromise value id) to not equal: 0

@@ -9,10 +9,10 @@ testAssociations1toN
 		add: BTEggModel new;
 		add: BTEggModel new.
 	
-	(self expect: penguin eggs first parent) to be: penguin.
+	(self expect: penguin eggs anyOne parent) to be: penguin.
 	
 	self safePromise: (penguin saveTo: backend).
 	
 	penguin := (BTPenguinModel load: 1 populate: #(eggs) from: backend) value.
 	(self expect: penguin eggs size) to be: 2.
-	(self expect: penguin eggs first parent id) to equal: penguin id
+	(self expect: penguin eggs anyOne parent id) to equal: penguin id

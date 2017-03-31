@@ -4,7 +4,8 @@ all: aCollection
 	| grouped pending result |
 	pending := aCollection size.
 	grouped := self new.
-	result := aCollection copy.
+	result := Array new: pending.
+	aCollection ifEmpty: [ ^self unit: result ].
 	
 	aCollection doWithIndex: [ :promise :index |
 		promise

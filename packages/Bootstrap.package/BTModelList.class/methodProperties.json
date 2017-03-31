@@ -2,13 +2,15 @@
 	"class" : {
 		"forField:owner:" : "TB 3/13/2017 17:10" },
 	"instance" : {
-		"add:" : "TB 3/13/2017 17:10",
+		"add:" : "TB 3/31/2017 11:11",
+		"collect:" : "TB 3/31/2017 10:28",
 		"field" : "TB 3/13/2017 17:04",
 		"field:" : "TB 3/13/2017 17:04",
 		"isBTModelList" : "TB 3/13/2017 15:23",
-		"isDirty" : "TB 3/13/2017 19:23",
+		"isDirty" : "TB 3/31/2017 10:47",
 		"isValid" : "TB 3/13/2017 15:36",
 		"owner" : "TB 3/13/2017 17:11",
 		"owner:" : "TB 3/13/2017 17:11",
 		"querying" : "TB 3/13/2017 16:56",
-		"saveTo:" : "TB 3/29/2017 11:54" } }
+		"remove:ifAbsent:" : "TB 3/31/2017 10:50",
+		"saveTo:" : "TB 3/31/2017 11:47" } }
