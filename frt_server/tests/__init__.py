@@ -3,10 +3,13 @@ import unittest
 import tempfile
 import eve.tests
 import json
-from io import StringIO
+import shutil
 from eve_sqlalchemy import SQL
 from eve_sqlalchemy.validation import ValidatorSQL
 
+os.environ['FRT_TESTING'] = '1'
+
+import frt_server.config
 from frt_server.run import create_app, setup_database
 
 class TestMinimal(eve.tests.TestMinimal):
@@ -21,12 +24,13 @@ class TestMinimal(eve.tests.TestMinimal):
         self.domain = self.app.config['DOMAIN']
 
     def tearDown(self):
+        if os.path.exists(frt_server.config.UPLOAD_FOLDER):
+            shutil.rmtree(frt_server.config.UPLOAD_FOLDER)
         del self.app
         self.dropDB()
 
     def setupDB(self):
         self.connection = self.app.data.driver
-        self.connection.session.execute('pragma foreign_keys=on')
         setup_database(self.app)
 
     def dropDB(self):
