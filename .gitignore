@@ -3,6 +3,7 @@
 *.pyc
 frt_server/uploads
 frt_server/src
+.cache
 
 .eggs
 *.egg

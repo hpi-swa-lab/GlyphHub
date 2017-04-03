@@ -6,6 +6,7 @@ from frt_server.font import Font
 import frt_server.config
 
 import os
+import glob
 import subprocess
 import shutil
 import zipfile
@@ -48,45 +49,68 @@ class Family(CommonColumns):
             temporary_filename = filename[:-4]
             type_parameter = "-u"
 
-        print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx')
-        print(temporary_filename)
         subprocess.run(['fontmake', type_parameter, temporary_filename, '--no-production-names', '-o', 'otf', '--verbose', 'CRITICAL'],
                 cwd=self.source_folder_path())
 
     def process_file(self, family_file, app, user):
         """convert a glyphs file to ufo and otf, create all associated Font entities"""
-        sanitized_filename = secure_filename(family_file.filename)
-        print(sanitized_filename)
+        session = app.data.driver.session
+        sanitized_filename = secure_filename(os.path.basename(family_file.filename))
 
         self.ensure_source_folder_exists()
         family_file.save(os.path.join(self.source_folder_path(), sanitized_filename))
         self.convert_font_after_upload(sanitized_filename)
 
-        session = app.data.driver.session
-        session.commit()
+        if self.is_ufo_file(sanitized_filename):
+            return self.process_ufo_file(sanitized_filename[:-4], app, user)
 
         source_ufo_path = os.path.join(self.source_folder_path(), 'master_ufo')
         source_otf_path = os.path.join(self.source_folder_path(), 'master_otf')
+        found_folder = False
 
-        for _, _, files in os.walk(source_otf_path):
-            for filename in files:
-                if not filename.endswith('.otf'):
-                    continue
+        # find all otf files and move them to their specific font folders
+        # we get:
+        # font/7/ufo/myFont.ufo
+        # font/7/otf/myFont.otf
+        otf_filenames = [os.path.basename(filename) for filename in glob.glob(source_otf_path + '/*.otf')]
+        for otf_filename in otf_filenames:
+            found_folder = True
+            font_name = otf_filename[:-4]
+            font = Font(font_name=font_name, author_id=user._id)
+            self.fonts.append(font)
+            session.commit()
 
-                font_name = filename[:-4]
-                font = Font(font_name=font_name, family_id=self._id, author_id=user._id)
-                self.fonts.append(font)
-                session.commit()
+            font.ensure_folder_exists()
 
-                ufo_filename = font_name + '.ufo'
-                target_ufo_path = os.path.join(font.source_folder_path(), 'ufo')
-                target_otf_path = os.path.join(font.source_folder_path(), 'otf')
+            ufo_filename = font_name + '.ufo'
 
-                if self.is_glyphs_file(sanitized_filename):
-                    shutil.move(os.path.join(source_ufo_path, ufo_filename), target_ufo_path)
-                os.makedirs(target_otf_path)
-                shutil.move(os.path.join(source_otf_path, filename), os.path.join(target_otf_path, filename))
+            shutil.move(os.path.join(source_ufo_path, ufo_filename), os.path.join(font.ufo_folder_path(), ufo_filename))
+            shutil.move(os.path.join(source_otf_path, otf_filename), font.otf_folder_path())
 
-        if self.is_glyphs_file(sanitized_filename):
-            shutil.rmtree(source_ufo_path)
+        if not found_folder:
+            raise FileNotFoundError('No otf files were generated')
+
+        shutil.rmtree(source_ufo_path)
         shutil.rmtree(source_otf_path)
+
+    def process_ufo_file(self, source_ufo_path, app, user):
+        session = app.data.driver.session
+
+        source_otf_path = os.path.join(self.source_folder_path(), 'master_otf')
+        otf_filenames = [os.path.basename(filename) for filename in glob.glob(source_otf_path + '/*.otf')]
+        if len(otf_filenames) != 1:
+            raise FileNotFoundError('No otf files were generated')
+
+        otf_filename = otf_filenames[0]
+        font_name = otf_filename[:-4]
+        font_name = otf_filename[:-4]
+
+        font = Font(font_name=font_name, author_id=user._id)
+        self.fonts.append(font)
+        session.commit()
+
+        font.ensure_folder_exists()
+
+        shutil.move(os.path.join(self.source_folder_path(), source_ufo_path), os.path.join(font.ufo_folder_path(), source_ufo_path))
+        shutil.move(os.path.join(source_otf_path, otf_filename), os.path.join(font.otf_folder_path(), otf_filename))
+

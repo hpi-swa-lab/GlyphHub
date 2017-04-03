@@ -10,19 +10,40 @@ class UploadTestCase(TestMinimal):
         super(UploadTestCase, self).setUp()
         self.login_as('Eva', 'eveisevil')
 
+        family = Family(family_name='Riblon')
+
+        session = self.connection.session
+        session.add(family)
+        session.commit()
+
+        self.family_id = family._id
+
+    def get_test_family(self):
+        return self.connection.session.query(Family).options(joinedload(Family.fonts)).get(self.family_id)
+
     def test_upload_glyphs(self):
-        FAMILY_ID = 1
-        data, status = self.upload_file('/family/{}/upload'.format(FAMILY_ID), 'file', 'testFiles/RiblonSans/RiblonSans.glyphs')
+        data, status = self.upload_file('/family/{}/upload'.format(self.family_id), 'file', 'testFiles/RiblonSans/RiblonSans.glyphs')
         self.assertEqual(status, 200)
 
-        family = self.connection.session.query(Family).options(joinedload(Family.fonts)).get(FAMILY_ID)
-        self.assertTrue(os.path.exists(family.sourceFolderPath()))
+        family = self.get_test_family()
+        self.assertTrue(os.path.exists(family.source_folder_path()))
 
-        #for font in family.fonts:
-            #self.assertTrue(os.path.exists(font.sourceFolderPath()))
+        for font in family.fonts:
+            self.assertTrue(os.path.exists(font.folder_path()))
+            self.assertTrue(os.path.exists(font.ufo_folder_path()))
+            self.assertTrue(os.path.exists(font.otf_folder_path()))
+            self.assertTrue(os.path.exists(os.path.join(font.ufo_folder_path(), 'newFont-Regular.ufo')))
+            self.assertTrue(os.path.exists(os.path.join(font.otf_folder_path(), 'newFont-Regular.otf')))
 
     def test_upload_ufo(self):
-        data, status = self.upload_file('family/1/upload', 'file', 'testFiles/Martel-Bold.ufo.zip')
+        data, status = self.upload_file('family/{}/upload'.format(self.family_id), 'file', 'testFiles/RiblonSans/RiblonSans.ufo.zip')
         self.assertEqual(status, 200)
 
-        self.assertTrue(os.path.exists('frt_server/uploads/font/2/ufo/'))
+        family = self.get_test_family()
+        for font in family.fonts:
+            self.assertTrue(os.path.exists(font.folder_path()))
+            self.assertTrue(os.path.exists(font.ufo_folder_path()))
+            self.assertTrue(os.path.exists(font.otf_folder_path()))
+            self.assertTrue(os.path.exists(os.path.join(font.ufo_folder_path(), 'RiblonSans.ufo')))
+            self.assertTrue(os.path.exists(os.path.join(font.otf_folder_path(), 'newFont-Regular.otf')))
+
