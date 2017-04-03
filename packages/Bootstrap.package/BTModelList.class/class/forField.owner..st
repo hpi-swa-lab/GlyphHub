@@ -1,6 +1,7 @@
 instance creation
 forField: aField owner: aModel
-	^self new
+
+	^ self new
 		field: aField;
 		owner: aModel;
 		yourself

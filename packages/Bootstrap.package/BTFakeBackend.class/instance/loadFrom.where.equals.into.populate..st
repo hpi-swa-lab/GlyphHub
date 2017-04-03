@@ -1,4 +1,4 @@
-as yet unclassified
+operations
 loadFrom: aTableNameString where: aSelector equals: aValue into: aClass populate: aCollection
 	| models |
 	models := ((self getTable: aTableNameString)

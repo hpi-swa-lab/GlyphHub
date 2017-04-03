@@ -1,6 +1,7 @@
 as yet unclassified
 testAssociations1toN
 	| penguin |
+	
 	penguin := (BTPenguinModel load: 1 populate: #(eggs) from: backend) value.
 	
 	(self expect: penguin eggs) to beEmpty.
@@ -8,7 +9,7 @@ testAssociations1toN
 	penguin eggs
 		add: BTEggModel new;
 		add: BTEggModel new.
-	
+
 	(self expect: penguin eggs anyOne parent) to be: penguin.
 	
 	self safePromise: (penguin saveTo: backend).

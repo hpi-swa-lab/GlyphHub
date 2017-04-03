@@ -1,3 +1,4 @@
-as yet unclassified
+accessing
 getTable: aString
-	^(tables at: aString) as: BTModelList
+
+	^ (tables at: aString) as: BTModelList
