@@ -17,7 +17,7 @@ class TestMinimal(eve.tests.TestMinimal):
         self.this_directory = os.path.dirname(os.path.realpath(__file__))
 
         self.app = create_app()
-        self.setupDB()
+        self.setupDatabase()
         self.test_client = self.app.test_client()
         self.cachedApiToken = None
 
@@ -26,14 +26,14 @@ class TestMinimal(eve.tests.TestMinimal):
     def tearDown(self):
         if os.path.exists(frt_server.config.UPLOAD_FOLDER):
             shutil.rmtree(frt_server.config.UPLOAD_FOLDER)
+        self.dropDatabase()
         del self.app
-        self.dropDB()
 
-    def setupDB(self):
+    def setupDatabase(self):
         self.connection = self.app.data.driver
         setup_database(self.app)
 
-    def dropDB(self):
+    def dropDatabase(self):
         self.connection.session.remove()
         self.connection.drop_all()
 

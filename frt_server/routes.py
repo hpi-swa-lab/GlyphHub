@@ -51,7 +51,7 @@ def register_routes(app):
         if not family:
             return jsonify({'error': 'Associated family does not exist'}), 400
 
-        family.process_file(familyFile, app, current_user)
+        family.process_file(familyFile, current_user)
         return '', 200
 
     @app.route('/font/<fontId>/convert', methods=['POST'])
