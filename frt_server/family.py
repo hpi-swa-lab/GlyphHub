@@ -40,7 +40,7 @@ class Family(CommonColumns):
         if self.isUFOFile(filename):
             typeParam = "-u"
 
-        subprocess.run(["fontmake", typeParam, filename, "--no-production-names", "-o", "otf"],
+        subprocess.run(['fontmake', typeParam, filename, '--no-production-names', '-o', 'otf', '--verbose', 'CRITICAL'],
                 cwd=self.sourceFolderPath())
 
     def processFile(self, familyFile, app, user):
