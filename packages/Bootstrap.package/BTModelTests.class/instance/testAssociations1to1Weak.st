@@ -16,4 +16,4 @@ testAssociations1to1Weak
 	penguin saveTo: backend.
 	
 	(self expect: penguin isCreated) to be: true.
-	(self expect: beak isCreated) to be: true
+	(self expect: newBeak isCreated) to be: true

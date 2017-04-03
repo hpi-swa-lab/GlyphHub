@@ -1,12 +1,13 @@
 as yet unclassified
-join: aModelsList class: aClass populate: aCollection
+join: aModelList class: aClass populate: aCollection
+
 	| associations populate |
 	associations := aClass associations.
 	populate := aCollection == #all
 		ifTrue: [ associations keys ]
 		ifFalse: [ aCollection ].
 	
-	aModelsList do: [ :model |
+	aModelList do: [ :model |
 		populate do: [ :field | | current association children |
 			current := model instVarNamed: field.
 			association := associations at: field.

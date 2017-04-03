@@ -1,3 +1,4 @@
 accessing
 querying
-	^querying ifNil: [false]
+
+	^ querying ifNil: [false]
