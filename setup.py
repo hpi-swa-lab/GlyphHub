@@ -1,6 +1,6 @@
 from setuptools import setup, Extension
 
-hb_convert = Extension('hb_convert',
+hb_convert = Extension('frt_server.hb_convert',
               define_macros = [('MAJOR_VERSION', '0'), ('MINOR_VERSION', '1')],
               include_dirs = ['/usr/include', '/usr/include/harfbuzz', '/usr/include/freetype2'],
               libraries = ['freetype', 'harfbuzz'],

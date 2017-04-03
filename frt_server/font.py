@@ -7,7 +7,7 @@ from sqlalchemy.orm import relationship
 from frt_server.tag import tag_font_association_table
 from frt_server.common import CommonColumns
 import frt_server.config
-import frt_server.hb_convert
+import hb_convert
 
 class Font(CommonColumns):
     __tablename__ = 'font'

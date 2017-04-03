@@ -9,7 +9,7 @@ from eve.auth import requires_auth
 
 from frt_server.tables import User, Font, Family
 
-def register_views(app):
+def register_routes(app):
     @app.route('/login', methods=['POST'])
     def login(**kwargs):
         """Simple login view that expects to have username

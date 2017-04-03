@@ -7,7 +7,7 @@ from eve_sqlalchemy import SQL
 import copy
 
 import frt_server.tables
-from frt_server.routes import register_views
+from frt_server.routes import register_routes
 
 class TokenAuth(TokenAuth):
     app = None
@@ -44,6 +44,6 @@ def setup_database(app, populate_sample_data=True):
 def create_app():
     app = Eve(data = SQL, auth=TokenAuth)
     app.auth.app = app
-    register_views(app)
+    register_routes(app)
     return app
 
