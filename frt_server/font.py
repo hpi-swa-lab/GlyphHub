@@ -20,11 +20,11 @@ class Font(CommonColumns):
     author = relationship('User', back_populates='fonts')
     path = Column(String(300))
 
-    def sourceFolderPath(self):
+    def source_folder_path(self):
         """Path to the folder containing all the font sources"""
         return os.path.join(frt_server.config.FONT_UPLOAD_FOLDER, str(self._id))
 
-    def ensureSourceFolderExists(self):
+    def ensure_source_folder_exists(self):
         """Ensure that the folder at sourceFolderPath exists"""
         folder = self.sourceFolderPath()
         if not os.path.exists(folder):
