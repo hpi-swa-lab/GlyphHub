@@ -1,10 +1,11 @@
 operations
 login: aUserNameString password: aPasswordString
 	" returns a promise that fulfills on login and returns the userId of the authenticated user "
-	^(self
+	
+	^ (self
 		request: '/login'
 		method: 'POST'
-		data: ({'userName' -> aUserNameString. 'password' -> aPasswordString} as: Dictionary))
+		data: ({'username' -> aUserNameString. 'password' -> aPasswordString} as: Dictionary))
 		then: [ :response |
 			self apiToken: (response at: 'token').
 			response at: 'user_id' ]

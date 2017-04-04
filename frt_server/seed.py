@@ -18,9 +18,9 @@ entities = [
     family1,
     User(username='Tom', password='safepwissafe'),
     thread1,
-    Codepoint(unicode_value=0x0041, point_size=12.5, features='liga', thread_id=1, font_id=1),
-    Codepoint(unicode_value=0x0061, point_size=12.5, features='liga', thread_id=1, font_id=1),
-    Codepoint(unicode_value=0x0073, point_size=12.5, features='liga', thread_id=1, font_id=1),
+    Codepoint(unicode_value=0x0041, point_size=12.5, features='liga', thread_id=1, font_id=1, index=0),
+    Codepoint(unicode_value=0x0061, point_size=12.5, features='liga', thread_id=1, font_id=1, index=1),
+    Codepoint(unicode_value=0x0073, point_size=12.5, features='liga', thread_id=1, font_id=1, index=2),
     Comment(text='why would anyone comment on aas', author_id=2, thread_id=1),
     Comment(text='because.', author_id=1, thread_id=1),
     SampleText(title='Evil Wizards', text='Mad wizards brew evil jack with horses', author_id=2)

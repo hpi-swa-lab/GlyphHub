@@ -1,5 +1,6 @@
 accessing
 commentThread: aCommentThread
+
 	commentThread := aCommentThread.
 	
 	commentPreview text: commentThread comments first text.

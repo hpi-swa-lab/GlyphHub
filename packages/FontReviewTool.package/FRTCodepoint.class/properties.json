@@ -9,7 +9,8 @@
 		"unicodeValue",
 		"features",
 		"pointSize",
-		"font" ],
+		"font",
+		"index" ],
 	"name" : "FRTCodepoint",
 	"pools" : [
 		 ],

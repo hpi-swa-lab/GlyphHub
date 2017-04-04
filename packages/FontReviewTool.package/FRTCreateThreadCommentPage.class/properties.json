@@ -6,8 +6,13 @@
 		 ],
 	"commentStamp" : "TB 3/30/2017 15:21",
 	"instvars" : [
-		 ],
-	"name" : "FRTCreateThreadPage",
+		"thread",
+		"title",
+		"commentText",
+		"titleContainer",
+		"glyphLinkContainer",
+		"preview" ],
+	"name" : "FRTCreateThreadCommentPage",
 	"pools" : [
 		 ],
 	"super" : "BTApplicationPage",

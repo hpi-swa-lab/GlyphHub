@@ -1,3 +1,4 @@
 accessing
 font
-	^font
+
+	^ font

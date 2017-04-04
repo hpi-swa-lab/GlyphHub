@@ -1,5 +1,6 @@
 callbacks
 openSketchEditor: anEvent
+
 	| preview |
 	preview := (BTLabel text: '<span size="100000">', self text, '</span>')
 		align: #(center center);

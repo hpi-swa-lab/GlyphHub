@@ -1,14 +1,21 @@
 initialize-release
 initialize
-	| preview |
+
 	super initialize.
 	
-	preview := (BTLabel text: '<span size="60000">', self text, '</span>')
-		align: #(center center).
-	
+	preview := BTLabel new
+		align: #(center center);
+		styleAttributes: {'size' -> '60000'}.
+	titleContainer := BTPage new.
+	glyphLinkContainer := BTPage column.
+	commentText := BTTextArea new
+		multiLine: true;
+		placeholder: 'Comment ...';
+		minRows: 2.
+
 	self
 		add: (BTPage row
-			add: (BTLabel subHeading: 'Create Comment')
+			add: titleContainer
 			oppositeTo: (BTButtonGroup new
 				add: ((BTButton icon: #paint_brush)
 					when: #clicked send: #openSketchEditor: to: self);
@@ -17,9 +24,6 @@ initialize
 				add: ((BTButton icon: #camera)
 					when: #clicked send: #openFilePicker: to: self)));
 		add: preview;
-		addAll: (self text asArray collect: [ :char | (BTCheckboxWithLabel label: 'Link comment with ', char asString) checked: true ]);
-		add: (BTTextArea new
-			multiLine: true;
-			placeholder: 'Comment ...';
-			minRows: 2);
+		add: glyphLinkContainer;
+		add: commentText;
 		add: ((BTButton text: 'Save') colorType: #primary; align: #(end start))

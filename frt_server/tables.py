@@ -41,6 +41,7 @@ class Thread(CommonColumns):
 
 class Codepoint(CommonColumns):
     __tablename__ = 'codepoint'
+    index = Column(Integer)
     unicode_value = Column(Integer)
     features = Column(Text)
     point_size = Column(Float)

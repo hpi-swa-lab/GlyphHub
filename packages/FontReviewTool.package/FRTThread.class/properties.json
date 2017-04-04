@@ -6,7 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"title" ],
+		"title",
+		"glyphs",
+		"codepoints" ],
 	"name" : "FRTThread",
 	"pools" : [
 		 ],
