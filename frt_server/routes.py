@@ -67,7 +67,5 @@ def register_routes(app):
             return jsonify({'error': 'No unicode text provided'}), 400
         if len(unicode_text) < 1:
             return jsonify([])
-        if not font:
-            return jsonify({'error': 'Associated font does not exist'}), 400
 
         return jsonify(font.convert(unicode_text))
