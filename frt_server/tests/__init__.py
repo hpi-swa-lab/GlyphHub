@@ -17,25 +17,27 @@ class TestMinimal(eve.tests.TestMinimal):
     def setUp(self):
         self.clean_upload_folder()
         self.addCleanup(self.clean_upload_folder)
+        self.addCleanup(self.drop_database)
 
         self.this_directory = os.path.dirname(os.path.realpath(__file__))
 
         self.app = create_app()
-        self.setupDatabase()
+        self.setup_database()
+        self.app.app_context().push()
         self.test_client = self.app.test_client()
         self.cachedApiToken = None
 
         self.domain = self.app.config['DOMAIN']
 
     def tearDown(self):
-        self.dropDatabase()
+        self.drop_database()
         del self.app
 
     def clean_upload_folder(self):
         if os.path.exists(frt_server.config.UPLOAD_FOLDER):
             shutil.rmtree(frt_server.config.UPLOAD_FOLDER)
 
-    def setupDatabase(self):
+    def setup_database(self):
         self.connection = self.app.data.driver
         # we get our own minimal subset of sample data for speed
         setup_database(self.app, populate_sample_data=False)
@@ -44,7 +46,7 @@ class TestMinimal(eve.tests.TestMinimal):
         self.connection.session.add(eva)
         self.connection.session.commit()
 
-    def dropDatabase(self):
+    def drop_database(self):
         self.connection.session.remove()
         self.connection.drop_all()
 
