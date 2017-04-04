@@ -34,6 +34,11 @@ class Family(CommonColumns):
         if not os.path.exists(folder):
             os.makedirs(folder)
 
+    def clean_folders(self):
+        """Delete all our associated folders"""
+        if os.path.exists(self.source_folder_path()):
+            shutil.rmtree(self.source_folder_path())
+
     def unzip_file(self, filename):
         with zipfile.ZipFile(os.path.join(self.source_folder_path(), filename), "r") as ufo_zip_file:
             ufo_zip_file.extractall(self.source_folder_path())
@@ -55,7 +60,11 @@ class Family(CommonColumns):
     def create_uploaded_font(self, font_name, ufo_filename, otf_filename, user):
         font = Font(font_name=font_name, author_id=user._id)
         self.fonts.append(font)
-        inspect(self).session.commit()
+        session = inspect(self).session
+        session.commit()
+        session.refresh(font)
+
+        font.clean_folders()
         font.ensure_folder_exists()
         return font
 

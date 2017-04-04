@@ -40,6 +40,11 @@ class Font(CommonColumns):
             if not os.path.exists(path):
                 os.makedirs(path)
 
+    def clean_folders(self):
+        """Delete all our associated folders"""
+        if os.path.exists(self.folder_path()):
+            shutil.rmtree(self.folder_path())
+
     def convert(self, unicode_points):
         otf_path = self.otf_folder_path()
         otf_files = glob.glob(otf_path + '/*.otf')

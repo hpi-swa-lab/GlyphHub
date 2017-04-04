@@ -37,7 +37,6 @@ def setup_database(app, populate_sample_data=True):
 
     if populate_sample_data and db.session.query(frt_server.tables.User).count() < 1:
         from frt_server.seed import entities, post_create
-        from sqlalchemy import inspect
         new_entities = copy.deepcopy(entities)
 
         # register new entities
