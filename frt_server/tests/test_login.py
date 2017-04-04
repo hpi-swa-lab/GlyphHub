@@ -11,6 +11,6 @@ class LoginTestCase(TestMinimal):
 
     def test_get_font_resource(self):
         self.login_as('Eva', 'eveisevil')
-        response = self.get('/font')
-        self.assertEqual(response[1], 200)
+        _, status = self.get('/font')
+        self.assertEqual(status, 200)
 

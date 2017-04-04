@@ -11,6 +11,7 @@ os.environ['FRT_TESTING'] = '1'
 
 import frt_server.config
 from frt_server.run import create_app, setup_database
+from frt_server.tables import User
 
 class TestMinimal(eve.tests.TestMinimal):
     def setUp(self):
@@ -31,7 +32,12 @@ class TestMinimal(eve.tests.TestMinimal):
 
     def setupDatabase(self):
         self.connection = self.app.data.driver
-        setup_database(self.app)
+        # we get our own minimal subset of sample data for speed
+        setup_database(self.app, populate_sample_data=False)
+
+        eva = User(user_name='Eva', password='eveisevil')
+        self.connection.session.add(eva)
+        self.connection.session.commit()
 
     def dropDatabase(self):
         self.connection.session.remove()

@@ -47,3 +47,16 @@ class UploadTestCase(TestMinimal):
             self.assertTrue(os.path.exists(os.path.join(font.ufo_folder_path(), 'RiblonSans.ufo')))
             self.assertTrue(os.path.exists(os.path.join(font.otf_folder_path(), 'newFont-Regular.otf')))
 
+    #def test_upload_overrides_glyphs(self):
+    #    for _ in range(2):
+    #        _, status = self.upload_file('family/{}/upload'.format(self.family_id),
+    #                'file',
+    #                'testFiles/RiblonSans/RiblonSans.glyphs')
+    #        self.assert200(status)
+
+    #def test_upload_overrides_ufo(self):
+    #    for _ in range(2):
+    #        _, status = self.upload_file('family/{}/upload'.format(self.family_id),
+    #                'file',
+    #                'testFiles/RiblonSans/RiblonSans.ufo.zip')
+    #        self.assert200(status)
