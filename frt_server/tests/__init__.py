@@ -15,6 +15,9 @@ from frt_server.tables import User
 
 class TestMinimal(eve.tests.TestMinimal):
     def setUp(self):
+        self.clean_upload_folder()
+        self.addCleanup(self.clean_upload_folder)
+
         self.this_directory = os.path.dirname(os.path.realpath(__file__))
 
         self.app = create_app()
@@ -25,10 +28,12 @@ class TestMinimal(eve.tests.TestMinimal):
         self.domain = self.app.config['DOMAIN']
 
     def tearDown(self):
-        if os.path.exists(frt_server.config.UPLOAD_FOLDER):
-            shutil.rmtree(frt_server.config.UPLOAD_FOLDER)
         self.dropDatabase()
         del self.app
+
+    def clean_upload_folder(self):
+        if os.path.exists(frt_server.config.UPLOAD_FOLDER):
+            shutil.rmtree(frt_server.config.UPLOAD_FOLDER)
 
     def setupDatabase(self):
         self.connection = self.app.data.driver
