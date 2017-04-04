@@ -10,8 +10,8 @@ thread1.glyphs.append(Glyph(glyph_name='a', version_hash='9c7075ca420f30aedb27c4
 thread1.glyphs.append(Glyph(glyph_name='s', version_hash='9c7075ca420f30aedb27c48102466313fa4d12c8', font_id=1))
 
 entities = [
-    User(user_name='Eva', password='eveisevil'),
-    User(user_name='Tom', password='safepwissafe'),
+    User(username='Eva', password='eveisevil'),
+    User(username='Tom', password='safepwissafe'),
     Family(family_name='Fira'),
     fira,
     Font(font_name='Fira Sans Bold', family_id=1, author_id=1, path='../martel/DevanagariMasters_still_in_development/Martel Devanagari-Regular.ufo'),

@@ -15,7 +15,7 @@ SECRET_KEY = 'this-is-my-super-secret-key'
 
 class User(CommonColumns):
     __tablename__ = 'user'
-    user_name = Column(String(120))
+    username = Column(String(120))
     password = Column(String(120))
     fonts = relationship('Font', back_populates='author')
 
@@ -23,7 +23,7 @@ class User(CommonColumns):
         """Generates token for given expiration
         and user login."""
         s = Serializer(SECRET_KEY, expires_in=expiration)
-        return s.dumps({'user_name': self.user_name })
+        return s.dumps({'username': self.username })
 
     @staticmethod
     def verify_auth_token(token):
@@ -37,9 +37,9 @@ class User(CommonColumns):
             return None # valid token, but expired
         except BadSignature:
             return None # invalid token
-        return data['user_name']
+        return data['username']
 
-    def isAuthorized(self, role_names):
+    def is_authorized(self, role_names):
         """We do not use roles at the moment, but in case they are added, they should be validated here"""
         #"""Checks if user is related to given role_names.
         #"""
