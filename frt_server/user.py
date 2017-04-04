@@ -17,6 +17,7 @@ class User(CommonColumns):
     __tablename__ = 'user'
     username = Column(String(120))
     password = Column(String(120))
+    salt = Column(String(120))
     fonts = relationship('Font', back_populates='author')
 
     def generate_auth_token(self, expiration=24*60*60):
@@ -52,11 +53,9 @@ class User(CommonColumns):
         return ''.join(random.sample(string.ascii_letters, 12))
 
     def encrypt(self, password):
-        "we currently store passwords as plain text"
-        #"""Encrypt password using hashlib and current salt.
-        #"""
-        #return str(hashlib.sha1((password + str(self.salt)).encode('utf-8')).hexdigest())
-        return password
+        """Encrypt password using hashlib and current salt.
+        """
+        return str(hashlib.sha1((password + str(self.salt)).encode('utf-8')).hexdigest())
 
     @validates('password')
     def _set_password(self, key, value):
