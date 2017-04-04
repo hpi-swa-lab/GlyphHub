@@ -1,5 +1,6 @@
 import subprocess
 import os
+import glob
 
 from sqlalchemy import Column, Integer, ForeignKey, String, Text
 from sqlalchemy.orm import relationship
@@ -40,8 +41,6 @@ class Font(CommonColumns):
                 os.makedirs(path)
 
     def convert(self, unicode_points):
-        otf_path = os.path.join(self.sourceFolderPath(), 'otf')
-        for root, dirs, files in os.walk(otf_path):
-            for name in files:
-                if name.endswith('.otf'):
-                    return hb_convert.to_glyphnames(os.path.join(otf_path, name), unicode_points)
+        otf_path = self.otf_folder_path()
+        for otf_file in glob.glob(otf_path + '/*.otf'):
+            return hb_convert.to_glyphnames(otf_file, unicode_points)

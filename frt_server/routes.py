@@ -54,18 +54,20 @@ def register_routes(app):
         family.process_file(familyFile, current_user)
         return '', 200
 
-    @app.route('/font/<fontId>/convert', methods=['POST'])
-    def convertUnicode(fontId):
+    @app.route('/font/<font_id>/convert', methods=['POST'])
+    def convert_unicode(font_id):
         session = app.data.driver.session
-        font = session.query(Font).get(fontId)
+        font = session.query(Font).get(font_id)
         if not font:
             return jsonify({'error': 'Associated font does not exist'}), 400
 
         data = request.get_json()
-        unicodeText = data.get('unicode')
-        if not unicodeText:
+        unicode_text = data.get('unicode')
+        if unicode_text == None:
             return jsonify({'error': 'No unicode text provided'}), 400
+        if len(unicode_text) < 1:
+            return jsonify([])
         if not font:
             return jsonify({'error': 'Associated font does not exist'}), 400
 
-        return json.dumps(font.convert(unicodeText)), 200
+        return jsonify(font.convert(unicode_text))
