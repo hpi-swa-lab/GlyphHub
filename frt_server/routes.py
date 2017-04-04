@@ -69,3 +69,15 @@ def register_routes(app):
             return jsonify([])
 
         return jsonify(font.convert(unicode_text))
+
+    @app.route('/font/<font_id>/ufo', methods=['GET'])
+    def retrieve_ufo(font_id):
+        session = app.data.driver.session
+        font = session.query(Font).get(font_id)
+        if not font:
+            return jsonify({'error': 'Associated font does not exist'}), 400
+
+        requested_data = json.loads(request.args.get('query'))
+        print(requested_data)
+
+        return '', 200 
