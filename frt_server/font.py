@@ -42,5 +42,7 @@ class Font(CommonColumns):
 
     def convert(self, unicode_points):
         otf_path = self.otf_folder_path()
-        for otf_file in glob.glob(otf_path + '/*.otf'):
-            return hb_convert.to_glyphnames(otf_file, unicode_points)
+        otf_files = glob.glob(otf_path + '/*.otf')
+        if len(otf_files) < 1:
+            raise FileNotFoundError('Font does not contain a .otf')
+        return hb_convert.to_glyphnames(otf_files[0], unicode_points)
