@@ -17,15 +17,15 @@ class TokenAuth(TokenAuth):
         First we are verifying if the token is valid.
         """
 
-        login_name = frt_server.tables.User.verify_auth_token(token)
-        if login_name:
+        username = frt_server.tables.User.verify_auth_token(token)
+        if username:
             db_session = self.app.data.driver.session
-            users = db_session.query(frt_server.tables.User).filter_by(user_name = login_name).all()
+            users = db_session.query(frt_server.tables.User).filter_by(username=username).all()
             if not users:
                 return False
             user = users[0]
             self.set_request_auth_value(user)
-            return user.isAuthorized(allowed_roles)
+            return user.is_authorized(allowed_roles)
         else:
             return False
 

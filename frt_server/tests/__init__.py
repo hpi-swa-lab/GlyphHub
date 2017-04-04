@@ -35,7 +35,7 @@ class TestMinimal(eve.tests.TestMinimal):
         # we get our own minimal subset of sample data for speed
         setup_database(self.app, populate_sample_data=False)
 
-        eva = User(user_name='Eva', password='eveisevil')
+        eva = User(username='Eva', password='eveisevil')
         self.connection.session.add(eva)
         self.connection.session.commit()
 
@@ -84,5 +84,5 @@ class TestMinimal(eve.tests.TestMinimal):
         self.cachedApiToken = None
 
     def login(self, userName, password):
-        return self.post('/login', dict(userName=userName, password=password))
+        return self.post('/login', dict(username=userName, password=password))
 

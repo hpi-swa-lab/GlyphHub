@@ -60,7 +60,7 @@ class Family(CommonColumns):
         return font
 
     def process_file(self, family_file, user):
-        """convert a glyphs file to ufo and otf, create all associated Font entities, move files to the right folders
+        """convert a glyphs or ufo file to (ufo and) otf, create all associated Font entities, move files to the right folders
         we get:
         family/3/sourceFile.glyphs
         font/7/ufo/myFont.ufo
