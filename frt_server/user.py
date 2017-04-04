@@ -19,6 +19,7 @@ class User(CommonColumns):
     password = Column(String(120))
     salt = Column(String(120))
     fonts = relationship('Font', back_populates='author')
+    attachments = relationship('Attachment', back_populates='owner')
 
     def generate_auth_token(self, expiration=24*60*60):
         """Generates token for given expiration

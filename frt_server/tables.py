@@ -3,12 +3,14 @@ from sqlalchemy.orm import column_property, relationship, validates
 from eve_sqlalchemy.decorators import registerSchema
 
 import enum
+import os
 
 from frt_server.user import User
 from frt_server.font import Font
 from frt_server.tag import Tag, tag_sample_text_association_table, tag_thread_association_table
 from frt_server.family import Family
 from frt_server.common import CommonColumns, Base
+import frt_server.config
 
 class SampleText(CommonColumns):
     __tablename__ = 'sample_text'
@@ -59,7 +61,7 @@ class Comment(CommonColumns):
     author = relationship('User')
     attachment = relationship('Attachment', back_populates='comment')
 
-class AttachmentType(enum.Enum):
+class AttachmentType(enum.IntEnum):
     picture = 1
     file = 2
     outline = 3
@@ -72,7 +74,27 @@ class Attachment(CommonColumns):
     data2 = Column(Text)
     annotation = Column(LargeBinary)
     comment_id = Column('comment_id', Integer, ForeignKey('comment._id'))
+    owner_id = Column('owner_id', Integer, ForeignKey('user._id'))
     comment = relationship('Comment', back_populates='attachment')
+    owner = relationship('User', back_populates='attachments')
+
+    def file_path(self):
+        return os.path.join(self.folder_path(), self.data1) if self.has_file() else ''
+
+    def folder_path(self):
+        return os.path.join(frt_server.config.ATTACHMENT_UPLOAD_FOLDER, str(self._id))
+
+    def ensure_folder_exists(self):
+        if self.has_file() and not os.path.exists(self.folder_path()):
+            os.makedirs(self.folder_path())
+
+    def clean_folder(self):
+        """Delete our associated folder"""
+        if self.has_file() and os.path.exists(self.folder_path()):
+            shutil.rmtree(self.folder_path())
+
+    def has_file(self):
+        return self.type in (AttachmentType.picture, AttachmentType.file)
 
 registerSchema('user')(User)
 registerSchema('tag')(Tag)

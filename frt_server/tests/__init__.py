@@ -84,6 +84,7 @@ class TestMinimal(eve.tests.TestMinimal):
         data, status = self.login('Eva', 'eveisevil')
         assert status == 200
         self.cachedApiToken = data['token']
+        self.user_id = data['user_id']
         return data, status
 
     def logout(self):

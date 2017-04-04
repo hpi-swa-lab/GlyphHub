@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Snap | Font Review Tool</title>
+<style>
+body {
+	font-family: sans-serif;
+	max-width: 700px;
+	margin: 64px auto;
+}
+input {
+	width: 100%;
+}
+button, input {
+	margin: 15px 0;
+	padding: 8px;
+}
+p.error, p#upload-success {
+	color: #fff;
+	border-radius: 5px;
+	padding: 15px;
+	display: none;
+}
+p.error {
+	background-color: #f2dede;
+	border-color: #ebcccc;
+	color: #a94442;
+}
+p#upload-success {
+	background-color: #dff0d8;
+	color: #3c763d;
+	border-color: #d0e9c6;
+}
+hr {
+	border-width: 0;
+	border-top: 1px solid #ccc;
+}
+</style>
+	</head>
+	<body>
+		<h1>Upload a Picture</h1>
+		<p>The uploaded picture will be right available next time you create a comment.</p>
+
+		<div id="login-form">
+			<p id="wrong-password" class="error">Whoops, looks like your username or password were wrong!</p>
+
+			<form onsubmit="login(this)">
+				<input autofocus name="username" placeholder="Username">
+				<input type="password" name="password" placeholder="Password">
+				<button>Login</button>
+			</form>
+		</div>
+
+		<div id="welcome" style="display: none">
+			<hr>
+			<h3>Welcome <span id="name"></span>!</h3>
+			<p>Drop or select your files below</p>
+			<p id="upload-success">Your file was successfully uploaded! Create a comment to see attach it.</p>
+			<form id="file-upload-form">
+				<input onchange="uploadFiles()" type="file" multiple>
+			</form>
+		</div>
+
+<script>
+function request(method, url, data, successCb, errCb) {
+	var xhr = new XMLHttpRequest();
+	xhr.onload = function() {
+		if (xhr.status >= 300 || xhr.status < 200)
+			errCb(xhr);
+		else
+			successCb(JSON.parse(xhr.responseText));
+	};
+	xhr.onerror = function() {
+		errCb(xhr);
+	};
+	xhr.open(method, url);
+	xhr.setRequestHeader('Content-Type', 'application/json');
+	if (url != '/login' && localStorage.authToken)
+		xhr.setRequestHeader('Authorization', localStorage.authToken);
+	xhr.send(data ? JSON.stringify(data) : null);
+}
+
+function genericError(xhr) {
+	alert('Some error occured (' + xhr.status + '). Please try again later! :(');
+}
+
+function login(form) {
+	window.event.preventDefault();
+
+	document.getElementById('wrong-password').style.display = 'none';
+
+	request('POST', '/login', {
+		username: form.elements.username.value,
+		password: form.elements.password.value
+	}, function(json) {
+		localStorage.authToken = json.token;
+		localStorage.userId = json.user_id;
+
+		loadUser();
+	}, function(xhr) {
+		if (xhr.status == 401)
+			document.getElementById('wrong-password').style.display = 'block';
+		else
+			genericError(xhr);
+	});
+}
+
+function loadUser() {
+	if (!localStorage.userId && localStorage.authToken)
+		return;
+
+	request('GET', '/user/' + localStorage.userId, null, function(user) {
+		document.getElementById('login-form').style.display = 'none';
+		document.getElementById('welcome').style.display = 'block';
+		document.getElementById('name').textContent = user.username;
+	}, function(xhr) {
+		if (xhr.status == 401) {
+			delete localStorage.userId;
+			delete localStorage.authToken;
+		} else
+			genericError(xhr);
+	});
+}
+
+function uploadFiles() {
+	var form = document.getElementById('file-upload-form');
+	request('POST', '/snap/upload', new FormData(form), function(data) {
+		document.getElementById('upload-success').style.display = 'block';
+	}, genericError);
+}
+
+loadUser();
+</script>
+	</body>
+</html>

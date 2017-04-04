@@ -3,11 +3,14 @@ import os
 import base64
 import re
 
-from flask import request, jsonify, current_app
+from flask import request, jsonify, current_app, send_from_directory
 from werkzeug.exceptions import Unauthorized
+from werkzeug.utils import secure_filename
 from eve.auth import requires_auth
+from eve_sqlalchemy import sqla_object_to_dict
 
-from frt_server.tables import User, Font, Family
+from frt_server.tables import User, Font, Family, Attachment, AttachmentType
+import frt_server.config
 
 def register_routes(app):
     @app.route('/login', methods=['POST'])
@@ -81,3 +84,38 @@ def register_routes(app):
         print(requested_data)
 
         return '', 200 
+
+    @app.route('/snap', methods=['GET'])
+    def attachment_upload_view():
+        directory = os.path.join(frt_server.config.BASE, '..', 'frt_server', 'static')
+        return send_from_directory(directory, 'snap.html')
+
+    @app.route('/attachment/upload', methods=['POST'])
+    @requires_auth('attachment')
+    def attachment_upload():
+        session = app.data.driver.session
+        user = app.auth.get_request_auth_value()
+
+        attachment_file = request.files['file']
+        if attachment_file.filename == '':
+            return jsonify({'error': 'Invalid file given'}), 400
+
+        name = secure_filename(os.path.basename(attachment_file.filename))
+        file_type = name.rsplit('.', 1)[-1].lower()
+
+        if file_type in ('jpg', 'jpeg', 'png', 'gif'):
+            attachment_type = AttachmentType.picture
+        else:
+            attachment_type = AttachmentType.file
+
+        attachment = Attachment(owner_id=user._id, type=attachment_type, data1=name)
+        session.add(attachment)
+        session.flush()
+        session.refresh(attachment)
+
+        attachment.clean_folder()
+        attachment.ensure_folder_exists()
+        attachment_file.save(attachment.file_path())
+
+        return jsonify(sqla_object_to_dict(attachment, Attachment.__table__.columns.keys()))
+
