@@ -1,7 +1,7 @@
 operations
 save: aModel to: aTableNameString
 	| table |
-	table := self camelCaseToUnderscore: aTableNameString.
+	table := self class camelCaseToUnderscore: aTableNameString.
 	^ (self
 		request: (aModel id == 0
 			ifTrue: [table]

@@ -1,7 +1,7 @@
 operations
 loadAllFrom: aTableNameString into: aClass populate: aCollection
 	^(self
-		request: '/', (self camelCaseToUnderscore: aTableNameString), '?', (self populateString: aCollection)
+		request: '/', (self class camelCaseToUnderscore: aTableNameString), '?', (self populateString: aCollection)
 		method: 'GET'
 		data: nil) then: [ :data |
 			BTModelList withAll: ((data at: '_items') collect: [ :item |

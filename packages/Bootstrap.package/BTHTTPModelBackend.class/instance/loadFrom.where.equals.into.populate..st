@@ -2,7 +2,7 @@ operations
 loadFrom: aTableNameString where: aSelector equals: aValue into: aClass populate: aCollection
 	| whereEqualsDict table |
 	self flag: #TODO "Refactor this to actually handle collections of selectors and values into a dict".
-	table := self camelCaseToUnderscore: aTableNameString.  
+	table := self class camelCaseToUnderscore: aTableNameString.  
 	
 	aSelector == #id ifTrue: [
 		^(self request: table, '/', aValue, '?', (self populateString: aCollection) method: 'GET' data: nil)

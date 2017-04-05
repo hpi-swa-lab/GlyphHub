@@ -4,7 +4,7 @@ jsonObjectToModel: aDictionary modelClass: aClass
 	instance := aClass new.
 	
 	aClass instVarNames do: [ :name |
-		instance instVarNamed: name put: (aDictionary at: (self camelCaseToUnderscore: name asString)) ].
+		instance instVarNamed: name put: (aDictionary at: (self class camelCaseToUnderscore: name asString)) ].
 	
 	aClass associations keysAndValuesDo: [ :field :association |
 		aDictionary at: field ifPresent: [ :json |

@@ -1,6 +1,6 @@
 operations
 delete: aNumber from: aTableNameString
 	^(self
-		request: (self camelCaseToUnderscore: aTableNameString), '/', aNumber asString
+		request: (self class camelCaseToUnderscore: aTableNameString), '/', aNumber asString
 		method: 'DELETE'
 		data: nil)
