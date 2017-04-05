@@ -61,18 +61,25 @@ class Font(CommonColumns):
         # TODO: security! make sure we can't do directory traversal stuff.
         # using names + contents.plist still is dangerous because users can set arbitrary glif-locations there
         glif_dict = {}
-        for glif_filename in requested_glifs:
-            with open(os.path.join(self.ufo_file_path(), 'glyphs', glif_filename + '.glif')) as glif_file:
-                glif_dict[glif_filename] = glif_file.read()
+        contents_plist = self.get_plist_contents(os.path.join('glyphs', 'contents'))
+
+        for glif_name in requested_glifs:
+            if glif_name in contents_plist:
+                glif_filename = contents_plist[glif_name]
+                with open(os.path.join(self.ufo_file_path(), 'glyphs', glif_filename)) as glif_file:
+                    glif_dict[glif_name] = glif_file.read()
+            else:
+                glif_dict[glif_name] = None
 
         return glif_dict
 
-    def get_plist_contents(self, plist_name, requested_contents):
-        print(plist_name)
+    def get_plist_contents(self, plist_name, requested_contents = None):
         with open(os.path.join(self.ufo_file_path(), plist_name + '.plist'), 'rb') as plist_file:
             plist = plistlib.load(plist_file)
         if requested_contents == None:
             return plist
+        else:
+            raise Error("Warning: We do not support getting specific plist elements (yet).")
 
     def get_ufo_data(self, request_json):
         if 'fontinfo' in request_json:

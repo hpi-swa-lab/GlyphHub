@@ -41,8 +41,8 @@ class UfoLoadingTestCase(TestMinimal):
     def helper_check_glif_contents(self, glifs):
         self.assertIsNotNone(glifs)
 
-        self.assertTrue('A_' in glifs)
-        self.assertTrue(glifs['A_'].startswith('<?xml version="1.0" encoding="UTF-8"?>\n' +
+        self.assertTrue('A' in glifs)
+        self.assertTrue(glifs['A'].startswith('<?xml version="1.0" encoding="UTF-8"?>\n' +
             '<glyph name="A" format="2">'))
         self.assertTrue('s' in glifs)
         self.assertTrue(glifs['s'].startswith('<?xml version="1.0" encoding="UTF-8"?>\n' +
@@ -76,10 +76,10 @@ class UfoLoadingTestCase(TestMinimal):
 #        data, status = self.get('font/{}/ufo/')
 
     def test_get_glifs(self):
-        data = self.helper_send_query({"glifs": ['A_', 's']})
+        data = self.helper_send_query({"glifs": ['A', 's']})
         self.helper_check_glif_contents(data['glifs'])
 
     def test_get_glifs_and_fontinfo(self):
-        data = self.helper_send_query({"fontinfo": None, "glifs": ['A_', 's']})
+        data = self.helper_send_query({"fontinfo": None, "glifs": ['A', 's']})
         self.helper_check_glif_contents(data['glifs'])
         self.helper_check_fontinfo(data['fontinfo'])
