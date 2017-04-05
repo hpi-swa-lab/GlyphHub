@@ -117,7 +117,7 @@ function login(form) {
 }
 
 function loadUser() {
-	if (!localStorage.userId && localStorage.authToken)
+	if (!localStorage.userId || !localStorage.authToken)
 		return;
 
 	request('GET', '/user/' + localStorage.userId, null, function(user) {
