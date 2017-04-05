@@ -77,15 +77,24 @@ class UfoLoadingTestCase(TestMinimal):
 
     def test_get_all_glifs(self):
         data = self.helper_send_query({'glifs': None})
+        self.assertTrue('glifs' in data)
         glifs = data['glifs']
         self.helper_check_glif_contents(glifs)
         self.assertEqual(len(glifs), 4)
 
     def test_get_glifs(self):
         data = self.helper_send_query({"glifs": ['A', 's']})
+        self.assertTrue('glifs' in data)
         self.helper_check_glif_contents(data['glifs'])
 
     def test_get_glifs_and_fontinfo(self):
         data = self.helper_send_query({"fontinfo": None, "glifs": ['A', 's']})
+        self.assertTrue('fontinfo' in data)
+        self.assertTrue('glifs' in data)
         self.helper_check_glif_contents(data['glifs'])
         self.helper_check_fontinfo(data['fontinfo'])
+
+    def test_get_features(self):
+        data = self.helper_send_query({'features': None})
+        self.assertTrue('features' in data)
+        self.assertIsNone(data['features'])

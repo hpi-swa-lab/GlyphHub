@@ -96,6 +96,11 @@ class Font(CommonColumns):
             request_json['groups'] = self.get_plist_contents('groups', request_json['groups'])
         if 'glifs' in request_json:
             request_json['glifs'] = self.get_glif_data(request_json['glifs'])
-
+        if 'features' in request_json:
+            if os.path.exists(os.path.join(self.ufo_file_path(), 'features.fea')):
+                with open(os.path.join(self.ufo_file_path(), 'features.fea')) as features_file:
+                    request_json['features'] = features_file.read()
+            else:
+                request_json['features'] = None
         return request_json
 
