@@ -12,6 +12,7 @@ from eve_sqlalchemy import sqla_object_to_dict
 
 from frt_server.tables import User, Font, Family, Attachment, AttachmentType
 import frt_server.config
+import frt_server.font
 
 def frt_requires_auth(endpoint_class, resource):
     def fdec(f):
@@ -91,9 +92,9 @@ def register_routes(app):
             return jsonify({'error': 'Associated font does not exist'}), 400
 
         requested_data = json.loads(request.args.get('query'))
-        print(requested_data)
+        response = font.get_ufo_data(requested_data)
 
-        return '', 200 
+        return jsonify(response), 200 
 
     @app.route('/snap', methods=['GET'])
     def attachment_upload_view():

@@ -10,6 +10,7 @@ from frt_server.tag import tag_font_association_table
 from frt_server.common import CommonColumns
 import frt_server.config
 import hb_convert
+import plistlib
 
 class Font(CommonColumns):
     __tablename__ = 'font'
@@ -28,6 +29,9 @@ class Font(CommonColumns):
 
     def ufo_folder_path(self):
         return os.path.join(self.folder_path(), 'ufo')
+
+    def ufo_file_path(self):
+        return glob.glob(self.ufo_folder_path() + '/*.ufo')[0]
 
     def otf_folder_path(self):
         return os.path.join(self.folder_path(), 'otf')
@@ -52,3 +56,19 @@ class Font(CommonColumns):
         if len(otf_files) < 1:
             raise FileNotFoundError('Font does not contain a .otf')
         return hb_convert.to_glyphnames(otf_files[0], unicode_points)
+
+    def get_plist_contents(self, plist_name, requested_contents):
+        print(plist_name)
+        with open(os.path.join(self.ufo_file_path(), plist_name + '.plist'), 'rb') as plist_file:
+            plist = plistlib.load(plist_file)
+        if requested_contents == None:
+            return plist
+
+    def get_ufo_data(self, request_json):
+        if 'fontinfo' in request_json:
+            request_json['fontinfo'] = self.get_plist_contents('fontinfo', request_json['fontinfo'])
+        if 'glyphs' in request_json:
+            request_json['glyphs'] = self.get_plist_contents(os.path.join('glyphs', 'contents'), request_json['glyphs'])
+
+        return request_json
+
