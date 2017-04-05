@@ -1,6 +1,6 @@
 instance creation
-bold: aString
+italic: aString
 
 	^ self new
-		bold: aString;
+		italic: aString;
 		yourself

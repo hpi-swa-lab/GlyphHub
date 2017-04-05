@@ -1,4 +1,4 @@
-initialize-release
+ui
 scriptTagArea
 
 	| tagList labeledTextArea |

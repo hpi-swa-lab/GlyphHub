@@ -1,9 +1,10 @@
 converting
 camelCaseToUnderscore: aString
 	" converts userNameAssociation to user_name_association . Converts idString to _id_string "
+	
 	| inStream |
 	inStream := aString readStream.
-	^(String streamContents: [ :outStream |
+	^ (String streamContents: [ :outStream |
 		[inStream atEnd] whileFalse:
 		[[inStream atEnd not and: [inStream peek isLowercase]] whileTrue: [outStream nextPut: inStream next].
 		

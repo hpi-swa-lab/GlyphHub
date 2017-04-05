@@ -1,3 +1,4 @@
 accessing
 ellipsize
-	^self layout ellipsize
+
+	^ self layout ellipsize

@@ -2,9 +2,14 @@
 	"class" : {
 		"example" : "lcj 4/5/2017 11:37" },
 	"instance" : {
-		"chooseFile" : "lcj 4/5/2017 11:35",
-		"initialize" : "lcj 4/5/2017 11:09",
+		"chooseFile" : "lcj 4/5/2017 14:16",
+		"clearAlerts" : "lcj 4/5/2017 15:27",
+		"fileUploadArea" : "lcj 4/5/2017 14:58",
+		"gitUploadArea" : "lcj 4/5/2017 14:12",
+		"initialize" : "lcj 4/5/2017 15:26",
 		"scriptList" : "lcj 4/5/2017 11:03",
 		"scriptTagArea" : "lcj 4/5/2017 11:03",
-		"tryUpload" : "lcj 4/5/2017 11:36",
-		"uploadArea" : "lcj 4/5/2017 11:09" } }
+		"stream" : "lcj 4/5/2017 14:14",
+		"stream:" : "lcj 4/5/2017 14:52",
+		"tryUpload" : "lcj 4/5/2017 15:36",
+		"uploadArea" : "lcj 4/5/2017 15:03" } }

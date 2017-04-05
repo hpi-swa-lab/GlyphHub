@@ -1,4 +1,4 @@
-initialize-release
+callback
 chooseFile
 
-	stream := self topLevel backend pickFontToUpload
+	self stream: self topLevel backend pickFontToUpload
