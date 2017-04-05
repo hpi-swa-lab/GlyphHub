@@ -8,7 +8,6 @@ import os
 
 class UfoLoadingTestCase(TestMinimal):
     def setUp(self):
-
         super().setUp()
 
         self.login_as('Eva', 'eveisevil')
@@ -25,7 +24,6 @@ class UfoLoadingTestCase(TestMinimal):
         data, status = self.upload_file('/family/{}/upload'.format(self.family_id), 'file', 'testFiles/RiblonSans/RiblonSans.ufo.zip')
         self.assertEqual(status, 200)
 
-        #session.refresh(family)
         family = session.query(Family).get(self.family_id)
         self.font_id = family.fonts[0]._id
 
@@ -54,8 +52,6 @@ class UfoLoadingTestCase(TestMinimal):
         self.assertEqual(fontinfo["ascender"], 800)
         self.assertTrue('unitsPerEm' in fontinfo)
         self.assertEqual(fontinfo["unitsPerEm"], 1000)
-        # our plist SHOULD contain 26 different entries
-        self.assertEqual(len(fontinfo), 26)
 
     def test_load_contents_plist(self):
         data = self.helper_send_query({"glyphs": None})
@@ -70,10 +66,6 @@ class UfoLoadingTestCase(TestMinimal):
     def test_get_fontinfo_plist(self):
         data = self.helper_send_query({"fontinfo": None})
         self.helper_check_fontinfo(data['fontinfo'])
-
-#    TODO
-#    def test_get_ufo(self):
-#        data, status = self.get('font/{}/ufo/')
 
     def test_get_all_glifs(self):
         data = self.helper_send_query({'glifs': None})
@@ -94,7 +86,7 @@ class UfoLoadingTestCase(TestMinimal):
         self.helper_check_glif_contents(data['glifs'])
         self.helper_check_fontinfo(data['fontinfo'])
 
-    def test_get_features(self):
+    def test_get_missing_features(self):
         data = self.helper_send_query({'features': None})
         self.assertTrue('features' in data)
         self.assertIsNone(data['features'])

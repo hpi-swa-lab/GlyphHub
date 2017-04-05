@@ -62,7 +62,7 @@ class Font(CommonColumns):
         # using names + contents.plist still is dangerous because users can set arbitrary glif-locations there
         glif_dict = {}
         contents_plist = self.get_plist_contents(os.path.join('glyphs', 'contents'))
-        
+
         # if requested_glifs is None or '', we want to return all glifs
         if not requested_glifs:
             requested_glifs = contents_plist.keys()
@@ -78,7 +78,11 @@ class Font(CommonColumns):
         return glif_dict
 
     def get_plist_contents(self, plist_name, requested_contents = None):
-        with open(os.path.join(self.ufo_file_path(), plist_name + '.plist'), 'rb') as plist_file:
+        path = os.path.join(self.ufo_file_path(), plist_name + '.plist')
+        if not os.path.exists(path):
+            return None
+
+        with open(path, 'rb') as plist_file:
             plist = plistlib.load(plist_file)
         if requested_contents == None:
             return plist
@@ -97,8 +101,9 @@ class Font(CommonColumns):
         if 'glifs' in request_json:
             request_json['glifs'] = self.get_glif_data(request_json['glifs'])
         if 'features' in request_json:
-            if os.path.exists(os.path.join(self.ufo_file_path(), 'features.fea')):
-                with open(os.path.join(self.ufo_file_path(), 'features.fea')) as features_file:
+            features_path = os.path.join(self.ufo_file_path(), 'features.fea')
+            if os.path.exists(features_path):
+                with open(features_path) as features_file:
                     request_json['features'] = features_file.read()
             else:
                 request_json['features'] = None
