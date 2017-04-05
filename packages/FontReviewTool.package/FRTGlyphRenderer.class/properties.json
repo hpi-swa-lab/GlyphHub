@@ -1,0 +1,17 @@
+{
+	"category" : "FontReviewTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "TB 4/5/2017 15:51",
+	"instvars" : [
+		"font",
+		"backend",
+		"fontinfo",
+		"glifs" ],
+	"name" : "FRTGlyphRenderer",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

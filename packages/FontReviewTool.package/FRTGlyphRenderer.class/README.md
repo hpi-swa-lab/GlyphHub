@@ -1,0 +1,1 @@
+A FRTGlyphRenderer is essentially a cache for the ufo data necessary to render certain glyphs. You can request caching of data via the loadDataFor: method.  

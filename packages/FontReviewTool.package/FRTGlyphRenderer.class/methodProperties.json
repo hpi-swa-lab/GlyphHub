@@ -1,0 +1,23 @@
+{
+	"class" : {
+		"example" : "TB 4/5/2017 17:44" },
+	"instance" : {
+		"canDrawImmediately:" : "TB 4/5/2017 15:54",
+		"coordFromNode:" : "TB 4/5/2017 15:44",
+		"curveFrom:via:to:" : "TB 4/5/2017 15:46",
+		"drawGlyphShape:scaleFactor:on:at:color:" : "TB 4/5/2017 15:23",
+		"drawGlyphs:size:on:at:color:" : "TB 4/5/2017 15:24",
+		"extentOf:size:" : "TB 4/5/2017 15:54",
+		"font" : "TB 4/5/2017 12:58",
+		"font:" : "TB 4/5/2017 12:59",
+		"formForGlyphs:size:" : "TB 4/5/2017 15:21",
+		"initialize" : "TB 4/5/2017 13:06",
+		"lineFrom:to:" : "TB 4/5/2017 15:46",
+		"loadDataFor:" : "TB 4/5/2017 17:43",
+		"pointsForContour:" : "TB 4/5/2017 17:43",
+		"previewGlyphs" : "TB 4/5/2017 17:31",
+		"previewGlyphsFrom:" : "TB 4/5/2017 17:43",
+		"qcurveFrom:via:to:" : "TB 4/5/2017 15:44",
+		"scaleFactorAt:" : "TB 4/5/2017 16:11",
+		"shapeOf:" : "TB 4/5/2017 15:24",
+		"typeFromNode:" : "TB 4/5/2017 15:44" } }

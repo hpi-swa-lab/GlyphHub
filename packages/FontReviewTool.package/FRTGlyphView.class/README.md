@@ -1,0 +1,1 @@
+A FRTGlyphView is a simple widget displaying the given glyphNames as rendered by its font next to each other.

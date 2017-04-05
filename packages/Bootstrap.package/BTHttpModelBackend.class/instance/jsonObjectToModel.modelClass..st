@@ -1,7 +1,9 @@
 private
 jsonObjectToModel: aDictionary modelClass: aClass
 	| instance |
-	instance := aClass new.
+	instance := aClass new
+		backend: self;
+		yourself.
 	
 	aClass instVarNames do: [ :name |
 		instance instVarNamed: name put: (aDictionary at: (self class camelCaseToUnderscore: name asString)) ].

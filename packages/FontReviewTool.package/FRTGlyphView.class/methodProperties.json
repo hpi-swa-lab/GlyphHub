@@ -1,0 +1,15 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"drawOn:" : "TB 4/5/2017 16:23",
+		"font" : "TB 4/5/2017 17:42",
+		"font:" : "TB 4/5/2017 16:04",
+		"glyphNames" : "TB 4/5/2017 15:49",
+		"glyphNames:" : "TB 4/5/2017 16:45",
+		"initialize" : "TB 4/5/2017 17:42",
+		"isReady" : "TB 4/5/2017 15:55",
+		"pointSize" : "TB 4/5/2017 15:56",
+		"pointSize:" : "TB 4/5/2017 15:56",
+		"preferredSizeForWidth:" : "TB 4/5/2017 17:28",
+		"withPreviewLetters" : "TB 4/5/2017 17:05" } }
