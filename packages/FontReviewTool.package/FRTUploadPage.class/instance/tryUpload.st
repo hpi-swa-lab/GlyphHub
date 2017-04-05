@@ -13,5 +13,5 @@ tryUpload
 			(((FRTFamily new familyName: familyName)
 			saveTo: self topLevel backend)
 			then: [:family | self topLevel backend upload: stream toFamily: family id])
-			whenRejected: #signal]].
+			catch: [:x | self topLevel displayNotification: 'Upload failed. Please try again.' type: #danger]]].
 	self flag: #TODO "redirect to newly created project if successful"

@@ -3,7 +3,7 @@ testNewUser
 	| count userPromise |
 	count := self countUsers.
 	userPromise := self safePromise: (FRTUser new
-		userName: 'ME';
+		username: 'ME';
 		password: 'BLALALA';
 		saveTo: backend).
 	
