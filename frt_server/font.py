@@ -86,6 +86,10 @@ class Font(CommonColumns):
             request_json['fontinfo'] = self.get_plist_contents('fontinfo', request_json['fontinfo'])
         if 'glyphs' in request_json:
             request_json['glyphs'] = self.get_plist_contents(os.path.join('glyphs', 'contents'), request_json['glyphs'])
+        if 'kerning' in request_json:
+            request_json['kerning'] = self.get_plist_contents('kerning', request_json['kerning'])
+        if 'groups' in request_json:
+            request_json['groups'] = self.get_plist_contents('groups', request_json['groups'])
         if 'glifs' in request_json:
             request_json['glifs'] = self.get_glif_data(request_json['glifs'])
 
