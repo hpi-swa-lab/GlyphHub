@@ -1,6 +1,7 @@
 import subprocess
 import os
 import glob
+import shutil
 
 from sqlalchemy import Column, Integer, ForeignKey, String, Text
 from sqlalchemy.orm import relationship

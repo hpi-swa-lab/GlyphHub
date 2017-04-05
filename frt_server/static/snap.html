@@ -57,9 +57,9 @@ hr {
 			<hr>
 			<h3>Welcome <span id="name"></span>!</h3>
 			<p>Drop or select your files below</p>
-			<p id="upload-success">Your file was successfully uploaded! Create a comment to see attach it.</p>
+			<p id="upload-success">Your file was successfully uploaded! Create a comment to attach it.</p>
 			<form id="file-upload-form">
-				<input onchange="uploadFiles()" type="file" multiple>
+				<input name="file" onchange="uploadFiles()" type="file" multiple>
 			</form>
 		</div>
 
@@ -76,10 +76,19 @@ function request(method, url, data, successCb, errCb) {
 		errCb(xhr);
 	};
 	xhr.open(method, url);
-	xhr.setRequestHeader('Content-Type', 'application/json');
-	if (url != '/login' && localStorage.authToken)
+
+	if (url != '/login' && localStorage.authToken) {
 		xhr.setRequestHeader('Authorization', localStorage.authToken);
-	xhr.send(data ? JSON.stringify(data) : null);
+	}
+
+	if (data) {
+		var isFormData = data.constructor.prototype.toString() == '[object FormData]';
+		data = isFormData ? data : JSON.stringify(data);
+		if (!isFormData)
+			xhr.setRequestHeader('Content-Type', 'application/json');
+	}
+
+	xhr.send(data);
 }
 
 function genericError(xhr) {
@@ -126,8 +135,9 @@ function loadUser() {
 
 function uploadFiles() {
 	var form = document.getElementById('file-upload-form');
-	request('POST', '/snap/upload', new FormData(form), function(data) {
+	request('POST', '/attachment/upload', new FormData(form), function(data) {
 		document.getElementById('upload-success').style.display = 'block';
+		form.reset();
 	}, genericError);
 }
 

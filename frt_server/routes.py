@@ -2,8 +2,9 @@ import json
 import os
 import base64
 import re
+from functools import wraps
 
-from flask import request, jsonify, current_app, send_from_directory
+from flask import request, jsonify, current_app, send_from_directory, Response
 from werkzeug.exceptions import Unauthorized
 from werkzeug.utils import secure_filename
 from eve.auth import requires_auth
@@ -11,6 +12,14 @@ from eve_sqlalchemy import sqla_object_to_dict
 
 from frt_server.tables import User, Font, Family, Attachment, AttachmentType
 import frt_server.config
+
+def frt_requires_auth(endpoint_class, resource):
+    def fdec(f):
+        @wraps(f)
+        def auth():
+            return requires_auth(endpoint_class)(f)(resource)
+        return auth
+    return fdec
 
 def register_routes(app):
     @app.route('/login', methods=['POST'])
@@ -71,7 +80,8 @@ def register_routes(app):
         if len(unicode_text) < 1:
             return jsonify([])
 
-        return jsonify(font.convert(unicode_text))
+        return Response(json.dumps(font.convert(unicode_text)),
+                mimetype='application/json')
 
     @app.route('/font/<font_id>/ufo', methods=['GET'])
     def retrieve_ufo(font_id):
@@ -91,8 +101,8 @@ def register_routes(app):
         return send_from_directory(directory, 'snap.html')
 
     @app.route('/attachment/upload', methods=['POST'])
-    @requires_auth('attachment')
-    def attachment_upload():
+    @frt_requires_auth('resource', 'attachment')
+    def attachment_upload(resource):
         session = app.data.driver.session
         user = app.auth.get_request_auth_value()
 
@@ -110,7 +120,7 @@ def register_routes(app):
 
         attachment = Attachment(owner_id=user._id, type=attachment_type, data1=name)
         session.add(attachment)
-        session.flush()
+        session.commit()
         session.refresh(attachment)
 
         attachment.clean_folder()

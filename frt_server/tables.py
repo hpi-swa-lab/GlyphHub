@@ -4,6 +4,7 @@ from eve_sqlalchemy.decorators import registerSchema
 
 import enum
 import os
+import shutil
 
 from frt_server.user import User
 from frt_server.font import Font
