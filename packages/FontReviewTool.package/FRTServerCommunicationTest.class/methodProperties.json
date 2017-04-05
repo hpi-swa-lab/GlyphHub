@@ -3,7 +3,7 @@
 		 },
 	"instance" : {
 		"countUsers" : "JH 3/28/2017 17:17",
-		"setUp" : "TB 3/28/2017 14:22",
+		"setUp" : "lcj 4/5/2017 11:21",
 		"tearDown" : "TB 3/28/2017 14:01",
 		"testDeleteUser" : "TB 3/31/2017 10:38",
 		"testGetUser" : "TB 3/28/2017 18:48",

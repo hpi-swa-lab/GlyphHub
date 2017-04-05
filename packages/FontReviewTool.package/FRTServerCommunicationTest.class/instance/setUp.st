@@ -4,4 +4,4 @@ setUp
 	super setUp.
 	server := FRTFakeRestServer new.
 	port := server open.
-	backend := BTHTTPModelBackend new apiRootUrl: 'http://localhost:', port asString, '/'
+	backend := BTHttpModelBackend new apiRootUrl: 'http://localhost:', port asString, '/'

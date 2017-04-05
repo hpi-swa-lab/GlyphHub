@@ -5,6 +5,6 @@ dirtyFieldsAndValues
 	dirtyFieldDictionary := OrderedDictionary new.
 	self dirtyFieldNames do: [:field |
 		dirtyFieldDictionary
-			at: (BTHTTPModelBackend camelCaseToUnderscore: field)
+			at: (BTHttpModelBackend camelCaseToUnderscore: field)
 			put: (self perform: field asSymbol)].
 	^ dirtyFieldDictionary

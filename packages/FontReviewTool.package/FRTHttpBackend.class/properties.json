@@ -10,5 +10,5 @@
 	"name" : "FRTHttpBackend",
 	"pools" : [
 		 ],
-	"super" : "BTHTTPModelBackend",
+	"super" : "BTHttpModelBackend",
 	"type" : "normal" }

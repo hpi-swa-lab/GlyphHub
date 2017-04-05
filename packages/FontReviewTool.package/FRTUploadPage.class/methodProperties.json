@@ -1,8 +1,10 @@
 {
 	"class" : {
-		 },
+		"example" : "lcj 4/5/2017 11:37" },
 	"instance" : {
-		"initialize" : "TB 3/30/2017 13:31",
-		"scriptList" : "JH 3/30/2017 17:28",
-		"scriptTagArea" : "JH 3/31/2017 10:16",
-		"uploadArea" : "lcj 3/10/2017 13:45" } }
+		"chooseFile" : "lcj 4/5/2017 11:35",
+		"initialize" : "lcj 4/5/2017 11:09",
+		"scriptList" : "lcj 4/5/2017 11:03",
+		"scriptTagArea" : "lcj 4/5/2017 11:03",
+		"tryUpload" : "lcj 4/5/2017 11:36",
+		"uploadArea" : "lcj 4/5/2017 11:09" } }

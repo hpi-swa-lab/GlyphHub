@@ -1,5 +1,6 @@
 initialize-release
 scriptTagArea
+
 	| tagList labeledTextArea |
 	tagList := BTTagList new.
 	

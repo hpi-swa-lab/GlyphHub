@@ -8,7 +8,7 @@
 	"instvars" : [
 		"apiRootUrl",
 		"apiToken" ],
-	"name" : "BTHTTPModelBackend",
+	"name" : "BTHttpModelBackend",
 	"pools" : [
 		 ],
 	"super" : "BTModelBackend",

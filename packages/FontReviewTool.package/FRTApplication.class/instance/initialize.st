@@ -1,7 +1,8 @@
 initialize-release
 initialize
+
 	super initialize.
-	self backend: BTHTTPModelBackend new.
+	self backend: FRTHttpBackend new.
 	
 	sidebar := FRTSidebar new.
 	

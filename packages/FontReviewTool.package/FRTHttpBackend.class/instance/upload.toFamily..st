@@ -1,10 +1,10 @@
 font-upload
-upload: aFileStream toFont: anIdNumber
-	| boundary file |
+upload: aFileStream toFamily: anIdNumber
+	| boundary file data |
 	boundary := WebUtils multipartBoundary.
 	file := (MIMELocalFileDocument contentType: 'text/plain' content: nil url: 'file://', aFileStream name) contentStream: aFileStream.
 	
-	String streamContents: [ :stream |
+	data := String streamContents: [ :stream |
 		stream
 			nextPutAll: '--'; nextPutAll: boundary;
 			crlf;
@@ -18,8 +18,8 @@ upload: aFileStream toFont: anIdNumber
 			nextPutAll: '--'; nextPutAll: boundary; nextPutAll: '--' ].
 	
 	"not sending JSON here because flask can ideally handle the multipart/form-data format"
-	^self
-		request: 'font/', anIdNumber, '/upload'
+	^ self
+		request: 'family/', anIdNumber, '/upload'
 		method: 'POST'
-		data: (WebUtils encodeMultipartForm: {'file' -> file} boundary: boundary)
+		data: data
 		contentType: 'multipart/form-data; boundary=', boundary
