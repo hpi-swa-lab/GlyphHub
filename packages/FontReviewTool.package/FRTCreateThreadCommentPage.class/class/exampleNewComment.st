@@ -1,5 +1,5 @@
 examples
-example
+exampleNewComment
 
 	| backend |
 	backend := FRTHttpBackend new.
