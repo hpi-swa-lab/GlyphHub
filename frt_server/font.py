@@ -57,6 +57,16 @@ class Font(CommonColumns):
             raise FileNotFoundError('Font does not contain a .otf')
         return hb_convert.to_glyphnames(otf_files[0], unicode_points)
 
+    def get_glif_data(self, requested_glifs):
+        # TODO: security! make sure we can't do directory traversal stuff.
+        # using names + contents.plist still is dangerous because users can set arbitrary glif-locations there
+        glif_dict = {}
+        for glif_filename in requested_glifs:
+            with open(os.path.join(self.ufo_file_path(), 'glyphs', glif_filename + '.glif')) as glif_file:
+                glif_dict[glif_filename] = glif_file.read()
+
+        return glif_dict
+
     def get_plist_contents(self, plist_name, requested_contents):
         print(plist_name)
         with open(os.path.join(self.ufo_file_path(), plist_name + '.plist'), 'rb') as plist_file:
@@ -69,6 +79,8 @@ class Font(CommonColumns):
             request_json['fontinfo'] = self.get_plist_contents('fontinfo', request_json['fontinfo'])
         if 'glyphs' in request_json:
             request_json['glyphs'] = self.get_plist_contents(os.path.join('glyphs', 'contents'), request_json['glyphs'])
+        if 'glifs' in request_json:
+            request_json['glifs'] = self.get_glif_data(request_json['glifs'])
 
         return request_json
 
