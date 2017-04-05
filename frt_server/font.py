@@ -62,6 +62,10 @@ class Font(CommonColumns):
         # using names + contents.plist still is dangerous because users can set arbitrary glif-locations there
         glif_dict = {}
         contents_plist = self.get_plist_contents(os.path.join('glyphs', 'contents'))
+        
+        # if requested_glifs is None or '', we want to return all glifs
+        if not requested_glifs:
+            requested_glifs = contents_plist.keys()
 
         for glif_name in requested_glifs:
             if glif_name in contents_plist:
