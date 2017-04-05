@@ -1,5 +1,6 @@
 initialize-release
 initializeWithPage: aPage
+
 	openPage := aPage.
 	
 	breadcrumbs := BTButtonGroup new.

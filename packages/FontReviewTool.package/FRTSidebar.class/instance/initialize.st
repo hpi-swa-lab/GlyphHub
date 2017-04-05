@@ -1,8 +1,9 @@
 initialize-release
 initialize
+
 	super initialize.
 	
-	userNameLabel := BTLabel new
+	usernameLabel := BTLabel new
 		expand: true;
 		styleAttributes: {'font-weight' -> '800'};  
 		align: #(fill center).
@@ -20,7 +21,7 @@ initialize
 		padding: BTWidget spacing;
 		spacing: BTWidget spacing;
 		add: (BTPage row
-			add: userNameLabel;
+			add: usernameLabel;
 			add: userAvatarImage);
 		add: BTDivider new;
 		add: (BTClickableWithText text: (BTIcon icon: #home), ' Dashboard');

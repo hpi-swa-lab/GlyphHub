@@ -1,3 +1,4 @@
 constants
 sidebarWidth
-	^250
+
+	^ 250

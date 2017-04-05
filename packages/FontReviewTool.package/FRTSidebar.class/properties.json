@@ -6,7 +6,7 @@
 		 ],
 	"commentStamp" : "TB 3/30/2017 15:20",
 	"instvars" : [
-		"userNameLabel",
+		"usernameLabel",
 		"userAvatarImage" ],
 	"name" : "FRTSidebar",
 	"pools" : [
