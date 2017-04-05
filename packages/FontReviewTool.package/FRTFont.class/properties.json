@@ -7,7 +7,8 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"fontName",
-		"family" ],
+		"family",
+		"author" ],
 	"name" : "FRTFont",
 	"pools" : [
 		 ],

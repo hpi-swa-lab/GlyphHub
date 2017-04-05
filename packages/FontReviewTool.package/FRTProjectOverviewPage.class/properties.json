@@ -1,15 +1,14 @@
 {
-	"category" : "FontReviewTool-Models",
+	"category" : "FontReviewTool",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"password",
-		"username" ],
-	"name" : "FRTUser",
+		 ],
+	"name" : "FRTProjectOverviewPage",
 	"pools" : [
 		 ],
-	"super" : "BTModel",
+	"super" : "BTApplicationPage",
 	"type" : "normal" }

@@ -1,10 +1,6 @@
 initialize-release
 initializeWithPage: aPage
 	openPage := aPage.
-	navigationStack := BTNavigationStack new
-		open: aPage;
-		when: #opened send: #privateOpenPage: to: self;
-		yourself.
 	
 	breadcrumbs := BTButtonGroup new.
 	
@@ -29,4 +25,9 @@ initializeWithPage: aPage
 		updateBreadcrumbs;
 		add: header;
 		add: BTDivider new;
-		add: contentContainer
+		add: contentContainer.
+	
+	navigationStack := BTNavigationStack new
+		open: aPage;
+		when: #opened send: #privateOpenPage: to: self;
+		yourself

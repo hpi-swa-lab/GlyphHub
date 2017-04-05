@@ -8,7 +8,7 @@ tryLogin
 	promise := (self topLevel backend login: self usernameField text password: self passwordField text)
 		then: [:data |
 			self loginBox remove: self loginFailedAlert.
-			self topLevel openPage: BTApplicationPage new]
+			self topLevel openPage: FRTProjectOverviewPage new]
 		ifRejected: [ :error | self loginBox add: self loginFailedAlert at: 2. error ].
 	
 	self

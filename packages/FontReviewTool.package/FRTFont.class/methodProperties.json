@@ -1,7 +1,10 @@
 {
 	"class" : {
+		"associations" : "TB 4/5/2017 11:08",
 		"modelName" : "TB 3/28/2017 12:18" },
 	"instance" : {
+		"author" : "TB 4/5/2017 11:07",
+		"author:" : "TB 4/5/2017 11:07",
 		"family" : "TB 3/27/2017 17:06",
 		"family:" : "TB 3/27/2017 17:06",
 		"fontName" : "TB 3/27/2017 17:19",
