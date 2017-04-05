@@ -6,7 +6,7 @@ initialize
 	preview := BTLabel new
 		align: #(center center);
 		styleAttributes: {'size' -> '60000'}.
-	titleContainer := BTPage new.
+	titleContainer := BTPage new expand: true.
 	glyphLinkContainer := BTPage column.
 	commentText := BTTextArea new
 		multiLine: true;
@@ -15,8 +15,8 @@ initialize
 
 	self
 		add: (BTPage row
-			add: titleContainer
-			oppositeTo: (BTButtonGroup new
+			add: titleContainer;
+			add: (BTButtonGroup new
 				add: ((BTButton icon: #paint_brush)
 					when: #clicked send: #openSketchEditor: to: self);
 				add: ((BTButton icon: #object_ungroup)
