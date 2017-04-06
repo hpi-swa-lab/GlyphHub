@@ -1,12 +1,13 @@
 as yet unclassified
 testAllRejects
-	| a b grouped |
+	| a b grouped e |
+	e := BTHttpError new.
 	a := BTPromise new.
 	b := BTPromise new.
-
-	grouped := (Promise all: {a. b}).
-
-	a rejectWith: 5.
-
+	
+	grouped := (BTPromise all: {a. b}).
+	
+	a rejectWith: e.
+	
 	(self expect: grouped isRejected) to be: true.
-	(self expect: grouped error) to be: 5
+	(self expect: grouped error) to be: e
