@@ -13,11 +13,11 @@ pointsForContour: anXMLNode
 			(self typeFromNode: elements first) = #move
 				ifFalse: [ elements add: elements first ]].
 
-	previous := self coordFromNode: elements first.
+	previous := self coordinatesFromNode: elements first.
 	
 	elements allButFirstDo: [ :point | | type coord |
 		type := self typeFromNode: point.
-		coord := self coordFromNode: point.
+		coord := self coordinatesFromNode: point.
 		
 		type = #line ifTrue: [ points addAll: (self lineFrom: previous to: coord) ].
 		type = #curve ifTrue: [ points addAll: (self curveFrom: previous via: controlPoints to: coord) ].

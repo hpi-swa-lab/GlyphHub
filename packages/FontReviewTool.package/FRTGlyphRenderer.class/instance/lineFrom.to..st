@@ -1,4 +1,4 @@
 helper-contours
-lineFrom: from to: to
+lineFrom: startPoint to: endPoint
 
-	^ (LineSegment from: from to: to) asBezier2Segment controlPoints
+	^ (LineSegment from: startPoint to: endPoint) asBezier2Segment controlPoints

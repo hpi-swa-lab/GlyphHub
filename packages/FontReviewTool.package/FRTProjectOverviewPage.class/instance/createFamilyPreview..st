@@ -4,7 +4,7 @@ createFamilyPreview: aFamily
 	| preview |
 	preview := aFamily fonts
 		ifNotEmpty: [
-			FRTGlyphView new
+			FRTGlyphWidget new
 				font: aFamily fonts anyOne;
 				withPreviewLetters;
 				pointSize: 64]

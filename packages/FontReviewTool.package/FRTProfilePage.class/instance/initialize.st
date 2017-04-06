@@ -1,20 +1,32 @@
-as yet unclassified
+initialize-release
 initialize
 
 	| headingArea changeUsernameArea changePasswordArea |
 	super initialize.
 	
+	newUsernameField := BTTextArea placeholder: 'New Username'.
+	newPasswordField1 := BTPasswordArea placeholder: 'New Password'.
+	newPasswordField2 := BTPasswordArea placeholder: 'New Password Confirmation'.
+	
 	changeUsernameArea := BTPage column
 		withPadding;
-		add: (BTTextArea placeholder: 'New Username');
-		add: (BTButton label: 'Save');
+		add: newUsernameField;
+		add: ((BTButton label: 'Save')
+			colorType: #primary;
+			when: #clickedNoEvent send: #trySavingUsername to: self;
+			align: #(end center);
+			yourself);
 		yourself.
 		
 	changePasswordArea := BTPage column
 		withPadding;
-		add: (BTPasswordArea placeholder: 'New Password');
-		add: (BTPasswordArea placeholder: 'New Password Confirmation');
-		add: (BTButton label: 'Save');
+		add: newPasswordField1;
+		add: newPasswordField2;
+		add: ((BTButton label: 'Save')
+			colorType: #primary;
+			when: #clickedNoEvent send: #trySavingPassword to: self;
+			align: #(end center);
+			yourself);
 		yourself.
 	
 	userAvatarImage := BTImage new

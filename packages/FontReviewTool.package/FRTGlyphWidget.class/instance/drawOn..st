@@ -1,5 +1,6 @@
 drawing
 drawOn: aCanvas
+
 	self isReady ifTrue: [
 		renderer
 			drawGlyphs: self glyphNames

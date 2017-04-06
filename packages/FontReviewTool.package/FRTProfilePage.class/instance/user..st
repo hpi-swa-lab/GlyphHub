@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 user: aUser
 
 	user := aUser.

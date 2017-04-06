@@ -1,6 +1,6 @@
 helper-contours
-curveFrom: from via: controlPoints to: to
+curveFrom: startPoint via: controlPoints to: endPoint
 
-	^ ((Bezier3Segment from: from via: controlPoints first and: controlPoints second to: to)
+	^ ((Bezier3Segment from: startPoint via: controlPoints first and: controlPoints second to: endPoint)
 		asBezier2Segments
 		collect: [ :s | s controlPoints ]) flatten

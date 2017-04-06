@@ -7,4 +7,4 @@ canDrawImmediately: aGlyphNameStringOrCollection
 	list := aGlyphNameStringOrCollection isCollection
 		ifTrue: [aGlyphNameStringOrCollection]
 		ifFalse: [{aGlyphNameStringOrCollection}].
-	^ fontinfo notNil and: [list allSatisfy: [:glyphName| glifs includesKey: glyphName]]
+	^ fontinfo notNil and: [list allSatisfy: [:glyphName | glifs includesKey: glyphName]]

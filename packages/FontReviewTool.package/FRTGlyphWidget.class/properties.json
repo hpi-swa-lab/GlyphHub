@@ -10,7 +10,7 @@
 		"renderer",
 		"pointSize",
 		"font" ],
-	"name" : "FRTGlyphView",
+	"name" : "FRTGlyphWidget",
 	"pools" : [
 		 ],
 	"super" : "BTWidget",

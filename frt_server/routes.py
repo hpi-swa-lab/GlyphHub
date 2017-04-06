@@ -13,6 +13,7 @@ from eve_sqlalchemy import sqla_object_to_dict
 from frt_server.tables import User, Font, Family, Attachment, AttachmentType
 import frt_server.config
 import frt_server.font
+import frt_server.settings
 
 def frt_requires_auth(endpoint_class, resource):
     def fdec(f):
@@ -130,3 +131,8 @@ def register_routes(app):
 
         return jsonify(sqla_object_to_dict(attachment, Attachment.__table__.columns.keys()))
 
+    @app.before_request
+    def before():
+        if frt_server.settings.REQUEST_DEBUG:
+            print(request.headers)
+            print(request.get_data())

@@ -14,17 +14,17 @@ pointsForContour: anXMLNode
 			(self typeFromNode: elements first) = #move
 				ifFalse: [elements add: elements first]].
 
-	previous := self coordFromNode: elements first.
+	previous := self coordinatesFromNode: elements first.
 	
-	elements allButFirstDo: [:point | | type coord |
+	elements allButFirstDo: [:point | | type coordinates |
 		type := self typeFromNode: point.
-		coord := self coordFromNode: point.
+		coordinates := self coordinatesFromNode: point.
 		
-		type = #line ifTrue: [points addAll: (self lineFrom: previous to: coord)].
-		type = #curve ifTrue: [points addAll: (self curveFrom: previous via: controlPoints to: coord)].
-		type = #qcurve ifTrue: [points addAll: (self qcurveFrom: previous via: controlPoints to: coord)].
+		type = #line ifTrue: [points addAll: (self lineFrom: previous to: coordinates)].
+		type = #curve ifTrue: [points addAll: (self curveFrom: previous via: controlPoints to: coordinates)].
+		type = #qcurve ifTrue: [points addAll: (self qcurveFrom: previous via: controlPoints to: coordinates)].
 		type = #offcurve
-			ifTrue: [controlPoints add: coord]
-			ifFalse: [previous := coord. controlPoints removeAll]].
+			ifTrue: [controlPoints add: coordinates]
+			ifFalse: [previous := coordinates. controlPoints removeAll]].
 	
 	^ points
