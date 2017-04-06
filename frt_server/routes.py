@@ -136,3 +136,11 @@ def register_routes(app):
         if frt_server.settings.REQUEST_DEBUG:
             print(request.headers)
             print(request.get_data())
+
+    @app.after_request
+    def after(response):
+        if frt_server.settings.RESPONSE_DEBUG:
+            print(response.status)
+            print(response.headers)
+            print(response.data)
+        return response
