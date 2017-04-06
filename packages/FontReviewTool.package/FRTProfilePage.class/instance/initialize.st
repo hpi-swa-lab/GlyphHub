@@ -1,19 +1,34 @@
 as yet unclassified
 initialize
 
-	| userAvatarImage headingArea |
+	| headingArea changeUsernameArea changePasswordArea |
 	super initialize.
 	
-	userAvatarImage := (BTImage new
+	changeUsernameArea := BTPage column
+		withPadding;
+		add: (BTTextArea placeholder: 'New Username');
+		add: (BTButton label: 'Save');
+		yourself.
+		
+	changePasswordArea := BTPage column
+		withPadding;
+		add: (BTPasswordArea placeholder: 'New Password');
+		add: (BTPasswordArea placeholder: 'New Password Confirmation');
+		add: (BTButton label: 'Save');
+		yourself.
+	
+	userAvatarImage := BTImage new
 		minSize: 66 asPoint;
 		scalingMode: #fixed;
-		path: FileDirectory default / 'BP2016H1' / 'assets' / 'penguin.png').
+		yourself.
+	usernameLabel := BTLabel new align: #(start center).
 		
 	headingArea := (BTPage row
 		add: userAvatarImage;
-		add: (BTLabel heading: 'username');
+		add: usernameLabel;
 		yourself).
 	
 	self
 		add: headingArea;
-		add: (BTLabel text: 'password')
+		add: (BTCard header: 'Change Username' content: changeUsernameArea);
+		add: (BTCard header: 'Change Password' content: changePasswordArea)

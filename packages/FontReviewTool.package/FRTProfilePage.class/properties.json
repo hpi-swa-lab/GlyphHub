@@ -6,7 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
+		"user",
+		"usernameLabel",
+		"userAvatarImage" ],
 	"name" : "FRTProfilePage",
 	"pools" : [
 		 ],
