@@ -1,0 +1,3 @@
+testing
+isPending
+	^ state == #pending

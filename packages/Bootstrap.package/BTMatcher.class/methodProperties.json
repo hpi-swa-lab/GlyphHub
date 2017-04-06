@@ -26,10 +26,11 @@
 		"raise:" : "JH 4/3/2017 14:01",
 		"reject" : "al 3/13/2017 12:37",
 		"rejectWith:" : "al 3/13/2017 12:37",
-		"resolve" : "al 3/13/2017 12:37",
+		"resolve" : "al 4/6/2017 17:39",
 		"resolveWith:" : "al 3/13/2017 12:37",
 		"subject" : "TB 3/6/2017 11:15",
 		"subject:" : "TB 3/6/2017 11:15",
 		"timeout" : "TB 3/11/2017 16:34",
 		"to" : "TB 3/6/2017 10:58",
-		"waitForPromise:" : "TB 3/12/2017 08:14" } }
+		"waitForPromise:" : "TB 3/12/2017 08:14",
+		"waitForPromiseUpdatingWorld:" : "al 4/6/2017 17:56" } }

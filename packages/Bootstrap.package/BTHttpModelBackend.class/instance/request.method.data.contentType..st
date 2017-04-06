@@ -20,14 +20,15 @@ request: path method: method data: anObject contentType: aString
 		(isJsonResponse := response content ~= '' and: [response isSuccess])
 			ifTrue: [data := Json readFrom: response content readStream].
 		
-		response isSuccess
-			ifTrue: [ promise resolveWith: data ]
-			ifFalse: [
-				promise rejectWith: (BTHttpError new
-					response: response;
-					messageText: (isJsonResponse ifTrue: [(data at: '_error') at: 'message'] ifFalse: [data]);
-					statusCode: response code;  
-					yourself) ].
+		Project current addDeferredUIMessage: [
+			response isSuccess
+				ifTrue: [ promise resolveWith: data ]
+				ifFalse: [
+					promise rejectWith: (BTHttpError new
+						response: response;
+						messageText: (isJsonResponse ifTrue: [(data at: '_error') at: 'message'] ifFalse: [data]);
+						statusCode: response code;  
+						yourself)]].
 	] fork.
 	
 	^promise
