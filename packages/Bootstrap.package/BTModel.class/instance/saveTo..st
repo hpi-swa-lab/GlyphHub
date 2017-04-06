@@ -3,7 +3,7 @@ saveTo: aBackend
 
 	| savePromise |
 	self isDirty ifFalse: [^ BTPromise unit: self].
-	self isValid ifFalse: [^ BTPromise new rejectWith: self].
+	self isValid ifFalse: [^ BTPromise new rejectWith: (BTModelValidationFailure new model: self; yourself)].
 	
 	savePromise := self hasDirtyFields
 		ifTrue: [aBackend save: self to: self class modelName]
