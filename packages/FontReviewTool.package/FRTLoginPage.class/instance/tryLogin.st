@@ -1,11 +1,12 @@
 callback
 tryLogin
+
 	| promise |
 	self
 		remove: self loginBox;
 		add: self loader.
 	
-	promise := ((self topLevel backend login: self usernameField text password: self passwordField text)
+	promise := ((self topLevel login: self usernameField text password: self passwordField text)
 		then: [:data |
 			self loginBox remove: self loginFailedAlert.
 			self topLevel openPage: FRTProjectOverviewPage new])
@@ -15,4 +16,4 @@ tryLogin
 		remove: self loader;
 		add: self loginBox.
 		
-	^promise
+	^ promise
