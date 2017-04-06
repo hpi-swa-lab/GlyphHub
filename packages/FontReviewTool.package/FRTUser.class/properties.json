@@ -8,7 +8,8 @@
 	"instvars" : [
 		"password",
 		"username",
-		"comments" ],
+		"comments",
+		"fonts" ],
 	"name" : "FRTUser",
 	"pools" : [
 		 ],
