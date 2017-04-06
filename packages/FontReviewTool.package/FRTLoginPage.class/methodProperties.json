@@ -2,7 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"initialize" : "TB 3/30/2017 14:47",
+		"initialize" : "TB 4/6/2017 11:11",
 		"loader" : "lcj 3/30/2017 10:55",
 		"loader:" : "lcj 3/30/2017 10:55",
 		"loginBox" : "al 3/29/2017 14:10",
@@ -13,6 +13,8 @@
 		"loginFailedAlert:" : "al 3/29/2017 12:09",
 		"passwordField" : "al 3/29/2017 12:09",
 		"passwordField:" : "al 3/29/2017 12:09",
-		"tryLogin" : "al 4/6/2017 10:17",
+		"redirectPage" : "TB 4/6/2017 11:10",
+		"redirectPage:" : "TB 4/6/2017 11:10",
+		"tryLogin" : "TB 4/6/2017 11:11",
 		"usernameField" : "al 3/29/2017 12:09",
 		"usernameField:" : "al 3/29/2017 12:09" } }
