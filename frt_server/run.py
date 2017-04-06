@@ -3,6 +3,7 @@ from eve import Eve
 
 from eve.auth import TokenAuth
 from eve_sqlalchemy import SQL
+from eve_sqlalchemy.validation import ValidatorSQL
 
 import copy
 
@@ -55,7 +56,7 @@ def setup_database(app, populate_sample_data=True):
         db.session.commit()
 
 def create_app():
-    app = Eve(data = SQL, auth=TokenAuth)
+    app = Eve(data = SQL, auth=TokenAuth, validator=ValidatorSQL)
     app.auth.app = app
     register_routes(app)
     return app

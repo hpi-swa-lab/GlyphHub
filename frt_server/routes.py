@@ -37,7 +37,7 @@ def register_routes(app):
         password = data.get('password')
 
         if not username or not password:
-            raise Unauthorized('Wrong username and/or password.')
+            raise Unauthorized('Missing username and/or password.')
         else:
             users = app.data.driver.session.query(User).filter_by(username = username).all()
             if users and users[0].check_password(password):
