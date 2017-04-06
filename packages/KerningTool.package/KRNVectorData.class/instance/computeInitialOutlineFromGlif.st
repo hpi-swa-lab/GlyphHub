@@ -8,7 +8,7 @@ computeInitialOutlineFromGlif
 			c := KRNContour new.
 			contour elements do: [ :element |
 				c points add: {
-					(self coordFromNode: element).
+					(self coordinatesFromNode: element).
 					self class pointTypeMappings at: (self typeFromNode: element)} ].
 			
 			c points first second == #cubicOffCurve ifTrue: [ c points addFirst: c points removeLast ].

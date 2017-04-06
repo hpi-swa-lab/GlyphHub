@@ -1,12 +1,13 @@
 drawing
-extentOf: aGlyphNameStringCollection size: aNumber
+extentOf: aGlyphNameStringCollection size: aPointSizeNumber
 	
 	| scaleFactor width |
-	scaleFactor := self scaleFactorAt: aNumber.
+	scaleFactor := self scaleFactorAt: aPointSizeNumber.
 	width := 0.
 	
 	aGlyphNameStringCollection do: [:glyphName | | glif |
-		glif := glifs at: glyphName ifAbsent: [self error: 'Can''t measure requested glif, data not loaded yet. See #loadDataFor:'].
-		width := ((glif firstTagNamed: #advance) attributeAt: #width ifAbsent: [0]) * scaleFactor + width].
+		glif := glifs at: glyphName ifAbsent: [
+			^ self error: 'Can''t measure requested glif, data not loaded yet. See #loadDataFor:'].
+		width := width + (((glif firstTagNamed: #advance) attributeAt: #width ifAbsent: [0]) * scaleFactor)].
 	
 	^ width @ ((fontinfo at: 'ascender') - (fontinfo at: 'descender') * scaleFactor)

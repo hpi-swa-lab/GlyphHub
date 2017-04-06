@@ -1,4 +1,4 @@
 helper-contours
-qcurveFrom: from via: controlPoints to: to
+qcurveFrom: startPoint via: controlPoints to: endPoint
 
-	^ Bezier2Segment from: from via: controlPoints first to: to
+	^ Bezier2Segment from: startPoint via: controlPoints first to: endPoint
