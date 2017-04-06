@@ -30,5 +30,9 @@ initialize
 	
 	self
 		add: headingArea;
-		add: (BTCard header: 'Change Username' content: changeUsernameArea);
-		add: (BTCard header: 'Change Password' content: changePasswordArea)
+		add: ((BTCard header: 'Change Username' content: changeUsernameArea)
+			align: #(start fill);
+			minSize: 400 @ 0);
+		add: ((BTCard header: 'Change Password' content: changePasswordArea)
+			align: #(start fill);
+			minSize: 400 @ 0)
