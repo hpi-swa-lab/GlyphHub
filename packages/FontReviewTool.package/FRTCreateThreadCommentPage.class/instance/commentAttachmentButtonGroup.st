@@ -1,5 +1,6 @@
 initialize-release
 commentAttachmentButtonGroup
+
 	^ BTButtonGroup new
 		add: ((BTButton icon: #paint_brush)
 			when: #clicked send: #openSketchEditor: to: self);
