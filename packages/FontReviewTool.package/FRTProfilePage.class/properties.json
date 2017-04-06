@@ -1,0 +1,16 @@
+{
+	"category" : "FontReviewTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"user",
+		"usernameLabel",
+		"userAvatarImage" ],
+	"name" : "FRTProfilePage",
+	"pools" : [
+		 ],
+	"super" : "BTApplicationPage",
+	"type" : "normal" }

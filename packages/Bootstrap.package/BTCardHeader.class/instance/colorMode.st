@@ -1,3 +1,4 @@
 colors
 colorMode
-	^#darker
+
+	^ #darker

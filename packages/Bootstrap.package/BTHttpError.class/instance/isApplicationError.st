@@ -1,0 +1,4 @@
+promises
+isApplicationError
+	
+	^ true

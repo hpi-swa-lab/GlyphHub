@@ -11,5 +11,5 @@
 	"name" : "BTHttpError",
 	"pools" : [
 		 ],
-	"super" : "Exception",
+	"super" : "Error",
 	"type" : "normal" }

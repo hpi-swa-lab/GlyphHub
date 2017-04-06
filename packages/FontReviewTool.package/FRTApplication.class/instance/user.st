@@ -1,3 +1,4 @@
 initialize-release
 user
-	^user
+
+	^ user

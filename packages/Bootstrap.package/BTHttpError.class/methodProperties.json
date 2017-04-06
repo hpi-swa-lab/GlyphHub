@@ -2,6 +2,9 @@
 	"class" : {
 		 },
 	"instance" : {
+		"defaultAction" : "TB 4/6/2017 10:34",
+		"isApplicationError" : "TB 4/6/2017 10:42",
+		"isResumable" : "TB 4/6/2017 10:35",
 		"response" : "TB 3/27/2017 18:36",
 		"response:" : "TB 3/27/2017 18:36",
 		"statusCode" : "TB 3/27/2017 18:47",

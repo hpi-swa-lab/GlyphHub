@@ -11,7 +11,8 @@
 		"passwordField",
 		"loginButton",
 		"loginBox",
-		"loader" ],
+		"loader",
+		"redirectPage" ],
 	"name" : "FRTLoginPage",
 	"pools" : [
 		 ],
