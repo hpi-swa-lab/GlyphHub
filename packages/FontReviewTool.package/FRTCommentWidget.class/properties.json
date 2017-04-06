@@ -13,5 +13,5 @@
 	"name" : "FRTCommentWidget",
 	"pools" : [
 		 ],
-	"super" : "BTPage",
+	"super" : "BTWidget",
 	"type" : "normal" }

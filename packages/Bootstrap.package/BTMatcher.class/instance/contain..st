@@ -1,3 +1,9 @@
 matching
-contain: aCollection
-	^self assert: (subject includesAllOf: aCollection) operator: 'contain the same as' expected: aCollection
+contain: aCollectionOrValue
+
+	| collection |
+	collection := aCollectionOrValue isCollection
+		ifTrue: [aCollectionOrValue]
+		ifFalse: [{aCollectionOrValue}].
+	
+	^self assert: (subject includesAllOf: collection) operator: 'contain the same as' expected: collection

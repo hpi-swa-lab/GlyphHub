@@ -13,18 +13,21 @@ open
 		req method = 'POST'
 			ifTrue: [ | item |
 				item := Json readFrom: req content readStream.
-				((item at: 'username') = 'peter' and: [(item at: 'password') = 'geheim'])
+				((item at: 'userName') = 'peter' and: [(item at: 'password') = 'geheim'])
 					ifTrue: [
 						req send200Response: '{"token":"sadasdasdasdasd","user_id":1}']
 					ifFalse: [
-						req sendResponseCode: 401 content: '' type: 'text/plain' close: true]]
-			ifFalse: [req sendResponseCode: 405 content: 'Invalid method' type: 'text/plain' close: true]].
+						req sendResponse: (WebResponse newResponse protocol: 'HTTP/1.1' code: 401) content: '']]
+			ifFalse: [req sendResponse: (WebResponse newResponse protocol: 'HTTP/1.1' code: 401) content: '']].
 	
 	" send back a family, replies as if sent as /family/1?embedded={'fonts':1} (aka with the fonts collection populated) "
 	server addService: '/family/1' action: [ :req | req send200Response: familyReply ].
 	
 	" send back a comment, replies as if sent as /comment/1?embedded={'author':1} (aka with the author model populated) "
 	server addService: '/comment/1' action: [ :req | req send200Response: commentReply ].
+	
+	" send back a thread, populated with comments, comment authors, glyphs "
+	server addService: '/thread/1' action: [ :req | req send200Response: threadReply ].
 	
 	{userTable. fontTable} with: #('user' 'font') do: [ :table :tableName |
 		" GET and POST to the collection, e.g. /user "

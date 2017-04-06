@@ -10,7 +10,8 @@
 		"userTable",
 		"fontTable",
 		"familyReply",
-		"commentReply" ],
+		"commentReply",
+		"threadReply" ],
 	"name" : "FRTFakeRestServer",
 	"pools" : [
 		 ],

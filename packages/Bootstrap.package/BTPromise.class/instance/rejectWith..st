@@ -7,9 +7,9 @@ rejectWith: anObject
 		error := anObject.
 		state := #rejected.
 		
-		"rejecters ifEmpty: [
+		(self throwException: error) ifTrue: [
 			(error isKindOf: Exception)
 				ifTrue: [ error signal ]
-				ifFalse: [ self error: 'Unhandled rejection' ]]."
+				ifFalse: [ self error: 'Unhandled rejection' ]].
 		
 		rejecters do: [:r | self evaluateRejecter: r]].

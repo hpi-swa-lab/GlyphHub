@@ -1,10 +1,13 @@
 {
 	"class" : {
+		"associations" : "lcj 4/6/2017 14:24",
 		"modelName" : "TB 3/30/2017 13:41" },
 	"instance" : {
 		"font" : "TB 3/27/2017 17:07",
 		"font:" : "TB 3/27/2017 17:08",
 		"glyphName" : "TB 3/27/2017 17:19",
 		"glyphName:" : "TB 3/27/2017 17:19",
+		"threads" : "lcj 4/6/2017 14:25",
+		"threads:" : "lcj 4/6/2017 14:25",
 		"versionHash" : "TB 3/27/2017 17:07",
 		"versionHash:" : "TB 3/27/2017 17:08" } }

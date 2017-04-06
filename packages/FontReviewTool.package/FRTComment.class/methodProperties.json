@@ -1,9 +1,11 @@
 {
 	"class" : {
-		"associations" : "TB 3/30/2017 17:28",
+		"associations" : "lcj 4/6/2017 12:35",
 		"modelName" : "TB 3/30/2017 13:41" },
 	"instance" : {
-		"author" : "TB 3/27/2017 17:23",
-		"author:" : "TB 3/27/2017 17:24",
-		"text" : "TB 3/27/2017 17:23",
-		"text:" : "TB 3/27/2017 17:23" } }
+		"author" : "lcj 4/6/2017 12:32",
+		"author:" : "lcj 4/6/2017 15:10",
+		"text" : "lcj 4/6/2017 12:32",
+		"text:" : "lcj 4/6/2017 12:32",
+		"thread" : "lcj 4/6/2017 12:32",
+		"thread:" : "lcj 4/6/2017 14:30" } }

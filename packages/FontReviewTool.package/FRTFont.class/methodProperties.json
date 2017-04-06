@@ -1,11 +1,15 @@
 {
 	"class" : {
-		"associations" : "TB 4/5/2017 11:08",
+		"associations" : "lcj 4/6/2017 14:24",
 		"modelName" : "TB 3/28/2017 12:18" },
 	"instance" : {
 		"author" : "TB 4/5/2017 11:07",
 		"author:" : "TB 4/5/2017 11:07",
+		"codepoints" : "lcj 4/6/2017 14:26",
+		"codepoints:" : "lcj 4/6/2017 14:26",
 		"family" : "TB 3/27/2017 17:06",
-		"family:" : "TB 3/27/2017 17:06",
+		"family:" : "lcj 4/6/2017 14:18",
 		"fontName" : "TB 3/27/2017 17:19",
-		"fontName:" : "TB 3/27/2017 17:19" } }
+		"fontName:" : "TB 3/27/2017 17:19",
+		"glyphs" : "lcj 4/6/2017 14:27",
+		"glyphs:" : "lcj 4/6/2017 14:27" } }

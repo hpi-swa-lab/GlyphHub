@@ -4,7 +4,6 @@ save: aModel to: aTableNameString
 	table := self class camelCaseToUnderscore: aTableNameString.
 	
 	aModel backend: self.
-	
 	^ (self
 		request: (aModel id == 0
 			ifTrue: [table]

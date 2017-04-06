@@ -2,9 +2,9 @@ private
 executeBlock: aBlock withValue: anObject forPromise: aPromise
 	| returnValue |
 	[returnValue := aBlock value: anObject] on: Error do: [:newError |
-		newError isApplicationError
-			ifFalse: [^ newError signal]
-			ifTrue: [^ aPromise rejectWith: newError]].
+		(self throwException: newError)
+			ifTrue: [^ newError signal]
+			ifFalse: [^ aPromise rejectWith: newError]].
 	returnValue ifNil: [^self].
 	
 	returnValue == aPromise ifTrue: [^self error: 'Promise cannot chain to itself'].

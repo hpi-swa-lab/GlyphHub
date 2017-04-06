@@ -1,5 +1,7 @@
 testing
 isDirty
+	self hasDirtyFields ifTrue: [^ true].
+
 	querying := true.
 	
 	[dirtyFlags with: self class instVarNames do: [ :dirty :field | | data |

@@ -3,6 +3,7 @@
 		"example" : "JH 4/6/2017 14:46" },
 	"instance" : {
 		"canDrawImmediately:" : "JH 4/6/2017 14:48",
+		"coordFromNode:" : "TB 4/5/2017 15:44",
 		"coordinatesFromNode:" : "JH 4/6/2017 14:51",
 		"curveFrom:via:to:" : "JH 4/6/2017 14:53",
 		"drawGlyphShape:scaleFactor:on:at:color:" : "TB 4/5/2017 15:23",

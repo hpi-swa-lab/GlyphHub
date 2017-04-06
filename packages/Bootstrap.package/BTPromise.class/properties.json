@@ -3,7 +3,7 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		 ],
+		"ThrowAllErrors" ],
 	"commentStamp" : "<historical>",
 	"instvars" : [
 		"onError",

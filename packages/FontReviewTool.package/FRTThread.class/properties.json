@@ -8,7 +8,8 @@
 	"instvars" : [
 		"title",
 		"glyphs",
-		"codepoints" ],
+		"codepoints",
+		"comments" ],
 	"name" : "FRTThread",
 	"pools" : [
 		 ],

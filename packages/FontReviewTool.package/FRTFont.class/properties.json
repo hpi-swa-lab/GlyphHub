@@ -8,7 +8,9 @@
 	"instvars" : [
 		"fontName",
 		"family",
-		"author" ],
+		"author",
+		"codepoints",
+		"glyphs" ],
 	"name" : "FRTFont",
 	"pools" : [
 		 ],

@@ -7,7 +7,8 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"text",
-		"author" ],
+		"author",
+		"thread" ],
 	"name" : "FRTComment",
 	"pools" : [
 		 ],

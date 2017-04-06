@@ -10,7 +10,8 @@
 		"features",
 		"pointSize",
 		"font",
-		"index" ],
+		"index",
+		"thread" ],
 	"name" : "FRTCodepoint",
 	"pools" : [
 		 ],

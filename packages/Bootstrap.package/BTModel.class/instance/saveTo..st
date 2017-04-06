@@ -1,10 +1,15 @@
 operations
 saveTo: aBackend
 
-	self isDirty ifFalse: [ ^ BTPromise unit: self ].
-	self isValid ifFalse: [ ^ BTPromise new rejectWith: self ].
+	| savePromise |
+	self isDirty ifFalse: [^ BTPromise unit: self].
+	self isValid ifFalse: [^ BTPromise new rejectWith: self].
 	
-	^ ((aBackend save: self to: self class modelName)
+	savePromise := self hasDirtyFields
+		ifTrue: [aBackend save: self to: self class modelName]
+		ifFalse: [BTPromise unit: self].
+	
+	^ (savePromise
 		then: [ :model | | promise |
 			querying := true.
 			[promise := model

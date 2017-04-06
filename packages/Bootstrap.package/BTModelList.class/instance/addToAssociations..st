@@ -2,10 +2,10 @@ adding
 addToAssociations: aModel
 
 	self field ifNotNil: [
-		aModel class associations keysAndValuesDo: [ :associationField :association |
-			association second == self field ifTrue: [
+		aModel class associations keysAndValuesDo: [:associationField :association |
+			(association first == self owner class and: [association second == self field]) ifTrue: [
 				association third == #single
-					ifTrue: [ aModel set: associationField to: self owner ]
+					ifTrue: [aModel set: associationField to: self owner]
 					ifFalse: [ | list |
-						list := (aModel get: associationField).
-						(list includes: self owner) ifFalse: [ list add: self owner ]]]]]
+						list := aModel get: associationField.
+						(list includes: self owner) ifFalse: [list add: self owner]]]]]

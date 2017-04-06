@@ -4,6 +4,6 @@ commentThread: aCommentThread
 	
 	title heading: 'Thread: ', aCommentThread title.
 	self
-		loadTags;
+		"loadTags;"
 		loadComments;
 		changed

@@ -2,6 +2,7 @@ accessing
 associations
 	
 	^ {
-		#glyphs -> {FRTGlyph. #thread. #many}.
-		#codepoints -> {FRTCodepoint. #thread. #many}
+		#glyphs -> {FRTGlyph. #threads. #many}.
+		#codepoints -> {FRTCodepoint. #thread. #many}.
+		#comments -> {FRTComment. #thread. #many}
 	} as: Dictionary

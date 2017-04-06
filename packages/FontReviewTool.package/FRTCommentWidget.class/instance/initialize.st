@@ -1,5 +1,6 @@
 initialize-release
 initialize
+
 	super initialize.
 	
 	image := BTImage new
@@ -9,10 +10,11 @@ initialize
 	metaInfo := BTLabel new.
 	
 	self
+		withLayout;
 		vResizing: #shrinkWrap;
 		vertical: false;
 		add: (BTPage row
 			add: image;
 			add: (BTPage column
 				add: metaInfo;
-				add: commentText)).
+				add: commentText))

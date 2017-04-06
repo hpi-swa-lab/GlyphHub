@@ -2,7 +2,7 @@ removing
 remove: aModel ifAbsent: aBlock
 
 	super remove: aModel ifAbsent: aBlock.
-		
+	
 	self field
 		ifNotNil: [
 			aModel class associations keysAndValuesDo: [ :associationField :association |

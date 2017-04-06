@@ -16,14 +16,11 @@ initialize
 	self
 		add: (BTPage row
 			add: titleContainer;
-			add: (BTButtonGroup new
-				add: ((BTButton icon: #paint_brush)
-					when: #clicked send: #openSketchEditor: to: self);
-				add: ((BTButton icon: #object_ungroup)
-					when: #clicked send: #openCurveEditor: to: self);
-				add: ((BTButton icon: #camera)
-					when: #clicked send: #openFilePicker: to: self)));
+			add: self commentAttachmentButtonGroup);
 		add: preview;
 		add: glyphLinkContainer;
 		add: commentText;
-		add: ((BTButton text: 'Save') colorType: #primary; align: #(end start))
+		add: ((BTButton text: 'Save')
+			colorType: #primary;
+			align: #(end start);
+			when: #clicked send: #saveComment: to: self)
