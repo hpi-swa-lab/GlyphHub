@@ -2,4 +2,4 @@ loading
 loadTags
 
 	tagArea removeAllMorphs.
-	self commentThread tags do: [ :each | tagArea add: (BTBadge text: each) ].
+	self thread tags do: [ :each | tagArea add: (BTBadge text: each) ].

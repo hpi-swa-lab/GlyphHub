@@ -1,5 +1,6 @@
 navigation
 breadcrumbs
-	^self glyph
+
+	^ self glyph
 		ifNil: [ {} ]
 		ifNotNil: [ self flag: #todo. {} ]

@@ -1,0 +1,14 @@
+{
+	"category" : "FontReviewTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"thread" ],
+	"name" : "FRTThreadCodepointsPreviewLabel",
+	"pools" : [
+		 ],
+	"super" : "BTLabel",
+	"type" : "normal" }

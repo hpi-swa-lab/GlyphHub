@@ -1,5 +1,6 @@
 initialize-release
 initialize
+
 	| image overlay |
 	super initialize.
 	
