@@ -1,5 +1,6 @@
-initialize-release
-saveComment: anEvent
+callbacks
+saveComment
+"Saves a new comment to an existing thread or a new comment while creating a new thread for it"
 
 	| threadPromise |
 	threadPromise := self thread isCreated
@@ -20,4 +21,4 @@ saveComment: anEvent
 			comment saveTo: self topLevel backend])
 		then: [:comment |
 			self topLevel openPage: (FRTThreadPage new commentThread: self thread)])
-		catch: [:x | self topLevel displayNotification: 'Saving failed. Please try again.' type: #danger]
+		catch: [:error | self topLevel displayNotification: 'Saving failed. Please try again.' type: #danger]
