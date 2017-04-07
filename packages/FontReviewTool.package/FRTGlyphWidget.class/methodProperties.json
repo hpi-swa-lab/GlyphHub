@@ -1,6 +1,8 @@
 {
 	"class" : {
-		 },
+		"exampleAllGlyphs" : "TB 4/7/2017 11:42",
+		"new" : "TB 4/7/2017 11:08",
+		"newWithRenderer:" : "TB 4/7/2017 11:08" },
 	"instance" : {
 		"drawOn:" : "JH 4/6/2017 14:14",
 		"font" : "TB 4/5/2017 17:42",
@@ -8,6 +10,8 @@
 		"glyphNames" : "TB 4/5/2017 15:49",
 		"glyphNames:" : "TB 4/5/2017 16:45",
 		"initialize" : "TB 4/5/2017 17:42",
+		"initializeWithRenderer:" : "TB 4/7/2017 11:09",
+		"initializeWithoutRenderer" : "TB 4/7/2017 11:07",
 		"isReady" : "TB 4/5/2017 15:55",
 		"pointSize" : "TB 4/5/2017 15:56",
 		"pointSize:" : "TB 4/5/2017 15:56",

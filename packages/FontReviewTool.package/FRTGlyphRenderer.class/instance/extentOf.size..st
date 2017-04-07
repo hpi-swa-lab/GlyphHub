@@ -1,4 +1,4 @@
-drawing
+geometry
 extentOf: aGlyphNameStringCollection size: aPointSizeNumber
 	
 	| scaleFactor width |
