@@ -1,4 +1,4 @@
-as yet unclassified
+updating
 updatePreview
 	
 	self text: (((self thread codepoints

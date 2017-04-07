@@ -19,5 +19,5 @@ saveComment: anEvent
 			
 			comment saveTo: self topLevel backend])
 		then: [:comment |
-			self topLevel openPage: (FRTThreadPage new commentThread: self thread)])
+			self topLevel openPage: (FRTThreadPage new thread: self thread)])
 		catch: [:x | self topLevel displayNotification: 'Saving failed. Please try again.' type: #danger]
