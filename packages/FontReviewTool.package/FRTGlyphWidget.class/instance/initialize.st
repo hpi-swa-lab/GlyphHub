@@ -1,6 +1,6 @@
 initialize-release
 initialize
-
+	
 	super initialize.
 	
-	renderer := FRTGlyphRenderer new
+	self centered: false  

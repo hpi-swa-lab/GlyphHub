@@ -1,7 +1,7 @@
 initialize-release
 initializeWithRenderer: aRenderer
 
-	super initialize.
+	self initialize.
 	
 	renderer := aRenderer.
 	self font: aRenderer font

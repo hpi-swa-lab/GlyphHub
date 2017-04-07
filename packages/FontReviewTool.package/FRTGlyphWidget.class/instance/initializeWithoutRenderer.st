@@ -1,6 +1,6 @@
 initialize-release
 initializeWithoutRenderer
 
-	super initialize.
+	self initialize.
 	
 	renderer := FRTGlyphRenderer new

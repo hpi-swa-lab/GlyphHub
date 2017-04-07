@@ -9,7 +9,8 @@
 		"glyphNames",
 		"renderer",
 		"pointSize",
-		"font" ],
+		"font",
+		"centered" ],
 	"name" : "FRTGlyphWidget",
 	"pools" : [
 		 ],

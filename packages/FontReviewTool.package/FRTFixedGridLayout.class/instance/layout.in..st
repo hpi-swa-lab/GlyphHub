@@ -7,7 +7,7 @@ layout: aWidget in: aBox
 	
 	aWidget submorphs do: [ :widget |
 		widget bounds: (aBox origin + (x @ y) extent: cellSize).
-		x := x + cellSize x.
+		x := x + cellSize x + aWidget spacing.
 		x + cellSize x >= aBox width ifTrue: [
-			y := y + cellSize y.
+			y := y + cellSize y + aWidget spacing.
 			x := 0]]
