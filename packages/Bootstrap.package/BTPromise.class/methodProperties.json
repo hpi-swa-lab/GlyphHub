@@ -9,9 +9,9 @@
 		"->" : "TB 3/29/2017 10:47",
 		"catch:" : "TB 3/29/2017 10:47",
 		"error" : "TB 3/29/2017 10:47",
-		"evaluateRejecter:" : "TB 3/29/2017 10:47",
-		"evaluateResolver:" : "TB 3/29/2017 10:47",
-		"executeBlock:withValue:forPromise:" : "lcj 4/6/2017 12:10",
+		"evaluateRejecter:" : "ek 4/7/2017 10:37",
+		"evaluateResolver:" : "ek 4/7/2017 10:36",
+		"executeBlock:withValue:forPromise:" : "ek 4/7/2017 10:38",
 		"ifRejected:" : "TB 3/29/2017 10:47",
 		"initialize" : "TB 3/29/2017 10:47",
 		"initializeWithIfRejected:" : "TB 3/29/2017 10:47",
@@ -31,4 +31,4 @@
 		"waitTimeoutMSecs:" : "TB 3/29/2017 10:47",
 		"waitTimeoutSeconds:" : "TB 3/29/2017 10:47",
 		"whenRejected:" : "TB 3/29/2017 10:47",
-		"whenResolved:" : "TB 3/29/2017 10:47" } }
+		"whenResolved:" : "ek 4/7/2017 10:36" } }

@@ -60,7 +60,7 @@ class Comment(CommonColumns):
     author_id = Column('author_id', Integer, ForeignKey('user._id'))
     thread = relationship('Thread', back_populates='comments')
     author = relationship('User')
-    attachment = relationship('Attachment', back_populates='comment')
+    attachments = relationship('Attachment', back_populates='comment')
 
 class AttachmentType(enum.IntEnum):
     picture = 1
@@ -76,7 +76,7 @@ class Attachment(CommonColumns):
     annotation = Column(LargeBinary)
     comment_id = Column('comment_id', Integer, ForeignKey('comment._id'))
     owner_id = Column('owner_id', Integer, ForeignKey('user._id'))
-    comment = relationship('Comment', back_populates='attachment')
+    comment = relationship('Comment', back_populates='attachments')
     owner = relationship('User', back_populates='attachments')
 
     def file_path(self):

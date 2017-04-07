@@ -7,8 +7,9 @@
 	"commentStamp" : "TB 3/30/2017 15:20",
 	"instvars" : [
 		"title",
+		"preview",
 		"commentArea",
-		"commentThread",
+		"thread",
 		"tagArea" ],
 	"name" : "FRTThreadPage",
 	"pools" : [

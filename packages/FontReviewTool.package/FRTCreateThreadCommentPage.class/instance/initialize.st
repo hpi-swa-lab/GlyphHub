@@ -3,7 +3,7 @@ initialize
 
 	super initialize.
 	
-	preview := BTLabel new
+	preview := FRTThreadCodepointsPreviewLabel new
 		align: #(center center);
 		styleAttributes: {'size' -> '60000'}.
 	titleContainer := BTPage new expand: true.

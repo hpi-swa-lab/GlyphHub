@@ -1,5 +1,6 @@
 converting
 printDate: aDateAndTime
+
 	| dayMonth time |
 	time := (aDateAndTime hour asString padded: #left to: 2 with: $0), ':', (aDateAndTime minute asString padded: #left to: 2 with: $0).
 	dayMonth := aDateAndTime dayOfMonth asString, '. ', aDateAndTime monthAbbreviation.

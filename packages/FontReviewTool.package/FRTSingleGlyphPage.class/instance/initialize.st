@@ -1,5 +1,6 @@
 initialize-release
 initialize
+
 	|  glyphArea glyphDetailArea commentThreadArea glyphDetailButtonRow |
 	super initialize.
 	

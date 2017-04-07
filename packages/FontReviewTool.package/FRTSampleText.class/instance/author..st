@@ -1,3 +1,4 @@
 accessing
 author: aUser
-	self update: #author with: aUser foreignField: #sampleTexts
+
+	self update: #author with: aUser collectionForeignField: #sampleTexts

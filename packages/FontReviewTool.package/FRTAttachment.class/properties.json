@@ -10,7 +10,8 @@
 		"type",
 		"data1",
 		"data2",
-		"annotation" ],
+		"annotation",
+		"owner" ],
 	"name" : "FRTAttachment",
 	"pools" : [
 		 ],

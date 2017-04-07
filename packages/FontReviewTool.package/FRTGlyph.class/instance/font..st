@@ -1,3 +1,4 @@
 accessing
 font: aFont
-	self update: #font with: aFont foreignField: #glyphs
+
+	self update: #font with: aFont collectionForeignField: #glyphs

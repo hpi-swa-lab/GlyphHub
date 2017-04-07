@@ -1,8 +1,15 @@
 {
 	"class" : {
-		"modelName" : "TB 3/30/2017 13:42" },
+		"associations" : "lcj 4/7/2017 11:06",
+		"modelName" : "lcj 4/7/2017 10:58" },
 	"instance" : {
-		"text" : "TB 3/27/2017 16:33",
-		"text:" : "TB 3/27/2017 16:34",
-		"type" : "TB 3/27/2017 16:34",
-		"type:" : "TB 3/27/2017 16:34" } }
+		"fonts" : "lcj 4/7/2017 11:08",
+		"fonts:" : "lcj 4/7/2017 11:33",
+		"sampleTexts" : "lcj 4/7/2017 11:08",
+		"sampleTexts:" : "lcj 4/7/2017 11:32",
+		"text" : "lcj 4/7/2017 10:57",
+		"text:" : "lcj 4/7/2017 10:57",
+		"threads" : "lcj 4/7/2017 11:08",
+		"threads:" : "lcj 4/7/2017 11:32",
+		"type" : "lcj 4/7/2017 10:57",
+		"type:" : "lcj 4/7/2017 10:57" } }

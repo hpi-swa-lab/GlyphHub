@@ -1,6 +1,6 @@
 callbacks
 saveComment
-"Saves a new comment to an existing thread or a new comment while creating a new thread for it"
+	"Saves a new comment to an existing thread or a new comment while creating a new thread for it"
 
 	| threadPromise |
 	threadPromise := self thread isCreated
@@ -20,5 +20,5 @@ saveComment
 			
 			comment saveTo: self topLevel backend])
 		then: [:comment |
-			self topLevel openPage: (FRTThreadPage new commentThread: self thread)])
+			self topLevel openPage: (FRTThreadPage new thread: self thread)])
 		catch: [:error | self topLevel displayNotification: 'Saving failed. Please try again.' type: #danger]

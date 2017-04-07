@@ -10,7 +10,8 @@
 		"family",
 		"author",
 		"codepoints",
-		"glyphs" ],
+		"glyphs",
+		"tags" ],
 	"name" : "FRTFont",
 	"pools" : [
 		 ],

@@ -1,3 +1,4 @@
 accessing
 glyph
-	^glyph
+
+	^ glyph

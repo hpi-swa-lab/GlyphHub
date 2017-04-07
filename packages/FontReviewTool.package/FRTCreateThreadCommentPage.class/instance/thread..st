@@ -5,5 +5,5 @@ thread: aThread
 	
 	self
 		updateTitle: aThread;
-		updateGlyphLinks: aThread;
-		updatePreview: aThread
+		updateGlyphLinks: aThread.
+	preview thread: aThread
