@@ -5,10 +5,10 @@ updateList
 		removeAllMorphs;
 		add: BTDivider new.
 	
-	((FRTFamily loadAllFrom: self topLevel backend populate: #('fonts' 'fonts.author'))
+	^ ((FRTFamily loadAllFrom: self topLevel backend populate: #('fonts' 'fonts.author'))
 		then: [:families |
-			(families do: [:family |
+			families do: [:family |
 				familyList
 					add: (self createFamilyPreview: family);
-					add: BTDivider new])])
+					add: BTDivider new]])
 		catch: [:err | self add: (BTAlert text: 'Failed to load font list.' type: #danger)]

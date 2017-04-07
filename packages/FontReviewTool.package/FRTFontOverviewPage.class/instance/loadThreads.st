@@ -1,7 +1,7 @@
 initialize-release
 loadThreads
 
-	(FRTFont
+	^ (FRTFont
 		load: self font id
 		populate: #(glyphs 'glyphs.threads' 'glyphs.threads.comments' 'glyphs.threads.comments.author')
 		from: self topLevel backend)

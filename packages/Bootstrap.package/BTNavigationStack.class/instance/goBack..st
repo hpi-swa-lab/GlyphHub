@@ -1,3 +1,4 @@
 navigation
 goBack: aNumber
-	^self go: aNumber negated
+
+	^ self go: aNumber negated

@@ -2,7 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"login:password:expectSuccessfulLogIn:" : "TB 4/6/2017 11:11",
+		"login:password:expectSuccessfulLogIn:" : "TB 4/7/2017 18:14",
 		"setUp" : "al 3/29/2017 16:15",
 		"tearDown" : "al 3/29/2017 15:23",
 		"testCorrectingWrongCredentials" : "lcj 3/30/2017 11:32",

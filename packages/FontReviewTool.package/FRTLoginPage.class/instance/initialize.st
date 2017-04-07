@@ -4,7 +4,7 @@ initialize
 	super initialize.
 
 	self
-		redirectPage: FRTProjectOverviewPage new;
+		redirectPage: {FRTProjectOverviewPage new. nil};
 		loginButton: ((BTButton label: 'Login')
 			colorType: #primary;
 			when: #clickedNoEvent send: #tryLogin to: self;

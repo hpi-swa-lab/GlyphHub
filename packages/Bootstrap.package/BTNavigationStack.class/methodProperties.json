@@ -2,14 +2,16 @@
 	"class" : {
 		 },
 	"instance" : {
+		"application" : "TB 4/7/2017 18:34",
+		"application:" : "TB 4/7/2017 18:34",
 		"canGoBack" : "TB 3/13/2017 11:25",
 		"canGoForward" : "TB 3/13/2017 11:25",
-		"current:" : "TB 3/13/2017 14:15",
-		"go:" : "TB 3/31/2017 10:57",
-		"goBack" : "TB 3/13/2017 14:25",
-		"goBack:" : "TB 3/13/2017 14:25",
+		"current:" : "TB 4/7/2017 18:51",
+		"go:" : "TB 4/7/2017 18:27",
+		"goBack" : "TB 4/7/2017 17:42",
+		"goBack:" : "TB 4/7/2017 18:22",
 		"goForward" : "TB 3/13/2017 11:26",
-		"goForward:" : "TB 3/13/2017 14:25",
+		"goForward:" : "TB 4/7/2017 18:22",
 		"initialize" : "TB 3/13/2017 11:27",
-		"open:" : "TB 3/13/2017 14:25",
+		"open:with:" : "TB 4/7/2017 18:20",
 		"triggerOpened:" : "TB 3/13/2017 14:03" } }

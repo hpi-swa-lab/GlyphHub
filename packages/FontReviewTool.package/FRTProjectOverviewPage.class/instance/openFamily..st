@@ -3,7 +3,4 @@ openFamily: aFamily
 
 	| fontOverviewPage |
 	fontOverviewPage := FRTFontOverviewPage new.
-	self topLevel openPage: fontOverviewPage.
-	fontOverviewPage
-		font: aFamily fonts anyOne;
-		family: aFamily
+	self topLevel openPage: fontOverviewPage with: aFamily

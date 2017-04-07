@@ -1,14 +1,19 @@
 initialize-release
 initializeWithPage: aPage
 
+	loadingOperationCounter := 0.
 	openPage := aPage.
-	
+	navigationStack := BTNavigationStack new
+		application: self;
+		yourself.
 	breadcrumbs := BTButtonGroup new.
+	
+	loadingWidget := BTWidget new.
 	
 	header := BTPage row
 		withPadding;
-		add: ((BTIconButton icon: #arrow_left) when: #clickedNoEvent send: #goBack to: navigationStack);
-		add: ((BTIconButton icon: #arrow_right) when: #clickedNoEvent send: #goForward to: navigationStack);
+		add: ((BTIconButton icon: #arrow_left) when: #clickedNoEvent send: #goBack to: self);
+		add: ((BTIconButton icon: #arrow_right) when: #clickedNoEvent send: #goForward to: self);
 		add: breadcrumbs;
 		add: BTWidget spacer;
 		add: ((BTTextArea placeholder: 'search') minSize: self searchbarWidth @ 0).
@@ -28,7 +33,7 @@ initializeWithPage: aPage
 		add: BTDivider new;
 		add: contentContainer.
 	
-	navigationStack := BTNavigationStack new
-		open: aPage;
+	navigationStack
+		open: aPage with: nil;
 		when: #opened send: #privateOpenPage: to: self;
 		yourself

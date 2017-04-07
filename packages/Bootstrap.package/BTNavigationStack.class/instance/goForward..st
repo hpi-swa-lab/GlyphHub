@@ -1,3 +1,4 @@
 navigation
 goForward: aNumber
-	^self go: aNumber
+
+	^ self go: aNumber

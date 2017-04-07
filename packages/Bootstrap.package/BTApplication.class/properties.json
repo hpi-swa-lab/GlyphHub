@@ -10,7 +10,9 @@
 		"header",
 		"openPage",
 		"breadcrumbs",
-		"contentContainer" ],
+		"contentContainer",
+		"loadingOperationCounter",
+		"loadingWidget" ],
 	"name" : "BTApplication",
 	"pools" : [
 		 ],

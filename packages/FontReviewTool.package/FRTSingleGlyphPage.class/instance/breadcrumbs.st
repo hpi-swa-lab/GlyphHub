@@ -4,6 +4,6 @@ breadcrumbs
 	^ self glyph
 		ifNil: [{}]
 		ifNotNil: [
-			{{''. #home. []}.
-			 {self glyph font fontName. #font. []}.
-			 {'Glyph ', self glyph glyphName. #info_circle. []}}]
+			{{''. #home. {FRTProjectOverviewPage. nil}}.
+			 {self glyph font fontName. #font. {FRTFontOverviewPage. self glyph font family}}.
+			 {'Glyph ', self glyph glyphName. #info_circle. {nil. nil}}}]

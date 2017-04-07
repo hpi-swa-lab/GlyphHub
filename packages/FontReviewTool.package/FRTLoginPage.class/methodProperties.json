@@ -2,7 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"initialize" : "ek 4/7/2017 11:26",
+		"initialize" : "TB 4/7/2017 18:14",
 		"loader" : "ek 4/7/2017 11:27",
 		"loader:" : "ek 4/7/2017 11:27",
 		"loginBox" : "al 3/29/2017 14:10",
@@ -15,6 +15,6 @@
 		"passwordField:" : "al 3/29/2017 12:09",
 		"redirectPage" : "TB 4/6/2017 11:10",
 		"redirectPage:" : "TB 4/6/2017 11:10",
-		"tryLogin" : "TB 4/6/2017 11:11",
+		"tryLogin" : "TB 4/7/2017 18:53",
 		"usernameField" : "al 3/29/2017 12:09",
 		"usernameField:" : "al 3/29/2017 12:09" } }

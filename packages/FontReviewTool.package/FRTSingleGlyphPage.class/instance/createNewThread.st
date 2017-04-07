@@ -4,4 +4,4 @@ createNewThread
 	| thread |
 	thread := FRTThread new.
 	thread glyphs add: self glyph.
-	self topLevel openPage: (FRTCreateThreadCommentPage new thread: thread)
+	self topLevel openPage: FRTCreateThreadCommentPage new with: thread

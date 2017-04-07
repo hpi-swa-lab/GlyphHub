@@ -1,4 +1,0 @@
-updating
-entering
-
-	self updateList

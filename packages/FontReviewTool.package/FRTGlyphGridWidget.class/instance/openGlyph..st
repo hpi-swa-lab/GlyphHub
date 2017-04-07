@@ -9,8 +9,4 @@ openGlyph: aGlyphName
 						glyphName: aGlyphName;
 						saveTo: self topLevel backend]
 				ifNotEmpty: [glyphs first]])
-		then: [:glyph | | page |
-			page := FRTSingleGlyphPage new.
-			self topLevel openPage: page.
-			page glyph: glyph])
-		whenRejected: #signal
+		then: [:glyph | self topLevel openPage: FRTSingleGlyphPage new with: glyph])
