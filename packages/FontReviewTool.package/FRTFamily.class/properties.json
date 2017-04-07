@@ -7,7 +7,8 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"familyName",
-		"fonts" ],
+		"fonts",
+		"tags" ],
 	"name" : "FRTFamily",
 	"pools" : [
 		 ],

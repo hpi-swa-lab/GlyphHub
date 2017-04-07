@@ -1,11 +1,12 @@
 ui
 scriptTagArea
 
-	| tagList labeledTextArea |
-	tagList := BTTagList new.
+	| labeledTextArea |
+	tagList := BTTagList new
+		padding: 0@0.
 	
 	labeledTextArea := ((BTTextAreaWithLabel
-		text: 'Tag scripts and languages'
+		text: 'Tag Scripts and Languages'
 		placeholder: 'Start Typing for Autocomplete' 
 		textAreaClass: BTTextCompletion)).
 	

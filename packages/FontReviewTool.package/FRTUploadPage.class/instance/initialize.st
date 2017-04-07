@@ -10,7 +10,7 @@ initialize
 		add: (BTLabel heading: 'Upload new Project');
 		add: familyNameBox;
 		add: self uploadArea;
-		"add: self scriptTagArea;"
+		add: self scriptTagArea;
 		add: (((BTButton text: 'Create Project')
 			colorType: #primary;
 			when: #clickedNoEvent send: #tryUpload to: self;

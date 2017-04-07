@@ -9,7 +9,8 @@
 		"familyNameBox",
 		"stream",
 		"uploadedFileLabel",
-		"alertArea" ],
+		"alertArea",
+		"tagList" ],
 	"name" : "FRTUploadPage",
 	"pools" : [
 		 ],

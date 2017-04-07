@@ -10,7 +10,8 @@
 		"type",
 		"sampleTexts",
 		"fonts",
-		"threads" ],
+		"threads",
+		"families" ],
 	"name" : "FRTTag",
 	"pools" : [
 		 ],
