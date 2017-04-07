@@ -1,0 +1,1 @@
+A FRTProjectOverviewPage gives an overview over all registered families of all users in the database.

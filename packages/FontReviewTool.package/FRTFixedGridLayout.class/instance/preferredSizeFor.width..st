@@ -1,4 +1,4 @@
-as yet unclassified
+layout
 preferredSizeFor: aWidget width: aNumber
 
 	| n columns rows minColumns natSize |

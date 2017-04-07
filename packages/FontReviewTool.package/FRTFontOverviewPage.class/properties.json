@@ -1,0 +1,26 @@
+{
+	"category" : "FontReviewTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "JH 4/7/2017 17:22",
+	"instvars" : [
+		"font",
+		"family",
+		"fontInfo",
+		"fontNameLabel",
+		"fontAuthorLabel",
+		"recentChangesPage",
+		"allGlyphsPage",
+		"openDicsussionsPage",
+		"tabContainer",
+		"glyphNames",
+		"gridWidget",
+		"renderer",
+		"threadsContainer" ],
+	"name" : "FRTFontOverviewPage",
+	"pools" : [
+		 ],
+	"super" : "BTApplicationPage",
+	"type" : "normal" }

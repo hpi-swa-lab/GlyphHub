@@ -1,0 +1,1 @@
+A FRTFixedGridLayout displays the given items in a top-left to bottom-right grid with cells of a fixed size.

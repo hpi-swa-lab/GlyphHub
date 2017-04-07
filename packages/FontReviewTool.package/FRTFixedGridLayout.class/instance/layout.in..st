@@ -1,4 +1,4 @@
-as yet unclassified
+layout
 layout: aWidget in: aBox
 	
 	| x y |

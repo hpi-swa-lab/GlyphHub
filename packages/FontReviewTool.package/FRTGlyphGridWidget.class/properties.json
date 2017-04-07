@@ -1,0 +1,17 @@
+{
+	"category" : "FontReviewTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "JH 4/7/2017 17:23",
+	"instvars" : [
+		"glyphNames",
+		"renderer",
+		"pointSize",
+		"font" ],
+	"name" : "FRTGlyphGridWidget",
+	"pools" : [
+		 ],
+	"super" : "BTWidget",
+	"type" : "normal" }

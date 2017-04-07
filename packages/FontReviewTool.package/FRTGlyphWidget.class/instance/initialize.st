@@ -3,4 +3,6 @@ initialize
 	
 	super initialize.
 	
-	self centered: false  
+	self
+		centered: false;
+		square: false
