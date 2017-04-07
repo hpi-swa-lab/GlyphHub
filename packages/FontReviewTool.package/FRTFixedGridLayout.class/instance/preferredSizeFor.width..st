@@ -5,7 +5,7 @@ preferredSizeFor: aWidget width: aNumber
 	aWidget hasSubmorphs ifFalse: [^ {0 asPoint. 0 asPoint}].
 	
 	n := aWidget submorphCount.
-	columns := (aNumber / cellSize x) floor.
+	columns := (aNumber / cellSize x) floor max: 1.
 	rows := (n / columns) ceiling.
 	" try not to fill all the space unless uncessary (case where n < columns) "
 	minColumns := columns min: n.
