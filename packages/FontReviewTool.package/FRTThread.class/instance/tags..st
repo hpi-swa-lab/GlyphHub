@@ -1,4 +1,4 @@
 accessing
-tags: aListOfTags
-	
-	self update: #tags with: aListOfTags collectionForeignField: #threads
+tags: aList
+
+	tags := aList

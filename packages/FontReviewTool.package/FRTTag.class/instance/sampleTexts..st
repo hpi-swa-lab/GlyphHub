@@ -1,4 +1,4 @@
 accessing
-sampleTexts: aListOfTexts
+sampleTexts: aList
 	
-	self update: #sampleTexts with: aListOfTexts collectionForeignField: #tags
+	sampleTexts := aList

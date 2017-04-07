@@ -1,4 +1,4 @@
 accessing
-fonts: aListOfFonts
+fonts: aList
 	
-	self update: #fonts with: aListOfFonts collectionForeignField: #tags
+	fonts := aList

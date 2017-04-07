@@ -1,4 +1,4 @@
 accessing
-threads: aListOfThreads
-	
-	self update: #threads with: aListOfThreads collectionForeignField: #glyphs
+threads: aList
+
+	threads := aList
