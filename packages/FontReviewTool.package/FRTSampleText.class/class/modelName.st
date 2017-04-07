@@ -1,3 +1,4 @@
 accessing
 modelName
-	^'sampleText'
+
+	^ 'sampleText'

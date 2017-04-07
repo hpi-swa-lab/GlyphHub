@@ -60,7 +60,7 @@ class Comment(CommonColumns):
     author_id = Column('author_id', Integer, ForeignKey('user._id'))
     thread = relationship('Thread', back_populates='comments')
     author = relationship('User')
-    attachment = relationship('Attachment', back_populates='comment')
+    attachments = relationship('Attachment', back_populates='comment')
 
 class AttachmentType(enum.IntEnum):
     picture = 1

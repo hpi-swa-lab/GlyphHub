@@ -1,3 +1,4 @@
 accessing
 pointSize
-	^size
+
+	^ pointSize

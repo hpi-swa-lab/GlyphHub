@@ -9,7 +9,8 @@
 		"title",
 		"glyphs",
 		"codepoints",
-		"comments" ],
+		"comments",
+		"tags" ],
 	"name" : "FRTThread",
 	"pools" : [
 		 ],

@@ -7,7 +7,10 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"text",
-		"type" ],
+		"type",
+		"sampleTexts",
+		"fonts",
+		"threads" ],
 	"name" : "FRTTag",
 	"pools" : [
 		 ],

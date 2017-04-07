@@ -1,4 +1,4 @@
 accessing
 author: anAuthor
 
-	author := anAuthor
+	self update: #author with: anAuthor collectionForeignField: #fonts
