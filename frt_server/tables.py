@@ -76,7 +76,7 @@ class Attachment(CommonColumns):
     annotation = Column(LargeBinary)
     comment_id = Column('comment_id', Integer, ForeignKey('comment._id'))
     owner_id = Column('owner_id', Integer, ForeignKey('user._id'))
-    comment = relationship('Comment', back_populates='attachment')
+    comment = relationship('Comment', back_populates='attachments')
     owner = relationship('User', back_populates='attachments')
 
     def file_path(self):
