@@ -1,6 +1,8 @@
 {
 	"class" : {
-		 },
+		"cellSize:" : "TB 4/7/2017 10:18" },
 	"instance" : {
-		"layout:in:" : "TB 4/6/2017 18:09",
-		"preferredSizeFor:width:" : "TB 4/6/2017 18:13" } }
+		"cellSize" : "TB 4/7/2017 10:18",
+		"cellSize:" : "TB 4/7/2017 11:16",
+		"layout:in:" : "TB 4/7/2017 11:24",
+		"preferredSizeFor:width:" : "TB 4/7/2017 10:40" } }
