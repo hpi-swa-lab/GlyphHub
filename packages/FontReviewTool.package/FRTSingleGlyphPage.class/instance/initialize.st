@@ -1,31 +1,35 @@
 initialize-release
 initialize
 
-	|  glyphArea glyphDetailArea commentThreadArea glyphDetailButtonRow |
+	|  glyphArea glyphDetailArea glyphDetailButtonRow |
 	super initialize.
 	
 	glyphName := BTLabel new.
+	unicodeLabel := BTLabel new.
 	
 	glyphDetailButtonRow := BTPage row
-		add: ((BTButton label: 'See previous versions') colorType: #secondary);
-		add: ((BTButton label: 'New Comment Thread')
+		add: ((BTButton label: (BTIcon icon: #history), ' See previous versions') colorType: #secondary);
+		add: ((BTButton label: (BTIcon icon: #comment_o), ' New Comment Thread')
 			expand: true;
 			colorType: #primary;
-			align: #(end start)).
+			align: #(end start);
+			when: #clickedNoEvent send: #createNewThread to: self).
 	
 	glyphDetailArea := BTPage column
 		expand: true;
-		add: glyphDetailButtonRow.
+		add: glyphDetailButtonRow;
+		add: unicodeLabel.
+	
+	glyphWidget := FRTGlyphWidget new
+		centered: true;
+		square: true.
 	
 	glyphArea := BTPage row
-		add: (BTImage new scalingMode: #fixed; minSize: 200 asPoint; path: FileDirectory default / 'BP2016H1' / 'assets' / 'cat.jpg');
+		add: glyphWidget;
 		add: glyphDetailArea.
 	
-	commentThreadArea := BTPage column.
-	
-	"{FRTCommentThreadOld example1 . FRTCommentThreadOld example2} do: [:each |
-		commentThreadArea add: (FRTCommentThreadPreviewWidget commentThread: each)]."
-	
+	commentThreadArea := BTPage column" padding: 120 @ 0".
+		
 	self
 		vertical: true;
 		spacing: BTWidget spacing;

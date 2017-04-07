@@ -10,7 +10,8 @@
 		"renderer",
 		"pointSize",
 		"font",
-		"centered" ],
+		"centered",
+		"square" ],
 	"name" : "FRTGlyphWidget",
 	"pools" : [
 		 ],
