@@ -3,6 +3,7 @@ from sqlalchemy.orm import relationship
 
 from frt_server.common import CommonColumns
 from frt_server.font import Font
+from frt_server.tag import tag_family_association_table
 import frt_server.config
 
 import os
@@ -17,6 +18,7 @@ class Family(CommonColumns):
     __tablename__ = 'family'
     family_name = Column(String(300))
     fonts = relationship('Font', back_populates='family')
+    tags = relationship('Tag', secondary=tag_family_association_table)
 
     def is_glyphs_file(self, filename):
         return filename.endswith('.glyphs')

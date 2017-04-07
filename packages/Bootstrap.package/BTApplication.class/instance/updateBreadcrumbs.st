@@ -1,8 +1,9 @@
 navigation
 updateBreadcrumbs
+
 	breadcrumbs removeAllMorphs.
 		
 	self openPage breadcrumbs do: [ :crumb |
-		breadcrumbs add: ((BTButton text: crumb first)
+		breadcrumbs add: ((BTButton label: crumb first icon: crumb second)
 			when: #clicked evaluate: [ :event |
-				self openPage: crumb second value])]
+				self openPage: crumb third value])]

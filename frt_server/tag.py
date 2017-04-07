@@ -11,6 +11,10 @@ tag_font_association_table = Table('tag_font_association', Base.metadata,
     Column('tag_id', Integer, ForeignKey('tag._id')),
     Column('font_id', Integer, ForeignKey('font._id')))
 
+tag_family_association_table = Table('tag_family_association', Base.metadata,
+    Column('tag_id', Integer, ForeignKey('tag._id')),
+    Column('family_id', Integer, ForeignKey('family._id')))
+
 tag_thread_association_table = Table('tag_thread_association', Base.metadata,
     Column('tag_id', Integer, ForeignKey('tag._id')),
     Column('thread_id', Integer, ForeignKey('thread._id')))

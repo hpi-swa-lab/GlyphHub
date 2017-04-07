@@ -6,12 +6,12 @@
 		 ],
 	"commentStamp" : "TB 3/30/2017 15:22",
 	"instvars" : [
-		"commentThread",
+		"thread",
 		"commentPreview",
 		"threadTitle",
 		"commentCount",
 		"author" ],
-	"name" : "FRTCommentThreadPreviewWidget",
+	"name" : "FRTThreadPreviewWidget",
 	"pools" : [
 		 ],
 	"super" : "BTWidget",

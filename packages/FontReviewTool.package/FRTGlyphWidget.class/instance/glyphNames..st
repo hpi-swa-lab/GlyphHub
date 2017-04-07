@@ -5,5 +5,5 @@ glyphNames: aGlyphNameStringCollection
 	self changed.
 	
 	((renderer loadDataFor: aGlyphNameStringCollection)
-		then: [:x | self changed])
+		then: [self changed; layoutChanged])
 		whenRejected: #signal
