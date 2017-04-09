@@ -18,7 +18,10 @@ enteringWith: aThreadAndGlyph
 		then: [:newThread |
 			self thread: newThread.
 			title heading: 'Thread: ', newThread title.
-			preview thread: newThread.
+			preview
+				pointSize: 64;
+				font: newThread threadGlyphAssociations anyOne glyph font;
+				glyphNames: (newThread threadGlyphAssociations collect: [:association | association glyph glyphName]).
 
 			self
 				loadComments;

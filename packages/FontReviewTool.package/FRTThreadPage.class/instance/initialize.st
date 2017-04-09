@@ -3,9 +3,8 @@ initialize
 
 	super initialize.
 	
-	preview := FRTThreadCodepointsPreviewLabel new
-		align: #(center center);
-		styleAttributes: {'size' -> '60000'}.
+	preview := FRTGlyphWidget new
+		centered: true.
 	
 	title := BTLabel new.
 	tagArea := (BTPage row)
