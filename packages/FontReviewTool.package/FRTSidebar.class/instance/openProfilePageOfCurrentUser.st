@@ -1,4 +1,4 @@
-accessing
+callbacks
 openProfilePageOfCurrentUser
 
 	self topLevel openProfilePageOfCurrentUser

@@ -1,4 +1,4 @@
-font-upload
+logout
 logout
 
 	self apiToken: nil.

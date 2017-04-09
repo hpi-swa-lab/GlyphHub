@@ -1,4 +1,4 @@
-accessing
+callbacks
 logoutCurrentUser
 
-	self topLevel logoutCurrentUser
+	^ self topLevel logoutCurrentUser
