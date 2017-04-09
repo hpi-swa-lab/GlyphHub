@@ -1,5 +1,6 @@
 initialize-release
 initializeRecentChangesPage
+	"this is an example page copied from BTExamples"
 
 	| author a c shortO ta |
 	author := BTPage row
@@ -13,9 +14,9 @@ initializeRecentChangesPage
 	c := BTCard collapsible: 'C - Captital C' content: (BTLabel text: '<span size="60000">C</span>').
 	shortO := BTCard collapsible: 'ऒ - Short O' content: (BTLabel text: '<span size="60000">ऒ</span>').
 	ta := BTCard collapsible: 'त - Ta' content: (BTLabel text: '<span size="60000">त</span>').
-	{a. c. shortO. ta} do: [ :l | l maxSize: 300 @ -1 ].
+	{a. c. shortO. ta} do: [:l | l maxSize: 300 @ -1].
 	
-	^BTPage column
+	^ BTPage column
 		size: 600 asPoint;
 		add: (BTScrollArea new add: (BTPage new 
 		add: author;

@@ -1,6 +1,7 @@
 load-by
 loadBy: aField value: anObject populate: aCollection
-	^self
+
+	^ self
 		loadFrom: self defaultBackend
 		where: aField
 		equals: anObject

@@ -19,9 +19,9 @@ initialize
 		add: {'Recent Changes'. recentChangesPage};
 		yourself))
 		showPage: 1.
-	"tabContainer navigationBar makeActive: allGlyphsPage."
 	
-	self add: (BTPage row
+	self
+		add: (BTPage row
 		add: fontNameLabel;
 		add: fontAuthorLabel);
 		add: tabContainer

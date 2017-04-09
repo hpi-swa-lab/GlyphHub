@@ -2,5 +2,5 @@ instance creation
 new
 	
 	^ self basicNew
-		initializeWithoutRenderer;
+		initializeWithDefaultRenderer;
 		yourself

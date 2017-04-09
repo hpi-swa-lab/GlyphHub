@@ -4,7 +4,7 @@ exampleAllGlyphs
 	| backend |
 	backend := FRTHttpBackend new.
 	(((backend login: 'Eva' password: 'eveisevil')
-		then: [:x | FRTFont load: 1 from: backend])
+		then: [FRTFont load: 1 from: backend])
 		then: [:font |
 			FRTGlyphRenderer new
 				font: font;

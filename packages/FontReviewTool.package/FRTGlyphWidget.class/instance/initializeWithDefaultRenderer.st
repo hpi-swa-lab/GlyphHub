@@ -1,5 +1,5 @@
 initialize-release
-initializeWithoutRenderer
+initializeWithDefaultRenderer
 
 	self initialize.
 	

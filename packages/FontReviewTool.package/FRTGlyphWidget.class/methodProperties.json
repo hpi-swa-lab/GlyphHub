@@ -1,7 +1,7 @@
 {
 	"class" : {
-		"exampleAllGlyphs" : "TB 4/7/2017 11:56",
-		"new" : "TB 4/7/2017 11:08",
+		"exampleAllGlyphs" : "lcj 4/9/2017 11:06",
+		"new" : "lcj 4/9/2017 11:10",
 		"newWithRenderer:" : "TB 4/7/2017 11:08" },
 	"instance" : {
 		"centered" : "TB 4/7/2017 11:52",
@@ -13,8 +13,8 @@
 		"glyphNames" : "TB 4/5/2017 15:49",
 		"glyphNames:" : "ek 4/7/2017 12:49",
 		"initialize" : "JH 4/7/2017 16:35",
+		"initializeWithDefaultRenderer" : "lcj 4/9/2017 11:10",
 		"initializeWithRenderer:" : "TB 4/7/2017 11:56",
-		"initializeWithoutRenderer" : "TB 4/7/2017 11:56",
 		"isReady" : "TB 4/5/2017 15:55",
 		"pointSize" : "TB 4/5/2017 15:56",
 		"pointSize:" : "TB 4/5/2017 15:56",
