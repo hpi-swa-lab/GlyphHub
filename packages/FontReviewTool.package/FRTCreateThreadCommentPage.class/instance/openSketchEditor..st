@@ -1,9 +1,7 @@
 callbacks
 openSketchEditor: anEvent
 
-	| preview |
-	preview := (BTLabel text: '<span size="100000">', self text, '</span>')
-		align: #(center center);
-		resizeToPreferred.
-	
-	(SketchMorph withForm: preview imageForm) center: self currentWorld center; openInWorld; editDrawing
+	(SketchMorph
+		withForm: (preview renderer formForGlyphs: preview glyphNames size: 256 color: Color black)) center: self currentWorld center;
+		openInWorld;
+		editDrawing

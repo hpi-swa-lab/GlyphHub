@@ -17,7 +17,6 @@ enteringWith: aThreadAndGlyph
 			self thread: newThread.
 			title heading: 'Thread: ', newThread title.
 			preview
-				pointSize: 64;
 				font: newThread threadGlyphAssociations anyOne glyph font;
 				glyphNames: (newThread threadGlyphAssociations collect: [:association | association glyph glyphName]).
 

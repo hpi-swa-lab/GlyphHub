@@ -3,16 +3,16 @@ initialize
 
 	super initialize.
 	
-	preview := FRTThreadCodepointsPreviewLabel new
-		align: #(center center);
-		styleAttributes: {'size' -> '60000'}.
+	preview := FRTGlyphWidget new
+		pointSize: 128;
+		centered: true.
 	titleContainer := BTPage new expand: true.
 	glyphLinkContainer := BTPage column.
 	commentText := BTTextArea new
 		multiLine: true;
 		placeholder: 'Comment ...';
 		minRows: 2.
-
+	
 	self
 		add: (BTPage row
 			add: titleContainer;

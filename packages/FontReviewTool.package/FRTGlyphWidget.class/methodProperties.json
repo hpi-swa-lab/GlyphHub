@@ -15,11 +15,11 @@
 		"initialize" : "JH 4/7/2017 16:35",
 		"initializeWithDefaultRenderer" : "lcj 4/9/2017 11:10",
 		"initializeWithRenderer:" : "TB 4/7/2017 11:56",
-		"initializeWithoutRenderer" : "TB 4/7/2017 11:56",
 		"isReady" : "TB 4/5/2017 15:55",
 		"pointSize" : "TB 4/5/2017 15:56",
 		"pointSize:" : "TB 4/5/2017 15:56",
 		"preferredSizeForWidth:" : "ek 4/7/2017 12:51",
+		"renderer" : "TB 4/9/2017 15:56",
 		"square" : "ek 4/7/2017 12:50",
 		"square:" : "ek 4/7/2017 12:50",
 		"withPreviewLetters" : "TB 4/5/2017 17:05" } }

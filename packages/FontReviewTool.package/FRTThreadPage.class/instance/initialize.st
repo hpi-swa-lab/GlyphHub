@@ -4,6 +4,7 @@ initialize
 	super initialize.
 	
 	preview := FRTGlyphWidget new
+		pointSize: 64;
 		centered: true.
 	
 	title := BTLabel new.

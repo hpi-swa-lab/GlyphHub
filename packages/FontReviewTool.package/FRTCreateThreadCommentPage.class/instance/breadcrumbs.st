@@ -6,9 +6,9 @@ breadcrumbs
 	crumbs := OrderedCollection with: {''. #home. {FRTProjectOverviewPage. nil}}.
 	
 	self enteredFromGlyph
-		ifNil: [ | font |
-			font := self thread threadGlyphAssociations anyOne glyph font.
-			crumbs add: {font fontName. #font. {FRTFontOverviewPage. font family}}]
+		ifNil: [ | family |
+			family := self thread threadGlyphAssociations anyOne glyph font family.
+			crumbs add: {family familyName. #font. {FRTFontOverviewPage. family}}]
 		ifNotNil: [
 			crumbs
 				add: {self enteredFromGlyph font fontName. #font. {FRTFontOverviewPage. self enteredFromGlyph font family}};
