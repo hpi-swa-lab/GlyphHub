@@ -1,12 +1,17 @@
 initialize-release
 initialize
 
+	| inputButton |
 	super initialize.
 
 	fontNameLabel := BTLabel new
 		align: #(left center).
 	fontAuthorLabel := BTLabel new
 		align: #(left center).
+	inputButton := BTButton new
+		text: 'Try it here!';
+		colorType: #primary;
+		when: #clickedNoEvent send: #openGlyphInputPage to: self.
 	
 	renderer := FRTGlyphRenderer new.
 	allGlyphsPage := self initializeAllGlyphPage.
@@ -23,6 +28,6 @@ initialize
 	
 	self add: (BTPage row
 		add: fontNameLabel;
-		add: fontAuthorLabel);
+		add: fontAuthorLabel oppositeTo: inputButton);
 		add: tabContainer
 	

@@ -2,6 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
+		"convertUnicodeToGlyphNames:of:" : "lcj 4/9/2017 16:08",
 		"loadUfoDetails:font:" : "lcj 4/9/2017 11:11",
 		"logout" : "lcj 4/9/2017 13:21",
 		"pickFontToUpload" : "lcj 4/5/2017 11:35",

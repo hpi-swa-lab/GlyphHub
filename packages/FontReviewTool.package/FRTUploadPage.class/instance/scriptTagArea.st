@@ -11,9 +11,9 @@ scriptTagArea
 		textAreaClass: BTTextCompletion)).
 	
 	labeledTextArea textArea suggestionsList: self scriptList.
-	labeledTextArea textArea when: #confirmed evaluate: [ :text |
+	labeledTextArea textArea when: #confirmed evaluate: [:text |
 		tagList addTag: text.
-		labeledTextArea textArea clear ].
+		labeledTextArea textArea clear].
 	
 	^ BTPage new
 		spacing: BTWidget spacing / 4;

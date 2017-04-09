@@ -7,12 +7,13 @@ drawGlyphs: aGlyphNameStringCollection size: aPointSizeNumber on: aCanvas at: aP
 	
 	aGlyphNameStringCollection do: [:glyphName | | shape advance shapeAndAdvanceTuple |
 		shapeAndAdvanceTuple := self shapeOf: glyphName.
-		shape := shapeAndAdvanceTuple first.
-		advance := shapeAndAdvanceTuple second.
-		self
-			drawGlyphShape: shape
-			scaleFactor: scaleFactor
-			on: aCanvas
-			at: aPoint + (currentGlyphXPosition @ 0)
-			color: aColor.
-		currentGlyphXPosition := currentGlyphXPosition + (advance * scaleFactor)]
+		shapeAndAdvanceTuple ifNotNil: [
+			shape := shapeAndAdvanceTuple first.
+			advance := shapeAndAdvanceTuple second.
+			self
+				drawGlyphShape: shape
+				scaleFactor: scaleFactor
+				on: aCanvas
+				at: aPoint + (currentGlyphXPosition @ 0)
+				color: aColor.
+			currentGlyphXPosition := currentGlyphXPosition + (advance * scaleFactor)]]

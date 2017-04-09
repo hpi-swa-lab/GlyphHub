@@ -9,7 +9,7 @@ from sqlalchemy.orm import relationship
 from frt_server.tag import tag_font_association_table
 from frt_server.common import CommonColumns
 import frt_server.config
-import hb_convert
+import frt_server.hb_convert
 import plistlib
 
 class Font(CommonColumns):
@@ -55,7 +55,7 @@ class Font(CommonColumns):
         otf_files = glob.glob(otf_path + '/*.otf')
         if len(otf_files) < 1:
             raise FileNotFoundError('Font does not contain a .otf')
-        return hb_convert.to_glyphnames(otf_files[0], unicode_points)
+        return frt_server.hb_convert.to_glyphnames(otf_files[0], unicode_points)
 
     def get_glif_data(self, requested_glifs):
         # TODO: security! make sure we can't do directory traversal stuff.

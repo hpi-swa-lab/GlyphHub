@@ -5,5 +5,7 @@ loadQuery: query
 		then: [:details |
 			fontinfo := details at: 'fontinfo'.
 			(details at: 'glifs') keysAndValuesDo: [:glifName :glif |
-				glifs at: glifName put: (XMLDOMParser parseDocumentFrom: glif readStream)].
+				glifs at: glifName put: (glif
+					ifNotNil: [XMLDOMParser parseDocumentFrom: glif readStream]
+					ifNil: [nil])].
 			self]
