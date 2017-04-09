@@ -2,12 +2,15 @@
 	"class" : {
 		"example" : "JH 4/6/2017 14:46" },
 	"instance" : {
-		"canDrawImmediately:" : "JH 4/6/2017 14:48",
+		"allKnownRequiredGlyphNamesFor:" : "TB 4/9/2017 23:39",
+		"canDrawGlyphImmediately:" : "TB 4/9/2017 23:24",
+		"canDrawImmediately:" : "TB 4/9/2017 23:18",
 		"coordFromNode:" : "TB 4/5/2017 15:44",
 		"coordinatesFromNode:" : "JH 4/6/2017 14:51",
 		"curveFrom:via:to:" : "JH 4/6/2017 14:53",
+		"drawGlyph:size:on:at:color:" : "TB 4/9/2017 23:44",
 		"drawGlyphShape:scaleFactor:on:at:color:" : "TB 4/5/2017 15:23",
-		"drawGlyphs:size:on:at:color:" : "lcj 4/9/2017 16:21",
+		"drawGlyphs:size:on:at:color:" : "TB 4/9/2017 23:26",
 		"extentOf:size:" : "ek 4/9/2017 16:46",
 		"font" : "TB 4/5/2017 12:58",
 		"font:" : "TB 4/5/2017 12:59",
@@ -16,7 +19,7 @@
 		"formForGlyphs:size:color:" : "TB 4/9/2017 15:57",
 		"initialize" : "TB 4/5/2017 13:06",
 		"lineFrom:to:" : "JH 4/6/2017 15:22",
-		"loadDataFor:" : "TB 4/7/2017 11:41",
+		"loadDataFor:" : "TB 4/9/2017 23:41",
 		"loadDataForAllGlyphs" : "TB 4/7/2017 11:33",
 		"loadQuery:" : "lcj 4/9/2017 16:20",
 		"loadedGlifs" : "TB 4/7/2017 11:06",
@@ -25,5 +28,5 @@
 		"previewGlyphsFrom:" : "JH 4/6/2017 15:34",
 		"qcurveFrom:via:to:" : "JH 4/6/2017 15:34",
 		"scaleFactorAt:" : "TB 4/5/2017 16:11",
-		"shapeOf:" : "ek 4/9/2017 16:47",
+		"shapeOf:" : "TB 4/9/2017 23:22",
 		"typeFromNode:" : "TB 4/5/2017 15:44" } }

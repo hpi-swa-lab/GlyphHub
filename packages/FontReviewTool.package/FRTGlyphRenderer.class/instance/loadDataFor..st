@@ -8,9 +8,10 @@ loadDataFor: aGlyphNameStringCollection
 	
 	query := Dictionary new.
 	fontinfo ifNil: [query at: 'fontinfo' put: nil].
-	missingGlyphs := aGlyphNameStringCollection reject: [:glyphName | glifs includesKey: glyphName].
+	missingGlyphs := (self allKnownRequiredGlyphNamesFor: aGlyphNameStringCollection) reject: [:glyphName | glifs includesKey: glyphName].
 	query at: 'glifs' put: missingGlyphs.
 	
-	self flag: #todo. " also need to load all necessary components "
-	
-	^ self loadQuery: query
+	^ (self loadQuery: query)
+		then: [
+			" recurse. if we have everything, this will just resolve "
+			self loadDataFor: aGlyphNameStringCollection]
