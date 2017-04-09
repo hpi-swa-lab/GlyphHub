@@ -8,7 +8,13 @@ initializeWithPage: aPage
 		yourself.
 	breadcrumbs := BTButtonGroup new.
 	
-	loadingWidget := BTWidget new.
+	loadingWidget := BTClickable new
+		withLayout;
+		color: (Color white alpha: 0.9);
+		add: (BTLoader new
+			align: #(center center);
+			expand: true);
+		ignoreLayout: true.
 	
 	header := BTPage row
 		withPadding;

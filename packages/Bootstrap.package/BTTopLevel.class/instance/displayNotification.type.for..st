@@ -7,7 +7,7 @@ displayNotification: aString type: aColorType for: aDuration
 		addTo: self;
 		extent: 1 @ 1;
 		fullBounds;
-		bottomRight: self layoutBounds bottomRight.
+		bottomRight: self layoutBounds bottomRight - (BTWidget spacing * 3) asPoint.
 	
 	activeNotifications
 		do: [ :notification | notification y: notification y + newNotification height + (BTWidget spacing / 2) ];

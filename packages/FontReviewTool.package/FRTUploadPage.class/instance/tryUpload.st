@@ -17,8 +17,16 @@ tryUpload
 			tags do: [:tag | | newTag |
 				newTag := FRTTag new text: tag.
 				family tags add: newTag].
+			
+			self topLevel startLoadingOperation.
 			(((family
 				saveTo: self topLevel backend)
 				then: [:savedFamily | self topLevel backend upload: stream toFamily: savedFamily id])
-				then: [self topLevel openPage: FRTFontOverviewPage new with: family])
-				catch: [self topLevel displayNotification: 'Upload failed. Please try again.' type: #danger]]]
+				then: [
+					self topLevel
+						stopLoadingOperation;
+						openPage: FRTFontOverviewPage new with: family])
+				catch: [
+					self topLevel
+						stopLoadingOperation;
+						displayNotification: 'Upload failed. Please try again.' type: #danger]]]
