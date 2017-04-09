@@ -9,7 +9,7 @@ initialize
 	
 	glyphDetailButtonRow := BTPage row
 		add: ((BTButton label: (BTIcon icon: #history), ' See previous versions') colorType: #secondary);
-		add: ((BTButton label: (BTIcon icon: #comment_o), ' New Comment Thread')
+		add: ((BTButton label: (BTIcon icon: #comment_o), ' New Thread')
 			expand: true;
 			colorType: #primary;
 			align: #(end start);
