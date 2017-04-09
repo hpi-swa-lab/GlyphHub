@@ -1,4 +1,4 @@
 accessing
 font
 
-	^ font
+	^ self renderer font

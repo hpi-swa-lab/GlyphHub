@@ -9,8 +9,8 @@ glyphNames: aCollection
 			glyphNames: {glyphName};
 			centered: true.
 		
-		label := BTLabel small: glyphName.
-		self add: ((BTClickable new withLayout; vertical: true)
+		label := (BTLabel small: glyphName) ellipsize: #middle.
+		self add: (FRTGlyphGridItemWidget new
 				when: #clickedNoEvent send: #openGlyph: to: self with: glyphName;
 				add: glyph;
 				add: label)]

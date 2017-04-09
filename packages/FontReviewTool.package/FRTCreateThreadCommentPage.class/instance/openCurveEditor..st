@@ -2,8 +2,7 @@ callbacks
 openCurveEditor: anEvent
 
 	| glyph |
-	"glyph := (KRNUfo3 openBaskerville createGlyphFor: $a ptSize: 350 * BTWidget scalingFactor) toggleEditGlyph."
-	glyph := FRTGlyphEditor new edit: 'A' atPtSize: 512 fromRenderer: preview renderer.
+	glyph := FRTGlyphEditor new edit: preview glyphNames anyOne atPtSize: 512 fromRenderer: preview renderer.
 	
 	(BTDialog title: 'Edit Curves to create diff')
 		content: (BTPage column

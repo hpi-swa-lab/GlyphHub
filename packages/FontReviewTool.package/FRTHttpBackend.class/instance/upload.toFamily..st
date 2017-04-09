@@ -3,7 +3,7 @@ upload: aFileStream toFamily: anIdNumber
 
 	| boundary file data |
 	boundary := WebUtils multipartBoundary.
-	file := (MIMELocalFileDocument contentType: 'text/plain' content: nil url: 'file://', aFileStream name) contentStream: aFileStream.
+	file := (MIMELocalFileDocument contentType: 'text/plain' content: nil url: 'file://', aFileStream name) contentStream: (aFileStream binary; yourself).
 	
 	data := String streamContents: [:stream |
 		stream

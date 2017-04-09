@@ -1,0 +1,14 @@
+{
+	"category" : "FontReviewTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"counter" ],
+	"name" : "FRTGlyphGridItemWidget",
+	"pools" : [
+		 ],
+	"super" : "BTClickable",
+	"type" : "normal" }

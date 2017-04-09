@@ -1,4 +1,4 @@
 accessing
 cellSize: aPoint
 
-	cellSize := aPoint asPoint
+	cellSize := aPoint asPoint * BTWidget scalingFactor

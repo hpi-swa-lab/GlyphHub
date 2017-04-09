@@ -7,6 +7,6 @@ pickFontToUpload
 	fc setCaption: 'Select a glyphs or ufo file'.
 	fc fileSelectionBlock: [ :file :x | true ].
 	self flag: #TODO. "remove .zip as soon as we can zip ourselves"
-	fc setSuffixes: {'glyphs'. 'ufo.zip'}.
+	fc setSuffixes: {'glyphs'. 'zip'}.
 	stream := fc open.
 	^ stream
