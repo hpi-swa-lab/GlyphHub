@@ -1,7 +1,7 @@
 accessing
 enteringWith: aGlyph
 
-	^ (FRTGlyph load: aGlyph id populate: #(threads 'threads.comments' 'threads.comments.author' font 'font.family') from: self topLevel backend)
+	^ (FRTGlyph load: aGlyph id populate: #(threadGlyphAssociations 'threadGlyphAssociations.thread' 'threadGlyphAssociations.thread.comments' 'threadGlyphAssociations.thread.comments.author' font 'font.family') from: self topLevel backend)
 		then: [:newGlyph |
 			self updateUnicodeLabel: newGlyph.
 			self glyph: newGlyph.
@@ -9,7 +9,7 @@ enteringWith: aGlyph
 			glyphWidget
 				glyph: glyph;
 				pointSize: 128.
-			(newGlyph threads sortedBy: #id) do: [:each |
+			((newGlyph threadGlyphAssociations collect: [:association | association thread]) sortedBy: #id) do: [:each |
 				commentThreadArea add: (FRTThreadPreviewWidget new
 					thread: each;
 					enteredFromGlyph: self glyph)]]

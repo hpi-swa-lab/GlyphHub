@@ -9,4 +9,4 @@ loadFrom: aTableNameString where: aSelectorValueDictionary into: aClass populate
 		request: aTableNameString, '?where=', final asJsonString, '&', (self populateString: aCollection)
 		method: 'GET'
 		data: nil)
-		then: [ :list | (list at: '_items') collect: [ :item | self jsonToModel: item modelClass: aClass ]]
+		then: [:list | (list at: '_items') collect: [:item | self jsonToModel: item modelClass: aClass]]

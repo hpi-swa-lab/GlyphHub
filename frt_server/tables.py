@@ -21,9 +21,13 @@ class SampleText(CommonColumns):
     author = relationship(User)
     tags = relationship('Tag', secondary=tag_sample_text_association_table)
 
-thread_glyph_association_table = Table('thread_glyph_association', Base.metadata,
-    Column('thread_id', Integer, ForeignKey('thread._id')),
-    Column('glyph_id', Integer, ForeignKey('glyph._id')))
+class ThreadGlyphAssociation(CommonColumns):
+    __tablename__ = 'thread_glyph_association'
+    _id = Column(Integer, primary_key=True, autoincrement=True)
+    thread_id = Column(Integer, ForeignKey('thread._id'))
+    glyph_id = Column(Integer, ForeignKey('glyph._id'))
+    thread = relationship('Thread', back_populates='thread_glyph_associations')
+    glyph = relationship('Glyph', back_populates='thread_glyph_associations')
 
 class Glyph(CommonColumns):
     __tablename__ = 'glyph'
@@ -31,13 +35,13 @@ class Glyph(CommonColumns):
     version_hash = Column(String(40))
     font_id = Column(Integer, ForeignKey('font._id'))
     font = relationship('Font', back_populates='glyphs')
-    threads = relationship('Thread', secondary=thread_glyph_association_table)
+    thread_glyph_associations = relationship('ThreadGlyphAssociation', back_populates='glyph')
 
 class Thread(CommonColumns):
     __tablename__ = 'thread'
     title = Column(Text)
     tags = relationship('Tag', secondary=tag_thread_association_table)
-    glyphs = relationship('Glyph', secondary=thread_glyph_association_table)
+    thread_glyph_associations = relationship('ThreadGlyphAssociation', back_populates='thread')
     # FIXME we also would like to save the indices of the glyphs from their unicode
     codepoints = relationship('Codepoint', back_populates='thread')
     comments = relationship('Comment', back_populates='thread')
@@ -107,3 +111,4 @@ registerSchema('thread')(Thread)
 registerSchema('codepoint')(Codepoint)
 registerSchema('comment')(Comment)
 registerSchema('attachment')(Attachment)
+registerSchema('thread_glyph_association')(ThreadGlyphAssociation)

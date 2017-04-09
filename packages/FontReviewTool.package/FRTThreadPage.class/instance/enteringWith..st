@@ -11,8 +11,8 @@ enteringWith: aThreadAndGlyph
 		ifNil: [BTPromise unit: nil].
 	
 	populateThread := self enteredFromGlyph
-		ifNotNil: [#(comments glyphs 'comments.author')]
-		ifNil: [#(comments  'comments.author' glyphs 'glyphs.font' 'glyphs.font.family')].
+		ifNotNil: [#(comments threadGlyphAssociations 'threadGlyphAssociations.glyph' 'comments.author')]
+		ifNil: [#(comments  'comments.author' threadGlyphAssociations 'threadGlyphAssociations.glyph' 'threadGlyphAssociations.glyph.font' 'threadGlyphAssociations.glyph.font.family')].
 	
 	loadThread := (FRTThread load: aThreadAndGlyph first id populate: populateThread from: self topLevel backend)
 		then: [:newThread |

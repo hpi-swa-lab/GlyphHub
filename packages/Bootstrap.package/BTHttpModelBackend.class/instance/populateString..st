@@ -1,3 +1,3 @@
 operations
 populateString: aCollection
-	^'embedded=', ((aCollection collect: [ :fieldName | fieldName -> 1 ]) as: Dictionary) asJsonString
+	^'embedded=', ((aCollection collect: [ :fieldName | (self class camelCaseToUnderscore: fieldName) -> 1 ]) as: Dictionary) asJsonString

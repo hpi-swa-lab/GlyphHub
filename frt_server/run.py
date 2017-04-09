@@ -38,19 +38,18 @@ def setup_database(app, populate_sample_data=True):
 
     if populate_sample_data and db.session.query(frt_server.tables.User).count() < 1:
         from frt_server.seed import entities, post_create
-        new_entities = copy.deepcopy(entities)
 
         # register new entities
-        for entity in new_entities:
+        for entity in entities:
             db.session.add(entity)
 
         # save and reload new entities
         db.session.flush()
-        for entity in new_entities:
+        for entity in entities:
             db.session.refresh(entity)
 
         # pass them to the post create handler
-        for entity in post_create(new_entities):
+        for entity in post_create(entities):
             db.session.add(entity)
 
         db.session.commit()

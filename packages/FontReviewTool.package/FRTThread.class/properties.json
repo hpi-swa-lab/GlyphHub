@@ -7,10 +7,10 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"title",
-		"glyphs",
 		"codepoints",
 		"comments",
-		"tags" ],
+		"tags",
+		"threadGlyphAssociations" ],
 	"name" : "FRTThread",
 	"pools" : [
 		 ],

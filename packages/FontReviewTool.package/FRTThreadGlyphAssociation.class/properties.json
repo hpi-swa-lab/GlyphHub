@@ -6,11 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"glyphName",
-		"versionHash",
-		"font",
-		"threadGlyphAssociations" ],
-	"name" : "FRTGlyph",
+		"thread",
+		"glyph" ],
+	"name" : "FRTThreadGlyphAssociation",
 	"pools" : [
 		 ],
 	"super" : "BTModel",

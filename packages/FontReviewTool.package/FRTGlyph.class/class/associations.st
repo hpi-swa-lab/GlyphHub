@@ -3,5 +3,5 @@ associations
 
 	^ {
 		#font -> {FRTFont. #glyphs. #single}.
-		#threads -> {FRTThread. #glyphs. #many}
+		#threadGlyphAssociations -> {FRTThreadGlyphAssociation. #glyph. #many}
 	} as: Dictionary
