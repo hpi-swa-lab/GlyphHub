@@ -1,0 +1,4 @@
+accessing
+logoutCurrentUser
+
+	self topLevel logoutCurrentUser

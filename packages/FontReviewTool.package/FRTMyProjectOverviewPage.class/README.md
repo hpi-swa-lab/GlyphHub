@@ -1,0 +1,1 @@
+A FRTMyProjectOverviewPage gives an overview over all registered families of the logged in user in the database.

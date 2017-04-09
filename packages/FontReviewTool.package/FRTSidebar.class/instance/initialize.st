@@ -3,11 +3,13 @@ initialize
 
 	super initialize.
 	
-	usernameLabel := BTLabel new
+	usernameClickable := BTClickableWithText new
 		expand: true;
-		styleAttributes: {'font-weight' -> '800'};  
+		styleAttributes: {'font-weight' -> '800'};
 		align: #(fill center).
-	
+		
+	self initializeUserDropdown.
+		
 	userAvatarImage := BTImage new
 		minSize: 36 asPoint;
 		scalingMode: #fixed.
@@ -21,10 +23,12 @@ initialize
 		padding: BTWidget spacing;
 		spacing: BTWidget spacing;
 		add: (BTPage row
-			add: usernameLabel;
+			add: usernameClickable;
 			add: userAvatarImage);
 		add: BTDivider new;
-		add: (BTClickableWithText text: (BTIcon icon: #home), ' Dashboard');
+		add: ((BTClickableWithText text: (BTIcon icon: #home), ' Dashboard')
+			when: #clickedNoEvent send: #openDashboard to: self);
 		add: (BTClickableWithText text: (BTIcon icon: #file_text), ' Sample Texts');
-		add: (BTClickableWithText text: (BTIcon icon: #folder_open), ' My Projects');
+		add: ((BTClickableWithText text: (BTIcon icon: #folder_open), ' My Projects')
+			when: #clickedNoEvent send: #openMyProjects to: self);
 		add: BTDivider new

@@ -11,14 +11,14 @@ tryUpload
 	
 	tagList submorphs do: [:tag | tags add: tag text].
 	
-	self stream ifNotNil:[
-		familyName ifNotEmpty: [| family |
+	self stream ifNotNil:[| family |
+		familyName ifNotEmpty: [
 			family := FRTFamily new familyName: familyName.
 			tags do: [:tag | | newTag |
 				newTag := FRTTag new text: tag.
 				family tags add: newTag].
-			((family
+			(((family
 				saveTo: self topLevel backend)
 				then: [:savedFamily | self topLevel backend upload: stream toFamily: savedFamily id])
-				catch: [:x | self topLevel displayNotification: 'Upload failed. Please try again.' type: #danger]]].
-	self flag: #TODO "redirect to newly created project if successful"
+				then: [self topLevel openPage: FRTFontOverviewPage new with: family])
+				catch: [self topLevel displayNotification: 'Upload failed. Please try again.' type: #danger]]]

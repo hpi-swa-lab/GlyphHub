@@ -1,0 +1,4 @@
+accessing
+openProfilePageOfCurrentUser
+
+	self topLevel openProfilePageOfCurrentUser
