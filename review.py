@@ -171,7 +171,7 @@ if len(deletedClasses) > 0:
 if len(addedClasses) > 0:
     print(blue('Added Classes:'))
     for addedClass in addedClasses:
-        print(' {} {} ({})'.format(green('A'), green(addedClass[0]), green(addedClass[1])))
+        print(' {} {} ({})'.format(green('A'), green(addedClass[1]), green(addedClass[0])))
         if not git('show {}:{}'.format(commits[-1], 'packages/{}.package/{}.class/README.md'.format(*addedClass))).strip():
             print(red('   NOTE: No class comment.'))
     print()
