@@ -12,4 +12,5 @@ current: aNumber
 		then: [ | newPage |
 			newPage := (stack at: current) first.
 			self triggerOpened: newPage.
+			self application ifNotNil: [self application updateBreadcrumbs].
 			newPage]

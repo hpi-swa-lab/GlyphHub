@@ -28,7 +28,7 @@ initialize
 		add: glyphWidget;
 		add: glyphDetailArea.
 	
-	commentThreadArea := BTPage column" padding: 120 @ 0".
+	commentThreadArea := BTPage column.
 		
 	self
 		vertical: true;

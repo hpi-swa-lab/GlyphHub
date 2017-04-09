@@ -2,10 +2,14 @@
 	"class" : {
 		"example" : "ek 4/7/2017 10:58" },
 	"instance" : {
-		"addNewComment" : "TB 4/7/2017 18:12",
-		"enteringWith:" : "TB 4/7/2017 18:46",
+		"addNewComment" : "al 4/9/2017 11:34",
+		"breadcrumbs" : "al 4/9/2017 11:40",
+		"enteredFromGlyph" : "al 4/9/2017 11:27",
+		"enteredFromGlyph:" : "al 4/9/2017 11:27",
+		"enteringWith:" : "al 4/9/2017 11:50",
 		"initialize" : "ek 4/7/2017 11:22",
-		"loadComments" : "ek 4/7/2017 10:59",
+		"leaving" : "al 4/9/2017 11:15",
+		"loadComments" : "al 4/9/2017 11:15",
 		"loadTags" : "ek 4/7/2017 10:59",
 		"thread" : "ek 4/7/2017 10:58",
 		"thread:" : "TB 4/7/2017 18:45" } }

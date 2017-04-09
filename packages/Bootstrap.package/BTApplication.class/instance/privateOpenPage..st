@@ -4,5 +4,4 @@ privateOpenPage: aPage
 		remove: openPage;
 		add: aPage.
 	
-	openPage := aPage.
-	self updateBreadcrumbs
+	openPage := aPage

@@ -20,5 +20,5 @@ saveComment
 			
 			comment saveTo: self topLevel backend])
 		then: [:comment |
-			self topLevel openPage: FRTThreadPage new with: self thread])
+			self topLevel openPage: FRTThreadPage new with: {self thread. self enteredFromGlyph}])
 		catch: [:error | self topLevel displayNotification: 'Saving failed. Please try again.' type: #danger]

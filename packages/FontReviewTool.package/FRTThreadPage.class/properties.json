@@ -10,7 +10,8 @@
 		"preview",
 		"commentArea",
 		"thread",
-		"tagArea" ],
+		"tagArea",
+		"enteredFromGlyph" ],
 	"name" : "FRTThreadPage",
 	"pools" : [
 		 ],

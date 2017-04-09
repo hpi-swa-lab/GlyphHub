@@ -10,7 +10,8 @@
 		"commentPreview",
 		"threadTitle",
 		"commentCount",
-		"author" ],
+		"author",
+		"enteredFromGlyph" ],
 	"name" : "FRTThreadPreviewWidget",
 	"pools" : [
 		 ],

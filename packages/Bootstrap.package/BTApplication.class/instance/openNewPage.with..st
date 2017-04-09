@@ -1,4 +1,6 @@
 accessing
 openNewPage: aPageClass with: anObject
 	
-	^ self openPage: aPageClass new with: anObject
+	^ aPageClass
+		ifNotNil: [self openPage: aPageClass new with: anObject]
+		ifNil: [BTPromise unit: nil]

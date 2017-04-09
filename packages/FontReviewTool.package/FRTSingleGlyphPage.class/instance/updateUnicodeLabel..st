@@ -2,10 +2,11 @@ accessing
 updateUnicodeLabel: aGlyph.
 	
 	aGlyph loadGlif
-		then: [:glif | | xml |
+		then: [:glif | | xml codepointText |
 			xml := XMLDOMParser parseDocumentFrom: glif readStream.
 			
-			unicodeLabel text: '<b>Unicode Codepoints:</b> ', (((xml firstTagNamed: #glyph) elements
+			codepointText := ((xml firstTagNamed: #glyph) elements
 				select: [:element | element localName == #unicode]
-				thenCollect: [:element | '0x', (element attributeAt: #hex)]) joinSeparatedBy: ', ').
+				thenCollect: [:element | 'U+', (element attributeAt: #hex)]) joinSeparatedBy: ', '.
+			unicodeLabel text: '<b>Unicode Codepoints:</b> ', codepointText.
 			self topLevel updateBreadcrumbs]

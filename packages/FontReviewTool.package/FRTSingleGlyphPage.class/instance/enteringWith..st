@@ -10,4 +10,6 @@ enteringWith: aGlyph
 				glyph: glyph;
 				pointSize: 128.
 			(newGlyph threads sortedBy: #id) do: [:each |
-				commentThreadArea add: (FRTThreadPreviewWidget new thread: each)]]  
+				commentThreadArea add: (FRTThreadPreviewWidget new
+					thread: each;
+					enteredFromGlyph: self glyph)]]

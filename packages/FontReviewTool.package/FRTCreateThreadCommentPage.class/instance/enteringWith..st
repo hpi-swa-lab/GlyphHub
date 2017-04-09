@@ -1,11 +1,15 @@
-accessing
-enteringWith: aThread
+callbacks
+enteringWith: aThreadAndGlyph
 
-	self
-		thread: aThread;
-		updateTitle: aThread;
-		updateGlyphLinks: aThread.
+	| newThread |
+	newThread := aThreadAndGlyph first.
 	
-	preview thread: aThread.
+	self
+		thread: newThread;
+		enteredFromGlyph: aThreadAndGlyph second;
+		updateTitle: newThread;
+		updateGlyphLinks: newThread.
+	
+	preview thread: newThread.
 	
 	^ Promise unit: nil

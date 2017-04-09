@@ -2,10 +2,11 @@
 	"class" : {
 		"example" : "ek 4/7/2017 12:28" },
 	"instance" : {
-		"breadcrumbs" : "TB 4/7/2017 18:43",
-		"createNewThread" : "TB 4/7/2017 18:12",
-		"enteringWith:" : "TB 4/7/2017 18:43",
+		"breadcrumbs" : "al 4/9/2017 11:17",
+		"createNewThread" : "al 4/9/2017 11:34",
+		"enteringWith:" : "al 4/9/2017 11:37",
 		"glyph" : "ek 4/7/2017 11:27",
 		"glyph:" : "TB 4/7/2017 18:42",
-		"initialize" : "ek 4/7/2017 14:11",
-		"updateUnicodeLabel:" : "ek 4/7/2017 14:36" } }
+		"initialize" : "al 4/9/2017 10:59",
+		"leaving" : "al 4/9/2017 11:09",
+		"updateUnicodeLabel:" : "al 4/9/2017 11:02" } }
