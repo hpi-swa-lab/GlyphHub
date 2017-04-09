@@ -3,12 +3,10 @@ createNewThread
 
 	| thread |
 	thread := FRTThread new.
-	(self topLevel backend convertUnicodeToGlyphNames: inputArea text of: self font)
+	(((((self topLevel backend convertUnicodeToGlyphNames: inputArea text of: self font)
 		then: [:glyphNames |
-			glyphNames do: [:glyphName |
-				thread threadGlyphAssociations add: (FRTThreadGlyphAssociation new
-				glyph: glyphName;
-				thread: thread;
-				yourself)]].
-	self topLevel openPage: FRTCreateThreadCommentPage new with: {thread. self glyph}.
-	self flag: #TODO "make sure this gets glyphs instead of glyphnames"
+			FRTGlyph ensureExists: (glyphNames collect: #first) font: self font in: self topLevel backend])
+		then: [:glyphs | glyphs collect: [:glyph | FRTThreadGlyphAssociation new thread: thread; glyph: glyph] as: BTModelList])
+		then: [:glyphAssociations |
+			self topLevel openPage: FRTCreateThreadCommentPage new with: {thread. nil}])
+		catch: #signal)
