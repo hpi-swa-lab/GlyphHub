@@ -3,6 +3,11 @@
 		 },
 	"instance" : {
 		"drawOn:" : "lcj 4/5/2017 12:30",
-		"initialize" : "lcj 4/5/2017 12:29",
+		"initialize" : "lcj 4/9/2017 12:55",
+		"initializeUserDropdown" : "lcj 4/9/2017 13:00",
+		"logoutCurrentUser" : "lcj 4/9/2017 13:01",
+		"openDashboard" : "lcj 4/9/2017 11:59",
+		"openMyProjects" : "lcj 4/9/2017 12:43",
+		"openProfilePageOfCurrentUser" : "lcj 4/9/2017 13:01",
 		"sidebarWidth" : "lcj 4/5/2017 12:29",
-		"user:" : "lcj 4/5/2017 12:29" } }
+		"user:" : "lcj 4/9/2017 13:10" } }

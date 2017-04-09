@@ -4,12 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "TB 3/30/2017 15:20",
+	"commentStamp" : "lcj 4/9/2017 12:42",
 	"instvars" : [
-		"userAvatarImage",
-		"usernameClickable" ],
-	"name" : "FRTSidebar",
+		 ],
+	"name" : "FRTMyProjectOverviewPage",
 	"pools" : [
 		 ],
-	"super" : "BTWidget",
+	"super" : "FRTProjectOverviewPage",
 	"type" : "normal" }

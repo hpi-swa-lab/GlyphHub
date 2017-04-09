@@ -6,4 +6,6 @@ initialize
 	
 	sidebar := FRTSidebar new.
 	
-	self contentContainer add: sidebar at: 1
+	self contentContainer add: sidebar at: 1.
+	self showSidebar: false.
+	self showHeader: false
