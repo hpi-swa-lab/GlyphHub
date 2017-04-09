@@ -1,0 +1,15 @@
+{
+	"category" : "Bootstrap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "TB 4/9/2017 08:28",
+	"instvars" : [
+		"offset",
+		"form" ],
+	"name" : "BTImageSet",
+	"pools" : [
+		 ],
+	"super" : "BTWidget",
+	"type" : "normal" }

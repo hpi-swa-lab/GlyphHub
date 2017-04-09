@@ -1,0 +1,14 @@
+{
+	"category" : "FontReviewTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"EmoticonForm" ],
+	"commentStamp" : "TB 4/9/2017 08:35",
+	"instvars" : [
+		 ],
+	"name" : "FRTEmoticonBuilder",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

@@ -1,0 +1,1 @@
+A BTImageSet displays a portion of a given form at a fixed size.
