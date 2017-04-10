@@ -22,7 +22,7 @@ initializeWithPage: aPage
 		add: ((BTIconButton icon: #arrow_right) when: #clickedNoEvent send: #goForward to: self);
 		add: breadcrumbs;
 		add: BTWidget spacer;
-		add: ((BTTextArea placeholder: 'search') minSize: self searchbarWidth @ 0).
+		add: ((BTTextArea placeholder: 'Search ...') minSize: self searchbarWidth @ 0).
 	
 	contentContainer := BTPage row
 		expand: true;

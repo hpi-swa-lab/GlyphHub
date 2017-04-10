@@ -13,6 +13,8 @@ initialize
 		placeholder: 'Comment ...';
 		minRows: 2.
 	
+	imageAttachments := BTPage row.
+
 	self
 		add: (BTPage row
 			add: titleContainer;
@@ -23,4 +25,5 @@ initialize
 		add: ((BTButton text: 'Save')
 			colorType: #primary;
 			align: #(end start);
-			when: #clickedNoEvent send: #saveComment to: self)
+			when: #clickedNoEvent send: #saveComment to: self);
+		add: imageAttachments

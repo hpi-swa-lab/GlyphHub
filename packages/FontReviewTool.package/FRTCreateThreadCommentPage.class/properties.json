@@ -12,7 +12,8 @@
 		"titleContainer",
 		"glyphLinkContainer",
 		"preview",
-		"enteredFromGlyph" ],
+		"enteredFromGlyph",
+		"imageAttachments" ],
 	"name" : "FRTCreateThreadCommentPage",
 	"pools" : [
 		 ],

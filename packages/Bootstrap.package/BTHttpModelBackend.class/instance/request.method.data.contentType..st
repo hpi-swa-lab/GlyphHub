@@ -17,8 +17,9 @@ request: path method: method data: anObject contentType: aString
 		
 		response := client sendRequest: request content: anObject readStream size: anObject size.
 		self flag: #TODO. "make sure this doesnt completely kill everyting if we send back a non-json response"
-		(isJsonResponse := response content ~= '' and: [response isSuccess])
-			ifTrue: [data := Json readFrom: response content readStream].
+		data :=  (isJsonResponse := response content ~= '' and: [response isSuccess and: [(response headerAt: 'Content-Type') = 'application/json']])
+			ifTrue: [Json readFrom: response content readStream]
+			ifFalse: [response].
 		
 		Project current addDeferredUIMessage: [
 			response isSuccess

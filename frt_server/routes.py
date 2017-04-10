@@ -131,6 +131,12 @@ def register_routes(app):
 
         return jsonify(sqla_object_to_dict(attachment, Attachment.__table__.columns.keys()))
 
+    @app.route('/attachment/<attachmentId>/resource', methods=['GET'])
+    def attachment_download(attachmentId):
+        session = app.data.driver.session
+        attachment = session.query(Attachment).get(attachmentId)
+        return send_from_directory(attachment.folder_path(), attachment.data1)
+
     @app.before_request
     def before():
         if frt_server.settings.REQUEST_DEBUG:
