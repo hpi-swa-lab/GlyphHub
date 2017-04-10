@@ -2,7 +2,7 @@ font-upload
 convertUnicodeToGlyphNames: aString of: aFontOrId
 
 	| data id |
-	data := {'unicode' -> aString squeakToUtf8} as: Dictionary.
+	data := {'unicode' -> aString} as: Dictionary.
 	id := aFontOrId isBTModel ifTrue: [aFontOrId id] ifFalse: [aFontOrId].
 	
 	^ self
