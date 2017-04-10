@@ -7,11 +7,6 @@ testLoadNestedPopulated
 	
 	thread := threadPromise value.
 	
-	(self expect: thread glyphs class) to be: BTModelList.
-	(self expect: thread glyphs owner) to be: thread.
-	(self expect: thread glyphs field) to be: #glyphs.
-	(self expect: thread glyphs size) to equal: 3.
-	
 	(self expect: thread comments class) to be: BTModelList.
 	(self expect: thread comments owner) to be: thread.
 	(self expect: thread comments field) to be: #comments.
