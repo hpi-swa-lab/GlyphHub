@@ -6,8 +6,9 @@ allKnownRequiredGlyphNamesFor: aGlyphNameCollection
 	aGlyphNameCollection do: [:glyphName |
 		glifs at: glyphName
 			ifPresent: [:glif |
-				glif tagsNamed: #component do: [:component |
-					required addAll: (self allKnownRequiredGlyphNamesFor: {component attributeAt: #base})]]
+				glif ifNotNil: [
+					glif tagsNamed: #component do: [:component |
+						required addAll: (self allKnownRequiredGlyphNamesFor: {component attributeAt: #base})]]]
 			ifAbsent: [required add: glyphName]].
 
 	^ required
