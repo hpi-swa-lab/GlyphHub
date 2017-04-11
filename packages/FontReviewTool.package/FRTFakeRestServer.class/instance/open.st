@@ -45,7 +45,7 @@ open
 	
 	server listenOn: port.
 	
-	(WebClient new timeout: 1; httpGet: 'http://127.0.0.1:', port asString, '/alive') code = 200
+	(WebClient new timeout: 5; httpGet: 'http://127.0.0.1:', port asString, '/alive') code = 200
 		ifFalse: [ self error: 'Mock server failed to start properly' ].
 		
 	^ port
