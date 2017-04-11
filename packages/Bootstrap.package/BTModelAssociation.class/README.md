@@ -1,0 +1,1 @@
+A BTModelAssociation is an association from one BTModel class to another.

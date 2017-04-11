@@ -1,5 +1,6 @@
 operations
 save: aModel to: aTableNameString
+
 	| table |
 	table := self class camelCaseToUnderscore: aTableNameString.
 	

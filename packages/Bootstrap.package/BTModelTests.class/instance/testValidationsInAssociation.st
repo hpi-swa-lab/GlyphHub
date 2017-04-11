@@ -1,10 +1,11 @@
 as yet unclassified
 testValidationsInAssociation
-	| penguin beak |
-	penguin := BTPenguinModel new.
-	beak := BTBeakModel new color: 'Green'.
 
-	penguin beak: beak.
+	| penguin otherPenguin |
+	penguin := BTPenguinModel new.
+	otherPenguin := BTPenguinModel new age: -42.
+
+	penguin significantOther: otherPenguin.
 
 	(self expect: penguin isValid) to be: false.
 	(self expect: (penguin saveTo: backend)) to reject.

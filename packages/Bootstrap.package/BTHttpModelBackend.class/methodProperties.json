@@ -3,12 +3,12 @@
 		"camelCaseToUnderscore:" : "TB 4/9/2017 12:48",
 		"underscoreToCamelCase:" : "lcj 4/5/2017 14:42" },
 	"instance" : {
-		"apiRootUrl" : "TB 3/28/2017 14:02",
-		"apiRootUrl:" : "TB 3/28/2017 14:02",
-		"apiToken" : "TB 3/28/2017 18:10",
-		"apiToken:" : "TB 3/28/2017 18:11",
-		"delete:from:" : "TB 4/5/2017 11:53",
-		"initialize" : "TB 3/28/2017 18:10",
+		"apiRootUrl" : "ek 4/11/2017 12:02",
+		"apiRootUrl:" : "ek 4/11/2017 12:02",
+		"apiToken" : "ek 4/11/2017 12:02",
+		"apiToken:" : "ek 4/11/2017 12:02",
+		"delete:from:" : "ek 4/11/2017 12:02",
+		"initialize" : "ek 4/11/2017 12:02",
 		"jsonArrayToModel:modelClass:" : "lcj 4/6/2017 12:41",
 		"jsonObjectToModel:modelClass:" : "TB 4/9/2017 13:03",
 		"jsonToModel:modelClass:" : "TB 4/9/2017 12:55",
@@ -17,6 +17,6 @@
 		"loadFrom:where:into:populate:" : "TB 4/10/2017 08:02",
 		"login:password:" : "TB 4/9/2017 12:57",
 		"populateString:" : "lcj 4/9/2017 14:58",
-		"request:method:data:" : "TB 3/29/2017 16:38",
-		"request:method:data:contentType:" : "TB 4/10/2017 08:13",
-		"save:to:" : "lcj 4/6/2017 12:34" } }
+		"request:method:data:" : "ek 4/11/2017 12:08",
+		"request:method:data:contentType:" : "ek 4/11/2017 12:54",
+		"save:to:" : "ek 4/11/2017 12:08" } }
