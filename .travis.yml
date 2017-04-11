@@ -24,8 +24,8 @@ matrix:
       install:
         - sudo pip3 install -U setuptools
         - pip3 install -r requirements.txt
-        - sudo python3 setup.py install
+        - python3 setup.py install --user
       before_script:
       python: "3.5"
-      script: pytest
+      script: python3 setup.py test
       sudo: required
