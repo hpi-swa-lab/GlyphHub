@@ -2,6 +2,6 @@ as yet unclassified
 associations
 
 	^ {
-		#thread -> {FRTThread. #threadGlyphAssociations. #single}.
-		#glyph -> {FRTGlyph. #threadGlyphAssociations. #single}
+		#thread -> (BTModelAssociation singleAssociationTo: FRTThread backPopulatesVia: #threadGlyphAssociations).
+		#glyph -> (BTModelAssociation singleAssociationTo: FRTGlyph backPopulatesVia: #threadGlyphAssociations)
 	} as: Dictionary

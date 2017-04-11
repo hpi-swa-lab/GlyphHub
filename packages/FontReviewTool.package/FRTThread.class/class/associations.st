@@ -2,8 +2,8 @@ accessing
 associations
 	
 	^ {
-		#threadGlyphAssociations -> {FRTThreadGlyphAssociation. #thread. #many}.
-		#codepoints -> {FRTCodepoint. #thread. #many}.
-		#comments -> {FRTComment. #thread. #many}.
-		#tags -> {FRTTag. #threads. #many}
+		#threadGlyphAssociations -> (BTModelAssociation manyAssociationTo: FRTThreadGlyphAssociation backPopulatesVia: #thread).
+		#codepoints -> (BTModelAssociation manyAssociationTo: FRTCodepoint backPopulatesVia: #thread).
+		#comments -> (BTModelAssociation manyAssociationTo: FRTComment backPopulatesVia: #thread).
+		#tags -> (BTModelAssociation manyAssociationTo: FRTTag backPopulatesVia: #threads)
 	} as: Dictionary

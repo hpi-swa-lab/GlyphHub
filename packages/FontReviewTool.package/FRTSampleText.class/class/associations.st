@@ -2,6 +2,6 @@ accessing
 associations
 
 	^ {
-		#author -> {FRTUser. #sampleTexts. #single}.
-		#tags -> {FRTTag. #sampleTexts. #many}
+		#author -> (BTModelAssociation singleAssociationTo: FRTUser backPopulatesVia: #sampleTexts).
+		#tags -> (BTModelAssociation manyAssociationTo: FRTTag backPopulatesVia: #sampleTexts)
 	} as: Dictionary

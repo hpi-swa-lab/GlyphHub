@@ -2,8 +2,8 @@ accessing
 associations
 
 	^ {
-		#sampleTexts -> {FRTSampleText. #tags. #many}.
-		#threads ->{FRTThread. #tags. #many}.
-		#fonts -> {FRTFont. #tags. #many}.
-		#families -> {FRTFamily. #tags. #many}
+		#sampleTexts -> (BTModelAssociation manyAssociationTo: FRTSampleText backPopulatesVia: #tags).
+		#threads ->(BTModelAssociation manyAssociationTo: FRTThread backPopulatesVia: #tags).
+		#fonts -> (BTModelAssociation manyAssociationTo: FRTFont backPopulatesVia: #tags).
+		#families -> (BTModelAssociation manyAssociationTo: FRTFamily backPopulatesVia: #tags)
 	} as: Dictionary
