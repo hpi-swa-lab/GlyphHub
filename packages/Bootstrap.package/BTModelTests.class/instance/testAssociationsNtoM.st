@@ -1,5 +1,6 @@
 as yet unclassified
 testAssociationsNtoM
+
 	| freezingIcebear iceFloe paula rico private assertions |
 	rico := BTPenguinModel new name: 'Rico'.
 	private := BTPenguinModel new name: 'Private'.

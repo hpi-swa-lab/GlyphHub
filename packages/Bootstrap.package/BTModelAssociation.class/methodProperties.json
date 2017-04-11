@@ -1,0 +1,11 @@
+{
+	"class" : {
+		"manyAssociationTo:backPopulatesVia:" : "ek 4/11/2017 12:35",
+		"singleAssociationTo:backPopulatesVia:" : "ek 4/11/2017 12:34" },
+	"instance" : {
+		"backPopulateKey" : "ek 4/11/2017 12:15",
+		"backPopulateKey:" : "ek 4/11/2017 12:15",
+		"cardinality" : "ek 4/11/2017 12:15",
+		"cardinality:" : "ek 4/11/2017 12:17",
+		"foreignClass" : "ek 4/11/2017 12:15",
+		"foreignClass:" : "ek 4/11/2017 12:16" } }

@@ -1,3 +1,4 @@
 accessing
 associations
-	^Dictionary new
+
+	^ Dictionary new

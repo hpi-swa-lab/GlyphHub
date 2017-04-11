@@ -2,6 +2,7 @@ private
 request: path method: method data: anObject contentType: aString
 	" pass in a path such as '/user', a method such as 'GET' or 'POST', data and a content type like 'text/plain'.
 	  Returns a Promise that resolves with the decoded JSON or rejects with a BTHttpError "
+	
 	| promise isJsonResponse |
 	promise := BTPromise new.
 	[ | client request response url data |
@@ -32,4 +33,4 @@ request: path method: method data: anObject contentType: aString
 						yourself)]].
 	] fork.
 	
-	^promise
+	^ promise
