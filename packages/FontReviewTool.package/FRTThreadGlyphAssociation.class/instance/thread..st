@@ -1,4 +1,4 @@
 accessing
 thread: aThread
 
-	self update: #thread with: aThread collectionForeignField: #threadGlyphAssociations
+	self update: #thread with: aThread

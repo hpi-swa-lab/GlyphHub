@@ -1,4 +1,4 @@
 accessing
 font: aFont
 
-	self update: #font with: aFont foreignField: #codepoints
+	self update: #font with: aFont

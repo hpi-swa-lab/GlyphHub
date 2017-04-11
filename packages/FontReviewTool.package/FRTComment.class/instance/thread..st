@@ -1,4 +1,4 @@
 accessing
 thread: aThread
 
-	self update: #thread with: aThread collectionForeignField: #comments
+	self update: #thread with: aThread

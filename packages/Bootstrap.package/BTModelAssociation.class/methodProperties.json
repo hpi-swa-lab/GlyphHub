@@ -8,4 +8,5 @@
 		"cardinality" : "ek 4/11/2017 12:15",
 		"cardinality:" : "ek 4/11/2017 12:17",
 		"foreignClass" : "ek 4/11/2017 12:15",
-		"foreignClass:" : "ek 4/11/2017 12:16" } }
+		"foreignClass:" : "ek 4/11/2017 12:16",
+		"oppositeAssociation" : "ek 4/11/2017 15:49" } }

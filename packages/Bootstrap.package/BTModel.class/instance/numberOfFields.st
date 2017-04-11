@@ -1,3 +1,4 @@
 accessing
 numberOfFields
-	^self class instVarNames size
+
+	^ self class instVarNames size

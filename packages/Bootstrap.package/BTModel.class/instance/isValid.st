@@ -1,5 +1,6 @@
 testing
 isValid
+
 	querying := true.
 	[self class instVarNames do: [:varName | | validationMethod current |
 		validationMethod := ('validate', varName capitalized, ':') asSymbol.
@@ -11,4 +12,4 @@ isValid
 			[ self perform: validationMethod with: current ]
 				on: BTModelValidationFailure do: [ ^false ]]]] ensure: [ querying := false ].
 	
-	^true
+	^ true
