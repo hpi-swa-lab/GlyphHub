@@ -1,3 +1,4 @@
 navigation
 navigationStack
-	^navigationStack
+
+	^ navigationStack

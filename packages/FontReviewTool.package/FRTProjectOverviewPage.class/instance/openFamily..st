@@ -1,6 +1,4 @@
 initialize-release
 openFamily: aFamily
 
-	| fontOverviewPage |
-	fontOverviewPage := FRTFontOverviewPage new.
-	self topLevel openPage: fontOverviewPage with: aFamily
+	self topLevel openPage: (FRTFontOverviewPage new) with: aFamily

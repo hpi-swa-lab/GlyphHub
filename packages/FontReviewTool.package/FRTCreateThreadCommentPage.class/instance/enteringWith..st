@@ -24,7 +24,7 @@ enteringWith: aThreadAndGlyph
 				enteredFromGlyph: aThreadAndGlyph second;
 				updateTitle: newThread;
 				updateGlyphLinks: newThread.
-			
+
 			preview
 				font: newThread threadGlyphAssociations anyOne glyph font;
 				glyphNames: (newThread threadGlyphAssociations collect: [:association | association glyph glyphName])]

@@ -15,7 +15,7 @@ initializeWithPage: aPage
 			align: #(center center);
 			expand: true);
 		ignoreLayout: true.
-	
+
 	header := BTPage row
 		withPadding;
 		add: ((BTIconButton icon: #arrow_left) when: #clickedNoEvent send: #goBack to: self);
@@ -23,7 +23,7 @@ initializeWithPage: aPage
 		add: breadcrumbs;
 		add: BTWidget spacer;
 		add: ((BTTextArea placeholder: 'Search ...') minSize: self searchbarWidth @ 0).
-	
+
 	contentContainer := BTPage row
 		expand: true;
 		spacing: 0;

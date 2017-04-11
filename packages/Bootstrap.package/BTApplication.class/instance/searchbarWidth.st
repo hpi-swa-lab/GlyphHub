@@ -1,3 +1,4 @@
 accessing
 searchbarWidth
-	^200
+
+	^ 200

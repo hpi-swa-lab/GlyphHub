@@ -9,7 +9,7 @@ saveComment
 			self thread
 				title: title text;
 				saveTo: self topLevel backend].
-	
+
 	((threadPromise
 		then: [:thread | | comment |
 			comment := FRTComment new

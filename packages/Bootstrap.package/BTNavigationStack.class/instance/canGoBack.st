@@ -1,3 +1,4 @@
 testing
 canGoBack
-	^current > 1
+
+	^ current > 1

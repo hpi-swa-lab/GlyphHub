@@ -1,3 +1,4 @@
 accessing
 openPage
-	^openPage
+
+	^ openPage
