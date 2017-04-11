@@ -11,7 +11,7 @@ matrix:
   include:
     - language: python
       smalltalk:
-      before_script:
+      before_script: "python3 setup.py install"
       python: "3.5"
       script: pytest
 
