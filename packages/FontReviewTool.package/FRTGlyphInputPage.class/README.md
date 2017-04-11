@@ -1,0 +1,1 @@
+A FRTGlyphInputPage allows you to enter a sequence of unicode characters to be previewed and to create a thread on the associated glyphs.

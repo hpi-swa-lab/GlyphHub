@@ -1,4 +1,5 @@
-as yet unclassified
+lifecycle
 enteringWith: aFont
 
-	self font: aFont
+	self font: aFont.
+	^ super enteringWith: aFont

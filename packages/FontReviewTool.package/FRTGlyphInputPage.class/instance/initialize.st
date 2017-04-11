@@ -1,4 +1,4 @@
-as yet unclassified
+initialize-release
 initialize
 
 	super initialize.
@@ -6,8 +6,7 @@ initialize
 	preview := FRTGlyphWidget new
 		centered: true.
 	inputArea := (BTTextArea placeholder: 'Start typing!')
-			when: #confirmed evaluate: [:text |
-				self updatePreview: text].
+			when: #confirmed send: #updatePreview: to: self.
 	
 	self
 		add: (BTLabel heading: 'Write something here, see how it looks and comment on it!');
