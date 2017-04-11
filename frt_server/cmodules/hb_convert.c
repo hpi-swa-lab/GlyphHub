@@ -67,7 +67,8 @@ hb_convert_to_glyphnames(PyObject *self, PyObject *args)
 
 	PyObject *glyph_list = PyList_New(len);
 
-	for (unsigned int i = 0; i < len; i++) {
+	unsigned int i;
+	for (i = 0; i < len; i++) {
 		PyObject *tuple, *glyphname, *cluster;
 
 		hb_codepoint_t gid   = info[i].codepoint;
