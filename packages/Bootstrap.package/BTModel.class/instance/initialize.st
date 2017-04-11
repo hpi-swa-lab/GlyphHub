@@ -1,5 +1,6 @@
 initialize-release
 initialize
+
 	super initialize.
 	
 	dirtyFlags := Array new: self numberOfFields.
@@ -10,5 +11,5 @@ initialize
 		markAllDirty: true.
 	
 	self class associations keysAndValuesDo: [ :field :association |
-		association third = #many ifTrue: [
+		association cardinality = #many ifTrue: [
 			self instVarNamed: field put: (BTModelList forField: field owner: self) ]]

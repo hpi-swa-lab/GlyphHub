@@ -1,5 +1,6 @@
 as yet unclassified
 associations
-	^{
-		#parent -> {BTPenguinModel. #eggs. #single}
+
+	^ {
+		#parent -> (BTModelAssociation singleAssociationTo: BTPenguinModel backPopulatesVia: #eggs)
 	} as: Dictionary

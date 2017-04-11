@@ -13,17 +13,17 @@ join: aModelList class: aClass populate: aCollection
 			association := associations at: field.
 			
 			children := self
-				loadFrom: association first modelName
-				where: ((association first associations at: association second ifAbsent: [#single]) third == #many ifTrue: ['id'] ifFalse: [association second])
-				equals: (association third == #single ifTrue: [current] ifFalse: [model id])
-				into: association first
+				loadFrom: association foreignClass modelName
+				where: ((association foreignClass associations at: association backPopulateKey ifAbsent: [#single]) cardinality == #many ifTrue: ['id'] ifFalse: [association backPopulateKey])
+				equals: (association cardinality == #single ifTrue: [current] ifFalse: [model id])
+				into: association foreignClass
 				populate: #().
 			
-			children value do: [ :childModel | childModel instVarNamed: association second put: model ].
+			children value do: [ :childModel | childModel instVarNamed: association backPopulateKey put: model ].
 			
 			model
 				instVarNamed: field
-				put: (association third == #single
+				put: (association cardinality == #single
 					ifTrue: [ children value ifEmpty: [nil] ifNotEmptyDo: #anyOne ]
 					ifFalse: [
 						children value

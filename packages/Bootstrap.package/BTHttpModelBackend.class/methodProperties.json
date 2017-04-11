@@ -10,7 +10,7 @@
 		"delete:from:" : "ek 4/11/2017 12:02",
 		"initialize" : "ek 4/11/2017 12:02",
 		"jsonArrayToModel:modelClass:" : "lcj 4/6/2017 12:41",
-		"jsonObjectToModel:modelClass:" : "TB 4/9/2017 13:03",
+		"jsonObjectToModel:modelClass:" : "ek 4/11/2017 14:37",
 		"jsonToModel:modelClass:" : "TB 4/9/2017 12:55",
 		"loadAllFrom:into:populate:" : "TB 4/9/2017 12:58",
 		"loadFrom:where:equals:into:populate:" : "TB 4/9/2017 13:06",

@@ -1,5 +1,5 @@
 as yet unclassified
 associations
 	^{
-		#penguins -> {BTPenguinModel. #favoritePubs. #many}
+		#penguins -> (BTModelAssociation manyAssociationTo: BTPenguinModel backPopulatesVia: #favoritePubs)
 	} as: Dictionary
