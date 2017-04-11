@@ -23,6 +23,7 @@ matrix:
         - sudo apt-get install libharfbuzz-dev libfreetype6-dev python3-pip python3-dev -y
       install:
         - sudo pip3 install -U setuptools
+        - pip3 install -r requirements.txt
         - sudo python3 setup.py install
       before_script:
       python: "3.5"
