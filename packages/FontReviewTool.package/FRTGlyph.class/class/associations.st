@@ -2,6 +2,6 @@ accessing
 associations
 
 	^ {
-		#font -> {FRTFont. #glyphs. #single}.
-		#threadGlyphAssociations -> {FRTThreadGlyphAssociation. #glyph. #many}
+		#font ->  (BTModelAssociation singleAssociationTo: FRTFont backPopulatesVia: #glyphs).
+		#threadGlyphAssociations ->  (BTModelAssociation manyAssociationTo: FRTThreadGlyphAssociation backPopulatesVia: #glyph)
 	} as: Dictionary

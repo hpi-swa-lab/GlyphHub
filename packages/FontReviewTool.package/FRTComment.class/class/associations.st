@@ -2,6 +2,6 @@ accessing
 associations
 
 	^ {
-		#author -> {FRTUser. #comments. #single}.
-		#thread -> {FRTThread. #comments. #single}
+		#author -> (BTModelAssociation singleAssociationTo: FRTUser backPopulatesVia: #comments).
+		#thread -> (BTModelAssociation singleAssociationTo: FRTThread backPopulatesVia: #comments)
 	} as: Dictionary

@@ -2,6 +2,6 @@ accessing
 associations
 	
 	^ {
-		#thread -> {FRTThread. #codepoints. #single}.
-		#font -> {FRTFont. #codepoints. #single}
+		#thread -> (BTModelAssociation singleAssociationTo: FRTThread backPopulatesVia: #codepoints).
+		#font -> (BTModelAssociation singleAssociationTo: FRTFont backPopulatesVia: #codepoints)
 	} as: Dictionary

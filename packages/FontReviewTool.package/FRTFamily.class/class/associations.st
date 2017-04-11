@@ -2,6 +2,6 @@ accessing
 associations
 
 	^ {
-		#fonts -> {FRTFont. #family. #many}.
-		#tags -> {FRTTag. #families. #many}
+		#fonts -> (BTModelAssociation manyAssociationTo: FRTFont backPopulatesVia: #family).
+		#tags -> (BTModelAssociation manyAssociationTo: FRTTag backPopulatesVia: #families)
 	} as: Dictionary

@@ -2,6 +2,6 @@ accessing
 associations
 
 	^ {
-		#comment -> {FRTComment. #attachments. #single}.
-		#owner -> {FRTUser. #attachments. #single}
+		#comment -> (BTModelAssociation singleAssociationTo: FRTComment backPopulatesVia: #attachments).
+		#owner -> (BTModelAssociation singleAssociationTo: FRTUser backPopulatesVia: #attachments)
 	} as: Dictionary
