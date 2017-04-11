@@ -20,7 +20,7 @@ matrix:
       smalltalk:
       before_install:
         - sudo apt-get update -qq
-        - sudo apt-get install libharfbuzz-dev libfreetype6-dev -y
+        - sudo apt-get install libharfbuzz-dev libfreetype6-dev python3-setuptools -y
         - sudo python3 setup.py install
       before_script:
       python: "3.5"
