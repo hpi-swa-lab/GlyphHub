@@ -3,12 +3,10 @@ baseline: spec
 
 	<baseline>
 	
-	spec
-		for: #'common'
-	do: [
+	spec for: #'common' do: [
 		spec
 			package: 'KerningTool';
-			package: 'KerningTool-Tests' with: [ spec requires: #('default') ].
-		spec
+			package: 'KerningTool-Tests' with: [spec requires: #('default')];
+			
 			group: 'default' with: #('KerningTool');
-			group: 'Tests' with: #('KerningTool-Tests') ]
+			group: 'Tests' with: #('KerningTool-Tests')]

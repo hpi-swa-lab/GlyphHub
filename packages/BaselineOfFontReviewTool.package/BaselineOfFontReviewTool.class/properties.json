@@ -1,5 +1,5 @@
 {
-	"category" : "KerningTool-Tests",
+	"category" : "BaselineOfFontReviewTool",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
@@ -7,8 +7,8 @@
 	"commentStamp" : "",
 	"instvars" : [
 		 ],
-	"name" : "KRNKerningToolTests",
+	"name" : "BaselineOfFontReviewTool",
 	"pools" : [
 		 ],
-	"super" : "TestCase",
+	"super" : "BaselineOf",
 	"type" : "normal" }
