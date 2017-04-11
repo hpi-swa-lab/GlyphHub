@@ -2,7 +2,7 @@ accessing
 associations
 
 	^ {
-		#comments -> {FRTComment. #author. #many}.
-		#fonts -> {FRTFont. #author. #many}.
-		#attachments -> {FRTAttachment. #owner. #many}
+		#comments -> (BTModelAssociation manyAssociationTo: FRTComment backPopulatesVia: #author).
+		#fonts -> (BTModelAssociation manyAssociationTo: FRTFont backPopulatesVia: #author).
+		#attachments -> (BTModelAssociation manyAssociationTo: FRTAttachment backPopulatesVia: #owner)
 	} as: Dictionary
