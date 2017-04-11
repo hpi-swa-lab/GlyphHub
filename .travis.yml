@@ -11,9 +11,12 @@ matrix:
   include:
     - language: python
       smalltalk:
-      before_script: "python3 setup.py install"
+      before_install:
+        - sudo apt-get install libharfbuzz-dev libfreetype6-dev
+        - python3 setup.py install
       python: "3.5"
       script: pytest
+      sudo: required
 
 before_script:
   # Move testFiles into smalltalkCI build directory
