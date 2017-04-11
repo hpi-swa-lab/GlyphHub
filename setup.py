@@ -1,11 +1,11 @@
 from setuptools import setup, Extension
 
-hb_convert = Extension('frt_server.hb_convert',
+frt_hb_convert = Extension('frt_hb_convert',
               define_macros = [('MAJOR_VERSION', '0'), ('MINOR_VERSION', '1')],
               include_dirs = ['/usr/include', '/usr/include/harfbuzz', '/usr/include/freetype2'],
               libraries = ['freetype', 'harfbuzz'],
               library_dirs = ['/usr/lib'],
-              sources = ['frt_server/cmodules/hb_convert.c'])
+              sources = ['frt_server/cmodules/frt_hb_convert.c'])
 
 setup(name='frt_server',
               version='0.1',
@@ -17,5 +17,5 @@ setup(name='frt_server',
                      'pytest'
               ],
               test_suite='frt_server.tests',
-              ext_modules = [hb_convert])
+              ext_modules = [frt_hb_convert])
 

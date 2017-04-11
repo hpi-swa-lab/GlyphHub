@@ -21,7 +21,7 @@ matrix:
       before_install:
         - sudo apt-get update -qq
         - sudo apt-get install libharfbuzz-dev libfreetype6-dev -y
-        - python3 setup.py install
+        - python3 setup.py install --user
       before_script:
       python: "3.5"
       script: pytest
