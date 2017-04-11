@@ -8,7 +8,6 @@ baseline: spec
 		
 		spec
 			package: 'Bootstrap' with: [spec requires: #('JSON')];
-			package: 'Bootstrap-Tests' with: [spec requires: #('default')];
 			
 			group: 'default' with: #('Bootstrap');
-			group: 'tests' with: #('Bootstrap-Tests')]
+			group: 'tests' with: #('Bootstrap')]

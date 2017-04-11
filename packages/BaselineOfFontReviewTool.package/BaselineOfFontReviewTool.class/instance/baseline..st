@@ -9,8 +9,6 @@ baseline: spec
 		
 		spec
 			package: 'FontReviewTool';
-			package: 'FontReviewTool-Models';
-			package: 'FontReviewTool-Tests' with: [spec requires: #('default')];
 			
-			group: 'default' with: #('FontReviewTool' 'FontReviewTool-Models');
-			group: 'tests' with: #('FontReviewTool-Tests')]
+			group: 'default' with: #('FontReviewTool');
+			group: 'tests' with: #('FontReviewTool')]
