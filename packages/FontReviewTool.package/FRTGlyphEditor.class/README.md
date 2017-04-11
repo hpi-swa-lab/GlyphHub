@@ -1,0 +1,1 @@
+A FRTGlyphEditor allows you to edit the outline of a given glyph.

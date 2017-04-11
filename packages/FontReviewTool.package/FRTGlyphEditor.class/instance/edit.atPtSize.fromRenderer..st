@@ -2,6 +2,7 @@ as yet unclassified
 edit: aGlyphNameString atPtSize: aNumber fromRenderer: aRenderer
 	
 	| maxY unitsPerEm glif |
+	self flag: #TODO. "make sure this also works with components"
 	outline := KRNOutline new.
 	glif := aRenderer loadedGlifs at: aGlyphNameString.
 	unitsPerEm := aRenderer fontinfo at: 'unitsPerEm'.
