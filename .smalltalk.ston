@@ -3,17 +3,20 @@ SmalltalkCISpec {
     SCIMetacelloLoadSpec {
       #baseline : 'KerningTool',
       #directory : 'packages',
-      #platforms : [ #squeak ]
+      #platforms : [ #squeak ],
+      #load : 'tests'
     },
     SCIMetacelloLoadSpec {
       #baseline : 'Bootstrap',
       #directory : 'packages',
-      #platforms : [ #squeak ]
+      #platforms : [ #squeak ],
+      #load : 'tests'
     },
     SCIMetacelloLoadSpec {
       #baseline : 'FontReviewTool',
       #directory : 'packages',
-      #platforms : [ #squeak ]
+      #platforms : [ #squeak ],
+      #load : 'tests'
     }
   ]
 }

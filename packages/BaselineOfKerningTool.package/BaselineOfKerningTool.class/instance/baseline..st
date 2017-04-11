@@ -9,4 +9,4 @@ baseline: spec
 			package: 'KerningTool-Tests' with: [spec requires: #('default')];
 			
 			group: 'default' with: #('KerningTool');
-			group: 'Tests' with: #('KerningTool-Tests')]
+			group: 'tests' with: #('KerningTool-Tests')]
