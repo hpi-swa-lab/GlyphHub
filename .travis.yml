@@ -10,6 +10,7 @@ smalltalk:
 matrix:
   include:
     - language: python
+      dist: trusty
       smalltalk:
       before_install:
         - sudo apt-get update -q
