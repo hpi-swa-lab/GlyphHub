@@ -1,7 +1,11 @@
 {
 	"class" : {
-		 },
+		"scrollArea:" : "ek 4/12/2017 11:10" },
 	"instance" : {
-		"drawOn:" : "TB 3/1/2017 18:38",
-		"handlesMouseDown:" : "TB 3/2/2017 10:44",
-		"mouseDown:" : "TB 3/2/2017 10:48" } }
+		"drawOn:" : "ek 4/12/2017 10:50",
+		"handlesMouseDown:" : "ek 4/12/2017 10:50",
+		"initialize" : "ek 4/12/2017 11:03",
+		"mouseDown:" : "ek 4/12/2017 10:51",
+		"scroll:" : "ek 4/12/2017 11:10",
+		"scrollArea" : "ek 4/12/2017 11:09",
+		"scrollArea:" : "ek 4/12/2017 11:09" } }

@@ -1,3 +1,4 @@
 layout
 percentVisible
-	^(self width / container firstSubmorph width) @ (self height / container firstSubmorph height)
+
+	^ (self width / container firstSubmorph width) @ (self height / container firstSubmorph height)
