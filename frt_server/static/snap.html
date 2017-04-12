@@ -9,6 +9,7 @@ body {
 	font-family: sans-serif;
 	max-width: 700px;
 	margin: 64px auto;
+	padding: 12px;
 }
 input {
 	width: 100%;
@@ -46,7 +47,7 @@ hr {
 		<div id="login-form">
 			<p id="wrong-password" class="error">Whoops, looks like your username or password were wrong!</p>
 
-			<form onsubmit="login(this)">
+			<form onsubmit="login(this, event)">
 				<input autofocus name="username" placeholder="Username">
 				<input type="password" name="password" placeholder="Password">
 				<button>Login</button>
@@ -95,8 +96,8 @@ function genericError(xhr) {
 	alert('Some error occured (' + xhr.status + '). Please try again later! :(');
 }
 
-function login(form) {
-	window.event.preventDefault();
+function login(form, event) {
+	event.preventDefault();
 
 	document.getElementById('wrong-password').style.display = 'none';
 

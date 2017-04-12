@@ -47,7 +47,7 @@ def register_routes(app):
         raise Unauthorized('Wrong username and/or password.')
 
     @app.route('/family/<family_id>/upload', methods=['POST'])
-    @requires_auth('font')
+    @requires_auth('')
     def upload_family(family_id):
         current_user = current_app.auth.get_request_auth_value()
         if 'file' not in request.files:
@@ -69,6 +69,7 @@ def register_routes(app):
         return '', 200
 
     @app.route('/font/<font_id>/convert', methods=['POST'])
+    @requires_auth('')
     def convert_unicode(font_id):
         session = app.data.driver.session
         font = session.query(Font).get(font_id)
@@ -76,6 +77,8 @@ def register_routes(app):
             return jsonify({'error': 'Associated font does not exist'}), 400
 
         data = request.get_json()
+        if not data:
+            return jsonify({'error': 'No unicode text provided'}), 400
         unicode_text = data.get('unicode')
         if unicode_text == None:
             return jsonify({'error': 'No unicode text provided'}), 400
@@ -86,16 +89,23 @@ def register_routes(app):
                 mimetype='application/json')
 
     @app.route('/font/<font_id>/ufo', methods=['GET'])
+    @requires_auth('')
     def retrieve_ufo(font_id):
         session = app.data.driver.session
         font = session.query(Font).get(font_id)
         if not font:
             return jsonify({'error': 'Associated font does not exist'}), 400
 
-        requested_data = json.loads(request.args.get('query'))
+        query_parameter = request.args.get('query')
+        if query_parameter == None:
+            return jsonify({'error': 'No query specified'}), 400
+        try:
+            requested_data = json.loads(query_parameter)
+        except json.JSONDecodeError:
+            return jsonify({'error': 'Invalid query'}), 400
         response = font.get_ufo_data(requested_data)
 
-        return jsonify(response), 200 
+        return jsonify(response), 200
 
     @app.route('/snap', methods=['GET'])
     def attachment_upload_view():
@@ -103,14 +113,16 @@ def register_routes(app):
         return send_from_directory(directory, 'snap.html')
 
     @app.route('/attachment/upload', methods=['POST'])
-    @frt_requires_auth('resource', 'attachment')
-    def attachment_upload(resource):
+    @requires_auth('')
+    def attachment_upload():
         session = app.data.driver.session
         user = app.auth.get_request_auth_value()
+        if 'file' not in request.files:
+            return jsonify({'error': 'No file given'}), 400
 
         attachment_file = request.files['file']
         if attachment_file.filename == '':
-            return jsonify({'error': 'Invalid file given'}), 400
+            return jsonify({'error': 'Invalid filename'}), 400
 
         name = secure_filename(os.path.basename(attachment_file.filename))
         file_type = name.rsplit('.', 1)[-1].lower()
@@ -131,10 +143,13 @@ def register_routes(app):
 
         return jsonify(sqla_object_to_dict(attachment, Attachment.__table__.columns.keys()))
 
-    @app.route('/attachment/<attachmentId>/resource', methods=['GET'])
-    def attachment_download(attachmentId):
+    @app.route('/attachment/<attachment_id>/resource', methods=['GET'])
+    @requires_auth('')
+    def attachment_download(attachment_id):
         session = app.data.driver.session
-        attachment = session.query(Attachment).get(attachmentId)
+        attachment = session.query(Attachment).get(attachment_id)
+        if not attachment:
+            return jsonify({'error': 'Attachment does not exist'})
         return send_from_directory(attachment.folder_path(), attachment.data1)
 
     if frt_server.settings.DEBUG:
