@@ -137,16 +137,17 @@ def register_routes(app):
         attachment = session.query(Attachment).get(attachmentId)
         return send_from_directory(attachment.folder_path(), attachment.data1)
 
-    @app.before_request
-    def before():
-        if frt_server.settings.REQUEST_DEBUG:
-            print(request.headers)
-            print(request.get_data())
+    if frt_server.settings.DEBUG:
+        @app.before_request
+        def before():
+            if frt_server.settings.REQUEST_DEBUG:
+                print(request.headers)
+                print(request.get_data())
 
-    @app.after_request
-    def after(response):
-        if frt_server.settings.RESPONSE_DEBUG:
-            print(response.status)
-            print(response.headers)
-            print(response.data)
-        return response
+        @app.after_request
+        def after(response):
+            if frt_server.settings.RESPONSE_DEBUG:
+                print(response.status)
+                print(response.headers)
+                print(response.data)
+            return response
