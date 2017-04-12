@@ -8,7 +8,8 @@
 	"instvars" : [
 		"container",
 		"policy",
-		"scrollBars" ],
+		"scrollBars",
+		"isInStickyMode" ],
 	"name" : "BTScrollArea",
 	"pools" : [
 		 ],
