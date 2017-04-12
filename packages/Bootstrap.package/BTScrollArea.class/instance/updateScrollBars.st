@@ -1,5 +1,6 @@
 layout
 updateScrollBars
+
 	| isVertical width offset size |
 	container hasSubmorphs ifFalse: [
 		scrollBars do: [ :bar | bar visible: false ].

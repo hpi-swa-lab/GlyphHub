@@ -1,5 +1,6 @@
 initialize-release
 initialize
+
 	super initialize.
 	
 	policy := #(show scroll).
@@ -8,7 +9,7 @@ initialize
 		color: Color transparent;
 		yourself.
 	
-	scrollBars := {BTScrollBar new. BTScrollBar new}.
+	scrollBars := {BTScrollBar scrollArea: self. BTScrollBar scrollArea: self}.
 	
 	self
 		addMorph: container;

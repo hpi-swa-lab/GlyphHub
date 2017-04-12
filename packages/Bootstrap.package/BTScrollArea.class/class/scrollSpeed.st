@@ -1,3 +1,4 @@
 constants
 scrollSpeed
-	^20 * BTWidget scalingFactor
+
+	^ 20 * BTWidget scalingFactor
