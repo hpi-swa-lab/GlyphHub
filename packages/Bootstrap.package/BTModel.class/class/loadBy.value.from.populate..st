@@ -2,8 +2,7 @@ load-by
 loadBy: aField value: anObject from: aBackend populate: aCollection
 
 	^ aBackend
-		loadFrom: self modelName
-		where: aField
+		loadWhere: aField
 		equals: anObject
 		into: self
 		populate: aCollection
