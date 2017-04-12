@@ -14,5 +14,6 @@ enteringWith: aFamily
 			BTPromise all: {
 				(self renderer loadDataForAllGlyphs)
 					then: [:renderer |
-						self gridWidget glyphNames: renderer loadedGlifs keys].
+						self gridWidget glyphNames: renderer loadedGlifs keys.
+						self layoutChanged].
 				self loadThreads}]
