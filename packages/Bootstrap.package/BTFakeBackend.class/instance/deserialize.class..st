@@ -1,6 +1,7 @@
 as yet unclassified
 deserialize: aDictionaryOrList class: aClass
-	^aDictionaryOrList isBTModelList
+
+	^ aDictionaryOrList isBTModelList
 		ifTrue: [
 			aDictionaryOrList collect: [ :dict |
 				self deserializeEntity: dict class: aClass ]]

@@ -1,4 +1,4 @@
 operations
-delete: aNumber from: aTableNameString
+loadAllInto: aClass populate: aCollection
 
 	^ self subclassResponsibility
