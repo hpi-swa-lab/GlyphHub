@@ -1,4 +1,4 @@
 initialize-release
 openDashboard
 
-	self openPage: FRTProjectOverviewPage new with: nil
+	self openPage: FRTFamilyOverviewPage new with: nil

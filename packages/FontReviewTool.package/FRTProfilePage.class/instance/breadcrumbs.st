@@ -1,5 +1,5 @@
 accessing
 breadcrumbs
 
-	^ {{''. #home. {FRTProjectOverviewPage. nil}}.
+	^ {{''. #home. {FRTFamilyOverviewPage. nil}}.
 		{'My Profile'. #user. {nil. nil}}}

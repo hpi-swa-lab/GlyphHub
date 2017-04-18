@@ -1,0 +1,15 @@
+{
+	"category" : "FontReviewTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"titleField",
+		"textField" ],
+	"name" : "FRTSampleTextCreationPage",
+	"pools" : [
+		 ],
+	"super" : "BTApplicationPage",
+	"type" : "normal" }

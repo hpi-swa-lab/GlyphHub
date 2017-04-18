@@ -9,5 +9,5 @@ createNewThread
 		then: [:glyphs |
 			glyphs do: [:glyph |
 				FRTThreadGlyphAssociation new thread: thread; glyph: glyph].
-			self topLevel openPage: FRTCreateThreadCommentPage new with: {thread. nil}])
+			self topLevel openPage: FRTThreadCommentCreationPage new with: {thread. nil}])
 		catch: [self topLevel displayNotification: 'Creating Thread failed.' type: #danger])
