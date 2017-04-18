@@ -1,4 +1,4 @@
-as yet unclassified
+lifecycle
 enteringWith: anObject
 
-	^ self updateList
+	^ (self updateList) then: [self layoutChanged]

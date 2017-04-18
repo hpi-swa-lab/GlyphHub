@@ -1,0 +1,1 @@
+A FRTSampleTextPage displays one sample text.

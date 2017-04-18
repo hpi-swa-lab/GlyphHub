@@ -1,4 +1,4 @@
-as yet unclassified
+callbacks
 saveSampleText
 
 	| text title |
@@ -14,5 +14,5 @@ saveSampleText
 		text: text;
 		author: self topLevel user;
 		saveTo: self topLevel backend)
-		then: [self topLevel openPage: FRTSampleTextOverviewPage new with: nil])
+		then: [:sampleText | self topLevel openPage: FRTSampleTextPage new with: sampleText])
 		catch: [:error | self topLevel displayNotification: 'Saving failed. Please try again.' type: #danger]

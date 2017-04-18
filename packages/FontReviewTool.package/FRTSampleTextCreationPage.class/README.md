@@ -1,0 +1,1 @@
+A FRTSampleTextCreationPage is the page where a user may create a new sample text.

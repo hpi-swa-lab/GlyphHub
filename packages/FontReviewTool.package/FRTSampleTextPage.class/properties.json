@@ -4,9 +4,12 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "ek 4/18/2017 17:50",
 	"instvars" : [
-		 ],
+		"sampleText",
+		"titleLabel",
+		"authorLabel",
+		"sampleTextLabel" ],
 	"name" : "FRTSampleTextPage",
 	"pools" : [
 		 ],

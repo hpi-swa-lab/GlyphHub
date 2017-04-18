@@ -1,4 +1,4 @@
-as yet unclassified
+lifecycle
 updateList
 
 	sampleTextList
@@ -9,7 +9,10 @@ updateList
 		then: [:texts |
 			texts do: [:text |
 				sampleTextList
-					add: (BTPage row add: (BTLabel heading: text title) oppositeTo: (BTLabel subHeading: text author username));
+					add: (BTPage row
+						add: ((BTClickableWithText heading: text title)
+							when: #clickedNoEvent send: #openSampleText: to: self with: text)
+						oppositeTo: (BTLabel subHeading: text author username));
 					"add: (BTLabel text: text text);"
 					add: BTDivider new]])
 		catch: [self add: (BTAlert text: 'Failed to load sample text list.' type: #danger)]

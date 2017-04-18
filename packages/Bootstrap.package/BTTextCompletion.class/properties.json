@@ -7,11 +7,11 @@
 	"commentStamp" : "TB 3/6/2017 13:41",
 	"instvars" : [
 		"suggestions",
-		"suggestionsPromise",
 		"suggestionsList",
 		"topHit",
 		"activeSuggestion",
-		"onlyCompletions" ],
+		"onlyCompletions",
+		"suggestionsAsynchronusBlock" ],
 	"name" : "BTTextCompletion",
 	"pools" : [
 		 ],
