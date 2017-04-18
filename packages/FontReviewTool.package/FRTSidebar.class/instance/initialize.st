@@ -28,7 +28,8 @@ initialize
 		add: BTDivider new;
 		add: ((BTClickableWithText text: (BTIcon icon: #home), ' Dashboard')
 			when: #clickedNoEvent send: #openDashboard to: self);
-		add: (BTClickableWithText text: (BTIcon icon: #file_text), ' Sample Texts');
+		add: ((BTClickableWithText text: (BTIcon icon: #file_text), ' Sample Texts')
+			when: #clickedNoEvent send: #openSampleTexts to: self);
 		add: ((BTClickableWithText text: (BTIcon icon: #folder_open), ' My Projects')
 			when: #clickedNoEvent send: #openMyProjects to: self);
 		add: BTDivider new

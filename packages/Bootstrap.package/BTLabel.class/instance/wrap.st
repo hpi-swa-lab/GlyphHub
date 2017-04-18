@@ -1,4 +1,5 @@
 accessing
 wrap
-	wrap == false ifTrue: [^#never].
-	^self layout wrap
+
+	wrap == false ifTrue: [^ #never].
+	^ self layout wrap
