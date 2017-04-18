@@ -5,6 +5,7 @@ frt_server/uploads
 frt_server/test_uploads
 frt_server/src
 .cache
+ampfel/tg
 
 .eggs
 *.egg
