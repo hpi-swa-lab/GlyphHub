@@ -6,6 +6,7 @@ frt_server/test_uploads
 frt_server/src
 .cache
 config/config.py
+ampfel/tg
 
 .eggs
 *.egg

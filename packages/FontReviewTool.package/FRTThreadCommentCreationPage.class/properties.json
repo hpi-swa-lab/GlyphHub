@@ -1,0 +1,21 @@
+{
+	"category" : "FontReviewTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "TB 3/30/2017 15:21",
+	"instvars" : [
+		"thread",
+		"title",
+		"commentText",
+		"titleContainer",
+		"glyphLinkContainer",
+		"preview",
+		"enteredFromGlyph",
+		"imageAttachments" ],
+	"name" : "FRTThreadCommentCreationPage",
+	"pools" : [
+		 ],
+	"super" : "BTApplicationPage",
+	"type" : "normal" }

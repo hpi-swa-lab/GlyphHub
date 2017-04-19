@@ -1,0 +1,14 @@
+{
+	"category" : "FontReviewTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "lcj 4/9/2017 12:42",
+	"instvars" : [
+		 ],
+	"name" : "FRTMyFamilyOverviewPage",
+	"pools" : [
+		 ],
+	"super" : "FRTFamilyOverviewPage",
+	"type" : "normal" }

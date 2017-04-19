@@ -10,7 +10,8 @@
 		"username",
 		"comments",
 		"fonts",
-		"attachments" ],
+		"attachments",
+		"sampleTexts" ],
 	"name" : "FRTUser",
 	"pools" : [
 		 ],

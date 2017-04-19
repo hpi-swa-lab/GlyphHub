@@ -4,5 +4,5 @@ breadcrumbs
 	^ self font
 		ifNil: [{}]
 		ifNotNil: [
-			{{''. #home. {FRTProjectOverviewPage. nil}}.
+			{{''. #home. {FRTFamilyOverviewPage. nil}}.
 			 {self font fontName. #font. {nil. nil}}}]

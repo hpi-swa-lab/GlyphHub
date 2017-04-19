@@ -1,4 +1,4 @@
 callback
 addNewComment
 
-	self topLevel openPage: FRTCreateThreadCommentPage new with: {self thread. self enteredFromGlyph}
+	self topLevel openPage: FRTThreadCommentCreationPage new with: {self thread. self enteredFromGlyph}
