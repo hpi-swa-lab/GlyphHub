@@ -3,6 +3,7 @@ import os
 BASE = os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', 'frt_server')
 
 SECRET_KEY = 'insert_secret_key_here'
+HOST = "127.0.0.1"
 PORT = 8000
 DEBUG = False
 REQUEST_DEBUG = True
