@@ -3,7 +3,7 @@ updateText: aString
 
 	self updateSuggestions.
 	
-	topHit
+	self topHit
 		ifNil: [super updateText: aString]
 		ifNotNil: [super updateText: aString,
-			'<span color="#ccc">', (topHit first allButFirst: aString size), '</span>']
+			'<span color="#ccc">', (self topHit first allButFirst: aString size), '</span>']

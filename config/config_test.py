@@ -4,6 +4,7 @@ BASE = os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', 'frt_serv
 
 SECRET_KEY = 'insert_secret_key_here'
 PORT = 8000
+HOST = "127.0.0.1"
 DEBUG = False
 REQUEST_DEBUG = True
 RESPONSE_DEBUG = True

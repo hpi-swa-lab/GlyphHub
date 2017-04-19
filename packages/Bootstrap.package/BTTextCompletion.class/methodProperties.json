@@ -2,13 +2,13 @@
 	"class" : {
 		 },
 	"instance" : {
-		"displaySuggestions:" : "ek 4/19/2017 15:16",
+		"displaySuggestions:" : "ek 4/19/2017 17:01",
 		"initialize" : "ek 4/19/2017 10:59",
 		"isValidCompletion:" : "ek 4/19/2017 11:36",
 		"keyStroke:" : "TB 3/6/2017 14:43",
 		"keyboardFocusChange:" : "TB 2/13/2017 01:10",
 		"markupForResult:" : "ek 4/19/2017 10:36",
-		"moveActiveSuggestion:" : "TB 3/6/2017 14:33",
+		"moveActiveSuggestion:" : "ek 4/19/2017 17:02",
 		"onlyCompletions" : "ek 4/19/2017 10:57",
 		"onlyCompletions:" : "ek 4/19/2017 10:57",
 		"openSuggestionPopup" : "ek 4/19/2017 10:48",
@@ -17,7 +17,9 @@
 		"selectedEvent:action:item:" : "ek 4/19/2017 10:48",
 		"suggestionsAsynchronusBlock:" : "ek 4/18/2017 17:44",
 		"suggestionsList:" : "ek 4/18/2017 17:38",
-		"triggerConfirmed:" : "ek 4/19/2017 11:39",
+		"topHit" : "ek 4/19/2017 16:58",
+		"topHit:" : "ek 4/19/2017 16:59",
+		"triggerConfirmed:" : "ek 4/19/2017 17:09",
 		"updateSuggestions" : "ek 4/19/2017 11:41",
-		"updateText:" : "ek 4/19/2017 11:25",
+		"updateText:" : "ek 4/19/2017 17:03",
 		"useActiveSuggestion" : "ek 4/19/2017 11:38" } }
