@@ -9,7 +9,8 @@
 		"sampleText",
 		"titleLabel",
 		"authorLabel",
-		"sampleTextLabel" ],
+		"sampleTextArea",
+		"fontSelectCompletion" ],
 	"name" : "FRTSampleTextPage",
 	"pools" : [
 		 ],

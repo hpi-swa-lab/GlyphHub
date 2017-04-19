@@ -1,3 +1,4 @@
 accessing
 onlyCompletions
-	^onlyCompletions
+
+	^ onlyCompletions

@@ -10,6 +10,6 @@ ATTACHMENT_UPLOAD_FOLDER = os.path.join(UPLOAD_FOLDER, 'attachment')
 FONT_UPLOAD_FOLDER = os.path.join(UPLOAD_FOLDER, 'font')
 FAMILY_UPLOAD_FOLDER = os.path.join(UPLOAD_FOLDER, 'family')
 SECRET_KEY = 'this-is-my-super-secret-key'
-DEBUG = False
+DEBUG = True
 REQUEST_DEBUG = True
 RESPONSE_DEBUG = True
