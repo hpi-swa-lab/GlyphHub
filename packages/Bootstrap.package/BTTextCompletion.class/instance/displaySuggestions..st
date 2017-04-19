@@ -4,9 +4,9 @@ displaySuggestions: aCollection
 	suggestions removeAllMorphs.
 	activeSuggestion := 0.
 	
-	topHit := aCollection
+	self topHit:( aCollection
 		detect: [:suggestion | suggestion first asLowercase beginsWith: self text asLowercase]
-		ifNone: [nil].
+		ifNone: [nil]).
 	
 	aCollection
 		ifEmpty: [^ suggestions delete]

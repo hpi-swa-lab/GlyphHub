@@ -16,7 +16,8 @@ void sqLayoutRenderWidthHeightDepthPointerTransformColorFillColorClipXClipYClipW
 		int start,
 		int end);
 
-PangoLayout *sqCreateLayout();
+sqInt sqCreateLayout();
+PangoLayout *sqLayoutForHandle(sqInt handle);
 
 void sqRegisterCustomFontLen(char *font, int len);
 void sqRegisterCustomFontDirectory(char *directory, int len);

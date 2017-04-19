@@ -7,6 +7,7 @@ frt_server/src
 .cache
 config/config.py
 ampfel/tg
+assets/roboto
 
 .eggs
 *.egg
