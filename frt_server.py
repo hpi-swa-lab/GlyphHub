@@ -11,4 +11,4 @@ import frt_server.config
 
 app = create_app()
 setup_database(app)
-app.run(debug = frt_server.config.DEBUG, port = 8000)
+app.run(debug = frt_server.config.DEBUG, port = frt_server.config.PORT)

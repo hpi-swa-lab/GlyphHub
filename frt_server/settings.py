@@ -14,8 +14,13 @@ RESOURCE_METHODS = ['GET', 'POST']
 ITEM_METHODS = ['GET', 'PUT', 'DELETE']
 IF_MATCH = False
 HATEOAS = False
+PROJECTION = False
+TRANSPARENT_SCHEMA_RULES = False
+BULK_ENABLED = False
+
 
 user_schema = User._eve_schema['user']
+user_schema['allowed_filters'] = []
 user_projection = user_schema['datasource']['projection']
 user_projection['salt'] = 0
 user_projection['password'] = 0

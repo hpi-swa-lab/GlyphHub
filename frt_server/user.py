@@ -21,7 +21,7 @@ class User(CommonColumns):
     fonts = relationship('Font', back_populates='author')
     attachments = relationship('Attachment', back_populates='owner')
 
-    def generate_auth_token(self, expiration=24*60*60):
+    def generate_auth_token(self, expiration=frt_server.config.TOKEN_EXPIRATION):
         """Generates token for given expiration
         and user login."""
         s = Serializer(frt_server.config.SECRET_KEY, expires_in=expiration)
