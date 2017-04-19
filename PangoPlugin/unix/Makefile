@@ -20,7 +20,7 @@ LDFLAGS=-m32 \
 	   -shared \
 	   -fPIC
 LDLIBS=$(shell env PKG_CONFIG_PATH=/usr/lib/i386-linux-gnu/pkgconfig pkg-config --libs $(PKGLIBS))
-SOURCES += $(BASE)/src/plugins/$(PLUGIN_NAME)/$(PLUGIN_NAME).c
+SOURCES += $(BASE)/src/plugins/$(PLUGIN_NAME)/$(PLUGIN_NAME).c ../Cross/PangoPlugin.c
 OBJECTS = $(SOURCES:.c=.o)
 
 EXECUTABLE=$(PATH_TO_SQUEAK)/bin/$(PLUGIN_NAME)
