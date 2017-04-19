@@ -7,6 +7,7 @@ triggerConfirmed: aString
 			ifFalse: [self text: aString].
 		
 		suggestions delete.
+		self topHit: nil.
 		super triggerConfirmed: self text].
 
 	^ false
