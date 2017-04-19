@@ -29,7 +29,14 @@ entities = [
     Comment(text='because.', author_id=1, thread_id=1),
     SampleText(title='Evil Wizards', text='Mad wizards brew evil jack with horses', author_id=2),
     SampleText(title='Long Sample Text', text='Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.', author_id=1),
-    SampleText(title='Arabic Text', text='شدّت وعُرفت فصل', author_id=2)
+    SampleText(title='Arabic Text', text='شدّت وعُرفت فصل', author_id=2),
+    SampleText(title='Chinese Text', text='側経意責家方家閉討店暖育田庁載社転線宇', author_id=2),
+    SampleText(title='Armeninian Text', text='լոռեմ իպսում դոլոռ սիթ ', author_id=2),
+    SampleText(title='Russian Text', text='Лорем ипсум долор сит амет, пер', author_id=2),
+    SampleText(title='Greek Text', text='Λορεμ ιπσθμ δολορ σιτ ', author_id=2),
+    SampleText(title='Korean Text', text='국민경제의 발전을 위한 중요정책의 수립에', author_id=2),
+    SampleText(title='Japanese Text', text='恵ツ医威技析水リぞこじ環康ラモ', author_id=2),
+    SampleText(title='pIqaD Text', text=' 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	', author_id=2)
 ]
    
 def post_create(entities):
