@@ -1,5 +1,6 @@
 instance creation
 text: aString
-	^self new
+
+	^ self new
 		text: aString;
 		yourself

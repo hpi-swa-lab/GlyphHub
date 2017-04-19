@@ -1,6 +1,7 @@
 lifecycle
 enteringWith: aSampleText
 	
-	titleLabel heading: aSampleText title.
-	authorLabel subHeading: 'by ', aSampleText author username.
-	sampleTextLabel text: aSampleText text
+	self sampleText: aSampleText.
+	titleLabel heading: self sampleText title.
+	authorLabel subHeading: 'by ', self sampleText author username.
+	self resetFont

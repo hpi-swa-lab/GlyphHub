@@ -1,8 +1,8 @@
 operations
-load: aNumber from: aTableNameString populate: aCollection
+load: aNumber into: aClass populate: aCollection
 
 	^ self
 		loadWhere: #id
 		equals: aNumber
-		into: self
+		into: aClass
 		populate: aCollection

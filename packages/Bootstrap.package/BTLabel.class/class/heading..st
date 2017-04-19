@@ -1,5 +1,6 @@
 instance creation
 heading: aString
-	^self new
+
+	^ self new
 		heading: aString;
 		yourself

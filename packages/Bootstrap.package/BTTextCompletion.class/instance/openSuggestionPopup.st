@@ -1,5 +1,6 @@
 suggestions
 openSuggestionPopup
+
 	self world ifNotNil: [
 		suggestions
 			openInWorld;
