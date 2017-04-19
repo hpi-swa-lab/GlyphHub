@@ -3,6 +3,7 @@ from sqlalchemy.orm import relationship
 from sqlalchemy.orm import column_property, relationship, validates
 
 from frt_server.common import CommonColumns
+import frt_server.config
 
 import hashlib
 import string
@@ -11,7 +12,6 @@ import random
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 from itsdangerous import SignatureExpired, BadSignature
 
-SECRET_KEY = 'this-is-my-super-secret-key'
 
 class User(CommonColumns):
     __tablename__ = 'user'
@@ -24,7 +24,7 @@ class User(CommonColumns):
     def generate_auth_token(self, expiration=24*60*60):
         """Generates token for given expiration
         and user login."""
-        s = Serializer(SECRET_KEY, expires_in=expiration)
+        s = Serializer(frt_server.config.SECRET_KEY, expires_in=expiration)
         return s.dumps({'username': self.username })
 
     @staticmethod
@@ -32,7 +32,7 @@ class User(CommonColumns):
         """Verifies token and eventually returns
         user login.
         """
-        s = Serializer(SECRET_KEY)
+        s = Serializer(frt_server.config.SECRET_KEY)
         try:
             data = s.loads(token)
         except SignatureExpired:

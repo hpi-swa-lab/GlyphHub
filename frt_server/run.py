@@ -10,6 +10,15 @@ import copy
 import frt_server.tables
 from frt_server.routes import register_routes
 
+#policies = dict(
+#'user' => {
+#    'user_key' => '_id'
+#    'PUBLIC' => ['GET'],
+#    'PROTECTED' => ['POST'],
+#    'PRIVATE' => ['DELETE']
+#    }
+#)
+
 class TokenAuth(TokenAuth):
     app = None
 
@@ -18,13 +27,22 @@ class TokenAuth(TokenAuth):
         First we are verifying if the token is valid.
         """
 
+        print(allowed_roles, resource, method)
         username = frt_server.tables.User.verify_auth_token(token)
+
+        #policy = policies[resource]
+
         if username:
             db_session = self.app.data.driver.session
             users = db_session.query(frt_server.tables.User).filter_by(username=username).all()
             if not users:
                 return False
             user = users[0]
+
+#            myown = user[policy['user_key']] == resource['_id']
+#            if not (method in policy['PUBLIC'] or (method in policy['PROTECTED'] and myOwn)):
+#                return False
+
             self.set_request_auth_value(user)
             return user.is_authorized(allowed_roles)
         else:

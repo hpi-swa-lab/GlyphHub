@@ -152,16 +152,16 @@ def register_routes(app):
             return jsonify({'error': 'Attachment does not exist'})
         return send_from_directory(attachment.folder_path(), attachment.data1)
 
-    if frt_server.settings.DEBUG:
+    if frt_server.config.DEBUG:
         @app.before_request
         def before():
-            if frt_server.settings.REQUEST_DEBUG:
+            if frt_server.config.REQUEST_DEBUG:
                 print(request.headers)
                 print(request.get_data())
 
         @app.after_request
         def after(response):
-            if frt_server.settings.RESPONSE_DEBUG:
+            if frt_server.config.RESPONSE_DEBUG:
                 print(response.status)
                 print(response.headers)
                 print(response.data)

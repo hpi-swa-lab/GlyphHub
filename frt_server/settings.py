@@ -6,9 +6,6 @@ from eve.utils import config
 ID_FIELD = '_id'
 config.ID_FIELD = ID_FIELD
 
-DEBUG = True
-REQUEST_DEBUG = True
-RESPONSE_DEBUG = True
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 SQLALCHEMY_RECORD_QUERIES = False
 SQLALCHEMY_ECHO = False
@@ -18,8 +15,12 @@ ITEM_METHODS = ['GET', 'PUT', 'DELETE']
 IF_MATCH = False
 HATEOAS = False
 
+user_schema = User._eve_schema['user']
+user_projection = user_schema['datasource']['projection']
+user_projection['salt'] = 0
+user_projection['password'] = 0
 DOMAIN = {
-    'user': User._eve_schema['user'],
+    'user': user_schema,
     'tag': Tag._eve_schema['tag'],
     'sample_text': SampleText._eve_schema['sample_text'],
     'family': Family._eve_schema['family'],

@@ -7,7 +7,8 @@ if sys.version_info < (3, 0):
 
 from frt_server.run import create_app, setup_database
 import frt_server.settings
+import frt_server.config
 
 app = create_app()
 setup_database(app)
-app.run(debug = frt_server.settings.DEBUG, port = 8000)
+app.run(debug = frt_server.config.DEBUG, port = 8000)
