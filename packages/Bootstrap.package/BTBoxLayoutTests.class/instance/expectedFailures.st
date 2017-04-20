@@ -1,0 +1,4 @@
+bugs
+expectedFailures
+
+	^ #(testLabelNestedWithPaddingAndAnotherChild)
