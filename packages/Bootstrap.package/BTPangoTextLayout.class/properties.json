@@ -14,7 +14,8 @@
 		"ellipsize",
 		"wrap",
 		"cursor",
-		"selectionBound" ],
+		"selectionBound",
+		"lineSpacing" ],
 	"name" : "BTPangoTextLayout",
 	"pools" : [
 		 ],

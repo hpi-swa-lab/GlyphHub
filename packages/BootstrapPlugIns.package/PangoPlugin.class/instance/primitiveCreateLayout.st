@@ -1,6 +1,5 @@
 primitives
 primitiveCreateLayout
-	<var: #layout type: 'PangoLayout *'>
 	<export: true>
 
 	| layout |

@@ -5,7 +5,7 @@ primitiveRegisterCustomFont
 	<export: true>
 	
 	| strLen strPtr strValue |
-	interpreterProxy methodArgumentCount = 2 ifFalse: [ ^interpreterProxy primitiveFail ].
+	interpreterProxy methodArgumentCount = 1 ifFalse: [ ^interpreterProxy primitiveFail ].
 
 	strValue := interpreterProxy stackValue: 0.
 	((interpreterProxy isBytes: strValue) or: [interpreterProxy isWords: strValue])

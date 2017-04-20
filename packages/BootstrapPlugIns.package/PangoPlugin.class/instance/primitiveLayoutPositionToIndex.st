@@ -8,7 +8,7 @@ primitiveLayoutPositionToIndex
 	| layout pointOop x y index out success trailing |
 	interpreterProxy methodArgumentCount = 2 ifFalse: [ ^interpreterProxy primitiveFail ].
 
-	layout := self cCoerce: (interpreterProxy stackIntegerValue: 1) to: 'PangoLayout*'.
+	layout := self sqLayoutForHandle: (interpreterProxy stackIntegerValue: 1).
 	
 	pointOop := interpreterProxy stackValue: 0.
 	x := self extractPoint: pointOop index: 0.

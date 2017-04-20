@@ -8,7 +8,7 @@ primitiveLayoutSetText
 	| layout strLen strPtr strValue |
 	interpreterProxy methodArgumentCount = 2 ifFalse: [ ^interpreterProxy primitiveFail ].
 
-	layout := self cCoerce: (interpreterProxy stackIntegerValue: 1) to: 'PangoLayout*'.
+	layout := self sqLayoutForHandle: (interpreterProxy stackIntegerValue: 1).
 	
 	strValue := interpreterProxy stackValue: 0.
 	((interpreterProxy isBytes: strValue) or: [interpreterProxy isWords: strValue])

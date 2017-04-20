@@ -7,7 +7,7 @@ primitiveLayoutIndexAtLine
 	| layout x index out trailing line |
 	interpreterProxy methodArgumentCount = 3 ifFalse: [ ^interpreterProxy primitiveFail ].
 
-	layout := self cCoerce: (interpreterProxy stackIntegerValue: 2) to: 'PangoLayout*'.
+	layout := self sqLayoutForHandle: (interpreterProxy stackIntegerValue: 2).
 	
 	line := interpreterProxy stackIntegerValue: 1.
 	x := interpreterProxy stackIntegerValue: 0.

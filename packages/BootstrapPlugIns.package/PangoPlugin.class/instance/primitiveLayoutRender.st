@@ -56,7 +56,7 @@ primitiveLayoutRender
 	(bmWidth >= 0 and: [bmHeight >= 0]) ifFalse: [ ^interpreterProxy primitiveFailFor: 109 ].
 	" TODO check bitmap depth for 32 "
 	
-	layout := self cCoerce: (interpreterProxy stackIntegerValue: 10) to: 'PangoLayout*'.
+	layout := self sqLayoutForHandle: (interpreterProxy stackIntegerValue: 10).
 
 	self
 		sqLayoutRender: layout

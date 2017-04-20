@@ -7,7 +7,7 @@ primitiveLayoutMoveCursorVisually
 	| layout direction index strong trailing newIndex newTrailing out |
 	interpreterProxy methodArgumentCount = 5 ifFalse: [ ^interpreterProxy primitiveFail ].
 
-	layout := self cCoerce: (interpreterProxy stackIntegerValue: 4) to: 'PangoLayout*'.
+	layout := self sqLayoutForHandle: (interpreterProxy stackIntegerValue: 4).
 	strong := interpreterProxy booleanValueOf: (interpreterProxy stackValue: 3).
 	index := interpreterProxy stackIntegerValue: 2.
 	trailing := interpreterProxy stackIntegerValue: 1.

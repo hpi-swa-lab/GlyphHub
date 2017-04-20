@@ -6,7 +6,7 @@ primitiveLayoutSetHeight
 	| layout height |
 	interpreterProxy methodArgumentCount = 2 ifFalse: [ ^interpreterProxy primitiveFail ].
 	
-	layout := self cCoerce: (interpreterProxy stackIntegerValue: 1) to: 'PangoLayout*'.
+	layout := self sqLayoutForHandle: (interpreterProxy stackIntegerValue: 1).
 	height := interpreterProxy stackIntegerValue: 0.
 	interpreterProxy failed ifTrue: [ ^interpreterProxy primitiveFailFor: 100 ].
 	
