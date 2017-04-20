@@ -1,3 +1,4 @@
 accessing
 selectionBound
-	^selectionBound
+
+	^ selectionBound

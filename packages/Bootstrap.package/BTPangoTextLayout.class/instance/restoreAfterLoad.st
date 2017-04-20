@@ -1,5 +1,6 @@
 initialize-release
 restoreAfterLoad
+
 	layout := 0.
 	font ifNotNil: [self font: font].
 	height ifNotNil: [self height: height].	

@@ -1,6 +1,7 @@
 accessing
 ellipsize: aMode
 	" one of #none, #start, #middle, #end "
+	
 	ellipsize := aMode.
 	self
 		primLayout: self layout

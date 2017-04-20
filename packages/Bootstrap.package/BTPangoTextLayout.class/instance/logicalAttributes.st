@@ -1,9 +1,10 @@
 accessing
 logicalAttributes
+
 	| bits |
 	bits := self primLayoutLogicalAttributes: self layout.
 	
-	^bits collect: [ :bitfield | | field |
+	^ bits collect: [ :bitfield | | field |
 		field := -1.
 		#(lineBreak
 			mandatoryBreak

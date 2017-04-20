@@ -1,3 +1,4 @@
 accessing
 extent
-	^self primLayoutPixelSize: self layout
+
+	^ self primLayoutPixelSize: self layout

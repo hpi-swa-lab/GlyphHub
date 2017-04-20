@@ -1,3 +1,4 @@
 accessing
 height
-	^height
+
+	^ height

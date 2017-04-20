@@ -1,3 +1,4 @@
 accessing
 ellipsize
-	^ellipsize
+
+	^ ellipsize

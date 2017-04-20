@@ -1,3 +1,4 @@
 accessing
 numberOfLines
-	^self primLayoutLineCount: self layout
+
+	^ self primLayoutLineCount: self layout
