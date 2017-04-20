@@ -2,9 +2,9 @@
 	"class" : {
 		 },
 	"instance" : {
-		"displaySuggestions:" : "ek 4/19/2017 17:01",
+		"displaySuggestions:" : "JH 4/20/2017 11:33",
 		"initialize" : "ek 4/19/2017 10:59",
-		"isValidCompletion:" : "ek 4/19/2017 11:36",
+		"isValidCompletion:" : "JH 4/20/2017 11:37",
 		"keyStroke:" : "TB 3/6/2017 14:43",
 		"keyboardFocusChange:" : "TB 2/13/2017 01:10",
 		"markupForResult:" : "ek 4/19/2017 10:36",
@@ -15,7 +15,7 @@
 		"outOfWorld:" : "TB 3/6/2017 11:35",
 		"selected:" : "ek 4/19/2017 10:48",
 		"selectedEvent:action:item:" : "ek 4/19/2017 10:48",
-		"suggestionsAsynchronusBlock:" : "ek 4/18/2017 17:44",
+		"suggestionsAsynchronusBlock:" : "JH 4/20/2017 11:14",
 		"suggestionsList:" : "ek 4/18/2017 17:38",
 		"topHit" : "ek 4/19/2017 16:58",
 		"topHit:" : "ek 4/19/2017 16:59",

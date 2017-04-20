@@ -1,5 +1,7 @@
 ui
 resetFont
 
-	sampleTextArea removeAllMorphs.
-	sampleTextArea add: (BTLabel text: sampleText text)
+	sampleTextArea
+		removeAllMorphs;
+		add: (BTLabel text: sampleText text).
+	self changed

@@ -1,10 +1,8 @@
 text
 minRows: aNumber
 
-	| oldText |
+	| oldText minSizeY |
 	[oldText := self layout text.
-	self layout text: (String new: aNumber withAll: Character cr).
-	self minSize:
-		self minSize x @
-		(self layout extent y / BTWidget scalingFactor) floor]
-		ensure: [self layout text: oldText]
+	 self layout text: (String new: aNumber withAll: Character cr).
+	 minSizeY := (self layout extent y / BTWidget scalingFactor).
+	 self minSize: self minSize x @ minSizeY floor] ensure: [self layout text: oldText]
