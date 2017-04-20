@@ -1,3 +1,4 @@
 leave
-finalLeaveActions: enteringProject 
+finalLeaveActions: enteringProject
+ 
 	TheWorldMainDockingBar showWorldMainDockingBar: true

@@ -1,3 +1,4 @@
 color-constants
 baseColorInfo
-	^Color fromString: '#5bc0de'
+
+	^ Color fromString: '#5bc0de'

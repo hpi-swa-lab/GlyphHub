@@ -1,3 +1,4 @@
 accessing
 finalSize
-	^finalSize
+
+	^ finalSize

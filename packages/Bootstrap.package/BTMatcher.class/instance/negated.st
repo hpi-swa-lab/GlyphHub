@@ -1,3 +1,4 @@
 accessing
 negated
-	^negated
+
+	^ negated

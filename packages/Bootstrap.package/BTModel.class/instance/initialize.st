@@ -10,6 +10,6 @@ initialize
 		privateId: 0;
 		markAllDirty: true.
 	
-	self class associations keysAndValuesDo: [ :field :association |
+	self class associations keysAndValuesDo: [:field :association |
 		association cardinality = #many ifTrue: [
-			self instVarNamed: field put: (BTModelList forField: field owner: self) ]]
+			self instVarNamed: field put: (BTModelList forField: field owner: self)]]

@@ -1,7 +1,7 @@
 fields
 dirtyFieldsAndValues
-	| dirtyFieldDictionary |
-	
+
+	| dirtyFieldDictionary |	
 	dirtyFieldDictionary := OrderedDictionary new.
 	
 	self dirtyFieldNames do: [:field | | value fieldName key |

@@ -1,5 +1,6 @@
 printing
 printOn: aStream
+
 	aStream nextPutAll: 'a Promise'.
 	self isResolved ifTrue: [
 		aStream
@@ -10,4 +11,4 @@ printOn: aStream
 		aStream
 			nextPutAll: '(rejected: ';
 			nextPutAll: error printString;
-			nextPutAll: ')'].
+			nextPutAll: ')']

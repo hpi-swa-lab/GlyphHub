@@ -1,3 +1,4 @@
 private
 baseFontSize
-	^TextStyle defaultFont pointSize * BTWidget scalingFactor
+
+	^ TextStyle defaultFont pointSize * BTWidget scalingFactor

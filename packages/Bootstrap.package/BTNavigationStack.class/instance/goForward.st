@@ -1,3 +1,4 @@
 navigation
 goForward
-	^self goForward: 1
+
+	^ self goForward: 1

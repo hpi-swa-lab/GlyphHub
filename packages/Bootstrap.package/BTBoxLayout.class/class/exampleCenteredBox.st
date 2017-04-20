@@ -1,5 +1,6 @@
 examples
 exampleCenteredBox
+
 	| window loginPage loginBox |
 	loginBox := (BTPage new vertical: true; align: #(center center)) color: Color green; minSize: 100 asPoint.
 	loginPage := BTPage new color: Color red; add: loginBox.

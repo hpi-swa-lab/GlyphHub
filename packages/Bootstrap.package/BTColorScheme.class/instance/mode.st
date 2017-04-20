@@ -1,3 +1,4 @@
 variations
 mode
-	^mode
+
+	^ mode

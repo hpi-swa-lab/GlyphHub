@@ -1,3 +1,4 @@
 load-all
 loadAll
-	^self loadAllPopulate: #all
+
+	^ self loadAllPopulate: #all

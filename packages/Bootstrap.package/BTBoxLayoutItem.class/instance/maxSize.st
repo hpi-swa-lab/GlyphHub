@@ -1,3 +1,4 @@
 accessing
 maxSize
-	^maxSize
+
+	^ maxSize

@@ -1,5 +1,6 @@
 layout
 takeWidth: aNumber
+
 	| preferred |
 	preferred := self widget preferredSizeForWidth: aNumber.
 	

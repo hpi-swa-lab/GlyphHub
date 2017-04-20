@@ -6,4 +6,4 @@ contain: aCollectionOrValue
 		ifTrue: [aCollectionOrValue]
 		ifFalse: [{aCollectionOrValue}].
 	
-	^self assert: (subject includesAllOf: collection) operator: 'contain the same as' expected: collection
+	^ self assert: (subject includesAllOf: collection) operator: 'contain the same as' expected: collection

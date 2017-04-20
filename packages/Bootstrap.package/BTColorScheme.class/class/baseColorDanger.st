@@ -1,3 +1,4 @@
 color-constants
 baseColorDanger
-	^Color fromString: '#d9534f'
+
+	^ Color fromString: '#d9534f'

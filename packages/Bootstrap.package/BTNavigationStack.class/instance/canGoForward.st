@@ -1,3 +1,4 @@
 testing
 canGoForward
-	^current < stack size
+
+	^ current < stack size

@@ -2,12 +2,11 @@
 	"class" : {
 		 },
 	"instance" : {
-		"cursor" : "TB 3/7/2017 13:28",
-		"cursor:" : "TB 3/7/2017 13:28",
-		"cursorRectAt:" : "TB 2/5/2017 19:46",
-		"drawOn:transform:color:clip:" : "TB 2/12/2017 12:27",
-		"drawOn:transform:color:fillColor:clip:start:end:" : "TB 2/12/2017 12:27",
-		"ellipsize" : "TB 3/7/2017 15:06",
+		"cursor" : "ek 4/20/2017 15:06",
+		"cursor:" : "ek 4/20/2017 15:06",
+		"drawOn:transform:color:clip:" : "ek 4/20/2017 15:07",
+		"drawOn:transform:color:fillColor:clip:start:end:" : "ek 4/20/2017 15:07",
+		"ellipsize" : "ek 4/20/2017 15:08",
 		"ellipsize:" : "TB 3/7/2017 15:24",
 		"extent" : "TB 3/7/2017 14:36",
 		"font" : "TB 2/5/2017 19:40",

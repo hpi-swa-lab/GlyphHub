@@ -1,3 +1,4 @@
 color-constants
 baseColorWarning
-	^Color fromString: '#f0ad4e'  
+
+	^ Color fromString: '#f0ad4e'  

@@ -1,3 +1,4 @@
 accessing
 naturalSize
-	^naturalSize
+
+	^ naturalSize

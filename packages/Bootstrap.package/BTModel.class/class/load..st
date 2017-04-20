@@ -1,3 +1,4 @@
 load-id
 load: aNumber
-	^self load: aNumber populate: #all
+
+	^ self load: aNumber populate: #all

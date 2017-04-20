@@ -1,7 +1,8 @@
 private
 distributeLeftOver: aNumber among: aCollection
+
 	| spreading extraSpace |
-	aNumber <= 0 ifTrue: [^0].
+	aNumber <= 0 ifTrue: [^ 0].
 	
 	spreading := (1 to: aCollection size) asOrderedCollection.
 	extraSpace := aNumber.
@@ -22,6 +23,6 @@ distributeLeftOver: aNumber among: aCollection
 			gap := item naturalSize - item minSize.
 			extra := glue min: gap.
 			item finalSize: item finalSize + extra.
-			extraSpace := extraSpace - extra ]].
+			extraSpace := extraSpace - extra]].
 	
-	^extraSpace
+	^ extraSpace

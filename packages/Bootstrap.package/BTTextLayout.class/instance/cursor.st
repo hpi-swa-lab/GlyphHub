@@ -1,3 +1,4 @@
 accessing
 cursor
-	^self subclassResponsibility
+
+	^ self subclassResponsibility

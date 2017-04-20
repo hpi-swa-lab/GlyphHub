@@ -1,3 +1,4 @@
 colors
 background: aColor
-	^self copy privateBackground: aColor
+
+	^ self copy privateBackground: aColor

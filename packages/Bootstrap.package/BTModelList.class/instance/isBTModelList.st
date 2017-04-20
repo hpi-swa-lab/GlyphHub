@@ -1,4 +1,4 @@
 testing
 isBTModelList
 
-	^true
+	^ true

@@ -1,4 +1,5 @@
 initialize
 initializeWithResolvedValue: anObject
+
 	self initialize.
-	self resolveWith: anObject.
+	self resolveWith: anObject

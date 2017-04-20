@@ -1,3 +1,4 @@
 testing
 isCreated 
-	^self id ~= 0
+
+	^ self id ~= 0

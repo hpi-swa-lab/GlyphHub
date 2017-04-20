@@ -1,3 +1,4 @@
 accessing
 defaultBackend
-	^Backend ifNil: [self error: 'No default backend set']
+
+	^ Backend ifNil: [self error: 'No default backend set']

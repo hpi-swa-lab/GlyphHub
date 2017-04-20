@@ -1,5 +1,6 @@
 enter
 finalEnterActions: leavingProject
+
 	super finalEnterActions: leavingProject.
 	
 	self app openInWorld.

@@ -1,3 +1,4 @@
 colors
 foreground
-	^foreground
+
+	^ foreground

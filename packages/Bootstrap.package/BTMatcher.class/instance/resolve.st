@@ -4,4 +4,4 @@ resolve
 	
 	self waitForPromise: subject.
 	
-	^self assert: subject isResolved operator: 'be resolved' expected: nil
+	^ self assert: subject isResolved operator: 'be resolved' expected: nil

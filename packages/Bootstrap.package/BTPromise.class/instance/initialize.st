@@ -1,5 +1,6 @@
 initialize
 initialize
+
 	state := #pending.
 	resolvers := #().
 	rejecters := #().

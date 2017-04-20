@@ -1,3 +1,4 @@
 load-all
 loadAllFrom: aBackend
-	^self loadAllFrom: aBackend populate: #()
+
+	^ self loadAllFrom: aBackend populate: #()

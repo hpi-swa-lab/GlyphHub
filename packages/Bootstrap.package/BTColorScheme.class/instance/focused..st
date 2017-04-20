@@ -1,3 +1,4 @@
 variations
 focused: aBoolean
-	^aBoolean ifTrue: [ self focused ] ifFalse: [ self ]
+
+	^ aBoolean ifTrue: [self focused] ifFalse: [self]

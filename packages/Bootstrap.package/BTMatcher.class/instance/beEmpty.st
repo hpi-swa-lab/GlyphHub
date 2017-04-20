@@ -1,3 +1,4 @@
 matching
 beEmpty
-	^self assert: subject isEmpty operator: 'be empty' expected: nil
+
+	^ self assert: subject isEmpty operator: 'be empty' expected: nil

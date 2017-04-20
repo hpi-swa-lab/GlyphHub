@@ -1,3 +1,4 @@
 colors
 foreground: aColor
-	^self copy privateForeground: aColor  
+
+	^ self copy privateForeground: aColor  

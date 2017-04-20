@@ -1,3 +1,4 @@
 testing
 isPromise
-	^ true.
+
+	^ true

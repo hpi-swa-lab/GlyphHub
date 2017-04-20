@@ -1,16 +1,16 @@
 {
 	"class" : {
-		"attributeFor:value:" : "TB 3/12/2017 21:01",
-		"baseFontSize" : "TB 3/12/2017 17:21",
-		"defaultFontAtSize:" : "TB 3/12/2017 20:44",
-		"markupToText:" : "TB 3/12/2017 14:44",
-		"nextTagFrom:to:" : "TB 3/12/2017 16:47",
-		"parseAttributeValueFrom:" : "TB 3/12/2017 17:15",
-		"parseColor:" : "TB 3/12/2017 20:39",
-		"parseFontSize:" : "TB 3/12/2017 20:48",
-		"parseTagAttributesFrom:" : "TB 3/12/2017 20:50",
-		"strip:" : "TB 3/12/2017 13:57",
-		"unescape:" : "TB 3/12/2017 15:29",
-		"unescapeNextHtmlEntityFrom:" : "TB 3/12/2017 13:57" },
+		"attributeFor:value:" : "ek 4/20/2017 14:46",
+		"baseFontSize" : "ek 4/20/2017 14:46",
+		"defaultFontAtSize:" : "ek 4/20/2017 14:46",
+		"markupToText:" : "ek 4/20/2017 14:47",
+		"nextTagFrom:to:" : "ek 4/20/2017 14:47",
+		"parseAttributeValueFrom:" : "ek 4/20/2017 14:47",
+		"parseColor:" : "ek 4/20/2017 14:48",
+		"parseFontSize:" : "ek 4/20/2017 14:49",
+		"parseTagAttributesFrom:" : "ek 4/20/2017 14:50",
+		"strip:" : "ek 4/20/2017 14:50",
+		"unescape:" : "ek 4/20/2017 14:51",
+		"unescapeNextHtmlEntityFrom:" : "ek 4/20/2017 14:51" },
 	"instance" : {
 		 } }

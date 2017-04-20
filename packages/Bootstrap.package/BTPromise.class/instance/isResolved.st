@@ -1,3 +1,4 @@
 testing
 isResolved
-	^ state == #fulfilled.
+
+	^ state == #fulfilled

@@ -1,3 +1,4 @@
 accessing
 expanding
-	^expanding
+
+	^ expanding

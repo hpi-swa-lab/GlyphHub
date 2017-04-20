@@ -1,3 +1,4 @@
 testing
 isRejected
-	^ state == #rejected.
+
+	^ state == #rejected

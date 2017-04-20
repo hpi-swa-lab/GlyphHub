@@ -1,3 +1,4 @@
 accessing
 ellipsize
-	^self subclassResponsibility
+
+	^ self subclassResponsibility

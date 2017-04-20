@@ -1,3 +1,4 @@
 color-constants
 baseColorPrimary
-	^Color fromString: '#0275d8'
+
+	^ Color fromString: '#0275d8'

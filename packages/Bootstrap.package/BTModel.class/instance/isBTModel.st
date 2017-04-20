@@ -1,3 +1,4 @@
 testing
 isBTModel
-	^true
+
+	^ true

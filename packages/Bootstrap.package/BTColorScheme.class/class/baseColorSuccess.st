@@ -1,3 +1,4 @@
 color-constants
 baseColorSuccess
-	^Color fromString: '#5cb85c'  
+
+	^ Color fromString: '#5cb85c'  

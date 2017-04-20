@@ -1,3 +1,4 @@
 colors
 background
-	^background
+
+	^ background
