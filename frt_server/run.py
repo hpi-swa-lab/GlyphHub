@@ -19,7 +19,6 @@ class TokenAuth(TokenAuth):
         First we are verifying if the token is valid.
         """
 
-        print(allowed_roles, resource, method)
         username = frt_server.tables.User.verify_auth_token(token)
 
         if username:
