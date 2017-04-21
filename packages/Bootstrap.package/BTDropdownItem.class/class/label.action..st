@@ -1,5 +1,6 @@
 instance creation
 label: aString action: aSymbol
-	^self new
+
+	^ self new
 		action: aSymbol;
-		add: (BTLabel text: aString)
+		add: ((BTLabel text: aString) wrap: #never)

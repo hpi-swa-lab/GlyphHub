@@ -13,6 +13,9 @@ initialize
 	userAvatarImage := BTImage new
 		minSize: 36 asPoint;
 		scalingMode: #fixed.
+		
+	familyArea := BTPage column.
+	self resetFamilyArea.
 	
 	self colorScheme: (BTColorScheme fg: Color white bg: (Color fromString: '#333333') border: Color white).
 	
@@ -32,4 +35,6 @@ initialize
 			when: #clickedNoEvent send: #openSampleTexts to: self);
 		add: ((BTClickableWithText text: (BTIcon icon: #folder_open), ' My Projects')
 			when: #clickedNoEvent send: #openMyProjects to: self);
+		add: BTDivider new;
+		add: familyArea;
 		add: BTDivider new
