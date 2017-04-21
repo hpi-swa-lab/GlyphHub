@@ -1,5 +1,6 @@
 event handling
 keyboardFocusChange: weHaveFocus
+
 	super keyboardFocusChange: weHaveFocus.
 	
-	weHaveFocus ifFalse: [ self delete ]
+	weHaveFocus ifFalse: [self delete]

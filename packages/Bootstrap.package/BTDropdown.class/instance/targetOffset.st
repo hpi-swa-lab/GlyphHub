@@ -1,3 +1,4 @@
 constants
 targetOffset
-	^2 * BTWidget scalingFactor
+
+	^ 2 * BTWidget scalingFactor
