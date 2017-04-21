@@ -15,5 +15,5 @@
 	"name" : "FRTProfilePage",
 	"pools" : [
 		 ],
-	"super" : "BTApplicationPage",
+	"super" : "FRTApplicationPage",
 	"type" : "normal" }

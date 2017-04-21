@@ -22,5 +22,5 @@
 	"name" : "FRTFontOverviewPage",
 	"pools" : [
 		 ],
-	"super" : "BTApplicationPage",
+	"super" : "FRTApplicationPage",
 	"type" : "normal" }

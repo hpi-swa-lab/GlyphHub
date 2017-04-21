@@ -17,5 +17,5 @@
 	"name" : "FRTThreadCommentCreationPage",
 	"pools" : [
 		 ],
-	"super" : "BTApplicationPage",
+	"super" : "FRTApplicationPage",
 	"type" : "normal" }

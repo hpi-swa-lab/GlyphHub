@@ -10,9 +10,10 @@
 		"titleLabel",
 		"authorLabel",
 		"sampleTextArea",
-		"fontSelectCompletion" ],
+		"fontSelectCompletion",
+		"sampleTextWidget" ],
 	"name" : "FRTSampleTextPage",
 	"pools" : [
 		 ],
-	"super" : "BTApplicationPage",
+	"super" : "FRTApplicationPage",
 	"type" : "normal" }

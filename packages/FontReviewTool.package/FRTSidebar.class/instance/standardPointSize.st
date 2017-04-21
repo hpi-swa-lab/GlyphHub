@@ -1,0 +1,4 @@
+constants
+standardPointSize
+
+	^ 24
