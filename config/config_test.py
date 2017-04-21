@@ -13,7 +13,7 @@ OPLOG = False #change to True to enable logging to a file
 OPLOG_NAME = 'oplog' #name of log-collection in the database
 
 # empty database path means in-memory
-DATABASE_PATH = '' 
+DATABASE_PATH = 'sqlite://'
 
 UPLOAD_FOLDER = os.path.join(BASE, 'test_uploads')
 ATTACHMENT_UPLOAD_FOLDER = os.path.join(UPLOAD_FOLDER, 'attachment')
