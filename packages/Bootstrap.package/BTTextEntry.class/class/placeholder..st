@@ -1,5 +1,6 @@
 instance creation
 placeholder: aString
-	^self new
+
+	^ self new
 		placeholder: aString;
 		yourself

@@ -1,3 +1,4 @@
 testing
 isFormInput
-	^true
+
+	^ true

@@ -1,6 +1,7 @@
 examples
 checkbox
-	^BTTopLevel new
+
+	^ BTTopLevel new
 		add: BTCheckbox new;
 		add: (BTCheckbox new colorType: #danger);
 		add: (BTCheckbox new colorType: #primary);

@@ -1,3 +1,4 @@
 testing
 isNavigation
-	^true
+
+	^ true

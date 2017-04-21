@@ -1,5 +1,6 @@
 instance creation
 row
-	^self new
+
+	^ self new
 		vertical: false;
 		yourself

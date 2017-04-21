@@ -1,9 +1,10 @@
 examples
 text
+
 	| topLevel |
 	topLevel := BTTopLevel new.
 	
-	^topLevel
+	^ topLevel
 		add: (BTLabel pageHeader: 'Page Header!');
 		add: (BTLabel heading: 'Heading!');
 		add: (BTLabel subHeading: 'Sub Heading');

@@ -1,3 +1,4 @@
 examples
 dialog
-	^BTDialog new content: (BTPage new withPadding; add: BTButton new)
+
+	^ BTDialog new content: (BTPage new withPadding; add: BTButton new)

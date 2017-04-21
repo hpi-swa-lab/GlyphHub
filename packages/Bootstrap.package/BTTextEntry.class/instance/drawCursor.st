@@ -1,3 +1,4 @@
 cursor
 drawCursor
-	^drawCursor
+
+	^ drawCursor

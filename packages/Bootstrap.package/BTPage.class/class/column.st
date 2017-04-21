@@ -1,3 +1,4 @@
 instance creation
 column
-	^self new
+
+	^ self new

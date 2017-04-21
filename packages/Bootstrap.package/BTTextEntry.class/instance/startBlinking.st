@@ -1,5 +1,6 @@
 cursor
 startBlinking
+
 	self
 		startStepping: #onBlinkCursor 
 		at: Time millisecondClockValue 

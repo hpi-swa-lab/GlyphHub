@@ -1,3 +1,4 @@
 selection
 hasSelection
-	^self layout hasSelection
+
+	^ self layout hasSelection

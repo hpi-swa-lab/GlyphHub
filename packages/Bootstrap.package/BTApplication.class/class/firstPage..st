@@ -1,5 +1,6 @@
 instance creation
 firstPage: aPage
-	^self basicNew
+
+	^ self basicNew
 		initializeWithPage: aPage;
 		yourself

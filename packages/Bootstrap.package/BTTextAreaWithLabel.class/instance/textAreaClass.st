@@ -1,3 +1,4 @@
 accessing
 textAreaClass
-	^textAreaClass ifNil: [BTTextArea]
+
+	^ textAreaClass ifNil: [BTTextArea]

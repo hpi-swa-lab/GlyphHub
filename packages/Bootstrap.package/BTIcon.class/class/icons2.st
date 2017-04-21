@@ -1,6 +1,7 @@
 icons
 icons2
-	^{
+
+	^ {
 		#exclamation_circle -> 16rf06a.
 		#gift -> 16rf06b.
 		#leaf -> 16rf06c.

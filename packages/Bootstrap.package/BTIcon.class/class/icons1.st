@@ -1,6 +1,7 @@
 icons
 icons1
-	^{
+
+	^ {
 		#glass -> 16rf000.
 		#music -> 16rf001.
 		#search -> 16rf002.

@@ -1,3 +1,4 @@
 instance creation
 new
-	^self error: 'Use firstPage:'
+
+	^ self error: 'Use firstPage:'

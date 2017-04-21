@@ -1,6 +1,7 @@
 examples
 alert
-	^BTTopLevel new
+
+	^ BTTopLevel new
 		vertical: true;
 		add: (BTAlert text: 'Danger! D:' type: #danger);
 		add: (BTAlert text: 'Info! :|' type: #info);

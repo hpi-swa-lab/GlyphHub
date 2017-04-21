@@ -1,7 +1,8 @@
 event handling
 keyboardFocusChange: weHaveFocus
+
 	super keyboardFocusChange: weHaveFocus.
 	
 	weHaveFocus
-		ifTrue: [ self updateSuggestions ]
-		ifFalse: [ suggestions delete ]
+		ifTrue: [self updateSuggestions]
+		ifFalse: [suggestions delete]

@@ -1,5 +1,6 @@
 examples
 notifications
+
 	| toplevel |
 	toplevel := BTTopLevel new.
 	
@@ -9,6 +10,6 @@ notifications
 	
 	toplevel displayNotification: 'I''m staying.' type: #success.
 	
-	[(Delay forSeconds: 2) wait. toplevel displayNotification: ((BTIcon icon: #cloud), ' Hi') type: #warning ] fork.
+	[(Delay forSeconds: 2) wait. toplevel displayNotification: ((BTIcon icon: #cloud), ' Hi') type: #warning] fork.
 	
-	^toplevel
+	^ toplevel

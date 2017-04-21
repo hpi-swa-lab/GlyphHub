@@ -1,3 +1,4 @@
 cursor
 cursor
-	^self layout cursor
+
+	^ self layout cursor

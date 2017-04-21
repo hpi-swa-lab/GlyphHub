@@ -1,5 +1,6 @@
 editing
 insertAtCursor: aString
+
 	| selection |
 	selection := self selectionBounds.
 	

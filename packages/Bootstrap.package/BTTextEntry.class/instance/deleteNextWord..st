@@ -1,7 +1,8 @@
 editing
 deleteNextWord: direction
+
 	| end nextWord start |
-	self hasSelection ifTrue: [ ^self deleteAfterCursor ].
+	self hasSelection ifTrue: [^ self deleteAfterCursor].
 	
 	nextWord := self indexForNextWord: direction.
 	start := nextWord min: self cursor.

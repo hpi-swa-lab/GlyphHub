@@ -1,9 +1,9 @@
 accessing
 tags: aCollectionOfStrings
-	| newTags |
-	
+
+	| newTags |	
 	tags := OrderedCollection new.
 	newTags := aCollectionOfStrings asOrderedCollection.
 	self removeAllMorphs.
 	
-	newTags do: [ :tag | self addTag: tag ]
+	newTags do: [:tag | self addTag: tag]

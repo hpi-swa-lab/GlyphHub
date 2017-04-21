@@ -1,11 +1,11 @@
 {
 	"class" : {
-		"column" : "lcj 3/2/2017 17:38",
-		"row" : "TB 2/28/2017 19:54" },
+		"column" : "ek 4/21/2017 10:44",
+		"row" : "ek 4/21/2017 10:44" },
 	"instance" : {
 		"enteringWith:" : "TB 4/7/2017 18:27",
-		"initialize" : "TB 3/1/2017 16:47",
+		"initialize" : "ek 4/21/2017 10:43",
 		"leaving" : "TB 4/7/2017 18:27",
-		"primaryFormClickable" : "TB 3/7/2017 08:38",
-		"primaryFormClickable:" : "TB 3/7/2017 08:56",
+		"primaryFormClickable" : "ek 4/21/2017 10:43",
+		"primaryFormClickable:" : "ek 4/21/2017 10:44",
 		"removed" : "TB 3/13/2017 12:15" } }

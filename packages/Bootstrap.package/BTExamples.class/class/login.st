@@ -1,5 +1,6 @@
 examples
 login
+
 	| loginButton window loader loginBox |
 	loginButton := (BTButton label: 'Login') colorType: #primary.
 	loginBox := (BTPage new vertical: true; expand: true; align: #(center center))
@@ -22,4 +23,4 @@ login
 			loginBox add: ((BTAlert text: (BTIcon icon: #exclamation_triangle), ' Invalid login provided.') colorType: #danger) at: 2.
 			window remove: loader; add: loginBox ] fork ].
 
-	^window
+	^ window

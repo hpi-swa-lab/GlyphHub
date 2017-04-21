@@ -1,9 +1,9 @@
 {
 	"class" : {
-		"tabs:" : "al 3/2/2017 12:33" },
+		"tabs:" : "ek 4/21/2017 10:44" },
 	"instance" : {
-		"addTab:" : "al 3/2/2017 12:27",
-		"initialize" : "TB 3/3/2017 15:14",
-		"isNavigation" : "al 3/1/2017 17:47",
-		"makeActive:" : "TB 3/3/2017 15:15",
-		"triggerTabSwitched:oldTab:" : "TB 3/3/2017 15:14" } }
+		"addTab:" : "ek 4/21/2017 10:44",
+		"initialize" : "ek 4/21/2017 10:44",
+		"isNavigation" : "ek 4/21/2017 10:44",
+		"makeActive:" : "ek 4/21/2017 10:44",
+		"triggerTabSwitched:oldTab:" : "ek 4/21/2017 10:44" } }

@@ -1,5 +1,6 @@
 examples
 application
+
 	| app page3 page2 page1 |
 	page1 := BTApplicationPage new.
 	app := BTApplication firstPage: page1.
@@ -15,4 +16,4 @@ application
 	" event bindings are a weak reference, so we store our pages on our app for this example "
 	app setProperty: #pages toValue: {page1. page2. page3}.
 	
-	^app
+	^ app

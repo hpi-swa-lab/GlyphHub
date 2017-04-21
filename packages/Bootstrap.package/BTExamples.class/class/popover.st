@@ -1,5 +1,6 @@
 examples
 popover
+
 	| button1 button2 |
 	button1 := BTButton label: (BTIcon icon: #medkit), ' Hit me!'.
 	BTPopover new
@@ -11,6 +12,6 @@ popover
 		add: (BTLabel text: 'Bye!');
 		hoverAttachTo: button2.  
 	
-	^BTTopLevel new
+	^ BTTopLevel new
 		add: button1;
 		add: button2

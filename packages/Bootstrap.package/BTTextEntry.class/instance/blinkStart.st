@@ -1,3 +1,4 @@
 cursor
 blinkStart
-	^blinkStart
+
+	^ blinkStart

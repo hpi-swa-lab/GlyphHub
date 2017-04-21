@@ -1,3 +1,4 @@
 testing
 isTopLevel
-	^true
+
+	^ true

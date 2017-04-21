@@ -1,3 +1,4 @@
 hierarchy
 topLevel
-	^self
+
+	^ self

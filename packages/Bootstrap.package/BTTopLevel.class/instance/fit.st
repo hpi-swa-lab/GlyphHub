@@ -1,5 +1,6 @@
 geometry
 fit
+
 	" fit to the window contents, don't shrink if there's expanders or we can use more space than a minimum "
 	| preferred wantsExpand |
 	wantsExpand := self wantsExpandIn: self vertical.

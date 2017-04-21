@@ -1,5 +1,6 @@
 examples
 versionPage
+
 	| author a c shortO ta |
 	author := BTPage row
 		add: (BTImage new scalingMode: #fixed; minSize: 64 asPoint; path: FileDirectory default / 'BP2016H1' / 'assets' / 'penguin.png');
@@ -14,7 +15,7 @@ versionPage
 	ta := BTCard collapsible: 'त - Ta' content: (BTLabel text: '<span size="60000">त</span>').
 	{a. c. shortO. ta} do: [ :l | l maxSize: 300 @ -1 ].
 	
-	^BTTopLevel new
+	^ BTTopLevel new
 		size: 600 asPoint;
 		add: (BTScrollArea new add: (BTPage new 
 		add: author;

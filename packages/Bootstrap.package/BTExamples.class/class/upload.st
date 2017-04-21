@@ -1,7 +1,7 @@
 examples
 upload
-	| window uploadBox scriptTagArea uploadArea tagArea tagTextArea |
-	
+
+	| window uploadBox scriptTagArea uploadArea tagArea tagTextArea |	
 	tagArea := BTPage row spacing: 0.
 	
 	tagTextArea := ((BTTextAreaWithLabel

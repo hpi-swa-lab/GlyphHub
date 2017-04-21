@@ -1,3 +1,4 @@
 selection
 selectionBounds
-	^self layout selectionBounds
+
+	^ self layout selectionBounds

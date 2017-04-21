@@ -1,5 +1,6 @@
 initialize-release
 initialize
+
 	super initialize.
 	
 	inputBadge := BTBadge new.
@@ -8,10 +9,10 @@ initialize
 		styleAttributes: BTBadge styleAttributes;
 		wrap: #never;
 		placeholder: 'New Tag ...';
-		when: #confirmed evaluate: [ :text |
+		when: #confirmed evaluate: [:text |
 			text ifNotEmpty: [
 				self addTag: text].
-			nil ];
+			nil];
 		yourself.
 
 	self add: (inputBadge add: input)

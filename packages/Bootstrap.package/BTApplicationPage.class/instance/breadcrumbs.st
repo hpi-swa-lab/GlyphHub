@@ -1,3 +1,4 @@
 navigation
 breadcrumbs
-	^{}
+
+	^ {}

@@ -1,5 +1,6 @@
 initialize-release
 initialize 
+
 	super initialize.
 	
 	"set default text in case someone forgets to set text"

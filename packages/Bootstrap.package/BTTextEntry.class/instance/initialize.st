@@ -1,5 +1,6 @@
 initialize-release
 initialize
+
 	focused := false.
 	disabled := false.
 	placeholder := ''.
