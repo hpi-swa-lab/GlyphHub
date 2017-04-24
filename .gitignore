@@ -9,6 +9,8 @@ config/config.py
 ampfel/tg
 assets/roboto
 
+db-backups
+
 .eggs
 *.egg
 *.egg-info
