@@ -7,7 +7,7 @@ initialize
 		redirectPage: {FRTFamilyOverviewPage new. nil};
 		loginButton: ((BTButton label: 'Login')
 			colorType: #primary;
-			when: #clickedNoEvent send: #tryLogin to: self;
+			when: #clicked send: #tryLogin to: self;
 			yourself);
 		usernameField: (BTTextArea placeholder: 'Username');
 		passwordField: (BTPasswordArea placeholder: 'Password');

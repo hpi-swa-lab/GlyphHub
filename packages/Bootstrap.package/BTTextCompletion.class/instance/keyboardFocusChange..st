@@ -5,4 +5,4 @@ keyboardFocusChange: weHaveFocus
 	
 	weHaveFocus
 		ifTrue: [self updateSuggestions]
-		ifFalse: [suggestions delete]
+		ifFalse: [suggestionsDropdown delete]

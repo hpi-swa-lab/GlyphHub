@@ -17,7 +17,7 @@ login
 		add: loginBox;
 		yourself.
 	
-	loginButton when: #clicked evaluate: [ :event |
+	loginButton when: #clickedWithEvent evaluate: [ :event |
 		window remove: loginBox; add: loader.
 		[	(Delay forSeconds: 1) wait.
 			loginBox add: ((BTAlert text: (BTIcon icon: #exclamation_triangle), ' Invalid login provided.') colorType: #danger) at: 2.

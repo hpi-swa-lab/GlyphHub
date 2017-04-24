@@ -2,7 +2,7 @@ as yet unclassified
 testArrowSelectSuggestion
 	| completion |
 	#(true false) do: [ :onlyCompletions |
-		completion := self completionWidget text: 'Ger'; onlyCompletions: onlyCompletions.
+		completion := self completionWidget text: 'Ger'; onlyAllowsExactMatches: onlyCompletions.
 		
 		(self expect: completion) to; send: #confirmed withArguments: #('Germany').
 		

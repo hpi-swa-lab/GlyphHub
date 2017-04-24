@@ -13,6 +13,6 @@ initialize
 		add: self scriptTagArea;
 		add: (((BTButton text: 'Create Project')
 			colorType: #primary;
-			when: #clickedNoEvent send: #tryUpload to: self;
+			when: #clicked send: #tryUpload to: self;
 			yourself) align: #(end start));
 		add: alertArea

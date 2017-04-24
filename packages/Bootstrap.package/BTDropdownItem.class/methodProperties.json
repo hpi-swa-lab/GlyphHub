@@ -1,9 +1,10 @@
 {
 	"class" : {
-		"label:action:" : "ek 4/21/2017 13:50" },
+		"label:" : "JH 4/24/2017 11:18" },
 	"instance" : {
-		"action" : "ek 4/21/2017 11:21",
-		"action:" : "ek 4/21/2017 11:21",
 		"changeColorOnHover" : "ek 4/21/2017 11:21",
 		"drawOn:" : "ek 4/21/2017 11:21",
-		"initialize" : "ek 4/21/2017 11:21" } }
+		"initialize" : "ek 4/21/2017 11:21",
+		"label" : "JH 4/21/2017 11:44",
+		"label:" : "JH 4/21/2017 11:44",
+		"plainText" : "JH 4/24/2017 14:45" } }

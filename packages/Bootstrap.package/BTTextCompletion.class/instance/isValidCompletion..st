@@ -1,6 +1,6 @@
 suggestions
 isValidCompletion: aString
 
-	^ activeSuggestion ~= 0 or: 
-		[self onlyCompletions not or:
+	^ activeSuggestionIndex ~= 0 or: 
+		[self onlyAllowsExactMatches not or:
 		[suggestionsList anySatisfy: [ :suggestion | suggestion first = aString ]]]

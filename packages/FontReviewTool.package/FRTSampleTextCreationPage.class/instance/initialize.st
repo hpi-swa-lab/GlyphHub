@@ -16,4 +16,4 @@ initialize
 		add: ((BTButton text: 'Save')
 			colorType: #primary;
 			align: #(end start);
-			when: #clickedNoEvent send: #saveSampleText to: self)
+			when: #clicked send: #saveSampleText to: self)

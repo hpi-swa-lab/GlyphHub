@@ -24,4 +24,4 @@ initialize
 		add: ((BTButton text:  (BTIcon icon: #comment_o), ' Add new comment')
 			colorType: #primary;
 			align: #(end start);
-			when: #clickedNoEvent send: #addNewComment to: self)
+			when: #clicked send: #addNewComment to: self)

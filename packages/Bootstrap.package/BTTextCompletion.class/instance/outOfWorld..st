@@ -3,4 +3,4 @@ outOfWorld: aWorld
 
 	super outOfWorld: aWorld.
 	
-	suggestions delete
+	suggestionsDropdown delete

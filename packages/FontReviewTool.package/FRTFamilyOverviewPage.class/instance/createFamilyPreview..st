@@ -14,7 +14,7 @@ createFamilyPreview: aFamily
 
 	^ BTClickable new
 		withLayout;
-		when: #clickedNoEvent send: #openFamily: to: self with: aFamily;
+		when: #clicked send: #openFamily: to: self with: aFamily;
 		add: preview;
 		add: ((BTLabel text:
 			'<span size="larger" weight="bold">', aFamily familyName, '</span>    ',

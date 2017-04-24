@@ -18,5 +18,5 @@ text
 		add: (BTLabel secondary: 'Secondary');
 		
 		add: ((BTLink text: 'Click me pls')
-			when: #clicked
+			when: #clickedWithEvent
 			evaluate: [ :event | topLevel displayNotification: 'hi' type: #success ])

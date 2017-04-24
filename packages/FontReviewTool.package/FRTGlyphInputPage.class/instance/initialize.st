@@ -15,4 +15,4 @@ initialize
 		add: (BTButton new
 			text: 'Create New Thread';
 			colorType: #primary;
-			when: #clickedNoEvent send: #createNewThread to: self)
+			when: #clicked send: #createNewThread to: self)

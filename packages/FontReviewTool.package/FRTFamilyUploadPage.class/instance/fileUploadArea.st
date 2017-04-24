@@ -16,7 +16,7 @@ fileUploadArea
 			spacing: BTWidget spacing / 2;
 			add: (((BTButton icon: #upload)
 				colorType: #primary;
-				when: #clickedNoEvent send: #chooseFile to: self;
+				when: #clicked send: #chooseFile to: self;
 				yourself) align: #(left center));
 			add: selectedFileArea);
 		yourself

@@ -3,7 +3,7 @@ initialize
 
 	super initialize.
 	
-	activeSuggestion := 0.
-	onlyCompletions := false.
-	
-	suggestions := BTDropdown new when: #selected send: #selectedEvent:action:item: to: self
+	activeSuggestionIndex := 0.
+	onlyAllowsExactMatches := false.
+
+	suggestionsDropdown := BTDropdown new

@@ -13,7 +13,7 @@ initialize
 		add: newUsernameField;
 		add: ((BTButton label: 'Save')
 			colorType: #primary;
-			when: #clickedNoEvent send: #trySavingUsername to: self;
+			when: #clicked send: #trySavingUsername to: self;
 			align: #(end center);
 			yourself);
 		yourself.
@@ -24,7 +24,7 @@ initialize
 		add: newPasswordField2;
 		add: ((BTButton label: 'Save')
 			colorType: #primary;
-			when: #clickedNoEvent send: #trySavingPassword to: self;
+			when: #clicked send: #trySavingPassword to: self;
 			align: #(end center);
 			yourself);
 		yourself.

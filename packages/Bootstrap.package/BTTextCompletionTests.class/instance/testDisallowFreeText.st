@@ -1,7 +1,7 @@
 as yet unclassified
 testDisallowFreeText
 	| completion |
-	completion := self completionWidget onlyCompletions: true; text: 'My Custom Value'.
+	completion := self completionWidget onlyAllowsExactMatches: true; text: 'My Custom Value'.
 	
 	(self expect: completion)	 to not send: #confirmed.
 	

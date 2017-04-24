@@ -3,7 +3,8 @@ initializeUserDropdown
 
 	| dropdown |
 	dropdown := BTDropdown new
-		add: (BTDropdownItem label: 'Profile' action: #openProfilePageOfCurrentUser);
-		add: (BTDropdownItem label: 'Logout' action: #logoutCurrentUser);
-		when: #selected evaluate: [ :event :action :item | self perform: action];
+		add: ((BTDropdownItem label: 'Profile')
+			when: #clicked send: #openProfilePageOfCurrentUser to: self);
+		add: ((BTDropdownItem label: 'Logout')
+			when: #clicked send: #logoutCurrentUser to: self);
 		attachTo: usernameClickable

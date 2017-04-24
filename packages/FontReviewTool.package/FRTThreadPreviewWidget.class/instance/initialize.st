@@ -6,7 +6,7 @@ initialize
 	commentPreview := BTLabel new.
 	threadTitle := BTLabel new.
 	commentCount := BTButton new
-		when: #clickedNoEvent send: #openThread to: self.
+		when: #clicked send: #openThread to: self.
 	author := BTLabel new.
 	
 	self

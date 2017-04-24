@@ -1,18 +1,15 @@
 suggestions
 displaySuggestions: aCollection
 
-	suggestions removeAllMorphs.
-	activeSuggestion := 0.
-	
-	self topHit:( aCollection
-		detect: [:suggestion | suggestion first asLowercase beginsWith: self text asLowercase]
-		ifNone: [nil]).
+	suggestionsDropdown removeAllMorphs.
+	activeSuggestionIndex := 0.
 	
 	aCollection
-		ifEmpty: [^ suggestions delete]
+		ifEmpty: [^ suggestionsDropdown delete]
 		ifNotEmpty: [self openSuggestionPopup].
-	
-	aCollection do: [:suggestion |
-		suggestions add: (BTDropdownItem label: (self markupForResult: suggestion first) action: suggestion second)].
-	
-	suggestions height: 0
+
+	aCollection do: [:suggestion | | suggestionString |
+		suggestionString := (self markupForResult: suggestion first).
+		suggestionsDropdown add: ((BTDropdownItem
+			label: suggestionString)
+			when: #clicked send: #triggerConfirmed: to: self with: suggestionString)]

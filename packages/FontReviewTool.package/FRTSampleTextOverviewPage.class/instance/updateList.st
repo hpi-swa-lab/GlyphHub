@@ -13,7 +13,7 @@ updateList
 				sampleTextList
 					add: (BTPage row
 						add: ((BTClickableWithText heading: text title)
-							when: #clickedNoEvent send: #openSampleText: to: self with: text)
+							when: #clicked send: #openSampleText: to: self with: text)
 						oppositeTo: (BTLabel subHeading: text author username));
 					"add: (BTLabel text: text text);" "Preview-Text"
 					add: BTDivider new]])

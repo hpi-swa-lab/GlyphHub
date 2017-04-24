@@ -2,7 +2,7 @@ suggestions
 openSuggestionPopup
 
 	self world ifNotNil: [
-		suggestions
+		suggestionsDropdown
 			openInWorld;
 			extent: self extent;
-			topLeft: (suggestions openPositionFor: self) ]
+			topLeft: (suggestionsDropdown openPositionFor: self) ]

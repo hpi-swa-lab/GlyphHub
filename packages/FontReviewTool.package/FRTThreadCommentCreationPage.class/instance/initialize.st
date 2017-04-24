@@ -25,5 +25,5 @@ initialize
 		add: ((BTButton text: 'Save')
 			colorType: #primary;
 			align: #(end start);
-			when: #clickedNoEvent send: #saveComment to: self);
+			when: #clicked send: #saveComment to: self);
 		add: imageAttachments

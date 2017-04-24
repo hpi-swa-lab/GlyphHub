@@ -11,6 +11,6 @@ glyphNames: aCollection
 		
 		label := (BTLabel small: glyphName) ellipsize: #middle.
 		self add: (FRTGlyphGridItemWidget new
-				when: #clickedNoEvent send: #openGlyph: to: self with: glyphName;
+				when: #clicked send: #openGlyph: to: self with: glyphName;
 				add: glyph;
 				add: label)]

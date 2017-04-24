@@ -18,8 +18,8 @@ initializeWithPage: aPage
 
 	header := BTPage row
 		withPadding;
-		add: ((BTIconButton icon: #arrow_left) when: #clickedNoEvent send: #goBack to: self);
-		add: ((BTIconButton icon: #arrow_right) when: #clickedNoEvent send: #goForward to: self);
+		add: ((BTIconButton icon: #arrow_left) when: #clicked send: #goBack to: self);
+		add: ((BTIconButton icon: #arrow_right) when: #clicked send: #goForward to: self);
 		add: breadcrumbs;
 		add: BTWidget spacer;
 		add: ((BTTextArea placeholder: 'Search ...') minSize: self searchbarWidth @ 0).

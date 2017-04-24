@@ -2,11 +2,11 @@
 	"class" : {
 		 },
 	"instance" : {
-		"createSelectionButton" : "TB 4/24/2017 12:19",
+		"createSelectionButton" : "JH 4/24/2017 12:06",
 		"drawOn:" : "lcj 4/5/2017 12:30",
 		"fontChanged:" : "ek 4/24/2017 10:46",
-		"initialize" : "ek 4/24/2017 11:27",
-		"initializeUserDropdown" : "lcj 4/9/2017 13:00",
+		"initialize" : "JH 4/24/2017 12:01",
+		"initializeUserDropdown" : "JH 4/24/2017 11:36",
 		"logoutCurrentUser" : "TB 4/9/2017 15:04",
 		"openDashboard" : "lcj 4/9/2017 11:59",
 		"openMyProjects" : "ek 4/18/2017 16:57",

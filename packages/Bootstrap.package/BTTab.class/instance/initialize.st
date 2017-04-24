@@ -5,4 +5,4 @@ initialize
 	self
 		padding: 20 @ 12;
 		align: #(start fill);
-		when: #clicked send: #makeActive: to: self
+		when: #clickedWithEvent send: #makeActive: to: self

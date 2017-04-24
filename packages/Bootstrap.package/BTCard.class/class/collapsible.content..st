@@ -5,7 +5,7 @@ collapsible: aString content:  aWidget
 	header := BTCardHeader new add: (BTLabel text: aString).
 	content := BTCollapsible new collapsed: true; add: aWidget.
 	
-	header when: #clicked send: #toggleCollapsed to: content.
+	header when: #clickedWithEvent send: #toggleCollapsed to: content.
 	
 	^ self new
 		add: header;

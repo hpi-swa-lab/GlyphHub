@@ -1,14 +1,17 @@
 examples
 dropdown
 
-	| button dropdown |
+	| button dropdown topLevel |
 	button := (BTButton label: 'Your Name ', (BTIcon icon: #caret_down)).
+	topLevel := BTTopLevel new size: 500 asPoint.
 	
 	dropdown := BTDropdown new
-		add: (BTDropdownItem label: 'Settings' action: #settings);
-		add: (BTDropdownItem label: 'Profile' action: #profile);
-		add: (BTDropdownItem label: 'Logout' action: #logout);
-		when: #selected evaluate: [ :event :action :item | button topLevel displayNotification: action asString type: #info ];
+		add: ((BTDropdownItem label: 'Settings')
+			when: #clicked send: #displayNotification:type: to: topLevel withArguments: {'Settings'. #info});
+		add: ((BTDropdownItem label: 'Profile')
+			when: #clicked send: #displayNotification:type: to: topLevel withArguments: {'Profile'. #info});
+		add: ((BTDropdownItem label: 'Logout')
+			when: #clicked send: #displayNotification:type: to: topLevel withArguments: {'Settings'. #info});
 		attachTo: button.
-	
-	^ BTTopLevel new size: 500 asPoint; add: button
+
+	^ topLevel add: button

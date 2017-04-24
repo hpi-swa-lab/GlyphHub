@@ -13,7 +13,7 @@ initialize
 			expand: true;
 			colorType: #primary;
 			align: #(end start);
-			when: #clickedNoEvent send: #createNewThread to: self).
+			when: #clicked send: #createNewThread to: self).
 	
 	glyphDetailArea := BTPage column
 		expand: true;

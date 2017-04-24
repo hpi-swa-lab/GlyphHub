@@ -11,7 +11,7 @@ initialize
 	inputButton := BTButton new
 		text: 'Try it here!';
 		colorType: #primary;
-		when: #clickedNoEvent send: #openGlyphInputPage to: self.
+		when: #clicked send: #openGlyphInputPage to: self.
 	
 	renderer := FRTGlyphRenderer new.
 	allGlyphsPage := self initializeAllGlyphPage.

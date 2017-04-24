@@ -13,10 +13,10 @@ initialize
 	self initializeFontSelection.
 	fontSelectButton := ((BTButton label: 'Apply Font')
 		colorType: #primary;
-		when: #clickedNoEvent send: #updateSampleTextArea to: self).
+		when: #clicked send: #updateSampleTextArea to: self).
 	resetFontButton := ((BTButton label: 'Reset to System Font')
 		colorType: #secondary;
-		when: #clickedNoEvent send: #resetFont to: self).
+		when: #clicked send: #resetFont to: self).
 	
 	self
 		add: (BTPage row

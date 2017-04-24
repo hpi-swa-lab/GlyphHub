@@ -6,8 +6,7 @@
 		 ],
 	"commentStamp" : "TB 3/23/2017 15:13",
 	"instvars" : [
-		"label",
-		"action" ],
+		"label" ],
 	"name" : "BTDropdownItem",
 	"pools" : [
 		 ],

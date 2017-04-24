@@ -6,5 +6,5 @@ initialize
 		colorScheme: #inherit;
 		checked: false;
 		align: #(start start);
-		when: #clicked send: #toggleChecked to: self;
+		when: #clickedWithEvent send: #toggleChecked to: self;
 		minSize: 22 asPoint
