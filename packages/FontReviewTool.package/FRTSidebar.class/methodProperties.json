@@ -2,7 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"createSelectionButton" : "ek 4/24/2017 11:41",
+		"createSelectionButton" : "TB 4/24/2017 12:19",
 		"drawOn:" : "lcj 4/5/2017 12:30",
 		"fontChanged:" : "ek 4/24/2017 10:46",
 		"initialize" : "ek 4/24/2017 11:27",
@@ -12,7 +12,7 @@
 		"openMyProjects" : "ek 4/18/2017 16:57",
 		"openProfilePageOfCurrentUser" : "lcj 4/9/2017 13:01",
 		"openSampleTexts" : "ek 4/18/2017 14:18",
-		"pointSizeChanged:" : "ek 4/24/2017 10:46",
+		"pointSizeChanged:" : "TB 4/24/2017 12:17",
 		"resetFamilyArea" : "ek 4/24/2017 11:27",
 		"selectFont:" : "ek 4/24/2017 10:46",
 		"selectedFamily" : "ek 4/21/2017 11:09",
@@ -21,5 +21,5 @@
 		"selectedFont:" : "ek 4/24/2017 10:54",
 		"sidebarWidth" : "lcj 4/5/2017 12:29",
 		"standardPointSize" : "ek 4/21/2017 15:17",
-		"updateFamilyArea" : "ek 4/24/2017 11:41",
+		"updateFamilyArea" : "TB 4/24/2017 12:17",
 		"user:" : "lcj 4/9/2017 13:10" } }

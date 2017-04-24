@@ -1,4 +1,4 @@
-ui
+updating
 pointSizeChanged: aNumber
 
 	self sampleTextWidget ifNotNil: [

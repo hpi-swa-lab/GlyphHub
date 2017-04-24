@@ -1,4 +1,4 @@
-initialize-release
+accessing
 showHeader: aBoolean
 
 	header visible: aBoolean

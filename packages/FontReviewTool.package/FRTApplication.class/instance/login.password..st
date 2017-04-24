@@ -1,4 +1,4 @@
-initialize-release
+actions
 login: aUserNameString password:  aPasswordString
 
 	^ ((self backend login: aUserNameString password: aPasswordString)

@@ -1,7 +1,9 @@
 ui
 updateFamilyArea
 	
-	self selectedFamily ifNil: [self resetFamilyArea. ^ self].
+	self selectedFamily ifNil: [
+		self resetFamilyArea.
+		^ self].
 	
 	familyArea
 		removeAllMorphs;
@@ -10,4 +12,4 @@ updateFamilyArea
 			padding: BTWidget spacing @ 0;
 			add: ((BTLabel bold: 'Size:') align: #(center center));
 			add: ((BTTextArea placeholder: 12)
-				when: #confirmed evaluate: [:text | self pointSizeChanged: (text asNumber)]))
+				when: #confirmed send: #pointSizeChanged: to: self))

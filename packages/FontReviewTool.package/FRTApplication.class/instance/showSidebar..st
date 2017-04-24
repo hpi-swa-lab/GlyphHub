@@ -1,4 +1,4 @@
-initialize-release
+accessing
 showSidebar: aBoolean
 
 	sidebar visible: aBoolean

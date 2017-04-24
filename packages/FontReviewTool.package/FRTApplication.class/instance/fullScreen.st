@@ -1,4 +1,4 @@
-initialize-release
+actions
 fullScreen
 
 	TheWorldMainDockingBar showWorldMainDockingBar: false.

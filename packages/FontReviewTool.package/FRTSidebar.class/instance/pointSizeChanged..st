@@ -1,4 +1,4 @@
-constants
+updating
 pointSizeChanged: aNumber
 
-	self topLevel pointSizeChanged: aNumber
+	self topLevel pointSizeChanged: aNumber asNumber

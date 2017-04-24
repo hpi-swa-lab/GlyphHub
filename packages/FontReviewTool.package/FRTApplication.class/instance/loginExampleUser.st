@@ -1,4 +1,4 @@
-initialize-release
+actions
 loginExampleUser
 
 	^ (self login: 'Eva' password: 'eveisevil')

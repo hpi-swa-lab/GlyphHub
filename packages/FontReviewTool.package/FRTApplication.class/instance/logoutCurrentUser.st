@@ -1,4 +1,4 @@
-initialize-release
+actions
 logoutCurrentUser
 
 	^ (self backend logout

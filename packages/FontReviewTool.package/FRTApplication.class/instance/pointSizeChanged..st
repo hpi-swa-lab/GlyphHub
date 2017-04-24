@@ -1,4 +1,4 @@
-initialize-release
+updating
 pointSizeChanged: aNumber
 
 	self openPage pointSizeChanged: aNumber

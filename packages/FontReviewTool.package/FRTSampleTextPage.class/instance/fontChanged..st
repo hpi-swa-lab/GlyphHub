@@ -1,4 +1,4 @@
-ui
+updating
 fontChanged: aFont
 
 	self selectedFont: aFont.

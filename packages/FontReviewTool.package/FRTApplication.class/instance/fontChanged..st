@@ -1,4 +1,4 @@
-initialize-release
+updating
 fontChanged: aFont
 
 	self openPage fontChanged: aFont

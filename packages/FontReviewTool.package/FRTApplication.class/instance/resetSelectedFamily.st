@@ -1,4 +1,4 @@
-initialize-release
+actions
 resetSelectedFamily
 
 	self sidebar selectedFamily: nil
