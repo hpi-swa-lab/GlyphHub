@@ -11,5 +11,5 @@
 	"name" : "FRTSampleTextCreationPage",
 	"pools" : [
 		 ],
-	"super" : "BTApplicationPage",
+	"super" : "FRTApplicationPage",
 	"type" : "normal" }

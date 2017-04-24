@@ -4,11 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "ek 4/18/2017 17:50",
+	"commentStamp" : "",
 	"instvars" : [
-		"sampleTextList" ],
-	"name" : "FRTSampleTextOverviewPage",
+		 ],
+	"name" : "FRTApplicationPage",
 	"pools" : [
 		 ],
-	"super" : "FRTApplicationPage",
+	"super" : "BTApplicationPage",
 	"type" : "normal" }

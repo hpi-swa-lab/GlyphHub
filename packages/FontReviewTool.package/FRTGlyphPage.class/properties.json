@@ -14,5 +14,5 @@
 	"name" : "FRTGlyphPage",
 	"pools" : [
 		 ],
-	"super" : "BTApplicationPage",
+	"super" : "FRTApplicationPage",
 	"type" : "normal" }

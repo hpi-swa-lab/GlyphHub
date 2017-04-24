@@ -1,15 +1,14 @@
 ui
 updateSampleTextArea
 
-	| textWidget |
 	sampleTextArea removeAllMorphs.
-	textWidget := (FRTGlyphWidget new
-		pointSize: 24).
-	self flag: #TODO. "Right now the size is hardcoded, later it should be changeable via sidebar"
+	sampleTextWidget := (FRTGlyphWidget new
+		pointSize: self topLevel sidebar standardPointSize).
 	
-	(self topLevel backend loadWhere: #fontName equals: (fontSelectCompletion text) into: FRTFont populate: {}) then: [:fonts | | font |
+	(self topLevel backend loadWhere: #fontName equals: (fontSelectCompletion text) into: FRTFont populate: {'family'}) then: [:fonts | | font |
 		font := fonts anyOne.
-		textWidget font: font.
+		sampleTextWidget font: font.
+		self topLevel sidebar selectedFont: font.
 		(self topLevel backend convertUnicodeToGlyphNames: (self sampleText text) of: font) then: [:glyphNames |
-			textWidget glyphNames: (glyphNames collect: #first).
-			sampleTextArea add: textWidget]]
+			sampleTextWidget glyphNames: (glyphNames collect: #first).
+			sampleTextArea add: sampleTextWidget]]

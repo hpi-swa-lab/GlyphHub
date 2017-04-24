@@ -6,7 +6,10 @@
 		"enteringWith:" : "ek 4/19/2017 13:32",
 		"initialize" : "ek 4/19/2017 14:07",
 		"initializeFontSelection" : "JH 4/20/2017 13:29",
+		"poinSizeChanged:" : "ek 4/21/2017 15:41",
+		"pointSizeChanged:" : "ek 4/21/2017 15:53",
 		"resetFont" : "JH 4/20/2017 13:31",
 		"sampleText" : "ek 4/19/2017 13:32",
 		"sampleText:" : "ek 4/19/2017 13:33",
-		"updateSampleTextArea" : "JH 4/20/2017 14:17" } }
+		"sampleTextWidget" : "ek 4/21/2017 15:12",
+		"updateSampleTextArea" : "ek 4/21/2017 15:24" } }
