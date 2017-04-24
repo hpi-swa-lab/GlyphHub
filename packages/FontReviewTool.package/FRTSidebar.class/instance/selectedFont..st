@@ -3,4 +3,5 @@ selectedFont: aFont
 
 	selectedFont := aFont.
 	
-	self selectedFamily: aFont family
+	^ (FRTFont load: self selectedFont id populate: #('family' 'family.fonts') from: self topLevel backend)
+		then: [:fontWithFamily | self selectedFamily: aFont family]

@@ -1,4 +1,4 @@
 constants
 pointSizeChanged: aNumber
 
-	self topLevel openPage pointSizeChanged: aNumber
+	self topLevel pointSizeChanged: aNumber

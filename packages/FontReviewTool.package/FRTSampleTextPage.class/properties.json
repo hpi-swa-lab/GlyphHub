@@ -11,7 +11,8 @@
 		"authorLabel",
 		"sampleTextArea",
 		"fontSelectCompletion",
-		"sampleTextWidget" ],
+		"sampleTextWidget",
+		"selectedFont" ],
 	"name" : "FRTSampleTextPage",
 	"pools" : [
 		 ],

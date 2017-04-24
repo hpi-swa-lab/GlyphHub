@@ -5,4 +5,6 @@ initialize
 	
 	self
 		centered: false;
-		square: false
+		square: false.
+	
+	glyphNames := #()

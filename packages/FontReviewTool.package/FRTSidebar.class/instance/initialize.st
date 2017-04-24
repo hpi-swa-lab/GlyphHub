@@ -15,7 +15,7 @@ initialize
 		scalingMode: #fixed.
 		
 	familyArea := BTPage column.
-	self resetFamilyArea.
+	self updateFamilyArea.
 	
 	self colorScheme: (BTColorScheme fg: Color white bg: (Color fromString: '#333333') border: Color white).
 	
@@ -36,5 +36,4 @@ initialize
 		add: ((BTClickableWithText text: (BTIcon icon: #folder_open), ' My Projects')
 			when: #clickedNoEvent send: #openMyProjects to: self);
 		add: BTDivider new;
-		add: familyArea;
-		add: BTDivider new
+		add: familyArea

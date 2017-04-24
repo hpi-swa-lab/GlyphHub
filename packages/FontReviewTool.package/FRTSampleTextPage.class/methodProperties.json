@@ -4,12 +4,16 @@
 	"instance" : {
 		"breadcrumbs" : "ek 4/19/2017 17:25",
 		"enteringWith:" : "ek 4/19/2017 13:32",
+		"fontChanged:" : "ek 4/24/2017 11:22",
 		"initialize" : "ek 4/19/2017 14:07",
 		"initializeFontSelection" : "JH 4/20/2017 13:29",
-		"poinSizeChanged:" : "ek 4/21/2017 15:41",
+		"poinSizeChanged:" : "ek 4/24/2017 10:49",
 		"pointSizeChanged:" : "ek 4/21/2017 15:53",
-		"resetFont" : "JH 4/20/2017 13:31",
+		"resetFont" : "ek 4/24/2017 11:42",
 		"sampleText" : "ek 4/19/2017 13:32",
 		"sampleText:" : "ek 4/19/2017 13:33",
 		"sampleTextWidget" : "ek 4/21/2017 15:12",
-		"updateSampleTextArea" : "ek 4/21/2017 15:24" } }
+		"selectedFont" : "ek 4/24/2017 11:03",
+		"selectedFont:" : "ek 4/24/2017 11:03",
+		"updateSampleTextArea" : "ek 4/24/2017 11:07",
+		"updateSampleTextWidget" : "ek 4/24/2017 11:07" } }

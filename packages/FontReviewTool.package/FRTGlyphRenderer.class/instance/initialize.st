@@ -1,4 +1,4 @@
 initialize-release
 initialize
 
-	glifs := Dictionary new
+	self clearCache
