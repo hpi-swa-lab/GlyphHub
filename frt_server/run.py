@@ -33,29 +33,35 @@ class TokenAuth(TokenAuth):
         else:
             return False
 
-def setup_database(app, populate_sample_data=True):
+def setup_database(app, populate_sample_data=True, create_admin_user_password=None):
     db = app.data.driver
     frt_server.tables.Base.metadata.bind = db.engine
     db.Model = frt_server.tables.Base
     db.create_all()
 
-    if populate_sample_data and db.session.query(frt_server.tables.User).count() < 1:
-        from frt_server.seed import entities, post_create
-
-        # register new entities
-        for entity in entities:
+    if db.session.query(frt_server.tables.User).count() < 1:
+        if create_admin_user_password:
+            entity = User(username='admin', password=create_admin_user_password)
             db.session.add(entity)
+            db.session.commit()
 
-        # save and reload new entities
-        db.session.flush()
-        for entity in entities:
-            db.session.refresh(entity)
+        if populate_sample_data:
+            from frt_server.seed import entities, post_create
 
-        # pass them to the post create handler
-        for entity in post_create(entities):
-            db.session.add(entity)
+            # register new entities
+            for entity in entities:
+                db.session.add(entity)
 
-        db.session.commit()
+            # save and reload new entities
+            db.session.flush()
+            for entity in entities:
+                db.session.refresh(entity)
+
+            # pass them to the post create handler
+            for entity in post_create(entities):
+                db.session.add(entity)
+
+            db.session.commit()
 
 def create_app():
     app = Eve(data = SQL, auth=TokenAuth, validator=ValidatorSQL)

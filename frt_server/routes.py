@@ -2,6 +2,7 @@ import json
 import os
 import base64
 import re
+import glob
 from functools import wraps
 
 from flask import request, jsonify, current_app, send_from_directory, Response
@@ -88,6 +89,26 @@ def register_routes(app):
         return Response(json.dumps(font.convert(unicode_text)),
                 mimetype='application/json')
 
+    @app.route('/font/<font_id>/otf', methods=['GET'])
+    @requires_auth('')
+    def retrieve_otf(font_id):
+        session = app.data.driver.session
+        font = session.query(Font).get(font_id)
+        if not font:
+            return jsonify({'error': 'Associated font does not exist'}), 400
+
+        try:
+            contents = font.get_otf_contents()
+        except FileNotFoundError:
+            return jsonify({'error': 'Associated font does not contain an otf'})
+        
+        response = Response(contents, mimetype='application/octet-stream')
+        response.headers["Content-Disposition"] = "attachment; filename=font.otf"
+        return response
+
+
+
+        
     @app.route('/font/<font_id>/ufo', methods=['GET'])
     @requires_auth('')
     def retrieve_ufo(font_id):
@@ -106,6 +127,8 @@ def register_routes(app):
         response = font.get_ufo_data(requested_data)
 
         return jsonify(response), 200
+
+
 
     @app.route('/snap', methods=['GET'])
     def attachment_upload_view():

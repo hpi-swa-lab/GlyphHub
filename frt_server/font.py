@@ -31,10 +31,24 @@ class Font(CommonColumns):
         return os.path.join(self.folder_path(), 'ufo')
 
     def ufo_file_path(self):
-        return glob.glob(self.ufo_folder_path() + '/*.ufo')[0]
+        ufo_filenames = glob.glob(self.ufo_folder_path() + '/*.ufo')
+        if not ufo_filenames:
+            raise FileNotFoundError('no ufo file found for font ' + self.font_name)
+        return ufo_filenames[0]
 
     def otf_folder_path(self):
         return os.path.join(self.folder_path(), 'otf')
+
+    def otf_file_path(self):
+        otf_filenames = glob.glob(self.otf_folder_path() + '/*.otf')
+        if not otf_filenames:
+            raise FileNotFoundError('no otf file found for font ' + self.font_name)
+        return otf_filenames[0]
+
+    def get_otf_contents(self):
+        with open(self.otf_file_path(), 'rb') as otf_file:
+            contents = otf_file.read(50*1024*1024)
+        return contents
 
     def ensure_folder_exists(self):
         """Ensure that the needed folders exist"""

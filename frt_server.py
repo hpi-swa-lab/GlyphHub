@@ -10,5 +10,5 @@ import frt_server.settings
 import frt_server.config
 
 app = create_app()
-setup_database(app, frt_server.config.POPULATE_SAMPLE_DATA)
+setup_database(app, frt_server.config.POPULATE_SAMPLE_DATA, frt_server.config.ADMIN_USER_PASSWORD)
 app.run(debug = frt_server.config.DEBUG, host = frt_server.config.HOST, port = frt_server.config.PORT)

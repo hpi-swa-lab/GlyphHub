@@ -2,6 +2,7 @@ import os
 
 BASE = os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', 'frt_server')
 
+ADMIN_USER_PASSWORD = None
 POPULATE_SAMPLE_DATA = False
 
 SECRET_KEY = 'insert_secret_key_here'
