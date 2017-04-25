@@ -27,6 +27,7 @@ matrix:
         - cmake ..
         - make && sudo make install
         - sudo ldconfig
+        - cd ../..
       install:
         - sudo pip3 install -U setuptools
         - pip3 install -r requirements.txt

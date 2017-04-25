@@ -33,8 +33,6 @@ class UploadTestCase(TestMinimal):
             self.assertTrue(os.path.exists(font.ufo_folder_path()))
             self.assertTrue(os.path.exists(font.otf_folder_path()))
             self.assertTrue(os.path.exists(os.path.join(font.ufo_folder_path(), 'newFont-Regular.ufo')))
-            print(os.listdir(font.otf_folder_path()))
-            print(font.otf_folder_path())
             self.assertTrue(os.path.exists(os.path.join(font.otf_folder_path(), 'newFont-Regular.otf')))
 
     def test_upload_ufo(self):
