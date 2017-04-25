@@ -67,16 +67,17 @@ class TestMinimal(eve.tests.TestMinimal):
         response = self.test_client.post(url, data=json.dumps(data), headers=headers)
         return self.parse_response(response)
 
-    def upload_file(self, url, field_name, path):
+    def upload_file(self, url, field_name, path, fields={}):
         """upload file in a multipart/form-data request with field_name. path is relative
         to project root"""
         with open(os.path.join(self.this_directory, '..', '..', path), 'rb') as f:
+            fields.update({field_name: f})
             response = self.test_client.post(url,
                     headers=[
                         ('Content-Type', 'multipart/form-data'),
                         ('Authorization', self.cachedApiToken)
                     ],
-                    data={field_name: f})
+                    data=fields)
             return self.parse_response(response)
 
     def login_as(self, userName, password):

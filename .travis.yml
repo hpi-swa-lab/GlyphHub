@@ -21,6 +21,12 @@ matrix:
       before_install:
         - sudo apt-get update -qq
         - sudo apt-get install libharfbuzz-dev libfreetype6-dev python3-pip python3-dev -y
+        - git clone -b master git://github.com/libgit2/libgit2.git
+        - cd libgit2
+        - mkdir build && cd build
+        - cmake ..
+        - make && sudo make install
+        - sudo ldconfig
       install:
         - sudo pip3 install -U setuptools
         - pip3 install -r requirements.txt
