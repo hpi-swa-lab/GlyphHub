@@ -1,7 +1,10 @@
 examples
 typeahead
 
-	| input |
-	input := BTTextCompletion new suggestionsList: {{'Andorra'. #ad}. {'Germany'. #de}. {'France'. #fr}. {'Albania'. #ab}. {'Argentina'. #ag}. {'Austria'. #au}. {'Australia'. #as}}.
-	
-	^ BTTopLevel new size: 500 asPoint; add: input
+	| input topLevel |
+	input := BTTextCompletion new
+		suggestionsList: {'Andorra'. 'Germany'. 'France'. 'Albania'. 'Argentina'. 'Austria'. 'Australia'. 'Andorra2'};
+		onlyAllowsExactMatches: true.
+	topLevel := BTTopLevel new size: 500 asPoint; add: input.
+	input when: #confirmed send: #displayNotification:type: to: topLevel withArguments: {'Confirmed'. #info}.
+	^ topLevel

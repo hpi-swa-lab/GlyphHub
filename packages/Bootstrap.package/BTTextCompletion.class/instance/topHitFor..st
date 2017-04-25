@@ -7,5 +7,7 @@ topHitFor: aString
 			self suggestionsDropdown hasSubmorphs
 				ifTrue: [
 					firstItemText := self suggestionsDropdown plainTextForItemAt: 1.
-					(firstItemText findString: aString startingAt: 1 caseSensitive: false) = 1 ifTrue: [firstItemText] ifFalse: ['']]
-				ifFalse: ['']]
+					(firstItemText findString: aString startingAt: 1 caseSensitive: false) = 1 
+						ifTrue: [firstItemText]
+						ifFalse: [aString]]
+				ifFalse: [aString]]

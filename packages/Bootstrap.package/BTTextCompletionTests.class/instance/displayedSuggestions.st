@@ -1,6 +1,6 @@
 as yet unclassified
 displayedSuggestions
 	| dropdown |
-	dropdown := completionWidget instVarNamed: #suggestions.
+	dropdown := completionWidget instVarNamed: #suggestionsDropdown.
 	
-	^dropdown submorphs collect: [ :item | item firstSubmorph plainText ]
+	^dropdown submorphs collect: [:dropdownItem | dropdownItem plainText]

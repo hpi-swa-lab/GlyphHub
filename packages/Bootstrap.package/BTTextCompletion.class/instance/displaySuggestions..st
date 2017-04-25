@@ -9,7 +9,7 @@ displaySuggestions: aCollection
 		ifNotEmpty: [self openSuggestionPopup].
 
 	aCollection do: [:suggestion | | suggestionString |
-		suggestionString := (self markupForResult: suggestion first).
+		suggestionString := (self markupForResult: suggestion).
 		suggestionsDropdown add: ((BTDropdownItem
 			label: suggestionString)
-			when: #clicked send: #triggerConfirmed: to: self with: suggestionString)]
+			when: #clicked send: #triggerConfirmed: to: self with: suggestion)]

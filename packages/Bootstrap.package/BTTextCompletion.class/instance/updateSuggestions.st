@@ -3,14 +3,13 @@ updateSuggestions
 	
 	^ suggestionsAsynchronusBlock
 		ifNotNil: [
-			self suggestionsList: #().
-			(suggestionsAsynchronusBlock value: self text) then: [:tuples |
-				self suggestionsList: tuples.
-				suggestionsList ifNotNil: [self displaySuggestions: suggestionsList].
+			(suggestionsAsynchronusBlock value: self text) then: [:suggestedStrings |
 				self
+					suggestionsList: suggestedStrings;
+					displaySuggestions: self suggestionsList;
 					updatePreviewTextFor: self text;
 					changed]]
-		ifNil: [suggestionsList ifNotNil: [
-			self displaySuggestions: (suggestionsList select: [:suggestion |
-				suggestion first includesSubstring: self text caseSensitive: false])].
+		ifNil: [self suggestionsList ifNotEmpty: [
+			self displaySuggestions: (self suggestionsList select: [:suggestion |
+				(suggestion includesSubstring: self text caseSensitive: false) and: [suggestion asLowercase ~= self text asLowercase]])].
 			Promise unit: true]

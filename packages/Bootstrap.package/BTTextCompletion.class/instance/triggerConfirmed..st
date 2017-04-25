@@ -8,5 +8,5 @@ triggerConfirmed: aString
 		
 		suggestionsDropdown delete.
 		super triggerConfirmed: self text].
-
+	
 	^ false

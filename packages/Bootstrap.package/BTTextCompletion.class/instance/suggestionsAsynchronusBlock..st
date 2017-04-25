@@ -1,6 +1,5 @@
 accessing
 suggestionsAsynchronusBlock: aBlock
-	" expects a block that will be called with the entered text and returns a promise
-		resolving in a list of tupels of {label. userdata} "
+	" expects a block that will be called with the text entered into the TextCompletion widget and returns a promise resolving in a list of strings"
 		
 	suggestionsAsynchronusBlock := aBlock
