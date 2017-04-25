@@ -5,7 +5,7 @@ displaySuggestions: aCollection
 	activeSuggestionIndex := 0.
 	
 	aCollection
-		ifEmpty: [^ suggestionsDropdown delete]
+		ifEmpty: [self closeSuggestionPopup. ^ self]
 		ifNotEmpty: [self openSuggestionPopup].
 
 	aCollection do: [:suggestion | | suggestionString |
