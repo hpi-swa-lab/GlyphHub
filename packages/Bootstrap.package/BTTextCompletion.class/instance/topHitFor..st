@@ -1,4 +1,4 @@
-accessing
+suggestions
 topHitFor: aString
 
 	^ activeSuggestionIndex ~= 0

@@ -59,7 +59,17 @@ class Family(CommonColumns):
         subprocess.run(['fontmake', type_parameter, temporary_filename, '--no-production-names', '-o', 'otf', '--verbose', 'CRITICAL'],
                 cwd=self.source_folder_path())
 
+    def font_for_file_named(self, ufo_filename):
+        """check if an ufo file with that name already exists and return the associated font if it does"""
+        for font in self.fonts:
+            if font.ufo_file_path().endswith(ufo_filename):
+                return font
+
     def create_uploaded_font(self, font_name, ufo_filename, otf_filename, user):
+        font = self.font_for_file_named(ufo_filename)
+        if font:
+            return font
+
         font = Font(font_name=font_name, author_id=user._id)
         self.fonts.append(font)
         session = inspect(self).session
@@ -70,7 +80,7 @@ class Family(CommonColumns):
         font.ensure_folder_exists()
         return font
 
-    def process_file(self, family_file, user):
+    def process_file(self, family_file, user, commit_message):
         """convert a glyphs or ufo file to (ufo and) otf, create all associated Font entities, move files to the right folders
         we get:
         family/3/sourceFile.glyphs
@@ -90,11 +100,11 @@ class Family(CommonColumns):
             raise FileNotFoundError('No otf files were generated')
 
         if self.is_ufo_file(sanitized_filename):
-            return self.process_ufo_file(sanitized_filename[:-4], otf_filenames[0], user)
+            return self.process_ufo_file(sanitized_filename[:-4], otf_filenames[0], user, commit_message)
         else:
-            return self.process_glyphs_file(sanitized_filename, otf_filenames, user)
+            return self.process_glyphs_file(sanitized_filename, otf_filenames, user, commit_message)
 
-    def process_glyphs_file(self, glyphs_filename, otf_filenames, user):
+    def process_glyphs_file(self, glyphs_filename, otf_filenames, user, commit_message):
         source_otf_path = os.path.join(self.source_folder_path(), 'master_otf')
         source_ufo_path = os.path.join(self.source_folder_path(), 'master_ufo')
 
@@ -103,19 +113,32 @@ class Family(CommonColumns):
             ufo_filename = font_name + '.ufo'
             font = self.create_uploaded_font(font_name, ufo_filename, otf_filename, user)
 
-            shutil.move(os.path.join(source_ufo_path, ufo_filename), os.path.join(font.ufo_folder_path(), ufo_filename))
-            shutil.move(os.path.join(source_otf_path, otf_filename), font.otf_folder_path())
+            self.move_file(os.path.join(source_ufo_path, ufo_filename), os.path.join(font.ufo_folder_path(), ufo_filename))
+            self.move_file(os.path.join(source_otf_path, otf_filename), os.path.join(font.otf_folder_path(), otf_filename))
+
+            font.create_commit(commit_message, user)
 
         shutil.rmtree(source_ufo_path)
         shutil.rmtree(source_otf_path)
 
-    def process_ufo_file(self, ufo_filename, otf_filename, user):
+    def process_ufo_file(self, ufo_filename, otf_filename, user, commit_message):
         source_otf_path = os.path.join(self.source_folder_path(), 'master_otf')
         font_name = otf_filename[:-4]
 
         font = self.create_uploaded_font(font_name, ufo_filename, otf_filename, user)
 
-        shutil.move(os.path.join(self.source_folder_path(), ufo_filename), os.path.join(font.ufo_folder_path(), ufo_filename))
-        shutil.move(os.path.join(source_otf_path, otf_filename), os.path.join(font.otf_folder_path(), otf_filename))
+        self.move_file(os.path.join(self.source_folder_path(), ufo_filename), os.path.join(font.ufo_folder_path(), ufo_filename))
+        self.move_file(os.path.join(source_otf_path, otf_filename), os.path.join(font.otf_folder_path(), otf_filename))
+
+        font.create_commit(commit_message, user)
+
         shutil.rmtree(source_otf_path)
+
+    def move_file(self, source, destination):
+        if os.path.exists(destination):
+            if (os.path.isdir(destination)):
+                shutil.rmtree(destination)
+            else:
+                os.remove(destination)
+        shutil.move(source, destination)
 

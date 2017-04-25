@@ -2,3 +2,4 @@
 eve-sqlalchemy
 pytest
 fontmake
+pygit2

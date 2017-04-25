@@ -2,7 +2,8 @@
 	"class" : {
 		 },
 	"instance" : {
-		"displaySuggestions:" : "JH 4/25/2017 13:12",
+		"closeSuggestionPopup" : "ek 4/25/2017 16:26",
+		"displaySuggestions:" : "ek 4/25/2017 16:27",
 		"initialize" : "JH 4/25/2017 11:25",
 		"isValidCompletion:" : "JH 4/25/2017 11:44",
 		"keyStroke:" : "JH 4/21/2017 12:19",
@@ -20,6 +21,6 @@
 		"topHitFor:" : "JH 4/25/2017 11:29",
 		"triggerConfirmed:" : "JH 4/25/2017 13:17",
 		"updatePreviewTextFor:" : "JH 4/25/2017 11:41",
-		"updateSuggestions" : "JH 4/25/2017 11:25",
+		"updateSuggestions" : "ek 4/25/2017 15:54",
 		"updateText:" : "JH 4/24/2017 17:30",
 		"useActiveSuggestion" : "JH 4/25/2017 10:49" } }
