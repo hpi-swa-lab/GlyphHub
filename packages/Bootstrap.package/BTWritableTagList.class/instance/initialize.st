@@ -11,7 +11,9 @@ initialize
 		placeholder: 'New Tag ...';
 		when: #confirmed evaluate: [:text |
 			text ifNotEmpty: [
-				self addTag: text].
+				self
+					addTag: text;
+					triggerTagAdded: text].
 			nil];
 		yourself.
 
