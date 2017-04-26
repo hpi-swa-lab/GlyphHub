@@ -13,7 +13,8 @@
 		"spacing",
 		"ignoreLayout",
 		"expand",
-		"maxSize" ],
+		"maxSize",
+		"requestCache" ],
 	"name" : "BTWidget",
 	"pools" : [
 		 ],

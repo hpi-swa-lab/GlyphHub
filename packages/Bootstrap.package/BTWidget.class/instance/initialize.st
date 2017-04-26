@@ -9,6 +9,7 @@ initialize
 	expand := false.
 	ignoreLayout := false.
 	align := #(fill fill).
+	requestCache := BTSizeRequestCache new.
 	
 	self
 		color: Color transparent;

@@ -1,5 +1,6 @@
 layout
 preferredSizeForWidth: aNumber
-	
 
-	^ self calculateSizeForWidth: aNumber
+	^ requestCache
+		lookupForWidth: aNumber
+		ifMissing: [self calculateSizeForWidth: aNumber]

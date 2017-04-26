@@ -6,9 +6,8 @@
 		 ],
 	"commentStamp" : "TB 4/26/2017 21:53",
 	"instvars" : [
-		"minSize",
-		"naturalSize" ],
-	"name" : "BTSizeRequest",
+		"list" ],
+	"name" : "BTSizeRequestCache",
 	"pools" : [
 		 ],
 	"super" : "Object",
