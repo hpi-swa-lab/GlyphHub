@@ -45,7 +45,7 @@ def post_create(entities):
     family1 = entities[1]
 
     with open(os.path.join(frt_server.config.BASE, '../testFiles/RiblonSans/RiblonSans.glyphs'), 'rb') as glyphs:
-        family1.process_file(FileStorage(glyphs, 'RiblonSans.glyphs'), user1)
+        family1.process_file(FileStorage(glyphs, 'RiblonSans.glyphs'), user1, 'First Version')
 
     font1 = family1.fonts[0]
     font1.tags.append(Tag(text='#pretty', type='opinion'))
