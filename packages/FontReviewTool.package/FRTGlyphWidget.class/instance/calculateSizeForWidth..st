@@ -1,11 +1,11 @@
 geometry
-preferredSizeForWidth: aNumber
+calculateSizeForWidth: aNumber
 	
 	| min |
-	self isReady ifFalse: [^ {self minSize. self minSize}].
+	self isReady ifFalse: [^ BTSizeRequest fixed: self minSize].
 	
 	min := (renderer extentOf: self glyphNames size: self pointSize) max: self minSize.
 	
 	self square ifTrue: [min := (min x max: min y) asPoint].
 	
-	^ {min. min}
+	^ BTSizeRequest fixed: min

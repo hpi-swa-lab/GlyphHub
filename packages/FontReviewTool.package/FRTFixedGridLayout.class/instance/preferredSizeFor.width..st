@@ -2,7 +2,7 @@ layout
 preferredSizeFor: aWidget width: aNumber
 
 	| n columns rows natSize effectiveCellSize |
-	aWidget hasSubmorphs ifFalse: [^ {0 asPoint. 0 asPoint}].
+	aWidget hasSubmorphs ifFalse: [^ BTSizeRequest fixed: 0 asPoint].
 	
 	effectiveCellSize := cellSize + aWidget spacing.
 	n := aWidget submorphCount.
@@ -18,4 +18,4 @@ preferredSizeFor: aWidget width: aNumber
 	
 	natSize := (columns * effectiveCellSize x) @ (rows * effectiveCellSize y).
 	
-	^ {	cellSize x @ (effectiveCellSize y * n min: natSize y). natSize}
+	^ BTSizeRequest min: cellSize x @ (effectiveCellSize y * n min: natSize y) natural: natSize

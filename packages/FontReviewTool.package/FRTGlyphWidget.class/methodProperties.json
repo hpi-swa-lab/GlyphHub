@@ -4,6 +4,7 @@
 		"new" : "lcj 4/9/2017 11:10",
 		"newWithRenderer:" : "TB 4/7/2017 11:08" },
 	"instance" : {
+		"calculateSizeForWidth:" : "TB 4/26/2017 21:41",
 		"centered" : "TB 4/7/2017 11:52",
 		"centered:" : "TB 4/7/2017 11:52",
 		"drawOn:" : "TB 4/7/2017 12:00",
@@ -19,7 +20,6 @@
 		"loadCurrentGlyphs" : "ek 4/24/2017 11:14",
 		"pointSize" : "TB 4/5/2017 15:56",
 		"pointSize:" : "TB 4/5/2017 15:56",
-		"preferredSizeForWidth:" : "ek 4/7/2017 12:51",
 		"renderer" : "TB 4/9/2017 15:56",
 		"square" : "ek 4/7/2017 12:50",
 		"square:" : "ek 4/7/2017 12:50",

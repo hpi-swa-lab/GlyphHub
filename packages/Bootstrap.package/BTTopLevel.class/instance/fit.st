@@ -9,6 +9,6 @@ fit
 	self
 		fullBounds;
 		extent:
-			(wantsExpand first ifTrue: [self width] ifFalse: [preferred second x min: self width]) @
-			(wantsExpand second ifTrue: [self height] ifFalse: [preferred second y min: self height]);
+			(wantsExpand first ifTrue: [self width] ifFalse: [preferred naturalSize x min: self width]) @
+			(wantsExpand second ifTrue: [self height] ifFalse: [preferred naturalSize y min: self height]);
 		fullBounds

@@ -7,7 +7,7 @@ applyAlignmentWithOffset: offsetPoint in: nonLayoutSize
 	vertical ifTrue: [available := available transposed].
 	" todo: investigate if we can omit another call into preferredSizeForWidth: since it's crazy costly "
 	preferred := self widget preferredSizeForWidth: available x.
-	wanted := (preferred second min: available) max: preferred first.
+	wanted := (preferred naturalSize min: available) max: preferred minSize.
 	
 	destBox := offsetPoint + (vertical ifTrue: [0 @ offset] ifFalse: [offset @ 0]) extent: wanted.
 	

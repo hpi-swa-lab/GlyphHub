@@ -1,9 +1,9 @@
 layout
-preferredSizeForWidth: aNumber  
+calculateSizeForWidth: aNumber  
 	| fullSize |
 	fullSize := animating or: [collapsed not].
 	
-	^container hasSubmorphs
+	^ container hasSubmorphs
 		ifFalse: [ | size |
 			size := aNumber + self paddingAsPoint x @ 0.
 			{size. size} ]
@@ -11,4 +11,4 @@ preferredSizeForWidth: aNumber
 			preferred := (container firstSubmorph preferredSizeForWidth: aNumber) + self paddingAsPoint.
 			fullSize
 				ifTrue: [preferred]
-				ifFalse: [{preferred first x @ 0. preferred first y @ 0}]]
+				ifFalse: [BTSizeRequest min: preferred minSize x @ 0 natural: preferred minSize y @ 0]]

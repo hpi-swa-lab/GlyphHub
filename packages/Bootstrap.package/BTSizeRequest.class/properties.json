@@ -1,0 +1,15 @@
+{
+	"category" : "Bootstrap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"minSize",
+		"naturalSize" ],
+	"name" : "BTSizeRequest",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

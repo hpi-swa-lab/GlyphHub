@@ -5,4 +5,4 @@ testPreferredSizeOneChild
 	container := self container
 		add: BTWidget new.
 		
-	(self expect: (container preferredSizeForWidth: 200)) to equal: {50 asPoint. 50 asPoint}
+	(self expect: (container preferredSizeForWidth: 200)) to equal: (BTSizeRequest fixed: 50 asPoint)

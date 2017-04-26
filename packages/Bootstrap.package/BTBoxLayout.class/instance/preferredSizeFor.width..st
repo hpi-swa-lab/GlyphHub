@@ -46,7 +46,9 @@ preferredSizeFor: aWidget width: aNumber
 	nonLayoutDirectionNatSize := 0.
 	childItems do: [:item | | sizes |
 		sizes := item nonLayoutDirectionSizesForWidth: (vertical ifTrue: [aNumber] ifFalse: [item finalSize]).
-		nonLayoutDirectionMinSize := nonLayoutDirectionMinSize max: sizes first.
-		nonLayoutDirectionNatSize := nonLayoutDirectionNatSize max: sizes second].
+		nonLayoutDirectionMinSize := nonLayoutDirectionMinSize max: sizes minSize.
+		nonLayoutDirectionNatSize := nonLayoutDirectionNatSize max: sizes naturalSize].
 	
-	^ {self flipPoint: totalMin @ nonLayoutDirectionMinSize. self flipPoint: totalNat @ nonLayoutDirectionNatSize}
+	^ BTSizeRequest
+		min: (self flipPoint: totalMin @ nonLayoutDirectionMinSize)
+		natural: (self flipPoint: totalNat @ nonLayoutDirectionNatSize)
