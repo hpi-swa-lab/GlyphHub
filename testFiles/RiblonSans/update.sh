@@ -10,6 +10,6 @@ rm -rf master_ufo
 
 fontmake -g ./RiblonSans.glyphs -o ufo
 
-mv master_ufo/newFont-Regular.ufo RiblonSans.ufo
+mv master_ufo/RiblonSans-Regular.ufo RiblonSans.ufo
 zip -r RiblonSans.ufo.zip RiblonSans.ufo
 rm -r master_ufo

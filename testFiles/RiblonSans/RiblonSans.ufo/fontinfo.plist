@@ -9,14 +9,13 @@
 	<key>descender</key>
 	<integer>-200</integer>
 	<key>familyName</key>
-	<string>new Font</string>
+	<string>Riblon Sans</string>
 	<key>guidelines</key>
-	<array>
-	</array>
+	<array/>
 	<key>openTypeHeadCreated</key>
 	<string>2017/04/03 13:12:53</string>
 	<key>openTypeNamePreferredFamilyName</key>
-	<string>new Font</string>
+	<string>Riblon Sans</string>
 	<key>openTypeNamePreferredSubfamilyName</key>
 	<string>Regular</string>
 	<key>openTypeOS2Type</key>
@@ -28,29 +27,23 @@
 	<key>openTypeOS2WidthClass</key>
 	<integer>5</integer>
 	<key>postscriptBlueValues</key>
-	<array>
-	</array>
+	<array/>
 	<key>postscriptFamilyBlues</key>
-	<array>
-	</array>
+	<array/>
 	<key>postscriptFamilyOtherBlues</key>
-	<array>
-	</array>
+	<array/>
 	<key>postscriptOtherBlues</key>
-	<array>
-	</array>
+	<array/>
 	<key>postscriptStemSnapH</key>
-	<array>
-	</array>
+	<array/>
 	<key>postscriptStemSnapV</key>
-	<array>
-	</array>
+	<array/>
 	<key>postscriptUnderlinePosition</key>
 	<integer>-100</integer>
 	<key>postscriptUnderlineThickness</key>
 	<integer>50</integer>
 	<key>styleMapFamilyName</key>
-	<string>new Font</string>
+	<string>Riblon Sans</string>
 	<key>styleMapStyleName</key>
 	<string>regular</string>
 	<key>styleName</key>

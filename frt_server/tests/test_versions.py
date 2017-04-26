@@ -25,16 +25,16 @@ class VersionsTestCase(TestMinimal):
     def get_test_family(self):
         return self.connection.session.query(Family).options(joinedload(Family.fonts)).get(self.family_id)
 
-    def upload_glyphs_file(self, message=None):
+    def upload_glyphs_file(self, message=None, version=''):
         data, status = self.upload_file('/family/{}/upload'.format(self.family_id),
                 'file',
-                'testFiles/RiblonSans/RiblonSans.glyphs',
+                'testFiles/RiblonSans/RiblonSans{}.glyphs'.format(version),
                 {'commit_message': message})
         self.assertEqual(status, 200)
         return data, status
 
     def testUploadCreatesNoDuplicates(self):
-        self.upload_glyphs_file()
+        self.upload_glyphs_file(None, '-v2')
         self.assertEqual(len(self.get_test_family().fonts), 1)
 
     def testSingleVersion(self):
@@ -45,7 +45,7 @@ class VersionsTestCase(TestMinimal):
             self.assertEqual(len(font.versions()[0]['version_hash']), GIT_COMMIT_HASH_LENGHT)
 
     def testMultipleVersions(self):
-        self.upload_glyphs_file()
+        self.upload_glyphs_file(None, '-v2')
 
         fonts = self.get_test_family().fonts
         self.assertEqual(len(fonts), 1)
@@ -56,7 +56,7 @@ class VersionsTestCase(TestMinimal):
 
     def testCommitMessage(self):
         MESSAGE = 'My newest version!'
-        self.upload_glyphs_file(MESSAGE)
+        self.upload_glyphs_file(MESSAGE, '-v2')
         self.assertEqual(self.get_test_family().fonts[0].versions()[0]['message'], MESSAGE)
 
     def testCommitContents(self):
@@ -66,9 +66,9 @@ class VersionsTestCase(TestMinimal):
         version = font.versions()[0]['version_hash']
 
         # try accessing expected files. will throw an error if they don't exist.
-        font.versioned_file_at_path('ufo/newFont-Regular.ufo/fontinfo.plist', version)
+        font.versioned_file_at_path('ufo/RiblonSans-Regular.ufo/fontinfo.plist', version)
 
-        a = font.versioned_file_at_path('ufo/newFont-Regular.ufo/glyphs/A_.glif', version)
+        a = font.versioned_file_at_path('ufo/RiblonSans-Regular.ufo/glyphs/A_.glif', version)
         self.assertTrue(str(a, 'utf-8').startswith(A_PREFIX))
 
         with self.assertRaises(FileNotFoundError):

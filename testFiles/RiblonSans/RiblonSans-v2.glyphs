@@ -1,5 +1,8 @@
 {
 .appVersion = "983";
+DisplayStrings = (
+B
+);
 date = "2017-04-03 13:12:53 +0000";
 familyName = "Riblon Sans";
 fontMaster = (
@@ -168,6 +171,74 @@ width = 600;
 }
 );
 unicode = 0041;
+},
+{
+glyphname = B;
+lastChange = "2017-04-25 10:20:53 +0000";
+layers = (
+{
+layerId = "71EE6B85-4155-4B67-9209-5F8D52F9AD44";
+paths = (
+{
+closed = 1;
+nodes = (
+"62 706 LINE",
+"68 47 LINE",
+"198 83 OFFCURVE",
+"456 6 OFFCURVE",
+"459 154 CURVE SMOOTH",
+"462 302 OFFCURVE",
+"267 376 OFFCURVE",
+"202 378 CURVE SMOOTH",
+"137 380 OFFCURVE",
+"421 356 OFFCURVE",
+"422 480 CURVE SMOOTH",
+"423 604 OFFCURVE",
+"392 708 OFFCURVE",
+"181 709 CURVE SMOOTH"
+);
+},
+{
+closed = 0;
+nodes = (
+"62 706 LINE"
+);
+},
+{
+closed = 0;
+nodes = (
+"62 706 LINE"
+);
+},
+{
+closed = 1;
+nodes = (
+"181 653 OFFCURVE",
+"315 628 OFFCURVE",
+"312 556 CURVE SMOOTH",
+"309 484 OFFCURVE",
+"185 476 OFFCURVE",
+"121 436 CURVE",
+"114 654 LINE"
+);
+},
+{
+closed = 1;
+nodes = (
+"156 333 OFFCURVE",
+"297 364 OFFCURVE",
+"298 241 CURVE SMOOTH",
+"299 118 OFFCURVE",
+"178 158 OFFCURVE",
+"118 117 CURVE",
+"115 331 LINE"
+);
+}
+);
+width = 600;
+}
+);
+unicode = 0042;
 },
 {
 glyphname = a;
