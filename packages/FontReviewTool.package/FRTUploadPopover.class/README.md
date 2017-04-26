@@ -1,0 +1,1 @@
+A FRTUploadPopover displays a field for entering a commit message and has a button for selecting a new font file that is to be uploaded.

@@ -1,0 +1,16 @@
+{
+	"category" : "FontReviewTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "TB 4/26/2017 11:50",
+	"instvars" : [
+		"changeText",
+		"family",
+		"topLevel" ],
+	"name" : "FRTUploadPopover",
+	"pools" : [
+		 ],
+	"super" : "BTPopover",
+	"type" : "normal" }

@@ -21,7 +21,7 @@ tryUpload
 			self topLevel startLoadingOperation.
 			(((family
 				saveTo: self topLevel backend)
-				then: [:savedFamily | self topLevel backend upload: stream toFamily: savedFamily id])
+				then: [:savedFamily | self topLevel backend upload: stream toFamily: savedFamily id commitMessage: 'First Version'])
 				then: [
 					self topLevel
 						stopLoadingOperation;

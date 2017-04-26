@@ -1,3 +1,4 @@
 constants
 targetOffset
-	^BTWidget arrowTipSize
+
+	^ BTWidget arrowTipSize

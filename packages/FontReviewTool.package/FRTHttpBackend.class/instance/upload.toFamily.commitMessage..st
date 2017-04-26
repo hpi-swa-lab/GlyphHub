@@ -1,5 +1,5 @@
 font-upload
-upload: aFileStream toFamily: anIdNumber
+upload: aFileStream toFamily: anIdNumber commitMessage: aString
 
 	| boundary file data |
 	boundary := WebUtils multipartBoundary.
@@ -7,6 +7,17 @@ upload: aFileStream toFamily: anIdNumber
 	
 	data := String streamContents: [:stream |
 		stream
+			" message field "
+			nextPutAll: '--'; nextPutAll: boundary;
+			crlf;
+			nextPutAll: 'Content-Disposition: form-data; ';
+			nextPutAll: 'name="commit_message"';
+			crlf;
+			crlf;
+			nextPutAll: aString;
+			crlf;
+
+			" file field "		
 			nextPutAll: '--'; nextPutAll: boundary;
 			crlf;
 			nextPutAll: 'Content-Disposition: form-data; ';

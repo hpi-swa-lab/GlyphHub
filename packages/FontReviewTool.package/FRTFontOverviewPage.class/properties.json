@@ -18,7 +18,8 @@
 		"glyphNames",
 		"gridWidget",
 		"renderer",
-		"threadsContainer" ],
+		"threadsContainer",
+		"uploadPopover" ],
 	"name" : "FRTFontOverviewPage",
 	"pools" : [
 		 ],

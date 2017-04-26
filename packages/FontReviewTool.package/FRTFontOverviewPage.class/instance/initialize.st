@@ -1,17 +1,21 @@
 initialize-release
 initialize
 
-	| inputButton |
+	| inputButton updateButton |
 	super initialize.
 
 	fontNameLabel := BTLabel new
 		align: #(left center).
 	fontAuthorLabel := BTLabel new
 		align: #(left center).
-	inputButton := BTButton new
-		text: 'Try it here!';
+	inputButton := (BTButton label: 'Try it here!' icon: #pencil_square_o)
 		colorType: #primary;
 		when: #clicked send: #openGlyphInputPage to: self.
+	updateButton := (BTButton label: 'Update' icon: #cloud_upload)
+		colorType: #primary.
+	
+	uploadPopover := FRTUploadPopover new
+		attachTo: updateButton.
 	
 	renderer := FRTGlyphRenderer new.
 	allGlyphsPage := self initializeAllGlyphPage.
@@ -24,10 +28,12 @@ initialize
 		add: {'Recent Changes'. recentChangesPage};
 		yourself))
 		showPage: 1.
-	"tabContainer navigationBar makeActive: allGlyphsPage."
 	
 	self add: (BTPage row
-		add: fontNameLabel;
-		add: fontAuthorLabel oppositeTo: inputButton);
+			add: fontNameLabel;
+			add: fontAuthorLabel;
+			add: BTWidget spacer;
+			add: updateButton;
+			add: inputButton);
 		add: tabContainer
 	
