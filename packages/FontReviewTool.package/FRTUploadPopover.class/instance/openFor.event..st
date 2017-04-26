@@ -1,6 +1,6 @@
 displaying
 openFor: aTargetWidget event: anEvent
 
-	changeText text: ''.
+	commitMessageTextArea text: ''.
 	self topLevel: aTargetWidget topLevel.
 	super openFor: aTargetWidget event: anEvent

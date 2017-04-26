@@ -4,9 +4,9 @@ selectFile
 	| backend |
 	backend := self family backend.
 
-	backend pickFontToUpload ifNotNilDo: [:stream |
+	backend pickFontToUpload ifNotNilDo: [:fontFilestream |
 		self topLevel startLoadingOperation.
-		((backend upload: stream toFamily: self family id commitMessage: changeText text)
+		((backend upload: fontFilestream toFamily: self family id commitMessage: commitMessageTextArea text)
 			then: [
 				self delete.
 				self topLevel

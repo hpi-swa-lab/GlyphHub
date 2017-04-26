@@ -1,4 +1,4 @@
 callback
 chooseFile
 
-	self stream: self topLevel backend pickFontToUpload
+	self fontFileStream: self topLevel backend pickFontToUpload

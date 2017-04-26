@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "TB 4/26/2017 11:50",
 	"instvars" : [
-		"changeText",
 		"family",
-		"topLevel" ],
+		"topLevel",
+		"commitMessageTextArea" ],
 	"name" : "FRTUploadPopover",
 	"pools" : [
 		 ],

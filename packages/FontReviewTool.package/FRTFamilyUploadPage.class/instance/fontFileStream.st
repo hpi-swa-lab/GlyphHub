@@ -1,0 +1,4 @@
+accessing
+fontFileStream
+	
+	^ fontFileStream
