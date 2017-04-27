@@ -2,7 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"applyFont" : "al 4/27/2017 13:30",
+		"applyFont" : "ek 4/27/2017 17:56",
 		"applyFontToSampleTextWidget" : "al 4/27/2017 16:34",
 		"breadcrumbs" : "ek 4/19/2017 17:25",
 		"enteringWith:" : "al 4/27/2017 12:35",
@@ -15,6 +15,4 @@
 		"sampleText:" : "ek 4/19/2017 13:33",
 		"sampleTextWidget" : "ek 4/21/2017 15:12",
 		"selectedFont" : "ek 4/24/2017 11:03",
-		"selectedFont:" : "ek 4/24/2017 11:03",
-		"updateSampleTextArea" : "JH 4/27/2017 16:09",
-		"updateSampleTextWidget" : "ek 4/24/2017 11:07" } }
+		"selectedFont:" : "ek 4/24/2017 11:03" } }
