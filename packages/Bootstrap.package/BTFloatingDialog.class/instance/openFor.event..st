@@ -8,4 +8,4 @@ openFor: aTargetWidget event: anEvent
 	anEvent ifNotNilDo: [:event |
 		event hand
 			newMouseFocus: self;
-			newKeyboardFocus: self]
+			newKeyboardFocus: (submorphs select: [:submorph | submorph isFormInput]) first]

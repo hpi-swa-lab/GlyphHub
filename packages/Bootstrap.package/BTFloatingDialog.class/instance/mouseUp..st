@@ -1,4 +1,4 @@
 event handling
-mouseDown: anEvent
-
+mouseUp: anEvent
+	
 	(self fullContainsPoint: anEvent position) ifFalse: [self delete]
