@@ -5,7 +5,10 @@ openFor: aTargetWidget event: anEvent
 		position: (self openPositionFor: aTargetWidget);
 		openInWorld.
 
-	anEvent ifNotNilDo: [:event |
-		event hand
-			newMouseFocus: self;
-			newKeyboardFocus: (submorphs select: [:submorph | submorph isFormInput]) first]
+	anEvent ifNotNilDo: [:event | | inputSubmorphs |
+		inputSubmorphs := submorphs select: [:submorph | submorph isFormInput].
+		inputSubmorphs
+			ifNotEmpty: [event hand newKeyboardFocus: inputSubmorphs first]
+			ifEmpty: [event hand newKeyboardFocus: self].
+
+		event hand newMouseFocus: self]

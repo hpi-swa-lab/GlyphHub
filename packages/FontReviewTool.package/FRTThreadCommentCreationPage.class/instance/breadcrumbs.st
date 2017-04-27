@@ -7,7 +7,7 @@ breadcrumbs
 	
 	self enteredFromGlyph
 		ifNil: [ | family |
-			family := self thread threadGlyphAssociations anyOne glyph font family.
+			family := self topLevel selectedFont family.
 			crumbs add: {family familyName. #font. {FRTFontOverviewPage. family}}]
 		ifNotNil: [
 			crumbs

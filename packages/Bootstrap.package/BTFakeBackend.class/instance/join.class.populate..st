@@ -23,7 +23,7 @@ join: aModelList class: aClass populate: aCollection
 			model
 				instVarNamed: field
 				put: (association cardinality == #single
-					ifTrue: [ children value ifEmpty: [nil] ifNotEmptyDo: #anyOne ]
+					ifTrue: [children value ifEmpty: [nil] ifNotEmptyDo: #onlyElement]
 					ifFalse: [
 						children value
 							field: field;
