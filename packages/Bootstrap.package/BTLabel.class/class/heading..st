@@ -2,5 +2,6 @@ instance creation
 heading: aString
 
 	^ self new
-		heading: aString;
+		text: aString;
+		heading;
 		yourself

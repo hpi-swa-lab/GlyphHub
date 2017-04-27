@@ -1,3 +1,4 @@
 drawing
 keyboardFocusColor
-	^nil
+
+	^ nil

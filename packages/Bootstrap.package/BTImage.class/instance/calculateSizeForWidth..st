@@ -1,6 +1,7 @@
 layout
 calculateSizeForWidth: aNumber
-	self form ifNil: [ ^{minSize. minSize} ].
+
+	self form ifNil: [^ {minSize. minSize}].
 	
 	scalingMode == #full ifTrue: [^ BTSizeRequest fixed: self form extent].
 	scalingMode == #fill ifTrue: [^ BTSizeRequest min: minSize natural: aNumber @ (self heightAtWidth: aNumber)].

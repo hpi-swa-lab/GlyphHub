@@ -7,7 +7,7 @@ initialize
 		scalingMode: #fixed;
 		minSize: 64.
 	commentText := BTLabel new.
-	metaInfo := BTLabel new.
+	metaInfo := (BTLabel new) bold.
 	
 	self
 		withLayout;

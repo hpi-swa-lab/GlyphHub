@@ -1,9 +1,10 @@
 accessing
 text: aString
+
 	label ifNil: [
 		label := BTLabel new
-			styleAttributes: self class styleAttributes;
 			yourself.
-		self add: label ].
+		self add: label].
+		self class applyStyleAtributes: label.
 	
 	label text: aString

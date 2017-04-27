@@ -1,3 +1,4 @@
 event handling
 wantsEveryMouseMove
-	^true
+
+	^ true

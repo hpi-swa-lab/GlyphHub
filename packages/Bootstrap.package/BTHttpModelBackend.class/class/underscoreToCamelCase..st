@@ -4,8 +4,8 @@ underscoreToCamelCase: aString
 	
 	| inStream |
 	inStream := aString readStream.
-	^ (String streamContents: [ :outStream |
+	^ (String streamContents: [:outStream |
 		inStream peek = $_ ifTrue: [ inStream next ].
 		
 		[outStream nextPutAll: (inStream upTo: $_).
-		inStream atEnd ifFalse: [ outStream nextPut: inStream next asUppercase ]] doWhileFalse: [ inStream atEnd ]]) contents
+		inStream atEnd ifFalse: [outStream nextPut: inStream next asUppercase]] doWhileFalse: [inStream atEnd]]) contents

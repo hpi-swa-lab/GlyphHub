@@ -4,10 +4,10 @@ initialize
 	super initialize.
 	
 	commentPreview := BTLabel new.
-	threadTitle := BTLabel new.
+	threadTitle := (BTLabel new) bold.
 	commentCount := BTButton new
 		when: #clicked send: #openThread to: self.
-	author := BTLabel new.
+	author := BTLabel new secondary.
 	
 	self
 		withLayout;

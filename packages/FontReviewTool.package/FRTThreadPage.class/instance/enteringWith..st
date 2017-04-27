@@ -15,7 +15,7 @@ enteringWith: aThreadAndGlyph
 	loadThread := (FRTThread load: aThreadAndGlyph first id populate: populateThread from: self topLevel backend)
 		then: [:newThread |
 			self thread: newThread.
-			title heading: 'Thread: ', newThread title.
+			title text: 'Thread: ', newThread title.
 			preview
 				font: newThread threadGlyphAssociations anyOne glyph font;
 				glyphNames: (newThread threadGlyphAssociations collect: [:association | association glyph glyphName]).

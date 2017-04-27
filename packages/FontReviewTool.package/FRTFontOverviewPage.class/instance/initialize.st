@@ -5,7 +5,8 @@ initialize
 	super initialize.
 
 	fontNameLabel := BTLabel new
-		align: #(left center).
+		align: #(left center);
+		heading.
 	fontAuthorLabel := BTLabel new
 		align: #(left center).
 	inputButton := (BTButton label: 'Try it here!' icon: #pencil_square_o)

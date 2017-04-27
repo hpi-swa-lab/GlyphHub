@@ -1,5 +1,6 @@
 text
 internalText: aString
+
 	| prefix |
 	prefix := '' writeStream.
 	prefix nextPutAll: '<span'.

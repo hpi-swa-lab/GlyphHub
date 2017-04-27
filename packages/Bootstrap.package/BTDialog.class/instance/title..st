@@ -1,3 +1,4 @@
 accessing
 title: aString
-	titleLabel subHeading: aString
+
+	titleLabel text: aString

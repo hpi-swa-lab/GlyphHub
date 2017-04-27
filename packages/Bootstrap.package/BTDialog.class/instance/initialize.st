@@ -2,7 +2,9 @@ initialize-release
 initialize
 	super initialize.
 	
-	titleLabel := (BTLabel text: 'Dialog') expand: true.
+	titleLabel := (BTLabel text: 'Dialog')
+		expand: true;
+		subHeading.
 	
 	self
 		size: 300 @ 200;

@@ -1,4 +1,4 @@
 text
 text: aString
 
-	label bold: aString
+	label text: aString

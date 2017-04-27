@@ -1,3 +1,4 @@
 geometry
 actualSize
-	^self layout extent
+
+	^ self layout extent

@@ -6,7 +6,6 @@ initialize
 	inputBadge := BTBadge new.
 	
 	input := BTTextEntry new
-		styleAttributes: BTBadge styleAttributes;
 		wrap: #never;
 		placeholder: 'New Tag ...';
 		when: #confirmed evaluate: [:text |
@@ -16,5 +15,6 @@ initialize
 					triggerTagAdded: text].
 			nil];
 		yourself.
+	BTBadge applyStyleAtributes: input.
 
 	self add: (inputBadge add: input)

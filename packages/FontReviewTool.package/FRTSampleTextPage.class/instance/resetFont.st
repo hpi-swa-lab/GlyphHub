@@ -1,8 +1,6 @@
 ui
 resetFont
 
-	sampleTextArea
-		removeAllMorphs;
-		add: (BTLabel text: sampleText text).
+	sampleTextWidget text: sampleText text.
 	self topLevel resetSelectedFamily.
 	self changed

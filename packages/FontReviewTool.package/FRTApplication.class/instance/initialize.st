@@ -8,4 +8,6 @@ initialize
 	
 	self contentContainer add: sidebar at: 1.
 	self showSidebar: false.
-	self showHeader: false
+	self showHeader: false.
+	
+	BTPangoTextLayout refreshFontCache

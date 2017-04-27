@@ -10,7 +10,7 @@ enteringWith: aFont
 			self topLevel sidebar selectedFont: self font.
 			self renderer font: self font.
 			
-			fontNameLabel heading: self font fontName.
+			fontNameLabel text: self font fontName.
 			fontAuthorLabel text: 'by ', self font author username.
 			
 			BTPromise all: {

@@ -4,7 +4,7 @@ initialize
 	|  glyphArea glyphDetailArea glyphDetailButtonRow |
 	super initialize.
 	
-	glyphName := BTLabel new.
+	glyphName := BTLabel new heading.
 	unicodeLabel := BTLabel new.
 	
 	glyphDetailButtonRow := BTPage row

@@ -2,5 +2,6 @@ instance creation
 italic: aString
 
 	^ self new
-		italic: aString;
+		text: aString;
+		italic;
 		yourself

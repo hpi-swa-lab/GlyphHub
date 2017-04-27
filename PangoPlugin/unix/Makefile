@@ -1,6 +1,6 @@
 PLUGIN_NAME=PangoPlugin
 SOURCES=PangoPlugin.c
-PATH_TO_SQUEAK=../../../../../Squeak5.1-16548-32bit-201608171728-Linux
+PATH_TO_SQUEAK=../../../../
 BASE=../../../../../opensmalltalk-vm
 PKGLIBS=pangocairo
 

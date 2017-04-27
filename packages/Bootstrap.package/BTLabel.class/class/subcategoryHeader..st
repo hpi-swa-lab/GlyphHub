@@ -1,5 +1,7 @@
 instance creation
 subcategoryHeader: aString
-	^self new
-		subcategoryHeader: aString;
+
+	^ self new
+		text: aString;
+		subcategoryHeader;
 		yourself

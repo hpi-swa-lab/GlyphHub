@@ -5,7 +5,7 @@ initialize
 	
 	usernameClickable := BTClickableWithText new
 		expand: true;
-		styleAttributes: {'font-weight' -> '800'};
+		style: 'weight' set: 800;
 		align: #(fill center).
 		
 	self initializeUserDropdown.

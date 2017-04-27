@@ -7,7 +7,7 @@ initialize
 		pointSize: 64;
 		centered: true.
 	
-	title := BTLabel new.
+	title := BTLabel new heading.
 	tagArea := (BTPage row)
 		spacing: BTWidget spacing / 3;
 		yourself.

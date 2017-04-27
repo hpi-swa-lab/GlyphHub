@@ -3,15 +3,7 @@ keyStroke: anEvent
 
 	| key |
 	key := anEvent keyString.
-	
-	key = '<backspace>' ifTrue: [
-		^ self deleteBeforeCursor].
-	key = '<delete>' ifTrue: [
-		^ self deleteAfterCursor].
-	key = '<Cmd-h>' "FIXME appears to be Ctrl-backspace ???" ifTrue: [
-		^ self deleteNextWord: -1].
-	key = '<Ctrl-delete>' ifTrue: [
-		^ self deleteNextWord: 1].
+		
 	key = '<left>' ifTrue: [
 		^ self moveCursor: true direction: -1 selecting: false].
 	key = '<Shift-left>' ifTrue: [
@@ -36,8 +28,6 @@ keyStroke: anEvent
 		^ self selectionBound: self cursor; cursor: 0].
 	key = '<Shift-end>' ifTrue: [
 		^ self selectionBound: self cursor; cursor: self text size].
-	key = '<tab>' ifTrue: [
-		^ self pasteUpMorphHandlingTabAmongFields ifNotNilDo: [:p | p tabHitWithEvent: anEvent]].
 	key = '<Ctrl-left>' ifTrue: [
 		^ self moveToNextWord: -1 selecting: false].
 	key = '<Ctrl-Shift-left>' ifTrue: [
@@ -50,15 +40,27 @@ keyStroke: anEvent
 		^ self selectAll].
 	key = '<Cmd-c>' ifTrue: [
 		^Clipboard clipboardText: self selectedText].
-	key = '<Cmd-v>' ifTrue: [
-		^ self insertAtCursor: Clipboard clipboardText].
-	key = '<Cmd-x>' ifTrue: [
-		Clipboard clipboardText: self selectedText. ^ self deleteBeforeCursor].
 	key = '<escape>' ifTrue: [
 		^ self triggerCancelled].
 	key = '<cr>' ifTrue: [
 		self multiLine ifFalse: [^ self triggerConfirmed: self text]].
 	
-	(anEvent controlKeyPressed or: [anEvent commandKeyPressed]) ifFalse: [
-		self insertAtCursor: anEvent keyCharacter.
-		self placeCursorAt: self cursor + 1]
+	self editable ifTrue: [
+		key = '<backspace>' ifTrue: [
+			^ self deleteBeforeCursor].
+		key = '<delete>' ifTrue: [
+			^ self deleteAfterCursor].
+		key = '<Cmd-h>' "FIXME appears to be Ctrl-backspace ???" ifTrue: [
+			^ self deleteNextWord: -1].
+		key = '<Ctrl-delete>' ifTrue: [
+			^ self deleteNextWord: 1].
+		key = '<tab>' ifTrue: [
+			^ self pasteUpMorphHandlingTabAmongFields ifNotNilDo: [:p | p tabHitWithEvent: anEvent]].
+		key = '<Cmd-v>' ifTrue: [
+			^ self insertAtCursor: Clipboard clipboardText].
+		key = '<Cmd-x>' ifTrue: [
+			Clipboard clipboardText: self selectedText. ^ self deleteBeforeCursor].
+	
+		(anEvent controlKeyPressed or: [anEvent commandKeyPressed]) ifFalse: [
+			self insertAtCursor: anEvent keyCharacter.
+			self placeCursorAt: self cursor + 1]].

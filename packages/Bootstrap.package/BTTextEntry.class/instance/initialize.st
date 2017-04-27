@@ -6,5 +6,6 @@ initialize
 	placeholder := ''.
 	drawCursor := true.
 	multiLine := false.
+	self editable: true.
 	
 	super initialize

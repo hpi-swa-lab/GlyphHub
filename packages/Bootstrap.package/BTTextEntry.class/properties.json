@@ -11,7 +11,8 @@
 		"disabled",
 		"drawCursor",
 		"blinkStart",
-		"multiLine" ],
+		"multiLine",
+		"editable" ],
 	"name" : "BTTextEntry",
 	"pools" : [
 		 ],

@@ -1,5 +1,7 @@
 instance creation
 pageHeader: aString
-	^self new
-		pageHeader: aString;
+
+	^ self new
+		text: aString;
+		pageHeader;
 		yourself

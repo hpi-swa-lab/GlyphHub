@@ -2,5 +2,6 @@ instance creation
 bold: aString
 
 	^ self new
-		bold: aString;
+		text: aString;
+		bold;
 		yourself

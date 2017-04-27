@@ -5,7 +5,7 @@ enteringWith: aGlyph
 		then: [:newGlyph |
 			self updateUnicodeLabel: newGlyph.
 			self glyph: newGlyph.
-			glyphName heading: 'Glyph ', newGlyph glyphName.
+			glyphName text: 'Glyph ', newGlyph glyphName.
 			glyphWidget
 				glyph: glyph;
 				pointSize: 128.

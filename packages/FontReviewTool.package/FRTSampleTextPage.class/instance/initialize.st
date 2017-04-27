@@ -4,16 +4,19 @@ initialize
 	| fontSelectButton resetFontButton |
 	super initialize.
 	
-	titleLabel := BTLabel new.
-	authorLabel := BTLabel new align: #(end center).
-	sampleTextArea := BTPage new.
+	titleLabel := BTLabel new heading.
+	authorLabel := BTLabel new
+		align: #(end center);
+		subHeading.
+	sampleTextWidget := BTTextEntry new
+		editable: false.
 	fontSelectCompletion :=  BTTextCompletion new
 		expand: true;
 		minSize: 200 @ 0.
 	self initializeFontSelection.
 	fontSelectButton := ((BTButton label: 'Apply Font')
 		colorType: #primary;
-		when: #clicked send: #updateSampleTextArea to: self).
+		when: #clicked send: #applyFont to: self).
 	resetFontButton := ((BTButton label: 'Reset to System Font')
 		colorType: #secondary;
 		when: #clicked send: #resetFont to: self).
@@ -27,4 +30,4 @@ initialize
 		add: (BTPage row
 			add: titleLabel;
 			add: authorLabel);
-		add: sampleTextArea
+		add: sampleTextWidget

@@ -1,4 +1,5 @@
 system startup
 shutDown
+
 	super shutDown.
-	self allSubInstancesDo: [ :layout | layout prepareForSave ]
+	self allSubInstancesDo: [:layout | layout prepareForSave]

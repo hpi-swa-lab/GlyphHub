@@ -33,7 +33,9 @@ initialize
 		minSize: 66 asPoint;
 		scalingMode: #fixed;
 		yourself.
-	usernameLabel := BTLabel new align: #(start center).
+	usernameLabel := BTLabel new
+		align: #(start center);
+		heading.
 		
 	headingArea := (BTPage row
 		add: userAvatarImage;

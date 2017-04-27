@@ -1,3 +1,4 @@
 constants
 targetOffset
-	^0
+
+	^ 0

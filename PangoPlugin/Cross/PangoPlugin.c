@@ -1,6 +1,8 @@
 #include "sq.h"
 #include "PangoPlugin.h"
 #include <fontconfig/fontconfig.h>
+#include <stdio.h>
+#include <glib.h>
 
 PangoContext *context = NULL;
 GArray *layouts = NULL;
@@ -9,8 +11,45 @@ static void _sqRegisterCustomFontLen(char *font) {
 	FcConfigAppFontAddFile(FcConfigGetCurrent(), (const FcChar8 *) font);
 }
 
+static void list_fonts ()
+{
+  if (context) {
+	int i;
+    PangoFontFamily ** families;
+    int n_families;
+    PangoFontMap * fontmap;
+	
+    fontmap = pango_context_get_font_map(context);
+    pango_font_map_list_families (fontmap, & families, & n_families);
+    printf ("There are %d families\n", n_families);
+    for (i = 0; i < n_families; i++) {
+        PangoFontFamily * family = families[i];
+        const char * family_name;
+
+	family_name = pango_font_family_get_name (family);
+	printf ("Family %d: %s\n", i, family_name);
+
+	int n_faces;
+	PangoFontFace **faces;
+	pango_font_family_list_faces(family, &faces, &n_faces);
+	for (int j = 0; j < n_faces; j++) {
+	  printf("\tFont: %s %s\n", pango_font_face_get_face_name(faces[j]), pango_font_description_to_string(pango_font_face_describe(faces[j])));
+	}
+    }
+    g_free (families);
+  } 
+}
+
 static void _sqRegisterCustomFontDirectory(char *directory) {
-	FcConfigAppFontAddFile(FcConfigGetCurrent(), (const FcChar8 *) directory);
+	FcBool success = FcConfigAppFontAddFile(FcConfigGetCurrent(), (const FcChar8 *) directory);
+	printf("success: %d with: %s\n", success == FcTrue, directory);
+	//list_fonts();
+	if (context) {
+		printf("we have context\n");
+		PangoFontMap *map = pango_context_get_font_map(context);
+		pango_font_map_changed(map);
+		pango_context_changed(context);
+	}
 }
 
 void sqRegisterCustomFontLen(char *font, int len) {
