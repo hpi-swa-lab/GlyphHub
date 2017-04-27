@@ -17,5 +17,5 @@ drawCursor: aBoolean
 	(aBoolean and: [self hasSelection not]) ifTrue: [ | cursorRect |
 		cursorRect := (self cursorRectAt: self cursor) first.
 		aCanvas
-			fillRectangle: (aTransform offset + cursorRect origin extent: 1 @ cursorRect extent y)
+			fillRectangle: (aTransform offset - aCanvas origin + cursorRect origin extent: 1 @ cursorRect extent y)
 			fillStyle: aColor ]
