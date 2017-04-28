@@ -1,0 +1,14 @@
+{
+	"category" : "FontReviewTool-Drawing",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "FRTColorPicker",
+	"pools" : [
+		 ],
+	"super" : "BTPopover",
+	"type" : "normal" }

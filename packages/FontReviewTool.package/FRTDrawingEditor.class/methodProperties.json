@@ -1,0 +1,15 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"extent:" : "TB 4/26/2017 14:49",
+		"font" : "TB 4/27/2017 14:39",
+		"font:" : "TB 4/27/2017 14:39",
+		"form" : "TB 4/28/2017 10:27",
+		"handlesMouseDown:" : "TB 4/27/2017 10:54",
+		"importGlyphs:font:" : "TB 4/27/2017 10:43",
+		"importObject:" : "TB 4/27/2017 13:12",
+		"initialize" : "TB 4/28/2017 10:55",
+		"penColor:" : "TB 4/28/2017 10:54",
+		"triggerAccept" : "TB 4/28/2017 10:30",
+		"updateDrawingArea" : "TB 4/26/2017 14:50" } }

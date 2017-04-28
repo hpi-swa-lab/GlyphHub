@@ -1,0 +1,22 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"drawOn:" : "TB 4/26/2017 14:02",
+		"extent:" : "TB 4/26/2017 13:49",
+		"form" : "TB 4/26/2017 13:55",
+		"handlesMouseDown:" : "TB 4/26/2017 14:09",
+		"handlesMouseMove:" : "TB 4/26/2017 13:52",
+		"handlesMouseUp:" : "TB 4/26/2017 14:09",
+		"initialize" : "TB 4/27/2017 10:51",
+		"isTransformHandles" : "TB 4/28/2017 10:27",
+		"mouseDown:" : "TB 4/26/2017 14:11",
+		"mouseMove:" : "TB 4/26/2017 14:08",
+		"mouseUp:" : "TB 4/26/2017 14:08",
+		"painting" : "TB 4/27/2017 10:50",
+		"painting:" : "TB 4/27/2017 10:50",
+		"pen" : "TB 4/26/2017 13:55",
+		"penColor" : "TB 4/28/2017 10:21",
+		"penColor:" : "TB 4/28/2017 10:21",
+		"rejectsEvent:" : "TB 4/27/2017 10:51",
+		"updateForm" : "TB 4/26/2017 14:11" } }

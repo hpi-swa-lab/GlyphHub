@@ -1,0 +1,18 @@
+{
+	"category" : "FontReviewTool-Drawing",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"drawingContainer",
+		"drawingArea",
+		"font",
+		"penColor",
+		"colorButton" ],
+	"name" : "FRTDrawingEditor",
+	"pools" : [
+		 ],
+	"super" : "BTWidget",
+	"type" : "normal" }

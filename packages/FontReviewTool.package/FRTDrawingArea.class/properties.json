@@ -1,0 +1,17 @@
+{
+	"category" : "FontReviewTool-Drawing",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"form",
+		"pen",
+		"mouseIsDown",
+		"painting" ],
+	"name" : "FRTDrawingArea",
+	"pools" : [
+		 ],
+	"super" : "BTWidget",
+	"type" : "normal" }

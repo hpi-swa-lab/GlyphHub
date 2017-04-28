@@ -1,7 +1,20 @@
 callbacks
 openSketchEditor: anEvent
 
-	(SketchMorph
-		withForm: (preview renderer formForGlyphs: preview glyphNames size: 256 color: Color black)) center: self currentWorld center;
-		openInWorld;
-		editDrawing
+	| dialog editor |
+	editor := FRTDrawingEditor new
+		importGlyphs: preview glyphNames
+		font: self thread threadGlyphAssociations anyOne glyph font;
+		yourself.
+	
+	dialog := (BTDialog title: 'Annotate Glyphs')
+		content: (BTPage row
+			expand: true;
+			padding: BTWidget spacing;
+			add: editor);
+		minSize: 700;
+		openCentered.
+	
+	self setProperty: #sketchDialog toValue: dialog.
+	
+	editor when: #accept send: #acceptSketch: to: self

@@ -1,4 +1,6 @@
 accessing
-pointSize: anObject
+pointSize: aNumber
 
-	pointSize := anObject
+	pointSize := aNumber.
+	
+	self submorphsDo: [:glyph | glyph pointSize: aNumber]

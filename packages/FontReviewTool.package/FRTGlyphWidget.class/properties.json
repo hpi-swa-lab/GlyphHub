@@ -11,7 +11,8 @@
 		"pointSize",
 		"font",
 		"centered",
-		"square" ],
+		"square",
+		"currentLoadingOperation" ],
 	"name" : "FRTGlyphWidget",
 	"pools" : [
 		 ],

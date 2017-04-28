@@ -3,6 +3,7 @@
 		"exampleNewComment" : "ek 4/18/2017 16:51",
 		"exampleNewThread" : "ek 4/18/2017 16:51" },
 	"instance" : {
+		"acceptSketch:" : "TB 4/28/2017 10:45",
 		"breadcrumbs" : "JH 4/27/2017 16:18",
 		"commentAttachmentButtonGroup" : "JH 4/24/2017 11:10",
 		"enteredFromGlyph" : "al 4/9/2017 11:32",
@@ -11,7 +12,7 @@
 		"initialize" : "JH 4/24/2017 11:14",
 		"openCurveEditor:" : "TB 4/9/2017 21:50",
 		"openFilePicker:" : "TB 4/4/2017 16:24",
-		"openSketchEditor:" : "TB 4/9/2017 15:58",
+		"openSketchEditor:" : "TB 4/28/2017 10:46",
 		"saveComment" : "JH 4/11/2017 16:42",
 		"thread" : "TB 4/4/2017 16:30",
 		"thread:" : "TB 4/7/2017 18:44",

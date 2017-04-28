@@ -1,0 +1,14 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"active" : "TB 4/27/2017 12:16",
+		"active:" : "TB 4/27/2017 13:20",
+		"drawOn:" : "TB 4/27/2017 13:15",
+		"handlesMouseDown:" : "TB 4/27/2017 12:16",
+		"initialize" : "TB 4/27/2017 13:22",
+		"isTransformHandles" : "TB 4/28/2017 10:27",
+		"mouseDown:" : "TB 4/27/2017 13:47",
+		"target" : "TB 4/27/2017 11:54",
+		"target:" : "TB 4/27/2017 13:16",
+		"updateWrapper" : "TB 4/27/2017 13:16" } }

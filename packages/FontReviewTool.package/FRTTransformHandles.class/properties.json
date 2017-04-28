@@ -1,0 +1,18 @@
+{
+	"category" : "FontReviewTool-Drawing",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"target",
+		"active",
+		"transform",
+		"resizeHandle",
+		"moveHandle" ],
+	"name" : "FRTTransformHandles",
+	"pools" : [
+		 ],
+	"super" : "BTWidget",
+	"type" : "normal" }
