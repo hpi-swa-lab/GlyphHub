@@ -11,5 +11,5 @@ updateFamilyArea
 		add: (BTPage row
 			padding: BTWidget spacing @ 0;
 			add: ((BTLabel bold: 'Size:') align: #(center center));
-			add: ((BTTextArea placeholder: 12)
+			add: ((BTTextArea placeholder: self standardPointSize asString)
 				when: #confirmed send: #pointSizeChanged: to: self))

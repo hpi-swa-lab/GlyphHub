@@ -2,13 +2,14 @@
 	"class" : {
 		 },
 	"instance" : {
-		"applyFont" : "ek 4/27/2017 17:56",
+		"applyFont" : "al 4/28/2017 10:42",
 		"applyFontToSampleTextWidget" : "al 4/27/2017 16:34",
 		"breadcrumbs" : "ek 4/19/2017 17:25",
-		"enteringWith:" : "al 4/27/2017 12:35",
+		"enteringWith:" : "al 4/28/2017 10:14",
 		"fontChanged:" : "al 4/27/2017 13:30",
-		"initialize" : "al 4/27/2017 13:30",
+		"initialize" : "al 4/28/2017 10:20",
 		"initializeFontSelection" : "JH 4/20/2017 13:29",
+		"openCreateCommentPage" : "al 4/28/2017 10:29",
 		"pointSizeChanged:" : "ek 4/21/2017 15:53",
 		"resetFont" : "al 4/26/2017 16:48",
 		"sampleText" : "ek 4/19/2017 13:32",

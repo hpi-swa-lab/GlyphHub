@@ -20,6 +20,9 @@ initialize
 	resetFontButton := ((BTButton label: 'Reset to System Font')
 		colorType: #secondary;
 		when: #clicked send: #resetFont to: self).
+	commentSelectionButton := ((BTButton label: 'Comment on selected text')
+		colorType: #primary;
+		when: #clicked send: #openCreateCommentPage to: self).
 	
 	self
 		add: (BTPage row
@@ -30,4 +33,5 @@ initialize
 		add: (BTPage row
 			add: titleLabel;
 			add: authorLabel);
-		add: sampleTextWidget
+		add: sampleTextWidget;
+		add: commentSelectionButton

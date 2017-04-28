@@ -1,8 +1,6 @@
 ui
 applyFont
 
-	sampleTextWidget pointSize: self topLevel sidebar standardPointSize.
-	
 	self flag: #bug. "maybe find a way to get fonts by ID, not by name, enabling us to avoid that pesky anyOne call"
 	(self topLevel backend loadWhere: #fontName equals: fontSelectCompletion text into: FRTFont populate: #('family'))
 		then: [:fonts | | font |
