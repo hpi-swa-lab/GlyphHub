@@ -10,4 +10,4 @@ initialize
 	self showSidebar: false.
 	self showHeader: false.
 	
-	BTPangoTextLayout refreshFontCache
+	BTPangoTextLayout available ifTrue: [BTPangoTextLayout refreshFontCache]

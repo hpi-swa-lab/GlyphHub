@@ -1,3 +1,4 @@
 accessing
 available
-	^ModuleAvailable ifNil: [false]
+
+	^ ModuleAvailable ifNil: [false]
