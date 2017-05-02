@@ -3,7 +3,7 @@
 		 },
 	"instance" : {
 		"closeSuggestionPopup" : "ek 4/25/2017 16:26",
-		"displaySuggestions:" : "ek 4/25/2017 16:27",
+		"displaySuggestions:" : "al 5/2/2017 15:50",
 		"initialize" : "JH 4/25/2017 11:25",
 		"isValidCompletion:" : "JH 4/25/2017 11:44",
 		"keyStroke:" : "JH 4/21/2017 12:19",
@@ -14,6 +14,7 @@
 		"onlyAllowsExactMatches:" : "JH 4/24/2017 11:46",
 		"openSuggestionPopup" : "JH 4/24/2017 11:46",
 		"outOfWorld:" : "JH 4/24/2017 13:47",
+		"resetText" : "al 5/2/2017 15:35",
 		"suggestionsAsynchronusBlock:" : "JH 4/25/2017 11:52",
 		"suggestionsDropdown" : "JH 4/24/2017 14:11",
 		"suggestionsList" : "JH 4/24/2017 14:09",
@@ -22,5 +23,5 @@
 		"triggerConfirmed:" : "JH 4/25/2017 13:17",
 		"updatePreviewTextFor:" : "JH 4/25/2017 11:41",
 		"updateSuggestions" : "ek 4/25/2017 15:54",
-		"updateText:" : "JH 4/24/2017 17:30",
+		"updateText:" : "al 5/2/2017 15:38",
 		"useActiveSuggestion" : "JH 4/25/2017 10:49" } }

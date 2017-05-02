@@ -1,6 +1,4 @@
 text
 updateText: aString
 
-	self
-		updateSuggestions;
-		updatePreviewTextFor: aString
+	^ self updateSuggestions then: [self updatePreviewTextFor: aString]

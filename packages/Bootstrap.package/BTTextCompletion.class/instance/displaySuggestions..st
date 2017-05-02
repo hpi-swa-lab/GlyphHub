@@ -4,9 +4,9 @@ displaySuggestions: aCollection
 	suggestionsDropdown removeAllMorphs.
 	activeSuggestionIndex := 0.
 	
-	aCollection
-		ifEmpty: [self closeSuggestionPopup. ^ self]
-		ifNotEmpty: [self openSuggestionPopup].
+	(aCollection isEmpty or: [self hasMouseFocus not])
+		ifTrue: [self closeSuggestionPopup. ^ self]
+		ifFalse: [self openSuggestionPopup].
 
 	aCollection do: [:suggestion | | suggestionString |
 		suggestionString := (self markupForResult: suggestion).
