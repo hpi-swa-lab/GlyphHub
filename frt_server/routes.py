@@ -101,14 +101,13 @@ def register_routes(app):
             contents = font.get_otf_contents()
         except FileNotFoundError:
             return jsonify({'error': 'Associated font does not contain an otf'})
-        
+
         response = Response(contents, mimetype='application/octet-stream')
         response.headers["Content-Disposition"] = "attachment; filename=font.otf"
         return response
 
 
 
-        
     @app.route('/font/<font_id>/ufo', methods=['GET'])
     @requires_auth('')
     def retrieve_ufo(font_id):
@@ -128,16 +127,13 @@ def register_routes(app):
 
         return jsonify(response), 200
 
-
-
     @app.route('/snap', methods=['GET'])
     def attachment_upload_view():
         directory = os.path.join(frt_server.config.BASE, '..', 'frt_server', 'static')
         return send_from_directory(directory, 'snap.html')
 
-    @app.route('/attachment/upload', methods=['POST'])
-    @requires_auth('')
-    def attachment_upload():
+    def _upload_attachment(comment_id=None):
+        """helper that uploads an attachment from the file field"""
         session = app.data.driver.session
         user = app.auth.get_request_auth_value()
         if 'file' not in request.files:
@@ -155,7 +151,7 @@ def register_routes(app):
         else:
             attachment_type = AttachmentType.file
 
-        attachment = Attachment(owner_id=user._id, type=attachment_type, data1=name)
+        attachment = Attachment(owner_id=user._id, type=attachment_type, data1=name, comment_id=comment_id)
         session.add(attachment)
         session.commit()
         session.refresh(attachment)
@@ -165,6 +161,18 @@ def register_routes(app):
         attachment_file.save(attachment.file_path())
 
         return jsonify(sqla_object_to_dict(attachment, Attachment.__table__.columns.keys()))
+
+    @app.route('/comment/<comment_id>/attachment', methods=['POST'])
+    @requires_auth('')
+    def comment_attach(comment_id):
+        """attach an attachment to a comment"""
+        _upload_attachment(comment_id)
+
+    @app.route('/attachment/upload', methods=['POST'])
+    @requires_auth('')
+    def attachment_upload():
+        """upload an attachment that does not have an associated comment"""
+        _upload_attachment()
 
     @app.route('/attachment/<attachment_id>/resource', methods=['GET'])
     @requires_auth('')

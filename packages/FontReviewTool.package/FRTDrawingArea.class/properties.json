@@ -9,7 +9,8 @@
 		"form",
 		"pen",
 		"mouseIsDown",
-		"painting" ],
+		"mode",
+		"penColor" ],
 	"name" : "FRTDrawingArea",
 	"pools" : [
 		 ],

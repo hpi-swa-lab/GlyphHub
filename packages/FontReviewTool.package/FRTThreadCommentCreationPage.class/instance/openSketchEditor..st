@@ -1,11 +1,14 @@
 callbacks
 openSketchEditor: anEvent
 
-	| dialog editor |
-	editor := FRTDrawingEditor new
-		importGlyphs: preview glyphNames
-		font: self thread threadGlyphAssociations anyOne glyph font;
-		yourself.
+	| dialog |
+	editor ifNil: [ | font |
+		font := self thread threadGlyphAssociations anyOne glyph font.
+		editor := FRTDrawingEditor new
+			font: font;
+			importGlyphs: preview glyphNames font: font;
+			when: #accept send: #acceptSketch: to: self;
+			yourself].
 	
 	dialog := (BTDialog title: 'Annotate Glyphs')
 		content: (BTPage row
@@ -15,6 +18,4 @@ openSketchEditor: anEvent
 		minSize: 700;
 		openCentered.
 	
-	self setProperty: #sketchDialog toValue: dialog.
-	
-	editor when: #accept send: #acceptSketch: to: self
+	self setProperty: #sketchDialog toValue: dialog

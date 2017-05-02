@@ -1,4 +1,5 @@
 as yet unclassified
 penColor: aColor
 
-	pen color: aColor
+	penColor := aColor.
+	self mode == #painting ifTrue: [pen color: aColor]

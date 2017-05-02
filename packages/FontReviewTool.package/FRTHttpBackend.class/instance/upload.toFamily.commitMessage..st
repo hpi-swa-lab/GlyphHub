@@ -29,7 +29,6 @@ upload: aFileStream toFamily: anIdNumber commitMessage: aString
 			crlf;
 			nextPutAll: '--'; nextPutAll: boundary; nextPutAll: '--'].
 	
-	"not sending JSON here because flask can ideally handle the multipart/form-data format"
 	^ self
 		request: 'family/', anIdNumber, '/upload'
 		method: 'POST'

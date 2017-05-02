@@ -7,5 +7,6 @@ initialize
 	
 	self
 		updateForm;
-		expand: true;
-		painting: true
+		mode: #painting;
+		penColor: Color red;
+		expand: true

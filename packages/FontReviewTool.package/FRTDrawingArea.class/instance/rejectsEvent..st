@@ -1,4 +1,4 @@
 as yet unclassified
 rejectsEvent: anEvent
 
-	^ self painting not
+	^ (self mode = #picking)

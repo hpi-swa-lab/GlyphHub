@@ -13,7 +13,9 @@
 		"glyphLinkContainer",
 		"preview",
 		"enteredFromGlyph",
-		"imageAttachments" ],
+		"imageAttachments",
+		"editor",
+		"attachment" ],
 	"name" : "FRTThreadCommentCreationPage",
 	"pools" : [
 		 ],
