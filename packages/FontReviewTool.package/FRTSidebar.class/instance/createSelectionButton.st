@@ -3,7 +3,7 @@ createSelectionButton
 
 	| fontSelectionButton fontSelectionDropdown |
 	fontSelectionButton := ((BTButton new
-		add: (BTLabel text: '<b>Species:</b> ', self selectedFont fontName)
+		add: (BTLabel text: '<b>Specimen:</b> ', self selectedFont fontName)
 		oppositeTo: ((BTIcon newFor: #caret_down) align: #(start center));
 		align: #(fill start))).
 	fontSelectionDropdown := BTDropdown new
