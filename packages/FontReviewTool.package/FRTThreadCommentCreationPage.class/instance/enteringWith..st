@@ -29,4 +29,5 @@ enteringWith: aThreadAndGlyph
 
 			preview
 				font: newThread threadGlyphAssociations anyOne glyph font;
-				glyphNames: (newThread threadGlyphAssociations collect: [:association | association glyph glyphName])]
+				glyphNames: (newThread threadGlyphAssociations collect: [:association | association glyph glyphName]).
+			preview whenReady then: [self layoutChanged]]
