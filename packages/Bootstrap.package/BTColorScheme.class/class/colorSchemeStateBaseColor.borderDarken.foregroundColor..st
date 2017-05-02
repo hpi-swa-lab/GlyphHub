@@ -4,4 +4,7 @@ colorSchemeStateBaseColor: aBaseColorString borderDarken: aNumber foregroundColo
 	| baseColor |
 	baseColor := Color fromString: aBaseColorString.
 	
-	^ self fg: (Color fromString: aForegroundColorString) bg: baseColor border: (baseColor adjustBrightness: aNumber)
+	^ self
+		withForeground: (Color fromString: aForegroundColorString)
+		background: baseColor
+		border: (baseColor adjustBrightness: aNumber)

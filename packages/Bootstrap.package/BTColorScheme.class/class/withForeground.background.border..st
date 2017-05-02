@@ -1,5 +1,5 @@
 initialize-release
-fg: aForegroundColor bg: aBackgroundColor border: aBorderColor
+withForeground: aForegroundColor background: aBackgroundColor border: aBorderColor
 
 	^ self new
 		privateForeground: aForegroundColor;

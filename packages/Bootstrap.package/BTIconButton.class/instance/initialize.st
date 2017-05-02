@@ -7,4 +7,4 @@ initialize
 	self
 		layoutPolicy: nil;
 		add: icon;
-		colorScheme: (BTColorScheme fg: (Color fromString: '#808080') bg: nil border: nil)
+		colorScheme: (BTColorScheme withForeground: (Color fromString: '#808080'))

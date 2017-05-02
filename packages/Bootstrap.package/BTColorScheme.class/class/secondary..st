@@ -3,15 +3,15 @@ secondary: aMode
 
 	| borderColor textColor |
 	textColor := Color fromString: '#292b2c'.
-	borderColor := Color black alpha: 0.15.
+	borderColor := Color black alpha: 0.275.
 	
 	(aMode == #normal or: [aMode == #outline]) ifTrue: [
-		^ self fg: textColor bg: Color white border: borderColor].
+		^ self withForeground: textColor background: Color white border: borderColor].
 	
 	aMode == #invert ifTrue: [
-		^ self fg: Color white bg: (Color fromString: '#636c72') border: Color transparent].
+		^ self withForeground: Color white background: (Color fromString: '#636c72') border: Color transparent].
 	
 	aMode == #darker ifTrue: [
-		^ self fg: textColor bg: (Color fromString: '#f7f7f9') border: borderColor].
+		^ self withForeground: textColor background: (Color fromString: '#f7f7f9') border: borderColor].
 	
-	^ nil
+	^ self error: 'I don''t know ', aMode

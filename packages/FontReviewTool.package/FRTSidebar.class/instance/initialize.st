@@ -17,7 +17,7 @@ initialize
 	familyArea := BTPage column.
 	self updateFamilyArea.
 	
-	self colorScheme: (BTColorScheme fg: Color white bg: (Color fromString: '#333333') border: Color white).
+	self colorScheme: (BTColorScheme withForeground: Color white background: (Color fromString: '#333333') border: Color white).
 	
 	self
 		withLayout;
