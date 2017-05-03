@@ -2,9 +2,10 @@ as yet unclassified
 testSuggestionsFiltered
 	| completion displayed |
 	completion := self completionWidget openInWorld; text: 'an'; yourself.
-	(completion updateText: 'an') then: [
+	self click: completion.
+	(completion text: 'an').
 		displayed := self displayedSuggestions.
-	
+		
 		(self expect: displayed) to not contain: #('Austria' 'Australia' 'Argentina').
-
-		(self expect: displayed) to containExactly: #('Andorra' 'Germany' 'France'  'Albania')]
+		
+		(self expect: displayed) to containExactly: #('Andorra' 'Germany' 'France'  'Albania')

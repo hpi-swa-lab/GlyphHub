@@ -4,7 +4,6 @@ displaySuggestions: aCollectionOfSuggestions
 	suggestionsDropdown removeAllMorphs.
 	
 	self resetActiveSuggestion.
-	
 	(aCollectionOfSuggestions isEmpty or: [self hasKeyboardFocus not])
 		ifTrue: [^ self closeSuggestionPopup].
 	
