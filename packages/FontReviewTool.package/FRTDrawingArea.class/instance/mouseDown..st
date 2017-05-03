@@ -1,4 +1,4 @@
-as yet unclassified
+event handling
 mouseDown: anEvent
 
 	mouseIsDown := true.

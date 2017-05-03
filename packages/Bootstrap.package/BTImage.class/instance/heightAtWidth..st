@@ -1,3 +1,4 @@
 accessing
 heightAtWidth: aNumber
-	^form height / form width * aNumber
+
+	^ form height * aNumber / form width

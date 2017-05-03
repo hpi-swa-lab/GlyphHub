@@ -1,5 +1,5 @@
 callbacks
-openSketchEditor: anEvent
+openSketchEditor
 
 	| dialog |
 	editor ifNil: [ | font |

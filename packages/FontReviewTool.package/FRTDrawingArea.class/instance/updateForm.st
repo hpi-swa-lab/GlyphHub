@@ -1,4 +1,4 @@
-as yet unclassified
+updating
 updateForm
 
 	(form notNil and: [self extent = form extent]) ifTrue: [^ self].

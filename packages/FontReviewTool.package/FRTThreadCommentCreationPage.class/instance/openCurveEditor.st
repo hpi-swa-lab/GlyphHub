@@ -1,5 +1,5 @@
 callbacks
-openCurveEditor: anEvent
+openCurveEditor
 
 	| glyph |
 	glyph := FRTGlyphEditor new edit: preview glyphNames anyOne atPtSize: 512 fromRenderer: preview renderer.

@@ -14,7 +14,7 @@ initialize
 		minRows: 2.
 	
 	imageAttachments := BTPage row.
-
+	
 	self
 		add: (BTPage row
 			add: titleContainer;

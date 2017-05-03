@@ -1,0 +1,1 @@
+A FRTDrawingArea a widget that allows you to draw and erase on a form with a Pen.

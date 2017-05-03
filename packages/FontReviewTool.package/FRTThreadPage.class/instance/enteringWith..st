@@ -10,7 +10,7 @@ enteringWith: aThreadAndGlyph
 				then: [:newGlyph | self enteredFromGlyph: newGlyph]]
 		ifNil: [BTPromise unit: nil].
 	
-	populateThread := #(comments  'comments.author' threadGlyphAssociations 'threadGlyphAssociations.glyph' 'threadGlyphAssociations.glyph.font' 'threadGlyphAssociations.glyph.font.family').
+	populateThread := #(comments  'comments.author' 'comments.attachments' threadGlyphAssociations 'threadGlyphAssociations.glyph' 'threadGlyphAssociations.glyph.font' 'threadGlyphAssociations.glyph.font.family').
 	
 	loadThread := (FRTThread load: aThreadAndGlyph first id populate: populateThread from: self topLevel backend)
 		then: [:newThread |
@@ -21,7 +21,7 @@ enteringWith: aThreadAndGlyph
 				glyphNames: (newThread threadGlyphAssociations collect: [:association | association glyph glyphName]).
 
 			self
-				loadComments;
+				displayComments;
 				changed].
 
 	^ BTPromise all: {loadGlyph. loadThread}

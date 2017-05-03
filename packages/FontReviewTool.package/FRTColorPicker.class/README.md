@@ -1,1 +1,1 @@
-A FRTColorPicker is a popover that allows you to pick colors from a set list.
+A FRTColorPicker is a popover that allows you to pick colors from a preset list.

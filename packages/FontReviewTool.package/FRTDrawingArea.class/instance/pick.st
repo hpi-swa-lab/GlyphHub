@@ -1,4 +1,4 @@
-as yet unclassified
+drawing
 pick
 
 	self mode: #picking

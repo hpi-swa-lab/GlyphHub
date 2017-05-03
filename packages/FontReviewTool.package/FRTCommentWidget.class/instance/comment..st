@@ -5,4 +5,14 @@ comment: aComment
 	
 	metaInfo text: aComment author username", ' - ', (self printDate: aComment created)".
 	commentText text: aComment text.
-	image path: FileDirectory default / 'BP2016H1' / 'assets' / 'penguin.png'
+	userAvatar path: FileDirectory default / 'BP2016H1' / 'assets' / 'penguin.png'.
+	
+	comment attachments do: [:attachment |
+		image := attachment asWidget
+			align: #(end end);
+			scalingMode: #shrink.
+		
+		self add: (BTClickable new
+			expand: true;
+			when: #clicked send: #openCopyInDialog to: image;
+			add: image)]

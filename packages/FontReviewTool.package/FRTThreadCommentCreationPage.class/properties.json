@@ -15,7 +15,8 @@
 		"enteredFromGlyph",
 		"imageAttachments",
 		"editor",
-		"attachment" ],
+		"attachment",
+		"attachmentPreview" ],
 	"name" : "FRTThreadCommentCreationPage",
 	"pools" : [
 		 ],

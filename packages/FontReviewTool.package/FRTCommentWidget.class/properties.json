@@ -9,7 +9,8 @@
 		"comment",
 		"image",
 		"commentText",
-		"metaInfo" ],
+		"metaInfo",
+		"userAvatar" ],
 	"name" : "FRTCommentWidget",
 	"pools" : [
 		 ],

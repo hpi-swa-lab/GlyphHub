@@ -1,5 +1,6 @@
-as yet unclassified
+drawing
 paint
 
-	self mode: #painting.
-	self penColor: self penColor
+	self
+		mode: #painting;
+		penColor: self penColor

@@ -143,15 +143,15 @@ def register_routes(app):
         if attachment_file.filename == '':
             return jsonify({'error': 'Invalid filename'}), 400
 
-        name = secure_filename(os.path.basename(attachment_file.filename))
-        file_type = name.rsplit('.', 1)[-1].lower()
+        filename = secure_filename(os.path.basename(attachment_file.filename))
+        file_type = filename.rsplit('.', 1)[-1].lower()
 
         if file_type in ('jpg', 'jpeg', 'png', 'gif'):
             attachment_type = AttachmentType.picture
         else:
             attachment_type = AttachmentType.file
 
-        attachment = Attachment(owner_id=user._id, type=attachment_type, data1=name, comment_id=comment_id)
+        attachment = Attachment(owner_id=user._id, type=attachment_type, data1=filename, comment_id=comment_id)
         session.add(attachment)
         session.commit()
         session.refresh(attachment)
@@ -166,13 +166,13 @@ def register_routes(app):
     @requires_auth('')
     def comment_attach(comment_id):
         """attach an attachment to a comment"""
-        _upload_attachment(comment_id)
+        return _upload_attachment(comment_id)
 
     @app.route('/attachment/upload', methods=['POST'])
     @requires_auth('')
     def attachment_upload():
         """upload an attachment that does not have an associated comment"""
-        _upload_attachment()
+        return _upload_attachment()
 
     @app.route('/attachment/<attachment_id>/resource', methods=['GET'])
     @requires_auth('')

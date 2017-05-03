@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 mode: aMode
 
 	mode := aMode

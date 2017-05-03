@@ -1,6 +1,7 @@
-as yet unclassified
+drawing
 erase
 
 	self mode: #erasing.
-	self lastUsedPenColor: self penColor.
-	self penColor: Color white
+	self pen
+		roundNib: 8 * BTWidget scalingFactor;
+		combinationRule: Form erase1bitShape

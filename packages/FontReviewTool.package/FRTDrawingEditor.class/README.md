@@ -1,0 +1,1 @@
+A FRTDrawingEditor is a widget that can import glyphs from a given font into a form and adds buttons to draw, erase on the form (and open the transform handles).

@@ -3,7 +3,7 @@ initialize
 
 	super initialize.
 	
-	image := BTImage new
+	userAvatar := BTImage new
 		scalingMode: #fixed;
 		minSize: 64.
 	commentText := BTLabel new.
@@ -11,10 +11,11 @@ initialize
 	
 	self
 		withLayout;
+		spacing: BTWidget spacing;
 		vResizing: #shrinkWrap;
 		vertical: false;
 		add: (BTPage row
-			add: image;
+			add: userAvatar;
 			add: (BTPage column
 				add: metaInfo;
 				add: commentText))

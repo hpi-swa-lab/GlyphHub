@@ -8,7 +8,8 @@
 	"instvars" : [
 		"text",
 		"author",
-		"thread" ],
+		"thread",
+		"attachments" ],
 	"name" : "FRTComment",
 	"pools" : [
 		 ],

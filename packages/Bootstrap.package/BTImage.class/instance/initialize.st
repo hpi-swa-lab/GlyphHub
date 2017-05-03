@@ -4,4 +4,5 @@ initialize
 
 	self
 		scalingMode: #shrink;
-		align: #(start start)
+		align: #(start start);
+		frame: true

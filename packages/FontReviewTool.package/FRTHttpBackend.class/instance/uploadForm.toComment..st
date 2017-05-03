@@ -1,9 +1,9 @@
-font-upload
+image-upload
 uploadForm: aForm toComment: anIdOrComment
 
 	| boundary file data id pngStream |
 	boundary := WebUtils multipartBoundary.
-	pngStream := ReadWriteStream new
+	pngStream := (ReadWriteStream on: (ByteArray new: 1024))
 		binary;
 		yourself.
 	PNGReadWriter putForm: aForm onStream: pngStream.
@@ -17,7 +17,7 @@ uploadForm: aForm toComment: anIdOrComment
 			crlf;
 			nextPutAll: 'Content-Disposition: form-data; ';
 			nextPutAll: 'name="file"; ';
-			nextPutAll: 'filename="'; nextPutAll: stream name; nextPut: $";
+			nextPutAll: 'filename="file.png"';
 			crlf;
 			crlf;
 			nextPutAll: file content asString;

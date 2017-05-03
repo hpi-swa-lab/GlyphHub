@@ -1,6 +1,7 @@
 callbacks
 penColor: aColor
 
+	drawingArea paint.
 	drawingArea penColor: aColor.
 	
 	self flag: #todo. "investigate why colorschemes are behaving weirdly here"

@@ -1,4 +1,4 @@
 callbacks
-openFilePicker: anEvent
+openFilePicker
 
 	FileChooser example3
