@@ -5,7 +5,7 @@ initialize
 	
 	policy := #(show scroll).
 	
-	container := TransformMorph new
+	container := BTScrollContainer new
 		color: Color transparent;
 		yourself.
 	

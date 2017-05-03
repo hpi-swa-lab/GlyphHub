@@ -16,6 +16,5 @@ enteringWith: aFont
 			BTPromise all: {
 				(self renderer loadDataForAllGlyphs)
 					then: [:renderer |
-						self gridWidget glyphNames: renderer loadedGlifs keys.
-						self layoutChanged].
+						self gridWidget glyphNames: renderer loadedGlifs keys].
 				self loadThreads}]
