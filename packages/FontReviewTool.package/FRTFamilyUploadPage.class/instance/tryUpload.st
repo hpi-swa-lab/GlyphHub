@@ -20,8 +20,8 @@ tryUpload
 			
 			self topLevel startLoadingOperation.
 			(((family
-				saveTo: self topLevel backend)
-				then: [:savedFamily | self topLevel backend upload: self fontFileStream toFamily: savedFamily id commitMessage: 'First Version'])
+				saveTo: self backend)
+				then: [:savedFamily | self backend upload: self fontFileStream toFamily: savedFamily id commitMessage: 'First Version'])
 				then: [
 					self topLevel
 						stopLoadingOperation;

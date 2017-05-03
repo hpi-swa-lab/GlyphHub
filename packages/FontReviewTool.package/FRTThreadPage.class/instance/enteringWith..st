@@ -12,7 +12,7 @@ enteringWith: aThreadAndGlyph
 	
 	populateThread := #(comments  'comments.author' 'comments.attachments' threadGlyphAssociations 'threadGlyphAssociations.glyph' 'threadGlyphAssociations.glyph.font' 'threadGlyphAssociations.glyph.font.family').
 	
-	loadThread := (FRTThread load: aThreadAndGlyph first id populate: populateThread from: self topLevel backend)
+	loadThread := (FRTThread load: aThreadAndGlyph first id populate: populateThread from: self backend)
 		then: [:newThread |
 			self thread: newThread.
 			title text: 'Thread: ', newThread title.
