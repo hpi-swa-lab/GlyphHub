@@ -6,7 +6,7 @@ updateList
 		removeAllMorphs;
 		add: BTDivider new.
 	
-	^ ((FRTSampleText loadAllFrom: self topLevel backend populate: #('author'))
+	^ ((FRTSampleText loadAllFrom: self backend populate: #('author'))
 		then: [:texts |
 			orderedTexts := texts sorted: [:text1 :text2 | text1 title <= text2 title].
 			orderedTexts do: [:text |

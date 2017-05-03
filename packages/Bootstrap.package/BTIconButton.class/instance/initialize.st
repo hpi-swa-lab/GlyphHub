@@ -1,5 +1,6 @@
 initialize-release
 initialize
+
 	icon := BTIcon new align: #(center center).
 	
 	super initialize.

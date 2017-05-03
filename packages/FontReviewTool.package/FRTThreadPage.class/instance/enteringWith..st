@@ -6,7 +6,7 @@ enteringWith: aThreadAndGlyph
 	
 	loadGlyph := self enteredFromGlyph
 		ifNotNil: [
-			(FRTGlyph load: aThreadAndGlyph second id populate: #( 'font' 'font.family') from: self topLevel backend)
+			(FRTGlyph load: aThreadAndGlyph second id populate: #( 'font' 'font.family') from: self backend)
 				then: [:newGlyph | self enteredFromGlyph: newGlyph]]
 		ifNil: [BTPromise unit: nil].
 	

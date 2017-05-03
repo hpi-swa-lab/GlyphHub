@@ -4,7 +4,7 @@ loadThreads
 	^ (FRTFont
 		load: self font id
 		populate: #(glyphs 'glyphs.threadGlyphAssociations' 'glyphs.threadGlyphAssociations.thread' 'glyphs.threadGlyphAssociations.thread.comments' 'glyphs.threadGlyphAssociations.thread.comments.author')
-		from: self topLevel backend)
+		from: self backend)
 		then: [:newFont | | threads |
 			threads := OrderedCollection new.
 			newFont glyphs do: [:glyph |

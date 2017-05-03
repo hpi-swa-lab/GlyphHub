@@ -1,3 +1,4 @@
 accessing
 text
-	^label text
+
+	^ label text

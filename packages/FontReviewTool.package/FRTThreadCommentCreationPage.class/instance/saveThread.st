@@ -6,4 +6,4 @@ saveThread
 		ifFalse: [
 			self thread
 				title: title text;
-				saveTo: self topLevel backend]
+				saveTo: self backend]

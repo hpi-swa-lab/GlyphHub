@@ -1,5 +1,6 @@
 drawing
 drawOn: aCanvas
+
 	BTWidget
 		drawCircularBackgroundOn: aCanvas
 		bounds: self bounds

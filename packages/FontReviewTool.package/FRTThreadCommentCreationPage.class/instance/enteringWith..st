@@ -7,7 +7,7 @@ enteringWith: aThreadAndGlyph
 	promise := thread isCreated
 		ifFalse: [BTPromise unit: thread]
 		ifTrue: [
-			(FRTThread load: thread id populate: #(comments  'comments.author' threadGlyphAssociations 'threadGlyphAssociations.glyph' 'threadGlyphAssociations.glyph.font' 'threadGlyphAssociations.glyph.font.family') from: self topLevel backend)].
+			(FRTThread load: thread id populate: #(comments  'comments.author' threadGlyphAssociations 'threadGlyphAssociations.glyph' 'threadGlyphAssociations.glyph.font' 'threadGlyphAssociations.glyph.font.family') from: self backend)].
 
 	(FRTAttachment
 		loadWhere: ({'comment_id' -> nil. 'owner_id' -> self topLevel user} as: Dictionary)

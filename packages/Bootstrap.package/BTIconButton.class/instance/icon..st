@@ -1,5 +1,6 @@
 accessing
 icon: anIcon
+
 	icon
 		icon: anIcon;
 		extent: icon actualSize.

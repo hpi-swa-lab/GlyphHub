@@ -1,13 +1,13 @@
 accessing
 enteringWith: aFont
 
-	^ (FRTFont load: aFont id populate: #('author' 'family') from: self topLevel backend)
+	^ (FRTFont load: aFont id populate: #('author' 'family') from: self backend)
 		then: [:newFont |
 			self
 				font: newFont;
 				family: newFont family.
 			
-			self topLevel sidebar selectedFont: self font.
+			self topLevel selectedFont: self font.
 			self renderer font: self font.
 			
 			fontNameLabel text: self font fontName.

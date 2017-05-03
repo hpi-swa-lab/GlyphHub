@@ -9,7 +9,7 @@ saveComment
 				text: commentText text.
 			
 			self thread comments add: comment.
-			comment saveTo: self topLevel backend])
+			comment saveTo: self backend])
 		then: [:comment | self saveAttachmentTo: comment])
 		then: [:comment | self topLevel openPage: FRTThreadPage new with: {self thread. self enteredFromGlyph}])
 		catch: [:error | self topLevel displayNotification: 'Saving failed. Please try again.' type: #danger]

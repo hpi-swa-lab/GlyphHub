@@ -1,5 +1,6 @@
 drawing
 drawOn: aCanvas
+
 	| bordered rounded |
 	(self parent notNil and: [self parent isButtonGroup])
 		ifTrue: [

@@ -1,3 +1,4 @@
 hierarchy
 topLevel
-	^self parent ifNotNilDo: #topLevel
+
+	^ self parent ifNotNilDo: #topLevel

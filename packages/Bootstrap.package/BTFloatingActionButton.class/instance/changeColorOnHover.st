@@ -1,3 +1,4 @@
 colors
 changeColorOnHover
-	^true
+
+	^ true
