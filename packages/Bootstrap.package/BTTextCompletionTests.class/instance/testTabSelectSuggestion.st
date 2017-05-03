@@ -1,11 +1,10 @@
 as yet unclassified
 testTabSelectSuggestion
 	| completion |
-	completion := self completionWidget text: 'Ger'.
+	completion := self completionWidget
+		text: 'Ger';
+		updateText.
 	
-	(self expect: completion) to; send: #confirmed withArguments: #('Germany').
-	
-	self
-		keyStroke: completion key: Character tab;
-		keyStroke: completion key: Character cr;
-		checkSpies
+	self keyStroke: completion key: Character tab.
+
+	(self expect: completion) to send: #confirmed withArguments: #('Germany').
