@@ -1,7 +1,7 @@
 initialize-release
 initialize
 
-	layout := self class textLayoutClass new font: 'Roboto 12'; yourself.
+	layout := self class textLayoutClass new font: self class textLayoutClass defaultFont; yourself.
 	text := ''.
 	angle := 0.
 	styleAttributes := Dictionary new.

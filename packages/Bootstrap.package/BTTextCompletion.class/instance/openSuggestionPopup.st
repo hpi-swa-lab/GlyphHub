@@ -5,4 +5,4 @@ openSuggestionPopup
 		suggestionsDropdown
 			openInWorld;
 			extent: self extent;
-			topLeft: (suggestionsDropdown openPositionFor: self) ]
+			topLeft: (suggestionsDropdown openPositionFor: self)]

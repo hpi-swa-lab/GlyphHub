@@ -1,5 +1,5 @@
 initialize-release
 triggerClicked: anEvent
 
-	super triggerClicked: anEvent.
-	self owner delete
+	self owner delete.
+	super triggerClicked: anEvent

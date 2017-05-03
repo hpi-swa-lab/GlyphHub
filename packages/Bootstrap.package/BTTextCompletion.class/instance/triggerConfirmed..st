@@ -1,12 +1,8 @@
 events
 triggerConfirmed: aString
+	" trigger confirmed if string is a valid completion "
 
 	(self isValidCompletion: aString) ifTrue: [
-		activeSuggestionIndex ~= 0
-			ifTrue: [self useActiveSuggestion]
-			ifFalse: [self text: aString].
-		
-		suggestionsDropdown delete.
-		super triggerConfirmed: self text].
-	
-	^ false
+		self
+			useActiveSuggestion;
+			triggerConfirmed: self text suggestion: (self selectedSuggestionFor: self text do: #yourself ifNone: [])]

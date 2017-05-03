@@ -11,6 +11,6 @@ moveActiveSuggestion: aDirection
 		changed.
 	
 	activeSuggestionIndex = 0
-		ifTrue: [^ self updatePreviewTextFor: self text; placeCursorAt: self text size].
+		ifTrue: [^ self updatePreviewTextFor: self text].
 	
 	(suggestionsDropdown submorphs at: activeSuggestionIndex) active: true

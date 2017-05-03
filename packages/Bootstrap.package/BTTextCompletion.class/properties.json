@@ -10,7 +10,8 @@
 		"suggestionsList",
 		"activeSuggestionIndex",
 		"onlyAllowsExactMatches",
-		"suggestionsAsynchronusBlock" ],
+		"suggestionsAsynchronusBlock",
+		"displayAllWhenEmpty" ],
 	"name" : "BTTextCompletion",
 	"pools" : [
 		 ],

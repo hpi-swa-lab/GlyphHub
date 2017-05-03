@@ -1,9 +1,11 @@
 lifecycle
 enteringWith: aSampleText
 	
+	self initializeFontSelection.
+
 	self sampleText: aSampleText.
 	titleLabel text: self sampleText title.
-	authorLabel text: 'by ', self sampleText author username.
+	authorLabel text: 'Sample Text by ', self sampleText author username.
 	sampleTextWidget pointSize: self topLevel standardPointSize.
 	sampleTextWidget text: self sampleText text.
 	self resetFont

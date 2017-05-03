@@ -1,8 +1,5 @@
 callbacks
 openCreateCommentPage
 
-	| selectedText |
-	selectedText := self sampleTextWidget selectedText.
-	selectedText ifEmpty: [^ self].
-	
-	FRTThreadCommentCreationPage openNewThreadOn: selectedText font: self selectedFont in: self topLevel
+	self sampleTextWidget selectedText ifNotEmptyDo: [:text |
+		FRTThreadCommentCreationPage openNewThreadOn: text font: self selectedFont in: self topLevel]

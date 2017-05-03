@@ -1,4 +1,0 @@
-accessing
-handlesMouseUp: anEvent
-
-	^ true

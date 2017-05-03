@@ -1,5 +1,6 @@
 text
 resetText
 
-	self text: ''.
-	self closeSuggestionPopup
+	self
+		clear;
+		closeSuggestionPopup

@@ -1,4 +1,4 @@
 suggestions
 useActiveSuggestion
 
-	self text: (self topHitFor: self text)
+	self selectedSuggestionFor: self text do: [:item | self text: item plainText] ifNone: []

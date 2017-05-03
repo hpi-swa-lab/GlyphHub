@@ -1,14 +1,8 @@
 initialize-release
 initializeFontSelection
 
-	fontSelectCompletion suggestionsAsynchronusBlock: [:text |
-		(FRTFont loadAllFrom: self backend) then: [:fonts | | fontNames orderedFonts |
-			fontNames := OrderedCollection new.
-			orderedFonts := fonts sorted: [:font1 :font2 | font1 fontName <= font2 fontName].
-			orderedFonts collect: [:font |
-				text
-					ifNotEmpty: [(font fontName includesSubstring: text caseSensitive: false)
-						ifTrue: [(font fontName = text)
-							ifFalse: [fontNames add: font fontName asString]]]
-					ifEmpty: [fontNames add: font fontName asString]].
-			fontNames]].
+	self flag: #todo. " not very scalable. we should only load those fonts that match the input "
+	
+	(FRTFont loadAllFrom: self backend populate: #(family)) then: [:fonts | 
+		fontSelectCompletion suggestionsList: ((fonts sortedBy: #fontName)
+			collect: [:font | BTTextCompletionSuggestion label: font fontName data: font])]

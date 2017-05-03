@@ -2,7 +2,6 @@ import json
 import os
 import base64
 import re
-import glob
 from functools import wraps
 
 from flask import request, jsonify, current_app, send_from_directory, Response
@@ -105,8 +104,6 @@ def register_routes(app):
         response = Response(contents, mimetype='application/octet-stream')
         response.headers["Content-Disposition"] = "attachment; filename=font.otf"
         return response
-
-
 
     @app.route('/font/<font_id>/ufo', methods=['GET'])
     @requires_auth('')

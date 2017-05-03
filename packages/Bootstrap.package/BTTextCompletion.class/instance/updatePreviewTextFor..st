@@ -1,4 +1,12 @@
 text
 updatePreviewTextFor: aString
+	" if we selected a suggestion, display that one. otherwise try completing one "
 
-	super updateText: aString, '<span color="#ccc">', ((self topHitFor: aString) allButFirst: aString size), '</span>'
+	super updateText: 
+		(self activeSuggestionDo: #plainText ifNone: [
+			self
+				completableSuggestionFor: aString
+				do: [:item | aString, '<span color="#ccc">', (item plainText allButFirst: aString size), '</span>']
+				ifNone: [aString]]).
+
+	self changed
