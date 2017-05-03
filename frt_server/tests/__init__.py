@@ -58,6 +58,13 @@ class TestMinimal(eve.tests.TestMinimal):
         response = self.test_client.get(url, headers=headers)
         return self.parse_response(response)
 
+    def download(self, url):
+        headers = [
+            ('Authorization', self.cachedApiToken)
+        ]
+        response = self.test_client.get(url, headers=headers)
+        return response
+
     def post(self, url, data):
         """post data as a json object to url"""
         headers = [
