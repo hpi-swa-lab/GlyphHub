@@ -1,0 +1,4 @@
+as yet unclassified
+testSingleClosedCurveAtPointSize
+
+	self assertSingleClosedCurvePointSize: 12

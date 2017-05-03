@@ -1,0 +1,20 @@
+{
+	"class" : {
+		"from:via:and:to:" : "TB 5/2/2017 23:10",
+		"from:via:to:" : "TB 5/2/2017 22:53" },
+	"instance" : {
+		"contour" : "TB 5/2/2017 22:14",
+		"controlPoint1" : "TB 5/2/2017 21:29",
+		"controlPoint1:" : "TB 5/2/2017 23:11",
+		"controlPoint2" : "TB 5/2/2017 21:29",
+		"controlPoint2:" : "TB 5/2/2017 23:11",
+		"endPoint" : "TB 5/2/2017 21:29",
+		"endPoint:" : "TB 5/2/2017 23:11",
+		"endSmooth" : "TB 5/2/2017 21:29",
+		"endSmooth:" : "TB 5/3/2017 09:56",
+		"initialize" : "TB 5/2/2017 23:26",
+		"startPoint" : "TB 5/2/2017 21:28",
+		"startPoint:" : "TB 5/2/2017 23:11",
+		"startSmooth" : "TB 5/3/2017 09:56",
+		"startSmooth:" : "TB 5/3/2017 09:56",
+		"xmlElementsPointTransform:" : "TB 5/3/2017 09:56" } }

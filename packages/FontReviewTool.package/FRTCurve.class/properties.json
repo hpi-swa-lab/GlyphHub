@@ -1,0 +1,17 @@
+{
+	"category" : "FontReviewTool-Vectors",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"startPointMorph",
+		"controlPoint1Morph",
+		"controlPoint2Morph",
+		"endPointMorph" ],
+	"name" : "FRTCurve",
+	"pools" : [
+		 ],
+	"super" : "Morph",
+	"type" : "normal" }

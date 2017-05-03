@@ -1,0 +1,4 @@
+as yet unclassified
+testSingleClosedCurvePoints
+
+	self assertSingleClosedCurvePointSize: self unitsPerEm

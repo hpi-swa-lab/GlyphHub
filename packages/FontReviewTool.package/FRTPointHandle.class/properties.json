@@ -1,0 +1,14 @@
+{
+	"category" : "FontReviewTool-Vectors",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"smooth" ],
+	"name" : "FRTPointHandle",
+	"pools" : [
+		 ],
+	"super" : "Morph",
+	"type" : "normal" }

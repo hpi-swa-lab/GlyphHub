@@ -1,0 +1,15 @@
+{
+	"category" : "FontReviewTool-Vectors",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"closed",
+		"cycleWhenSaving" ],
+	"name" : "FRTContour",
+	"pools" : [
+		 ],
+	"super" : "Morph",
+	"type" : "normal" }

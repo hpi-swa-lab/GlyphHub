@@ -1,0 +1,16 @@
+{
+	"category" : "FontReviewTool-Vectors",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"pointSize",
+		"fontinfo",
+		"glif" ],
+	"name" : "FRTOutline",
+	"pools" : [
+		 ],
+	"super" : "Morph",
+	"type" : "normal" }
