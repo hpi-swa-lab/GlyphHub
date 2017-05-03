@@ -1,7 +1,7 @@
 event handling
 dragAndDrop: anEvent
 
-	self isInStickyMode
+	self inStickyMode
 		ifTrue: [self scrollOffset: ((self relativeCoordinates: (anEvent endPoint)) * self contentHeight)]
 		ifFalse: [ | distance direction |
 			" This should scroll a bit faster than the mouse wheel "

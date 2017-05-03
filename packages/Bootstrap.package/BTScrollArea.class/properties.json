@@ -9,7 +9,7 @@
 		"container",
 		"policy",
 		"scrollBars",
-		"isInStickyMode" ],
+		"inStickyMode" ],
 	"name" : "BTScrollArea",
 	"pools" : [
 		 ],

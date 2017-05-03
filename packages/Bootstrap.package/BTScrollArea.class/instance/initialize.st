@@ -12,7 +12,7 @@ initialize
 	scrollBars := {BTScrollBar scrollArea: self. BTScrollBar scrollArea: self}.
 	
 	self
-		isInStickyMode: true;
+		inStickyMode: true;
 		addMorph: container;
 		addMorph: scrollBars first;
 		addMorph: scrollBars second

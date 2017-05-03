@@ -1,4 +1,0 @@
-event handling
-isInStickyMode
-		
-	^ isInStickyMode
