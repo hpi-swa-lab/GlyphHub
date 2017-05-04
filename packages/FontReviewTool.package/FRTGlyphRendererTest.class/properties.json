@@ -1,0 +1,15 @@
+{
+	"category" : "FontReviewTool-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"renderer",
+		"rectangle" ],
+	"name" : "FRTGlyphRendererTest",
+	"pools" : [
+		 ],
+	"super" : "BTTestCase",
+	"type" : "normal" }

@@ -11,8 +11,6 @@ shapeOf: aGlyphNameString
 	(glif firstTagNamed: #outline) tagsNamed: #contour do: [:contour |
 		(self pointsForContour: contour) ifNotEmptyDo: [:shape | shapes add: shape asPointArray]].
 	
-	advance := (glif firstTagNamed: #advance)
-		ifNotNilDo: [:attr | attr attributeAt: 'width' ifAbsent: [0]]
-		ifNil: [0].
+	advance := self advanceOf: glif.
 	
 	^ {shapes. advance}

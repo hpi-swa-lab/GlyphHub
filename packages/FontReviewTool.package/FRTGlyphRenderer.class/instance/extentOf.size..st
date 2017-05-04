@@ -1,14 +1,11 @@
 geometry
 extentOf: aGlyphNameStringCollection size: aPointSizeNumber
 	
-	| scaleFactor width |
-	scaleFactor := self scaleFactorAt: aPointSizeNumber.
-	width := 0.
+	| rectangle advance |
+	rectangle := self boundsOfGlyphs: aGlyphNameStringCollection atPointSize: aPointSizeNumber.
 	
-	aGlyphNameStringCollection do: [:glyphName | | glif |
-		glif := glifs at: glyphName ifAbsent: [
-			^ self error: 'Can''t measure requested glif, data not loaded yet. See #loadDataFor:'].
-		glif ifNotNil: [
-			width := width + (((glif firstTagNamed: #advance) ifNotNilDo: [:attr | attr attributeAt: #width ifAbsent: [0]] ifNil: [0]) * scaleFactor)]].
+	advance := (aGlyphNameStringCollection
+		collect: [:name | glifs at: name ifPresent: [:glif | self advanceOf: glif] ifAbsent: [nil]]
+		thenSelect: #notNil) ifNotEmptyDo: #sum ifEmpty: [0].
 	
-	^ width @ ((fontinfo at: 'ascender') - (fontinfo at: 'descender') * scaleFactor)
+	^ rectangle extent max: (advance @ self fontHeight * (self scaleFactorAt: aPointSizeNumber))

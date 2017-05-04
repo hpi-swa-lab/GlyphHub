@@ -5,6 +5,6 @@ loadDataForAllGlyphs
 	| query |
 	query := Dictionary new.
 	query at: 'glifs' put: nil.
-	fontinfo ifNil: [query at: 'fontinfo' put: nil].
+	self fontinfo ifNil: [query at: 'fontinfo' put: nil].
 	
 	^ self loadQuery: query

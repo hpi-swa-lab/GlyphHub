@@ -1,5 +1,5 @@
 helper-loading
 clearCache
 
-	fontinfo := nil.
+	self fontinfo: nil.
 	glifs := Dictionary new

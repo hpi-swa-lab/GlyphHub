@@ -7,7 +7,7 @@ loadDataFor: aGlyphNameStringCollection
 		ifTrue: [^ BTPromise unit: self].
 	
 	query := Dictionary new.
-	fontinfo ifNil: [query at: 'fontinfo' put: nil].
+	self fontinfo ifNil: [query at: 'fontinfo' put: nil].
 	missingGlyphs := (self allKnownRequiredGlyphNamesFor: aGlyphNameStringCollection) reject: [:glyphName | glifs includesKey: glyphName].
 	query at: 'glifs' put: missingGlyphs.
 	
