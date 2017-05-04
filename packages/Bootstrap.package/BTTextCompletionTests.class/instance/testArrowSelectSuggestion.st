@@ -5,8 +5,9 @@ testArrowSelectSuggestion
 		completion := self completionWidget
 		text: 'Ger';
 		onlyAllowsExactMatches: onlyCompletions.
-		(completion updateText: 'Ger') then: [
-			self
-				keyStroke: completion key: Character arrowDown;
-				keyStroke: completion key: Character tab.
-			(self expect: completion text) to equal: 'Germany']]
+		(self expect: (completion updateText: 'Ger')) to resolve.
+		
+		self
+			keyStroke: completion key: Character arrowDown;
+			keyStroke: completion key: Character tab.
+		(self expect: completion text) to equal: 'Germany']

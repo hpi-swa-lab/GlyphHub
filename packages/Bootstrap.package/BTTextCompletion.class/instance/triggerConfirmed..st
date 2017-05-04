@@ -5,4 +5,5 @@ triggerConfirmed: aString
 	(self isValidCompletion: aString) ifTrue: [
 		self
 			useActiveSuggestion;
-			triggerConfirmed: self text suggestion: (self selectedSuggestionFor: self text do: #yourself ifNone: [])]
+			triggerConfirmed: self text
+			suggestion: (self selectedSuggestionFor: self text do: #yourself)]

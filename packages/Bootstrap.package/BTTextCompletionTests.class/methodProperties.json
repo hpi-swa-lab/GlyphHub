@@ -9,7 +9,7 @@
 		"tearDown" : "TB 3/6/2017 11:37",
 		"testAllowExactMatch" : "JH 4/24/2017 11:48",
 		"testAllowFreeText" : "JH 4/24/2017 11:48",
-		"testArrowSelectSuggestion" : "JH 5/3/2017 17:57",
+		"testArrowSelectSuggestion" : "TB 5/4/2017 10:14",
 		"testDisallowFreeText" : "JH 5/3/2017 17:39",
-		"testSuggestionsFiltered" : "TB 5/3/2017 22:01",
+		"testSuggestionsFiltered" : "TB 5/4/2017 10:12",
 		"testTabSelectSuggestion" : "JH 5/3/2017 17:37" } }

@@ -22,6 +22,7 @@
 		"outOfWorld:" : "TB 5/3/2017 20:46",
 		"resetActiveSuggestion" : "TB 5/3/2017 21:03",
 		"resetText" : "TB 5/3/2017 19:45",
+		"selectedSuggestionFor:do:" : "TB 5/4/2017 11:02",
 		"selectedSuggestionFor:do:ifNone:" : "TB 5/3/2017 21:33",
 		"suggestionsAsynchronusBlock" : "TB 5/3/2017 21:04",
 		"suggestionsAsynchronusBlock:" : "JH 5/3/2017 14:28",
@@ -29,9 +30,9 @@
 		"suggestionsList" : "JH 4/24/2017 14:09",
 		"suggestionsList:" : "TB 5/3/2017 19:49",
 		"triggerConfirmed" : "TB 5/3/2017 20:14",
-		"triggerConfirmed:" : "TB 5/3/2017 21:10",
-		"triggerConfirmed:suggestion:" : "TB 5/3/2017 21:26",
+		"triggerConfirmed:" : "TB 5/4/2017 10:59",
+		"triggerConfirmed:suggestion:" : "TB 5/4/2017 10:29",
 		"updatePreviewTextFor:" : "TB 5/3/2017 21:20",
 		"updateSuggestions" : "TB 5/3/2017 21:20",
-		"updateText:" : "TB 5/3/2017 21:05",
-		"useActiveSuggestion" : "TB 5/3/2017 20:41" } }
+		"updateText:" : "TB 5/4/2017 10:24",
+		"useActiveSuggestion" : "TB 5/4/2017 10:58" } }

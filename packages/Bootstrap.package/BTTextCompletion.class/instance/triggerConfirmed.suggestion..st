@@ -6,4 +6,4 @@ triggerConfirmed: aString suggestion: aBTTextCompletionSuggestion
 	self
 		closeSuggestionPopup;
 		text: plainString;
-		triggerEvent: #confirmed withArguments: {aString. aBTTextCompletionSuggestion}
+		triggerEvent: #confirmed withArguments: {plainString. aBTTextCompletionSuggestion}
