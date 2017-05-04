@@ -1,7 +1,6 @@
 {
 	"class" : {
-		 },
+		"defaultColors" : "al 5/4/2017 11:02" },
 	"instance" : {
-		"defaultColors" : "TB 5/2/2017 17:44",
-		"initialize" : "TB 4/28/2017 10:22",
+		"initialize" : "al 5/4/2017 11:02",
 		"triggerSelectedColor:" : "TB 5/3/2017 11:22" } }

@@ -8,5 +8,5 @@ initialize
 	self
 		updateForm;
 		mode: #painting;
-		penColor: Color red;
+		penColor: (Color fromString: FRTColorPicker defaultColors first);
 		expand: true

@@ -5,4 +5,4 @@ initialize
 	self
 		scalingMode: #shrink;
 		align: #(start start);
-		frame: true
+		hasFrame: true

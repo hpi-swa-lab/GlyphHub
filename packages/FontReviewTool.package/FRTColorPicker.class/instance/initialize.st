@@ -8,7 +8,7 @@ initialize
 			minSize: 80 @ 0;
 			layoutPolicy: (FRTFixedGridLayout cellSize: 16);
 			spacing: BTWidget spacing / 3;
-			addAll: (self defaultColors collect: [:colorString | | buttonColor |
+			addAll: (self class defaultColors collect: [:colorString | | buttonColor |
 				buttonColor := Color fromString: colorString.
 				BTClickable new
 					when: #clicked send: #triggerSelectedColor: to: self with: buttonColor;

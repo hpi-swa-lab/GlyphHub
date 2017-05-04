@@ -16,7 +16,7 @@ initialize
 		attachTo: fontButton.
 	
 	colorButton := BTButton icon: #circle.
-	self penColor: Color red.
+	self penColor: (Color fromString: FRTColorPicker defaultColors first).
 	FRTColorPicker new
 		attachTo: colorButton;
 		when: #selectedColor send: #penColor: to: self.
