@@ -54,6 +54,12 @@ class Family(CommonColumns):
         if self.is_ufo_file(filename):
             self.unzip_file(filename)
             temporary_filename = filename[:-4]
+            folders = glob.glob(os.path.join(self.source_folder_path(), '*.ufo'))
+            if len(folders) != 1:
+                raise Error(self.source_folder_path() + " should contain exactly 1 match for *.ufo, but contains " + len(folders))
+            src = os.path.join(self.source_folder_path(), folders[0])
+            dst = os.path.join(self.source_folder_path(), temporary_filename)
+            self.move_file(src, dst )
             type_parameter = "-u"
 
         subprocess.run(['fontmake', type_parameter, temporary_filename, '--no-production-names', '-o', 'otf', '--verbose', 'CRITICAL'],
