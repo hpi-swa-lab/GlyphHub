@@ -19,13 +19,14 @@ tryUpload
 				family tags add: newTag].
 			
 			self topLevel startLoadingOperation.
-			(((family
+			((((family
 				saveTo: self backend)
 				then: [:savedFamily | self backend upload: self fontFileStream toFamily: savedFamily id commitMessage: 'First Version'])
-				then: [
+				then: [FRTFamily load: family id populate: #('fonts') from: self backend])
+				then: [:newFamily |
 					self topLevel
 						stopLoadingOperation;
-						openPage: FRTFontOverviewPage new with: family])
+						openPage: FRTFontOverviewPage new with: newFamily defaultFont])
 				catch: [
 					self topLevel
 						stopLoadingOperation;
