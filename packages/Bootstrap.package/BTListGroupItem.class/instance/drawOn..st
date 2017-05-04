@@ -17,6 +17,6 @@ drawOn: aCanvas
 	BTWidget
 		drawBackgroundOn: aCanvas
 		bounds: self bounds
-		colors: (self colorScheme hovered: hovered)
+		colors: (self colorScheme hovered: (hovered or: [active]))
 		rounded: rounded
 		bordered: bordered

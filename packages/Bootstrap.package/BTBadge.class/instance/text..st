@@ -5,6 +5,6 @@ text: aString
 		label := BTLabel new
 			yourself.
 		self add: label].
-		self class applyStyleAtributes: label.
+		self class applyStyleAttributes: label.
 	
 	label text: aString
