@@ -47,3 +47,18 @@ class UploadTestCase(TestMinimal):
             self.assertTrue(os.path.exists(os.path.join(font.ufo_folder_path(), 'RiblonSans.ufo')))
             self.assertTrue(os.path.exists(os.path.join(font.otf_folder_path(), 'RiblonSans-Regular.otf')))
 
+    def test_upload_invalid_file(self):
+        data, status = self.upload_file('family/{}/upload'.format(self.family_id), 'file', 'testFiles/RiblonSans/RiblonSans-v3.glyphs')
+        self.assertEqual(status, 400)
+        session = self.connection.session
+        self.assertFalse(session.query(Family).filter_by(_id=self.family_id).all())
+
+    def test_upload_invalid_new_version(self):
+        data, status = self.upload_file('family/{}/upload'.format(self.family_id), 'file', 'testFiles/RiblonSans/RiblonSans.glyphs')
+        self.assertEqual(status, 200)
+        data, status = self.upload_file('family/{}/upload'.format(self.family_id), 'file', 'testFiles/RiblonSans/RiblonSans-broken.glyphs')
+        self.assertEqual(status, 400)
+        session = self.connection.session
+        self.assertTrue(session.query(Family).filter_by(_id=self.family_id).all())
+        family = self.get_test_family()
+        self.assertEqual(len(family.fonts), 1)

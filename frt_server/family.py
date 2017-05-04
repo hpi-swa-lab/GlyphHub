@@ -20,6 +20,14 @@ class Family(CommonColumns):
     fonts = relationship('Font', back_populates='family')
     tags = relationship('Tag', secondary=tag_family_association_table)
 
+    def delete_family(family):
+        if family.fonts:
+            raise Exception("Database Error: Tried to delete family with fonts.")
+        else:
+            session = inspect(family).session
+            session.delete(family)
+            session.commit()
+
     def is_glyphs_file(self, filename):
         return filename.endswith('.glyphs')
 
@@ -51,13 +59,17 @@ class Family(CommonColumns):
         if self.is_glyphs_file(filename):
             type_parameter = "-g"
             temporary_filename = filename
-        if self.is_ufo_file(filename):
+        elif self.is_ufo_file(filename):
             self.unzip_file(filename)
             temporary_filename = filename[:-4]
             type_parameter = "-u"
+        else:
+            raise Exception("Exception: File is neither .ufo nor .glyphs")
 
-        subprocess.run(['fontmake', type_parameter, temporary_filename, '--no-production-names', '-o', 'otf', '--verbose', 'CRITICAL'],
+        fontmake_result = subprocess.run(['fontmake', type_parameter, temporary_filename, '--no-production-names', '-o', 'otf', '--verbose', 'CRITICAL'],
                 cwd=self.source_folder_path())
+        if fontmake_result.returncode != 0:
+            raise Exception("Exception: Fontmake failed to compile a font")
 
     def font_for_file_named(self, ufo_filename):
         """check if an ufo file with that name already exists and return the associated font if it does"""
@@ -88,10 +100,15 @@ class Family(CommonColumns):
         font/7/otf/myFont.otf"""
 
         sanitized_filename = secure_filename(os.path.basename(family_file.filename))
+        if not sanitized_filename:
+            raise Exception("Exception: Filename is invalid.")
 
         self.ensure_source_folder_exists()
         family_file.save(os.path.join(self.source_folder_path(), sanitized_filename))
-        self.convert_font_after_upload(sanitized_filename)
+        try:
+            self.convert_font_after_upload(sanitized_filename)
+        except:
+            raise
 
         source_otf_path = os.path.join(self.source_folder_path(), 'master_otf')
 
@@ -103,6 +120,7 @@ class Family(CommonColumns):
             return self.process_ufo_file(sanitized_filename[:-4], otf_filenames[0], user, commit_message)
         else:
             return self.process_glyphs_file(sanitized_filename, otf_filenames, user, commit_message)
+
 
     def process_glyphs_file(self, glyphs_filename, otf_filenames, user, commit_message):
         source_otf_path = os.path.join(self.source_folder_path(), 'master_otf')
