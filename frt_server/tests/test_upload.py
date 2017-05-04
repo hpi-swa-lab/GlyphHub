@@ -47,3 +47,15 @@ class UploadTestCase(TestMinimal):
             self.assertTrue(os.path.exists(os.path.join(font.ufo_folder_path(), 'RiblonSans.ufo')))
             self.assertTrue(os.path.exists(os.path.join(font.otf_folder_path(), 'RiblonSans-Regular.otf')))
 
+    def test_upload_ufo_with_whitespace_in_filename(self):
+        data, status = self.upload_file('family/{}/upload'.format(self.family_id), 'file', 'testFiles/Riblon Sans/Riblon Sans 42.ufo.zip')
+        self.assertEqual(status, 200)
+
+        family = self.get_test_family()
+        for font in family.fonts:
+            self.assertTrue(os.path.exists(font.folder_path()))
+            self.assertTrue(os.path.exists(font.ufo_folder_path()))
+            self.assertTrue(os.path.exists(font.otf_folder_path()))
+            self.assertTrue(os.path.exists(os.path.join(font.ufo_folder_path(), 'Riblon_Sans_42.ufo')))
+            self.assertTrue(os.path.exists(os.path.join(font.otf_folder_path(), 'RiblonSans-Regular.otf')))
+
