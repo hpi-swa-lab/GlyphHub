@@ -57,9 +57,10 @@ class Family(CommonColumns):
             folders = glob.glob(os.path.join(self.source_folder_path(), '*.ufo'))
             if len(folders) != 1:
                 raise Error(self.source_folder_path() + " should contain exactly 1 match for *.ufo, but contains " + len(folders))
-            src = os.path.join(self.source_folder_path(), folders[0])
-            dst = os.path.join(self.source_folder_path(), temporary_filename)
-            self.move_file(src, dst )
+            source = os.path.join(self.source_folder_path(), folders[0])
+            destination = os.path.join(self.source_folder_path(), temporary_filename)
+            if source != destination:
+                self.move_file(source, destination)
             type_parameter = "-u"
 
         subprocess.run(['fontmake', type_parameter, temporary_filename, '--no-production-names', '-o', 'otf', '--verbose', 'CRITICAL'],
