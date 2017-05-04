@@ -62,6 +62,13 @@ class Family(CommonColumns):
         elif self.is_ufo_file(filename):
             self.unzip_file(filename)
             temporary_filename = filename[:-4]
+            folders = glob.glob(os.path.join(self.source_folder_path(), '*.ufo'))
+            if len(folders) != 1:
+                raise Error(self.source_folder_path() + " should contain exactly 1 match for *.ufo, but contains " + len(folders))
+            source = os.path.join(self.source_folder_path(), folders[0])
+            destination = os.path.join(self.source_folder_path(), temporary_filename)
+            if source != destination:
+                self.move_file(source, destination)
             type_parameter = "-u"
         else:
             raise Exception("Exception: File is neither .ufo nor .glyphs")
