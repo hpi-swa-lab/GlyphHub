@@ -18,4 +18,6 @@ openSketchEditor
 		minSize: 700;
 		openCentered.
 	
+	editor ensureContentsFit.
+	
 	self setProperty: #sketchDialog toValue: dialog

@@ -6,7 +6,7 @@ initialize
 	mouseIsDown := false.
 	
 	self
+		mode: #paint;
 		updateForm;
-		mode: #painting;
 		penColor: (Color fromString: FRTColorPicker defaultColors first);
 		expand: true

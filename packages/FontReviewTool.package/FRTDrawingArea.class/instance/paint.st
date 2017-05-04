@@ -2,5 +2,5 @@ drawing
 paint
 
 	self
-		mode: #painting;
+		mode: #paint;
 		penColor: self penColor

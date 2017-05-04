@@ -11,5 +11,5 @@ initialize
 			addAll: (self class defaultColors collect: [:colorString | | buttonColor |
 				buttonColor := Color fromString: colorString.
 				BTClickable new
-					when: #clicked send: #triggerSelectedColor: to: self with: buttonColor;
+					when: #clicked send: #triggerColorSelected: to: self with: buttonColor;
 					color: buttonColor]))

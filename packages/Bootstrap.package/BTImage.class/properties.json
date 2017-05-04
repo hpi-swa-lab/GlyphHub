@@ -10,7 +10,7 @@
 		"form",
 		"cachedForm",
 		"fillMode",
-		"hasFrame" ],
+		"framed" ],
 	"name" : "BTImage",
 	"pools" : [
 		 ],

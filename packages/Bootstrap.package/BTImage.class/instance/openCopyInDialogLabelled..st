@@ -5,7 +5,7 @@ openCopyInDialogLabelled: aString
 		add: (self copy
 			align: #(center center);
 			expand: true;
-			hasFrame: false;
+			framed: false;
 			scalingMode: #shrink);
 		extent: (form extent min: 600 asPoint);
 		openCentered

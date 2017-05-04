@@ -1,0 +1,1 @@
+A FRTTransformHandles is a wrapper around a widget that displays handles for moving and scaling it. WIP.

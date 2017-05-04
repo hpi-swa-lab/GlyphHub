@@ -7,6 +7,5 @@ updateForm
 		ifNil: [Form extent: self extent depth: 32]
 		ifNotNil: [form copy: (0 @ 0 extent: self extent)].
 
-	pen := (Pen newOnForm: form)
-		color: self penColor;
-		roundNib: 4 * BTWidget scalingFactor
+	pen := Pen newOnForm: form.
+	self perform: self mode

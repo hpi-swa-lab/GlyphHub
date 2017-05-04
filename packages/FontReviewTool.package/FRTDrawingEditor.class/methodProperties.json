@@ -2,6 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
+		"ensureContentsFit" : "TB 5/4/2017 12:25",
 		"extent:" : "TB 4/26/2017 14:49",
 		"font" : "TB 4/27/2017 14:39",
 		"font:" : "TB 4/28/2017 13:18",
@@ -9,8 +10,8 @@
 		"handlesMouseDown:" : "TB 4/27/2017 10:54",
 		"importGlyph:" : "TB 4/28/2017 13:31",
 		"importGlyphs:font:" : "TB 4/27/2017 10:43",
-		"importObject:" : "TB 4/28/2017 13:31",
-		"initialize" : "al 5/4/2017 11:06",
+		"importObject:" : "TB 5/4/2017 12:25",
+		"initialize" : "TB 5/4/2017 12:09",
 		"penColor:" : "TB 5/3/2017 11:30",
 		"triggerAccept" : "TB 4/28/2017 10:30",
 		"updateDrawingArea" : "TB 4/26/2017 14:50" } }

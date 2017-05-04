@@ -19,7 +19,7 @@ initialize
 	self penColor: (Color fromString: FRTColorPicker defaultColors first).
 	FRTColorPicker new
 		attachTo: colorButton;
-		when: #selectedColor send: #penColor: to: self.
+		when: #colorSelected send: #penColor: to: self.
 	
 	self
 		expand: true;
@@ -34,7 +34,9 @@ initialize
 				"add: ((BTButton icon: #crosshairs)
 					when: #clicked send: #pick to: drawingArea);"
 				add: colorButton;
-				add: fontButton)
+				"add: fontButton"
+				add: ((BTButton icon: #trash)
+					when: #clicked send: #clear to: drawingArea))
 			oppositeTo: ((BTButton label: 'Save Picture')
 				colorType: #primary;
 				when: #clicked send: #triggerAccept to: self));

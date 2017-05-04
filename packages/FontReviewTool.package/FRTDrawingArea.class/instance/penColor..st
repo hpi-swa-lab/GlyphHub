@@ -3,7 +3,7 @@ penColor: aColor
 
 	penColor := aColor.
 	
-	self mode == #painting ifTrue: [
+	self mode == #paint ifTrue: [
 		pen
 			roundNib: 4 * BTWidget scalingFactor;
 			combinationRule: Form paint;

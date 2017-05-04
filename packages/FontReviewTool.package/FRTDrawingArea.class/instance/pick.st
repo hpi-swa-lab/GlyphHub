@@ -1,4 +1,4 @@
 drawing
 pick
 
-	self mode: #picking
+	self mode: #pick

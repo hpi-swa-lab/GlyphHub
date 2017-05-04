@@ -9,7 +9,7 @@ drawOn: aCanvas
 			[#shrink] -> [self formAtExtent: (self innerBounds extent min: form extent)].
 			[#fill] -> [self formAtExtent: self innerBounds extent]}.
 		
-		self hasFrame
+		self framed
 			ifTrue: [
 				bitmap := (BitmapFillStyle fromForm: targetForm)
 					tileFlag: false;
