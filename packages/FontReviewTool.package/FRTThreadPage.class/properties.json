@@ -11,7 +11,10 @@
 		"commentArea",
 		"thread",
 		"tagArea",
-		"enteredFromGlyph" ],
+		"enteredFromGlyph",
+		"subscriptionButton",
+		"subscribed",
+		"subscription" ],
 	"name" : "FRTThreadPage",
 	"pools" : [
 		 ],

@@ -1,6 +1,6 @@
 {
 	"class" : {
-		"associations" : "ek 4/18/2017 14:12",
+		"associations" : "JH 5/5/2017 15:34",
 		"modelName" : "lcj 4/7/2017 10:59" },
 	"instance" : {
 		"attachments" : "lcj 4/7/2017 11:00",
@@ -13,5 +13,7 @@
 		"password:" : "lcj 4/7/2017 10:59",
 		"sampleTexts" : "ek 4/18/2017 14:12",
 		"sampleTexts:" : "ek 4/18/2017 14:12",
+		"threadSubscriptions" : "JH 5/5/2017 15:16",
+		"threadSubscriptions:" : "JH 5/5/2017 15:17",
 		"username" : "lcj 4/5/2017 12:30",
 		"username:" : "TB 4/5/2017 11:11" } }

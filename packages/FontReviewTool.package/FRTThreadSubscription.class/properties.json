@@ -6,14 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"password",
-		"username",
-		"comments",
-		"fonts",
-		"attachments",
-		"sampleTexts",
-		"threadSubscriptions" ],
-	"name" : "FRTUser",
+		"thread",
+		"user" ],
+	"name" : "FRTThreadSubscription",
 	"pools" : [
 		 ],
 	"super" : "BTModel",

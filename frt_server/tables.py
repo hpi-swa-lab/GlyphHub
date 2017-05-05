@@ -34,6 +34,8 @@ class ThreadSubscription(CommonColumns):
     _id = Column(Integer, primary_key=True, autoincrement=True)
     user_id = Column(Integer, ForeignKey('user._id'))
     thread_id = Column(Integer, ForeignKey('thread._id'))
+    user = relationship('User', back_populates='thread_subscriptions')
+    thread = relationship('Thread', back_populates='thread_subscriptions')
     """maybe use this table for 'last seen' or something to find unread updates of a thread?"""
 
 class Glyph(CommonColumns):
@@ -52,6 +54,7 @@ class Thread(CommonColumns):
     # FIXME we also would like to save the indices of the glyphs from their unicode
     codepoints = relationship('Codepoint', back_populates='thread')
     comments = relationship('Comment', back_populates='thread')
+    thread_subscriptions = relationship('ThreadSubscription', back_populates='thread')
 
 class Codepoint(CommonColumns):
     __tablename__ = 'codepoint'
@@ -119,3 +122,4 @@ registerSchema('codepoint')(Codepoint)
 registerSchema('comment')(Comment)
 registerSchema('attachment')(Attachment)
 registerSchema('thread_glyph_association')(ThreadGlyphAssociation)
+registerSchema('thread_subscription')(ThreadSubscription)

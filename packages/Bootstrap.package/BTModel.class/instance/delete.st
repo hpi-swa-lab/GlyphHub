@@ -1,4 +1,4 @@
 operations
 delete
 
-	^ self deleteFrom: self class defaultBackend
+	^ self deleteFrom: self backend
