@@ -7,5 +7,4 @@ filterSuggestions
 		ifNotEmpty: [
 			self suggestionsList select: [:suggestion | | suggestionText |
 				suggestionText := suggestion plainText.
-				(suggestionText includesSubstring: self text caseSensitive: false) and:
-				[suggestionText asLowercase ~= self text asLowercase]]]
+				(suggestionText includesSubstring: self text caseSensitive: false)]]

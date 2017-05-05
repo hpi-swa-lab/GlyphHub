@@ -8,7 +8,7 @@ initialize
 	drawingArea := FRTDrawingArea new.
 	
 	fontButton := BTButton icon: #font.
-	glyphImport := (BTTextCompletion placeholder: 'Enter a glyphname ...')
+	glyphImport := FRTGlyphPicker new
 		minSize: 300 @ 0;
 		when: #confirmed send: #importGlyph: to: self.
 	BTPopover new

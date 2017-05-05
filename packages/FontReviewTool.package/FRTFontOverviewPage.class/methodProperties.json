@@ -3,7 +3,8 @@
 		 },
 	"instance" : {
 		"breadcrumbs" : "ek 4/18/2017 16:56",
-		"enteringWith:" : "TB 5/4/2017 17:42",
+		"displayPreviewGlyphsNotice" : "TB 5/5/2017 11:38",
+		"enteringWith:" : "TB 5/5/2017 11:02",
 		"family" : "JH 4/6/2017 18:35",
 		"family:" : "TB 4/25/2017 16:15",
 		"font" : "JH 4/6/2017 18:30",
@@ -18,6 +19,7 @@
 		"leaving" : "ek 4/24/2017 11:30",
 		"loadThreads" : "ek 5/3/2017 15:53",
 		"openGlyphInputPage" : "lcj 4/9/2017 15:32",
+		"openPreviewGlyphDialog" : "TB 5/5/2017 11:38",
 		"renderer" : "lcj 4/9/2017 11:19",
 		"renderer:" : "JH 4/7/2017 17:26",
 		"threadsContainer" : "lcj 4/9/2017 10:53" } }

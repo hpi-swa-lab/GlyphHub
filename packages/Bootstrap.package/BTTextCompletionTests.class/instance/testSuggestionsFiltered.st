@@ -1,9 +1,8 @@
 as yet unclassified
 testSuggestionsFiltered
 	| completion displayed |
-	completion := self completionWidget openInWorld; text: 'an'; yourself.
+	completion := self completionWidget openInWorld; yourself.
 	self click: completion.
-	
 	completion text: 'an'.
 	displayed := self displayedSuggestions.
 	

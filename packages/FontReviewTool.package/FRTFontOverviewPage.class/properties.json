@@ -19,7 +19,8 @@
 		"gridWidget",
 		"renderer",
 		"threadsContainer",
-		"uploadPopover" ],
+		"uploadPopover",
+		"missingPreviewGlyphsNotice" ],
 	"name" : "FRTFontOverviewPage",
 	"pools" : [
 		 ],

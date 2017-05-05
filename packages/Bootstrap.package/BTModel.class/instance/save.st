@@ -1,4 +1,4 @@
 operations
 save 
 
-	^ self saveTo: self class defaultBackend
+	^ self saveTo: self backend

@@ -1,0 +1,18 @@
+{
+	"category" : "FontReviewTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"glyph1",
+		"glyph2",
+		"font",
+		"page",
+		"preview" ],
+	"name" : "FRTGlyphPreviewPicker",
+	"pools" : [
+		 ],
+	"super" : "BTDialog",
+	"type" : "normal" }

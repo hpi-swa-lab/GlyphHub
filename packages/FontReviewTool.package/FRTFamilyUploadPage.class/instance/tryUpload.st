@@ -13,7 +13,9 @@ tryUpload
 	
 	self fontFileStream ifNotNil:[| family |
 		familyName ifNotEmpty: [
-			family := FRTFamily new familyName: familyName.
+			family := FRTFamily new
+				familyName: familyName;
+				previewGlyphs: ''.
 			tags do: [:tag | | newTag |
 				newTag := FRTTag new text: tag.
 				family tags add: newTag].

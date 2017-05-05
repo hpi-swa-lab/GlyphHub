@@ -17,6 +17,7 @@ from werkzeug.utils import secure_filename
 class Family(CommonColumns):
     __tablename__ = 'family'
     family_name = Column(String(300))
+    preview_glyphs = Column(String(500), default='')
     fonts = relationship('Font', back_populates='family')
     tags = relationship('Tag', secondary=tag_family_association_table)
 

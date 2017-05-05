@@ -6,6 +6,8 @@ enteringWith: aFont
 			self
 				font: newFont;
 				family: newFont family.
+				
+			self family previewGlyphs ifEmpty: [self displayPreviewGlyphsNotice].
 			
 			self topLevel selectedFont: self font.
 			self renderer font: self font.
