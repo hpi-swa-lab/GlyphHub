@@ -13,13 +13,8 @@ initialize
 	sampleTextWidget := BTTextEntry new
 		editable: false.
 	
-	fontSelectCompletion :=  BTTextCompletion new
-		placeholder: 'Enter a Font Name';
-		expand: true;
-		when: #confirmed send: #applyName:font: to: self;
-		onlyAllowsExactMatches: true;
-		displayAllWhenEmpty: true;
-		minSize: 200 @ 0.
+	fontSelectCompletion :=  FRTFontPicker new
+		when: #confirmed send: #applyName:font: to: self.
 	
 	fontSelectButton := ((BTButton label: 'Apply Font')
 		colorType: #primary;

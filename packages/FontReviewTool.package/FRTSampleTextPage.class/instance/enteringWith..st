@@ -1,7 +1,7 @@
 lifecycle
 enteringWith: aSampleText
 	
-	self initializeFontSelection.
+	fontSelectCompletion loadFrom: self backend.
 
 	self sampleText: aSampleText.
 	titleLabel text: self sampleText title.

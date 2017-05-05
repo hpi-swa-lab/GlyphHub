@@ -21,6 +21,11 @@ primitiveLayoutMoveCursorVisually
 	
 	pango_layout_move_cursor_visually(layout, strong, offset, trailing, direction, &newIndex, &newTrailing);
 	
+	if (newIndex < 0) {
+		newIndex = 0;
+	} else if (newIndex == G_MAXINT) {
+		newIndex = strlen(text);
+	}
 	newIndex = g_utf8_pointer_to_offset(text, text + newIndex)'.
 
 	out := interpreterProxy instantiateClass: (interpreterProxy classArray) indexableSize: 2.

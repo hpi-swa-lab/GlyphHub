@@ -1,0 +1,14 @@
+{
+	"category" : "FontReviewTool-RichText",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"selectedParagraph" ],
+	"name" : "FRTRichText",
+	"pools" : [
+		 ],
+	"super" : "BTWidget",
+	"type" : "normal" }

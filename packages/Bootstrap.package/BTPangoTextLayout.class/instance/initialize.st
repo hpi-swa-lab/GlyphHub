@@ -5,4 +5,5 @@ initialize
 	
 	layout := 0.
 	ellipsize := #none.
-	wrap := #word
+	wrap := #word.
+	alignment := #left

@@ -1,0 +1,17 @@
+{
+	"category" : "FontReviewTool-RichText",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"alignment",
+		"pointSize",
+		"font",
+		"openTypeFeatures" ],
+	"name" : "FRTParagraph",
+	"pools" : [
+		 ],
+	"super" : "BTTextEntry",
+	"type" : "normal" }

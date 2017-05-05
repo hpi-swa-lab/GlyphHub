@@ -9,7 +9,7 @@ updateScrollBars
 	isVertical := false.
 	width := BTWidget borderRadius * 2.
 	size := self extent * self percentVisible.
-	offset := self extent * (self scrollOffset  / container firstSubmorph extent).
+	offset := self extent * (self scrollOffset  / (container firstSubmorph extent max: 1 asPoint)).
 	
 	scrollBars do: [:scrollbar |
 		scrollbar visible: (isVertical ifTrue: [size y < self height] ifFalse: [size x < self width]).

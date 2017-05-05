@@ -1,0 +1,19 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"alignment" : "TB 5/5/2017 14:45",
+		"alignment:" : "TB 5/5/2017 16:41",
+		"default" : "TB 5/5/2017 15:54",
+		"font" : "TB 5/5/2017 14:46",
+		"font:" : "TB 5/5/2017 17:56",
+		"fromJson:" : "TB 5/5/2017 17:56",
+		"heading" : "TB 5/5/2017 14:55",
+		"initialize" : "TB 5/5/2017 15:45",
+		"jsonWriteOn:" : "TB 5/5/2017 17:57",
+		"keyStroke:" : "TB 5/5/2017 17:45",
+		"openTypeFeatures" : "TB 5/5/2017 15:53",
+		"openTypeFeatures:" : "TB 5/5/2017 15:58",
+		"pointSize" : "TB 5/5/2017 14:46",
+		"pointSize:" : "TB 5/5/2017 15:00",
+		"subheading" : "TB 5/5/2017 14:55" } }

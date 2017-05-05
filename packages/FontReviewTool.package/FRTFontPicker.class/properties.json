@@ -1,0 +1,14 @@
+{
+	"category" : "FontReviewTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "FRTFontPicker",
+	"pools" : [
+		 ],
+	"super" : "BTTextCompletion",
+	"type" : "normal" }
