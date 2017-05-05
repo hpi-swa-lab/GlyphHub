@@ -29,6 +29,13 @@ class ThreadGlyphAssociation(CommonColumns):
     thread = relationship('Thread', back_populates='thread_glyph_associations')
     glyph = relationship('Glyph', back_populates='thread_glyph_associations')
 
+class ThreadSubscription(CommonColumns):
+    __tablename__ = 'thread_subscription'
+    _id = Column(Integer, primary_key=True, autoincrement=True)
+    user_id = Column(Integer, ForeignKey('user._id'))
+    thread_id = Column(Integer, ForeignKey('thread._id'))
+    """maybe use this table for 'last seen' or something to find unread updates of a thread?"""
+
 class Glyph(CommonColumns):
     __tablename__ = 'glyph'
     glyph_name = Column(String(300))
