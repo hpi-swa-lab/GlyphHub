@@ -1,4 +1,4 @@
-accessing
+lifecycle
 enteringWith: aFont
 
 	^ (FRTFont load: aFont id populate: #('author' 'family') from: self backend)

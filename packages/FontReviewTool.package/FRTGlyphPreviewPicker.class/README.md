@@ -1,0 +1,1 @@
+A FRTGlyphPreviewPicker is a dialog containing two FRTGlyphPicker's. On confirmed, they update the previewGlyphs field of the family associated with the given font.

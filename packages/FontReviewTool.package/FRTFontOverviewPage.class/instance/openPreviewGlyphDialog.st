@@ -1,4 +1,4 @@
-accessing
+navigation
 openPreviewGlyphDialog
 
 	^ (FRTGlyphPreviewPicker new

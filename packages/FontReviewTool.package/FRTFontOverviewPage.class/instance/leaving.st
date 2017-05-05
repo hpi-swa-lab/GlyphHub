@@ -1,4 +1,4 @@
-accessing
+lifecycle
 leaving
 
 	self gridWidget removeAllMorphs.

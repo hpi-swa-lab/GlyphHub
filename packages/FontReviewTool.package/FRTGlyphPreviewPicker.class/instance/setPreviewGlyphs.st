@@ -1,4 +1,4 @@
-as yet unclassified
+updating
 setPreviewGlyphs
 
 	(glyph1 text isEmpty or: [glyph2 text isEmpty]) ifTrue: [^ self].
