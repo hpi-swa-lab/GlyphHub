@@ -51,46 +51,29 @@ def register_routes(app):
     def upload_family(family_id):
         current_user = current_app.auth.get_request_auth_value()
         session = app.data.driver.session
+
         family = session.query(Family).get(family_id)
-
-        if 'file' not in request.files:
-            try:
-                Family.delete_family(family)
-            except Exception as exception:
-                print(exception)
-            finally:
-                return jsonify({'error': 'No file given'}), 400
-   
-        family_file = request.files['file']
-        if family_file.filename == '':
-            try:
-                Family.delete_family(family)
-            except Exception as exception:
-                print(exception)
-            finally:
-                return jsonify({'error': 'Invalid file given'}), 400
-
-        if not re.match(r"^.*(\.ufo\.zip|\.glyphs)$", family_file.filename):
-            try:
-                Family.delete_family(family)
-            except Exception as exception:
-                print(exception)
-            finally:
-                return jsonify({'error': 'Invalid file format'}), 400
-
         if not family:
             return jsonify({'error': 'Associated family does not exist'}), 400
 
         try:
-            family.process_file(family_file, current_user, request.form.get('commit_message') or 'New Version')
-            return '', 200
-        except Exception as processing_exception:
-            print(processing_exception)
+            if 'file' not in request.files:
+                return jsonify({'error': 'No file given'}), 400
+
+            family_file = request.files['file']
+            if family_file.filename == '':
+                return jsonify({'error': 'Invalid file given'}), 400
+
+            if not re.match(r"^.*(\.ufo\.zip|\.glyphs)$", family_file.filename):
+                return jsonify({'error': 'Invalid file format'}), 400
+
             try:
-                Family.delete_family(family)
-            except Exception as delete_exception:
-                print(delete_exception)
-            return jsonify({'error': 'Processing file failed'}), 400
+                family.process_file(family_file, current_user, request.form.get('commit_message') or 'New Version')
+                return '', 200
+            except Exception:
+                return jsonify({'error': 'Processing file failed'}), 400
+        finally:
+            Family.delete_family_if_empty(family)
 
     @app.route('/font/<font_id>/convert', methods=['POST'])
     @requires_auth('')

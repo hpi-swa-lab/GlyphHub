@@ -20,10 +20,8 @@ class Family(CommonColumns):
     fonts = relationship('Font', back_populates='family')
     tags = relationship('Tag', secondary=tag_family_association_table)
 
-    def delete_family(family):
-        if family.fonts:
-            raise Exception("Database Error: Tried to delete family with fonts.")
-        else:
+    def delete_family_if_empty(family):
+        if not family.fonts:
             session = inspect(family).session
             session.delete(family)
             session.commit()
