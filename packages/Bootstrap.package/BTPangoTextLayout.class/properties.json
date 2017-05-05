@@ -15,7 +15,8 @@
 		"wrap",
 		"cursor",
 		"selectionBound",
-		"lineSpacing" ],
+		"lineSpacing",
+		"alignment" ],
 	"name" : "BTPangoTextLayout",
 	"pools" : [
 		 ],

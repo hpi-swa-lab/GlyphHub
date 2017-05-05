@@ -1,0 +1,18 @@
+{
+	"category" : "FontReviewTool-RichText",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"richText",
+		"pointSizeInput",
+		"otFeaturesInput",
+		"fontInput",
+		"backend" ],
+	"name" : "FRTRichTextEditor",
+	"pools" : [
+		 ],
+	"super" : "BTWidget",
+	"type" : "normal" }

@@ -6,7 +6,10 @@ keyboardFocusChange: weHaveFocus
 	focused := weHaveFocus.
 	
 	focused
-		ifTrue: [self startBlinking]
+		ifTrue: [
+			self
+				startBlinking;
+				triggerFocused]
 		ifFalse: [self stopBlinking; clearSelection].
 	
 	self changed
