@@ -6,7 +6,7 @@ drawOn: aCanvas
 			ifTrue: [(self innerBounds extent / 2) - ((renderer extentOf: self glyphNames size: self pointSize) / 2)]
 			ifFalse: [0 asPoint]).
 		
-		" see if we overshoot above our ascender "
+		" see if we overshoot above our ascender or descender "
 		rectangle := renderer boundsOfGlyphs: self glyphNames atPointSize: self pointSize.
 		
 		renderer

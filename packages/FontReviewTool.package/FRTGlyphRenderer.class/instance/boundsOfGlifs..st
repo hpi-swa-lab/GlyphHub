@@ -16,16 +16,16 @@ boundsOfGlifs: aGlifXMLCollection
 			minY := minY min: position y.
 			maxX := maxX max: position x.
 			maxY := maxY max: position y].
-		
-		offsetX := offsetX + (self advanceOf: glif).
-		
+
 		glif tagsNamed: #component do: [:component | | offset rectangle |
 			offset := (component attributeAt: #xOffset ifAbsent: [0]) asNumber @ (component attributeAt: #yOffset ifAbsent: [0]) asNumber.
-			rectangle := (self boundsOfGlifs: {self loadedGlifs at: (component attributeAt: #base)}) translateBy: offset.
+			rectangle := (self boundsOfGlifs: {self loadedGlifs at: (component attributeAt: #base)}) translateBy: offset + (offsetX @ 0).
 			
 			minX := minX min: rectangle left.
 			minY := minY min: rectangle top.
 			maxX := maxX max: rectangle right.
-			maxY := maxY max: rectangle bottom]].
+			maxY := maxY max: rectangle bottom].
 		
+		offsetX := offsetX + (self advanceOf: glif)].
+				
 	^ Rectangle origin: minX @ minY corner: maxX @ maxY

@@ -1,2 +1,3 @@
 A FRTGlyphRenderer is responsible for drawing glyph information (from a UFO3 glif) onto a canvas.
 It essentially works as a cache for the ufo data necessary to render certain glyphs. You can request caching of data via the loadDataFor: method.
+Before trying to render, consumers of the renderer's API need to call 'canDrawImmediately' to check if all necessary data was loaded and the renderer is readay. Otherwise, they need to wait until all loading operations are completed.
