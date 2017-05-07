@@ -1,12 +1,13 @@
 layout
 preferredSizeFor: aWidget width: aNumber
 
-	| spacing stillLeftOver extraExpanderSpace nonLayoutDirectionMinSize nonLayoutDirectionNatSize |
+	| spacing stillLeftOver extraExpanderSpace nonLayoutDirectionMinSize nonLayoutDirectionNatSize absoluteMin |
 	vertical := aWidget vertical.
 	spacing := aWidget submorphCount - 1 * aWidget spacing.
 	expand := {false. false}.
 	expanderCount := 0.
 	totalMin := totalNat := spacing.
+	absoluteMin := 0.
 	
 	" initialize our list of items, count expanders "
 	childItems := aWidget layoutChildren collect: [:child | | item  |
@@ -16,9 +17,10 @@ preferredSizeFor: aWidget width: aNumber
 			childExpand := child wantsExpandIn: vertical.
 			expand := {expand first or: [childExpand first]. expand second or: [childExpand second]}].
 		item expanding ifTrue: [expanderCount := expanderCount + 1].
+		vertical ifFalse: [absoluteMin := absoluteMin + (child preferredSizeForWidth: 0) minSize x].
 		item].
 	
-	childItems size < 0 ifTrue: [^ {0 asPoint. 0 asPoint}].
+	childItems size < 0 ifTrue: [^ BTSizeRequest fixed: 0 asPoint].
 	
 	" give each child a tentative amount of space.
 	  vertical case is easy: just give our container width and see what height we get
@@ -27,10 +29,10 @@ preferredSizeFor: aWidget width: aNumber
 		vertical
 			ifTrue: [item takeWidth: aNumber]
 			ifFalse: [ | space |
-				space := (aNumber / (expanderCount > 0 ifTrue: [expanderCount] ifFalse: [childItems size])) floor - totalMin.
+				space := (aNumber / (expanderCount > 0 ifTrue: [expanderCount] ifFalse: [childItems size])) floor - absoluteMin max: 0.
 				expanderCount > 0
 					ifTrue: [item expanding ifTrue: [item takeWidth: space] ifFalse: [item takeWidth: 0]]
-					ifFalse: [item takeWidth: space ]].
+					ifFalse: [item takeWidth: space]].
 		
 		totalMin := totalMin + item minSize.
 		totalNat := totalNat + item naturalSize].

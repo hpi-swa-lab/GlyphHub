@@ -37,5 +37,5 @@ initialize
 			add: fontSelectCompletion;
 			add: fontSelectButton;
 			add: resetFontButton);
-		add: sampleTextWidget;
+		add: (BTScrollArea new add: sampleTextWidget);
 		add: commentSelectionButton
