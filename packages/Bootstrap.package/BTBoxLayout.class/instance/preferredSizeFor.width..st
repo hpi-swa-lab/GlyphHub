@@ -27,7 +27,7 @@ preferredSizeFor: aWidget width: aNumber
 		vertical
 			ifTrue: [item takeWidth: aNumber]
 			ifFalse: [ | space |
-				space := (aNumber / (expanderCount > 0 ifTrue: [expanderCount] ifFalse: [childItems size])) floor.
+				space := (aNumber / (expanderCount > 0 ifTrue: [expanderCount] ifFalse: [childItems size])) floor - totalMin.
 				expanderCount > 0
 					ifTrue: [item expanding ifTrue: [item takeWidth: space] ifFalse: [item takeWidth: 0]]
 					ifFalse: [item takeWidth: space ]].

@@ -1,4 +1,0 @@
-bugs
-expectedFailures
-
-	^ #(testLabelNestedWithPaddingAndAnotherChild)
