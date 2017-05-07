@@ -10,7 +10,8 @@
 		"codepoints",
 		"comments",
 		"tags",
-		"threadGlyphAssociations" ],
+		"threadGlyphAssociations",
+		"threadSubscriptions" ],
 	"name" : "FRTThread",
 	"pools" : [
 		 ],

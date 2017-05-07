@@ -35,5 +35,6 @@ DOMAIN = {
     'codepoint': Codepoint._eve_schema['codepoint'],
     'comment': Comment._eve_schema['comment'],
     'attachment': Attachment._eve_schema['attachment'],
-    'thread_glyph_association': ThreadGlyphAssociation._eve_schema['thread_glyph_association']
+    'thread_glyph_association': ThreadGlyphAssociation._eve_schema['thread_glyph_association'],
+    'thread_subscription': ThreadSubscription._eve_schema['thread_subscription']
 }

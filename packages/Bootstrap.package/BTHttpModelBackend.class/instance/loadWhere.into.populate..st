@@ -9,7 +9,7 @@ loadWhere: aSelectorValueDictionary into: aClass populate: aCollection
 			put: (value isBTModel ifTrue: [value id] ifFalse: [value])].
 	
 	^ (self
-		request: aClass modelName, '?where=', final asJsonString, '&', (self populateString: aCollection)
+		request: (self class camelCaseToUnderscore: aClass modelName), '?where=', final asJsonString, '&', (self populateString: aCollection)
 		method: 'GET'
 		data: nil)
 		then: [:list | (list at: '_items') collect: [:item | self jsonToModel: item modelClass: aClass]]

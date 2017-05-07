@@ -20,6 +20,7 @@ class User(CommonColumns):
     salt = Column(String(120))
     fonts = relationship('Font', back_populates='author')
     attachments = relationship('Attachment', back_populates='owner')
+    thread_subscriptions = relationship('ThreadSubscription', back_populates='user')
 
     def generate_auth_token(self, expiration=frt_server.config.TOKEN_EXPIRATION):
         """Generates token for given expiration

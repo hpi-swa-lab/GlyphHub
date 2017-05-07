@@ -7,6 +7,11 @@ initialize
 		pointSize: 64;
 		centered: true.
 	
+	subscriptionButton := BTButton new
+		small;
+		align: #(center center);
+		when: #clicked send: #toggleSubscription to: self.
+	
 	title := BTLabel new heading.
 	tagArea := (BTPage row)
 		spacing: BTWidget spacing / 3;
@@ -17,7 +22,9 @@ initialize
 		withLayout;
 		vertical: true;
 		withPadding;
-		add: title;
+		add: (BTPage row
+			add: title
+			oppositeTo: subscriptionButton);		
 		add: preview;
 		add: tagArea;
 		add: commentArea;
