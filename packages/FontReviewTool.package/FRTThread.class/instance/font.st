@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 font
 
 	^ self threadGlyphAssociations anyOne glyph font

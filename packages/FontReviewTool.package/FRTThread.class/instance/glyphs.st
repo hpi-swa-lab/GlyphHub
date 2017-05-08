@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 glyphs
 
 	^ self threadGlyphAssociations collect: [:each | each glyph]

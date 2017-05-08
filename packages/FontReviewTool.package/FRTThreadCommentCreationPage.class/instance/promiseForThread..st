@@ -6,5 +6,5 @@ promiseForThread: aThread
 		ifTrue: [
 			(FRTThread
 				load: aThread id
-				populate: #(comments  'comments.author' threadGlyphAssociations 'threadGlyphAssociations.glyph' 'threadGlyphAssociations.glyph.font' 'threadGlyphAssociations.glyph.font.family')
+				populate: self threadFields
 				from: self backend)].
