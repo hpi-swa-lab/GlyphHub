@@ -1,6 +1,8 @@
 event handling
 mouseEnter: anEvent
-	self
-		hovered: true;
-		triggerHovered: true event: anEvent;
-		changed
+
+	self disabled ifFalse: [
+		self
+			hovered: true;
+			triggerHovered: true event: anEvent;
+			changed]

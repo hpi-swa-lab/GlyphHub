@@ -8,6 +8,7 @@ initialize
 	spacing := 0.
 	expand := false.
 	ignoreLayout := false.
+	disabled := false.
 	align := #(fill fill).
 	requestCache := BTSizeRequestCache new.
 	

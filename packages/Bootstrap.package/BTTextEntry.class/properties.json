@@ -8,7 +8,6 @@
 	"instvars" : [
 		"placeholder",
 		"focused",
-		"disabled",
 		"drawCursor",
 		"blinkStart",
 		"multiLine",

@@ -14,7 +14,8 @@
 		"ignoreLayout",
 		"expand",
 		"maxSize",
-		"requestCache" ],
+		"requestCache",
+		"disabled" ],
 	"name" : "BTWidget",
 	"pools" : [
 		 ],
