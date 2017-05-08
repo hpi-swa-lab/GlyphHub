@@ -1,4 +1,4 @@
-styling
+event handling
 keyStroke: anEvent
 
 	| key |

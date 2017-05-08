@@ -1,0 +1,1 @@
+A FRTFontPicker is a TextCompletionWidget, that popuiates all known fonts, when given a backend.

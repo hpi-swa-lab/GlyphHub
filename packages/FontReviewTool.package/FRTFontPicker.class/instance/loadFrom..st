@@ -1,4 +1,4 @@
-as yet unclassified
+loading
 loadFrom: aBackend
 
 	(FRTFont loadAllFrom: aBackend populate: #(family)) then: [:fonts | 

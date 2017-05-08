@@ -1,4 +1,4 @@
-updating
+accessing
 saveButtonVisible
 
 	^ saveButton visible
