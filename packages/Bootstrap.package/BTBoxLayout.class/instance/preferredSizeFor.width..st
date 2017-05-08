@@ -1,23 +1,26 @@
 layout
 preferredSizeFor: aWidget width: aNumber
 
-	| spacing stillLeftOver extraExpanderSpace nonLayoutDirectionMinSize nonLayoutDirectionNatSize absoluteMin |
+	| spacing stillLeftOver extraExpanderSpace nonLayoutDirectionMinSize nonLayoutDirectionNatSize absoluteMin children |
 	vertical := aWidget vertical.
-	spacing := aWidget submorphCount - 1 * aWidget spacing.
+	children := aWidget layoutChildren.
+	spacing := children size - 1 * aWidget spacing.
 	expand := {false. false}.
 	expanderCount := 0.
 	totalMin := totalNat := spacing.
 	absoluteMin := 0.
 	
 	" initialize our list of items, count expanders "
-	childItems := aWidget layoutChildren collect: [:child | | item  |
+	childItems := children collect: [:child | | item  |
 		item := BTBoxLayoutItem new widget: child.
 		item inVerticalLayout: aWidget vertical.
 		(expand first and: [expand second]) ifFalse: [ | childExpand |
 			childExpand := child wantsExpandIn: vertical.
 			expand := {expand first or: [childExpand first]. expand second or: [childExpand second]}].
 		item expanding ifTrue: [expanderCount := expanderCount + 1].
-		vertical ifFalse: [absoluteMin := absoluteMin + (child preferredSizeForWidth: 0) minSize x].
+		vertical ifFalse: [
+			item minSize: (child preferredSizeForWidth: 0) minSize.
+			absoluteMin := absoluteMin + item minSize x].
 		item].
 	
 	childItems size < 0 ifTrue: [^ BTSizeRequest fixed: 0 asPoint].
