@@ -6,4 +6,4 @@ loadThreadSubscriptionStatus: aThread
 			self subscription: (subscriptionList
 				ifNotEmpty: [:list | list anyOne]
 				ifEmpty: [self newThreadSubscription: aThread]).
-			self updateSubscriptionState]
+			self updateSubscriptionButtonState]

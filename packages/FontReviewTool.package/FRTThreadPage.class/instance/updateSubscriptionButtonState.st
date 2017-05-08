@@ -1,5 +1,5 @@
 initialize-release
-updateSubscriptionState
+updateSubscriptionButtonState
 
 	self subscription isCreated
 		ifTrue: [
