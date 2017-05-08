@@ -42,11 +42,13 @@ keyStroke: anEvent
 		^Clipboard clipboardText: self selectedText].
 	key = '<escape>' ifTrue: [
 		^ self triggerCancelled].
-	key = '<cr>' ifTrue: [
-		self multiLine ifFalse: [^ self triggerConfirmed: self text]].
+	(key = '<cr>' and: [self multiLine not]) ifTrue: [
+		^ self triggerConfirmed: self text].
+	(key = '<tab>' or: [key = '<Shift-tab>']) ifTrue: [
+		^ self pasteUpMorphHandlingTabAmongFields ifNotNilDo: [:p | p tabHitWithEvent: anEvent]].
 	
 	self editable ifTrue: [
-		key = '<backspace>' ifTrue: [
+		(key = '<backspace>' or: [key = '<Shift-backspace>']) ifTrue: [
 			^ self deleteBeforeCursor].
 		key = '<delete>' ifTrue: [
 			^ self deleteAfterCursor].
@@ -54,8 +56,6 @@ keyStroke: anEvent
 			^ self deleteNextWord: -1].
 		key = '<Ctrl-delete>' ifTrue: [
 			^ self deleteNextWord: 1].
-		key = '<tab>' ifTrue: [
-			^ self pasteUpMorphHandlingTabAmongFields ifNotNilDo: [:p | p tabHitWithEvent: anEvent]].
 		key = '<Cmd-v>' ifTrue: [
 			^ self insertAtCursor: Clipboard clipboardText].
 		key = '<Cmd-x>' ifTrue: [
