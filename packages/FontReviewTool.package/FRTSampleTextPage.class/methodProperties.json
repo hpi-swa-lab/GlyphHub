@@ -4,8 +4,9 @@
 	"instance" : {
 		"applyFontToSampleTextWidget" : "TB 5/8/2017 10:43",
 		"applyName:font:" : "TB 5/8/2017 10:55",
+		"authorLabel" : "lcj 5/8/2017 12:27",
 		"breadcrumbs" : "ek 4/19/2017 17:25",
-		"enteringWith:" : "TB 5/8/2017 11:01",
+		"enteringWith:" : "lcj 5/8/2017 12:29",
 		"initialize" : "TB 5/8/2017 11:03",
 		"openCreateCommentPage" : "TB 5/8/2017 10:47",
 		"resetFont" : "TB 5/3/2017 21:38",
@@ -13,4 +14,6 @@
 		"sampleText:" : "ek 4/19/2017 13:33",
 		"sampleTextWidget" : "ek 4/21/2017 15:12",
 		"selectedFont" : "ek 4/24/2017 11:03",
-		"selectedFont:" : "ek 4/24/2017 11:03" } }
+		"selectedFont:" : "ek 4/24/2017 11:03",
+		"setLabels" : "lcj 5/8/2017 12:27",
+		"titleLabel" : "lcj 5/8/2017 12:27" } }

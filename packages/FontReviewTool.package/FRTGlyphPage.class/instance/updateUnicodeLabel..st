@@ -1,4 +1,4 @@
-accessing
+updating
 updateUnicodeLabel: aGlyph.
 	
 	aGlyph loadGlif
