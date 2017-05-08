@@ -16,7 +16,8 @@ openSketchEditor
 			padding: BTWidget spacing;
 			add: editor);
 		minSize: 700;
-		openCentered.
+		openCentered;
+		yourself.
 	
 	editor ensureContentsFit.
 	

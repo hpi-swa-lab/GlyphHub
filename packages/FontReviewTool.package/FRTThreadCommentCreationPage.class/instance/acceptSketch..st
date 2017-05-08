@@ -1,13 +1,11 @@
 callbacks
 acceptSketch: aForm
 
-	| index |
-	(self valueOfProperty: #sketchDialog) delete.
-	self removeProperty: #sketchDialog.
-	
+	self closeSketchEditor.
+
 	attachmentPreview
 		ifNotNil: [attachmentPreview form: aForm]
-		ifNil: [
+		ifNil: [ | index |
 			attachmentPreview := (BTImage form: aForm)
 				scalingMode: #shrink;
 				align: #(center center).
