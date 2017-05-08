@@ -1,0 +1,1 @@
+A FRTRichTextEditor contains UI elements for editing its rich text.

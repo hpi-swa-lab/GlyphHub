@@ -1,0 +1,1 @@
+A FRTRichText contains a set of paragraphs as its submorphs. It also knows which paragraph was selected last.
