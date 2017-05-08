@@ -4,16 +4,12 @@ initialize
 	super initialize.
 	
 	titleField := BTTextAreaWithLabel text: 'Title' placeholder: 'Enter title'.
-	textField := BTTextAreaWithLabel text: 'Text' placeholder: 'Enter text'.
-	textField textArea
-		multiLine: true;
-		minRows: 5.
+	textEditor := FRTRichTextEditor new
+		addEmptyParagraph;
+		when: #saved send: #saveSampleText: to: self;
+		yourself.
 	
 	self
 		add: (BTLabel heading: 'Create a sample text');
 		add: titleField;
-		add: textField;
-		add: ((BTButton text: 'Save')
-			colorType: #primary;
-			align: #(end start);
-			when: #clicked send: #saveSampleText to: self)
+		add: textEditor

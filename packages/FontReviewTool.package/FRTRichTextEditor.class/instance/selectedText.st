@@ -1,0 +1,4 @@
+updating
+selectedText
+
+	^ richText selectedText

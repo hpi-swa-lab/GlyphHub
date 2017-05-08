@@ -1,7 +1,6 @@
 accessing
-font: aFont
+font: aFontNameString
 
-	font := aFont.
+	font := aFontNameString.
 	
-	font ifNotNil: [
-		super font: font fontNameForPango]
+	font ifNotNil: [super font: font]

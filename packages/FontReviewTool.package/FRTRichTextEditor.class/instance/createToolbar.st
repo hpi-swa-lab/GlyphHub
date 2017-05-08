@@ -12,6 +12,9 @@ createToolbar
 	fontInput := FRTFontPicker new
 		when: #confirmed send: #selectFontNamed:suggestion: to: self.
 	
+	saveButton := ((BTButton icon: #floppy_o) colorType: #primary)
+		when: #clicked send: #triggerSaved: to: self with: richText.
+	
 	^ BTPage row
 		add: ((BTButton icon: #plus) when: #clicked send: #addEmptyParagraph to: richText);
 		add: (BTButtonGroup new
@@ -30,4 +33,4 @@ createToolbar
 			attach: (BTPopover new
 				add: otFeaturesInput));
 		add: BTWidget spacer;
-		add: ((BTButton icon: #floppy_o) colorType: #primary)
+		add: saveButton

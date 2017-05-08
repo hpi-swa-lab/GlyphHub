@@ -10,7 +10,8 @@
 		"pointSizeInput",
 		"otFeaturesInput",
 		"fontInput",
-		"backend" ],
+		"backend",
+		"saveButton" ],
 	"name" : "FRTRichTextEditor",
 	"pools" : [
 		 ],

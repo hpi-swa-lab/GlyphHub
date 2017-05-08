@@ -10,10 +10,12 @@ initialize
 		align: #(end center);
 		secondary.
 	
-	sampleTextWidget := BTTextEntry new
-		editable: false.
+	sampleTextWidget := FRTRichTextEditor new
+		saveButtonVisible: false;
+		yourself.
 	
 	fontSelectCompletion :=  FRTFontPicker new
+		placeholder: 'Select Font for all Paragraphs ...';
 		when: #confirmed send: #applyName:font: to: self.
 	
 	fontSelectButton := ((BTButton label: 'Apply Font')
@@ -37,5 +39,5 @@ initialize
 			add: fontSelectCompletion;
 			add: fontSelectButton;
 			add: resetFontButton);
-		add: (BTScrollArea new add: sampleTextWidget);
+		add: sampleTextWidget;
 		add: commentSelectionButton

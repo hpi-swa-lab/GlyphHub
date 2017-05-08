@@ -1,4 +1,4 @@
 as yet unclassified
-font: aFont
+font: aFontNameString
 
-	self submorphsDo: [:paragraph | paragraph font: aFont]
+	self submorphsDo: [:paragraph | paragraph font: aFontNameString]
