@@ -1,5 +1,5 @@
 loading
-allThreadSubscriptions: aThread
+allThreadSubscriptionsFor: aThread
 
 	 ^ FRTThreadSubscription
 		loadWhere: (Dictionary newFrom: { 

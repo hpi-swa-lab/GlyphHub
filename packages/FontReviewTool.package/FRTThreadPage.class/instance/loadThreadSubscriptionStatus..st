@@ -1,7 +1,7 @@
 loading
 loadThreadSubscriptionStatus: aThread
 
-	^ (self allThreadSubscriptions: aThread)
+	^ (self allThreadSubscriptionsFor: aThread)
 		then: [:subscriptionList |
 			self subscription: (subscriptionList
 				ifNotEmpty: [:list | list anyOne]
