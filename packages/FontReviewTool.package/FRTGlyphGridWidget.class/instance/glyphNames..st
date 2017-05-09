@@ -1,11 +1,14 @@
 accessing
 glyphNames: aCollection
 
+	| requestDictionary |
 	glyphNames := aCollection.
-	(self topLevel backend loadWhere: #glyphName equals: aCollection into: FRTGlyph populate: #('threadGlyphAssociations'))
-		then: [ :loadedGlyphs |
-			loadedGlyphs do: [:glyph |
-				self add: ((FRTGlyphPreviewWidget newWithRenderer: renderer)
-					when: #clicked send: #openGlyph: to: self with: glyph glyphName;
-					glyph: glyph;
-					pointSize: self pointSize)]]
+	requestDictionary := {
+		'glyphName' -> glyphNames . 
+		'fontId' -> self font id
+		} as: Dictionary.
+	(self topLevel backend loadWhere: requestDictionary into: FRTGlyph populate: #('threadGlyphAssociations'))
+	"this promise only resolves with glyph models that already exist on the server. However, not every glyph has an entry on the server so we need to create our own models"
+		then: [ :loadedGlyphModels | | allGlyphModels |
+			allGlyphModels := self completeGlyphModelCollection: loadedGlyphModels.
+			self createGlyphPreviewWidgetsFor: allGlyphModels]

@@ -8,8 +8,7 @@
 	"instvars" : [
 		"glyphNames",
 		"renderer",
-		"pointSize",
-		"font" ],
+		"pointSize" ],
 	"name" : "FRTGlyphGridWidget",
 	"pools" : [
 		 ],

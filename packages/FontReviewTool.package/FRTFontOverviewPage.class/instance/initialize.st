@@ -14,7 +14,7 @@ initialize
 		when: #clicked send: #openGlyphInputPage to: self.
 	updateButton := (BTButton label: 'Update' icon: #cloud_upload)
 		colorType: #primary.
-	
+		
 	uploadPopover := FRTUploadPopover new
 		attachTo: updateButton.
 	
@@ -36,5 +36,6 @@ initialize
 			add: BTWidget spacer;
 			add: updateButton;
 			add: inputButton);
-		add: tabContainer
+		add: tabContainer;
+		createPreviewGlyphsNotice
 	

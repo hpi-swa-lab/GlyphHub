@@ -1,7 +1,11 @@
 accessing
 openGlyph: aGlyphName
 
-	(((FRTGlyph loadBy: #glyphName value: aGlyphName from: self topLevel backend)
+	| glyphLoadDictionary |
+	glyphLoadDictionary := {
+		#glyphName -> aGlyphName.
+		#fontId -> self font id} as: Dictionary.
+	(((FRTGlyph loadWhere: glyphLoadDictionary from: self topLevel backend)
 		then:  [:glyphs |
 			glyphs
 				ifEmpty: [
