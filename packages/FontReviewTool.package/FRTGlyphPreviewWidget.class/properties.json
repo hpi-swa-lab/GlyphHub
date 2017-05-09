@@ -1,5 +1,5 @@
 {
-	"category" : "FontReviewTool",
+	"category" : "FontReviewTool-GlyphGrid",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
@@ -8,8 +8,9 @@
 	"instvars" : [
 		"counter",
 		"glyph",
-		"label" ],
-	"name" : "FRTGlyphGridItemWidget",
+		"label",
+		"glyphWidget" ],
+	"name" : "FRTGlyphPreviewWidget",
 	"pools" : [
 		 ],
 	"super" : "BTClickable",

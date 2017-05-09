@@ -1,12 +1,14 @@
 {
 	"class" : {
-		 },
+		"newWithRenderer:" : "al 5/9/2017 11:22" },
 	"instance" : {
 		"changeColorOnHover" : "TB 4/9/2017 20:58",
 		"commentCount:" : "al 5/8/2017 17:40",
 		"drawOn:" : "TB 4/9/2017 22:59",
 		"extent:" : "al 5/8/2017 17:55",
 		"glyph" : "al 5/8/2017 11:45",
-		"glyph:" : "al 5/8/2017 17:59",
+		"glyph:" : "al 5/9/2017 11:43",
 		"initialize" : "al 5/8/2017 17:36",
+		"initializeWithRenderer:" : "al 5/9/2017 11:25",
+		"pointSize:" : "al 5/9/2017 11:28",
 		"updateCounterPosition" : "al 5/8/2017 17:58" } }
