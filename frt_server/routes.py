@@ -166,6 +166,31 @@ def register_routes(app):
 
         return jsonify(sqla_object_to_dict(attachment, Attachment.__table__.columns.keys()))
 
+    def _upload_avatar():
+        """helper that uploads a user avatar from the file field"""
+        session = app.data.driver.session
+        user = app.auth.get_request_auth_value()
+        if 'file' not in request.files:
+            return jsonify({'error': 'No file given'}), 400
+
+        avatar_file = request.files['file']
+        if avatar_file.filename == '':
+            return jsonify({'error': 'Invalid filename'}), 400
+
+        filename = secure_filename(os.path.basename(avatar_file.filename))
+        file_type = filename.rsplit('.', 1)[-1].lower()
+
+        if file_type not in ('jpg', 'jpeg', 'png', 'gif'):
+            return jsonify({'error': 'Invalid file type'}), 400
+
+        user.convert_image(avatar_file.filename)
+
+        user.clean_avatar_file()
+        user.ensure_avatar_folder_exists()
+        avatar_file.save(user.avatar_file_path())
+
+        return jsonify(sqla_object_to_dict(attachment, Attachment.__table__.columns.keys()))
+
     @app.route('/comment/<comment_id>/attachment', methods=['POST'])
     @requires_auth('')
     def comment_attach(comment_id):
@@ -186,6 +211,12 @@ def register_routes(app):
         if not attachment:
             return jsonify({'error': 'Attachment does not exist'})
         return send_from_directory(attachment.folder_path(), attachment.data1)
+    
+    @app.route('/user_avatar/upload', methods=['POST'])
+    @requires_auth('')
+    def user_avatar_upload():
+        """upload a new user avatar for the currently logged in user"""
+        return _upload_avatar()
 
     if frt_server.config.DEBUG:
         @app.before_request
