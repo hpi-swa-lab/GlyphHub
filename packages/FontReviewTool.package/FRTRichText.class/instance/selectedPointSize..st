@@ -1,5 +1,5 @@
-as yet unclassified
-selectedPointSize: aNumber
+paragraphs
+selectedPointSize: aNumberOrString
 
 	self selectedParagraph ifNotNilDo: [:paragraph | 
-		[paragraph pointSize: aNumber asNumber] on: NumberParserError do: []]
+		[paragraph pointSize: aNumberOrString asNumber] on: NumberParserError do: []]

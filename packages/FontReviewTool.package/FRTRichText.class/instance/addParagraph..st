@@ -1,4 +1,4 @@
-as yet unclassified
+paragraphs
 addParagraph: aParagraph
 
 	aParagraph when: #focused send: #selectedParagraph: to: self with: aParagraph.

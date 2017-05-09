@@ -1,4 +1,4 @@
-as yet unclassified
+paragraphs
 selectedOpenTypeFeatures: aString
 
 	self selectedParagraph ifNotNilDo: [:paragraph | paragraph openTypeFeatures: aString]

@@ -1,4 +1,4 @@
-as yet unclassified
+paragraphs
 focusParagraph: aParagraph
 
 	self activeHand newKeyboardFocus: aParagraph

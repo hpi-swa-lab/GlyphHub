@@ -1,4 +1,4 @@
-as yet unclassified
+paragraphs
 selectedParagraph: aParagraph
 
 	selectedParagraph := aParagraph.

@@ -3,6 +3,7 @@ alignment: aSymbol
 
 	alignment := aSymbol.
 	
+	"justify is a special case in Pango, so it needs to use a different function"
 	self primLayout: self layout justify: aSymbol == #justify.
 	
 	self primLayout: self layout alignment: (aSymbol caseOf: {

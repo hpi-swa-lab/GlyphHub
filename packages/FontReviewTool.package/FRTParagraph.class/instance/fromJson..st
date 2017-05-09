@@ -1,4 +1,4 @@
-todo
+converting
 fromJson: aDictionary
 
 	self

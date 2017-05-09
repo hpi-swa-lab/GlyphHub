@@ -1,4 +1,4 @@
-as yet unclassified
+paragraphs
 selectedParagraph
 
 	^ selectedParagraph ifNil: [self submorphs ifNotEmptyDo: #first ifEmpty: []]

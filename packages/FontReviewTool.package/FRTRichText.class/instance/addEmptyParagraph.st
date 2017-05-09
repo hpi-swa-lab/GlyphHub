@@ -1,4 +1,4 @@
-as yet unclassified
+paragraphs
 addEmptyParagraph
 
 	self addParagraph: FRTParagraph new default

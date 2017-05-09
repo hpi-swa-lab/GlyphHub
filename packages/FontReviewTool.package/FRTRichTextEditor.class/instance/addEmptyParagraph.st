@@ -1,4 +1,4 @@
-todo
+paragraphs
 addEmptyParagraph
 
 	richText addEmptyParagraph

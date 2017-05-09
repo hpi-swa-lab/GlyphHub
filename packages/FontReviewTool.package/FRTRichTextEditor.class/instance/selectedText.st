@@ -1,4 +1,4 @@
-todo
+updating
 selectedText
 
 	^ richText selectedText
