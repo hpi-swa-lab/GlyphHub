@@ -5,5 +5,5 @@ commentCount: aNumber
 		ifTrue: [self remove: counter]
 		ifFalse: [
 			self
-				add: (counter text: aNumber);
+				addMorphFront: (counter text: aNumber);
 				updateCounterPosition]

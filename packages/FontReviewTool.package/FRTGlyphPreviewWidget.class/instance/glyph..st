@@ -11,6 +11,4 @@ glyph: aGlyphModel
 	self
 		add: glyphWidget;
 		add: label;
-		add: counter.
-	
-	self commentCount: glyph threadGlyphAssociations size
+		commentCount: glyph threadGlyphAssociations size
