@@ -5,5 +5,5 @@ allThreadSubscriptionsFor: aThread
 		loadWhere: (Dictionary newFrom: { 
 			'thread_id' -> aThread id. 
 			'user_id'  -> self user id })
-		populate:#(user thread)
+		populate: #()
 		from: self backend
