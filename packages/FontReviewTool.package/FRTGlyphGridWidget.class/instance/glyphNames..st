@@ -2,16 +2,14 @@ accessing
 glyphNames: aCollection
 
 	glyphNames := aCollection.
-	
-	self glyphNames do: [:glyphName | | glyph label |
-		glyph := (FRTGlyphWidget newWithRenderer: renderer)
-			pointSize: self pointSize;
-			glyphNames: {glyphName};
-			centered: true.
-		
-		label := (BTLabel small: glyphName) ellipsize: #middle.
-		
-		self add: (FRTGlyphGridItemWidget new
-			when: #clicked send: #openGlyph: to: self with: glyphName;
-			add: glyph;
-			add: label)]
+	(self topLevel backend loadWhere: #glyphName equals: aCollection into: FRTGlyph populate: #('threadGlyphAssociations'))
+		then: [ :loadedGlyphs |
+			loadedGlyphs do: [:glyph | | glyphWidget |
+				glyphWidget := (FRTGlyphWidget newWithRenderer: renderer)
+					pointSize: self pointSize;
+					glyph: glyph;
+					centered: true.
+
+				self add: (FRTGlyphGridItemWidget new
+					when: #clicked send: #openGlyph: to: self with: glyph glyphName;
+					glyph: glyphWidget)]]

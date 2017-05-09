@@ -3,7 +3,7 @@ initialize
 
 	super initialize.
 
-	counter := BTLabel new.
+	counter := BTBadge new ignoreLayout: true.
 
 	self
 		withLayout;

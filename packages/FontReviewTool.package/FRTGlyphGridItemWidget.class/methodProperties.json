@@ -3,6 +3,10 @@
 		 },
 	"instance" : {
 		"changeColorOnHover" : "TB 4/9/2017 20:58",
-		"commentCount:" : "TB 4/9/2017 23:01",
+		"commentCount:" : "al 5/8/2017 17:40",
 		"drawOn:" : "TB 4/9/2017 22:59",
-		"initialize" : "TB 4/9/2017 23:01" } }
+		"extent:" : "al 5/8/2017 17:55",
+		"glyph" : "al 5/8/2017 11:45",
+		"glyph:" : "al 5/8/2017 17:59",
+		"initialize" : "al 5/8/2017 17:36",
+		"updateCounterPosition" : "al 5/8/2017 17:58" } }

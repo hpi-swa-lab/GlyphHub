@@ -6,5 +6,4 @@ enteringWith: aFont
 			self setFont: newFont.
 			
 			self family previewGlyphs ifEmpty: [self displayPreviewGlyphsNotice].
-			
 			BTPromise all: self tabsContent]

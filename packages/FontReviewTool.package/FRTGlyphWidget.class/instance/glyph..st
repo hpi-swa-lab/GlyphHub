@@ -1,6 +1,6 @@
 accessing
 glyph: aGlyphModel
 
-	self
-		font: aGlyphModel font;
-		glyphNames: {aGlyphModel glyphName}
+	aGlyphModel font ifNotNil: [self font: aGlyphModel font].
+
+	self glyphNames: {aGlyphModel glyphName}
