@@ -3,3 +3,4 @@ eve-sqlalchemy
 pytest
 fontmake
 pygit2
+Pillow
