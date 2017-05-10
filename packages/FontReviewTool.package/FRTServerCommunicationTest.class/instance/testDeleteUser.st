@@ -1,7 +1,7 @@
 testing
 testDeleteUser
 	| userPromise count users |
-	userPromise := FRTUser loadAllFrom: backend.
+	userPromise := FRTUser loadAllFrom: backend populate: #().
 	(self expect: userPromise) to resolve.
 	
 	users := userPromise value.

@@ -1,7 +1,7 @@
 testing
 testGetUsers
 	| promise |
-	promise := FRTUser loadAllFrom: backend.
+	promise := FRTUser loadAllFrom: backend populate: #().
 	(self expect: promise) to resolve.
 	
 	promise then: [ :users |

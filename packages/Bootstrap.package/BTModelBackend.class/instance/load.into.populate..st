@@ -1,8 +1,8 @@
 operations
 load: aNumber into: aClass populate: aCollection
+	" overwrite this if you have a more efficient method for loading by id directly "
 
-	^ self
-		loadWhere: #id
-		equals: aNumber
+	^ (self
+		loadWhere: {#id -> aNumber}
 		into: aClass
-		populate: aCollection
+		populate: aCollection) then: #onlyElement

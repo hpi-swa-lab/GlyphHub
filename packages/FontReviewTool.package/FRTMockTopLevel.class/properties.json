@@ -1,0 +1,15 @@
+{
+	"category" : "FontReviewTool-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "TB 5/9/2017 11:37",
+	"instvars" : [
+		"entities",
+		"id" ],
+	"name" : "FRTMockTopLevel",
+	"pools" : [
+		 ],
+	"super" : "FRTApplication",
+	"type" : "normal" }

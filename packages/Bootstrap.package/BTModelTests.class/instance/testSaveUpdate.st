@@ -1,7 +1,7 @@
 as yet unclassified
 testSaveUpdate
 	| model |
-	model := (BTPenguinModel load: 1 from: backend) value 
+	model := (BTPenguinModel load: 1 populate: #() from: backend) value 
 		name: 'Rico'.
 	
 	model := (self safePromise: (model saveTo: backend)) value.

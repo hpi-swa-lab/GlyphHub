@@ -1,9 +1,7 @@
 load-id
-load: aNumber populate: aCollection from: aBackend
+load: anIdNumber populate: aCollection from: aBackend
 	
-	^ (aBackend
-		loadWhere: #id
-		equals: aNumber
+	^ aBackend
+		load: anIdNumber
 		into: self
-		populate: aCollection)
-		then: [:models | models onlyElement]
+		populate: aCollection

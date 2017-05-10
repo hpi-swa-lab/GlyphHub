@@ -2,8 +2,6 @@ loading
 allThreadSubscriptionsFor: aThread
 
 	 ^ FRTThreadSubscription
-		loadWhere: (Dictionary newFrom: { 
-			'thread_id' -> aThread id. 
-			'user_id'  -> self user id })
+		loadWhere: {#thread -> aThread. #user -> self user}
 		populate: #()
 		from: self backend

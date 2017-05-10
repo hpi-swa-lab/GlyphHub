@@ -1,7 +1,7 @@
-as yet unclassified
+matching
 resolve
 	" awaits resolve of a promise "
 	
 	self waitForPromiseUpdatingWorld: subject.
 	
-	^self assert: subject isResolved operator: 'be resolved' expected: nil
+	^ self assert: subject isResolved operator: 'be resolved' expected: nil

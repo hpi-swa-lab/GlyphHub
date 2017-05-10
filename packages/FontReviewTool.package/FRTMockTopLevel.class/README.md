@@ -1,0 +1,1 @@
+A FRTMockTopLevel is a toplevel mocking the needed functions of an FRTApplication and implementing a very simple in-memory mock BTModelBackend (its backend method thus returns self).

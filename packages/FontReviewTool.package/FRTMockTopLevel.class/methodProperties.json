@@ -1,0 +1,22 @@
+{
+	"class" : {
+		"firstPage:with:mockData:" : "TB 5/9/2017 18:59",
+		"firstPage:with:prepare:" : "TB 5/9/2017 19:11" },
+	"instance" : {
+		"addEntity:" : "TB 5/9/2017 12:05",
+		"backend" : "TB 5/9/2017 11:36",
+		"delete:from:" : "TB 5/9/2017 11:49",
+		"initializeWithPage:with:mockData:" : "TB 5/9/2017 19:00",
+		"initializeWithPage:with:prepare:" : "TB 5/9/2017 19:11",
+		"load:into:populate:" : "TB 5/9/2017 12:24",
+		"loadAllInto:populate:" : "TB 5/9/2017 12:24",
+		"loadUfoDetails:font:" : "TB 5/9/2017 15:50",
+		"loadWhere:into:populate:" : "TB 5/9/2017 18:07",
+		"mockGlif:" : "TB 5/9/2017 15:49",
+		"nextId" : "TB 5/9/2017 11:35",
+		"rejectBecauseNotFound" : "TB 5/9/2017 19:02",
+		"rejectHttpBecause:status:" : "TB 5/9/2017 18:55",
+		"resolveWith:" : "TB 5/9/2017 15:32",
+		"save:to:" : "TB 5/9/2017 16:21",
+		"updateBreadcrumbs" : "TB 5/9/2017 18:34",
+		"user" : "TB 5/9/2017 15:50" } }

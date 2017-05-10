@@ -13,8 +13,8 @@ join: aModelList class: aClass populate: aCollection
 			association := associations at: field.
 			
 			children := self
-				loadWhere: ((association foreignClass associations at: association backPopulateKey ifAbsent: [#single]) cardinality == #many ifTrue: ['id'] ifFalse: [association backPopulateKey])
-				equals: (association cardinality == #single ifTrue: [current] ifFalse: [model id])
+				loadWhere: {((association foreignClass associations at: association backPopulateKey ifAbsent: [#single]) cardinality == #many ifTrue: ['id'] ifFalse: [association backPopulateKey])
+				-> (association cardinality == #single ifTrue: [current] ifFalse: [model id])}
 				into: association foreignClass
 				populate: #().
 			

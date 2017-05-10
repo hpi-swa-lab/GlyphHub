@@ -6,6 +6,6 @@ login: aUserNameString password: aPasswordString
 		request: '/login'
 		method: 'POST'
 		data: ({'username' -> aUserNameString. 'password' -> aPasswordString} as: Dictionary))
-		then: [ :response |
+		then: [:response |
 			self apiToken: (response at: 'token').
-			response at: 'user_id' ]
+			response at: 'user_id']

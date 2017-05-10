@@ -1,6 +1,4 @@
 instance creation
 firstPage: aPage
 
-	^ self basicNew
-		initializeWithPage: aPage;
-		yourself
+	^ self firstPage: aPage with: nil

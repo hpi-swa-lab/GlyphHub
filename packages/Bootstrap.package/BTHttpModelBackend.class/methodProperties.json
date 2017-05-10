@@ -11,12 +11,12 @@
 		"initialize" : "ek 4/11/2017 12:02",
 		"jsonArrayToModel:modelClass:" : "lcj 4/6/2017 12:41",
 		"jsonObjectToModel:modelClass:" : "ek 4/11/2017 14:37",
-		"jsonToModel:modelClass:" : "TB 4/9/2017 12:55",
+		"jsonToModel:modelClass:" : "TB 5/9/2017 17:18",
+		"load:into:populate:" : "TB 5/9/2017 16:56",
 		"loadAllInto:populate:" : "ek 4/12/2017 15:23",
-		"loadWhere:equals:into:populate:" : "ek 4/12/2017 15:26",
-		"loadWhere:into:populate:" : "JH 5/5/2017 17:33",
-		"login:password:" : "TB 4/9/2017 12:57",
+		"loadWhere:into:populate:" : "TB 5/9/2017 17:57",
+		"login:password:" : "TB 5/9/2017 17:21",
 		"populateString:" : "lcj 4/9/2017 14:58",
 		"request:method:data:" : "ek 4/11/2017 12:08",
 		"request:method:data:contentType:" : "ek 4/11/2017 12:54",
-		"save:to:" : "ek 4/11/2017 12:08" } }
+		"save:to:" : "TB 5/9/2017 17:50" } }

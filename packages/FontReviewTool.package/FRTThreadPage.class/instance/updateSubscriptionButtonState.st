@@ -3,10 +3,10 @@ updateSubscriptionButtonState
 
 	self subscription isCreated
 		ifTrue: [
-			subscriptionButton
+			self subscriptionButton
 				colorType: #secondary;
 				text: 'Unsubscribe']
 		ifFalse: [
-			subscriptionButton
+			self subscriptionButton
 				colorType: #primary;
 				text: 'Subscribe']

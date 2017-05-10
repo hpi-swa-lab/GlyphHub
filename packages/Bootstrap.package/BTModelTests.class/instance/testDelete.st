@@ -1,10 +1,10 @@
 as yet unclassified
 testDelete
 	| model |
-	model := (BTPenguinModel load: 1 from: backend) value.
+	model := (BTPenguinModel load: 1 populate: #() from: backend) value.
 	
 	(self expect: BTPenguinModel) to
-		decreaseIts: [ :subject | (subject loadAllFrom: backend) value size ]
+		decreaseIts: [ :subject | (subject loadAllFrom: backend populate: #()) value size ]
 		during: [ model deleteFrom: backend ].
 	
 	(self expect: model isDirty) to be: true.

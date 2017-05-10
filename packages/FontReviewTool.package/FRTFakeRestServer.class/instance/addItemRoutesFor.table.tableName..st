@@ -10,5 +10,5 @@ addItemRoutesFor: anItemDictionary table: aTableDictionary tableName: aString
 				req send200Response: '' contentType: 'application/json' ].
 			
 			" dont actually bother updating, just send a valid response "
-			req method = 'PUT' ifTrue: [ req send200Response: anItemDictionary asJsonString contentType: 'application/json' ]]
-		methods: ((server defaultHttpMethods copyWith: 'DELETE') copyWith: 'PUT')
+			req method = 'PATCH' ifTrue: [ req send200Response: anItemDictionary asJsonString contentType: 'application/json' ]]
+		methods: ((server defaultHttpMethods copyWith: 'DELETE') copyWith: 'PATCH')

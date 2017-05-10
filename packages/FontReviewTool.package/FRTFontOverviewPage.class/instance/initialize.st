@@ -21,7 +21,7 @@ initialize
 	renderer := FRTGlyphRenderer new.
 	allGlyphsPage := self initializeAllGlyphPage.
 	openDicsussionsPage := self initializeDiscussionsPage.
-	recentChangesPage := self initializeRecentChangesPage.	
+	recentChangesPage := self initializeRecentChangesPage.
 	
 	tabContainer := (BTPageNavigation contents: (OrderedCollection new
 		add: {'All Glyphs'. allGlyphsPage};

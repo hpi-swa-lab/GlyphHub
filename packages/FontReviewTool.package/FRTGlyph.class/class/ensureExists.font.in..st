@@ -2,7 +2,7 @@ accessing
 ensureExists: aGlyphNameStringCollection font: aFont in: aBackend
 
 	| allGlyphs |
-	^ ((self loadBy: 'glyphName' value: aGlyphNameStringCollection from: aBackend)
+	^ ((self loadWhere: 'glyphName' equals: aGlyphNameStringCollection from: aBackend populate: #())
 		then: [:glyphs |
 			allGlyphs := glyphs asOrderedCollection.
 			((aGlyphNameStringCollection

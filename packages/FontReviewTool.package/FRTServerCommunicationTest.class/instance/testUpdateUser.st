@@ -1,7 +1,7 @@
 testing
 testUpdateUser
 	| userPromise user |
-	userPromise := self safePromise: (FRTUser load: 1 from: backend).
+	userPromise := self safePromise: (FRTUser load: 1 populate: #() from: backend).
 	
 	(self expect: userPromise) to resolve.
 	

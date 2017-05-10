@@ -9,7 +9,7 @@ save: aModel to: aTableNameString
 		request: (aModel id == 0
 			ifTrue: [table]
 			ifFalse: [table, '/', aModel id])
-		method: (aModel id == 0 ifTrue: ['POST'] ifFalse: ['PUT'])
+		method: (aModel isCreated ifTrue: ['PATCH'] ifFalse: ['POST'])
 		data: aModel dirtyFieldsAndValues)
 		
 		then: [:data |

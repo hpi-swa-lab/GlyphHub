@@ -2,7 +2,7 @@ callbacks
 loadAttachments
 	
 	^ (FRTAttachment
-		loadWhere: ({'comment_id' -> nil. 'owner_id' -> self topLevel user} as: Dictionary)
+		loadWhere: {#comment -> nil. #owner -> self topLevel user}
 		populate: #()
 		from: self backend)
 		then: [:attachments |

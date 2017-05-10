@@ -8,9 +8,9 @@
 		"getTable:" : "JH 4/3/2017 14:45",
 		"initTestData" : "JH 4/3/2017 14:46",
 		"initialize" : "TB 3/13/2017 15:06",
-		"join:class:populate:" : "JH 4/27/2017 16:04",
+		"join:class:populate:" : "TB 5/9/2017 17:21",
 		"loadAllInto:populate:" : "ek 4/12/2017 15:36",
-		"loadWhere:equals:into:populate:" : "ek 4/12/2017 15:35",
+		"loadWhere:into:populate:" : "TB 5/9/2017 17:27",
 		"save:to:" : "TB 3/31/2017 10:20",
 		"serialize:" : "TB 3/14/2017 08:23",
 		"serializeField:" : "TB 3/14/2017 08:29" } }
