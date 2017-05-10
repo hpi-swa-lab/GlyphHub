@@ -1,4 +1,4 @@
-as yet unclassified
+testing
 testDisplaysDefaultFontTitle
 
 	(self expect: page) to haveText: family defaultFont fontName

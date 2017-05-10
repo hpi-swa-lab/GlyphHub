@@ -3,7 +3,6 @@
 		 },
 	"instance" : {
 		"enterPage" : "TB 5/9/2017 19:02",
-		"mockThread" : "TB 5/9/2017 12:10",
 		"setUp" : "TB 5/9/2017 19:14",
 		"testDisplaysTitle" : "TB 5/9/2017 16:30",
 		"testToggleSubscription" : "TB 5/9/2017 16:33" } }

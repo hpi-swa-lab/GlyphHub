@@ -1,4 +1,4 @@
-as yet unclassified
+mock-data
 addEntity: aBTModel
 
 	aBTModel saveTo: self

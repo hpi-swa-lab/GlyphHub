@@ -1,4 +1,4 @@
-as yet unclassified
+helper
 setUpForPage: aPage with: anObject prepare: aBlock
 
 	super setUp.

@@ -1,4 +1,4 @@
-as yet unclassified
+data-helper
 rejectHttpBecause: aMessageString status: aNumber
 
 	^ BTPromise new rejectWith: (BTHttpError new

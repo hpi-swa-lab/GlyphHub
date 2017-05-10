@@ -2,7 +2,7 @@ callbacks
 saveComment
 	"Saves a new comment to an existing thread or a new comment while creating a new thread for it"
 
-	(((self saveThread
+	^ (((self saveThread
 		then: [:thread | | comment |
 			comment := FRTComment new
 				author: self topLevel user;

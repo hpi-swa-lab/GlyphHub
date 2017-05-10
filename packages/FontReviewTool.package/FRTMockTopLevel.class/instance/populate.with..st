@@ -1,4 +1,4 @@
-as yet unclassified
+data-helper
 populate: aModel with: aCollection
 	" take a model and a collection of populate chains, e.g.:
 	  font.family
@@ -7,16 +7,19 @@ populate: aModel with: aCollection
 	
 	  fill the requested fields in the model and all nested requested fields "
 
-	aCollection do: [:populate | | field childPopulateChain populateChain childModelPromise |
+	aCollection do: [:populate | | field childPopulateChain populateChain childModel |
 		populateChain := populate splitBy: '.'.
 		field := populateChain first asSymbol.
 		childPopulateChain := aCollection select: [:chain | chain beginsWith: field, '.'] thenCollect: [:chain | chain allButFirst: (field, '.') size].
 		
-		childModelPromise := (aModel class
+		childModel := (aModel class
 			associationNamed: field
 			ifManyDo: [:association |
-				self loadWhere: {association backPopulateKey -> aModel id} into: association foreignClass populate: childPopulateChain]
+				(self loadWhere: {association backPopulateKey -> aModel id} into: association foreignClass populate: childPopulateChain) value
+					field: field;
+					owner: aModel;
+					yourself]
 			ifSingleDo: [:association |
-				self load: (aModel perform: field) into: association foreignClass populate: childPopulateChain]).
+				(self load: (aModel perform: field) into: association foreignClass populate: childPopulateChain) value]).
 		
-		childModelPromise value ifNotNilDo: [:childModel | aModel perform: field asMutator with: childModel]]
+		childModel ifNotNil: [aModel perform: field asMutator with: childModel]]

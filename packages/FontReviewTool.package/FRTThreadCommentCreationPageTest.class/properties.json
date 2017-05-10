@@ -1,0 +1,14 @@
+{
+	"category" : "FontReviewTool-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"thread" ],
+	"name" : "FRTThreadCommentCreationPageTest",
+	"pools" : [
+		 ],
+	"super" : "FRTApplicationPageTest",
+	"type" : "normal" }

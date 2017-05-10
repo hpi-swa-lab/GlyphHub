@@ -1,4 +1,4 @@
-as yet unclassified
+testing
 testToggleSubscription
 
 	(self expect: page) to haveA: BTButton labelled: 'Subscribe'.
