@@ -1,5 +1,6 @@
 {
 	"class" : {
+		"associationNamed:ifManyDo:ifSingleDo:" : "TB 5/10/2017 21:03",
 		"associations" : "ek 4/11/2017 12:38",
 		"load:populate:from:" : "TB 5/9/2017 17:01",
 		"loadAllFrom:populate:" : "ek 4/12/2017 15:23",
@@ -9,7 +10,7 @@
 		"nonAssociationFields" : "lcj 4/6/2017 12:56" },
 	"instance" : {
 		"backend" : "TB 4/5/2017 16:05",
-		"backend:" : "TB 5/9/2017 15:31",
+		"backend:" : "TB 5/10/2017 20:11",
 		"delete" : "JH 5/5/2017 18:02",
 		"deleteFrom:" : "ek 4/20/2017 14:56",
 		"dirtyFieldNames" : "ek 4/11/2017 14:37",
@@ -31,10 +32,11 @@
 		"privateId:" : "ek 4/11/2017 15:04",
 		"privateQuerying:" : "TB 5/9/2017 12:27",
 		"querying" : "ek 4/11/2017 15:04",
+		"releaseAssociationsIfUncreatedEntityDo:" : "TB 5/10/2017 21:24",
 		"save" : "TB 5/5/2017 11:18",
 		"saveAssociationsTo:" : "ek 4/20/2017 14:58",
 		"saveTo:" : "TB 4/9/2017 22:22",
 		"set:to:" : "JH 4/3/2017 11:54",
 		"update:with:" : "TB 4/11/2017 17:05",
-		"update:with:collectionForeignField:" : "lcj 4/6/2017 15:11",
+		"update:with:collectionForeignField:" : "TB 5/10/2017 21:11",
 		"update:with:foreignField:" : "lcj 4/6/2017 15:38" } }

@@ -1,4 +1,4 @@
-operations
+initialize-release
 initializeWithPage: aPage with: anObject prepare: aBlock
 
 	entities := Dictionary new.

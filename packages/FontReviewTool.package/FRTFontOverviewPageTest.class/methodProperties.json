@@ -2,6 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"mockFamily" : "TB 5/10/2017 09:03",
-		"setUp" : "TB 5/9/2017 19:15",
-		"testDisplaysDefaultFontTitle" : "TB 5/10/2017 09:03" } }
+		"mockFamily" : "TB 5/10/2017 13:31",
+		"setUp" : "TB 5/10/2017 21:16",
+		"testDisplaysDefaultFontTitle" : "TB 5/10/2017 15:09",
+		"testSetFontPreview" : "TB 5/10/2017 20:15" } }

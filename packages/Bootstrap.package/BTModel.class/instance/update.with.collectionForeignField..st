@@ -5,7 +5,7 @@ update: aField with: anObject collectionForeignField: aForeignField
 	current := self instVarNamed: aField.
 	current == anObject ifTrue: [^self].
 	
-	(anObject notNil and: [current notNil]) ifTrue: [
+	(anObject notNil and: [current notNil and: [current isBTModel]]) ifTrue: [
 		(current perform: aForeignField) remove: self ifAbsent: []].
 	
 	self instVarNamed: aField put: anObject.

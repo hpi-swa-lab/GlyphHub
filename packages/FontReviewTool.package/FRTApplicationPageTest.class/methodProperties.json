@@ -3,6 +3,7 @@
 		 },
 	"instance" : {
 		"addEntity:" : "TB 5/9/2017 18:28",
+		"findDialog:labelled:" : "TB 5/10/2017 15:28",
 		"openPage:with:" : "TB 5/9/2017 18:28",
 		"page" : "TB 5/9/2017 18:32",
 		"setUpForPage:with:prepare:" : "TB 5/9/2017 19:14",
