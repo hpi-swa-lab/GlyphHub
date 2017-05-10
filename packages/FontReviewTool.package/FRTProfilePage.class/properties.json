@@ -11,7 +11,9 @@
 		"userAvatarImage",
 		"newUsernameField",
 		"newPasswordField1",
-		"newPasswordField2" ],
+		"newPasswordField2",
+		"uploadedFileLabel",
+		"imageFileStream" ],
 	"name" : "FRTProfilePage",
 	"pools" : [
 		 ],

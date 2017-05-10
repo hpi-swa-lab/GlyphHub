@@ -8,6 +8,6 @@ trySavingPassword
 					self user password: newPasswordField1 text.
 					((self user saveTo: self backend)
 						then: [:data | self topLevel displayNotification: 'Password changed' type: #success])
-					catch: [:error | self topLevel displayNotification: 'An error occured, password not changed' type: #danger]]
-				ifFalse: [self topLevel displayNotification: 'Passwords don''t match' type: #danger]]
-		ifEmpty: [self topLevel displayNotification: 'Password can''t be empty' type: #danger]
+					catch: [:error | self topLevel displayNotification: 'An error occured, password not changed' type: #warning]]
+				ifFalse: [self topLevel displayNotification: 'Passwords don''t match' type: #warning]]
+		ifEmpty: [self topLevel displayNotification: 'Password can''t be empty' type: #warning]

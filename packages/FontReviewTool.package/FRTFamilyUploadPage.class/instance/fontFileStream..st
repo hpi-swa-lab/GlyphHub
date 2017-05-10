@@ -7,4 +7,4 @@ fontFileStream: aFileStream
 	filename := (((fontFileStream name) asString) subStrings: '/') last.
 	fontFileStream
 		ifNotNil: [(uploadedFileLabel text: filename) ellipsize: #start]
-		ifNil: [uploadedFileLabel italic: 'none']
+		ifNil: [uploadedFileLabel text: 'none']

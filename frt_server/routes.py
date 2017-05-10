@@ -4,7 +4,7 @@ import base64
 import re
 from functools import wraps
 
-from flask import request, jsonify, current_app, send_from_directory, Response
+from flask import request, jsonify, current_app, send_from_directory, Response, send_file
 from werkzeug.exceptions import Unauthorized
 from werkzeug.utils import secure_filename
 from eve.auth import requires_auth
@@ -104,13 +104,11 @@ def register_routes(app):
             return jsonify({'error': 'Associated font does not exist'}), 400
 
         try:
-            contents = font.get_otf_contents()
+            otf = open(font.otf_file_path())
         except FileNotFoundError:
-            return jsonify({'error': 'Associated font does not contain an otf'})
+            return jsonify({'error': 'Associated font does not contain an otf'}), 400
 
-        response = Response(contents, mimetype='application/octet-stream')
-        response.headers["Content-Disposition"] = "attachment; filename=font.otf"
-        return response
+        return send_file(font.otf_file_path(), mimetype='application/octet-stream', as_attachment=True)
 
     @app.route('/font/<font_id>/ufo', methods=['GET'])
     @requires_auth('')
@@ -179,17 +177,14 @@ def register_routes(app):
 
         filename = secure_filename(os.path.basename(avatar_file.filename))
         file_type = filename.rsplit('.', 1)[-1].lower()
-
         if file_type not in ('jpg', 'jpeg', 'png', 'gif'):
             return jsonify({'error': 'Invalid file type'}), 400
 
-        user.convert_image(avatar_file.filename)
-
         user.clean_avatar_file()
         user.ensure_avatar_folder_exists()
-        avatar_file.save(user.avatar_file_path())
 
-        return jsonify(sqla_object_to_dict(attachment, Attachment.__table__.columns.keys()))
+        user.convert_and_save_image(avatar_file)
+        return jsonify(), 200
 
     @app.route('/comment/<comment_id>/attachment', methods=['POST'])
     @requires_auth('')
@@ -217,6 +212,25 @@ def register_routes(app):
     def user_avatar_upload():
         """upload a new user avatar for the currently logged in user"""
         return _upload_avatar()
+
+    @app.route('/user_avatar/<user_id>', methods=['GET'])
+    @requires_auth('')
+    def user_avatar_download(user_id):
+        """download the user avatar for the given user"""
+        session = app.data.driver.session
+        user = session.query(User).get(user_id)
+        if not user:
+            return jsonify({'error': 'Associated user does not exist'}), 400
+
+        try:
+            image = user.get_avatar()
+        except FileNotFoundError:
+            return jsonify({'error': 'No default image found'}), 500
+
+        response = Response(contents, mimetype='image/jpeg')
+        response.headers["Content-Disposition"] = "attachment; filename=font.otf"
+        return response
+
 
     if frt_server.config.DEBUG:
         @app.before_request

@@ -1,0 +1,4 @@
+accessing
+imageFileStream
+
+	^ imageFileStream

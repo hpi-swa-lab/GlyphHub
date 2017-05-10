@@ -1,12 +1,11 @@
 font-upload
-pickFontToUpload
+pickImageToUpload
 
 	| fileChooser stream |
 	fileChooser := FileChooser new.
 	fileChooser initializeAsSystemWindowWithCaptionPane.
-	fileChooser setCaption: 'Select a glyphs or ufo file'.
+	fileChooser setCaption: 'Select an image file'.
 	fileChooser fileSelectionBlock: [:file :x | true].
-	self flag: #TODO. "remove .zip as soon as we can zip ourselves"
-	fileChooser setSuffixes: {'glyphs'. 'zip'}.
+	fileChooser setSuffixes: {'jpg'. 'jpeg'. 'png'. 'gif'}.
 	stream := fileChooser open.
 	^ stream

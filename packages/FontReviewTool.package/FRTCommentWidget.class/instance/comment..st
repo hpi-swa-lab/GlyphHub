@@ -5,7 +5,7 @@ comment: aComment
 	
 	metaInfo text: aComment author username", ' - ', (self printDate: aComment created)".
 	commentText text: aComment text.
-	userAvatar path: FileDirectory default / 'BP2016H1' / 'assets' / 'penguin.png'.
+	userAvatar path: aComment author avatarPath.
 	
 	comment attachments do: [:attachment |
 		image := attachment asWidget

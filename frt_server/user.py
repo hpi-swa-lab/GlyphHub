@@ -8,6 +8,7 @@ import frt_server.config
 import hashlib
 import string
 import random
+import os
 
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 from itsdangerous import SignatureExpired, BadSignature
@@ -24,27 +25,25 @@ class User(CommonColumns):
     thread_subscriptions = relationship('ThreadSubscription', back_populates='user')
 
     def avatar_file_path(self):
-        return os.path.join(frt_server.config.AVATAR_UPLOAD_FOLDER, str(self._id), '.jpg')
+        return os.path.join(frt_server.config.AVATAR_UPLOAD_FOLDER, str(self._id)) + '.jpg'
 
     def clean_avatar_file(self):
         if os.path.exists(self.avatar_file_path()):
-            shutil.rmtree(self.avatar_file_path())
+            os.remove(self.avatar_file_path())
 
     def ensure_avatar_folder_exists(self):
-        if os.path.exists(frt_server.config.AVATAR_UPLOAD_FOLDER):
-            os.makedirs(frt_server.config_AVATAR_UPLOAD_FOLDER)
+        if not os.path.exists(frt_server.config.AVATAR_UPLOAD_FOLDER):
+            os.makedirs(frt_server.config.AVATAR_UPLOAD_FOLDER)
 
-    def convert_image(image_file):
-        avatar_filename = str(user._id) + '.jpg'
+    def convert_and_save_image(self, image_file):
 
-        if image_file != avatar_filename:
-            try:
-                Image.open(image_file).save(avatar_filename)
-            except IOError:
-                return jsonify({'error': 'Converting file failed'}), 500
-
-        size = (128, 128) 
-        ImageOps.fit(avatar_filename, size)
+        size = (128, 128)
+        try:
+            image = Image.open(image_file.stream)
+            fitted_image = ImageOps.fit(image, size)
+            fitted_image.save(self.avatar_file_path())
+        except IOError:
+           return jsonify({'error': 'Converting file failed'}), 500
 
     def generate_auth_token(self, expiration=frt_server.config.TOKEN_EXPIRATION):
         """Generates token for given expiration
