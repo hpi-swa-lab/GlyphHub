@@ -1,5 +1,5 @@
 initialize-release
 extent: aPoint
 
-	self updateCounterPosition.
-	super extent: aPoint
+	super extent: aPoint.
+	self updateCounterPosition
