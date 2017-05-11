@@ -4,5 +4,6 @@
 	"instance" : {
 		"enterPage" : "TB 5/9/2017 19:02",
 		"setUp" : "TB 5/9/2017 19:14",
+		"testCloseThread" : "TB 5/11/2017 09:33",
 		"testDisplaysTitle" : "TB 5/9/2017 16:30",
 		"testToggleSubscription" : "TB 5/9/2017 16:33" } }

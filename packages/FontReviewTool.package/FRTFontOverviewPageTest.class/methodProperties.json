@@ -3,6 +3,8 @@
 		 },
 	"instance" : {
 		"mockFamily" : "TB 5/10/2017 13:31",
-		"setUp" : "TB 5/10/2017 21:16",
-		"testDisplaysDefaultFontTitle" : "TB 5/10/2017 15:09",
-		"testSetFontPreview" : "TB 5/10/2017 20:15" } }
+		"setUpForDefaultFamily" : "TB 5/11/2017 10:48",
+		"setUpForDefaultFamilyWithThread" : "TB 5/11/2017 10:50",
+		"testClosedThreadsNotDisplayed" : "TB 5/11/2017 10:51",
+		"testDisplaysDefaultFontTitle" : "TB 5/11/2017 10:50",
+		"testSetFontPreview" : "TB 5/11/2017 10:50" } }

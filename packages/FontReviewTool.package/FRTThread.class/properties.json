@@ -11,7 +11,8 @@
 		"comments",
 		"tags",
 		"threadGlyphAssociations",
-		"threadSubscriptions" ],
+		"threadSubscriptions",
+		"closed" ],
 	"name" : "FRTThread",
 	"pools" : [
 		 ],

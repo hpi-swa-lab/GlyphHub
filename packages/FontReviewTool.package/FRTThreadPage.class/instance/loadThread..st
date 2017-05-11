@@ -6,7 +6,8 @@ loadThread: aThread
 			self
 				thread: newThread;
 				updateTitle: newThread;
+				updateCloseButton: newThread;
 				loadGlyphPreviewForThread: newThread;
 				displayComments;
-				changed.
-			self loadThreadSubscriptionStatus: newThread].
+				loadThreadSubscriptionStatus: newThread;
+				changed].

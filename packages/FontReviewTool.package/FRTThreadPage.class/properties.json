@@ -13,7 +13,8 @@
 		"tagArea",
 		"enteredFromGlyph",
 		"subscriptionButton",
-		"subscription" ],
+		"subscription",
+		"closeButton" ],
 	"name" : "FRTThreadPage",
 	"pools" : [
 		 ],

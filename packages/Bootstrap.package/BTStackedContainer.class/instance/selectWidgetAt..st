@@ -1,4 +1,4 @@
 hierarchy
 selectWidgetAt: anIndex
 
-	self selectWidget: (self widgets at: anIndex)
+	self selectWidget: (self submorphs at: anIndex)

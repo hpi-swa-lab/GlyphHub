@@ -5,9 +5,9 @@ haveA: aClass labelled: aString
 	
 	self subject allMorphsDo: [:morph |
 		(morph isKindOf: aClass) ifTrue: [
-			((morph respondsTo: #text)
+			(((morph respondsTo: #text)
 				ifTrue: [morph text]
-				ifFalse: [(self findSubmorph: morph ofKind: BTLabel) ifNotNilDo: #text]) = aString ifTrue: [
+				ifFalse: [(self findSubmorph: morph ofKind: BTLabel) ifNotNilDo: #text ifNil: ['']]) includesSubstring: aString) ifTrue: [
 			" tell the system that we found one, in case we're negated "
 			self assert: true operator: 'have a ', aClass name, ' with the label' expected: aString.
 			^ morph]]].

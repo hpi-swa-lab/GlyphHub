@@ -1,12 +1,10 @@
 {
 	"class" : {
-		"widgets:" : "ek 4/21/2017 10:38" },
+		"widgets:" : "TB 5/11/2017 10:45" },
 	"instance" : {
-		"addWidget:" : "ek 4/21/2017 10:38",
+		"addedMorph:" : "TB 5/11/2017 10:46",
 		"currentWidget" : "al 3/2/2017 14:37",
 		"currentWidget:" : "al 3/2/2017 14:37",
-		"initialize" : "ek 4/21/2017 10:38",
-		"selectWidget:" : "ek 4/21/2017 10:38",
-		"selectWidgetAt:" : "ek 4/21/2017 10:38",
-		"widgets" : "al 3/2/2017 14:23",
-		"widgets:" : "al 3/2/2017 14:23" } }
+		"initialize" : "TB 5/11/2017 10:46",
+		"selectWidget:" : "TB 5/11/2017 10:47",
+		"selectWidgetAt:" : "TB 5/11/2017 10:45" } }

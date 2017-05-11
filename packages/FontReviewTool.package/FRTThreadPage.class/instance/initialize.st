@@ -12,6 +12,9 @@ initialize
 		align: #(center center);
 		when: #clicked send: #toggleSubscription to: self.
 	
+	closeButton := BTButton new
+		when: #clicked send: #toggleClosed to: self.
+	
 	title := BTLabel new heading.
 	tagArea := (BTPage row)
 		spacing: BTWidget spacing / 3;
@@ -23,8 +26,10 @@ initialize
 		vertical: true;
 		withPadding;
 		add: (BTPage row
-			add: title
-			oppositeTo: subscriptionButton);		
+			add: title;
+			add: BTWidget spacer;
+			add: closeButton;
+			add: subscriptionButton);		
 		add: preview;
 		add: tagArea;
 		add: commentArea;

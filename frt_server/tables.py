@@ -1,4 +1,4 @@
-from sqlalchemy import Table, Column, DateTime, ForeignKey, Integer, String, Text, Float, LargeBinary, Enum, func
+from sqlalchemy import Table, Column, DateTime, ForeignKey, Integer, String, Text, Float, LargeBinary, Boolean, Enum, func
 from sqlalchemy.orm import column_property, relationship, validates
 from eve_sqlalchemy.decorators import registerSchema
 
@@ -49,6 +49,7 @@ class Glyph(CommonColumns):
 class Thread(CommonColumns):
     __tablename__ = 'thread'
     title = Column(Text)
+    closed = Column(Boolean, default=False, nullable=False)
     tags = relationship('Tag', secondary=tag_thread_association_table)
     thread_glyph_associations = relationship('ThreadGlyphAssociation', back_populates='thread')
     # FIXME we also would like to save the indices of the glyphs from their unicode

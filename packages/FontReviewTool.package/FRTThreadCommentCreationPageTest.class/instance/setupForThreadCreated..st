@@ -1,7 +1,7 @@
 running
 setupForThreadCreated: aBoolean
 
-	thread := aBoolean ifTrue: [self mockThread] ifFalse: [FRTThread new].
+	thread := aBoolean ifTrue: [self mockThread] ifFalse: [FRTThread new closed: false].
 	
 	super
 		setUpForPage: FRTThreadCommentCreationPage new

@@ -4,8 +4,9 @@
 	"instance" : {
 		"addEntity:" : "TB 5/9/2017 18:28",
 		"findDialog:labelled:" : "TB 5/10/2017 15:28",
-		"mockGlyph" : "TB 5/10/2017 21:55",
-		"mockThread" : "TB 5/10/2017 21:51",
+		"mockGlyph" : "TB 5/11/2017 09:30",
+		"mockThread" : "TB 5/11/2017 09:24",
+		"mockUser" : "TB 5/11/2017 09:29",
 		"openPage:with:" : "TB 5/9/2017 18:28",
 		"page" : "TB 5/9/2017 18:32",
 		"setUpForPage:with:prepare:" : "TB 5/9/2017 19:14",

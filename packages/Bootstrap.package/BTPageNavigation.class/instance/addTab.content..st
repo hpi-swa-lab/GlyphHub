@@ -2,4 +2,4 @@ hierarchy
 addTab: aTitle content: aWidget
 
 	self navigationBar addTab: aTitle.
-	self stackedContainer addWidget: aWidget
+	self stackedContainer add: aWidget
