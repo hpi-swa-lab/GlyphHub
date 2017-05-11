@@ -6,6 +6,8 @@ pointsForContour: anXMLNode
 	points := OrderedCollection new.
 	controlPoints := OrderedCollection new.
 	
+	elements ifEmpty: [^ points].
+	
 	" list is circular and starts offcurve, copy last element (must be oncurve) to the front "
 	(self typeFromNode: elements first) = #offcurve
 		ifTrue: [elements addFirst: elements last]
