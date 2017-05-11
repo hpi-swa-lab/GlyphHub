@@ -223,14 +223,11 @@ def register_routes(app):
             return jsonify({'error': 'Associated user does not exist'}), 400
 
         try:
-            image = user.get_avatar()
+            imagepath = user.get_avatar_path()
         except FileNotFoundError:
             return jsonify({'error': 'No default image found'}), 500
 
-        response = Response(contents, mimetype='image/jpeg')
-        response.headers["Content-Disposition"] = "attachment; filename=font.otf"
-        return response
-
+        return send_file(image_path, mimetype='image/jpeg', as_attachment=True)
 
     if frt_server.config.DEBUG:
         @app.before_request

@@ -27,6 +27,12 @@ class User(CommonColumns):
     def avatar_file_path(self):
         return os.path.join(frt_server.config.AVATAR_UPLOAD_FOLDER, str(self._id)) + '.jpg'
 
+    def get_avatar_path(self):
+        if os.path.exists(self.avatar_file_path()):
+            return self.avatar_file_path()
+        else:
+            return os.path.join(frt_server.config.AVATAR_UPLOAD_SERVER, 'default.jpg')
+
     def clean_avatar_file(self):
         if os.path.exists(self.avatar_file_path()):
             os.remove(self.avatar_file_path())
@@ -36,7 +42,6 @@ class User(CommonColumns):
             os.makedirs(frt_server.config.AVATAR_UPLOAD_FOLDER)
 
     def convert_and_save_image(self, image_file):
-
         size = (128, 128)
         try:
             image = Image.open(image_file.stream)
