@@ -1,5 +1,5 @@
 accessing
 avatarForm
+	" returns a promise resolving to the avatar image for this user "
 
-	^ self downloadAvatar
-		then: [self class AvatarCache at: self id]
+	^ self class cachedAvatarFor: self ifAbsentPut: [self downloadAvatar]

@@ -1,6 +1,6 @@
-accessing
+load-by
 nonAssociationFields
 
 	| associations |
 	associations := self associations.
-	^ self instVarNames reject: [:field | associations includesKey: field]
+	^ self fieldNames reject: [:field | associations includesKey: field]

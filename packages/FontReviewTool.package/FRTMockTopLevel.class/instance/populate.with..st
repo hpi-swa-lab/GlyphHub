@@ -20,6 +20,6 @@ populate: aModel with: aCollection
 					owner: aModel;
 					yourself]
 			ifSingleDo: [:association |
-				(self load: (aModel perform: field) into: association foreignClass populate: childPopulateChain) value]).
+				(self load: (aModel get: field) into: association foreignClass populate: childPopulateChain) value]).
 		
-		childModel ifNotNil: [aModel perform: field asMutator with: childModel]]
+		childModel ifNotNil: [aModel set: field to: childModel]]

@@ -10,7 +10,9 @@
 		"dirtyFlags",
 		"querying",
 		"backend",
-		"savePromise" ],
+		"savePromise",
+		"createdAt",
+		"updatedAt" ],
 	"name" : "BTModel",
 	"pools" : [
 		 ],

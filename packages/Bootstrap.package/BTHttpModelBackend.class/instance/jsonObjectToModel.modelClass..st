@@ -7,13 +7,13 @@ jsonObjectToModel: aDictionary modelClass: aClass
 		yourself.
 	
 	aClass nonAssociationFields do: [:name |
-		instance instVarNamed: name put: (aDictionary at: (self class camelCaseToUnderscore: name asString))].
+		instance set: name to: (aDictionary at: (self class camelCaseToUnderscore: name asString))].
 	
 	aClass associations keysAndValuesDo: [:field :association |
 		aDictionary at: (self class camelCaseToUnderscore: field) ifPresent: [:json | | value |
 			value := self jsonToModel: json modelClass: association foreignClass.
 			
-			instance instVarNamed: field put: value.
+			instance set: field to: value.
 			
 			value isBTModelList ifTrue: [
 				value

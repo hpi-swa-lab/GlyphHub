@@ -9,7 +9,7 @@ join: aModelList class: aClass populate: aCollection
 	
 	aModelList do: [ :model |
 		populate do: [ :field | | current association children |
-			current := model instVarNamed: field.
+			current := model get: field.
 			association := associations at: field.
 			
 			children := self
@@ -18,11 +18,11 @@ join: aModelList class: aClass populate: aCollection
 				into: association foreignClass
 				populate: #().
 			
-			children value do: [ :childModel | childModel instVarNamed: association backPopulateKey put: model ].
+			children value do: [ :childModel | childModel set: association backPopulateKey to: model ].
 			
 			model
-				instVarNamed: field
-				put: (association cardinality == #single
+				set: field
+				to: (association cardinality == #single
 					ifTrue: [children value ifEmpty: [nil] ifNotEmptyDo: #onlyElement]
 					ifFalse: [
 						children value

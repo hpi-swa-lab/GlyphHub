@@ -12,4 +12,4 @@ initialize
 	
 	self class associations keysAndValuesDo: [:field :association |
 		association cardinality = #many ifTrue: [
-			self instVarNamed: field put: (BTModelList forField: field owner: self)]]
+			self set: field to: (BTModelList forField: field owner: self)]]

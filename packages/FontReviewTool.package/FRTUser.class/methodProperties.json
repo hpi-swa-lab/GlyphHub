@@ -1,17 +1,14 @@
 {
 	"class" : {
-		"AvatarCache" : "ek 5/11/2017 16:50",
-		"AvatarCache:" : "ek 5/11/2017 16:54",
 		"associations" : "JH 5/5/2017 15:34",
-		"customAvatarDefaultDirectory" : "ek 5/11/2017 16:00",
-		"customAvatarDefaultDirectoty" : "lcj 5/10/2017 14:44",
+		"avatarCache" : "TB 5/11/2017 18:15",
+		"cachedAvatarFor:ifAbsentPut:" : "TB 5/11/2017 18:16",
 		"modelName" : "lcj 4/7/2017 10:59",
 		"resetAvatarCache" : "ek 5/11/2017 16:55" },
 	"instance" : {
 		"attachments" : "lcj 4/7/2017 11:00",
 		"attachments:" : "lcj 4/7/2017 11:00",
-		"avatarForm" : "ek 5/11/2017 16:57",
-		"avatarPath" : "ek 5/11/2017 10:59",
+		"avatarForm" : "TB 5/11/2017 18:20",
 		"comments" : "lcj 4/6/2017 10:36",
 		"comments:" : "lcj 4/6/2017 15:15",
 		"downloadAvatar" : "ek 5/11/2017 16:25",

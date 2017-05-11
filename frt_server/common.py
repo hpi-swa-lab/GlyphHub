@@ -5,6 +5,6 @@ Base = declarative_base()
 
 class CommonColumns(Base):
     __abstract__ = True
-    _created = Column(DateTime, default=func.now())
-    _updated = Column(DateTime, default=func.now(), onupdate=func.now())
+    created_at = Column(DateTime, server_default=func.now())
+    updated_at = Column(DateTime, server_default=func.now(), onupdate=func.now())
     _id = Column(Integer, primary_key=True, autoincrement=True)
