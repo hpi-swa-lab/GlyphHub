@@ -1,4 +1,4 @@
 updating
 updateUserAvatarImage: aUser
 	
-	userAvatarImage form: aUser avatarForm
+	aUser downloadAvatarForm then: [:form | userAvatarImage form: form]

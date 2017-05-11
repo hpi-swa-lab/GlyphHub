@@ -1,4 +1,5 @@
 callback
 updateUserAvatarImage
 
-	userAvatarImage form: self user avatarForm
+	self user removeCachedAvatar.
+	self user downloadAvatarForm then: [:form | userAvatarImage form: form]

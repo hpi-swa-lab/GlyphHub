@@ -3,9 +3,9 @@ comment: aComment
 	
 	comment := aComment.
 	
-	metaInfo text: aComment author username", ' - ', (self printDate: aComment created)".
+	metaInfo text: aComment author username, ' - ', (self printDate: aComment createdAt).
 	commentText text: aComment text.
-	userAvatar form: aComment author avatarForm.
+	aComment author downloadAvatarForm then: [:form | userAvatar form: form].
 	
 	comment attachments do: [:attachment |
 		image := attachment asWidget
