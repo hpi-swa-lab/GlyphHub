@@ -13,7 +13,9 @@ initialize
 		when: #clicked send: #toggleSubscription to: self.
 	
 	closeButton := BTButton new
-		when: #clicked send: #toggleClosed to: self.
+		when: #clicked send: #toggleClosed to: self;
+		small;
+		align: #(center center).
 	
 	title := BTLabel new heading.
 	tagArea := (BTPage row)
