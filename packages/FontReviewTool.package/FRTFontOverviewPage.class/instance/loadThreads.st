@@ -9,6 +9,7 @@ loadThreads
 			threads := OrderedCollection new.
 			newFont glyphs do: [:glyph |
 				glyph threadGlyphAssociations do: [:threadGlyph |
-					threads detect: [:other | other id = threadGlyph thread id] ifNone: [threads add: threadGlyph thread]]].
+					threads detect: [:other | other id = threadGlyph thread id] ifNone: [
+						threadGlyph thread closed ifFalse: [threads add: threadGlyph thread]]]].
 			threads do: [:thread |
 				threadsContainer add: (FRTThreadPreviewWidget new thread: thread)]]

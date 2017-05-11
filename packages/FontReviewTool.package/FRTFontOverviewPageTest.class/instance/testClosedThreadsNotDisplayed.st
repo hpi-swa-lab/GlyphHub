@@ -6,5 +6,6 @@ testClosedThreadsNotDisplayed
 	
 	(self expect: page) to haveText: thread title.
 	
-	self topLevel openPage: FRTFontOverviewPage new with: thread font.
-	(self expect: page) to haveText: thread title
+	thread closed: true; save.
+	(self expect: (self topLevel openPage: FRTFontOverviewPage new with: thread font)) to resolve.
+	(self expect: self topLevel openPage) to not haveText: thread title
