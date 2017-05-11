@@ -1,6 +1,6 @@
 {
 	"class" : {
-		"associationNamed:ifManyDo:ifSingleDo:" : "TB 5/10/2017 21:03",
+		"associationNamed:ifManyDo:ifSingleDo:" : "lcj 5/11/2017 15:50",
 		"associations" : "ek 4/11/2017 12:38",
 		"load:populate:from:" : "TB 5/9/2017 17:01",
 		"loadAllFrom:populate:" : "ek 4/12/2017 15:23",

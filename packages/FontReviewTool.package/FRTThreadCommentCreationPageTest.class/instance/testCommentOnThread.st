@@ -7,7 +7,7 @@ testCommentOnThread
 	text := 'This is my comment text'.
 	
 	(self expect: self topLevel openPage) to haveText: thread title.
-	(page findInputLabelled: 'Comment ...') text: text.
+	(page findInputWithPlaceholder: 'Comment ...') text: text.
 	(self expect: page saveComment) to resolve.
 	
 	(self expect: self topLevel openPage) to haveText: 'Thread: ', thread title.

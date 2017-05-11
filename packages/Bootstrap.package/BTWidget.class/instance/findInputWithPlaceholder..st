@@ -1,5 +1,5 @@
 test-helper
-findInputLabelled: aString
+findInputWithPlaceholder: aString
 	" returns the first form input that has a placeholder of aString "
 	
 	^ self formInputs
