@@ -1,0 +1,15 @@
+{
+	"category" : "FontReviewTool-Models",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"form",
+		"lastUpdatedAt" ],
+	"name" : "FRTCachedAvatar",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

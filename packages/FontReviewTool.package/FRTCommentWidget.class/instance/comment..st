@@ -5,7 +5,7 @@ comment: aComment
 	
 	metaInfo text: aComment author username", ' - ', (self printDate: aComment created)".
 	commentText text: aComment text.
-	aComment author avatarPath.
+	userAvatar form: aComment author avatarForm.
 	
 	comment attachments do: [:attachment |
 		image := attachment asWidget

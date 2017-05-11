@@ -4,12 +4,13 @@
 	"instance" : {
 		"breadcrumbs" : "ek 4/18/2017 16:56",
 		"chooseFile" : "lcj 5/9/2017 16:17",
-		"enteringWith:" : "lcj 5/9/2017 15:40",
+		"enteringWith:" : "ek 5/11/2017 14:03",
 		"imageFileStream" : "lcj 5/9/2017 16:16",
 		"imageFileStream:" : "lcj 5/9/2017 16:16",
 		"initialize" : "lcj 5/9/2017 15:53",
-		"trySavingAvatar" : "lcj 5/10/2017 11:18",
+		"trySavingAvatar" : "ek 5/11/2017 14:05",
 		"trySavingPassword" : "lcj 5/9/2017 16:24",
 		"trySavingUsername" : "lcj 5/9/2017 16:24",
+		"updateUserAvatarImage" : "ek 5/11/2017 16:59",
 		"user" : "al 4/6/2017 10:33",
 		"user:" : "lcj 4/9/2017 11:57" } }
