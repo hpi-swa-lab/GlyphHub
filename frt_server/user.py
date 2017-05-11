@@ -31,7 +31,7 @@ class User(CommonColumns):
         if os.path.exists(self.avatar_file_path()):
             return self.avatar_file_path()
         else:
-            return os.path.join(frt_server.config.AVATAR_UPLOAD_SERVER, 'default.jpg')
+            return os.path.join(frt_server.config.MEDIA_FOLDER, 'default_avatar.jpg')
 
     def clean_avatar_file(self):
         if os.path.exists(self.avatar_file_path()):

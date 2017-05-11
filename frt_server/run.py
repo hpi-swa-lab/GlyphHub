@@ -46,6 +46,7 @@ def setup_database(app, populate_sample_data=True, create_admin_user_password=No
             db.session.commit()
 
         if populate_sample_data:
+            #Standard sample data:
             from frt_server.seed import entities, post_create
 
             # register new entities

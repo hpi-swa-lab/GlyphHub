@@ -11,7 +11,7 @@ downloadUserAvatar: aUserOrId
 	^ (directory fileExists: filename)
 		ifTrue: [BTPromise unit: filename]
 		ifFalse: [
-			(self request: '/user_avatar/', id method: 'GET' data: '' contentType: 'text/plain')
+			(self request: '/user_avatar/', id method: 'GET' data: '' contentType: 'image/jpeg')
 				then: [:response |
 					directory forceNewFileNamed: filename do: [:stream | stream binary; nextPutAll: response content].
 					filename]]

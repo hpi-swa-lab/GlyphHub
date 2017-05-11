@@ -223,7 +223,7 @@ def register_routes(app):
             return jsonify({'error': 'Associated user does not exist'}), 400
 
         try:
-            imagepath = user.get_avatar_path()
+            image_path = user.get_avatar_path()
         except FileNotFoundError:
             return jsonify({'error': 'No default image found'}), 500
 
