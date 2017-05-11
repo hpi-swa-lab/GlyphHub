@@ -1,4 +1,4 @@
-callbacks
+actions
 openFilePicker
 
 	FileChooser example3

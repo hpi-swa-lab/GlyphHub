@@ -1,4 +1,4 @@
-callbacks
+actions
 closeSketchEditor
 
 	| dialog |

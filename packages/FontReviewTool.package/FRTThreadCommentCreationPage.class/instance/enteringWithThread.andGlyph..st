@@ -1,4 +1,4 @@
-callbacks
+lifecycle
 enteringWithThread: aThread andGlyph: aGlyph
 
 	self loadAttachments.

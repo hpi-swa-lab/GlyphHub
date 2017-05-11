@@ -6,4 +6,5 @@ saveThread
 		ifFalse: [
 			self thread
 				title: title text;
+				closed: false;
 				saveTo: self backend]
