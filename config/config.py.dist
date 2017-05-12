@@ -13,6 +13,7 @@ PORT = 8000
 DEBUG = False
 REQUEST_DEBUG = True
 RESPONSE_DEBUG = True
+DATA_PRINT_LIMIT = 500
 TOKEN_EXPIRATION = 24*60*60
 OPLOG = False #change to True to enable logging to a file
 OPLOG_NAME = 'oplog' #name of log-collection in the database

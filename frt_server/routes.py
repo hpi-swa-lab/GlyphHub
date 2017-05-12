@@ -237,15 +237,16 @@ def register_routes(app):
         @app.before_request
         def before():
             if frt_server.config.REQUEST_DEBUG:
-                print('REQUEST:')
+                print('\n\n\n\n\033[33mREQUEST:\033[0m')
                 print(request.headers)
-                print(request.get_data())
+                print(str(request.get_data())[0:frt_server.config.DATA_PRINT_LIMIT])
 
         @app.after_request
         def after(response):
             if frt_server.config.RESPONSE_DEBUG:
-                print('RESPONSE:')
+                print('\033[31mRESPONSE:\033[0m')
                 print(response.status)
                 print(response.headers)
-                print(response.data)
+                if not response.direct_passthrough:
+                    print(str(response.data)[0:frt_server.config.DATA_PRINT_LIMIT])
             return response
