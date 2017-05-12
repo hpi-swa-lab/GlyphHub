@@ -1,0 +1,8 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"font:" : "al 5/12/2017 11:17",
+		"initialize" : "al 5/11/2017 12:15",
+		"initializeSampleTextArea" : "al 5/12/2017 11:42",
+		"saveSampleText:" : "al 5/12/2017 13:00" } }

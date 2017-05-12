@@ -6,7 +6,8 @@
 		 ],
 	"commentStamp" : "TB 5/8/2017 15:51",
 	"instvars" : [
-		"selectedParagraph" ],
+		"selectedParagraph",
+		"minimumNumberOfParagraphs" ],
 	"name" : "FRTRichText",
 	"pools" : [
 		 ],

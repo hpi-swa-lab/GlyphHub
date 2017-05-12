@@ -1,0 +1,4 @@
+accessing
+standardSampleText
+
+	^ standardSampleText

@@ -1,0 +1,15 @@
+{
+	"category" : "FontReviewTool-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"family",
+		"thread" ],
+	"name" : "FRTFontPageTest",
+	"pools" : [
+		 ],
+	"super" : "FRTApplicationPageTest",
+	"type" : "normal" }

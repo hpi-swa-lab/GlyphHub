@@ -2,5 +2,5 @@ styling
 default
 
 	self
-		pointSize: 16;
+		pointSize: self class defaultPointSize;
 		alignment: #left

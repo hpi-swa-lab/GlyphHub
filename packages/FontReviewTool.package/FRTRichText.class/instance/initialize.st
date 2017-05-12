@@ -7,4 +7,5 @@ initialize
 		withLayout;
 		spacing: BTWidget spacing;
 		color: Color white;
-		vertical: true
+		vertical: true;
+		minimumNumberOfParagraphs: 1

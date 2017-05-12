@@ -28,7 +28,7 @@ tryUpload
 				then: [:newFamily |
 					self topLevel
 						stopLoadingOperation;
-						openPage: FRTFontOverviewPage new with: newFamily defaultFont])
+						openPage: FRTFontPage new with: newFamily defaultFont])
 				catch: [
 					self topLevel
 						stopLoadingOperation;

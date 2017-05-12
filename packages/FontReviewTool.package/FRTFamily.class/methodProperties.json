@@ -1,6 +1,6 @@
 {
 	"class" : {
-		"associations" : "ek 4/11/2017 14:16",
+		"associations" : "al 5/11/2017 16:13",
 		"modelName" : "lcj 4/7/2017 10:40" },
 	"instance" : {
 		"authorsString" : "lcj 4/5/2017 12:27",
@@ -11,5 +11,7 @@
 		"fonts:" : "lcj 4/7/2017 10:39",
 		"previewGlyphs" : "TB 5/5/2017 10:55",
 		"previewGlyphs:" : "TB 5/5/2017 10:54",
+		"standardSampleText" : "al 5/11/2017 16:14",
+		"standardSampleText:" : "al 5/11/2017 16:15",
 		"tags" : "lcj 4/7/2017 14:11",
 		"tags:" : "lcj 4/7/2017 14:11" } }

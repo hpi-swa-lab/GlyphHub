@@ -1,10 +1,10 @@
 {
 	"class" : {
-		 },
+		"defaultPointSize" : "al 5/12/2017 11:27" },
 	"instance" : {
 		"alignment" : "TB 5/5/2017 14:45",
 		"alignment:" : "TB 5/5/2017 16:41",
-		"default" : "TB 5/5/2017 15:54",
+		"default" : "al 5/12/2017 11:29",
 		"font" : "TB 5/5/2017 14:46",
 		"font:" : "TB 5/8/2017 10:53",
 		"fromJson:" : "TB 5/5/2017 17:56",

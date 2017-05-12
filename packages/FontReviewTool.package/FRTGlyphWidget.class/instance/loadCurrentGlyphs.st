@@ -5,7 +5,7 @@ loadCurrentGlyphs
 		then: [
 			self
 				changed;
-				extent: (self preferredSizeForWidth: 9e8) minSize;
+				resizeToPreferred;
 				fullBounds;
 				yourself])
 		catch: [self]

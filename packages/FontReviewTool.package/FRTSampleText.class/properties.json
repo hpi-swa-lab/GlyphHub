@@ -9,7 +9,8 @@
 		"title",
 		"text",
 		"author",
-		"tags" ],
+		"tags",
+		"families" ],
 	"name" : "FRTSampleText",
 	"pools" : [
 		 ],

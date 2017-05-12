@@ -1,0 +1,4 @@
+paragraphs
+minimumNumberOfParagraphs
+
+	^ minimumNumberOfParagraphs 

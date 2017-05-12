@@ -7,7 +7,7 @@ dirtyFieldsAndValues
 	self dirtyFieldNames do: [:field | | value fieldName key |
 		fieldName := BTHttpModelBackend camelCaseToUnderscore: field.
 		value := (self perform: field asSymbol).
-		key := value isBTModel ifTrue: [fieldName, '_id'] ifFalse: [fieldName].
+		key := (self class hasSingleAssociationNamed: field) ifTrue: [fieldName, '_id'] ifFalse: [fieldName].
 		
 		dirtyFieldDictionary
 			at: key

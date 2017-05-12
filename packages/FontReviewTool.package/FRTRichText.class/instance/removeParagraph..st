@@ -1,5 +1,6 @@
 paragraphs
 removeParagraph: aParagraph
 
-	self focusParagraph: (aParagraph submorphBefore ifNil: [aParagraph submorphAfter]).
-	aParagraph delete
+	self submorphs size > self minimumNumberOfParagraphs ifTrue: [
+		self focusParagraph: (aParagraph submorphBefore ifNil: [aParagraph submorphAfter]).
+		aParagraph delete]

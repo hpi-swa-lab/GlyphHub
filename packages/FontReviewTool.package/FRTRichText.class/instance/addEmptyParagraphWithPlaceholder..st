@@ -1,0 +1,4 @@
+paragraphs
+addEmptyParagraphWithPlaceholder: aString
+
+	self addEmptyParagraphWithPlaceholder: aString pointSize: FRTParagraph defaultPointSize.

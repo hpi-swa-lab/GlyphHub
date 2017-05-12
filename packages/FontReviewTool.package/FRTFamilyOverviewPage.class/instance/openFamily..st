@@ -1,4 +1,4 @@
 initialize-release
 openFamily: aFamily
 
-	self topLevel openPage: (FRTFontOverviewPage new) with: aFamily defaultFont
+	self topLevel openPage: (FRTFontPage new) with: aFamily defaultFont

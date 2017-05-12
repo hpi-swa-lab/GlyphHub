@@ -1,4 +1,4 @@
-from sqlalchemy import Column, String, inspect
+from sqlalchemy import Column, String, inspect, Integer, ForeignKey
 from sqlalchemy.orm import relationship
 
 from frt_server.common import CommonColumns
@@ -20,6 +20,9 @@ class Family(CommonColumns):
     preview_glyphs = Column(String(500), default='')
     fonts = relationship('Font', back_populates='family')
     tags = relationship('Tag', secondary=tag_family_association_table)
+    standard_sample_text = relationship('SampleText', back_populates='families')
+    standard_sample_text_id = Column(Integer, ForeignKey('sample_text._id'))
+
 
     def delete_family_if_empty(family):
         if not family.fonts:

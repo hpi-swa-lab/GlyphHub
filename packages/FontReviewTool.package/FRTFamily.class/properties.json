@@ -9,7 +9,8 @@
 		"familyName",
 		"fonts",
 		"tags",
-		"previewGlyphs" ],
+		"previewGlyphs",
+		"standardSampleText" ],
 	"name" : "FRTFamily",
 	"pools" : [
 		 ],

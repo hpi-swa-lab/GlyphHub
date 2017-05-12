@@ -1,0 +1,29 @@
+{
+	"category" : "FontReviewTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "JH 4/7/2017 17:22",
+	"instvars" : [
+		"font",
+		"family",
+		"fontInfo",
+		"fontNameLabel",
+		"fontAuthorLabel",
+		"overviewTab",
+		"recentChangesTab",
+		"allGlyphsTab",
+		"openDicsussionsTab",
+		"tabContainer",
+		"glyphNames",
+		"gridWidget",
+		"renderer",
+		"threadsContainer",
+		"uploadPopover",
+		"missingPreviewGlyphsNotice" ],
+	"name" : "FRTFontPage",
+	"pools" : [
+		 ],
+	"super" : "FRTApplicationPage",
+	"type" : "normal" }

@@ -1,4 +1,4 @@
 paragraphs
 addEmptyParagraph
 
-	self addParagraph: FRTParagraph new default
+	self addEmptyParagraphWithPlaceholder: 'Empty Paragraph'

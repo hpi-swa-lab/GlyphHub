@@ -1,0 +1,4 @@
+accessing
+font
+
+	^ richText font

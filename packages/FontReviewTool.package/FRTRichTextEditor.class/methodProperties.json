@@ -1,6 +1,6 @@
 {
 	"class" : {
-		 },
+		"placeholder:" : "al 5/11/2017 14:08" },
 	"instance" : {
 		"addEmptyParagraph" : "TB 5/8/2017 10:27",
 		"backend" : "TB 5/5/2017 17:17",
@@ -9,12 +9,13 @@
 		"createFontPropertiesGroup" : "TB 5/8/2017 15:53",
 		"createOpenTypeFeatureButton" : "TB 5/8/2017 15:53",
 		"createToolbar" : "TB 5/8/2017 15:53",
+		"font" : "al 5/12/2017 11:05",
 		"font:" : "TB 5/8/2017 10:44",
 		"fromJson:" : "TB 5/8/2017 10:47",
 		"ifEmpty:" : "TB 5/8/2017 10:30",
 		"initialize" : "TB 5/5/2017 15:35",
 		"jsonString" : "TB 5/8/2017 10:31",
-		"sampleText:" : "TB 5/8/2017 10:51",
+		"sampleText:" : "al 5/12/2017 12:17",
 		"saveButtonVisible" : "TB 5/8/2017 10:59",
 		"saveButtonVisible:" : "TB 5/8/2017 10:59",
 		"selectFontNamed:suggestion:" : "TB 5/8/2017 11:06",

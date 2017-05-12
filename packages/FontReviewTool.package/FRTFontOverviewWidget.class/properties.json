@@ -1,0 +1,15 @@
+{
+	"category" : "FontReviewTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"sampleTextEditor",
+		"font" ],
+	"name" : "FRTFontOverviewWidget",
+	"pools" : [
+		 ],
+	"super" : "BTPage",
+	"type" : "normal" }

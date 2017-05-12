@@ -8,10 +8,10 @@ breadcrumbs
 	self enteredFromGlyph
 		ifNil: [ | family |
 			family := self topLevel selectedFont family.
-			crumbs add: {family familyName. #font. {FRTFontOverviewPage. family}}]
+			crumbs add: {family familyName. #font. {FRTFontPage. family}}]
 		ifNotNil: [
 			crumbs
-				add: {self enteredFromGlyph font fontName. #font. {FRTFontOverviewPage. self enteredFromGlyph font family}};
+				add: {self enteredFromGlyph font fontName. #font. {FRTFontPage. self enteredFromGlyph font family}};
 				add: {'Glyph ', self enteredFromGlyph glyphName. #info_circle. {FRTGlyphPage. self enteredFromGlyph}}].
 	
 	self thread isCreated ifTrue: [

@@ -2,18 +2,20 @@ private
 jsonObjectToModel: aDictionary modelClass: aClass
 
 	| instance |
+	aDictionary ifNil: [^ nil].
+	
 	instance := aClass new
 		backend: self;
 		yourself.
 	
 	aClass nonAssociationFields do: [:name |
-		instance set: name to: (aDictionary at: (self class camelCaseToUnderscore: name asString))].
+		instance instVarNamed: name put: (aDictionary at: (self class camelCaseToUnderscore: name asString))].
 	
 	aClass associations keysAndValuesDo: [:field :association |
 		aDictionary at: (self class camelCaseToUnderscore: field) ifPresent: [:json | | value |
 			value := self jsonToModel: json modelClass: association foreignClass.
 			
-			instance set: field to: value.
+			instance instVarNamed: field put: value.
 			
 			value isBTModelList ifTrue: [
 				value

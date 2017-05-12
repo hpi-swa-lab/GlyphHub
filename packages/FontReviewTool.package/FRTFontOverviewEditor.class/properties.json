@@ -1,0 +1,14 @@
+{
+	"category" : "FontReviewTool-RichText",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "FRTFontOverviewEditor",
+	"pools" : [
+		 ],
+	"super" : "FRTRichTextEditor",
+	"type" : "normal" }

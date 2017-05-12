@@ -1,0 +1,4 @@
+constants
+defaultPointSize
+
+	^ 16
