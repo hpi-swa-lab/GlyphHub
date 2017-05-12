@@ -1,4 +1,4 @@
 accessing
 resetAvatarCache
 
-	AvatarCache := Dictionary new
+	^ AvatarCache := Dictionary new
