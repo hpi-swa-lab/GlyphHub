@@ -3,18 +3,12 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		"AvatarCache" ],
+		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"password",
-		"username",
-		"comments",
-		"fonts",
-		"attachments",
-		"sampleTexts",
-		"threadSubscriptions",
-		"feedbackSubmissions" ],
-	"name" : "FRTUser",
+		"author",
+		"text" ],
+	"name" : "FRTFeedback",
 	"pools" : [
 		 ],
 	"super" : "BTModel",

@@ -1,0 +1,14 @@
+{
+	"category" : "FontReviewTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"feedbackTextArea" ],
+	"name" : "FRTFeedbackPopover",
+	"pools" : [
+		 ],
+	"super" : "BTPopover",
+	"type" : "normal" }

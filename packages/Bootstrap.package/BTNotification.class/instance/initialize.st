@@ -3,5 +3,5 @@ initialize
 	super initialize.
 	
 	self
-		minSize: 150 @ 0;
+		minSize: 250 @ 0;
 		ignoreLayout: true

@@ -7,7 +7,8 @@
 	"commentStamp" : "TB 3/23/2017 15:02",
 	"instvars" : [
 		"titleLabel",
-		"acceptPromise" ],
+		"acceptPromise",
+		"parentTopLevel" ],
 	"name" : "BTDialog",
 	"pools" : [
 		 ],
