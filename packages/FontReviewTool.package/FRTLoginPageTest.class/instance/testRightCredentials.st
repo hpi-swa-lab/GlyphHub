@@ -1,3 +1,4 @@
 testing
 testRightCredentials
-	self login: 'peter' password: 'geheim' expectSuccessfulLogIn: true
+
+	self login: self topLevel user username password: self topLevel user password expectSuccessfulLogIn: true
