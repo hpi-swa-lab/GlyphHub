@@ -4,7 +4,7 @@ backend: aBackend
 	backend := aBackend.
 	
 	[querying := true.
-	 self class instVarNames do: [:field | | value |
+	 self class fieldNames do: [:field | | value |
 		value := self get: field asSymbol.
 		
 		((value isBTModelList or: [value isBTModel]) and: [value querying not]) ifTrue: [

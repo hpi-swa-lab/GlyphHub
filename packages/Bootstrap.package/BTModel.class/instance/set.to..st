@@ -1,4 +1,4 @@
 operations
 set: aVariableName to: anObject
 
-	self perform: (aVariableName numArgs: 1) with: anObject
+	self perform: aVariableName asSymbol asMutator with: anObject

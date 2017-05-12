@@ -1,13 +1,15 @@
 as yet unclassified
 deserializeEntity: aDictionary class: aClass
 	| model |
-	model := aClass new markAllDirty: false.
+	model := aClass new.
 	
-	aClass instVarNames do: [ :name |
+	aClass fieldNames do: [ :name |
 		aDictionary
 			at: name asString
-			ifPresent: [ :value | model instVarNamed: name put: value ]].
+			ifPresent: [ :value | model set: name to: value ]].
 	
-	model privateId: (aDictionary at: 'id').
+	model
+		privateId: (aDictionary at: 'id');
+		markAllDirty: false.
 	
 	^model

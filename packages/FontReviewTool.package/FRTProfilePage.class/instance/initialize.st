@@ -61,13 +61,14 @@ initialize
 		yourself).
 	
 	self
-		add: headingArea;
-		add: ((BTCard header: 'Change Username' content: changeUsernameArea)
-			align: #(start fill);
-			minSize: 400 @ 0);
-		add: ((BTCard header: 'Change Password' content: changePasswordArea)
-			align: #(start fill);
-			minSize: 400 @ 0);
-		add: ((BTCard header: 'Change Avatar' content: changeAvatarArea)
-			align: #(start fill);
-			minSize: 400 @ 0)
+		add: (BTScrollArea new add: (BTPage column
+			add: headingArea;
+			add: ((BTCard header: 'Change Username' content: changeUsernameArea)
+				align: #(start fill);
+				minSize: 400 @ 0);
+			add: ((BTCard header: 'Change Password' content: changePasswordArea)
+				align: #(start fill);
+				minSize: 400 @ 0);
+			add: ((BTCard header: 'Change Avatar' content: changeAvatarArea)
+				align: #(start fill);
+				minSize: 400 @ 0)))

@@ -2,6 +2,7 @@ import json
 import os
 import base64
 import re
+import datetime
 from functools import wraps
 
 from flask import request, jsonify, current_app, send_from_directory, Response, send_file
@@ -184,6 +185,9 @@ def register_routes(app):
         user.ensure_avatar_folder_exists()
 
         user.convert_and_save_image(avatar_file)
+
+        user.updated_at = datetime.datetime.now()
+        session.commit()
         return jsonify(), 200
 
     @app.route('/comment/<comment_id>/attachment', methods=['POST'])

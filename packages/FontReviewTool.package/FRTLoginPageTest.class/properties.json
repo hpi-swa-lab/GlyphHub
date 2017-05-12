@@ -6,12 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"user",
-		"server",
-		"application",
-		"loginPage" ],
+		"user" ],
 	"name" : "FRTLoginPageTest",
 	"pools" : [
 		 ],
-	"super" : "BTEventTestCase",
+	"super" : "FRTApplicationPageTest",
 	"type" : "normal" }

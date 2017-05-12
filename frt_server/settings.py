@@ -11,13 +11,15 @@ SQLALCHEMY_RECORD_QUERIES = False
 SQLALCHEMY_ECHO = False
 SQLALCHEMY_DATABASE_URI = frt_server.config.DATABASE_PATH
 RESOURCE_METHODS = ['GET', 'POST']
-ITEM_METHODS = ['GET', 'PUT', 'DELETE', 'PATCH']
+ITEM_METHODS = ['GET', 'DELETE', 'PATCH']
 IF_MATCH = False
 HATEOAS = False
 PROJECTION = False
 TRANSPARENT_SCHEMA_RULES = False
 BULK_ENABLED = False
-
+LAST_UPDATED = 'updated_at'
+DATE_CREATED = 'created_at'
+DATE_FORMAT = '%Y-%m-%dT%H:%M:%S.%f%z'
 
 user_schema = User._eve_schema['user']
 user_schema['allowed_filters'] = []

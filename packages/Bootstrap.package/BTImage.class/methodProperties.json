@@ -6,11 +6,12 @@
 	"instance" : {
 		"adjustAllocatedSize:" : "TB 5/3/2017 15:51",
 		"calculateSizeForWidth:" : "TB 5/3/2017 15:24",
+		"changed" : "ek 5/11/2017 12:28",
 		"drawOn:" : "TB 5/4/2017 12:26",
 		"fillMode" : "TB 2/2/2017 21:01",
 		"fillMode:" : "TB 2/2/2017 21:01",
 		"form" : "TB 2/2/2017 20:52",
-		"form:" : "TB 2/16/2017 08:44",
+		"form:" : "ek 5/11/2017 12:30",
 		"formAtExtent:" : "TB 2/2/2017 21:08",
 		"framed" : "TB 5/4/2017 12:26",
 		"framed:" : "TB 5/4/2017 12:26",
@@ -19,6 +20,6 @@
 		"load:from:" : "TB 4/10/2017 08:27",
 		"openCopyInDialog" : "TB 5/3/2017 15:53",
 		"openCopyInDialogLabelled:" : "TB 5/4/2017 12:27",
-		"path:" : "TB 2/2/2017 21:14",
+		"path:" : "ek 5/11/2017 12:20",
 		"scalingMode" : "TB 2/2/2017 20:51",
 		"scalingMode:" : "TB 2/28/2017 19:47" } }

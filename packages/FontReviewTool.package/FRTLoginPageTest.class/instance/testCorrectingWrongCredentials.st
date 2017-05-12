@@ -1,4 +1,5 @@
 testing
-testCorrectingWrongCredentials	
+testCorrectingWrongCredentials
+
 	self login: 'petr' password: 'secret' expectSuccessfulLogIn: false.
-	self login: 'peter' password: 'geheim' expectSuccessfulLogIn: true
+	self login: self topLevel user username password: self topLevel user password expectSuccessfulLogIn: true

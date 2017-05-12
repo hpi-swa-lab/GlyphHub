@@ -1,4 +1,4 @@
 operations
 get: aVariableName
 
-	^ self perform: aVariableName
+	^ self perform: aVariableName asSymbol

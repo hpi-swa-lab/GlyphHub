@@ -1,3 +1,3 @@
 as yet unclassified
-privatePenguins: aModelList
+penguins: aModelList
 	penguins := aModelList

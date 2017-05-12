@@ -1,0 +1,8 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"setUp" : "TB 5/12/2017 10:52",
+		"tearDown" : "TB 5/12/2017 11:12",
+		"testAvatarImageIsDownloaded" : "TB 5/12/2017 10:53",
+		"testAvatarImageIsInvalidated" : "TB 5/12/2017 11:04" } }
