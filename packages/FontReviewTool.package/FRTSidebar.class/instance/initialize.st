@@ -8,7 +8,9 @@ initialize
 		style: 'weight' set: 800;
 		align: #(fill center).
 		
-	self initializeUserDropdown.
+	self
+		initializeUserDropdown;
+		initializeFeedbackButton.
 		
 	userAvatarImage := BTImage new
 		minSize: 36 asPoint;
@@ -17,7 +19,10 @@ initialize
 	familyArea := BTPage column.
 	self updateFamilyArea.
 	
-	self colorScheme: (BTColorScheme withForeground: Color white background: (Color fromString: '#333333') border: Color white).
+	self colorScheme: (BTColorScheme
+		withForeground: Color white
+		background: (Color fromString: '#333333')
+		border: Color white).
 	
 	self
 		withLayout;
@@ -36,4 +41,6 @@ initialize
 		add: ((BTClickableWithText text: (BTIcon icon: #folder_open), ' My Projects')
 			when: #clicked send: #openMyProjects to: self);
 		add: BTDivider new;
-		add: familyArea
+		add: familyArea;
+		add: BTWidget spacer;
+		add: self feedbackButton

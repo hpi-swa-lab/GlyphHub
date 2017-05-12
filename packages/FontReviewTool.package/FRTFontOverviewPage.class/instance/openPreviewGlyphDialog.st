@@ -3,4 +3,4 @@ openPreviewGlyphDialog
 
 	^ (FRTGlyphPreviewPicker new
 		font: self font;
-		openCentered) then: [missingPreviewGlyphsNotice delete]
+		openFor: self) then: [missingPreviewGlyphsNotice delete]

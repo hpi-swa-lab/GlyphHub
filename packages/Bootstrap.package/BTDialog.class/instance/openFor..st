@@ -1,12 +1,12 @@
 displaying
-openCentered
+openFor: aWidget
 
-	self parentTopLevel: nil.
+	self parentTopLevel: aWidget topLevel.
 	acceptPromise := BTPromise new.
 
 	self
 		fullBounds;
-		center: self currentWorld center;
+		center: self parentTopLevel center;
 		openInWorld.
 	
 	^ acceptPromise

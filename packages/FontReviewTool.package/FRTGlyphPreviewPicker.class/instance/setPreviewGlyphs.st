@@ -7,4 +7,4 @@ setPreviewGlyphs
 		previewGlyphs: glyph1 text, ',', glyph2 text;
 		save)
 		then: [self accept: self font family previewGlyphs])
-		catch: [:err | page add: (BTAlert text: 'Updating preview glyphs failed.' type: #danger)]
+		catch: [page add: (BTAlert text: 'Updating preview glyphs failed.' type: #danger)]

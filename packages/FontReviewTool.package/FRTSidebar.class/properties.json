@@ -10,7 +10,9 @@
 		"usernameClickable",
 		"selectedFamily",
 		"selectedFont",
-		"familyArea" ],
+		"familyArea",
+		"feedbackPopover",
+		"feedbackButton" ],
 	"name" : "FRTSidebar",
 	"pools" : [
 		 ],
