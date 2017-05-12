@@ -112,6 +112,12 @@ class Attachment(CommonColumns):
     def has_file(self):
         return self.type in (AttachmentType.picture, AttachmentType.file)
 
+class Feedback(CommonColumns):
+    __tablename__ = 'feedback'
+    text = Column(Text)
+    author_id = Column('author_id', Integer, ForeignKey('user._id'))
+    author = relationship('User')
+
 registerSchema('user')(User)
 registerSchema('tag')(Tag)
 registerSchema('sample_text')(SampleText)
@@ -124,3 +130,4 @@ registerSchema('comment')(Comment)
 registerSchema('attachment')(Attachment)
 registerSchema('thread_glyph_association')(ThreadGlyphAssociation)
 registerSchema('thread_subscription')(ThreadSubscription)
+registerSchema('feedback')(Feedback)
