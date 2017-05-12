@@ -2,7 +2,8 @@
 	"class" : {
 		"associations" : "JH 5/5/2017 15:34",
 		"avatarCache" : "TB 5/11/2017 18:15",
-		"cachedAvatarFor:ifAbsentPut:" : "TB 5/12/2017 11:11",
+		"avatarSize" : "TB 5/12/2017 12:33",
+		"cachedAvatarFor:ifAbsentPut:" : "TB 5/12/2017 12:34",
 		"modelName" : "lcj 4/7/2017 10:59",
 		"removeCachedAvatarFor:" : "TB 5/11/2017 18:44",
 		"removeCachedAvatarFor:ifOlderThan:" : "TB 5/12/2017 10:51",

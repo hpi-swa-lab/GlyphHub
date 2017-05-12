@@ -1,4 +1,4 @@
 mock-data
 downloadUserAvatar: aString
 
-	^ BTPromise unit: (Form extent: 32 asPoint)
+	^ BTPromise unit: (Form extent: FRTUser avatarSize asPoint)
