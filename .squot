@@ -1,0 +1,10 @@
+OrderedDictionary {
+	'packages\/BaselineOfBootstrap.package' : #SquotCypressCodeSerializer,
+	'packages\/BaselineOfFontReviewTool.package' : #SquotCypressCodeSerializer,
+	'packages\/BaselineOfKerningTool.package' : #SquotCypressCodeSerializer,
+	'packages\/Bootstrap.package' : #SquotCypressCodeSerializer,
+	'packages\/BootstrapPlugIns.package' : #SquotCypressCodeSerializer,
+	'packages\/FontReviewTool.package' : #SquotCypressCodeSerializer,
+	'packages\/HbFtPlugin.package' : #SquotCypressCodeSerializer,
+	'packages\/KerningTool.package' : #SquotCypressCodeSerializer
+}
