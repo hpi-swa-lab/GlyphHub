@@ -1,9 +1,12 @@
 as yet unclassified
 mouseMove: anEvent
 
-	anEvent redButtonPressed ifTrue: [ | delta |
+	anEvent redButtonPressed ifTrue: [ | delta coordinateDelta |
 		delta := anEvent position - self formerPosition.
+		coordinateDelta := toFontUnits transformDirection: delta.
+		
 		self
 			formerPosition: anEvent position;
-			coordinates: self coordinates + (toFontUnits transformDirection: delta);
+			coordinates: self coordinates + coordinateDelta;
+			updateNeighboringHandles: coordinateDelta;
 			changed: #handleMoved]

@@ -3,9 +3,9 @@ initialize
 
 	super initialize.
 
-	startPointMorph := FRTPointHandle forParent: self.
-	controlPoint1Morph := FRTPointHandle forParent: self.
-	controlPoint2Morph := FRTPointHandle forParent: self.
-	endPointMorph := FRTPointHandle forParent: self.
+	startPointMorph := FRTStartPointHandle forParent: self.
+	controlPoint1Morph := FRTStartControlPointHandle forParent: self.
+	controlPoint2Morph := FRTEndControlPointHandle forParent: self.
+	endPointMorph := FRTEndPointHandle forParent: self.
 	
 	self pointMorphs do: [:morph | morph addDependent: self]

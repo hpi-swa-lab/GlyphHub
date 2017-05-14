@@ -2,12 +2,19 @@
 	"class" : {
 		 },
 	"instance" : {
+		"adjustSmoothHandle:" : "TB 5/14/2017 19:32",
+		"anchor" : "TB 5/14/2017 19:12",
 		"coordinates" : "TB 5/13/2017 11:55",
 		"coordinates:" : "TB 5/14/2017 11:05",
+		"curveDo:" : "TB 5/14/2017 19:02",
 		"handlesMouseDown:" : "TB 5/14/2017 09:47",
 		"initialize" : "TB 5/14/2017 09:39",
 		"mouseDown:" : "TB 5/14/2017 10:19",
-		"mouseMove:" : "TB 5/14/2017 10:21",
+		"mouseMove:" : "TB 5/14/2017 19:18",
 		"mouseUp:" : "TB 5/14/2017 10:03",
+		"nextCurveDo:" : "TB 5/14/2017 19:04",
+		"previousCurveDo:" : "TB 5/14/2017 19:04",
 		"smooth" : "TB 5/2/2017 23:26",
-		"smooth:" : "TB 5/2/2017 23:25" } }
+		"smooth:" : "TB 5/2/2017 23:25",
+		"translateBy:" : "TB 5/14/2017 19:22",
+		"updateNeighboringHandles:" : "TB 5/14/2017 19:02" } }

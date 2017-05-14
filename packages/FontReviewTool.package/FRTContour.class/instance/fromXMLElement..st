@@ -4,7 +4,7 @@ fromXMLElement: anXMLNode
 	| points previous controlPoints previousSmooth |
 	points := self pointsFromNode: anXMLNode.
 	controlPoints := OrderedCollection new.
-	self closed: (self typeFromNode: points first) ~= #move.
+	self closed: (self typeFromNode: points first) ~~ #move.
 	
 	previous := self coordinatesFromNode: points first.
 	previousSmooth := self nodeSmooth: points first.

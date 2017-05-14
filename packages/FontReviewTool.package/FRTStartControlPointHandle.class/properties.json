@@ -1,0 +1,14 @@
+{
+	"category" : "FontReviewTool-Vectors",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "FRTStartControlPointHandle",
+	"pools" : [
+		 ],
+	"super" : "FRTPointHandle",
+	"type" : "normal" }
