@@ -7,9 +7,9 @@ testOpenContours
 	<point x="100" y="100" type="line"/>
 	</contour>'.
 
-	contour := FRTContour new fromXMLElement: xml pointTransform: #yourself.
+	contour := FRTContour new fromXMLElement: xml.
 
 	(self expect: contour closed) to be: false.
 
-	(self expect: (self xmlToString: (contour xmlElementPointTransform: #yourself))) to
+	(self expect: (self xmlToString: contour xmlElement)) to
 		equal: (self xmlToString: xml)

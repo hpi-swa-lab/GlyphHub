@@ -1,0 +1,16 @@
+{
+	"category" : "FontReviewTool-Vectors",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"toFontUnits",
+		"toPosition",
+		"lockLayoutChanged" ],
+	"name" : "FRTTransformable",
+	"pools" : [
+		 ],
+	"super" : "Morph",
+	"type" : "normal" }

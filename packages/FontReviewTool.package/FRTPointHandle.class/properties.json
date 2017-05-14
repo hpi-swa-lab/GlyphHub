@@ -6,9 +6,10 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"smooth" ],
+		"smooth",
+		"coordinates" ],
 	"name" : "FRTPointHandle",
 	"pools" : [
 		 ],
-	"super" : "Morph",
+	"super" : "FRTTransformable",
 	"type" : "normal" }

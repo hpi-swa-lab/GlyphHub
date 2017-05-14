@@ -9,7 +9,7 @@ testSmoothHandle
 	<point x="100" y="0" type="curve" smooth="yes"/>
 	</contour>'.
 
-	contour := FRTContour new fromXMLElement: xml pointTransform: #yourself.
+	contour := FRTContour new fromXMLElement: xml.
 
 	(self expect: (contour elements first endSmooth)) to be: true.
 	(self expect: (contour elements first startSmooth)) to be: false

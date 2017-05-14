@@ -9,6 +9,6 @@ testConvertChangesSaved
 
 	((source firstTagNamed: #contour) elements third)
 		attributeAt: #x put: 70 asString;
-		attributeAt: #y put: self ascender asString.
+		attributeAt: #y put: 0 asString.
 	
 	(self expect: (self xmlToString: outline xmlElement)) to equal: (self xmlToString: source)

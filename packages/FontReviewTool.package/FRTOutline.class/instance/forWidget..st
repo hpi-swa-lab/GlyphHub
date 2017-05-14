@@ -4,5 +4,6 @@ forWidget: aGlyphWidget
 	self flag: #todo. "how to resolve multiple?"
 
 	self
-		pointSize: aGlyphWidget pointSize;
-		fontinfo: aGlyphWidget renderer fontinfo
+		glif: (aGlyphWidget renderer loadedGlifs at: aGlyphWidget glyphNames first);
+		fontinfo: aGlyphWidget renderer fontinfo;
+		pointSize: aGlyphWidget pointSize

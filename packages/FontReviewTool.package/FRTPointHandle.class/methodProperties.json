@@ -2,6 +2,12 @@
 	"class" : {
 		 },
 	"instance" : {
-		"initialize" : "TB 5/2/2017 23:25",
+		"coordinates" : "TB 5/13/2017 11:55",
+		"coordinates:" : "TB 5/14/2017 11:05",
+		"handlesMouseDown:" : "TB 5/14/2017 09:47",
+		"initialize" : "TB 5/14/2017 09:39",
+		"mouseDown:" : "TB 5/14/2017 10:19",
+		"mouseMove:" : "TB 5/14/2017 10:21",
+		"mouseUp:" : "TB 5/14/2017 10:03",
 		"smooth" : "TB 5/2/2017 23:26",
 		"smooth:" : "TB 5/2/2017 23:25" } }

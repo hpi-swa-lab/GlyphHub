@@ -3,4 +3,7 @@ initialize
 
 	super initialize.
 
-	self smooth: false
+	self
+		smooth: false;
+		color: Color veryLightGray;
+		extent: (8 asPoint * BTWidget scalingFactor)

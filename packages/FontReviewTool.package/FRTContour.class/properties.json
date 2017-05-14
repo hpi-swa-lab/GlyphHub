@@ -11,5 +11,5 @@
 	"name" : "FRTContour",
 	"pools" : [
 		 ],
-	"super" : "Morph",
+	"super" : "FRTTransformable",
 	"type" : "normal" }

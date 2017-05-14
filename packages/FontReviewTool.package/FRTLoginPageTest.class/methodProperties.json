@@ -4,7 +4,6 @@
 	"instance" : {
 		"login:password:expectSuccessfulLogIn:" : "TB 5/12/2017 12:09",
 		"setUp" : "TB 5/12/2017 12:08",
-		"tearDown" : "al 3/29/2017 15:23",
 		"testCorrectingWrongCredentials" : "TB 5/12/2017 12:13",
 		"testNonExistingUser" : "TB 5/12/2017 12:09",
 		"testRightCredentials" : "TB 5/12/2017 12:12",

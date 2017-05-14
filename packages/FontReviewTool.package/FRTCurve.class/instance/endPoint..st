@@ -1,4 +1,4 @@
 as yet unclassified
 endPoint: aPoint
 
-	endPointMorph center: aPoint
+	endPointMorph coordinates: aPoint

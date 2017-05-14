@@ -1,4 +1,4 @@
 as yet unclassified
 controlPoint2: aPoint
 
-	controlPoint2Morph center: aPoint
+	controlPoint2Morph coordinates: aPoint
