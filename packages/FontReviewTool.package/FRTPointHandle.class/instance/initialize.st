@@ -6,4 +6,4 @@ initialize
 	self
 		smooth: false;
 		color: Color veryLightGray;
-		extent: (8 asPoint * BTWidget scalingFactor)
+		extent: self class handleSize asPoint

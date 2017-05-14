@@ -1,14 +1,15 @@
 {
 	"class" : {
-		 },
+		"handleSize" : "TB 5/14/2017 19:58" },
 	"instance" : {
 		"adjustSmoothHandle:" : "TB 5/14/2017 19:32",
 		"anchor" : "TB 5/14/2017 19:12",
 		"coordinates" : "TB 5/13/2017 11:55",
 		"coordinates:" : "TB 5/14/2017 11:05",
 		"curveDo:" : "TB 5/14/2017 19:02",
+		"drawControlPointHandleOn:" : "TB 5/14/2017 19:57",
 		"handlesMouseDown:" : "TB 5/14/2017 09:47",
-		"initialize" : "TB 5/14/2017 09:39",
+		"initialize" : "TB 5/14/2017 20:00",
 		"mouseDown:" : "TB 5/14/2017 10:19",
 		"mouseMove:" : "TB 5/14/2017 19:18",
 		"mouseUp:" : "TB 5/14/2017 10:03",

@@ -1,3 +1,0 @@
-translation
-requiresPlatformFiles
-	^true

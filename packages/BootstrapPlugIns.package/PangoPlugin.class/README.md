@@ -1,1 +1,0 @@
-A PangoPlugin calls the necessary functions for rendering text via pango on squeak forms.
