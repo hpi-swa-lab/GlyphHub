@@ -1,4 +1,4 @@
 as yet unclassified
 origin
 
-	^ self owner origin
+	^ self owner ifNotNilDo: #origin ifNil: [0 asPoint]
