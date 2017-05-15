@@ -119,13 +119,6 @@ class Feedback(CommonColumns):
     author_id = Column('author_id', Integer, ForeignKey('user._id'))
     author = relationship('User')
 
-    def image_path(self):
-        return os.path.join(frt_server.config.FEEDBACK_UPLOAD_FOLDER, str(self._id)) + '.png'
-
-    def ensure_folder_exists(self):
-        if not os.path.exists(frt_server.config.FEEDBACK_UPLOAD_FOLDER):
-            os.makedirs(frt_server.config.FEEDBACK_UPLOAD_FOLDER)
-
 registerSchema('user')(User)
 registerSchema('tag')(Tag)
 registerSchema('sample_text')(SampleText)

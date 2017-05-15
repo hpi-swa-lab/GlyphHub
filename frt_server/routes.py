@@ -11,7 +11,7 @@ from werkzeug.utils import secure_filename
 from eve.auth import requires_auth
 from eve_sqlalchemy import sqla_object_to_dict
 
-from frt_server.tables import User, Font, Family, Attachment, AttachmentType, Feedback
+from frt_server.tables import User, Font, Family, Attachment, AttachmentType
 import frt_server.config
 import frt_server.font
 import frt_server.settings
@@ -190,26 +190,6 @@ def register_routes(app):
         session.commit()
         return jsonify(), 200
 
-    def _upload_feedback_image(feedback_id):
-        session = app.data.driver.session
-        feedback = session.query(Feedback).get(feedback_id)
-        if not feedback:
-            return jsonify({'error': 'Associated feedback does not exist'}), 400
-
-        if 'file' not in request.files:
-            return jsonify({'error': 'No file given'}), 400
-
-        feedback_image = request.files['file']
-        if feedback_image.filename == '':
-            return jsonify({'error': 'Invalid filename'}), 400
-
-        filename = secure_filename(os.path.basename(feedback_image.filename))
-        file_type = filename.rsplit('.', 1)[-1].lower()
-
-        feedback.ensure_folder_exists()
-        feedback_image.save(feedback.image_path())
-        return jsonify(), 200
-
     @app.route('/comment/<comment_id>/attachment', methods=['POST'])
     @requires_auth('')
     def comment_attach(comment_id):
@@ -252,11 +232,6 @@ def register_routes(app):
             return jsonify({'error': 'No default image found'}), 500
 
         return send_file(image_path, mimetype='image/jpeg', as_attachment=True)
-
-    @app.route('/feedback/<feedback_id>/image', methods=['POST'])
-    @requires_auth('')
-    def upload_feedback(feedback_id):
-        return _upload_feedback_image(feedback_id)
 
     if frt_server.config.DEBUG:
         @app.before_request

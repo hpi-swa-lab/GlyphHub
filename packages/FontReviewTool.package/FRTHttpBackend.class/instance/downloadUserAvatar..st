@@ -1,6 +1,6 @@
 font-upload
 downloadUserAvatar: aUserOrId
-	"this function ignores the cache. We do not care what comes from the server, but return a form-promise."
+	"this function ignores the cache"
 
 	| id |
 	id := aUserOrId isBTModel ifTrue: [aUserOrId id] ifFalse: [aUserOrId].

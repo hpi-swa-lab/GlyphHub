@@ -8,8 +8,10 @@
 	"instvars" : [
 		"drawingContainer",
 		"drawingArea",
+		"font",
 		"penColor",
-		"colorButton" ],
+		"colorButton",
+		"glyphImport" ],
 	"name" : "FRTDrawingEditor",
 	"pools" : [
 		 ],

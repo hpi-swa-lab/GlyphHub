@@ -5,4 +5,3 @@ SystemOrganization addCategory: #'FontReviewTool-Vectors'!
 SystemOrganization addCategory: #'FontReviewTool-RichText'!
 SystemOrganization addCategory: #'FontReviewTool-GlyphGrid'!
 SystemOrganization addCategory: #FontReviewTool!
-SystemOrganization addCategory: #'FontReviewTool-Glyphs'!

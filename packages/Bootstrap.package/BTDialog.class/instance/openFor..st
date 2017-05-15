@@ -7,7 +7,6 @@ openFor: aWidget
 	self
 		fullBounds;
 		center: self parentTopLevel center;
-		openInWorld;
-		shown.
+		openInWorld.
 	
 	^ acceptPromise

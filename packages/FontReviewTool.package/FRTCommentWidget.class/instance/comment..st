@@ -3,7 +3,7 @@ comment: aComment
 	
 	comment := aComment.
 	
-	metaInfo text: aComment author username", ' - ', (self printDate: aComment createdAt)".
+	metaInfo text: aComment author username, ' - ', (self printDate: aComment createdAt).
 	commentText text: aComment text.
 	aComment author downloadAvatarForm then: [:form | userAvatar form: form].
 	

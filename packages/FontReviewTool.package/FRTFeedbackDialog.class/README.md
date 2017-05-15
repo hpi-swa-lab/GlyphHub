@@ -1,1 +1,0 @@
-A FRTFeedbackDialog is a widget that lets a user type in feedback and saves it to the server.

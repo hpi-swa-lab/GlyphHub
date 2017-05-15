@@ -3,7 +3,7 @@ import os
 import glob
 import shutil
 
-from sqlalchemy import Column, Integer, ForeignKey, String, Text
+from sqlalchemy import Column, Integer, ForeignKey, String, Text, event
 from sqlalchemy.orm import relationship
 
 from frt_server.tag import tag_font_association_table
@@ -178,4 +178,8 @@ class Font(CommonColumns):
         if 'features' in request_json:
             request_json['features'] = self.versioned_file_at_path_or_none('ufo/' + self.ufo_file_name() + '/features.fea')
         return request_json
+
+@event.listens_for(Font, 'load')
+def after_font_load(target, context):
+    target.version_messages = target.versions()
 
