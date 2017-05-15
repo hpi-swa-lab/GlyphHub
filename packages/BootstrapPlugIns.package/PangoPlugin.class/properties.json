@@ -1,0 +1,14 @@
+{
+	"category" : "BootstrapPlugIns",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "TB 3/23/2017 17:16",
+	"instvars" : [
+		 ],
+	"name" : "PangoPlugin",
+	"pools" : [
+		 ],
+	"super" : "InterpreterPlugin",
+	"type" : "normal" }
