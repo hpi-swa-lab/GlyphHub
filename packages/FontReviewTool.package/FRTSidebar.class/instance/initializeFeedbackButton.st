@@ -1,8 +1,8 @@
 initialize-release
 initializeFeedbackButton
 
-	feedbackButton := ((BTIconButton icon: #bug)
+	feedbackButton := ((BTButton label: 'Got a problem?' icon: #bug)
 		colorType: #danger;
-		"color: Color red;"
+		small;
 		when: #clicked send: #openFeedbackDialog to: self;
 		align: #(start start))

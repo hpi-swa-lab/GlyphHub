@@ -1,4 +1,4 @@
-initialize-release
+actions
 importGlyph: aGlifFilenameString
 
 	self importGlyphs: {aGlifFilenameString allButLast: 5} font: self font.

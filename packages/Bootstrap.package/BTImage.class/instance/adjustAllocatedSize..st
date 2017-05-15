@@ -1,7 +1,7 @@
 layout
 adjustAllocatedSize: aPoint
 
-	(form isNil or: [aPoint isZero]) ifTrue: [^ aPoint].
+	(form isNil or: [aPoint x isZero or: [aPoint y isZero]]) ifTrue: [^ aPoint].
 	
 	^ self scalingMode == #shrink
 		ifTrue: [

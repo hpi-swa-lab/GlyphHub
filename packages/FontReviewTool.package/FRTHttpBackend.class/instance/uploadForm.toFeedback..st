@@ -1,26 +1,30 @@
-image-upload
-uploadAvatar: aFileStream
+font-upload
+uploadForm: aForm toFeedback: anIdNumber
 
-	| boundary file data |
+	| boundary file data pngStream |
 	boundary := WebUtils multipartBoundary.
-	file := (MIMELocalFileDocument contentType: 'text/plain' content: nil url: 'file://', aFileStream name) contentStream: (aFileStream binary; yourself).
+	pngStream := (ReadWriteStream on: (ByteArray new: 1024))
+		binary;
+		yourself.
+	PNGReadWriter putForm: aForm onStream: pngStream.
+	file := (MIMELocalFileDocument contentType: 'text/plain' content: '' url: 'file://file.png') contentStream: pngStream.
 	
 	data := String streamContents: [:stream |
 		stream
+			" file field "
 			nextPutAll: '--'; nextPutAll: boundary;
 			crlf;
 			nextPutAll: 'Content-Disposition: form-data; ';
 			nextPutAll: 'name="file"; ';
-			nextPutAll: 'filename="'; nextPutAll: aFileStream name; nextPut: $";
+			nextPutAll: 'filename="file.png"';
 			crlf;
 			crlf;
 			nextPutAll: file content asString;
 			crlf;
 			nextPutAll: '--'; nextPutAll: boundary; nextPutAll: '--'].
 	
-	"not sending JSON here because flask can ideally handle the multipart/form-data format"
 	^ self
-		request: 'user_avatar/upload'
+		request: 'feedback/', anIdNumber, '/image'
 		method: 'POST'
 		data: data
 		contentType: 'multipart/form-data; boundary=', boundary

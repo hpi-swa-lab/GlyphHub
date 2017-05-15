@@ -7,6 +7,7 @@ openCentered
 	self
 		fullBounds;
 		center: self currentWorld center;
-		openInWorld.
+		openInWorld;
+		shown.
 	
 	^ acceptPromise
