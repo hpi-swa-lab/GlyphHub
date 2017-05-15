@@ -4,13 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "al 5/5/2017 12:26",
+	"commentStamp" : "",
 	"instvars" : [
 		"font",
-		"backend",
-		"fontinfo",
-		"glifs" ],
-	"name" : "FRTGlyphRenderer",
+		"versionHash" ],
+	"name" : "FRTCachedFontinfoKey",
 	"pools" : [
 		 ],
 	"super" : "Object",

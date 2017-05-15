@@ -4,13 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "TB 5/9/2017 11:37",
+	"commentStamp" : "",
 	"instvars" : [
-		"entities",
-		"id",
-		"extraGlifs" ],
-	"name" : "FRTMockTopLevel",
+		"font" ],
+	"name" : "FRTGlyphLoaderTest",
 	"pools" : [
 		 ],
-	"super" : "FRTApplication",
+	"super" : "FRTApplicationPageTest",
 	"type" : "normal" }

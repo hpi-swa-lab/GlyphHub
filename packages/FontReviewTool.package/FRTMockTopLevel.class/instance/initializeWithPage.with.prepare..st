@@ -3,6 +3,7 @@ initializeWithPage: aPage with: anObject prepare: aBlock
 
 	entities := Dictionary new.
 	id := 0.
+	extraGlifs := #().
 	
 	user := FRTUser new
 		username: 'Eva';

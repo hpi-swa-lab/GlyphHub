@@ -4,13 +4,16 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "al 5/5/2017 12:26",
+	"commentStamp" : "",
 	"instvars" : [
 		"font",
-		"backend",
+		"glyphName",
 		"fontinfo",
-		"glifs" ],
-	"name" : "FRTGlyphRenderer",
+		"versionHash",
+		"glifPromise",
+		"glif",
+		"loadingPromise" ],
+	"name" : "FRTCachedGlyph",
 	"pools" : [
 		 ],
 	"super" : "Object",

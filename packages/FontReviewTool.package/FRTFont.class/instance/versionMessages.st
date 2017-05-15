@@ -1,0 +1,4 @@
+accessing
+versionMessages
+
+	^ versionMessages
