@@ -1,0 +1,16 @@
+{
+	"category" : "FontReviewTool-Vectors",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"old",
+		"new",
+		"renderer" ],
+	"name" : "FRTGlyphDiff",
+	"pools" : [
+		 ],
+	"super" : "BTWidget",
+	"type" : "normal" }
