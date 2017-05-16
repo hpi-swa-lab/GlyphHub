@@ -1,5 +1,5 @@
 updating
 selectFontNamed: aString suggestion: aSuggestion
 
-	aSuggestion data downloadOTF then: [
+	aSuggestion data downloadOtf then: [
 		richText selectedFont: aSuggestion data fontNameForPango]

@@ -3,7 +3,8 @@
 		"loadExample" : "TB 4/26/2017 14:32" },
 	"instance" : {
 		"convertUnicodeToGlyphNames:of:" : "lcj 4/10/2017 09:55",
-		"downloadFontOTF:" : "al 4/26/2017 15:53",
+		"downloadFontOtf:" : "lcj 5/16/2017 16:54",
+		"downloadFontOtf:into:named:" : "lcj 5/16/2017 16:53",
 		"downloadUserAvatar:" : "al 5/15/2017 14:08",
 		"loadUfoDetails:font:" : "lcj 4/9/2017 11:11",
 		"logout" : "lcj 4/9/2017 13:21",

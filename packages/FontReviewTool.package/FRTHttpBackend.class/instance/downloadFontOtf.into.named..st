@@ -1,19 +1,18 @@
 font-upload
-downloadFontOTF: aFontOrId
+downloadFontOtf: aFontOrId into: aDirectory named: aString
 
-	| id filename directory |
+	| id filename |
 	id := aFontOrId isBTModel ifTrue: [aFontOrId id] ifFalse: [aFontOrId].
 	
 	self flag: #todo. " make sure names are unique across versions "
-	filename := id asString, '.otf'.
-	directory := BTPangoTextLayout fontCacheDirectory.
-	directory assureExistence.
+	filename := aString, '.otf'.
+	aDirectory assureExistence.
 	
-	^ (directory fileExists: filename)
+	^ (aDirectory fileExists: filename)
 		ifTrue: [BTPromise unit: filename]
 		ifFalse: [
 			(self request: '/font/', id, '/otf' method: 'GET' data: '' contentType: 'text/plain')
 				then: [:response |
-					directory forceNewFileNamed: filename do: [:stream | stream binary; nextPutAll: response content].
+					aDirectory forceNewFileNamed: filename do: [:stream | stream binary; nextPutAll: response content].
 					BTPangoTextLayout refreshFontCache.
 					filename]]

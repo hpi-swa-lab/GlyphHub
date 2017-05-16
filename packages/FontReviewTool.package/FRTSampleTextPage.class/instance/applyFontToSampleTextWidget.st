@@ -2,5 +2,5 @@ ui
 applyFontToSampleTextWidget
 
 	commentSelectionButton visible: true.
-	(self selectedFont downloadOTF)
+	(self selectedFont downloadOtf)
 		then: [sampleTextWidget font: self selectedFont fontNameForPango]

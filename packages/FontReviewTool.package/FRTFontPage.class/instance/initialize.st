@@ -1,7 +1,7 @@
 initialize-release
 initialize
 
-	| inputButton updateButton |
+	| inputButton updateButton otfButton |
 	super initialize.
 
 	fontNameLabel := BTLabel new
@@ -14,6 +14,9 @@ initialize
 		when: #clicked send: #openGlyphInputPage to: self.
 	updateButton := (BTButton label: 'Update' icon: #cloud_upload)
 		colorType: #primary.
+	otfButton := (BTButton label: 'Download as OTF' icon: #cloud_download)
+		colorType: #primary;
+		when: #clicked send: #downloadOtf to: self.
 		
 	uploadPopover := FRTUploadPopover new
 		attachTo: updateButton.
@@ -36,7 +39,8 @@ initialize
 			add: fontAuthorLabel;
 			add: BTWidget spacer;
 			add: updateButton;
-			add: inputButton);
+			add: inputButton;
+			add: otfButton);
 		add: tabContainer;
 		createPreviewGlyphsNotice
 	
