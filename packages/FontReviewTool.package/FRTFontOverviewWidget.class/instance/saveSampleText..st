@@ -3,7 +3,7 @@ saveSampleText: aRichText
 
 	| title family |
 	family := self topLevel selectedFont family.
-	title := family name.
+	title := family familyName.
 	
 	aRichText ifEmpty: [
 		self topLevel displayNotification: 'Sample cannot be empty' type: #danger.

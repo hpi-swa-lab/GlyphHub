@@ -1,4 +1,4 @@
 accessing
 font
 
-	^ richText font
+	^ self topLevel font

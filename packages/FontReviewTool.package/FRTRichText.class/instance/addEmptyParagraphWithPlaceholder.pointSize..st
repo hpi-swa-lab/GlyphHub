@@ -1,7 +1,11 @@
 paragraphs
 addEmptyParagraphWithPlaceholder: aString pointSize: aPtSizeNumber
 
-	self addParagraph: (FRTParagraph new 
+	| newParagraph |
+	newParagraph := (FRTParagraph new 
 		default;
 		placeholder: aString;
-		pointSize: aPtSizeNumber)
+		pointSize: aPtSizeNumber).
+	self hasSubmorphs ifTrue: [
+		newParagraph font: self lastSubmorph font].
+	self addParagraph: newParagraph
