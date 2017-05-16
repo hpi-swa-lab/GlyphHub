@@ -1,4 +1,0 @@
-accessing
-gridWidget
-
-	^ gridWidget

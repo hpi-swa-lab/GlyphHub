@@ -4,7 +4,8 @@
 	"instance" : {
 		"addEmptyParagraph" : "al 5/12/2017 10:24",
 		"addEmptyParagraphWithPlaceholder:" : "al 5/12/2017 11:29",
-		"addEmptyParagraphWithPlaceholder:pointSize:" : "al 5/15/2017 17:57",
+		"addEmptyParagraphWithPlaceholder:pointSize:" : "al 5/16/2017 17:00",
+		"addEmptyParagraphWithPlaceholder:pointSize:deletable:" : "al 5/16/2017 16:42",
 		"addParagraph:" : "TB 5/5/2017 17:45",
 		"editable:" : "TB 5/5/2017 16:03",
 		"focusParagraph:" : "TB 5/5/2017 17:48",
@@ -17,7 +18,7 @@
 		"minimumNumberOfParagraphs" : "al 5/12/2017 10:43",
 		"minimumNumberOfParagraphs:" : "al 5/12/2017 10:43",
 		"paragraphs" : "TB 5/5/2017 14:52",
-		"removeParagraph:" : "al 5/12/2017 10:37",
+		"removeParagraph:" : "al 5/16/2017 16:35",
 		"selectedAlignment:" : "TB 5/5/2017 15:34",
 		"selectedFont:" : "TB 5/5/2017 17:23",
 		"selectedOpenTypeFeatures:" : "TB 5/5/2017 15:57",
