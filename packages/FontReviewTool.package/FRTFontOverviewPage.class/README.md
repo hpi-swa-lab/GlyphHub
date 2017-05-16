@@ -1,2 +1,0 @@
-A FRTFontOverviewPage gives the overview of a single font, showing all existing glyphs of the font, providing meta-information about the font, as well as showing open discussion on the font's glyphs.
-It also provides links to the single glyph views of the font.

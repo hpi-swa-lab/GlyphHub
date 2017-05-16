@@ -9,7 +9,8 @@
 		"alignment",
 		"pointSize",
 		"font",
-		"openTypeFeatures" ],
+		"openTypeFeatures",
+		"deletable" ],
 	"name" : "FRTParagraph",
 	"pools" : [
 		 ],

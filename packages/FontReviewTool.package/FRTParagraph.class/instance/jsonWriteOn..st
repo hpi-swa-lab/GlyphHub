@@ -7,4 +7,6 @@ jsonWriteOn: aWriteStream
 		at: 'pointSize' put: self pointSize;
 		at: 'text' put: self text;
 		at: 'openTypeFeatures' put: self openTypeFeatures;
+		at: 'deletable' put: self deletable;
+		at: 'placeholder' put: self placeholder;
 		yourself) jsonWriteOn: aWriteStream

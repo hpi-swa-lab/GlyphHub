@@ -1,12 +1,12 @@
 {
 	"class" : {
-		"newWithRenderer:" : "JH 4/7/2017 12:25" },
+		"newWithRenderer:" : "al 5/16/2017 15:00" },
 	"instance" : {
 		"completeGlyphModelCollection:" : "al 5/9/2017 15:50",
 		"createGlyphPreviewWidgetsFor:" : "al 5/9/2017 15:55",
 		"font" : "TB 4/9/2017 22:50",
 		"glyphNames" : "JH 4/7/2017 12:39",
-		"glyphNames:" : "TB 5/11/2017 09:31",
+		"glyphNames:" : "al 5/16/2017 15:01",
 		"initialize" : "al 5/9/2017 17:06",
 		"openGlyph:" : "TB 5/9/2017 17:56",
 		"pointSize" : "JH 4/7/2017 12:16",
