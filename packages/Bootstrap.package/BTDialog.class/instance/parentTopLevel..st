@@ -1,4 +1,4 @@
-displaying
+accessing
 parentTopLevel: aWidget.
 	
 	parentTopLevel := aWidget

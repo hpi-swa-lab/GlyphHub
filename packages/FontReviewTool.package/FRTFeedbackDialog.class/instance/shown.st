@@ -8,7 +8,8 @@ shown
 		expand: true;
 		align: #(center center).
 	
-	applicationScreenshot minSize: 300 @ (applicationScreenshot heightAtWidth: 300).
+	applicationScreenshot minSize:
+		self screenshotWidth @ (applicationScreenshot heightAtWidth: self screenshotWidth).
 	
 	button := BTClickable new
 		add: applicationScreenshot;

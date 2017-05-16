@@ -4,6 +4,7 @@ initializeWithPage: aPage with: anObject prepare: aBlock
 	entities := Dictionary new.
 	id := 0.
 	extraGlifs := #().
+	fileUploads := Dictionary new.
 	
 	user := FRTUser new
 		username: 'Eva';
@@ -11,6 +12,6 @@ initializeWithPage: aPage with: anObject prepare: aBlock
 		saveTo: self;
 		yourself.
 	
-	aBlock value: self.
+	aBlock cull: self.
 	
 	self initializeWithPage: aPage with: anObject

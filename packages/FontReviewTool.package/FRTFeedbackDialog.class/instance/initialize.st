@@ -5,7 +5,7 @@ initialize
 	
 	feedbackTextArea := BTTextArea new
 		multiLine: true;
-		placeholder: 'Describe your problem...';
+		placeholder: 'Describe your problem ...';
 		minSize: 300 @ 0;
 		minRows: 3.
 	
@@ -15,5 +15,5 @@ initialize
 		add: self feedbackButton).
 	
 	self
-		title: 'Report a bug';
+		title: 'Report a Bug';
 		add: page

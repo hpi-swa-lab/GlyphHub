@@ -1,0 +1,4 @@
+constants
+screenshotWidth
+
+	^ 300

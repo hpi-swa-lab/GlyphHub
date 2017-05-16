@@ -1,0 +1,1 @@
+A FRTGlyphDrawingEditor is a special drawing editor that supports loading glyphs under its canvas.

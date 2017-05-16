@@ -3,8 +3,9 @@
 		 },
 	"instance" : {
 		"feedbackButton" : "lcj 5/12/2017 11:57",
-		"initialize" : "lcj 5/16/2017 15:04",
-		"openSketchEditor" : "lcj 5/15/2017 15:30",
-		"saveFeedback" : "lcj 5/16/2017 11:46",
-		"saveSketch:" : "lcj 5/15/2017 15:30",
-		"shown" : "lcj 5/15/2017 15:03" } }
+		"initialize" : "TB 5/16/2017 15:57",
+		"openSketchEditor" : "TB 5/16/2017 15:40",
+		"saveFeedback" : "TB 5/16/2017 16:13",
+		"saveSketch:" : "TB 5/16/2017 15:42",
+		"screenshotWidth" : "TB 5/16/2017 15:43",
+		"shown" : "TB 5/16/2017 15:43" } }
