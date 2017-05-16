@@ -71,7 +71,9 @@ def register_routes(app):
             try:
                 family.process_file(family_file, current_user, request.form.get('commit_message') or 'New Version')
                 return '', 200
-            except Exception:
+            except Exception as e:
+                if frt_server.config.DEBUG:
+                    print(e.args)
                 return jsonify({'error': 'Processing file failed'}), 400
         finally:
             Family.delete_family_if_empty(family)
@@ -247,9 +249,10 @@ def register_routes(app):
             return jsonify({'error': 'Associated user does not exist'}), 400
 
         try:
+            """this function returns a default path if the user doesn't have their own avatar"""
             image_path = user.get_avatar_path()
         except FileNotFoundError:
-            return jsonify({'error': 'No default image found'}), 500
+            return jsonify({'error': 'No user or default avatar found'}), 500
 
         return send_file(image_path, mimetype='image/jpeg', as_attachment=True)
 

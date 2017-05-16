@@ -66,7 +66,7 @@ class Family(CommonColumns):
             temporary_filename = filename[:-4]
             folders = glob.glob(os.path.join(self.source_folder_path(), '*.ufo'))
             if len(folders) != 1:
-                raise Error(self.source_folder_path() + " should contain exactly 1 match for *.ufo, but contains " + len(folders))
+                raise Exception(self.source_folder_path() + " should contain exactly 1 match for *.ufo, but contains " + str(len(folders)))
             source = os.path.join(self.source_folder_path(), folders[0])
             destination = os.path.join(self.source_folder_path(), temporary_filename)
             if source != destination:
