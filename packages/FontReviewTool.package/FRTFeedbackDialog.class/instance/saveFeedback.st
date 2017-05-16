@@ -1,11 +1,11 @@
 callbacks
 saveFeedback
 
-	feedbackTextArea text ifEmpty: [self add: (BTAlert text: 'Text can''t be empty'). ^ self].
+	feedbackTextArea text ifEmpty: [page add: (BTAlert text: 'Text can''t be empty' type: #warning) at: 3. ^ self].
 
 	((((FRTFeedback new
 		text: feedbackTextArea text;
 		author: self parentTopLevel user) saveTo: self parentTopLevel backend)
 			then: [:feedback | self parentTopLevel backend uploadForm: form toFeedback: feedback id])
 				then: [:feedback | self accept: feedback])
-				catch: [self add: (BTAlert text: 'Saving Feedback failed' type: #danger)]
+				catch: [page add: (BTAlert text: 'Saving Feedback failed' type: #danger) at: 3]

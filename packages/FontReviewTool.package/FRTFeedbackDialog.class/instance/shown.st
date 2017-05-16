@@ -1,4 +1,4 @@
-initialize-release
+lifecycle
 shown
 
 	| button |

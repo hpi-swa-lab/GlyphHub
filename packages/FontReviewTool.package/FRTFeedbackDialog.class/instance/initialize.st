@@ -5,7 +5,7 @@ initialize
 	
 	feedbackTextArea := BTTextArea new
 		multiLine: true;
-		placeholder: 'Descibe the problem...';
+		placeholder: 'Describe your problem...';
 		minSize: 300 @ 0;
 		minRows: 3.
 	

@@ -1,4 +1,4 @@
-initialize-release
+actions
 openSketchEditor
 
 	editor := FRTDrawingEditor new
