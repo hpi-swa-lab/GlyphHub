@@ -1,0 +1,14 @@
+{
+	"category" : "FontReviewTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"versionEntry" ],
+	"name" : "FRTVersionHistoryEntryWidget",
+	"pools" : [
+		 ],
+	"super" : "BTWidget",
+	"type" : "normal" }

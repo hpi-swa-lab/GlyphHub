@@ -9,6 +9,7 @@ mockFamily
 	
 	family fonts add: (FRTFont new
 		fontName: 'HI';
+		versionMessages: #();
 		author: (FRTUser new username: 'Eva')).
 	
 	^ family

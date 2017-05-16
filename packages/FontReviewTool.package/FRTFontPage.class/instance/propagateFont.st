@@ -5,7 +5,12 @@ propagateFont
 	self renderer
 		backend: self backend;
 		font: self font.
+	
+	versionWidgets
+		removeAllMorphs;
+		addAll: (self font versionMessages collect: [:version |
+			FRTVersionHistoryEntryWidget new versionEntry: version]).
 
 	overviewTab font: self font.
 	fontNameLabel text: self font fontName.
-	fontAuthorLabel text: 'by ', self font author username.
+	fontAuthorLabel text: 'by ', self font author username

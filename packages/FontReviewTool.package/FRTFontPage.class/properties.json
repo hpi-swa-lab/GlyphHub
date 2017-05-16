@@ -21,7 +21,8 @@
 		"renderer",
 		"threadsContainer",
 		"uploadPopover",
-		"missingPreviewGlyphsNotice" ],
+		"missingPreviewGlyphsNotice",
+		"versionWidgets" ],
 	"name" : "FRTFontPage",
 	"pools" : [
 		 ],

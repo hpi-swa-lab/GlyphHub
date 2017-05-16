@@ -1,0 +1,17 @@
+{
+	"category" : "FontReviewTool-Models",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"versionHash",
+		"message",
+		"dateAndTime",
+		"font" ],
+	"name" : "FRTFontVersionEntry",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

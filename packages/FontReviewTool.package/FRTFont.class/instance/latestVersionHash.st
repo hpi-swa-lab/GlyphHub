@@ -1,4 +1,4 @@
 accessing
 latestVersionHash
 
-	^ self versionMessages first at: 'version_hash'
+	^ self versionMessages first versionHash
