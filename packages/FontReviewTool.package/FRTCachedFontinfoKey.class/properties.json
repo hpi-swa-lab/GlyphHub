@@ -1,0 +1,15 @@
+{
+	"category" : "FontReviewTool-Glyphs",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"font",
+		"versionHash" ],
+	"name" : "FRTCachedFontinfoKey",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

@@ -3,7 +3,7 @@ uploadAvatar: aFileStream
 
 	| boundary file data |
 	boundary := WebUtils multipartBoundary.
-	file := (MIMELocalFileDocument contentType: 'text/plain' content: nil url: 'file://', aFileStream name) contentStream: (aFileStream binary; yourself).
+	file := (MIMELocalFileDocument contentType: 'text/plain' content: '' url: 'file://', aFileStream name) contentStream: (aFileStream binary; yourself).
 	
 	data := String streamContents: [:stream |
 		stream

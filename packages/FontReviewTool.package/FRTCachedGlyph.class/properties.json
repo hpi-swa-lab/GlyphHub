@@ -1,0 +1,20 @@
+{
+	"category" : "FontReviewTool-Glyphs",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"font",
+		"glyphName",
+		"fontinfo",
+		"versionHash",
+		"glifPromise",
+		"glif",
+		"loadingPromise" ],
+	"name" : "FRTCachedGlyph",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

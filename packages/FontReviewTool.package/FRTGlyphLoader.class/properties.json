@@ -1,0 +1,16 @@
+{
+	"category" : "FontReviewTool-Glyphs",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"backend",
+		"glyphCache",
+		"fontinfoCache" ],
+	"name" : "FRTGlyphLoader",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

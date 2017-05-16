@@ -1,0 +1,10 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"glifs" : "TB 5/15/2017 16:26",
+		"setUp" : "TB 5/15/2017 14:52",
+		"simpleGlif" : "TB 5/15/2017 14:46",
+		"testLoadMultipleGlyphs" : "TB 5/15/2017 18:17",
+		"testLoadSimpleGlyph" : "TB 5/15/2017 18:13",
+		"testReadyGlyphs" : "TB 5/15/2017 16:36" } }

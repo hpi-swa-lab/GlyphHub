@@ -4,9 +4,14 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "lcj 5/15/2017 10:48",
 	"instvars" : [
-		"feedbackTextArea" ],
+		"feedbackTextArea",
+		"applicationScreenshot",
+		"page",
+		"form",
+		"editor",
+		"dialog" ],
 	"name" : "FRTFeedbackDialog",
 	"pools" : [
 		 ],

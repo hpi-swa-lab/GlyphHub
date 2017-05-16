@@ -4,7 +4,7 @@ openSketchEditor
 	| dialog |
 	editor ifNil: [ | font |
 		font := self thread threadGlyphAssociations anyOne glyph font.
-		editor := FRTDrawingEditor new
+		editor := FRTGlyphDrawingEditor new
 			font: font;
 			importGlyphs: preview glyphNames font: font;
 			when: #accept send: #acceptSketch: to: self;

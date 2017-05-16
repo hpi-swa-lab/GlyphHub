@@ -7,8 +7,8 @@ join: aModelList class: aClass populate: aCollection
 		ifTrue: [ associations keys ]
 		ifFalse: [ aCollection ].
 	
-	aModelList do: [ :model |
-		populate do: [ :field | | current association children |
+	aModelList do: [:model |
+		populate do: [:field | | current association children |
 			current := model get: field.
 			association := associations at: field.
 			
@@ -18,7 +18,7 @@ join: aModelList class: aClass populate: aCollection
 				into: association foreignClass
 				populate: #().
 			
-			children value do: [ :childModel | childModel set: association backPopulateKey to: model ].
+			children value do: [:childModel | childModel set: association backPopulateKey to: model].
 			
 			model
 				set: field
@@ -28,4 +28,4 @@ join: aModelList class: aClass populate: aCollection
 						children value
 							field: field;
 							owner: model;
-							yourself ]) ]]
+							yourself])]]

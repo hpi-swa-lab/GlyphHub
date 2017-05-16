@@ -7,7 +7,7 @@ uploadForm: aForm toComment: anIdOrComment
 		binary;
 		yourself.
 	PNGReadWriter putForm: aForm onStream: pngStream.
-	file := (MIMELocalFileDocument contentType: 'text/plain' content: nil url: 'file://file.png') contentStream: pngStream.
+	file := (MIMELocalFileDocument contentType: 'text/plain' content: '' url: 'file://file.png') contentStream: pngStream.
 	id := anIdOrComment isBTModel ifTrue: [anIdOrComment id] ifFalse: [anIdOrComment].
 	
 	data := String streamContents: [:stream |

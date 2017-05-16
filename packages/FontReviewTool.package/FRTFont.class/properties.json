@@ -11,7 +11,8 @@
 		"author",
 		"codepoints",
 		"glyphs",
-		"tags" ],
+		"tags",
+		"versionMessages" ],
 	"name" : "FRTFont",
 	"pools" : [
 		 ],

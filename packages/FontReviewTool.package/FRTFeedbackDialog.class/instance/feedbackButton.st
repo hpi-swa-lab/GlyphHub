@@ -1,4 +1,4 @@
-as yet unclassified
+initialize-release
 feedbackButton
 
 	^ (BTButton label: 'Send feedback')

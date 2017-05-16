@@ -1,0 +1,16 @@
+{
+	"category" : "FontReviewTool-Drawing",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"font",
+		"glyphImport",
+		"fontButton" ],
+	"name" : "FRTGlyphDrawingEditor",
+	"pools" : [
+		 ],
+	"super" : "FRTDrawingEditor",
+	"type" : "normal" }

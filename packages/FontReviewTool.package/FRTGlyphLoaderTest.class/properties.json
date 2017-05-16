@@ -1,0 +1,14 @@
+{
+	"category" : "FontReviewTool-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"font" ],
+	"name" : "FRTGlyphLoaderTest",
+	"pools" : [
+		 ],
+	"super" : "FRTApplicationPageTest",
+	"type" : "normal" }
