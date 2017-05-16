@@ -41,3 +41,6 @@ DOMAIN = {
     'thread_subscription': ThreadSubscription._eve_schema['thread_subscription'],
     'feedback': Feedback._eve_schema['feedback']
 }
+
+# Include our custom versions list
+DOMAIN['font']['datasource']['projection']['version_messages'] = 1
