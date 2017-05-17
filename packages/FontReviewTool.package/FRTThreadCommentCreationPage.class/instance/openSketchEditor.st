@@ -6,7 +6,7 @@ openSketchEditor
 		font := self thread threadGlyphAssociations anyOne glyph font.
 		editor := FRTGlyphDrawingEditor new
 			font: font;
-			importGlyphs: preview glyphNames font: font;
+			importGlyphs: glyphsPreview glyphNames font: font;
 			when: #accept send: #acceptSketch: to: self;
 			yourself].
 	

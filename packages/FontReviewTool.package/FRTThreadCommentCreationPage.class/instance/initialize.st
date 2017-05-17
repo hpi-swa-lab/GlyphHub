@@ -3,9 +3,12 @@ initialize
 
 	super initialize.
 	
-	preview := FRTGlyphWidget new
+	previewArea := BTPage column.
+	glyphsPreview := (FRTGlyphWidget new
 		pointSize: 128;
-		centered: true.
+		centered: true).
+	self previewArea add: glyphsPreview.
+		
 	titleContainer := BTPage new expand: true.
 	glyphLinkContainer := BTPage column.
 	commentText := BTTextArea new
@@ -19,7 +22,7 @@ initialize
 		add: (BTPage row
 			add: titleContainer;
 			add: self commentAttachmentButtonGroup);
-		add: preview;
+		add: self previewArea;
 		add: glyphLinkContainer;
 		add: commentText;
 		add: ((BTButton text: 'Save')

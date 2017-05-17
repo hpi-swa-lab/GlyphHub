@@ -1,6 +1,6 @@
 callbacks
 loadAttachments
-	
+
 	^ (FRTAttachment
 		loadWhere: {#comment -> nil. #owner -> self topLevel user}
 		populate: #()

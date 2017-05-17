@@ -1,7 +1,7 @@
 callbacks
 loadGlyphPreviewForThread: aThread
 
-	preview
+	glyphsPreview
 		font: aThread font;
 		glyphNames: (aThread glyphs collect: [:glyph  | glyph glyphName]).
-	preview whenReady then: [self layoutChanged]
+	glyphsPreview whenReady then: [self layoutChanged]
