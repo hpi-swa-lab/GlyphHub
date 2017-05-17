@@ -3,6 +3,8 @@ from sqlalchemy import Column, DateTime, Integer, func
 
 Base = declarative_base()
 
+DATE_FORMAT = '%Y-%m-%dT%H:%M:%S.%f%z'
+
 class CommonColumns(Base):
     __abstract__ = True
     created_at = Column(DateTime, server_default=func.now())
