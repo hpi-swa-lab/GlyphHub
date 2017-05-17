@@ -1,4 +1,4 @@
 accessing
-text: aString
+text: aJsonString
 
-	self update: #text with: aString
+	self update: #text with: aJsonString
