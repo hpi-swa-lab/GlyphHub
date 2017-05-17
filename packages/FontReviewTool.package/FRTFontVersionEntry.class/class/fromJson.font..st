@@ -5,5 +5,5 @@ fromJson: aDictionary font: aFont
 		font: aFont;
 		versionHash: (aDictionary at: 'version_hash');
 		message: (aDictionary at: 'message');
-		dateAndTime: (DateAndTime fromString: (aDictionary at: 'datetime'));
+		"dateAndTime: (DateAndTime fromString: (aDictionary at: 'datetime'));"
 		yourself
