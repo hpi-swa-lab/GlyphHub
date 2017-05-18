@@ -2,17 +2,15 @@ import subprocess
 import os
 import glob
 import shutil
-import datetime
 
-from sqlalchemy import Column, Integer, ForeignKey, String, Text, event
+from sqlalchemy import Column, Integer, ForeignKey, String, Text
 from sqlalchemy.orm import relationship
 
 from frt_server.tag import tag_font_association_table
-from frt_server.common import CommonColumns, DATE_FORMAT
+from frt_server.common import CommonColumns
 import frt_server.config
 import frt_hb_convert
 import plistlib
-
 import pygit2
 
 class Font(CommonColumns):
@@ -28,7 +26,10 @@ class Font(CommonColumns):
 
     def folder_path(self):
         """Path to the folder containing all the font sources"""
-        return os.path.join(frt_server.config.FONT_UPLOAD_FOLDER, str(self._id))
+        return os.path.join(frt_server.config.FAMILY_UPLOAD_FOLDER,
+                str(self.family_id),
+                "fonts",
+                str(self._id))
 
     def ufo_folder_path(self):
         return os.path.join(self.folder_path(), 'ufo')
@@ -58,12 +59,6 @@ class Font(CommonColumns):
 
     def ensure_folder_exists(self):
         """Ensure that the needed folders exists"""
-        if not os.path.exists(self.folder_path()):
-            os.makedirs(self.folder_path())
-            self.repo = pygit2.init_repository(self.folder_path())
-        else:
-            self.repo = pygit2.Repository(self.folder_path())
-
         for path in (self.ufo_folder_path(), self.otf_folder_path()):
             if not os.path.exists(path):
                 os.makedirs(path)
@@ -73,24 +68,6 @@ class Font(CommonColumns):
         if os.path.exists(self.folder_path()):
             shutil.rmtree(self.folder_path())
 
-    def create_commit(self, message, user):
-        self.ensure_folder_exists()
-
-        index = self.repo.index
-        index.add_all()
-
-        treeId = index.write_tree(self.repo)
-        author = pygit2.Signature(user.username, user.email)
-
-        parents = [] if self.repo.head_is_unborn else [self.repo.head.target]
-
-        self.repo.create_commit('HEAD', author, author, message, treeId, parents)
-
-    def _repo(self):
-        """return the internal pygit2 repo object"""
-        self.ensure_folder_exists()
-        return self.repo
-
     def versioned_file_at_path(self, path, version_hash=None):
         """return the contents of the file at path at the version of version_hash.
         if version_hash is None, the newest will be returned"""
@@ -98,11 +75,13 @@ class Font(CommonColumns):
             with open(os.path.join(self.folder_path(), path)) as file:
                 return file.read()
 
-        commit = self.repo.get(pygit2.Oid(hex=version_hash))
+        self.family.ensure_source_folder_exists()
+        commit = self.family._repo().get(pygit2.Oid(hex=version_hash))
         tree = commit.tree
+        relative_path = os.path.join(self.folder_path(), path)[len(self.family.source_folder_path()) + 1:]
         try:
-            for entry in path.split('/'):
-                tree = self.repo.get(tree[entry].id)
+            for entry in relative_path.split('/'):
+                tree = self.family._repo().get(tree[entry].id)
         except KeyError:
             raise FileNotFoundError()
 
@@ -113,15 +92,6 @@ class Font(CommonColumns):
             return self.versioned_file_at_path(path, version_hash)
         except FileNotFoundError:
             return None
-
-    def versions(self):
-        self.ensure_folder_exists()
-        # TODO investigate commit_time_offset
-        return list(map(lambda entry: {
-                'version_hash': str(entry.id),
-                'message': entry.message,
-                'datetime': datetime.datetime.fromtimestamp(entry.commit_time).strftime(DATE_FORMAT)
-            }, self.repo.walk(self.repo.head.target)))
 
     def convert(self, unicode_points):
         otf_path = self.otf_folder_path()
@@ -182,8 +152,4 @@ class Font(CommonColumns):
         if 'features' in request_json:
             request_json['features'] = self.versioned_file_at_path_or_none('ufo/' + self.ufo_file_name() + '/features.fea')
         return request_json
-
-@event.listens_for(Font, 'load')
-def after_font_load(target, context):
-    target.version_messages = target.versions()
 

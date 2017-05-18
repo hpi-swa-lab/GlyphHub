@@ -3,6 +3,7 @@ import os
 import base64
 import re
 import datetime
+import traceback
 from functools import wraps
 
 from flask import request, jsonify, current_app, send_from_directory, Response, send_file
@@ -92,7 +93,9 @@ def register_routes(app):
             try:
                 family.process_file(family_file, current_user, request.form.get('commit_message') or 'New Version')
                 return '', 200
-            except Exception:
+            except Exception as e:
+                if frt_server.config.DEBUG:
+                    traceback.print_exc()
                 return jsonify({'error': 'Processing file failed'}), 400
         finally:
             Family.delete_family_if_empty(family)

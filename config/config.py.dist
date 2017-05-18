@@ -23,7 +23,6 @@ DATABASE_PATH = 'sqlite:////tmp/frt_server.db'
 
 UPLOAD_FOLDER = os.path.join(BASE, 'uploads')
 ATTACHMENT_UPLOAD_FOLDER = os.path.join(UPLOAD_FOLDER, 'attachment')
-FONT_UPLOAD_FOLDER = os.path.join(UPLOAD_FOLDER, 'font')
 FAMILY_UPLOAD_FOLDER = os.path.join(UPLOAD_FOLDER, 'family')
 AVATAR_UPLOAD_FOLDER = os.path.join(UPLOAD_FOLDER, 'user_avatar')
 MEDIA_FOLDER = os.path.join(BASE, 'media')

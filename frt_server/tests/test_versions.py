@@ -38,32 +38,31 @@ class VersionsTestCase(TestMinimal):
         self.assertEqual(len(self.get_test_family().fonts), 1)
 
     def testSingleVersion(self):
-        fonts = self.get_test_family().fonts
-        self.assertEqual(len(fonts), 1)
-        for font in fonts:
-            self.assertEqual(len(font.versions()), 1)
-            self.assertEqual(len(font.versions()[0]['version_hash']), GIT_COMMIT_HASH_LENGHT)
+        family = self.get_test_family()
+        self.assertEqual(len(family.fonts), 1)
+        self.assertEqual(len(family.versions()), 1)
+        self.assertEqual(len(family.versions()[0]['version_hash']), GIT_COMMIT_HASH_LENGHT)
 
     def testMultipleVersions(self):
         self.upload_glyphs_file(None, '-v2')
 
-        fonts = self.get_test_family().fonts
-        self.assertEqual(len(fonts), 1)
-        for font in fonts:
-            self.assertEqual(len(font.versions()), 2)
-            for i in range(0, 2):
-                self.assertEqual(len(font.versions()[i]['version_hash']), GIT_COMMIT_HASH_LENGHT)
+        family = self.get_test_family()
+        self.assertEqual(len(family.fonts), 1)
+        self.assertEqual(len(family.versions()), 2)
+        for i in range(0, 2):
+            self.assertEqual(len(family.versions()[i]['version_hash']), GIT_COMMIT_HASH_LENGHT)
 
     def testCommitMessage(self):
         MESSAGE = 'My newest version!'
         self.upload_glyphs_file(MESSAGE, '-v2')
-        self.assertEqual(self.get_test_family().fonts[0].versions()[0]['message'], MESSAGE)
+        self.assertEqual(self.get_test_family().versions()[0]['message'], MESSAGE)
 
     def testCommitContents(self):
         A_PREFIX = '<?xml version="1.0" encoding="UTF-8"?>\n<glyph name="A" format="2">'
 
-        font = self.get_test_family().fonts[0]
-        version = font.versions()[0]['version_hash']
+        family = self.get_test_family()
+        font = family.fonts[0]
+        version = family.versions()[0]['version_hash']
 
         # try accessing expected files. will throw an error if they don't exist.
         font.versioned_file_at_path('ufo/RiblonSans-Regular.ufo/fontinfo.plist', version)
