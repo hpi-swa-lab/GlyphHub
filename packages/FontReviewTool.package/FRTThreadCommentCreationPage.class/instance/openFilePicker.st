@@ -7,4 +7,5 @@ openFilePicker
 	self attachment: imageForm.
 	
 	previewArea removeAllMorphs.
-	previewArea add: (BTImage form: imageForm)
+	previewArea add: ((BTImage form: imageForm)
+		align: #(center center))
