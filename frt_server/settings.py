@@ -44,4 +44,4 @@ DOMAIN = {
 }
 
 # Include our custom versions list
-DOMAIN['font']['datasource']['projection']['version_messages'] = 1
+DOMAIN['family']['datasource']['projection']['version_messages'] = 1
