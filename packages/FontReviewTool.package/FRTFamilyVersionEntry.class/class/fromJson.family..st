@@ -1,8 +1,8 @@
 as yet unclassified
-fromJson: aDictionary font: aFont
+fromJson: aDictionary family: aFamily
 
 	^ self new
-		font: aFont;
+		family: aFamily;
 		versionHash: (aDictionary at: 'version_hash');
 		message: (aDictionary at: 'message');
 		dateAndTime: (DateAndTime fromString: (aDictionary at: 'datetime'));

@@ -2,7 +2,7 @@ as yet unclassified
 build
 
 	| author |
-	author := self versionEntry font author.
+	author := self versionEntry author.
 
 	self
 		add: (BTPage row

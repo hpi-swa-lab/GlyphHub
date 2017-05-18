@@ -10,7 +10,8 @@
 		"fonts",
 		"tags",
 		"previewGlyphs",
-		"standardSampleText" ],
+		"standardSampleText",
+		"versionMessages" ],
 	"name" : "FRTFamily",
 	"pools" : [
 		 ],

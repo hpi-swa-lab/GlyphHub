@@ -1,11 +1,12 @@
 {
 	"class" : {
-		"fromJson:font:" : "TB 5/18/2017 10:18" },
+		"fromJson:family:" : "TB 5/18/2017 15:42" },
 	"instance" : {
+		"author" : "TB 5/18/2017 15:46",
 		"dateAndTime" : "TB 5/16/2017 18:04",
 		"dateAndTime:" : "TB 5/16/2017 20:09",
-		"font" : "TB 5/16/2017 18:04",
-		"font:" : "TB 5/16/2017 18:04",
+		"family" : "TB 5/18/2017 15:42",
+		"family:" : "TB 5/18/2017 15:42",
 		"message" : "TB 5/16/2017 18:04",
 		"message:" : "TB 5/16/2017 18:03",
 		"versionHash" : "TB 5/16/2017 18:03",

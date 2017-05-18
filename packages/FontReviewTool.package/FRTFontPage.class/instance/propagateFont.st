@@ -8,7 +8,7 @@ propagateFont
 	
 	versionWidgets
 		removeAllMorphs;
-		addAll: (self font versionMessages collect: [:version |
+		addAll: (self font family versionMessages collect: [:version |
 			FRTVersionHistoryEntryWidget new versionEntry: version]).
 
 	overviewTab font: self font.
