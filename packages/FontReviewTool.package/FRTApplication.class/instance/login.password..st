@@ -1,7 +1,7 @@
 actions
-login: aUserNameString password:  aPasswordString
+login: anEmailString password:  aPasswordString
 
-	^ ((self backend login: aUserNameString password: aPasswordString)
+	^ ((self backend login: anEmailString password: aPasswordString)
 		then: [:userId | FRTUser load: userId populate: #() from: self backend])
 		then: [:user |
 			self

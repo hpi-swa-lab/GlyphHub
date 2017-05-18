@@ -2,8 +2,10 @@
 	"class" : {
 		 },
 	"instance" : {
-		"initialize" : "lcj 5/17/2017 16:38",
-		"initializeLoginBox" : "lcj 5/17/2017 16:44",
+		"emailField" : "lcj 5/18/2017 10:32",
+		"emailField:" : "lcj 5/18/2017 10:33",
+		"initialize" : "lcj 5/18/2017 10:34",
+		"initializeLoginBox" : "lcj 5/18/2017 10:32",
 		"initializeLoginButton" : "lcj 5/17/2017 16:37",
 		"loader" : "ek 4/7/2017 11:27",
 		"loader:" : "ek 4/7/2017 11:27",
@@ -19,6 +21,4 @@
 		"redirectPage" : "TB 4/6/2017 11:10",
 		"redirectPage:" : "TB 4/6/2017 11:10",
 		"registerAccountButton" : "lcj 5/17/2017 17:02",
-		"tryLogin" : "lcj 5/17/2017 17:36",
-		"usernameField" : "al 3/29/2017 12:09",
-		"usernameField:" : "al 3/29/2017 12:09" } }
+		"tryLogin" : "lcj 5/18/2017 10:34" } }

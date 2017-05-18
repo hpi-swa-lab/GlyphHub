@@ -6,7 +6,7 @@ initialize
 	self
 		redirectPage: {FRTFamilyOverviewPage new. nil};
 		initializeLoginButton;
-		usernameField: (BTTextArea placeholder: 'Username');
+		emailField: (BTTextArea placeholder: 'Email');
 		passwordField: (BTPasswordArea placeholder: 'Password');
 		initializeLoginBox;
 		loader: (BTLoader new align: #(center center); expand: true);

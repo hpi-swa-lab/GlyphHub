@@ -1,8 +1,8 @@
 testing
-login: aUserNameString password: aPasswordString expectSuccessfulLogIn: aBoolean
+login: anEmailString password: aPasswordString expectSuccessfulLogIn: aBoolean
 	
 	| loginPromise |
-	page usernameField text: aUserNameString.
+	page emailField text: anEmailString.
 	page passwordField text: aPasswordString.
 	page redirectPage: {BTApplicationPage new. nil}.
 	

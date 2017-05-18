@@ -15,9 +15,9 @@
 		"load:into:populate:" : "TB 5/9/2017 16:56",
 		"loadAllInto:populate:" : "ek 4/12/2017 15:23",
 		"loadWhere:into:populate:" : "TB 5/9/2017 17:57",
-		"login:password:" : "TB 5/9/2017 17:21",
+		"login:password:" : "lcj 5/18/2017 10:35",
 		"populateString:" : "lcj 4/9/2017 14:58",
-		"registerUserWithName:email:password:" : "lcj 5/17/2017 17:39",
+		"registerUserWithName:email:password:" : "lcj 5/18/2017 13:35",
 		"request:method:data:" : "ek 4/11/2017 12:08",
 		"request:method:data:contentType:" : "ek 4/11/2017 12:54",
 		"save:to:" : "TB 5/9/2017 17:50" } }

@@ -5,7 +5,7 @@ openLoggedIn
 	app := self open.
 	loginPage := app openPage.
 	
-	loginPage usernameField text: 'Eva'.
+	loginPage emailField text: 'eve@evil.com'.
 	loginPage passwordField text: 'eveisevil'.
 	loginPage tryLogin.
 	

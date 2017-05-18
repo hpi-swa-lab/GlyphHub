@@ -6,7 +6,7 @@ tryLogin
 		remove: self loginBox;
 		add: self loader.
 	
-	promise := ((self topLevel login: self usernameField text password: self passwordField text)
+	promise := ((self topLevel login: self emailField text password: self passwordField text)
 		then: [
 			self loginBox remove: self loginFailedAlert.
 			self topLevel openPage: self redirectPage first with: self redirectPage second.
