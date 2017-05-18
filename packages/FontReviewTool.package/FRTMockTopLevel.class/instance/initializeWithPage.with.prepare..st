@@ -8,6 +8,7 @@ initializeWithPage: aPage with: anObject prepare: aBlock
 	
 	user := FRTUser new
 		username: 'Eva';
+		email: 'eve@evil.com';
 		password: 'evilness!';
 		saveTo: self;
 		yourself.

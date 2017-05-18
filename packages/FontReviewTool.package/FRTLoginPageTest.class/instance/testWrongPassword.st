@@ -1,4 +1,4 @@
 testing
 testWrongPassword
 
-	self login: 'peter' password: 'secret' expectSuccessfulLogIn: false
+	self login: 'peter@example.com' password: 'secret' expectSuccessfulLogIn: false

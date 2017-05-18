@@ -1,4 +1,4 @@
 testing
 testNonExistingUser
 
-	self login: 'karl' password: 'geheim' expectSuccessfulLogIn: false
+	self login: 'karl@example.com' password: 'geheim' expectSuccessfulLogIn: false
