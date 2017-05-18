@@ -2,12 +2,13 @@ import subprocess
 import os
 import glob
 import shutil
+import datetime
 
 from sqlalchemy import Column, Integer, ForeignKey, String, Text, event
 from sqlalchemy.orm import relationship
 
 from frt_server.tag import tag_font_association_table
-from frt_server.common import CommonColumns
+from frt_server.common import CommonColumns, DATE_FORMAT
 import frt_server.config
 import frt_hb_convert
 import plistlib
@@ -116,8 +117,12 @@ class Font(CommonColumns):
 
     def versions(self):
         self.ensure_folder_exists()
-        return list(map(lambda entry: {'version_hash': str(entry.id), 'message': entry.message},
-            self.repo.walk(self.repo.head.target)))
+        # TODO investigate commit_time_offset
+        return list(map(lambda entry: {
+                'version_hash': str(entry.id),
+                'message': entry.message,
+                'datetime': datetime.datetime.fromtimestamp(entry.commit_time).strftime(DATE_FORMAT)
+            }, self.repo.walk(self.repo.head.target)))
 
     def convert(self, unicode_points):
         otf_path = self.otf_folder_path()

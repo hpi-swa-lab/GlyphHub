@@ -1,4 +1,5 @@
 from frt_server.tables import *
+import frt_server.common
 import frt_server.config
 
 from eve.utils import config
@@ -19,7 +20,7 @@ TRANSPARENT_SCHEMA_RULES = False
 BULK_ENABLED = False
 LAST_UPDATED = 'updated_at'
 DATE_CREATED = 'created_at'
-DATE_FORMAT = '%Y-%m-%dT%H:%M:%S.%f%z'
+DATE_FORMAT = frt_server.common.DATE_FORMAT
 
 user_schema = User._eve_schema['user']
 user_schema['allowed_filters'] = []
