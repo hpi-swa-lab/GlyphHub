@@ -5,7 +5,7 @@ from werkzeug.datastructures import FileStorage
 from frt_server.tables import *
 import frt_server.config
 
-user1 = User(username='Eva', password='eveisevil')
+user1 = User(username='Eva', password='eveisevil', email='eve@evil.com')
 family1 = Family(family_name='Riblon Sans', preview_glyphs='')
 
 glyph1 = Glyph(glyph_name='A', version_hash='9c7075ca420f30aedb27c48102466313fa4d12c8', font_id=1)
@@ -20,7 +20,7 @@ thread1.thread_glyph_associations.append(ThreadGlyphAssociation(glyph=glyph3))
 entities = [
     user1,
     family1,
-    User(username='Tom', password='safepwissafe'),
+    User(username='Tom', password='safepwissafe', email='tom@penguin.com'),
     thread1,
     Codepoint(unicode_value=0x0041, point_size=12.5, features='liga', thread_id=1, font_id=1, index=0),
     Codepoint(unicode_value=0x0061, point_size=12.5, features='liga', thread_id=1, font_id=1, index=1),

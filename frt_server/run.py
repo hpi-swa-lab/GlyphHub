@@ -19,11 +19,11 @@ class TokenAuth(TokenAuth):
         First we are verifying if the token is valid.
         """
 
-        username = frt_server.tables.User.verify_auth_token(token)
+        email = frt_server.tables.User.verify_auth_token(token)
 
-        if username:
+        if email:
             db_session = self.app.data.driver.session
-            users = db_session.query(frt_server.tables.User).filter_by(username=username).all()
+            users = db_session.query(frt_server.tables.User).filter_by(email=email).all()
             if not users:
                 return False
             user = users[0]

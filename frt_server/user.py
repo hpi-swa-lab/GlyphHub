@@ -19,6 +19,7 @@ class User(CommonColumns):
     __tablename__ = 'user'
     username = Column(String(120))
     password = Column(String(120))
+    email = Column(String(120))
     salt = Column(String(120))
     fonts = relationship('Font', back_populates='author')
     attachments = relationship('Attachment', back_populates='owner')
@@ -54,7 +55,7 @@ class User(CommonColumns):
         """Generates token for given expiration
         and user login."""
         s = Serializer(frt_server.config.SECRET_KEY, expires_in=expiration)
-        return s.dumps({'username': self.username })
+        return s.dumps({'email': self.email })
 
     @staticmethod
     def verify_auth_token(token):
@@ -68,7 +69,7 @@ class User(CommonColumns):
             return None # valid token, but expired
         except BadSignature:
             return None # invalid token
-        return data['username']
+        return data['email']
 
     def is_authorized(self, role_names):
         """We do not use roles at the moment, but in case they are added, they should be validated here"""

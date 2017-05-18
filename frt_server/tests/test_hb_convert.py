@@ -5,7 +5,7 @@ class HbConvertTestCase(TestMinimal):
     def setUp(self):
         """create a family and save its id"""
         super().setUp()
-        self.login_as('Eva', 'eveisevil')
+        self.login_as('eve@evil.com', 'eveisevil')
 
         family = Family(family_name='Riblon')
 

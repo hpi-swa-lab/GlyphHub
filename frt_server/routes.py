@@ -35,17 +35,38 @@ def register_routes(app):
         if not data:
             return jsonify({'error': 'Missing credentials'}), 400
 
-        username = data.get('username')
+        email = data.get('email')
         password = data.get('password')
 
-        if not username or not password:
-            raise Unauthorized('Missing username and/or password.')
+        if not email or not password:
+            raise Unauthorized('Missing email and/or password.')
         else:
-            users = app.data.driver.session.query(User).filter_by(username = username).all()
+            users = app.data.driver.session.query(User).filter_by(email = email).all()
             if users and users[0].check_password(password):
                 token = users[0].generate_auth_token()
                 return jsonify({'token': token.decode('ascii'), 'user_id': users[0]._id})
-        raise Unauthorized('Wrong username and/or password.')
+        raise Unauthorized('Wrong email and/or password.')
+
+    @app.route('/register', methods=['POST'])
+    def register_new_user():
+
+        data = request.get_json()
+        if not data:
+            return jsonify({'error': 'Missing data'}), 400
+
+        email = data.get('email')
+        password = data.get('password')
+        username = data.get('username')
+        
+        if not email or not password or not username:
+            raise Unauthorized('Missing email, password and/or username')
+        else:
+            user = User(username=username, email=email, password=password)
+            session = app.data.driver.session
+            session.add(user)
+            session.commit()
+
+        return jsonify(), 200
 
     @app.route('/family/<family_id>/upload', methods=['POST'])
     @requires_auth('')

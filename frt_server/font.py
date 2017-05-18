@@ -80,8 +80,7 @@ class Font(CommonColumns):
         index.add_all()
 
         treeId = index.write_tree(self.repo)
-        # FIXME insert real mail here once available
-        author = pygit2.Signature(user.username, 'test@example.com')
+        author = pygit2.Signature(user.username, user.email)
 
         parents = [] if self.repo.head_is_unborn else [self.repo.head.target]
 

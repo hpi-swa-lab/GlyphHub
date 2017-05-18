@@ -42,7 +42,7 @@ class TestMinimal(eve.tests.TestMinimal):
         # we get our own minimal subset of sample data for speed
         setup_database(self.app, populate_sample_data=False)
 
-        eva = User(username='Eva', password='eveisevil')
+        eva = User(username='Eva', email='eve@evil.com', password='eveisevil')
         self.connection.session.add(eva)
         self.connection.session.commit()
 
@@ -87,9 +87,9 @@ class TestMinimal(eve.tests.TestMinimal):
                     data=fields)
             return self.parse_response(response)
 
-    def login_as(self, userName, password):
+    def login_as(self, email, password):
         """save the auth token from the given user for all future requests"""
-        data, status = self.login('Eva', 'eveisevil')
+        data, status = self.login('eve@evil.com', 'eveisevil')
         assert status == 200
         self.cachedApiToken = data['token']
         self.user_id = data['user_id']
@@ -99,6 +99,6 @@ class TestMinimal(eve.tests.TestMinimal):
         """not an actual request, just resets the cached token"""
         self.cachedApiToken = None
 
-    def login(self, userName, password):
-        return self.post('/login', dict(username=userName, password=password))
+    def login(self, email, password):
+        return self.post('/login', dict(email=email, password=password))
 

@@ -10,7 +10,7 @@ class VersionsTestCase(TestMinimal):
 
     def setUp(self):
         super(VersionsTestCase, self).setUp()
-        self.login_as('Eva', 'eveisevil')
+        self.login_as('eve@evil.com', 'eveisevil')
 
         family = Family(family_name='Riblon')
 
