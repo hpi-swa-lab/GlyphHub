@@ -1,0 +1,20 @@
+{
+	"category" : "FontReviewTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"redirectPage",
+		"emailField",
+		"usernameField",
+		"passwordField1",
+		"passwordField2",
+		"registrationBox",
+		"registrationButton" ],
+	"name" : "FRTRegistrationPage",
+	"pools" : [
+		 ],
+	"super" : "FRTApplicationPage",
+	"type" : "normal" }

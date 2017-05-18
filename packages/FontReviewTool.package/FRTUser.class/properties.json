@@ -13,7 +13,8 @@
 		"attachments",
 		"sampleTexts",
 		"threadSubscriptions",
-		"feedbackSubmissions" ],
+		"feedbackSubmissions",
+		"email" ],
 	"name" : "FRTUser",
 	"pools" : [
 		 ],

@@ -7,11 +7,11 @@ tryLogin
 		add: self loader.
 	
 	promise := ((self topLevel login: self usernameField text password: self passwordField text)
-		then: [:data |
+		then: [
 			self loginBox remove: self loginFailedAlert.
 			self topLevel openPage: self redirectPage first with: self redirectPage second.
 			self])
-		catch: [:error | self loginBox add: self loginFailedAlert at: 2].
+		catch: [self loginBox add: self loginFailedAlert at: 2].
 	
 	self
 		remove: self loader;

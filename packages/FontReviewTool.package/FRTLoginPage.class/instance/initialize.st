@@ -5,19 +5,10 @@ initialize
 
 	self
 		redirectPage: {FRTFamilyOverviewPage new. nil};
-		loginButton: ((BTButton label: 'Login')
-			colorType: #primary;
-			when: #clicked send: #tryLogin to: self;
-			yourself);
+		initializeLoginButton;
 		usernameField: (BTTextArea placeholder: 'Username');
 		passwordField: (BTPasswordArea placeholder: 'Password');
-		loginBox: ((BTPage new vertical: true; expand: true; align: #(center center))
-			add: (BTLabel heading: 'Login to the Font Review Tool');
-			add: self usernameField;
-			add: self passwordField;
-			add: self loginButton;
-			primaryFormClickable: self loginButton;
-			yourself);
+		initializeLoginBox;
 		loader: (BTLoader new align: #(center center); expand: true);
 		loginFailedAlert: ((BTAlert text: (BTIcon icon: #exclamation_triangle), ' Invalid login provided.') colorType: #danger);
 		add: self loginBox
