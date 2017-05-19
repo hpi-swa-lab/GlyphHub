@@ -1,8 +1,6 @@
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, DateTime, Integer, func
 
-DATE_FORMAT = '%Y-%m-%dT%H:%M:%S.%f%z'
-
 Base = declarative_base()
 
 DATE_FORMAT = '%Y-%m-%dT%H:%M:%S.%f%z'
