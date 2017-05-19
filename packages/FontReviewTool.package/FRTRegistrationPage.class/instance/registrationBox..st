@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 registrationBox: aWidget
 
 	registrationBox := aWidget

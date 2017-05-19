@@ -1,0 +1,4 @@
+callbacks
+openProjectDiscovery
+
+	self topLevel openProjectDiscovery

@@ -1,7 +1,7 @@
 accessing
 openGlyph: aGlyphName
 
-	(((FRTGlyph loadWhere: {#glyphName -> aGlyphName. #fontId -> self font id} populate: #() from: self topLevel backend)
+	(((FRTGlyph loadWhere: {#glyphName -> aGlyphName. #font -> self font} populate: #() from: self topLevel backend)
 		then:  [:glyphs |
 			glyphs
 				ifEmpty: [

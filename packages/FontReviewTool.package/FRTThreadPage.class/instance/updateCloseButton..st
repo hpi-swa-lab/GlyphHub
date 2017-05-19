@@ -1,4 +1,4 @@
-loading
+updating
 updateCloseButton: aThread
 
 	aThread closed

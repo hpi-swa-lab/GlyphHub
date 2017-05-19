@@ -1,4 +1,4 @@
-font-upload
+font-download
 downloadFontOtf: aFontOrId
 
 	| id |

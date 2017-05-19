@@ -1,4 +1,4 @@
 running
 setUp
 
-	self setUpForPage: FRTLoginPage new with: nil prepare: [:topLevel |]
+	self setUpForPage: FRTLoginPage new with: nil prepare: []

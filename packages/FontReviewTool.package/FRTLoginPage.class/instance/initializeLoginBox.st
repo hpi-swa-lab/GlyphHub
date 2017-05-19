@@ -11,4 +11,5 @@ initializeLoginBox
 		add: (BTPage row
 			add: (BTLabel bold: 'Don''t have an account yet?')
 			oppositeTo: self registerAccountButton;
-		yourself))
+			yourself);
+		yourself)

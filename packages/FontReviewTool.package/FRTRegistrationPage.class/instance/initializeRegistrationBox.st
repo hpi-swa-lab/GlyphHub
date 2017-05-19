@@ -1,4 +1,4 @@
-as yet unclassified
+initialize-release
 initializeRegistrationBox
 
 	self registrationBox: ((BTPage column expand: true; align: #(center center))
@@ -8,5 +8,9 @@ initializeRegistrationBox
 		add: self passwordField1;
 		add: self passwordField2;
 		add: self registrationButton;
+		add: (BTPage row
+			add: (BTLabel bold: 'Already have an account?')
+			oppositeTo: self loginButton;
+			yourself);
 		primaryFormClickable: self registrationButton;
 		yourself)

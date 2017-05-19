@@ -1,0 +1,15 @@
+{
+	"category" : "FontReviewTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"heading",
+		"subscriptionArea" ],
+	"name" : "FRTDashboard",
+	"pools" : [
+		 ],
+	"super" : "FRTApplicationPage",
+	"type" : "normal" }

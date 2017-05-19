@@ -1,4 +1,4 @@
-accessing
+converting
 asWidget
 
 	^ self typeSymbol = #picture

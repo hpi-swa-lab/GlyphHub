@@ -1,0 +1,1 @@
+A FRTRegistrationPage is a page that allows the creation of a new user account. It will also log you in, if the account was created succesfully.

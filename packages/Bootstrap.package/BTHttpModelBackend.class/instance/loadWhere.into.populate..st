@@ -4,7 +4,7 @@ loadWhere: anAssociationList into: aClass populate: aCollection
 	| final associations |
 	associations := aClass associations.
 	final := anAssociationList collect: [:association |
-		((self class camelCaseToUnderscore: association key), ((associations includes: association key) ifTrue: ['_id'] ifFalse: [''])) ->
+		((self class camelCaseToUnderscore: association key), ((associations includesKey: association key) ifTrue: ['_id'] ifFalse: [''])) ->
 		(association value isBTModel ifTrue: [association value id] ifFalse: [association value])].
 	
 	^ (self

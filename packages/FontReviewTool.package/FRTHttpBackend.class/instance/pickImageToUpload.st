@@ -1,4 +1,4 @@
-font-upload
+image-upload
 pickImageToUpload
 
 	| fileChooser stream |

@@ -3,7 +3,7 @@
 		 },
 	"instance" : {
 		"login:password:expectSuccessfulLogIn:" : "lcj 5/18/2017 10:35",
-		"setUp" : "TB 5/12/2017 12:08",
+		"setUp" : "lcj 5/18/2017 16:20",
 		"testCorrectingWrongCredentials" : "lcj 5/18/2017 14:11",
 		"testNonExistingUser" : "lcj 5/18/2017 14:11",
 		"testRightCredentials" : "lcj 5/18/2017 14:02",

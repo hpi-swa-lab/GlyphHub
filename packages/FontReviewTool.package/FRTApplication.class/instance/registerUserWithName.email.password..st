@@ -1,4 +1,4 @@
-as yet unclassified
+actions
 registerUserWithName: aUserNameString email: anEmailString password: aPasswordString
 
 	^ (self backend registerUserWithName: aUserNameString email: anEmailString password: aPasswordString)

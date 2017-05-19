@@ -1,4 +1,4 @@
-callback
+lifecycle
 enteringWithThread: aThread andGlyph: aGlyph
 
 	self enteredFromGlyph: aGlyph.

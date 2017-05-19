@@ -1,4 +1,4 @@
-font-upload
+image-upload
 uploadForm: aForm toFeedback: anIdNumber
 
 	| boundary file data pngStream |

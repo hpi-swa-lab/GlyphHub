@@ -12,4 +12,5 @@ testCreateNewThread
 	(self expect: page saveComment) to resolve.
 	
 	(self expect: self topLevel openPage) to haveText: 'Thread: ', title.
-	(self expect: self topLevel openPage) to haveText: text
+	(self expect: self topLevel openPage) to haveText: text.
+	(self expect: self topLevel openPage) to haveText: 'Unsubscribe'

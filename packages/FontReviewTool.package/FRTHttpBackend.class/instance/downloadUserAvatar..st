@@ -1,4 +1,4 @@
-font-upload
+image-download
 downloadUserAvatar: aUserOrId
 	"this function ignores the cache. We do not care what comes from the server, but return a form-promise."
 

@@ -1,4 +1,4 @@
-callback
+updating
 updateUserAvatarImage
 
 	self user removeCachedAvatar.

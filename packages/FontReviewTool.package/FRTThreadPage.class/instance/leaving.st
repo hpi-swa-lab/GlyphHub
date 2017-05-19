@@ -1,4 +1,4 @@
-loading
+lifecycle
 leaving
 
 	commentArea removeAllMorphs.

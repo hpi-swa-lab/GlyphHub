@@ -1,4 +1,4 @@
-callback
+lifecycle
 enteringWith: aUser
 
 	self user: aUser.

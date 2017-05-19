@@ -1,4 +1,4 @@
-as yet unclassified
+callbacks
 tryRegisterNewUser
 
 	self passwordsAreEqual ifFalse: [self topLevel displayNotification: 'Passwords didn''t match'. ^ self].

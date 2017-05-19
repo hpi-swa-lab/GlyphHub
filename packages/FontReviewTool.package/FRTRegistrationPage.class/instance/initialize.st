@@ -1,10 +1,10 @@
-as yet unclassified
+initialize-release
 initialize
 
 	super initialize.
 
 	self
-		redirectPage: {FRTFamilyOverviewPage new. nil};
+		redirectPage: {FRTDashboard new. nil};
 		initializeRegistrationButton;
 		emailField: (BTTextArea placeholder: 'Enter your email address');
 		usernameField: (BTTextArea placeholder: 'Enter a username');
@@ -12,5 +12,5 @@ initialize
 		passwordField2: (BTPasswordArea placeholder: 'Enter password again');
 		initializeRegistrationBox;
 		"loader: (BTLoader new align: #(center center); expand: true);"
-		"loginFailedAlert: ((BTAlert text: (BTIcon icon: #exclamation_triangle), ' Something went wrong') colorType: #danger);"
-		add: self registrationBox
+		add: self registrationBox;
+		yourself

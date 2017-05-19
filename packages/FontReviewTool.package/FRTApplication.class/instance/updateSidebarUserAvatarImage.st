@@ -1,4 +1,4 @@
-accessing
+updating
 updateSidebarUserAvatarImage
 
 	self sidebar updateUserAvatarImage: self user

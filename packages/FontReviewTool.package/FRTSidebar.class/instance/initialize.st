@@ -10,7 +10,8 @@ initialize
 		
 	self
 		initializeUserDropdown;
-		initializeFeedbackButton.
+		initializeFeedbackButton;
+		initializeNavigationLinks.
 		
 	userAvatarImage := BTImage new
 		minSize: 36 asPoint;
@@ -34,12 +35,7 @@ initialize
 			add: usernameClickable;
 			add: userAvatarImage);
 		add: BTDivider new;
-		add: ((BTClickableWithText text: (BTIcon icon: #home), ' Dashboard')
-			when: #clicked send: #openDashboard to: self);
-		add: ((BTClickableWithText text: (BTIcon icon: #file_text), ' Sample Texts')
-			when: #clicked send: #openSampleTexts to: self);
-		add: ((BTClickableWithText text: (BTIcon icon: #folder_open), ' My Projects')
-			when: #clicked send: #openMyProjects to: self);
+		add: navigationLinks;
 		add: BTDivider new;
 		add: familyArea;
 		add: BTWidget spacer;

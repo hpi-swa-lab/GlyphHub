@@ -12,7 +12,8 @@
 		"selectedFont",
 		"familyArea",
 		"feedbackPopover",
-		"feedbackButton" ],
+		"feedbackButton",
+		"navigationLinks" ],
 	"name" : "FRTSidebar",
 	"pools" : [
 		 ],

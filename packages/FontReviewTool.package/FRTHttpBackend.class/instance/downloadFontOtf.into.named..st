@@ -1,4 +1,4 @@
-font-upload
+font-download
 downloadFontOtf: aFontOrId into: aDirectory named: aString
 
 	| id filename |

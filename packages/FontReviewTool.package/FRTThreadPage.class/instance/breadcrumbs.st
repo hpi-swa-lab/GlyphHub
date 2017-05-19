@@ -1,4 +1,4 @@
-accessing
+navigation
 breadcrumbs
 
 	^ self enteredFromGlyph

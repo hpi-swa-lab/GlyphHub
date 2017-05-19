@@ -1,4 +1,4 @@
-initialize-release
+updating
 updateSubscriptionButtonState
 
 	self subscription isCreated

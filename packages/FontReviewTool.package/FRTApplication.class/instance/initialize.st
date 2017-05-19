@@ -4,6 +4,8 @@ initialize
 	super initialize.
 	self backend: FRTHttpBackend new.
 	
+	FRTUser resetAvatarCache.
+	
 	sidebar := FRTSidebar new.
 	
 	self contentContainer add: sidebar at: 1.
