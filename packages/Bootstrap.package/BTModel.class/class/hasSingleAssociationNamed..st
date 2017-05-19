@@ -3,5 +3,5 @@ hasSingleAssociationNamed: aStringOrSymbol
 
 	^ self associations
 		at: aStringOrSymbol asSymbol
-		ifPresent: [:association | association cardinality == #single]
+		ifPresent: [:association | association isSingle]
 		ifAbsent: [false]

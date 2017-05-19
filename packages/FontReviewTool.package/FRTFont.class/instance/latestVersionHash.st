@@ -1,4 +1,4 @@
 accessing
 latestVersionHash
 
-	^ self versionMessages first versionHash
+	^ self family latestVersionHash

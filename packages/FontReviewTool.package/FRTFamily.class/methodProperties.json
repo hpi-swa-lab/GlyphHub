@@ -1,6 +1,7 @@
 {
 	"class" : {
 		"associations" : "al 5/11/2017 16:13",
+		"excludeInstVars" : "TB 5/19/2017 11:46",
 		"modelName" : "lcj 4/7/2017 10:40" },
 	"instance" : {
 		"authorsString" : "lcj 4/5/2017 12:27",
@@ -9,6 +10,7 @@
 		"familyName:" : "lcj 4/7/2017 10:39",
 		"fonts" : "lcj 4/7/2017 10:39",
 		"fonts:" : "lcj 4/7/2017 10:39",
+		"latestVersionHash" : "TB 5/19/2017 11:45",
 		"previewGlyphs" : "TB 5/5/2017 10:55",
 		"previewGlyphs:" : "TB 5/5/2017 10:54",
 		"standardSampleText" : "al 5/11/2017 16:14",
