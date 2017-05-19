@@ -3,7 +3,8 @@ fromJson: aDictionary
 
 	self
 		alignment: (aDictionary at: 'alignment') asSymbol;
-		font: (aDictionary at: 'font');
+		fontNameForPango: (aDictionary at: 'fontNameForPango');
+		fontId: (aDictionary at: 'fontId');
 		pointSize: (aDictionary at: 'pointSize');
 		openTypeFeatures: (aDictionary at: 'openTypeFeatures');
 		text: (aDictionary at: 'text');

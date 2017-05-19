@@ -1,4 +1,4 @@
 accessing
-font: aFontNameString
+font: aFont
 
-	self submorphsDo: [:paragraph | paragraph font: aFontNameString]
+	self submorphsDo: [:paragraph | paragraph font: aFont]

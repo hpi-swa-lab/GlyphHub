@@ -8,9 +8,10 @@
 	"instvars" : [
 		"alignment",
 		"pointSize",
-		"font",
 		"openTypeFeatures",
-		"deletable" ],
+		"deletable",
+		"fontId",
+		"fontNameForPango" ],
 	"name" : "FRTParagraph",
 	"pools" : [
 		 ],

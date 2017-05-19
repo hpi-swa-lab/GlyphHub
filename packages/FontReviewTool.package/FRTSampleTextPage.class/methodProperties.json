@@ -2,14 +2,13 @@
 	"class" : {
 		 },
 	"instance" : {
-		"applyFontToSampleTextWidget" : "lcj 5/16/2017 16:46",
-		"applyName:font:" : "TB 5/8/2017 10:55",
+		"applyFontToSampleTextWidget" : "al 5/19/2017 11:06",
+		"applyName:font:" : "al 5/19/2017 11:07",
 		"authorLabel" : "lcj 5/8/2017 12:27",
 		"breadcrumbs" : "ek 4/19/2017 17:25",
 		"enteringWith:" : "lcj 5/8/2017 12:29",
-		"initialize" : "TB 5/8/2017 11:03",
-		"openCreateCommentPage" : "TB 5/8/2017 10:47",
-		"resetFont" : "TB 5/8/2017 14:09",
+		"initialize" : "al 5/18/2017 11:34",
+		"resetFont" : "al 5/18/2017 11:35",
 		"sampleText" : "ek 4/19/2017 13:32",
 		"sampleText:" : "ek 4/19/2017 13:33",
 		"sampleTextWidget" : "ek 4/21/2017 15:12",

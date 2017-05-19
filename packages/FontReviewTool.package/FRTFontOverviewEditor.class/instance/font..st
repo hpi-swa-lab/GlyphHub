@@ -1,5 +1,5 @@
 initialize-release
-font: aFontNameString
+font: aFont
 
-	super font: aFontNameString.
+	super font: aFont.
 	self saveButtonVisible: self topLevel currentUserOwnsSelectedFont

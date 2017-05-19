@@ -1,4 +1,4 @@
 converting
-fromJson: aString
+fromJson: aJsonObject
 
-	richText fromJson: aString
+	richText fromJson: aJsonObject

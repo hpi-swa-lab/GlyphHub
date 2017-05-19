@@ -1,0 +1,4 @@
+mock-data
+mockSampleTextJson
+
+	^ '[{"alignment":"left","font":"RiblonSans Regular","deletable":false,"placeholder":"Adhesion","text":"Adhesion","openTypeFeatures":null,"pointSize":100},{"alignment":"left","font":"RiblonSans Regular","deletable":false,"placeholder":"Insert a sentence here","text":"sentence","openTypeFeatures":null,"pointSize":40},{"alignment":"left","font":"RiblonSans Regular","deletable":false,"placeholder":"Insert a paragraph here","text":"par","openTypeFeatures":null,"pointSize":16},{"alignment":"left","font":"RiblonSans Regular","deletable":false,"placeholder":"Try building a document here. Feel free to add more paragraphs","text":"doc","openTypeFeatures":null,"pointSize":16}]'

@@ -2,6 +2,7 @@ initialize-release
 initialize
 	
 	super initialize.
+	self canChangeFont: false.
 	richText
 		addEmptyParagraphWithPlaceholder: 'Adhesion' pointSize: 100 deletable: false;
 		addEmptyParagraphWithPlaceholder: 'Insert a sentence here' pointSize: 40 deletable: false;
