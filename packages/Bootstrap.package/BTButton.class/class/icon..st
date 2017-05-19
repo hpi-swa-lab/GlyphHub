@@ -1,5 +1,6 @@
 instance creation
 icon: anIconSymbol
-	^self new
+
+	^ self new
 		text: (BTIcon icon: anIconSymbol);
 		yourself

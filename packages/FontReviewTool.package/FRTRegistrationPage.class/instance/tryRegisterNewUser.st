@@ -6,6 +6,6 @@ tryRegisterNewUser
 	self emailIsTaken ifTrue: [self topLevel displayNotification: 'An account already exists for this user'. ^ self].
 	
 	((self topLevel registerUserWithName: usernameField text email: emailField text password: passwordField1 text)
-		then: [:user | self topLevel openPage: FRTFamilyOverviewPage new with: user])
+		then: [:user | self topLevel openBookmark: self bookmark])
 		catch: [self registrationBox add: (BTAlert text: 'Registration failed' type: #danger) at: 2]
 		

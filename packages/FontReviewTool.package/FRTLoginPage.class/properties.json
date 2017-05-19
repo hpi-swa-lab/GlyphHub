@@ -12,8 +12,8 @@
 		"loginButton",
 		"loginBox",
 		"loader",
-		"redirectPage",
-		"emailField" ],
+		"emailField",
+		"bookmark" ],
 	"name" : "FRTLoginPage",
 	"pools" : [
 		 ],

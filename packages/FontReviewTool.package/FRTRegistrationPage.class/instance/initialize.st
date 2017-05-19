@@ -4,7 +4,7 @@ initialize
 	super initialize.
 
 	self
-		redirectPage: {FRTDashboard new. nil};
+		bookmark: (BTPageBookmark page: FRTDashboard);
 		initializeRegistrationButton;
 		emailField: (BTTextArea placeholder: 'Enter your email address');
 		usernameField: (BTTextArea placeholder: 'Enter a username');

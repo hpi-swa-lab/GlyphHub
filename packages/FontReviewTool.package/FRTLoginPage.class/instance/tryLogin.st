@@ -9,7 +9,7 @@ tryLogin
 	promise := ((self topLevel login: self emailField text password: self passwordField text)
 		then: [
 			self loginBox remove: self loginFailedAlert.
-			self topLevel openPage: self redirectPage first with: self redirectPage second.
+			self topLevel openBookmark: self bookmark.
 			self])
 		catch: [self loginBox add: self loginFailedAlert at: 2].
 	

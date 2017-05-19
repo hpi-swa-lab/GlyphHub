@@ -6,13 +6,13 @@
 		 ],
 	"commentStamp" : "lcj 5/19/2017 10:39",
 	"instvars" : [
-		"redirectPage",
 		"emailField",
 		"usernameField",
 		"passwordField1",
 		"passwordField2",
 		"registrationBox",
-		"registrationButton" ],
+		"registrationButton",
+		"bookmark" ],
 	"name" : "FRTRegistrationPage",
 	"pools" : [
 		 ],
