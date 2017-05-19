@@ -1,4 +1,4 @@
 constants
 standardFont
 
-	^ 'Roboto 12'
+	^ FRTSystemFont new.

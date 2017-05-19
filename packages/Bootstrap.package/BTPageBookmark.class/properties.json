@@ -1,0 +1,15 @@
+{
+	"category" : "Bootstrap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"page",
+		"input" ],
+	"name" : "BTPageBookmark",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

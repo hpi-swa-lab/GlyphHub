@@ -4,7 +4,7 @@ initialize
 	super initialize.
 
 	self
-		redirectPage: {FRTDashboard new. nil};
+		bookmark: (BTPageBookmark page: FRTDashboard);
 		initializeLoginButton;
 		emailField: (BTTextArea placeholder: 'Email');
 		passwordField: (BTPasswordArea placeholder: 'Password');

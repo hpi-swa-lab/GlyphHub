@@ -1,5 +1,6 @@
 instance creation
 label: aString
-	^self new
+
+	^ self new
 		text: aString;
 		yourself

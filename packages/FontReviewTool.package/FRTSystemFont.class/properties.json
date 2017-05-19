@@ -1,0 +1,14 @@
+{
+	"category" : "FontReviewTool-Models",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "FRTSystemFont",
+	"pools" : [
+		 ],
+	"super" : "FRTFont",
+	"type" : "normal" }

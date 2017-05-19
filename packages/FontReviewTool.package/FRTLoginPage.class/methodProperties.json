@@ -2,9 +2,11 @@
 	"class" : {
 		 },
 	"instance" : {
+		"bookmark" : "lcj 5/19/2017 12:16",
+		"bookmark:" : "lcj 5/19/2017 12:16",
 		"emailField" : "lcj 5/18/2017 10:32",
 		"emailField:" : "lcj 5/18/2017 10:33",
-		"initialize" : "lcj 5/19/2017 10:32",
+		"initialize" : "lcj 5/19/2017 12:17",
 		"initializeLoginBox" : "lcj 5/19/2017 10:52",
 		"initializeLoginButton" : "lcj 5/17/2017 16:37",
 		"loader" : "ek 4/7/2017 11:27",
@@ -18,7 +20,5 @@
 		"openRegisterAccountPage" : "lcj 5/17/2017 17:04",
 		"passwordField" : "al 3/29/2017 12:09",
 		"passwordField:" : "al 3/29/2017 12:09",
-		"redirectPage" : "TB 4/6/2017 11:10",
-		"redirectPage:" : "TB 4/6/2017 11:10",
 		"registerAccountButton" : "lcj 5/17/2017 17:02",
-		"tryLogin" : "lcj 5/18/2017 10:34" } }
+		"tryLogin" : "lcj 5/19/2017 12:17" } }
