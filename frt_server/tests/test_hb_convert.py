@@ -17,10 +17,7 @@ class HbConvertTestCase(TestMinimal):
 
     def helper_upload_font(self, fonts_file):
         """upload fonts and return the id of the last"""
-        _, status = self.upload_file('/family/{}/upload'.format(self.family_id),
-                'file',
-                fonts_file)
-        self.assert200(status)
+        self.upload_font_file(self.family_id, fonts_file)
         family = self.session.query(Family).get(self.family_id)
         return family.fonts[-1]._id
 

@@ -1,5 +1,6 @@
 from sqlalchemy import Column, String, inspect, Integer, ForeignKey, Enum, Text, event
 from sqlalchemy.orm import relationship
+import werkzeug
 
 from frt_server.common import CommonColumns, DATE_FORMAT
 from frt_server.font import Font
@@ -60,7 +61,7 @@ class Family(CommonColumns):
             if font.ufo_file_path().endswith(ufo_filename):
                 return font
 
-    def process_file(self, family_file, user, commit_message):
+    def process_file(self, family_file, user, commit_message, asynchronous=True):
         """convert a glyphs or ufo file to (ufo and) otf, create all associated Font entities, move files to the right folders
         we get:
         family/3/sourceFile.glyphs
@@ -74,7 +75,16 @@ class Family(CommonColumns):
         self.ensure_source_folder_exists()
         family_file.save(os.path.join(self.source_folder_path(), sanitized_filename))
 
-        frt_server.fontmake_converter.process(sanitized_filename, self, user, commit_message)
+        frt_server.fontmake_converter.process(sanitized_filename, self, user, commit_message, asynchronous)
+
+    def process_filename(self, family_filename, user, commit_message):
+        """synchronously processes the file at the given path for this family"""
+        with open(family_filename, 'rb') as family_file:
+            self.process_file(
+                    werkzeug.datastructures.FileStorage(family_file, family_filename, 'file'),
+                    user,
+                    commit_message,
+                    False)
 
     def create_commit(self, message, user):
         self.ensure_source_folder_exists()

@@ -1,8 +1,9 @@
 from frt_server.tests import TestMinimal
-
-from frt_server.tables import Family, Font
+from frt_server.tables import Family, Font, User
 
 from sqlalchemy.orm import joinedload
+
+import os
 
 GIT_COMMIT_HASH_LENGHT = 40
 
@@ -26,12 +27,7 @@ class VersionsTestCase(TestMinimal):
         return self.connection.session.query(Family).options(joinedload(Family.fonts)).get(self.family_id)
 
     def upload_glyphs_file(self, message=None, version=''):
-        data, status = self.upload_file('/family/{}/upload'.format(self.family_id),
-                'file',
-                'testFiles/RiblonSans/RiblonSans{}.glyphs'.format(version),
-                {'commit_message': message})
-        self.assertEqual(status, 200)
-        return data, status
+        self.upload_font_file(self.family_id, 'testFiles/RiblonSans/RiblonSans{}.glyphs'.format(version), message)
 
     def testUploadCreatesNoDuplicates(self):
         self.upload_glyphs_file(None, '-v2')
