@@ -22,13 +22,13 @@ initialize
 	renderer := FRTGlyphRenderer new.
 	overviewTab := self initializeOverviewTab.
 	allGlyphsTab := self initializeAllGlyphTab.
-	openDicsussionsTab := self initializeDiscussionsTab.
+	discussionsTab := self initializeDiscussionsTab.
 	recentChangesTab := self initializeRecentChangesTab.
 	
 	tabContainer := BTPageNavigation new
 		addTab: 'Overview' content: overviewTab;
 		addTab: 'All Glyphs' content: allGlyphsTab;
-		addTab: 'Open Discussions' content: openDicsussionsTab;
+		addTab: 'Discussions' content: discussionsTab;
 		addTab: 'Recent Changes' content: recentChangesTab;
 		showPage: 1.
 	
