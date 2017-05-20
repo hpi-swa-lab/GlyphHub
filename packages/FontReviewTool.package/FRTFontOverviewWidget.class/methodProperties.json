@@ -2,7 +2,8 @@
 	"class" : {
 		 },
 	"instance" : {
-		"font:" : "al 5/12/2017 11:17",
+		"font:" : "al 5/18/2017 14:53",
 		"initialize" : "al 5/15/2017 16:49",
 		"initializeSampleTextArea" : "al 5/12/2017 11:42",
-		"saveSampleText:" : "al 5/15/2017 16:33" } }
+		"sampleTextEditor" : "al 5/17/2017 15:33",
+		"saveSampleText:" : "al 5/17/2017 17:16" } }

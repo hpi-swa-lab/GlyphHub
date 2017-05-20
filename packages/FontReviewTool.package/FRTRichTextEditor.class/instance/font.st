@@ -1,4 +1,4 @@
 accessing
 font
 
-	^ self topLevel font
+	^ FRTFont load: (self richText selectedParagraph fontId) populate: #() from: self topLevel backend

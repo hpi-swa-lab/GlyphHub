@@ -1,4 +1,4 @@
-navigation
+initialize-release
 breadcrumbs
 
-	^ #()
+	^ OrderedCollection new

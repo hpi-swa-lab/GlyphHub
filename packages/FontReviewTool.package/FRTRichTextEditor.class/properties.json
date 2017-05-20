@@ -11,7 +11,10 @@
 		"otFeaturesInput",
 		"fontInput",
 		"backend",
-		"saveButton" ],
+		"saveButton",
+		"fontInputButton",
+		"canChangeFont",
+		"toolbar" ],
 	"name" : "FRTRichTextEditor",
 	"pools" : [
 		 ],

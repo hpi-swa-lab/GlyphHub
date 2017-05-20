@@ -1,4 +1,12 @@
-lifecycle
+navigation
 breadcrumbs
 
-	^ {{'Sample Texts'. #file_text . {nil. nil}}}
+	| bookmark |
+	bookmark := (BTPageBookmark page: FRTSampleTextOverviewPage).
+
+	^ FRTDashboard new breadcrumbs
+		add: (BTBreadcrumb
+			icon: #file_text
+			text: 'Sample Texts'
+			bookmark: bookmark);
+		yourself

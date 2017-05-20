@@ -1,0 +1,24 @@
+{
+	"class" : {
+		"associations" : "al 5/19/2017 14:13" },
+	"instance" : {
+		"author" : "al 5/19/2017 14:21",
+		"author:" : "al 5/19/2017 14:21",
+		"codepoints" : "al 5/19/2017 14:22",
+		"codepoints:" : "al 5/19/2017 14:22",
+		"downloadOtf" : "al 5/19/2017 14:24",
+		"family" : "al 5/19/2017 14:22",
+		"family:" : "al 5/19/2017 14:22",
+		"fontName" : "al 5/19/2017 14:23",
+		"fontName:" : "al 5/19/2017 14:23",
+		"glyphs" : "al 5/19/2017 14:23",
+		"glyphs:" : "al 5/19/2017 14:23",
+		"initialize" : "al 5/19/2017 14:21",
+		"latestVersionHash" : "al 5/19/2017 14:23",
+		"loadAllGlyphNames" : "al 5/19/2017 14:23",
+		"previewGlyphs" : "al 5/19/2017 14:23",
+		"save" : "al 5/19/2017 14:01",
+		"saveAssociationsTo:" : "al 5/19/2017 14:03",
+		"saveTo:" : "al 5/19/2017 14:02",
+		"tags" : "al 5/19/2017 14:24",
+		"tags:" : "al 5/19/2017 14:24" } }

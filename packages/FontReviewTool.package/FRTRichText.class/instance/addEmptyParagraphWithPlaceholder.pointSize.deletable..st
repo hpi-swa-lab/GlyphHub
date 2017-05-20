@@ -8,5 +8,7 @@ addEmptyParagraphWithPlaceholder: aString pointSize: aPtSizeNumber deletable: aB
 		pointSize: aPtSizeNumber;
 		deletable: aBoolean).
 	self hasSubmorphs ifTrue: [
-		newParagraph font: self lastSubmorph font].
+		newParagraph
+			fontId: self lastSubmorph fontId;
+			fontNameForPango: self lastSubmorph fontNameForPango].
 	self addParagraph: newParagraph

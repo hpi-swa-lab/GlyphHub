@@ -2,10 +2,12 @@
 	"class" : {
 		 },
 	"instance" : {
+		"bookmark" : "lcj 5/19/2017 12:16",
+		"bookmark:" : "lcj 5/19/2017 12:16",
 		"emailField" : "lcj 5/18/2017 10:32",
 		"emailField:" : "lcj 5/18/2017 10:33",
-		"initialize" : "lcj 5/19/2017 10:32",
-		"initializeLoginBox" : "lcj 5/19/2017 10:52",
+		"initialize" : "al 5/20/2017 13:41",
+		"initializeLoginBox" : "al 5/20/2017 14:21",
 		"initializeLoginButton" : "lcj 5/17/2017 16:37",
 		"loader" : "ek 4/7/2017 11:27",
 		"loader:" : "ek 4/7/2017 11:27",
@@ -16,9 +18,8 @@
 		"loginFailedAlert" : "al 3/29/2017 12:09",
 		"loginFailedAlert:" : "al 3/29/2017 12:09",
 		"openRegisterAccountPage" : "lcj 5/17/2017 17:04",
+		"ourMail" : "al 5/20/2017 14:12",
 		"passwordField" : "al 3/29/2017 12:09",
 		"passwordField:" : "al 3/29/2017 12:09",
-		"redirectPage" : "TB 4/6/2017 11:10",
-		"redirectPage:" : "TB 4/6/2017 11:10",
 		"registerAccountButton" : "lcj 5/17/2017 17:02",
-		"tryLogin" : "lcj 5/18/2017 10:34" } }
+		"tryLogin" : "lcj 5/19/2017 12:17" } }

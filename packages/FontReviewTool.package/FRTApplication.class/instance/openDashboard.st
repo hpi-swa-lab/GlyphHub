@@ -1,4 +1,4 @@
 actions
 openDashboard
 
-	self openPage: FRTDashboard new with: nil
+	self openBookmark: (BTPageBookmark page: FRTDashboard)

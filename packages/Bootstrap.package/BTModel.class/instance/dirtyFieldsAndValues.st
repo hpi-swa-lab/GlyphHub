@@ -11,6 +11,6 @@ dirtyFieldsAndValues
 		
 		dirtyFieldDictionary
 			at: key
-			put: (value isBTModel ifTrue:[value id] ifFalse: [value])].
+			put: (value isBTModel ifTrue: [value id] ifFalse: [value])].
 	
 	^ dirtyFieldDictionary

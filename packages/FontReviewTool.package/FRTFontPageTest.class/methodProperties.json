@@ -2,9 +2,15 @@
 	"class" : {
 		 },
 	"instance" : {
-		"mockFamily" : "TB 5/19/2017 11:45",
-		"setUpForDefaultFamily" : "al 5/11/2017 12:03",
+		"addSampleTextToFamily" : "al 5/17/2017 16:36",
+		"enterPage" : "al 5/17/2017 15:59",
+		"mockFamily" : "al 5/19/2017 12:02",
+		"mockFamilyWithSampleText" : "al 5/17/2017 16:37",
+		"mockSampleTextJson" : "al 5/17/2017 15:25",
+		"setUpForDefaultFamily" : "al 5/17/2017 16:37",
 		"setUpForDefaultFamilyWithThread" : "al 5/11/2017 12:03",
-		"testClosedThreadsNotDisplayed" : "al 5/11/2017 12:03",
+		"testClosedThreadsNotDisplayed" : "al 5/20/2017 11:47",
 		"testDisplaysDefaultFontTitle" : "TB 5/11/2017 10:50",
+		"testOverviewTabSaveButtonOnlyVisibleToOwner" : "al 5/17/2017 16:11",
+		"testSaveSampleText" : "al 5/17/2017 17:45",
 		"testSetFontPreview" : "TB 5/11/2017 10:50" } }

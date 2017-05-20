@@ -1,6 +1,12 @@
 navigation
 breadcrumbs
 
-	^ {{''. #home. {FRTFamilyOverviewPage. nil}}.
-		{self glyph font fontName. #font. {FRTFontPage. self glyph font}}.
-		 {'Glyph ', self glyph glyphName. #info_circle. {nil. nil}}}
+	| fontPage |
+	fontPage := FRTFontPage new font: self glyph font.
+
+	^ fontPage breadcrumbs
+		add: (BTBreadcrumb
+			icon: #info_circle
+			text: 'Glyph ', self glyph glyphName
+			bookmark: (BTPageBookmark page: self class input: self glyph));
+		yourself

@@ -1,15 +1,16 @@
 mock-data
 mockFamily
 
-	| family |
+	author := FRTUser new username: 'Eva'.
+
 	family := FRTFamily new
 		familyName: 'Riblooon';
 		previewGlyphs: '';
 		versionMessages: #();
 		yourself.
-	
+		
 	family fonts add: (FRTFont new
 		fontName: 'HI';
-		author: (FRTUser new username: 'Eva')).
+		author: author).
 	
 	^ family

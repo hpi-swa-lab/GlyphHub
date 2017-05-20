@@ -17,7 +17,8 @@
 		"attachment",
 		"attachmentPreview",
 		"previewArea",
-		"glyphsPreview" ],
+		"glyphsPreview",
+		"checkboxes" ],
 	"name" : "FRTThreadCommentCreationPage",
 	"pools" : [
 		 ],

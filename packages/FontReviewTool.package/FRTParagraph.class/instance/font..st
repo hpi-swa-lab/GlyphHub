@@ -1,6 +1,10 @@
 accessing
-font: aFontNameString
+font: aFontOrAFontName
 
-	font := aFontNameString.
+	aFontOrAFontName isBTModel
+		ifTrue: [
+			self fontNameForPango: aFontOrAFontName fontNameForPango.
+			self fontId: aFontOrAFontName id]
+		ifFalse: [self fontNameForPango: aFontOrAFontName]".
 	
-	font ifNotNil: [super font: font]
+	fontNameForPango ifNotNil: [super font: fontNameForPango]"

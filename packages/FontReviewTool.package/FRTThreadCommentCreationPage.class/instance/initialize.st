@@ -10,7 +10,7 @@ initialize
 	self previewArea add: glyphsPreview.
 		
 	titleContainer := BTPage new expand: true.
-	glyphLinkContainer := BTPage column.
+	glyphLinkContainer := BTPage column align: #(center center).
 	commentText := BTTextArea new
 		multiLine: true;
 		placeholder: 'Comment ...';

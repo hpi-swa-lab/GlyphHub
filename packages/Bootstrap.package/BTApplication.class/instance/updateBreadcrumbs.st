@@ -3,6 +3,10 @@ updateBreadcrumbs
 
 	breadcrumbs removeAllMorphs.
 
-	self openPage breadcrumbs do: [ :crumb |
-		breadcrumbs add: ((BTButton label: crumb first icon: crumb second)
-			when: #clicked send: #openNewPage:with: to: self withArguments: crumb third)]
+	self openPage breadcrumbs do: [:crumb |
+		crumb
+			when: #clicked
+			send: #openBookmark:
+			to: self
+			with: crumb bookmark.
+		breadcrumbs add: crumb]

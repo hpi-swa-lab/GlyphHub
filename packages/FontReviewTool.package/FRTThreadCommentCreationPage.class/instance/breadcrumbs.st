@@ -1,22 +1,30 @@
 accessing
 breadcrumbs
 
-	| title crumbs |
+	| title breadcrumbs fontPage |
 	title := self thread isCreated ifTrue: ['New Comment'] ifFalse: ['New Thread'].
-	crumbs := OrderedCollection with: {''. #home. {FRTFamilyOverviewPage. nil}}.
+	
+	fontPage := FRTFontPage new font: self thread font.
+	breadcrumbs := fontPage breadcrumbs.
 	
 	self enteredFromGlyph
-		ifNil: [ | family |
-			family := self topLevel selectedFont family.
-			crumbs add: {family familyName. #font. {FRTFontPage. family}}]
 		ifNotNil: [
-			crumbs
-				add: {self enteredFromGlyph font fontName. #font. {FRTFontPage. self enteredFromGlyph font family}};
-				add: {'Glyph ', self enteredFromGlyph glyphName. #info_circle. {FRTGlyphPage. self enteredFromGlyph}}].
+			breadcrumbs
+				add: (BTBreadcrumb
+					icon: #info_circle
+					text: 'Glyph ', self enteredFromGlyph glyphName
+					bookmark: (BTPageBookmark page: FRTGlyphPage input: self enteredFromGlyph))].
 	
 	self thread isCreated ifTrue: [
-		crumbs add: {self thread title. #comments. {FRTThreadPage. {self thread. self enteredFromGlyph}}}].
+		breadcrumbs add: (BTBreadcrumb
+			icon: #comments
+			text: self thread title
+			bookmark: (BTPageBookmark page: FRTThreadPage input: {self thread. self enteredFromGlyph}))].
 	
-	^ crumbs
-		add: {title. #pencil. {nil. nil}};
-		yourself
+	breadcrumbs
+		add: (BTBreadcrumb
+			icon: #pencil
+			text: title
+			bookmark: (BTPageBookmark page: self class input: {self thread. self enteredFromGlyph})).
+		
+	^ breadcrumbs

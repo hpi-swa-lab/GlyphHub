@@ -7,7 +7,8 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"heading",
-		"subscriptionArea" ],
+		"subscriptionArea",
+		"myProjectsArea" ],
 	"name" : "FRTDashboard",
 	"pools" : [
 		 ],

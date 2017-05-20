@@ -2,4 +2,4 @@ updating
 updateControlsFor: aParagraph
 
 	pointSizeInput text: aParagraph pointSize asString.
-	fontInput text: (aParagraph font ifNil: [''])
+	fontInput text: (aParagraph fontNameForPango ifNil: [''])

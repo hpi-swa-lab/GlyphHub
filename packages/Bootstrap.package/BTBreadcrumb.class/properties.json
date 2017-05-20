@@ -1,0 +1,15 @@
+{
+	"category" : "Bootstrap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"parentBreadcrumb",
+		"bookmark" ],
+	"name" : "BTBreadcrumb",
+	"pools" : [
+		 ],
+	"super" : "BTButton",
+	"type" : "normal" }

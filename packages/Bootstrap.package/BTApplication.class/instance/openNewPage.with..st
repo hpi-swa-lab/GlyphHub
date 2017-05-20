@@ -1,4 +1,4 @@
-accessing
+navigation
 openNewPage: aPageClass with: anObject
 	
 	^ aPageClass

@@ -1,4 +1,4 @@
-accessing
+navigation
 openPage: aPage with: anObject
 	
 	self startLoadingOperation.

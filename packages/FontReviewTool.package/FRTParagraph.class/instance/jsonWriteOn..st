@@ -3,7 +3,8 @@ jsonWriteOn: aWriteStream
 
 	^ (Dictionary new
 		at: 'alignment' put: self alignment asString;
-		at: 'font' put: self font;
+		at: 'fontNameForPango' put: self fontNameForPango;
+		at: 'fontId' put: self fontId;
 		at: 'pointSize' put: self pointSize;
 		at: 'text' put: self text;
 		at: 'openTypeFeatures' put: self openTypeFeatures;
