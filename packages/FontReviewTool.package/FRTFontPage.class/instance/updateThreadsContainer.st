@@ -1,13 +1,14 @@
 callbacks
 updateThreadsContainer
 
+	| threadsToShow |
 	threadsContainer removeAllMorphs.
-	
-	threads notEmpty
-		ifTrue: [ | threadsToShow |
-			threadsToShow := threads.
-			self showClosedThreads ifFalse:
-				[threadsToShow := threadsToShow reject: [:thread | thread closed]].		
+
+	threadsToShow := threads.
+	self showClosedThreads 
+		ifFalse: [threadsToShow := threadsToShow reject: [:thread | thread closed]].		
+	threadsToShow notEmpty
+		ifTrue: [
 			threadsToShow do: [:thread |
 				threadsContainer add: (FRTThreadPreviewWidget new thread: thread)]]
 		ifFalse: [threadsContainer
