@@ -6,8 +6,15 @@ updateGlyphLinks: aThread
 	glyphLinkContainer removeAllMorphs.
 	aThread threadGlyphAssociations size = 1
 		ifTrue: [glyphLinkContainer visible: false]
-		ifFalse: [
+		ifFalse: [ | button |
+			glyphLinkContainer visible: true.
+			checkboxes := (thread threadGlyphAssociations collect: [:threadGlyph |
+					(BTCheckboxWithLabel label: 'Link comment with ', threadGlyph glyph glyphName) checked: true]).
+			
+			button := ((BTButton label: 'Unlink all')
+				small;
+				when: #clicked send: #unlinkAll: to: self with: checkboxes).
+					
 			glyphLinkContainer
-				visible: true;  
-				addAll: (thread threadGlyphAssociations collect: [:threadGlyph |
-					(BTCheckboxWithLabel label: 'Link comment with ', threadGlyph glyph glyphName) checked: true])]
+				add: button;
+				addAll: checkboxes]
