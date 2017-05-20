@@ -3,6 +3,7 @@ import subprocess
 import zipfile
 import shutil
 import glob
+import threading
 
 from sqlalchemy import inspect
 from frt_server.font import Font
@@ -54,7 +55,7 @@ def unzip_file_for_family(family, filename):
         ufo_zip_file.extractall(family.source_folder_path())
 
 def convert_font_after_upload(family, filename):
-    """invoke fontmake in our source folder. no cleanup performed after"""
+    """invoke fontmake in our source folder. no cleanup performed after, returns the running process handle"""
     type_parameter = None
     if is_glyphs_file(filename):
         type_parameter = "-g"
@@ -73,10 +74,11 @@ def convert_font_after_upload(family, filename):
     else:
         raise Exception("Exception: File is neither .ufo nor .glyphs")
 
-    fontmake_result = subprocess.run(['fontmake', type_parameter, temporary_filename, '--no-production-names', '-o', 'otf', '--verbose', 'CRITICAL'],
+    return subprocess.Popen(['fontmake', type_parameter, temporary_filename, '--no-production-names', '-o', 'otf', '--verbose', 'CRITICAL'],
+            shell=False,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
             cwd=family.source_folder_path())
-    if fontmake_result.returncode != 0:
-        raise Exception("Exception: Fontmake failed to compile a font")
 
 def create_uploaded_font(family, font_name, ufo_filename, otf_filename, user):
     font = family.font_for_file_named(ufo_filename)

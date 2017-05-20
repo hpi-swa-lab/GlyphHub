@@ -11,7 +11,7 @@ os.environ['FRT_TESTING'] = '1'
 
 import frt_server.config
 from frt_server.run import create_app, setup_database
-from frt_server.tables import User
+from frt_server.tables import User, Family
 
 class TestMinimal(eve.tests.TestMinimal):
     def setUp(self):
@@ -86,6 +86,11 @@ class TestMinimal(eve.tests.TestMinimal):
                     ],
                     data=fields)
             return self.parse_response(response)
+
+    def upload_font_file(self, family_id, file_path, message=None):
+        family = self.connection.session.query(Family).get(family_id)
+        user = self.connection.session.query(User).get(self.user_id)
+        family.process_filename(os.path.join(self.this_directory, '..', '..', file_path), user, message or 'commit message here')
 
     def login_as(self, email, password):
         """save the auth token from the given user for all future requests"""
