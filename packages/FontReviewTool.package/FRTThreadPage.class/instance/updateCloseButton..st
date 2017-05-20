@@ -9,4 +9,6 @@ updateCloseButton: aThread
 		 ifTrue: [
 			closeButton
 				text: 'Re-Open Thread';
-				colorType: #warning]
+				colorType: #warning].
+
+	closeButton visible: (aThread author id = aThread font author id or: [self topLevel user id = aThread author id])
