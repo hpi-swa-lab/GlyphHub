@@ -7,8 +7,13 @@ import threading
 
 from sqlalchemy import inspect
 from frt_server.font import Font
+from frt_server.common import FamilyUploadStatus
 
 def process(source_filename, family, user, commit_message, asynchronous):
+    family.upload_status = FamilyUploadStatus.processing
+    family.last_upload_error = None
+    inspect(family).session.flush()
+
     process = convert_font_after_upload(family, source_filename)
 
     if asynchronous:
@@ -19,7 +24,10 @@ def process(source_filename, family, user, commit_message, asynchronous):
 def handle_convert_result(process, source_filename, family, user, commit_message):
     stdout, stderr = process.communicate()
     if process.returncode != 0:
-        raise Exception("Exception: Fontmake failed to compile a font")
+        family.upload_status = FamilyUploadStatus.ready_for_upload
+        family.last_upload_error = stderr or 'An unknown error occured'
+        inspect(family).session.commit()
+        return
 
     source_otf_path = os.path.join(family.source_folder_path(), 'master_otf')
 
@@ -33,6 +41,8 @@ def handle_convert_result(process, source_filename, family, user, commit_message
         process_glyphs_file(family, source_filename, otf_filenames, user)
 
     family.create_commit(commit_message, user)
+    family.upload_status = FamilyUploadStatus.ready_for_upload
+    inspect(family).session.commit()
 
 def is_glyphs_file(filename):
     return filename.endswith('.glyphs')
