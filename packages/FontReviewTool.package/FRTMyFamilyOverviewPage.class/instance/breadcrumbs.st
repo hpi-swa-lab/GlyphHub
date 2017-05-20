@@ -1,9 +1,9 @@
-navigation
+updating
 breadcrumbs
 
 	^ FRTDashboard new breadcrumbs
 		add: (BTBreadcrumb
-			icon: #folder_open
-			text: 'Discover Projects'
+			icon: #file
+			text: 'My Projects'
 			bookmark: (BTPageBookmark page: self class));
 		yourself

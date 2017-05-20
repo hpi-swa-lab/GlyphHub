@@ -2,8 +2,9 @@
 	"class" : {
 		 },
 	"instance" : {
-		"enteringWith:" : "lcj 5/18/2017 15:28",
+		"breadcrumbs" : "lcj 5/19/2017 14:53",
+		"enteringWith:" : "lcj 5/20/2017 10:44",
 		"heading" : "lcj 5/18/2017 15:16",
 		"heading:" : "lcj 5/18/2017 15:15",
-		"initialize" : "lcj 5/18/2017 17:23",
-		"loadThreadSubscriptionsFor:" : "lcj 5/18/2017 17:20" } }
+		"initialize" : "lcj 5/20/2017 10:54",
+		"loadThreadSubscriptionsFor:" : "lcj 5/20/2017 11:47" } }

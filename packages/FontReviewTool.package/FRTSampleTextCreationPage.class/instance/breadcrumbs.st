@@ -1,5 +1,12 @@
-callbacks
+navigation
 breadcrumbs
 
-	^ {{'Sample Texts'. #file_text . {FRTSampleTextOverviewPage. nil}}.
-	{'Create Sample Text'. #pencil. {nil. nil}}}
+	| bookmark |
+	bookmark := (BTPageBookmark page: FRTSampleTextCreationPage).
+
+	^ FRTSampleTextOverviewPage new breadcrumbs
+		add: (BTBreadcrumb
+			icon: #pencil
+			text: 'Create Sample Text'
+			bookmark: bookmark);
+		yourself

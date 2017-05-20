@@ -6,11 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"heading",
-		"subscriptionArea",
-		"myProjectsArea" ],
-	"name" : "FRTDashboard",
+		 ],
+	"name" : "FRTMyProfilePage",
 	"pools" : [
 		 ],
-	"super" : "FRTApplicationPage",
+	"super" : "FRTProfilePage",
 	"type" : "normal" }
