@@ -1,7 +1,7 @@
 initialize-release
 initialize
 
-	| updateButton otfButton |
+	| otfButton |
 	super initialize.
 
 	fontNameLabel := BTLabel new
@@ -10,7 +10,8 @@ initialize
 	fontAuthorLabel := BTLabel new
 		align: #(left center).
 	updateButton := (BTButton label: 'Update' icon: #cloud_upload)
-		colorType: #primary.
+		colorType: #primary;
+		visible: false.
 	otfButton := (BTButton label: 'Download as OTF' icon: #cloud_download)
 		colorType: #primary;
 		when: #clicked send: #downloadOtf to: self.
