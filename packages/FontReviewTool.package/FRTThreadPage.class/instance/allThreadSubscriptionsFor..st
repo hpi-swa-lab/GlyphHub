@@ -3,5 +3,5 @@ allThreadSubscriptionsFor: aThread
 
 	 ^ FRTThreadSubscription
 		loadWhere: {#thread -> aThread. #user -> self user}
-		populate: #()
+		populate: #(thread user)
 		from: self backend
