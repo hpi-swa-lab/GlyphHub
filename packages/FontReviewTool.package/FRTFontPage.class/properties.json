@@ -22,7 +22,8 @@
 		"threadsContainer",
 		"uploadPopover",
 		"missingPreviewGlyphsNotice",
-		"versionWidgets" ],
+		"versionWidgets",
+		"updateButton" ],
 	"name" : "FRTFontPage",
 	"pools" : [
 		 ],
