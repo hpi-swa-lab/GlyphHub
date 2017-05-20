@@ -1,23 +1,17 @@
 from sqlalchemy import Column, String, inspect, Integer, ForeignKey, Enum, Text, event
 from sqlalchemy.orm import relationship
 
-from frt_server.common import CommonColumns, DATE_FORMAT
+from frt_server.common import CommonColumns, DATE_FORMAT, FamilyUploadStatus
 from frt_server.font import Font
 from frt_server.tag import tag_family_association_table
 import frt_server.config
 import frt_server.fontmake_converter
 
 import os
-import enum
 import pygit2
 import datetime
 
 from werkzeug.utils import secure_filename
-
-class FamilyUploadStatus(enum.IntEnum):
-    ready_for_upload = 1
-    uploading = 2
-    processing = 3
 
 class Family(CommonColumns):
     __tablename__ = 'family'

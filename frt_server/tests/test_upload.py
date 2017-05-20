@@ -4,6 +4,7 @@ from frt_server.tables import Family, Font
 from sqlalchemy.orm import joinedload
 
 import os
+import time
 
 class UploadTestCase(TestMinimal):
     def setUp(self):
@@ -21,9 +22,28 @@ class UploadTestCase(TestMinimal):
     def get_test_family(self):
         return self.connection.session.query(Family).options(joinedload(Family.fonts)).get(self.family_id)
 
-    def test_upload_glyphs(self):
-        data, status = self.upload_file('/family/{}/upload'.format(self.family_id), 'file', 'testFiles/RiblonSans/RiblonSans.glyphs')
+    def asynchronous_upload(self, family_id, filename, expecting_error = False):
+        data, status = self.upload_file('/family/{}/upload'.format(family_id), 'file', filename)
         self.assertEqual(status, 200)
+
+        data, _ = self.get('/family/{}/status'.format(family_id))
+        self.assertEqual(data['status'], 'FamilyUploadStatus.processing')
+        self.assertIsNone(data['error'])
+
+        # continously poll our upload service until processing finished
+        while data['status'] == 'FamilyUploadStatus.processing':
+            time.sleep(0.1)
+            data, _ = self.get('/family/{}/status'.format(family_id))
+
+        self.assertEqual(data['status'], 'FamilyUploadStatus.ready_for_upload')
+
+        if expecting_error:
+            self.assertIsNotNone(data['error'])
+        else:
+            self.assertIsNone(data['error'])
+
+    def test_upload_glyphs(self):
+        self.asynchronous_upload(self.family_id, 'testFiles/RiblonSans/RiblonSans.glyphs')
 
         family = self.get_test_family()
         self.assertTrue(os.path.exists(family.source_folder_path()))
@@ -36,8 +56,7 @@ class UploadTestCase(TestMinimal):
             self.assertTrue(os.path.exists(os.path.join(font.otf_folder_path(), 'RiblonSans-Regular.otf')))
 
     def test_upload_ufo(self):
-        data, status = self.upload_file('family/{}/upload'.format(self.family_id), 'file', 'testFiles/RiblonSans/RiblonSans.ufo.zip')
-        self.assertEqual(status, 200)
+        self.asynchronous_upload(self.family_id, 'testFiles/RiblonSans/RiblonSans.ufo.zip')
 
         family = self.get_test_family()
         for font in family.fonts:
@@ -48,27 +67,21 @@ class UploadTestCase(TestMinimal):
             self.assertTrue(os.path.exists(os.path.join(font.otf_folder_path(), 'RiblonSans-Regular.otf')))
 
     def test_upload_invalid_file(self):
-        data, status = self.upload_file('family/{}/upload'.format(self.family_id), 'file', 'testFiles/RiblonSans/RiblonSans-v3.glyphs')
-        self.assertEqual(status, 400)
-        session = self.connection.session
-        self.assertIsNone(session.query(Family).get(self.family_id))
+        self.asynchronous_upload(self.family_id, 'testFiles/RiblonSans/RiblonSans-broken.glyphs', True)
+        # when launching a new attempt with a working family, we verify that the error is reset
+        self.asynchronous_upload(self.family_id, 'testFiles/RiblonSans/RiblonSans.glyphs', False)
 
     def test_upload_invalid_new_version(self):
-        data, status = self.upload_file('family/{}/upload'.format(self.family_id), 'file', 'testFiles/RiblonSans/RiblonSans.glyphs')
-        self.assertEqual(status, 200)
+        self.asynchronous_upload(self.family_id, 'testFiles/RiblonSans/RiblonSans.glyphs', False)
+        self.asynchronous_upload(self.family_id, 'testFiles/RiblonSans/RiblonSans-broken.glyphs', True)
 
-        data, status = self.upload_file('family/{}/upload'.format(self.family_id), 'file', 'testFiles/RiblonSans/RiblonSans-broken.glyphs')
-        self.assertEqual(status, 400)
-
-        session = self.connection.session
-        self.assertIsNotNone(session.query(Family).get(self.family_id))
+        self.assertIsNotNone(self.connection.session.query(Family).get(self.family_id))
 
         family = self.get_test_family()
         self.assertEqual(len(family.fonts), 1)
 
     def test_upload_ufo_with_whitespace_in_filename(self):
-        data, status = self.upload_file('family/{}/upload'.format(self.family_id), 'file', 'testFiles/Riblon Sans/Riblon Sans 42.ufo.zip')
-        self.assertEqual(status, 200)
+        self.asynchronous_upload(self.family_id, 'testFiles/Riblon Sans/Riblon Sans 42.ufo.zip')
 
         family = self.get_test_family()
         for font in family.fonts:

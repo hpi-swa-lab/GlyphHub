@@ -79,26 +79,30 @@ def register_routes(app):
         if not family:
             return jsonify({'error': 'Associated family does not exist'}), 400
 
+        if 'file' not in request.files:
+            return jsonify({'error': 'No file given'}), 400
+
+        family_file = request.files['file']
+        if family_file.filename == '':
+            return jsonify({'error': 'Invalid file given'}), 400
+
+        if not re.match(r"^.*(\.ufo\.zip|\.glyphs)$", family_file.filename):
+            return jsonify({'error': 'Invalid file format'}), 400
+
         try:
-            if 'file' not in request.files:
-                return jsonify({'error': 'No file given'}), 400
+            family.process_file(family_file, current_user, request.form.get('commit_message') or 'New Version')
+            return '', 200
+        except Exception as e:
+            if frt_server.config.DEBUG:
+                traceback.print_exc()
+            return jsonify({'error': 'Processing file failed'}), 400
 
-            family_file = request.files['file']
-            if family_file.filename == '':
-                return jsonify({'error': 'Invalid file given'}), 400
-
-            if not re.match(r"^.*(\.ufo\.zip|\.glyphs)$", family_file.filename):
-                return jsonify({'error': 'Invalid file format'}), 400
-
-            try:
-                family.process_file(family_file, current_user, request.form.get('commit_message') or 'New Version')
-                return '', 200
-            except Exception as e:
-                if frt_server.config.DEBUG:
-                    traceback.print_exc()
-                return jsonify({'error': 'Processing file failed'}), 400
-        finally:
-            Family.delete_family_if_empty(family)
+    @app.route('/family/<family_id>/status')
+    @requires_auth('')
+    def family_status(family_id):
+        session = app.data.driver.session
+        family = session.query(Family).get(family_id)
+        return jsonify({'status': str(family.upload_status), 'error': family.last_upload_error})
 
     @app.route('/font/<font_id>/convert', methods=['POST'])
     @requires_auth('')
