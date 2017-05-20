@@ -4,7 +4,7 @@
 		"associations" : "ek 4/11/2017 12:38",
 		"defaultFieldNames" : "TB 5/11/2017 17:29",
 		"excludeInstVar:" : "TB 5/19/2017 11:43",
-		"excludeInstVars" : "TB 5/19/2017 11:40",
+		"excludeInstVars" : "lcj 5/20/2017 14:50",
 		"fieldNames" : "TB 5/11/2017 17:31",
 		"hasManyAssociationNamed:" : "TB 5/19/2017 11:42",
 		"hasSingleAssociationNamed:" : "TB 5/19/2017 11:42",
@@ -18,11 +18,11 @@
 		"backend" : "TB 4/5/2017 16:05",
 		"backend:" : "TB 5/11/2017 16:34",
 		"createdAt" : "TB 5/11/2017 17:30",
-		"createdAt:" : "TB 5/11/2017 17:54",
+		"createdAt:" : "lcj 5/20/2017 14:46",
 		"delete" : "JH 5/5/2017 18:02",
 		"deleteFrom:" : "ek 4/20/2017 14:56",
 		"dirtyFieldNames" : "TB 5/19/2017 11:43",
-		"dirtyFieldsAndValues" : "al 5/11/2017 17:14",
+		"dirtyFieldsAndValues" : "lcj 5/20/2017 14:39",
 		"expect:field:" : "ek 4/20/2017 14:56",
 		"fieldDirty:" : "TB 5/11/2017 16:35",
 		"flagFieldAsDirty:" : "TB 5/11/2017 16:35",
@@ -49,4 +49,4 @@
 		"update:with:collectionForeignField:" : "TB 5/11/2017 17:54",
 		"update:with:foreignField:" : "TB 5/11/2017 17:59",
 		"updatedAt" : "TB 5/11/2017 17:30",
-		"updatedAt:" : "TB 5/11/2017 17:54" } }
+		"updatedAt:" : "lcj 5/20/2017 14:46" } }
