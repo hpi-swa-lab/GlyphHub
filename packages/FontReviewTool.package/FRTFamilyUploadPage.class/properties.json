@@ -10,7 +10,12 @@
 		"fontFileStream",
 		"uploadedFileLabel",
 		"alertArea",
-		"tagList" ],
+		"tagList",
+		"familyName",
+		"saveButton",
+		"loadingIndicator",
+		"family",
+		"pollPromise" ],
 	"name" : "FRTFamilyUploadPage",
 	"pools" : [
 		 ],
