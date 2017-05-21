@@ -1,4 +1,4 @@
 callback
 startPolling
 
-	self startStepping
+	self startStepping: #pollStatus at: Time millisecondClockValue arguments: nil stepTime: 1000
