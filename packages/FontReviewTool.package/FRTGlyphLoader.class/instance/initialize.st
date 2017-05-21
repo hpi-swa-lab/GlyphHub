@@ -3,5 +3,4 @@ initialize
 
 	super initialize.
 	
-	glyphCache := Dictionary new.
-	fontinfoCache := Dictionary new
+	loaders := Dictionary new

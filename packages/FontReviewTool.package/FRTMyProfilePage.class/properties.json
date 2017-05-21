@@ -1,0 +1,14 @@
+{
+	"category" : "FontReviewTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "FRTMyProfilePage",
+	"pools" : [
+		 ],
+	"super" : "FRTProfilePage",
+	"type" : "normal" }

@@ -11,6 +11,7 @@ text
 		
 		add: (BTLabel categoryHeader: 'Category Header!');
 		add: (BTLabel subcategoryHeader: 'Subcategory Header!');
+		add: (BTLabel secondarySubHeading: 'Secondary Subcategory Heading!');
 		
 		add: (BTLabel bold: 'Bold!');
 		add: (BTLabel italic: 'Italic');

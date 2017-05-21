@@ -5,5 +5,7 @@ loadThreadSubscriptionsFor: aUser
 		loadWhere: {#user -> aUser}
 		populate: #(thread 'thread.title' 'thread.comments' 'thread.comments.author')
 		from: self backend)
-		then: [:subscriptions | subscriptions do: [:subscription |
-			subscriptionArea add: (FRTThreadPreviewWidget new thread: subscription thread)]]
+		then: [:subscriptions | 
+			subscriptionArea removeAllMorphs.
+			subscriptions do: [:subscription |
+					subscriptionArea add: (FRTThreadPreviewWidget new thread: subscription thread)]]

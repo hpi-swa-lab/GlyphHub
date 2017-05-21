@@ -1,5 +1,6 @@
 initialize-release
 initialize
+
 	super initialize.
 	
 	check := BTCheckbox new.

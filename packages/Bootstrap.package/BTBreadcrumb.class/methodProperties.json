@@ -1,6 +1,8 @@
 {
 	"class" : {
+		"icon:text:bookmark:" : "lcj 5/19/2017 14:53",
 		"icon:text:bookmark:for:" : "lcj 5/19/2017 12:01",
+		"icon:text:linkedPage:pageInput:" : "lcj 5/19/2017 14:53",
 		"icon:text:linkedPage:pageInput:for:" : "lcj 5/19/2017 12:03" },
 	"instance" : {
 		"bookmark" : "lcj 5/19/2017 12:00",

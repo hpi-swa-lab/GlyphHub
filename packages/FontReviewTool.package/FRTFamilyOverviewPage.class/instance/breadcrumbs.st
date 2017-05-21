@@ -1,4 +1,9 @@
 navigation
 breadcrumbs
 
-	^ {{''. #home. {nil. nil}}}
+	^ FRTDashboard new breadcrumbs
+		add: (BTBreadcrumb
+			icon: #folder_open
+			text: 'Discover Projects'
+			bookmark: (BTPageBookmark page: self class));
+		yourself

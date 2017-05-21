@@ -1,0 +1,18 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"allKnownRequiredGlyphNamesFor:" : "TB 5/21/2017 10:02",
+		"canDrawImmediately:" : "TB 5/21/2017 10:35",
+		"emptyGlif" : "TB 5/21/2017 09:14",
+		"font" : "TB 5/21/2017 09:53",
+		"font:" : "TB 5/21/2017 09:52",
+		"fontinfo" : "TB 5/21/2017 11:21",
+		"glifs" : "TB 5/21/2017 11:12",
+		"initialize" : "TB 5/21/2017 10:00",
+		"loadGlifsNamed:" : "TB 5/21/2017 11:11",
+		"loadQuery:" : "TB 5/21/2017 11:09",
+		"loadQueryFor:" : "TB 5/21/2017 11:06",
+		"parseGlif:" : "TB 5/21/2017 09:13",
+		"versionHash" : "TB 5/21/2017 09:53",
+		"versionHash:" : "TB 5/21/2017 09:52" } }

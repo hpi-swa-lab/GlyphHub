@@ -1,5 +1,6 @@
 ui
 breadcrumbs
 
-	^ {{''. #home. {FRTFamilyOverviewPage. nil}}.
-		{'Upload Font'. #upload. {nil. nil}}}
+	^ FRTFamilyOverviewPage new breadcrumbs
+		add: (BTBreadcrumb icon: #upload text: 'Upload Font' bookmark: (BTPageBookmark page: FRTFamilyUploadPage));
+		yourself
