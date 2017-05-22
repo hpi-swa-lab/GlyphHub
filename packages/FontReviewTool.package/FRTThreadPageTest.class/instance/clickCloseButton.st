@@ -1,4 +1,4 @@
-as yet unclassified
+helpers
 clickCloseButton
 
 	page toggleClosed
