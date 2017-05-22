@@ -10,4 +10,5 @@ loadThread: aThread
 				loadGlyphPreviewForThread: newThread;
 				displayComments;
 				loadThreadSubscriptionStatus: newThread;
+				updateLastVisited: newThread;
 				changed].
