@@ -1,7 +1,7 @@
 testing
-testCloseThreadDisplayedForFontOwner
-		
-	self changeLoggedInUserToThreadFontAuthor.
+testCloseThreadDisplayedForThreadStarter
+	
+	self changeLoggedInUserToThreadAuthor.
 	self enterPage.
 	(self expect: page closeButton visible) to be: true.
 	self clickCloseButton.
