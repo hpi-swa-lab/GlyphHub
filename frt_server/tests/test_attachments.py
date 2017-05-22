@@ -9,14 +9,14 @@ class AttachmentsTestCase(TestMinimal):
         return attachment, status
 
     def test_upload_attachment(self):
-        self.login_as('Eva', 'eveisevil')
+        self.login_as('eve@evil.com', 'eveisevil')
         attachment, _ = self.helper_upload_picture()
         self.assertEqual(attachment['type'], AttachmentType.picture)
         self.assertEqual(attachment['data1'], 'cat.jpg')
         self.assertEqual(attachment['owner_id'], self.user_id)
 
     def test_fetch_unassigned_attachments(self):
-        self.login_as('Eva', 'eveisevil')
+        self.login_as('eve@evil.com', 'eveisevil')
         url = '/attachment?where={{"comment_id":null,"owner_id":{}}}'.format(self.user_id)
 
         attachments, status = self.get(url)
