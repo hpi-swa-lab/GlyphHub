@@ -102,6 +102,9 @@ def register_routes(app):
     def family_status(family_id):
         session = app.data.driver.session
         family = session.query(Family).get(family_id)
+        if not family:
+            return jsonify({'error': 'no such family'}), 404
+
         return jsonify({'status': str(family.upload_status), 'error': family.last_upload_error})
 
     @app.route('/font/<font_id>/convert', methods=['POST'])

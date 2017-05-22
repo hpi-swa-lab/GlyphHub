@@ -12,7 +12,8 @@ from frt_server.common import FamilyUploadStatus
 def process(source_filename, family, user, commit_message, asynchronous):
     family.upload_status = FamilyUploadStatus.processing
     family.last_upload_error = None
-    inspect(family).session.flush()
+    session = inspect(family).session
+    session.commit()
 
     process = convert_font_after_upload(family, source_filename)
 
@@ -22,27 +23,34 @@ def process(source_filename, family, user, commit_message, asynchronous):
         handle_convert_result(process, source_filename, family, user, commit_message)
 
 def handle_convert_result(process, source_filename, family, user, commit_message):
+    session = inspect(family).session
     stdout, stderr = process.communicate()
+
+    session.add(user)
+    session.add(family)
+    session.refresh(family)
+
     if process.returncode != 0:
         family.upload_status = FamilyUploadStatus.ready_for_upload
         family.last_upload_error = stderr or 'An unknown error occured'
-        inspect(family).session.commit()
+        session.commit()
         return
 
-    source_otf_path = os.path.join(family.source_folder_path(), 'master_otf')
+    try:
+        source_otf_path = os.path.join(family.source_folder_path(), 'master_otf')
 
-    otf_filenames = [os.path.basename(filename) for filename in glob.glob(source_otf_path + '/*.otf')]
-    if len(otf_filenames) < 1:
-        raise FileNotFoundError('No otf files were generated')
+        otf_filenames = [os.path.basename(filename) for filename in glob.glob(source_otf_path + '/*.otf')]
+        if len(otf_filenames) < 1:
+            raise FileNotFoundError('No otf files were generated')
 
-    if is_ufo_file(source_filename):
-        process_ufo_file(family, source_filename[:-4], otf_filenames[0], user)
-    else:
-        process_glyphs_file(family, source_filename, otf_filenames, user)
-
-    family.create_commit(commit_message, user)
-    family.upload_status = FamilyUploadStatus.ready_for_upload
-    inspect(family).session.commit()
+        if is_ufo_file(source_filename):
+            process_ufo_file(family, source_filename[:-4], otf_filenames[0], user)
+        else:
+            process_glyphs_file(family, source_filename, otf_filenames, user)
+    finally:
+        family.create_commit(commit_message, user)
+        family.upload_status = FamilyUploadStatus.ready_for_upload
+        session.commit()
 
 def is_glyphs_file(filename):
     return filename.endswith('.glyphs')
