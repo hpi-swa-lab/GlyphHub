@@ -9,7 +9,7 @@ import time
 class UploadTestCase(TestMinimal):
     def setUp(self):
         super(UploadTestCase, self).setUp()
-        self.login_as('Eva', 'eveisevil')
+        self.login_as('eve@evil.com', 'eveisevil')
 
         family = Family(family_name='Riblon')
 

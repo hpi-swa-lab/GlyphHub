@@ -94,7 +94,7 @@ class TestMinimal(eve.tests.TestMinimal):
 
     def login_as(self, email, password):
         """save the auth token from the given user for all future requests"""
-        data, status = self.login('eve@evil.com', 'eveisevil')
+        data, status = self.login(email, password)
         assert status == 200
         self.cachedApiToken = data['token']
         self.user_id = data['user_id']

@@ -11,8 +11,9 @@ from werkzeug.exceptions import Unauthorized
 from werkzeug.utils import secure_filename
 from eve.auth import requires_auth
 from eve_sqlalchemy import sqla_object_to_dict
+from sqlalchemy import func, orm
 
-from frt_server.tables import User, Font, Family, Attachment, AttachmentType, Feedback
+from frt_server.tables import User, Font, Family, Attachment, AttachmentType, Feedback, ThreadSubscription, Thread
 import frt_server.config
 import frt_server.font
 import frt_server.settings
@@ -285,6 +286,24 @@ def register_routes(app):
     @requires_auth('')
     def upload_feedback(feedback_id):
         return _upload_feedback_image(feedback_id)
+
+    @app.route('/thread/<thread_id>/visit', methods=['PATCH'])
+    @requires_auth('')
+    def update_last_visited(thread_id):
+        session = app.data.driver.session
+        user = app.auth.get_request_auth_value()
+ 
+        if not session.query(Thread).get(thread_id):
+            return jsonify({'error' : 'Thread not found'}), 404
+        try:
+            subscription = session.query(ThreadSubscription).filter_by(user_id = user._id, thread_id = thread_id).one()
+        except orm.exc.NoResultFound:
+            return jsonify({'error' : 'You are not subscribed to this thread'}), 404
+        except orm.exc.MultipleResultsFound:
+            return jsonify({'error' : 'Multiple subscriptions found. Please contact the devs about this'}), 500
+        subscription.last_visited = func.now()
+        session.commit()
+        return jsonify(''), 200
 
     if frt_server.config.DEBUG:
         @app.before_request
