@@ -3,7 +3,7 @@ keyStroke: anEvent
 
 	| key |
 	key := anEvent keyString.
-		
+	
 	key = '<left>' ifTrue: [
 		^ self moveCursor: true direction: -1 selecting: false].
 	key = '<Shift-left>' ifTrue: [
@@ -48,6 +48,8 @@ keyStroke: anEvent
 		^ self pasteUpMorphHandlingTabAmongFields ifNotNilDo: [:p | p tabHitWithEvent: anEvent]].
 	
 	self editable ifTrue: [
+		self triggerChanged.
+		
 		(key = '<backspace>' or: [key = '<Shift-backspace>']) ifTrue: [
 			^ self deleteBeforeCursor].
 		key = '<delete>' ifTrue: [

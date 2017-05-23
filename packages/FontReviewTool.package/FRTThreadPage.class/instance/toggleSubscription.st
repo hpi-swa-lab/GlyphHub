@@ -1,4 +1,4 @@
-initialize-release
+callbacks
 toggleSubscription
 
 	self subscriptionButton disabled: true.

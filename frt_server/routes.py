@@ -11,8 +11,9 @@ from werkzeug.exceptions import Unauthorized
 from werkzeug.utils import secure_filename
 from eve.auth import requires_auth
 from eve_sqlalchemy import sqla_object_to_dict
+from sqlalchemy import func, orm
 
-from frt_server.tables import User, Font, Family, Attachment, AttachmentType, Feedback
+from frt_server.tables import User, Font, Family, Attachment, AttachmentType, Feedback, ThreadSubscription, Thread
 import frt_server.config
 import frt_server.font
 import frt_server.settings
@@ -79,26 +80,33 @@ def register_routes(app):
         if not family:
             return jsonify({'error': 'Associated family does not exist'}), 400
 
+        if 'file' not in request.files:
+            return jsonify({'error': 'No file given'}), 400
+
+        family_file = request.files['file']
+        if family_file.filename == '':
+            return jsonify({'error': 'Invalid file given'}), 400
+
+        if not re.match(r"^.*(\.ufo\.zip|\.glyphs)$", family_file.filename):
+            return jsonify({'error': 'Invalid file format'}), 400
+
         try:
-            if 'file' not in request.files:
-                return jsonify({'error': 'No file given'}), 400
+            family.process_file(family_file, current_user, request.form.get('commit_message') or 'New Version')
+            return '', 200
+        except Exception as e:
+            if frt_server.config.DEBUG:
+                traceback.print_exc()
+            return jsonify({'error': 'Processing file failed'}), 400
 
-            family_file = request.files['file']
-            if family_file.filename == '':
-                return jsonify({'error': 'Invalid file given'}), 400
+    @app.route('/family/<family_id>/status')
+    @requires_auth('')
+    def family_status(family_id):
+        session = app.data.driver.session
+        family = session.query(Family).get(family_id)
+        if not family:
+            return jsonify({'error': 'no such family'}), 404
 
-            if not re.match(r"^.*(\.ufo\.zip|\.glyphs)$", family_file.filename):
-                return jsonify({'error': 'Invalid file format'}), 400
-
-            try:
-                family.process_file(family_file, current_user, request.form.get('commit_message') or 'New Version')
-                return '', 200
-            except Exception as e:
-                if frt_server.config.DEBUG:
-                    traceback.print_exc()
-                return jsonify({'error': 'Processing file failed'}), 400
-        finally:
-            Family.delete_family_if_empty(family)
+        return jsonify({'status': str(family.upload_status).split('.')[-1], 'error': family.last_upload_error})
 
     @app.route('/font/<font_id>/convert', methods=['POST'])
     @requires_auth('')
@@ -281,6 +289,24 @@ def register_routes(app):
     @requires_auth('')
     def upload_feedback(feedback_id):
         return _upload_feedback_image(feedback_id)
+
+    @app.route('/thread/<thread_id>/visit', methods=['PATCH'])
+    @requires_auth('')
+    def update_last_visited(thread_id):
+        session = app.data.driver.session
+        user = app.auth.get_request_auth_value()
+ 
+        if not session.query(Thread).get(thread_id):
+            return jsonify({'error' : 'Thread not found'}), 404
+        try:
+            subscription = session.query(ThreadSubscription).filter_by(user_id = user._id, thread_id = thread_id).one()
+        except orm.exc.NoResultFound:
+            return jsonify({'error' : 'You are not subscribed to this thread'}), 404
+        except orm.exc.MultipleResultsFound:
+            return jsonify({'error' : 'Multiple subscriptions found. Please contact the devs about this'}), 500
+        subscription.last_visited = func.now()
+        session.commit()
+        return jsonify(''), 200
 
     if frt_server.config.DEBUG:
         @app.before_request

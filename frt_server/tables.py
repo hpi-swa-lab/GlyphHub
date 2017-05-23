@@ -37,7 +37,7 @@ class ThreadSubscription(CommonColumns):
     thread_id = Column(Integer, ForeignKey('thread._id'))
     user = relationship('User', back_populates='thread_subscriptions')
     thread = relationship('Thread', back_populates='thread_subscriptions')
-    """maybe use this table for 'last seen' or something to find unread updates of a thread?"""
+    last_visited = Column(DateTime, server_default=func.now())
 
 class Glyph(CommonColumns):
     __tablename__ = 'glyph'

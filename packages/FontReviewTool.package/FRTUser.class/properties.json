@@ -14,7 +14,9 @@
 		"sampleTexts",
 		"threadSubscriptions",
 		"feedbackSubmissions",
-		"email" ],
+		"email",
+		"families",
+		"biography" ],
 	"name" : "FRTUser",
 	"pools" : [
 		 ],

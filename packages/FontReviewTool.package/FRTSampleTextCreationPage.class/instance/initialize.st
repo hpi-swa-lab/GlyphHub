@@ -10,6 +10,6 @@ initialize
 		yourself.
 	
 	self
-		add: (BTLabel heading: 'Create a sample text');
+		add: (BTLabel heading: 'Create a Sample Text');
 		add: titleField;
 		add: textEditor

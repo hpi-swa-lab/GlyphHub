@@ -3,16 +3,26 @@ initialize
 
 	super initialize.
 	
-	familyNameBox := BTTextAreaWithLabel text: 'Font Family Name'.
+	saveButton := ((BTButton text: 'Save Settings')
+		colorType: #primary;
+		disabled: true;
+		when: #clicked send: #saveSettings to: self;
+		yourself) align: #(end start).
+	
+	familyName := (BTTextArea text: 'Untitled Family')
+		placeholder: 'Family Name';
+		when: #changed send: #disabled: to: saveButton with: false.
+	
+	loadingIndicator := BTLoader new
+		visible: false.
+	
 	alertArea := BTPage column.
 	
 	self
-		add: (BTLabel heading: 'Upload new Project');
-		add: familyNameBox;
-		add: self uploadArea;
-		add: self scriptTagArea;
-		add: (((BTButton text: 'Create Project')
-			colorType: #primary;
-			when: #clicked send: #tryUpload to: self;
-			yourself) align: #(end start));
-		add: alertArea
+		add: (BTPage row
+			add: (BTLabel heading: 'Upload new Project');
+			add: BTWidget spacer;
+			add: loadingIndicator;
+			add: saveButton);
+		add: alertArea;
+		add: self initializeInputArea

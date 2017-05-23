@@ -16,5 +16,5 @@
 	"name" : "FRTThreadPreviewWidget",
 	"pools" : [
 		 ],
-	"super" : "BTWidget",
+	"super" : "BTClickable",
 	"type" : "normal" }

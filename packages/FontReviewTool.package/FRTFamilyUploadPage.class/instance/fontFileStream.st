@@ -1,4 +1,0 @@
-accessing
-fontFileStream
-	
-	^ fontFileStream

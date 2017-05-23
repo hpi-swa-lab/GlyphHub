@@ -3,4 +3,4 @@ initialize
 
 	super initialize.
 	
-	self apiRootUrl: 'http://localhost:8000/'
+	self apiRootUrl: self  localServerUrl "remoteServerUrl"

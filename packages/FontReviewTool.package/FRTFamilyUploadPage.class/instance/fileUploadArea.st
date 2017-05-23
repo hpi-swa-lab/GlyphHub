@@ -1,22 +1,15 @@
 ui
 fileUploadArea
 
-	| selectedFileArea |
-	uploadedFileLabel := (BTLabel italic: 'none') align: #(center center).
-	selectedFileArea := (BTPage row
-		spacing: BTWidget spacing / 4;
-		add: ((BTLabel text: 'Selected File:') align: #(center center));
-		add: uploadedFileLabel).
-
+	uploadedFileLabel := BTLabel new ellipsize: #start.
+	
+	fileSelectButton := (BTButton label: ' Select your .glyphs or .ufo.zip to upload.' icon: #upload)
+		colorType: #primary;
+		align: #(center center);
+		when: #clicked send: #chooseFile to: self;
+		align: #(center center).
+	
 	^ BTPage column
 		expand: true;
-		add: (BTLabel bold: 'Upload from File');
-		add: (BTLabel text: '.glyphs or .ufo.zip');
-		add: (BTPage row
-			spacing: BTWidget spacing / 2;
-			add: (((BTButton icon: #upload)
-				colorType: #primary;
-				when: #clicked send: #chooseFile to: self;
-				yourself) align: #(left center));
-			add: selectedFileArea);
-		yourself
+		add: fileSelectButton;
+		add: uploadedFileLabel

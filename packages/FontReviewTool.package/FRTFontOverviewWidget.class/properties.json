@@ -7,7 +7,9 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"sampleTextEditor",
-		"font" ],
+		"font",
+		"about",
+		"biography" ],
 	"name" : "FRTFontOverviewWidget",
 	"pools" : [
 		 ],

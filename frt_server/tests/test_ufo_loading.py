@@ -10,7 +10,7 @@ class UfoLoadingTestCase(TestMinimal):
     def setUp(self):
         super().setUp()
 
-        self.login_as('Eva', 'eveisevil')
+        self.login_as('eve@evil.com', 'eveisevil')
 
         family = Family(family_name='Riblon')
 
@@ -21,8 +21,7 @@ class UfoLoadingTestCase(TestMinimal):
 
         self.family_id = family._id
 
-        data, status = self.upload_file('/family/{}/upload'.format(self.family_id), 'file', 'testFiles/RiblonSans/RiblonSans.ufo.zip')
-        self.assertEqual(status, 200)
+        self.upload_font_file(self.family_id, 'testFiles/RiblonSans/RiblonSans.ufo.zip')
 
         family = session.query(Family).get(self.family_id)
         self.font_id = family.fonts[0]._id

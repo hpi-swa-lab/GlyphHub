@@ -1,0 +1,4 @@
+lifecycle
+imageFileStream
+
+	^ imageFileStream
