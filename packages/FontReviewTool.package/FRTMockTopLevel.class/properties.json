@@ -9,7 +9,8 @@
 		"entities",
 		"id",
 		"extraGlifs",
-		"fileUploads" ],
+		"fileUploads",
+		"nextConfirmAnswer" ],
 	"name" : "FRTMockTopLevel",
 	"pools" : [
 		 ],

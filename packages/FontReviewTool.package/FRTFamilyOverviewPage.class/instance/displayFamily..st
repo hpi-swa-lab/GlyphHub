@@ -2,4 +2,4 @@ updating
 displayFamily: aFamily
 	" override this to filter out specific families in your subclass "
 
-	^ true
+	^ aFamily fonts notEmpty

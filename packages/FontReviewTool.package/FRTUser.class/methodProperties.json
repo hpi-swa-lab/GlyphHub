@@ -1,6 +1,6 @@
 {
 	"class" : {
-		"associations" : "lcj 5/12/2017 11:35",
+		"associations" : "TB 5/22/2017 17:23",
 		"avatarCache" : "TB 5/11/2017 18:15",
 		"avatarSize" : "TB 5/12/2017 12:33",
 		"cachedAvatarFor:ifAbsentPut:" : "TB 5/12/2017 12:34",
@@ -12,11 +12,15 @@
 	"instance" : {
 		"attachments" : "lcj 4/7/2017 11:00",
 		"attachments:" : "lcj 4/7/2017 11:00",
+		"biography" : "TB 5/22/2017 17:53",
+		"biography:" : "TB 5/22/2017 17:53",
 		"comments" : "lcj 4/6/2017 10:36",
 		"comments:" : "lcj 4/6/2017 15:15",
 		"downloadAvatarForm" : "al 5/15/2017 14:09",
 		"email" : "lcj 5/17/2017 17:28",
 		"email:" : "lcj 5/17/2017 17:28",
+		"families" : "TB 5/22/2017 17:24",
+		"families:" : "TB 5/22/2017 17:24",
 		"feedbackSubmissions" : "lcj 5/12/2017 11:36",
 		"feedbackSubmissions:" : "lcj 5/12/2017 11:36",
 		"fonts" : "TB 4/6/2017 16:39",

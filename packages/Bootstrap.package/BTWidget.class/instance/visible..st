@@ -2,4 +2,7 @@ hierarchy
 visible: aBoolean
 
 	super visible: aBoolean.
-	self layoutChanged
+	
+	self
+		layoutChanged;
+		fullBounds

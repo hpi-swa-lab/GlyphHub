@@ -21,7 +21,9 @@ class User(CommonColumns):
     password = Column(String(120))
     email = Column(String(120))
     salt = Column(String(120))
+    biography = Column(Text)
     fonts = relationship('Font', back_populates='author')
+    families = relationship('Family', back_populates='author')
     attachments = relationship('Attachment', back_populates='owner')
     thread_subscriptions = relationship('ThreadSubscription', back_populates='user')
 

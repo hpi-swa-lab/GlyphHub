@@ -19,11 +19,14 @@ class Family(CommonColumns):
     family_name = Column(String(300))
     preview_glyphs = Column(String(500), default='')
     upload_status = Column(Enum(FamilyUploadStatus))
+    about = Column(Text)
     last_upload_error = Column(Text)
+    author_id = Column(Integer, ForeignKey('user._id'))
     fonts = relationship('Font', back_populates='family')
     tags = relationship('Tag', secondary=tag_family_association_table)
     standard_sample_text = relationship('SampleText', back_populates='families')
     standard_sample_text_id = Column(Integer, ForeignKey('sample_text._id'))
+    author = relationship('User', back_populates='families')
 
     def delete_family_if_empty(family):
         if not family.fonts:
