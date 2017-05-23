@@ -27,15 +27,15 @@ class UploadTestCase(TestMinimal):
         self.assertEqual(status, 200)
 
         data, _ = self.get('/family/{}/status'.format(family_id))
-        self.assertEqual(data['status'], 'FamilyUploadStatus.processing')
+        self.assertEqual(data['status'], 'processing')
         self.assertIsNone(data['error'])
 
         # continously poll our upload service until processing finished
-        while data['status'] == 'FamilyUploadStatus.processing':
+        while data['status'] == 'processing':
             time.sleep(0.1)
             data, _ = self.get('/family/{}/status'.format(family_id))
 
-        self.assertEqual(data['status'], 'FamilyUploadStatus.ready_for_upload')
+        self.assertEqual(data['status'], 'ready_for_upload')
 
         if expecting_error:
             self.assertIsNotNone(data['error'])
