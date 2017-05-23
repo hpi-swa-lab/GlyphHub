@@ -1,4 +1,4 @@
-initialize-release
+lifecycle
 initializeChangePasswordArea
 
 	newPasswordField1 := BTPasswordArea placeholder: 'New Password'.

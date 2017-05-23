@@ -6,7 +6,11 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
+		"newUsernameField",
+		"newPasswordField1",
+		"newPasswordField2",
+		"uploadedFileLabel",
+		"imageFileStream" ],
 	"name" : "FRTMyProfilePage",
 	"pools" : [
 		 ],

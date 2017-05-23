@@ -1,4 +1,4 @@
-callback
+lifecycle
 trySavingPassword
 
 	newPasswordField1 text

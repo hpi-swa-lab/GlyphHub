@@ -1,7 +1,7 @@
-initialize-release
+lifecycle
 initializeChangeAvatarArea
 
-	uploadedFileLabel := (BTLabel italic: 'none') align: #(center center).	
+	uploadedFileLabel := (BTLabel italic: 'none') align: #(center center).
 	^ BTPage column
 		withPadding;
 		add: (BTPage row

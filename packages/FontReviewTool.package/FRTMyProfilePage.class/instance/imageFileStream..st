@@ -1,4 +1,4 @@
-accessing
+lifecycle
 imageFileStream: aFileStream
 	
 	| filename |

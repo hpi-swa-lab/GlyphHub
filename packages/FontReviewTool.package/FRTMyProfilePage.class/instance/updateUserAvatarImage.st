@@ -1,4 +1,4 @@
-updating
+lifecycle
 updateUserAvatarImage
 
 	self user removeCachedAvatar.

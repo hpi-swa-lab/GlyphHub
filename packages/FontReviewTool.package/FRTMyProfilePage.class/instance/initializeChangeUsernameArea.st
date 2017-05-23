@@ -1,4 +1,4 @@
-initialize-release
+lifecycle
 initializeChangeUsernameArea
 
 	newUsernameField := BTTextArea placeholder: 'New Username'.
