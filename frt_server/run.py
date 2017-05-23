@@ -41,7 +41,7 @@ def setup_database(app, populate_sample_data=True, create_admin_user_password=No
 
     if db.session.query(frt_server.tables.User).count() < 1:
         if create_admin_user_password:
-            entity = User(username='admin', password=create_admin_user_password)
+            entity = frt_server.tables.User(username='admin', password=create_admin_user_password, email='admin@example.com')
             db.session.add(entity)
             db.session.commit()
 
