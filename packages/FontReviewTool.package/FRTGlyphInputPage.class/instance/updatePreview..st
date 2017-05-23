@@ -1,7 +1,7 @@
 callbacks
 updatePreview: aString
 
-	(self backend convertUnicodeToGlyphNames: aString of: self font)
+	(self backend convertUnicodeToGlyphNames: aString features: #() of: self font)
 		then: [:glyphNames |
 			preview
 				pointSize: self previewPointSize;
