@@ -20,4 +20,5 @@ enteringWith: unused
 						saveTo: self backend]])
 		then: [:family |
 			familyName text: family familyName.
+			aboutFamilyText text: family about.
 			self family: family]
