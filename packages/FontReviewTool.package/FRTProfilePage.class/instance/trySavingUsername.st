@@ -10,5 +10,6 @@ trySavingUsername
 		ifEmpty: [self topLevel displayNotification: 'Username can''t be empty' type: #warning].
 	
 	self user: self user.
+	self updateUserLabel.
 	self topLevel user: self topLevel user.
 	self flag: #TODO "update this when model consistency is updated"

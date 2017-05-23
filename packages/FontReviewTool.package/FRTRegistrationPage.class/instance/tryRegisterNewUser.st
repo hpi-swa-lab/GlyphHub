@@ -10,5 +10,5 @@ tryRegisterNewUser
 	
 	^ ((self topLevel registerUserWithName: usernameField text email: emailField text password: passwordField1 text)
 		then: [:user | self topLevel openBookmark: self bookmark])
-		catch: [self registrationBox add: (BTAlert text: 'Registration failed' type: #danger) at: 2]
+		catch: [self topLevel displayNotification: 'Registration failed' type: #danger]
 		
