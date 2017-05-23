@@ -2,6 +2,9 @@ navigation
 openPage: aPage with: anObject
 	
 	self startLoadingOperation.
-	^ (self navigationStack open: aPage with: anObject)
-		then: [self stopLoadingOperation]
-		ifRejected: [self stopLoadingOperation]
+	^ ((self navigationStack open: aPage with: anObject)
+		then: [self stopLoadingOperation])
+		catch: [:err |
+			self stopLoadingOperation.
+			" pass the error on for any consumers "
+			BTPromise new rejectWith: err]

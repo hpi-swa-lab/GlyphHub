@@ -8,4 +8,5 @@ releaseAssociationsIfUncreatedEntityDo: aBlock
 		value isBTModel ifTrue: [
 			value isCreated ifFalse: [aBlock value: value].
 			self instVarNamed: associationName put: value id].
-		value isBTModelList ifTrue: [self set: associationName to: BTModelList new]]
+		value isBTModelList ifTrue: [
+			self set: associationName to: (BTModelList forField: associationName owner: self)]]

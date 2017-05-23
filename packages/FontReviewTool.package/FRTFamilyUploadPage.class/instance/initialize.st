@@ -10,6 +10,7 @@ initialize
 		yourself) align: #(end start).
 	
 	familyName := (BTTextArea text: 'Untitled Family')
+		placeholder: 'Family Name';
 		when: #changed send: #disabled: to: saveButton with: false.
 	
 	loadingIndicator := BTLoader new
@@ -24,5 +25,4 @@ initialize
 			add: loadingIndicator;
 			add: saveButton);
 		add: alertArea;
-		add: familyName;
-		add: self fileUploadArea
+		add: self initializeInputArea

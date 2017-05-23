@@ -2,7 +2,10 @@ as yet unclassified
 initialize
 
 	super initialize.
+	
 	self
-		vertical: true;
+		vertical: false;
 		expand: true;
-		add: self initializeSampleTextArea
+		spacing: BTWidget spacing * 2;
+		add: self initializeSampleTextArea;
+		add: self initializeAboutArea
