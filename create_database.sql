@@ -1,0 +1,3 @@
+CREATE DATABASE IF NOT EXISTS frt_data;
+GRANT ALL PRIVILEGES ON frt_data.* TO 'frt'@'localhost';
+FLUSH PRIVILEGES;
