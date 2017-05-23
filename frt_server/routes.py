@@ -105,7 +105,7 @@ def register_routes(app):
         if not family:
             return jsonify({'error': 'no such family'}), 404
 
-        return jsonify({'status': str(family.upload_status), 'error': family.last_upload_error})
+        return jsonify({'status': str(family.upload_status).split('.')[-1], 'error': family.last_upload_error})
 
     @app.route('/font/<font_id>/convert', methods=['POST'])
     @requires_auth('')

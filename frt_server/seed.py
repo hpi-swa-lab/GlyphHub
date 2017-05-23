@@ -5,8 +5,8 @@ from werkzeug.datastructures import FileStorage
 from frt_server.tables import *
 import frt_server.config
 
-user1 = User(username='Eva', password='eveisevil', email='eve@evil.com')
-family1 = Family(family_name='Riblon Sans', preview_glyphs='')
+user1 = User(username='Eva', password='eveisevil', email='eve@evil.com', biography='Eva has been designing fonts for a long time. Ever since she joined the HPI art club and later became its boss, she pushed for having more font design workshops and generally speaking sort of occasionally succeeded in doing so.')
+family1 = Family(family_name='Riblon Sans', preview_glyphs='', author=user1, about='Riblon Sans is the perfect balance between lightweight strokes and clear readability. Due to its refreshingly unconventional style it is a perfect fit for any place where you may need a clever and beautiful typeface.')
 
 glyph1 = Glyph(glyph_name='A', version_hash='9c7075ca420f30aedb27c48102466313fa4d12c8', font_id=1)
 glyph2 = Glyph(glyph_name='a', version_hash='9c7075ca420f30aedb27c48102466313fa4d12c8', font_id=1)
