@@ -1,4 +1,4 @@
-initialize-release
+callbacks
 toggleClosed
 
 	^ ((self thread

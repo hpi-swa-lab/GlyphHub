@@ -11,6 +11,7 @@ initialize
 	openClosedBadge := BTBadge new.
 	
 	self
+		when: #clicked send: #openThread to: self;
 		withLayout;
 		vertical: true;
 		padding: BTWidget spacing;

@@ -7,9 +7,9 @@ updateFamilyArea
 	
 	familyArea
 		removeAllMorphs;
-		add: self createSelectionButton;
+		add: self createSelectionButton";
 		add: (BTPage row
 			padding: BTWidget spacing @ 0;
 			add: ((BTLabel bold: 'Size:') align: #(center center));
 			add: ((BTTextArea placeholder: self standardPointSize asString)
-				when: #confirmed send: #pointSizeChanged: to: self))
+				when: #confirmed send: #pointSizeChanged: to: self))"

@@ -1,4 +1,4 @@
-as yet unclassified
+lifecycle
 enteringWith: anObject
 
 	self user: self topLevel user.

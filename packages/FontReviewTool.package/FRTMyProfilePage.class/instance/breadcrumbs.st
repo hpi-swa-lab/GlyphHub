@@ -1,4 +1,4 @@
-as yet unclassified
+navigation
 breadcrumbs
 
 	^ FRTDashboard new breadcrumbs
