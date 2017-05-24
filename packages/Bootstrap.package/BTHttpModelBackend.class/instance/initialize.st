@@ -3,4 +3,5 @@ initialize
 
 	super initialize.
 	
-	self apiRootUrl: self  localServerUrl "remoteServerUrl"
+	""self apiRootUrl: self  localServerUrl""
+	"self apiRootUrl: self remoteServerUrl"
