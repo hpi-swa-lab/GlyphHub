@@ -5,7 +5,7 @@ toggleSubscription
 	
 	^ ((self subscription isCreated
 		ifFalse: [subscription saveTo: self backend]
-		ifTrue: [subscription delete])
+		ifTrue: [subscription lastVisited: nil; delete])
 		then: [
 			self subscriptionButton disabled: false.
 			self updateSubscriptionButtonState])

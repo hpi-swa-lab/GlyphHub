@@ -9,5 +9,5 @@ openGlyph: aGlyphName
 						glyphName: aGlyphName;
 						font: self font;
 						saveTo: self topLevel backend]
-				ifNotEmpty: [glyphs first]])
+				ifNotEmpty: [glyphs onlyElement]])
 		then: [:glyph | self topLevel openPage: FRTGlyphPage new with: glyph])

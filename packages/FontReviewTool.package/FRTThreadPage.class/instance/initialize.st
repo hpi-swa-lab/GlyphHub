@@ -21,7 +21,9 @@ initialize
 	tagArea := (BTPage row)
 		spacing: BTWidget spacing / 3;
 		yourself.
-	commentArea := BTPage column.
+		
+	commentArea := BTPage column
+		spacing: 0.
 	
 	self
 		withLayout;
