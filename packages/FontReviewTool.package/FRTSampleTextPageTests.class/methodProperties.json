@@ -2,5 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
+		"enterPage" : "al 5/24/2017 14:00",
 		"setUp" : "lcj 5/23/2017 21:15",
+		"testOnlyAuthorCanSave" : "al 5/24/2017 13:58",
 		"testPageShowsSampleText" : "lcj 5/23/2017 21:35" } }
