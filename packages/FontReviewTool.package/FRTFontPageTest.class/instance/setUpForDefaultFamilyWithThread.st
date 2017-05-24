@@ -3,5 +3,6 @@ setUpForDefaultFamilyWithThread
 
 	| thread |
 	thread := self mockThread.
-	self setUpForPage: FRTFontPage new with: thread font prepare: [:topLevel | topLevel addEntity: thread].
+	font := thread font.
+	self setUpForPage: FRTFontPage new with: font prepare: [:topLevel | topLevel addEntity: thread].
 	^ thread

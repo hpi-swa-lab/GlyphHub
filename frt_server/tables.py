@@ -21,6 +21,7 @@ class SampleText(CommonColumns):
     author = relationship(User)
     tags = relationship('Tag', secondary=tag_sample_text_association_table)
     families = relationship('Family', back_populates='standard_sample_text')
+    should_be_in_overview = Column(Boolean)
 
 class ThreadGlyphAssociation(CommonColumns):
     __tablename__ = 'thread_glyph_association'

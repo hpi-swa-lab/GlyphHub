@@ -4,9 +4,9 @@ initialize
 	super initialize.
 	
 	canChangeFont := true.
-	commentButtonVisible := false.
 	richText := FRTRichText new
 		when: #selectedParagraph send: #updateControlsFor: to: self.
+	saveButton := (BTButton icon: #floppy_o) colorType: #primary.
 	toolbar := self createToolbar.
 
 	self

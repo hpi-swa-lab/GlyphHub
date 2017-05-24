@@ -3,11 +3,12 @@ thread: aThread
 
 	thread := aThread.
 	threadTitle text: aThread title.
-	commentCount text:  (BTIcon icon: #comments_o), ' ', aThread comments size asString, ' comments'.
 	self updateOpenClosedBadge.
-	
 	(thread comments sortedBy: #id) ifNotEmptyDo: [:list | | firstComment |
 		firstComment := list first.
+		latestComment := list last.
 	
 		commentPreview text: firstComment text.
-		author text: 'by ', firstComment author username]
+		author text: 'by ', firstComment author username].
+	
+	^ self updateCommentCount

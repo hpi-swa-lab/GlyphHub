@@ -25,7 +25,8 @@ frt_hb_convert_to_glyphnames(PyObject *self, PyObject *args)
 {
 	const char *fontfile;
 	const char *text;
-	if (!PyArg_ParseTuple(args, "ss", &fontfile, &text))
+	PyObject *feature_strings;
+	if (!PyArg_ParseTuple(args, "ssO", &fontfile, &text, &feature_strings))
 		return NULL;
 
 	/* Initialize FreeType and create FreeType font face. */
@@ -56,8 +57,23 @@ frt_hb_convert_to_glyphnames(PyObject *self, PyObject *args)
 	hb_buffer_add_utf8 (hb_buffer, text, -1, 0, -1);
 	hb_buffer_guess_segment_properties (hb_buffer);
 
+	PyObject *iter = PyObject_GetIter(feature_strings);
+	int num_features = PyList_Size(feature_strings);
+	hb_feature_t *features = calloc(num_features, sizeof(hb_feature_t));
+	int feature_index = 0;
+	if (iter) {
+	    while (1) {
+		PyObject *next = PyIter_Next(iter);
+		if (!next)
+		    break;
+		const char *feature_string = PyUnicode_AsUTF8(next);
+		if (hb_feature_from_string(feature_string, -1, features + feature_index))
+		    feature_index++;
+	    }
+	}
+
 	/* Shape it! */
-	hb_shape (hb_font, hb_buffer, NULL, 0);
+	hb_shape (hb_font, hb_buffer, features, feature_index);
 
 	/* Get glyph information and positions out of the buffer. */
 	unsigned int len = hb_buffer_get_length (hb_buffer);

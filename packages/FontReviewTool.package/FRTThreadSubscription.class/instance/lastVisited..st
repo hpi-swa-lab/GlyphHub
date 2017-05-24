@@ -1,4 +1,4 @@
 accessing
-lastVisited: aDateAndTime
+lastVisited: aDateTimeOrString
 
-	self update: #lastVisited with: aDateAndTime
+	lastVisited := aDateTimeOrString ifNotNilDo: #asDateAndTime

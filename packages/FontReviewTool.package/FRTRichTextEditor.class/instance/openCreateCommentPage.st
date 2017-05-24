@@ -5,7 +5,6 @@ openCreateCommentPage
 		self selectedText ifNotEmptyDo: [:text |
 			FRTThreadCommentCreationPage
 				openNewThreadOn: text
-				features: self
-				selectedOpenTypeFeatures
+				features: self selectedOpenTypeFeatures
 				font: font
 				in: self topLevel]]

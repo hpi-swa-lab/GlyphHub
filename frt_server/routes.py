@@ -125,7 +125,9 @@ def register_routes(app):
         if len(unicode_text) < 1:
             return jsonify([])
 
-        return Response(json.dumps(font.convert(unicode_text)),
+        feature_string = data.get('features') or ''
+
+        return Response(json.dumps(font.convert(unicode_text, feature_string)),
                 mimetype='application/json')
 
     @app.route('/font/<font_id>/otf', methods=['GET'])

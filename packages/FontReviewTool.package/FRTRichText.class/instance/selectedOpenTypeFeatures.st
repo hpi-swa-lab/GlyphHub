@@ -1,4 +1,4 @@
 paragraphs
 selectedOpenTypeFeatures
 
-	self selectedParagraph ifNotNilDo: #openTypeFeatures ifNil: [#()]
+	^ self selectedParagraph ifNotNilDo: #openTypeFeatures ifNil: [#()]

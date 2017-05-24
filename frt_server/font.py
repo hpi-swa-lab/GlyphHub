@@ -93,12 +93,12 @@ class Font(CommonColumns):
         except FileNotFoundError:
             return None
 
-    def convert(self, unicode_points):
+    def convert(self, unicode_points, feature_string):
         otf_path = self.otf_folder_path()
         otf_files = glob.glob(otf_path + '/*.otf')
         if len(otf_files) < 1:
             raise FileNotFoundError('Font does not contain a .otf')
-        return frt_hb_convert.to_glyphnames(otf_files[0], unicode_points)
+        return frt_hb_convert.to_glyphnames(otf_files[0], unicode_points, feature_string.split(','))
 
     def get_glif_data(self, requested_glifs, version_hash=None):
         """return the .glif file contents for a set of glifs. specify version_hash to

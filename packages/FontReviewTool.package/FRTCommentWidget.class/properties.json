@@ -10,7 +10,8 @@
 		"image",
 		"commentText",
 		"metaInfo",
-		"userAvatar" ],
+		"userAvatar",
+		"lastVisited" ],
 	"name" : "FRTCommentWidget",
 	"pools" : [
 		 ],

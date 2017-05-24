@@ -5,7 +5,9 @@ enteringWith: aFont
 		then: [:newFont |
 			self setFont: newFont.
 			
-			self font author id = self topLevel user id ifTrue: [updateButton visible: true].
+			self font author id = self topLevel user id
+				ifTrue: [
+					updateButton visible: true.
+					self family previewGlyphs ifEmpty: [self displayPreviewGlyphsNotice]].
 			
-			self family previewGlyphs ifEmpty: [self displayPreviewGlyphsNotice].
 			BTPromise all: self tabsContent]

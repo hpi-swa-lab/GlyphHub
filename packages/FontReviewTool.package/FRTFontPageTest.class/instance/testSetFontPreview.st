@@ -3,6 +3,8 @@ testSetFontPreview
 
 	| alert dialog |
 	self setUpForDefaultFamily.
+	self topLevel user: font author.
+	self enterPage.
 	
 	alert := (self expect: page) to haveA: BTAlert labelled: 'You haven''t selected preview glyphs for this font yet.'.
 	self click: (alert findWidgetOfKind: BTButton).
