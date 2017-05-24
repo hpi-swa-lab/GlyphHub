@@ -10,7 +10,8 @@
 		"id",
 		"extraGlifs",
 		"fileUploads",
-		"nextConfirmAnswer" ],
+		"nextConfirmAnswer",
+		"glyphLoader" ],
 	"name" : "FRTMockTopLevel",
 	"pools" : [
 		 ],

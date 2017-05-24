@@ -8,6 +8,6 @@ loadUfoDetails: aQueryDictionary font: aFont
 	requestedGlifs := requestedGlifs isDictionary ifTrue: [requestedGlifs keys] ifFalse: [requestedGlifs].
 	
 	^ BTPromise unit: (Dictionary newFrom: {
-		'fontinfo' -> (Dictionary newFrom: {'ascender' -> 100. 'descender' -> 50. 'unitsPerEm' -> 1000}).
+		'fontinfo' -> (Dictionary newFrom: {'ascender' -> 100. 'descender' -> -30. 'unitsPerEm' -> 1000}).
 		'glifs' -> (requestedGlifs ifNil: [self availableGlifs] ifNotNil: [self availableGlifs associationsSelect: [:association | requestedGlifs includes: association key]]).
 		'glyphs' -> ((self availableGlifs keys collect: [:name | name -> (name, '.glif')]) as: Dictionary)})

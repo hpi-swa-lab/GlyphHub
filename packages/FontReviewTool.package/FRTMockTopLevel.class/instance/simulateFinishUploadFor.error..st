@@ -12,4 +12,5 @@ simulateFinishUploadFor: aFamilyOrId error: aString
 			family
 				uploadStatus: 'ready_for_upload';
 				lastUploadError: aString;
+				versionMessages: (family versionMessages copyWith: (self mockVersionEntryFor: family));
 				save]

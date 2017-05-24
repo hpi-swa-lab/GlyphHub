@@ -1,9 +1,7 @@
 drawing
 canDrawImmediately: aGlyphNameStringOrCollection
-	" return whether we still can immediately draw the given string with our currently cached data "
+	" return whether we can immediately draw the given string with our currently cached data "
 
-	| list |
-	list := aGlyphNameStringOrCollection isCollection
-		ifTrue: [aGlyphNameStringOrCollection]
-		ifFalse: [{aGlyphNameStringOrCollection}].
-	^ self fontinfo notNil and: [list allSatisfy: [:glyphName | self canDrawGlyphImmediately: glyphName]]
+	self font ifNil: [^ false].
+
+	^ self glyphLoader canDrawImmediately: aGlyphNameStringOrCollection font: self font atVersion: self font latestVersionHash

@@ -2,6 +2,7 @@ as yet unclassified
 canDrawImmediately: aGlyphNameStringCollection
 
 	fontinfo ifNil: [^ false].
+	aGlyphNameStringCollection ifEmpty: [^ true].
 
 	^ (aGlyphNameStringCollection
 		gather: [:glyphName | self allKnownRequiredGlyphNamesFor: glyphName])

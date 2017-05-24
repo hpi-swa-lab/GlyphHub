@@ -1,16 +1,16 @@
 as yet unclassified
 loadGlifsNamed: aGlyphNameStringCollection
 
-	| awaiting state |
+	| awaiting state missingGlyphNames |
 	state := (aGlyphNameStringCollection
 		gather: [:glyphName | self allKnownRequiredGlyphNamesFor: glyphName])
 		asSet
 		groupBy: [:glyphName | glifs at: glyphName ifPresent: [:x | #loading] ifAbsent: [#missing]].
 	
 	awaiting := (state at: #loading ifAbsent: [#()]) collect: [:glyphName | glifs at: glyphName].
+	missingGlyphNames := state at: #missing ifAbsent: [#()].
 	
-	(state at: #missing ifAbsent: [#()])
-		ifNotEmptyDo: [:missingGlyphNames |
+	(missingGlyphNames notEmpty or: [fontinfo isNil]) ifTrue: [
 			awaiting := awaiting copyWith: (self loadQueryFor: missingGlyphNames)].
 	
 	^ (BTPromise all: awaiting) then: [

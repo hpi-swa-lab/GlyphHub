@@ -6,6 +6,9 @@ populate: aModel with: aCollection
 	  glyphs
 	
 	  fill the requested fields in the model and all nested requested fields "
+	
+	" simulate our server code which adds versions to a loaded family "
+	(aModel isKindOf: FRTFamily) ifTrue: [aModel versionMessages: {(self mockVersionEntryFor: aModel)}].
 
 	aCollection do: [:populate | | field childPopulateChain populateChain childModel |
 		populateChain := populate splitBy: '.'.
