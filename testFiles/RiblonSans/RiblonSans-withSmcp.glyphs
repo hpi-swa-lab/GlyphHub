@@ -5,6 +5,25 @@ DisplayStrings = (
 );
 date = "2017-04-03 13:12:53 +0000";
 familyName = "Riblon Sans";
+featurePrefixes = (
+{
+automatic = 1;
+code = "languagesystem DFLT dflt;\012";
+name = Languagesystems;
+}
+);
+features = (
+{
+automatic = 1;
+code = "feature c2sc;\012";
+name = aalt;
+},
+{
+automatic = 1;
+code = "sub A by A.sc;\012";
+name = c2sc;
+}
+);
 fontMaster = (
 {
 ascender = 800;
