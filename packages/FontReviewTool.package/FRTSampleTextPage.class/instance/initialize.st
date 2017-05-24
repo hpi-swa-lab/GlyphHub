@@ -11,7 +11,7 @@ initialize
 		secondary.
 	
 	sampleTextWidget := FRTRichTextEditor new
-		saveButtonVisible: false;
+		when: #saved send: #saveSampleText: to: self;
 		yourself.
 	
 	fontSelectCompletion :=  FRTFontPicker new
