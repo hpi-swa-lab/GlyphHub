@@ -14,9 +14,9 @@ glyph2 = Glyph(glyph_name='a', version_hash='9c7075ca420f30aedb27c48102466313fa4
 glyph3 = Glyph(glyph_name='s', version_hash='9c7075ca420f30aedb27c48102466313fa4d12c8', font_id=1)
 thread1 = Thread(title='I don\'t like this word', closed=False)
 
-thread1.thread_glyph_associations.append(ThreadGlyphAssociation(glyph=glyph1))
-thread1.thread_glyph_associations.append(ThreadGlyphAssociation(glyph=glyph2))
-thread1.thread_glyph_associations.append(ThreadGlyphAssociation(glyph=glyph3))
+thread1.thread_glyph_associations.append(ThreadGlyphAssociation(glyph=glyph1, string_index=0))
+thread1.thread_glyph_associations.append(ThreadGlyphAssociation(glyph=glyph2, string_index=1))
+thread1.thread_glyph_associations.append(ThreadGlyphAssociation(glyph=glyph3, string_index=2))
 
 entities = [
     user1,

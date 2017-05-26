@@ -30,6 +30,7 @@ class ThreadGlyphAssociation(CommonColumns):
     glyph_id = Column(Integer, ForeignKey('glyph._id'))
     thread = relationship('Thread', back_populates='thread_glyph_associations')
     glyph = relationship('Glyph', back_populates='thread_glyph_associations')
+    string_index = Column(Integer)
 
 class ThreadSubscription(CommonColumns):
     __tablename__ = 'thread_subscription'
