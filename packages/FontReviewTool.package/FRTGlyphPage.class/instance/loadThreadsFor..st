@@ -1,7 +1,9 @@
 loading
 loadThreadsFor: aGlyph
 
-	(aGlyph threads sortedBy: #id) do: [:each |
-		commentThreadArea add: (FRTThreadPreviewWidget new
+	(aGlyph threads sortedBy: #id) do: [:each | | newThreadWidget |
+		newThreadWidget := FRTThreadPreviewWidget new.
+		commentThreadArea add: newThreadWidget.
+		newThreadWidget
 			thread: each;
-			enteredFromGlyph: self glyph)]
+			enteredFromGlyph: self glyph]

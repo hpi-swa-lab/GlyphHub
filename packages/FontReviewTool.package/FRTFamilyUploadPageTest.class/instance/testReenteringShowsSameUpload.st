@@ -1,4 +1,4 @@
-as yet unclassified
+testing
 testReenteringShowsSameUpload
 	
 	(self expect: page) to not haveText: 'Uploading '.

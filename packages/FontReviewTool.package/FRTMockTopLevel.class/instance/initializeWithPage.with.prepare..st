@@ -6,6 +6,7 @@ initializeWithPage: aPage with: anObject prepare: aBlock
 	extraGlifs := #().
 	fileUploads := Dictionary new.
 	nextConfirmAnswer := true.
+	glyphLoader := FRTGlyphLoader new.
 	
 	user := FRTUser new
 		username: 'Eva';

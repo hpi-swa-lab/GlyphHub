@@ -4,11 +4,12 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "TB 5/21/2017 09:00",
 	"instvars" : [
 		"backend",
 		"glyphCache",
-		"fontinfoCache" ],
+		"fontinfoCache",
+		"loaders" ],
 	"name" : "FRTGlyphLoader",
 	"pools" : [
 		 ],

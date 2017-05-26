@@ -1,4 +1,4 @@
-as yet unclassified
+testing
 testLoadingIndicator
 	
 	(self expect: (page loadingIndicator)) to not beVisible.

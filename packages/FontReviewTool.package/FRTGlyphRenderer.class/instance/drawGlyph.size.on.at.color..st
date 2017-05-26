@@ -16,7 +16,7 @@ drawGlyph: aGlyphNameString size: aPointSizeNumber on: aCanvas at: aPoint color:
 			at: aPoint
 			color: aColor.
 
-		(glifs at: aGlyphNameString) tagsNamed: #component do: [:component | | offset |
+		(self glifNamed: aGlyphNameString) tagsNamed: #component do: [:component | | offset |
 			offset := (component attributeAt: #xOffset ifAbsent: [0]) asNumber @ (component attributeAt: #yOffset ifAbsent: [0]) asNumber negated * scaleFactor.
 
 			self

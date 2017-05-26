@@ -6,10 +6,7 @@
 		 ],
 	"commentStamp" : "al 5/5/2017 12:26",
 	"instvars" : [
-		"font",
-		"backend",
-		"fontinfo",
-		"glifs" ],
+		"font" ],
 	"name" : "FRTGlyphRenderer",
 	"pools" : [
 		 ],

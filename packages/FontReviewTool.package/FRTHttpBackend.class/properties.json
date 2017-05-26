@@ -6,7 +6,7 @@
 		 ],
 	"commentStamp" : "TB 3/29/2017 18:04",
 	"instvars" : [
-		 ],
+		"glyphLoader" ],
 	"name" : "FRTHttpBackend",
 	"pools" : [
 		 ],

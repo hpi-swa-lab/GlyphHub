@@ -1,4 +1,4 @@
-as yet unclassified
+running
 simulateFinishUploadWithError: anErrorString
 	
 	self topLevel simulateFinishUploadFor: page family error: anErrorString.

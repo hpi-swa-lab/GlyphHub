@@ -1,4 +1,4 @@
-as yet unclassified
+testing
 testCanGoToFontPage
 
 	page chooseFile.

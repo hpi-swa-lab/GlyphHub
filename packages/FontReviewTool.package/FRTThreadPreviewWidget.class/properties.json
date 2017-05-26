@@ -12,7 +12,8 @@
 		"commentCount",
 		"author",
 		"enteredFromGlyph",
-		"openClosedBadge" ],
+		"openClosedBadge",
+		"latestComment" ],
 	"name" : "FRTThreadPreviewWidget",
 	"pools" : [
 		 ],

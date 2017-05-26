@@ -13,6 +13,7 @@ saveSampleText: aRichText
 		title: title;
 		text: aRichText jsonString;
 		author: self topLevel user;
+		shouldBeInOverview: false;
 		saveTo: self topLevel backend)
 		then: [:sampleText | family
 			standardSampleText: sampleText;

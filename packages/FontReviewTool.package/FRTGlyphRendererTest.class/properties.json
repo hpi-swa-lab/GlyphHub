@@ -6,10 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"renderer",
-		"rectangle" ],
+		"renderer" ],
 	"name" : "FRTGlyphRendererTest",
 	"pools" : [
 		 ],
-	"super" : "BTTestCase",
+	"super" : "FRTApplicationPageTest",
 	"type" : "normal" }

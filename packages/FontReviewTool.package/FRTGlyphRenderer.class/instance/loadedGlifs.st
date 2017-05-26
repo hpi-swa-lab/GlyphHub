@@ -1,4 +1,4 @@
 drawing
 loadedGlifs
 
-	^ glifs
+	^ self glyphLoader loadedGlifsOf: self font atVersion: self font latestVersionHash

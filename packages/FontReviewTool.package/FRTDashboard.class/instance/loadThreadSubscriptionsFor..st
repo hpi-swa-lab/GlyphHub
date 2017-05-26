@@ -7,5 +7,7 @@ loadThreadSubscriptionsFor: aUser
 		from: self backend)
 		then: [:subscriptions | 
 			subscriptionArea removeAllMorphs.
-			subscriptions do: [:subscription |
-					subscriptionArea add: (FRTThreadPreviewWidget new thread: subscription thread)]]
+			subscriptions do: [:subscription | | newThreadWidget |
+					newThreadWidget := FRTThreadPreviewWidget new.
+					subscriptionArea add: newThreadWidget.
+					newThreadWidget thread: subscription thread]]
