@@ -17,4 +17,6 @@ updateGlyphLinks: aThread
 					
 			glyphLinkContainer
 				add: button;
-				addAll: checkboxes]
+				add: (BTScrollArea new
+					add: (BTPage column
+						addAll: checkboxes))]

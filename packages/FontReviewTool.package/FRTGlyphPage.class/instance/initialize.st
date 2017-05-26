@@ -35,4 +35,5 @@ initialize
 		spacing: BTWidget spacing;
 		add: glyphName;
 		add: glyphArea;
-		add: commentThreadArea
+		add: (BTScrollArea new
+			add: commentThreadArea)
