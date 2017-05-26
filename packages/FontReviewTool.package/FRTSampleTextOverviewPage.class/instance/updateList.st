@@ -8,7 +8,7 @@ updateList
 	
 	^ ((FRTSampleText loadAllFrom: self backend populate: #('author'))
 		then: [:texts |
-			orderedTexts := texts sortedBy: #title.
+			orderedTexts := (texts select: [:text | text shouldBeInOverview ]) sortedBy: #title.
 			orderedTexts do: [:text |
 				sampleTextList
 					add: (BTPage row

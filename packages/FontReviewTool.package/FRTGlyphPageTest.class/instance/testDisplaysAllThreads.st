@@ -1,4 +1,4 @@
-as yet unclassified
+testing
 testDisplaysAllThreads
 
 	(self expect: page) to haveText: thread title.
