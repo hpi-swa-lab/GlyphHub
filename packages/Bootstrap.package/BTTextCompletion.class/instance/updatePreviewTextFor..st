@@ -2,7 +2,7 @@ text
 updatePreviewTextFor: aString
 	" if we selected a suggestion, display that one. otherwise try completing one "
 
-	super updateText: 
+	self internalText:
 		(self activeSuggestionDo: #plainText ifNone: [
 			self
 				completableSuggestionFor: aString
