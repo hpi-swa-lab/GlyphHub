@@ -53,7 +53,7 @@ class UploadTestCase(TestMinimal):
             self.assertTrue(os.path.exists(font.ufo_folder_path()))
             self.assertTrue(os.path.exists(font.otf_folder_path()))
             self.assertTrue(os.path.exists(os.path.join(font.ufo_folder_path(), 'RiblonSans-Regular.ufo')))
-            self.assertTrue(os.path.exists(os.path.join(font.otf_folder_path(), 'RiblonSans-Regular.otf')))
+            font.otf_file_path()
 
     def test_upload_ufo(self):
         self.asynchronous_upload(self.family_id, 'testFiles/RiblonSans/RiblonSans.ufo.zip')
@@ -64,7 +64,7 @@ class UploadTestCase(TestMinimal):
             self.assertTrue(os.path.exists(font.ufo_folder_path()))
             self.assertTrue(os.path.exists(font.otf_folder_path()))
             self.assertTrue(os.path.exists(os.path.join(font.ufo_folder_path(), 'RiblonSans.ufo')))
-            self.assertTrue(os.path.exists(os.path.join(font.otf_folder_path(), 'RiblonSans-Regular.otf')))
+            font.otf_file_path()
 
     def test_upload_invalid_file(self):
         self.asynchronous_upload(self.family_id, 'testFiles/RiblonSans/RiblonSans-broken.glyphs', True)
@@ -88,5 +88,5 @@ class UploadTestCase(TestMinimal):
             self.assertTrue(os.path.exists(font.folder_path()))
             self.assertTrue(os.path.exists(font.ufo_folder_path()))
             self.assertTrue(os.path.exists(font.otf_folder_path()))
-            self.assertTrue(os.path.exists(os.path.join(font.ufo_folder_path(), 'Riblon_Sans_42.ufo')))
-            self.assertTrue(os.path.exists(os.path.join(font.otf_folder_path(), 'RiblonSans-Regular.otf')))
+            self.assertTrue(os.path.exists(os.path.join(font.ufo_folder_path(), 'Riblon Sans 42.ufo')))
+            font.otf_file_path()

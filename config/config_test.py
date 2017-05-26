@@ -21,6 +21,7 @@ DATABASE_PATH = 'sqlite://'
 
 UPLOAD_FOLDER = os.path.join(BASE, 'test_uploads')
 ATTACHMENT_UPLOAD_FOLDER = os.path.join(UPLOAD_FOLDER, 'attachment')
+OTF_UPLOAD_FOLDER = os.path.join(UPLOAD_FOLDER, 'otf')
 FONT_UPLOAD_FOLDER = os.path.join(UPLOAD_FOLDER, 'font')
 FAMILY_UPLOAD_FOLDER = os.path.join(UPLOAD_FOLDER, 'family')
 AVATAR_UPLOAD_FOLDER = os.path.join(UPLOAD_FOLDER, 'user_avatar')

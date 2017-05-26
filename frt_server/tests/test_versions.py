@@ -28,6 +28,7 @@ class VersionsTestCase(TestMinimal):
 
     def upload_glyphs_file(self, message=None, version=''):
         self.upload_font_file(self.family_id, 'testFiles/RiblonSans/RiblonSans{}.glyphs'.format(version), message)
+        self.assertIsNone(self.get_test_family().last_upload_error)
 
     def testUploadCreatesNoDuplicates(self):
         self.upload_glyphs_file(None, '-v2')

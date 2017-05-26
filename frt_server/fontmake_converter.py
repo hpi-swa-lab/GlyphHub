@@ -4,136 +4,192 @@ import zipfile
 import shutil
 import glob
 import threading
+import plistlib
 
 from sqlalchemy import inspect
 from frt_server.font import Font
 from frt_server.common import FamilyUploadStatus
 
-def process(source_filename, family, user, commit_message, asynchronous):
-    family.upload_status = FamilyUploadStatus.processing
-    family.last_upload_error = None
-    session = inspect(family).session
-    session.commit()
-
-    process = convert_font_after_upload(family, source_filename)
-
-    if asynchronous:
-        threading.Thread(target=handle_convert_result, args=(process, source_filename, family, user, commit_message)).start()
+def convert(source_filename, family, user, commit_message):
+    if source_filename.endswith('.glyphs'):
+        uploader = GlyphsUploadHandler()
     else:
-        handle_convert_result(process, source_filename, family, user, commit_message)
+        uploader = UfoUploadHandler()
 
-def handle_convert_result(process, source_filename, family, user, commit_message):
-    session = inspect(family).session
-    stdout, stderr = process.communicate()
+    uploader.upload(source_filename, family, user, commit_message)
 
-    session.add(user)
-    session.add(family)
-    session.refresh(family)
+class FontSourceConvertError(Exception):
+    """something went wrong while invoking fontmake on the given font source"""
 
-    if process.returncode != 0:
+class UploadHandler:
+
+    error = None
+    error_lock = threading.Lock()
+
+    def mark_begin_upload(self, family):
+        family.upload_status = FamilyUploadStatus.processing
+        family.last_upload_error = None
+        self.session.add(family)
+        self.session.commit()
+
+    def mark_end_upload(self, family, error=None):
         family.upload_status = FamilyUploadStatus.ready_for_upload
-        family.last_upload_error = stderr or 'An unknown error occured'
-        session.commit()
-        return
+        family.last_upload_error = error
+        self.session.add(family)
+        self.session.commit()
 
-    try:
-        source_otf_path = os.path.join(family.source_folder_path(), 'master_otf')
+    def upload(self, source_filename, family, user, commit_message):
+        self.session = inspect(family).session
 
-        otf_filenames = [os.path.basename(filename) for filename in glob.glob(source_otf_path + '/*.otf')]
-        if len(otf_filenames) < 1:
-            raise FileNotFoundError('No otf files were generated')
+        try:
+            self.mark_begin_upload(family)
 
-        if is_ufo_file(source_filename):
-            process_ufo_file(family, source_filename[:-4], otf_filenames[0], user)
-        else:
-            process_glyphs_file(family, source_filename, otf_filenames, user)
-    finally:
-        family.create_commit(commit_message, user)
-        family.upload_status = FamilyUploadStatus.ready_for_upload
-        session.commit()
+            # convert sources to ufo
+            try:
+                ufo_folders = self.unpack_uploaded_file(source_filename, family)
+            except FontSourceConvertError as e:
+                self.error = e
+                raise
 
-def is_glyphs_file(filename):
-    return filename.endswith('.glyphs')
+            # create/fetch font entities and place ufos in their folders
+            fonts = [self.prepare_font_entity_for_ufo_name(ufo_folder, family, user)
+                    for ufo_folder in ufo_folders]
 
-def is_ufo_file(filename):
-    return filename.endswith('.ufo.zip')
+            # make a commit over that
+            self.session.add(family)
+            self.session.refresh(family)
+            version_hash = family.create_commit(commit_message, user)
 
-def unzip_file_for_family(family, filename):
-    with zipfile.ZipFile(os.path.join(family.source_folder_path(), filename), "r") as ufo_zip_file:
-        ufo_zip_file.extractall(family.source_folder_path())
+            # change fontname to include commit hash and generate otfs based on that
+            threads = []
+            for font in fonts:
+                font_name = self.append_version_to_ufo_fontname(font.ufo_file_path(), version_hash)
+                thread = threading.Thread(target=self.convert_ufo_to_otf, args=[font])
+                thread.start()
+                threads.append(thread)
 
-def convert_font_after_upload(family, filename):
-    """invoke fontmake in our source folder. no cleanup performed after, returns the running process handle"""
-    type_parameter = None
-    if is_glyphs_file(filename):
-        type_parameter = "-g"
-        temporary_filename = filename
-    elif is_ufo_file(filename):
-        unzip_file_for_family(family, filename)
-        temporary_filename = filename[:-4]
-        folders = glob.glob(os.path.join(family.source_folder_path(), '*.ufo'))
-        if len(folders) != 1:
-            raise Error(family.source_folder_path() + " should contain exactly 1 match for *.ufo, but contains " + len(folders))
-        source = os.path.join(family.source_folder_path(), folders[0])
-        destination = os.path.join(family.source_folder_path(), temporary_filename)
-        if source != destination:
-            move_file(source, destination)
-        type_parameter = "-u"
-    else:
-        raise Exception("Exception: File is neither .ufo nor .glyphs")
+            for thread in threads:
+                thread.join()
 
-    return subprocess.Popen(['fontmake', type_parameter, temporary_filename, '--no-production-names', '-o', 'otf', '--verbose', 'CRITICAL'],
-            shell=False,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            cwd=family.source_folder_path())
+            if self.error:
+                raise
 
-def create_uploaded_font(family, font_name, ufo_filename, otf_filename, user):
-    font = family.font_for_file_named(ufo_filename)
-    if font:
+            self.clean_after_upload(family)
+        except FontSourceConvertError:
+            pass
+        except:
+            raise
+        finally:
+            try:
+                # remove the version hashes from the fontnames again
+                family.reset_working_copy()
+            except:
+                pass
+
+            if self.error:
+                if self.error is FontSourceConvertError:
+                    error_message = error.message
+                else:
+                    error_message = 'Something went wrong during the convertion process.'
+            else:
+                error_message = None
+            self.mark_end_upload(family, error_message)
+
+    def unpack_uploaded_file(self, source_filename, family):
+        """unpack the uploaded source file and return a list of resulting ufo folder names"""
+        pass
+
+    def font_name_from_ufo(self, ufo_folder):
+        with open(os.path.join(ufo_folder, 'fontinfo.plist'), 'rb') as fontinfo_file:
+            return plistlib.load(fontinfo_file)['familyName']
+
+    def prepare_font_entity_for_ufo_name(self, ufo_folder, family, user):
+        font = family.font_for_file_named(ufo_folder)
+        if font:
+            return font
+
+        font = Font(font_name=self.font_name_from_ufo(ufo_folder), author_id=user._id)
+        family.fonts.append(font)
+        self.session.commit()
+        self.session.refresh(font)
+
+        font.clean_folders()
+        font.ensure_folder_exists()
+        self.move_ufo_to_font_folder(ufo_folder, font)
         return font
 
-    font = Font(font_name=font_name, author_id=user._id)
-    family.fonts.append(font)
-    session = inspect(family).session
-    session.commit()
-    session.refresh(font)
+    def move_ufo_to_font_folder(self, ufo_folder_name, font):
+        self.move_file(ufo_folder_name, os.path.join(font.ufo_folder_path(), os.path.basename(ufo_folder_name)))
 
-    font.clean_folders()
-    font.ensure_folder_exists()
-    return font
+    def append_version_to_ufo_fontname(self, ufo_folder, commit_hash):
+        with open(os.path.join(ufo_folder, 'fontinfo.plist'), 'rb') as fontinfo_file:
+            fontinfo = plistlib.load(fontinfo_file)
+            fontinfo['familyName'] += ' ' + commit_hash
+            fontinfo['styleMapFamilyName'] += ' ' + commit_hash
+            fontinfo['openTypeNamePreferredFamilyName'] += ' ' + commit_hash
 
-def process_glyphs_file(family, glyphs_filename, otf_filenames, user):
-    source_otf_path = os.path.join(family.source_folder_path(), 'master_otf')
-    source_ufo_path = os.path.join(family.source_folder_path(), 'master_ufo')
+        with open(os.path.join(ufo_folder, 'fontinfo.plist'), 'wb') as fontinfo_file:
+            plistlib.dump(fontinfo, fontinfo_file)
+            return fontinfo['familyName']
 
-    for otf_filename in otf_filenames:
-        font_name = otf_filename[:-4]
-        ufo_filename = font_name + '.ufo'
-        font = create_uploaded_font(family, font_name, ufo_filename, otf_filename, user)
+    def convert_ufo_to_otf(self, font):
+        try:
+            process = subprocess.Popen(['fontmake', '-u', font.ufo_file_path(), '--no-production-names', '-o', 'otf', '--verbose', 'CRITICAL'],
+                    shell=False,
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.PIPE,
+                    cwd=font.folder_path())
+            stdout, stderr = process.communicate()
 
-        move_file(os.path.join(source_ufo_path, ufo_filename), os.path.join(font.ufo_folder_path(), ufo_filename))
-        move_file(os.path.join(source_otf_path, otf_filename), os.path.join(font.otf_folder_path(), otf_filename))
+            if process.returncode != 0:
+                raise FontSourceConvertError('fontmake failed to convert your font to otf: ' + str(stderr))
 
-    shutil.rmtree(source_ufo_path)
-    shutil.rmtree(source_otf_path)
+            source_otf_path = os.path.join(font.folder_path(), 'master_otf')
 
-def process_ufo_file(family, ufo_filename, otf_filename, user):
-    source_otf_path = os.path.join(family.source_folder_path(), 'master_otf')
-    font_name = otf_filename[:-4]
+            otf_filename = [os.path.basename(filename) for filename in glob.glob(source_otf_path + '/*.otf')][0]
+            self.move_file(os.path.join(source_otf_path, otf_filename), font.otf_file_path_for_creating())
 
-    font = create_uploaded_font(family, font_name, ufo_filename, otf_filename, user)
+            shutil.rmtree(source_otf_path)
+        except Exception as e:
+            self.error_lock.acquire()
+            error = e.message
+            self.error_lock.release()
 
-    move_file(os.path.join(family.source_folder_path(), ufo_filename), os.path.join(font.ufo_folder_path(), ufo_filename))
-    move_file(os.path.join(source_otf_path, otf_filename), os.path.join(font.otf_folder_path(), otf_filename))
+    def clean_after_upload(self, family):
+        pass
 
-    shutil.rmtree(source_otf_path)
+    def move_file(self, source, destination):
+        """move source to destination. if destination already exists, delete it beforehand"""
+        if os.path.exists(destination):
+            if (os.path.isdir(destination)):
+                shutil.rmtree(destination)
+            else:
+                os.remove(destination)
+        shutil.move(source, destination)
 
-def move_file(source, destination):
-    if os.path.exists(destination):
-        if (os.path.isdir(destination)):
-            shutil.rmtree(destination)
-        else:
-            os.remove(destination)
-    shutil.move(source, destination)
+class UfoUploadHandler(UploadHandler):
+    def unpack_uploaded_file(self, source_filename, family):
+        self.unzip_file_for_family(family, source_filename)
+        return [filename for filename in glob.glob(family.source_folder_path() + '/*.ufo')]
 
+    def unzip_file_for_family(self, family, filename):
+        with zipfile.ZipFile(os.path.join(family.source_folder_path(), filename), "r") as ufo_zip_file:
+            ufo_zip_file.extractall(family.source_folder_path())
+
+class GlyphsUploadHandler(UploadHandler):
+    def unpack_uploaded_file(self, source_filename, family):
+        process = subprocess.Popen(['fontmake', '-g', source_filename, '--no-production-names', '-o', 'ufo', '--verbose', 'CRITICAL'],
+                shell=False,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                cwd=family.source_folder_path())
+        stdout, stderr = process.communicate()
+        if process.returncode != 0:
+            raise FontSourceConvertError('fontmake failed to convert your font to ufo: ' + str(stderr))
+
+        source_ufo_path = os.path.join(family.source_folder_path(), 'master_ufo')
+        return [filename for filename in glob.glob(source_ufo_path + '/*.ufo')]
+
+    def clean_after_upload(self, family):
+        super().clean_after_upload(family)
+        shutil.rmtree(os.path.join(family.source_folder_path(), 'master_ufo'))

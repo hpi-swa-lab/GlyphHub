@@ -44,13 +44,18 @@ class Font(CommonColumns):
         return os.path.basename(self.ufo_file_path())
 
     def otf_folder_path(self):
-        return os.path.join(self.folder_path(), 'otf')
+        return frt_server.config.OTF_UPLOAD_FOLDER
 
-    def otf_file_path(self):
-        otf_filenames = glob.glob(self.otf_folder_path() + '/*.otf')
-        if not otf_filenames:
+    def otf_file_path_for_creating(self, version_hash=None):
+        if not version_hash:
+            version_hash = self.latest_commit_hash()
+        return os.path.join(self.otf_folder_path(), str(self._id) + '-' + version_hash + '.otf')
+
+    def otf_file_path(self, version_hash=None):
+        path = self.otf_file_path_for_creating(version_hash)
+        if not os.path.exists(path):
             raise FileNotFoundError('no otf file found for font ' + self.font_name)
-        return otf_filenames[0]
+        return path
 
     def get_otf_contents(self):
         with open(self.otf_file_path(), 'rb') as otf_file:
@@ -67,6 +72,9 @@ class Font(CommonColumns):
         """Delete all our associated folders"""
         if os.path.exists(self.folder_path()):
             shutil.rmtree(self.folder_path())
+
+    def latest_commit_hash(self):
+        return str(self.family._repo().head.target)
 
     def versioned_file_at_path(self, path, version_hash=None):
         """return the contents of the file at path at the version of version_hash.
@@ -93,12 +101,8 @@ class Font(CommonColumns):
         except FileNotFoundError:
             return None
 
-    def convert(self, unicode_points, feature_string):
-        otf_path = self.otf_folder_path()
-        otf_files = glob.glob(otf_path + '/*.otf')
-        if len(otf_files) < 1:
-            raise FileNotFoundError('Font does not contain a .otf')
-        return frt_hb_convert.to_glyphnames(otf_files[0], unicode_points, feature_string.split(','))
+    def convert(self, unicode_points, feature_string, version_hash=None):
+        return frt_hb_convert.to_glyphnames(self.otf_file_path(version_hash), unicode_points, feature_string.split(','))
 
     def get_glif_data(self, requested_glifs, version_hash=None):
         """return the .glif file contents for a set of glifs. specify version_hash to

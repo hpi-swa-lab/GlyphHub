@@ -11,6 +11,7 @@ import frt_server.fontmake_converter
 import os
 import pygit2
 import datetime
+import threading
 
 from werkzeug.utils import secure_filename
 
@@ -55,7 +56,7 @@ class Family(CommonColumns):
     def font_for_file_named(self, ufo_filename):
         """check if an ufo file with that name already exists and return the associated font if it does"""
         for font in self.fonts:
-            if font.ufo_file_path().endswith(ufo_filename):
+            if font.ufo_file_path().endswith(os.path.basename(ufo_filename)):
                 return font
 
     def process_file(self, family_file, user, commit_message, asynchronous=True):
@@ -63,7 +64,7 @@ class Family(CommonColumns):
         we get:
         family/3/sourceFile.glyphs
         family/3/fonts/7/ufo/myFont.ufo
-        family/3/fonts/7/otf/myFont.otf"""
+        otf/7-a7fbe7282cd98efa32ab2728effdc.otf (font_id-commit_hash.otf)"""
 
         sanitized_filename = secure_filename(os.path.basename(family_file.filename))
         if not sanitized_filename:
@@ -72,7 +73,13 @@ class Family(CommonColumns):
         self.ensure_source_folder_exists()
         family_file.save(os.path.join(self.source_folder_path(), sanitized_filename))
 
-        frt_server.fontmake_converter.process(sanitized_filename, self, user, commit_message, asynchronous)
+        self.upload_status = FamilyUploadStatus.processing
+        self.last_upload_error = None
+        inspect(self).session.commit()
+        thread = threading.Thread(target=frt_server.fontmake_converter.convert, args=(sanitized_filename, self, user, commit_message))
+        thread.start()
+        if not asynchronous:
+            thread.join()
 
     def process_filename(self, family_filename, user, commit_message):
         """synchronously processes the file at the given path for this family"""
@@ -94,7 +101,11 @@ class Family(CommonColumns):
 
         parents = [] if self.repo.head_is_unborn else [self.repo.head.target]
 
-        self.repo.create_commit('HEAD', author, author, message, treeId, parents)
+        oid = self.repo.create_commit('HEAD', author, author, message, treeId, parents)
+        return str(oid)
+
+    def reset_working_copy(self):
+        self.repo.reset(self.repo.head.target, pygit2.GIT_RESET_HARD)
 
     def versions(self):
         self.ensure_source_folder_exists()
