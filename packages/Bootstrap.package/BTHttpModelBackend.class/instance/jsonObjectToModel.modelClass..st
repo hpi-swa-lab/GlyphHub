@@ -4,6 +4,9 @@ jsonObjectToModel: aDictionary modelClass: aClass
 	| instance |
 	aDictionary ifNil: [^ nil].
 	
+	self flag: #fixme. " the server has a bug where it may send unnecessary, unpopulated models back. we ignore those by simply writing their id "
+	aDictionary isNumber ifTrue: [^ aDictionary].
+	
 	instance := aClass new
 		backend: self;
 		yourself.

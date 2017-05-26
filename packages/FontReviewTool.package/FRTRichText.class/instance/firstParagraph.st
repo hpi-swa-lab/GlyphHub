@@ -1,4 +1,6 @@
 accessing
 firstParagraph
 
-	^ self paragraphs first
+	self paragraphs
+		ifNotEmpty: [^ self paragraphs first]
+		ifEmpty: [^ nil]

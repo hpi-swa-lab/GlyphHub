@@ -4,7 +4,7 @@ font: aFont
 	font := aFont.
 	sampleTextEditor font: aFont.
 	
-	aFont family standardSampleText ifNotNilDo: [:sampleText | sampleTextEditor sampleText: sampleText].
+	sampleTextEditor displaySampleTextIfNotEmpty: aFont family standardSampleText.
 	
 	about text: font family about.
 	biography text: font author biography

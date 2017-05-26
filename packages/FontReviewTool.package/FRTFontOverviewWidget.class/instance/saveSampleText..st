@@ -9,7 +9,7 @@ saveSampleText: aRichText
 		self topLevel displayNotification: 'Sample cannot be empty' type: #danger.
 		^ self].
 	
-	^ (((FRTSampleText new
+	^ (((family standardSampleText
 		title: title;
 		text: aRichText jsonString;
 		author: self topLevel user;
