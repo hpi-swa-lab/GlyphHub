@@ -1,4 +1,4 @@
-accessing
+instance creation
 ensureExists: aGlyphNameStringCollection font: aFont in: aBackend
 
 	| allGlyphs |

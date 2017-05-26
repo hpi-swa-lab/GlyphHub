@@ -1,10 +1,10 @@
 as yet unclassified
 font: aFont
 
+	sampleTextEditor displaySampleTextIfNotEmpty: aFont family standardSampleText.
+	
 	font := aFont.
 	sampleTextEditor font: aFont.
-	
-	aFont family standardSampleText ifNotNilDo: [:sampleText | sampleTextEditor sampleText: sampleText].
 	
 	about text: font family about.
 	biography text: font author biography

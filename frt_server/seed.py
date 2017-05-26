@@ -6,22 +6,24 @@ from frt_server.tables import *
 import frt_server.config
 
 user1 = User(username='Eva', password='eveisevil', email='eve@evil.com', biography='Eva has been designing fonts for a long time. Ever since she joined the HPI art club and later became its boss, she pushed for having more font design workshops and generally speaking sort of occasionally succeeded in doing so.')
-family1 = Family(family_name='Riblon Sans', preview_glyphs='', author=user1, about='Riblon Sans is the perfect balance between lightweight strokes and clear readability. Due to its refreshingly unconventional style it is a perfect fit for any place where you may need a clever and beautiful typeface.')
+sText1 = SampleText(title='Riblon Sans', text='[{"alignment":"left","deletable":true,"fontNameForPango":null,"fontId":null,"text":"","openTypeFeatures":null,"pointSize":16,"placeholder":"Empty Paragraph"}]', author=user1)
+family1 = Family(family_name='Riblon Sans', preview_glyphs='', author=user1, about='Riblon Sans is the perfect balance between lightweight strokes and clear readability. Due to its refreshingly unconventional style it is a perfect fit for any place where you may need a clever and beautiful typeface.', standard_sample_text=sText1)
 
 glyph1 = Glyph(glyph_name='A', version_hash='9c7075ca420f30aedb27c48102466313fa4d12c8', font_id=1)
 glyph2 = Glyph(glyph_name='a', version_hash='9c7075ca420f30aedb27c48102466313fa4d12c8', font_id=1)
 glyph3 = Glyph(glyph_name='s', version_hash='9c7075ca420f30aedb27c48102466313fa4d12c8', font_id=1)
 thread1 = Thread(title='I don\'t like this word', closed=False)
 
-thread1.thread_glyph_associations.append(ThreadGlyphAssociation(glyph=glyph1))
-thread1.thread_glyph_associations.append(ThreadGlyphAssociation(glyph=glyph2))
-thread1.thread_glyph_associations.append(ThreadGlyphAssociation(glyph=glyph3))
+thread1.thread_glyph_associations.append(ThreadGlyphAssociation(glyph=glyph1, string_index=0))
+thread1.thread_glyph_associations.append(ThreadGlyphAssociation(glyph=glyph2, string_index=1))
+thread1.thread_glyph_associations.append(ThreadGlyphAssociation(glyph=glyph3, string_index=2))
 
 entities = [
     user1,
     family1,
     User(username='Tom', password='safepwissafe', email='tom@penguin.com'),
     thread1,
+    sText1,
     ThreadSubscription(user=user1, thread=thread1),
     Codepoint(unicode_value=0x0041, point_size=12.5, features='liga', thread_id=1, font_id=1, index=0),
     Codepoint(unicode_value=0x0061, point_size=12.5, features='liga', thread_id=1, font_id=1, index=1),

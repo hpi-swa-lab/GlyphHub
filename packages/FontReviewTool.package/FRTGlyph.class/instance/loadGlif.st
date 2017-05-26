@@ -1,4 +1,4 @@
-accessing
+operations
 loadGlif
 
 	^ (self backend loadUfoDetails: {'glifs' -> {self glyphName}} font: self font)

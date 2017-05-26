@@ -1,7 +1,7 @@
 lifecycle
 enteringWith: aFont
 
-	^ (FRTFont load: aFont id populate: #('author' 'family' 'family.standardSampleText') from: self backend)
+	^ (FRTFont load: aFont id populate: self fontFields from: self backend)
 		then: [:newFont |
 			self setFont: newFont.
 			
