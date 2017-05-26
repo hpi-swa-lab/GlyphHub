@@ -59,7 +59,7 @@ class Family(CommonColumns):
             if font.ufo_file_path().endswith(os.path.basename(ufo_filename)):
                 return font
 
-    def process_file(self, family_file, user, commit_message, asynchronous=True):
+    def process_file(self, app, family_file, user, commit_message, asynchronous=True):
         """convert a glyphs or ufo file to (ufo and) otf, create all associated Font entities, move files to the right folders
         we get:
         family/3/sourceFile.glyphs
@@ -73,18 +73,22 @@ class Family(CommonColumns):
         self.ensure_source_folder_exists()
         family_file.save(os.path.join(self.source_folder_path(), sanitized_filename))
 
-        self.upload_status = FamilyUploadStatus.processing
-        self.last_upload_error = None
-        inspect(self).session.commit()
-        thread = threading.Thread(target=frt_server.fontmake_converter.convert, args=(sanitized_filename, self, user, commit_message))
-        thread.start()
-        if not asynchronous:
-            thread.join()
+        #self.upload_status = FamilyUploadStatus.processing
+        #self.last_upload_error = None
+        #inspect(self).session.commit()
+        with app.app_context():
+            session = app.create_scoped_session()
+            assert session
+            thread = threading.Thread(target=frt_server.fontmake_converter.convert, args=(session, sanitized_filename, self, user, commit_message))
+            thread.start()
+            if not asynchronous:
+                thread.join()
 
-    def process_filename(self, family_filename, user, commit_message):
+    def process_filename(self, app, family_filename, user, commit_message):
         """synchronously processes the file at the given path for this family"""
         with open(family_filename, 'rb') as family_file:
             self.process_file(
+                    app,
                     werkzeug.datastructures.FileStorage(family_file, family_filename, 'file'),
                     user,
                     commit_message,

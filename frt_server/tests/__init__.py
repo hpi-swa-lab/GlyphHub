@@ -90,7 +90,7 @@ class TestMinimal(eve.tests.TestMinimal):
     def upload_font_file(self, family_id, file_path, message=None):
         family = self.connection.session.query(Family).get(family_id)
         user = self.connection.session.query(User).get(self.user_id)
-        family.process_filename(os.path.join(self.this_directory, '..', '..', file_path), user, message or 'commit message here')
+        family.process_filename(self.app, os.path.join(self.this_directory, '..', '..', file_path), user, message or 'commit message here')
 
     def login_as(self, email, password):
         """save the auth token from the given user for all future requests"""

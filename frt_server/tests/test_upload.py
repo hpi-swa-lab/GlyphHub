@@ -48,6 +48,7 @@ class UploadTestCase(TestMinimal):
         family = self.get_test_family()
         self.assertTrue(os.path.exists(family.source_folder_path()))
 
+        self.assertEqual(len(family.fonts), 1)
         for font in family.fonts:
             self.assertTrue(os.path.exists(font.folder_path()))
             self.assertTrue(os.path.exists(font.ufo_folder_path()))
@@ -59,6 +60,7 @@ class UploadTestCase(TestMinimal):
         self.asynchronous_upload(self.family_id, 'testFiles/RiblonSans/RiblonSans.ufo.zip')
 
         family = self.get_test_family()
+        self.assertEqual(len(family.fonts), 1)
         for font in family.fonts:
             self.assertTrue(os.path.exists(font.folder_path()))
             self.assertTrue(os.path.exists(font.ufo_folder_path()))
@@ -84,6 +86,7 @@ class UploadTestCase(TestMinimal):
         self.asynchronous_upload(self.family_id, 'testFiles/Riblon Sans/Riblon Sans 42.ufo.zip')
 
         family = self.get_test_family()
+        self.assertEqual(len(family.fonts), 1)
         for font in family.fonts:
             self.assertTrue(os.path.exists(font.folder_path()))
             self.assertTrue(os.path.exists(font.ufo_folder_path()))

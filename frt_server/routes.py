@@ -91,7 +91,7 @@ def register_routes(app):
             return jsonify({'error': 'Invalid file format'}), 400
 
         try:
-            family.process_file(family_file, current_user, request.form.get('commit_message') or 'New Version')
+            family.process_file(app, family_file, current_user, request.form.get('commit_message') or 'New Version')
             return '', 200
         except Exception as e:
             if frt_server.config.DEBUG:

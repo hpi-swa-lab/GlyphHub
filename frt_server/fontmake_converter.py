@@ -10,11 +10,13 @@ from sqlalchemy import inspect
 from frt_server.font import Font
 from frt_server.common import FamilyUploadStatus
 
-def convert(source_filename, family, user, commit_message):
+def convert(session, source_filename, family, user, commit_message):
+    print(session)
+
     if source_filename.endswith('.glyphs'):
-        uploader = GlyphsUploadHandler()
+        uploader = GlyphsUploadHandler(session)
     else:
-        uploader = UfoUploadHandler()
+        uploader = UfoUploadHandler(session)
 
     uploader.upload(source_filename, family, user, commit_message)
 
@@ -25,6 +27,9 @@ class UploadHandler:
 
     error = None
     error_lock = threading.Lock()
+
+    def __init__(self, session):
+        self.session = session
 
     def mark_begin_upload(self, family):
         family.upload_status = FamilyUploadStatus.processing
@@ -39,8 +44,6 @@ class UploadHandler:
         self.session.commit()
 
     def upload(self, source_filename, family, user, commit_message):
-        self.session = inspect(family).session
-
         try:
             self.mark_begin_upload(family)
 
@@ -104,12 +107,15 @@ class UploadHandler:
             return plistlib.load(fontinfo_file)['familyName']
 
     def prepare_font_entity_for_ufo_name(self, ufo_folder, family, user):
+        self.session.refresh(family)
         font = family.font_for_file_named(ufo_folder)
         if font:
             return font
 
+        self.session.refresh(user)
         font = Font(font_name=self.font_name_from_ufo(ufo_folder), author_id=user._id)
         family.fonts.append(font)
+        self.session.add(family)
         self.session.commit()
         self.session.refresh(font)
 
