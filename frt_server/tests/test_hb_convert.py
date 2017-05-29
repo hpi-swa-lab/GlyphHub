@@ -48,5 +48,5 @@ class HbConvertTestCase(TestMinimal):
         self.helper_convert_sequence('testFiles/RiblonSans/RiblonSans.ufo.zip', 'Aß', [['A', 0], ['.notdef', 1]])
 
     def test_convert_with_features(self):
-        self.helper_convert_sequence('testFiles/RiblonSans/RiblonSans-withSmcp.glyphs', 'A', [['A.sc', 0]], 'c2sc=on')
+        self.helper_convert_sequence('testFiles/RiblonSans/RiblonSans-withSmcp.glyphs', 'A', [['A.sc', 0]], 'c2sc')
 
