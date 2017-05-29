@@ -1,4 +1,4 @@
-callback
+ui
 displayUploadError: anErrorString
 
 	fileSelectButton disabled: false.

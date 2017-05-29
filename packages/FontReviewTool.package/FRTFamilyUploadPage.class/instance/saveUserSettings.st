@@ -1,4 +1,4 @@
-callback
+operations
 saveUserSettings
 	
 	^ self topLevel user biography ~= biographyText text

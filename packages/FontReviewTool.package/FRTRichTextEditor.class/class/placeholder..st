@@ -1,4 +1,4 @@
-as yet unclassified
+instance creation
 placeholder: aString
 
 	^ self new placeholder: aString
