@@ -10,5 +10,4 @@ initialize
 		add: ((BTButton label: 'Create New Family' icon: #plus)
 			when: #clicked send: #openCreateFamilyPage to: self;
 			align: #(end center));
-		add: (BTScrollArea new
-			add: familyList)
+		add: familyList

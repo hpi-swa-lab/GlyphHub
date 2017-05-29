@@ -6,7 +6,7 @@ from frt_server.tables import *
 import frt_server.config
 
 user1 = User(username='Eva', password='eveisevil', email='eve@evil.com', biography='Eva has been designing fonts for a long time. Ever since she joined the HPI art club and later became its boss, she pushed for having more font design workshops and generally speaking sort of occasionally succeeded in doing so.')
-sText1 = SampleText(title='Riblon Sans', text='[{"alignment":"left","deletable":true,"fontNameForPango":null,"fontId":null,"text":"","openTypeFeatures":null,"pointSize":16,"placeholder":"Empty Paragraph"}]', author=user1)
+sText1 = SampleText(title='Riblon Sans', text='[{"alignment":"left","deletable":true,"fontNameForPango":null,"fontId":null,"text":"","openTypeFeatures":null,"pointSize":16,"placeholder":"Empty Paragraph"}]', author=user1, should_be_in_overview=False)
 family1 = Family(family_name='Riblon Sans', preview_glyphs='', author=user1, about='Riblon Sans is the perfect balance between lightweight strokes and clear readability. Due to its refreshingly unconventional style it is a perfect fit for any place where you may need a clever and beautiful typeface.', standard_sample_text=sText1)
 
 glyph1 = Glyph(glyph_name='A', version_hash='9c7075ca420f30aedb27c48102466313fa4d12c8', font_id=1)

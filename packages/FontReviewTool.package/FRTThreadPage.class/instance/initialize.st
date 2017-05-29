@@ -36,8 +36,7 @@ initialize
 			add: subscriptionButton);		
 		add: preview;
 		add: tagArea;
-		add: (BTScrollArea new
-			add: commentArea);
+		add: commentArea;
 		add: ((BTButton text:  (BTIcon icon: #comment_o), ' Add new comment')
 			colorType: #primary;
 			align: #(end start);

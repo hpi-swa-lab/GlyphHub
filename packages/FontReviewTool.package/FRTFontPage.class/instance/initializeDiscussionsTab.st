@@ -11,5 +11,4 @@ initializeDiscussionsTab
 	
 	^ BTPage column
 		add: showClosedThreadsCheckbox;
-		add: (BTScrollArea new
-			add: threadsContainer)
+		add: threadsContainer
