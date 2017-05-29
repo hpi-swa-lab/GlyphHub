@@ -1,4 +1,4 @@
-from sqlalchemy import Table, Column, DateTime, ForeignKey, Integer, String, Text, Float, LargeBinary, Boolean, Enum, func
+from sqlalchemy import Table, Column, DateTime, ForeignKey, UniqueConstraint, Integer, String, Text, Float, LargeBinary, Boolean, Enum, func
 from sqlalchemy.orm import column_property, relationship, validates
 from eve_sqlalchemy.decorators import registerSchema
 
@@ -31,6 +31,7 @@ class ThreadGlyphAssociation(CommonColumns):
     thread = relationship('Thread', back_populates='thread_glyph_associations')
     glyph = relationship('Glyph', back_populates='thread_glyph_associations')
     string_index = Column(Integer)
+    __table_args__ = (UniqueConstraint('thread_id', 'glyph_id', 'string_index'),)
 
 class ThreadSubscription(CommonColumns):
     __tablename__ = 'thread_subscription'
@@ -40,6 +41,7 @@ class ThreadSubscription(CommonColumns):
     user = relationship('User', back_populates='thread_subscriptions')
     thread = relationship('Thread', back_populates='thread_subscriptions')
     last_visited = Column(DateTime, server_default=func.now())
+    __table_args__ = (UniqueConstraint('user_id', 'thread_id'),)
 
 class Glyph(CommonColumns):
     __tablename__ = 'glyph'
@@ -48,6 +50,7 @@ class Glyph(CommonColumns):
     font_id = Column(Integer, ForeignKey('font._id'))
     font = relationship('Font', back_populates='glyphs')
     thread_glyph_associations = relationship('ThreadGlyphAssociation', back_populates='glyph')
+    __table_args__ = (UniqueConstraint('glyph_name', 'font_id', name='glyph_name_font_id_unique'),)
 
 class Thread(CommonColumns):
     __tablename__ = 'thread'

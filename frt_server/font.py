@@ -3,7 +3,7 @@ import os
 import glob
 import shutil
 
-from sqlalchemy import Column, Integer, ForeignKey, String, Text
+from sqlalchemy import Column, Integer, ForeignKey, String, Text, UniqueConstraint
 from sqlalchemy.orm import relationship
 
 from frt_server.tag import tag_font_association_table
@@ -23,6 +23,7 @@ class Font(CommonColumns):
     glyphs = relationship('Glyph', back_populates='font')
     author = relationship('User', back_populates='fonts')
     path = Column(String(300))
+    __table_args__ = (UniqueConstraint('font_name', 'family_id', name='glyph_name_font_id_unique'),)
 
     def folder_path(self):
         """Path to the folder containing all the font sources"""
