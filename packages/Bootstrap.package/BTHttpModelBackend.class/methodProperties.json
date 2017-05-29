@@ -1,25 +1,24 @@
 {
 	"class" : {
 		"camelCaseToUnderscore:" : "TB 4/9/2017 12:48",
+		"defaultApiRoolUrl" : "TB 5/29/2017 11:38",
+		"defaultApiRoolUrl:" : "TB 5/29/2017 11:38",
 		"underscoreToCamelCase:" : "al 4/27/2017 16:37" },
 	"instance" : {
-		"apiRootUrl" : "ek 4/11/2017 12:02",
+		"apiRootUrl" : "TB 5/29/2017 11:43",
 		"apiRootUrl:" : "ek 4/11/2017 12:02",
 		"apiToken" : "ek 4/11/2017 12:02",
 		"apiToken:" : "ek 4/11/2017 12:02",
 		"delete:from:" : "ek 4/11/2017 12:02",
-		"initialize" : "al 5/24/2017 13:36",
 		"jsonArrayToModel:modelClass:" : "lcj 4/6/2017 12:41",
 		"jsonObjectToModel:modelClass:" : "al 5/24/2017 15:44",
 		"jsonToModel:modelClass:" : "TB 5/9/2017 17:18",
 		"load:into:populate:" : "TB 5/9/2017 16:56",
 		"loadAllInto:populate:" : "ek 4/12/2017 15:23",
 		"loadWhere:into:populate:" : "lcj 5/23/2017 11:38",
-		"localServerUrl" : "al 5/23/2017 16:46",
 		"login:password:" : "lcj 5/18/2017 10:35",
 		"populateString:" : "lcj 4/9/2017 14:58",
 		"registerUserWithName:email:password:" : "lcj 5/18/2017 13:35",
-		"remoteServerUrl" : "al 5/23/2017 16:46",
 		"request:method:data:" : "ek 4/11/2017 12:08",
 		"request:method:data:contentType:" : "ek 4/11/2017 12:54",
 		"save:to:" : "TB 5/9/2017 17:50" } }

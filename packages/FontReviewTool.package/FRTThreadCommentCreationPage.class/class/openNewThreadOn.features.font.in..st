@@ -14,6 +14,9 @@ openNewThreadOn: aString features: aCollection font: aFont in: aTopLevel
 			indexedGlyphs := glyphNamesAndIndices collect: [:glyphNameAndIndex |
 				{glyphsDictionary at: glyphNameAndIndex first. glyphNameAndIndex second}].
 			indexedGlyphs do: [:indexedGlyph |
-				FRTThreadGlyphAssociation new thread: thread; glyph: indexedGlyph first; stringIndex: indexedGlyph second].
+				FRTThreadGlyphAssociation new
+					thread: thread;
+					glyph: (indexedGlyph first glyphName = '.notdef' ifFalse: [indexedGlyph first] ifTrue: nil);
+					stringIndex: indexedGlyph second].
 			aTopLevel openPage: FRTThreadCommentCreationPage new with: {thread. nil}])
 		catch: [aTopLevel displayNotification: 'Creating Thread failed.' type: #danger])

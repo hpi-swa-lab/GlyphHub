@@ -1,0 +1,14 @@
+{
+	"category" : "FontReviewTool-Models",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "FRTUndefinedGlyph",
+	"pools" : [
+		 ],
+	"super" : "FRTGlyph",
+	"type" : "normal" }

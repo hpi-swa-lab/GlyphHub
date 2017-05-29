@@ -9,7 +9,9 @@ updateGlyphLinks: aThread
 		ifFalse: [ | button |
 			glyphLinkContainer visible: true.
 			checkboxes := ((thread threadGlyphAssociations sortedBy: #stringIndex) collect: [:threadGlyph |
-					(BTCheckboxWithLabel label: 'Link comment with ', threadGlyph glyph glyphName) checked: true]).
+				threadGlyph glyph ifNotNil: [
+					threadGlyph glyph glyphName ~= '.notdef' ifTrue: [
+						(BTCheckboxWithLabel label: 'Link comment with ', threadGlyph glyph glyphName) checked: true]]] thenSelect: #notNil).
 			
 			button := ((BTButton label: 'Unlink all')
 				small;

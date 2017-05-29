@@ -1,0 +1,18 @@
+{
+	"class" : {
+		"ensureExists:font:in:" : "lcj 5/26/2017 13:41" },
+	"instance" : {
+		"font" : "lcj 5/26/2017 13:37",
+		"font:" : "lcj 5/26/2017 13:38",
+		"glyphName" : "lcj 5/26/2017 13:39",
+		"glyphName:" : "lcj 5/26/2017 13:39",
+		"id" : "lcj 5/26/2017 20:26",
+		"loadGlif" : "lcj 5/26/2017 13:40",
+		"save" : "lcj 5/26/2017 20:27",
+		"saveAssociationsTo:" : "lcj 5/26/2017 15:17",
+		"saveTo:" : "lcj 5/26/2017 20:34",
+		"threadGlyphAssociations" : "lcj 5/26/2017 20:00",
+		"threadGlyphAssociations:" : "lcj 5/26/2017 13:40",
+		"threads" : "lcj 5/26/2017 20:00",
+		"versionHash" : "lcj 5/26/2017 13:40",
+		"versionHash:" : "lcj 5/26/2017 13:41" } }

@@ -3,7 +3,7 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		 ],
+		"DefaultApiRootUrl" ],
 	"commentStamp" : "TB 3/29/2017 12:09",
 	"instvars" : [
 		"apiRootUrl",
