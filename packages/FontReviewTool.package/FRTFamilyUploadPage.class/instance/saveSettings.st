@@ -1,4 +1,4 @@
-callback
+operations
 saveSettings
 
 	saveButton disabled: true.

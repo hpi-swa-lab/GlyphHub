@@ -1,4 +1,4 @@
-callback
+ui
 displayUploadSuccess
 	
 	alertArea add: (BTAlert new

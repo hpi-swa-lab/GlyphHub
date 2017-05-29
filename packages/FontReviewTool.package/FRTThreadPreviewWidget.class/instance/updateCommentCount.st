@@ -1,4 +1,4 @@
-accessing
+updating
 updateCommentCount
 
 	^ (self hasNewComments) then: [:hasNewComments |

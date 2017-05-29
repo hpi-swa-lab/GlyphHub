@@ -1,4 +1,4 @@
-callback
+operations
 chooseFile
 
 	| stream |

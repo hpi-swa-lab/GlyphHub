@@ -1,4 +1,4 @@
-callback
+operations
 saveFamilySettings
 
 	^ (self family familyName ~= familyName text or: [self family about ~= aboutFamilyText text])

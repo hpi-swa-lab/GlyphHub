@@ -12,6 +12,7 @@ mockFont
 			standardSampleText: (FRTSampleText new
 				text: FRTRichText standardEmptyFamilyText asJsonString;
 				title: 'blah';
+				shouldBeInOverview: false;
 				author: user);
 			versionMessages: {Dictionary new
 				at: 'message' put: 'First Version';

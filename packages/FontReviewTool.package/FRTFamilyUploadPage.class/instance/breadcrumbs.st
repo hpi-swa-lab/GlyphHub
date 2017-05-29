@@ -1,4 +1,4 @@
-ui
+navigation
 breadcrumbs
 
 	^ FRTFamilyOverviewPage new breadcrumbs

@@ -1,4 +1,4 @@
-callback
+lifecycle
 leaving
 
 	^ (saveButton disabled not and:

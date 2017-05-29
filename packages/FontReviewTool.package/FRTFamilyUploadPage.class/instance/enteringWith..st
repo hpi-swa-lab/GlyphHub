@@ -1,4 +1,4 @@
-callback
+lifecycle
 enteringWith: unused
 
 	self clearAlerts.
@@ -13,17 +13,10 @@ enteringWith: unused
 					family uploadStatus = 'processing' ifTrue: [self continuePreviousUpload].
 					family]
 				ifNone: [
-					((FRTSampleText new
-						title: 'Standard Family Sample Text';
-						author: self user;
-						text: FRTRichText standardEmptyFamilyText asJsonString)
-							 saveTo: self backend) then: [:sampleText |
-								FRTFamily new
-									author: self topLevel user;
-									familyName: familyName text;
-									previewGlyphs: '';
-									standardSampleText: sampleText;
-									saveTo: self backend]]])
+					((FRTSampleText standardEmptyFamilyText author: self user)
+						saveTo: self backend)
+						then: [:sampleText |
+							(self newFamilyWithSampleText: sampleText) saveTo: self backend]]])
 		then: [:family |
 			familyName text: family familyName.
 			aboutFamilyText text: (family about ifNil: ['']).
