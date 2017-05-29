@@ -2,7 +2,7 @@ instance creation
 ensureExists: aGlyphNameStringCollection font: aFont in: aBackend
 
 	| allGlyphs |
-	^ ((self loadWhere: 'glyphName' equals: aGlyphNameStringCollection from: aBackend populate: #(font 'font.family'))
+	^ ((self loadWhere: {#glyphName -> aGlyphNameStringCollection. #font -> aFont} populate: #(font 'font.family') from: aBackend)
 		then: [:glyphs | | existingGlyphs |
 			allGlyphs := glyphs asOrderedCollection.
 			existingGlyphs := glyphs collect: #glyphName.
