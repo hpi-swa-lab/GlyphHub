@@ -20,19 +20,16 @@ initialize
 		attachTo: updateButton.
 	
 	renderer := FRTGlyphRenderer new.
-	overviewTab := self initializeOverviewTab.
-	allGlyphsTab := self initializeAllGlyphTab.
-	discussionsTab := self initializeDiscussionsTab.
-	recentChangesTab := self initializeRecentChangesTab.
 	
 	tabContainer := BTPageNavigation new
-		addTab: 'Overview' content: overviewTab;
-		addTab: 'All Glyphs' content: allGlyphsTab;
-		addTab: 'Discussions' content: discussionsTab;
-		addTab: 'Recent Changes' content: recentChangesTab;
+		addTab: 'Overview' content: self initializeOverviewTab;
+		addTab: 'All Glyphs' content: self initializeAllGlyphTab;
+		addTab: 'Discussions' content: self initializeDiscussionsTab;
+		addTab: 'Recent Changes' content: self initializeRecentChangesTab;
 		showPage: 1.
 	
-	self add: (BTPage row
+	self
+		add: (BTPage row
 			add: fontNameLabel;
 			add: fontAuthorLabel;
 			add: BTWidget spacer;
@@ -40,4 +37,3 @@ initialize
 			add: otfButton);
 		add: tabContainer;
 		createPreviewGlyphsNotice
-	

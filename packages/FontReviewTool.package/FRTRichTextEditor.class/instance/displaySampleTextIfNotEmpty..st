@@ -1,4 +1,4 @@
-accessing
+updating
 displaySampleTextIfNotEmpty: aSampleText
 
 	| sampleTextArray |

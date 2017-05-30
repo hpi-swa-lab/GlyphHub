@@ -1,0 +1,1 @@
+A FRTSystemFont is a NULL-Object for FRTFont. It knows the systems standard font name for pango rendering. It can not communicate with the tools server.

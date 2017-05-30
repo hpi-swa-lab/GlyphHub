@@ -13,9 +13,9 @@ mockFamily
 				author: author);
 		versionMessages: #();
 		yourself.
-		
+
 	family fonts add: (FRTFont new
 		fontName: 'HI';
 		author: author).
-	
+
 	^ family

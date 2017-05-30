@@ -1,4 +1,4 @@
-updating
+accessing
 selectedOpenTypeFeatures
 
 	^ richText selectedOpenTypeFeatures

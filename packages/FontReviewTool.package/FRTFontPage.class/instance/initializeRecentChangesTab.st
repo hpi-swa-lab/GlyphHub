@@ -3,6 +3,6 @@ initializeRecentChangesTab
 
 	versionWidgets := BTPage column.
 	
-	^ BTScrollArea new
+	^ recentChangesTab := BTScrollArea new
 		add: versionWidgets;
 		yourself

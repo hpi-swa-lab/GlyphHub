@@ -1,4 +1,4 @@
-initialize-release
+loading
 loadSortedGlyphData
 	
 	^ self renderer loadDataForAllGlyphs

@@ -1,4 +1,4 @@
-updating
+accessing
 selectedText
 
 	^ richText selectedText

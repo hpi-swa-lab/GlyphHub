@@ -1,11 +1,11 @@
 paragraphs
-addEmptyParagraphWithPlaceholder: aString pointSize: aPtSizeNumber deletable: aBoolean
+addEmptyParagraphWithPlaceholder: aString pointSize: aPointSizeNumber deletable: aBoolean
 
 	| newParagraph |
 	newParagraph := (FRTParagraph new 
 		default;
 		placeholder: aString;
-		pointSize: aPtSizeNumber;
+		pointSize: aPointSizeNumber;
 		deletable: aBoolean).
 	self hasSubmorphs ifTrue: [
 		newParagraph

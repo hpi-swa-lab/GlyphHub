@@ -1,7 +1,8 @@
-lifecycle
+updating
 propagateFont
 
-	self topLevel selectedFont: self font.			
+	self topLevel selectedFont: self font.
+	uploadPopover family: self family.		
 	self renderer font: self font.
 	
 	versionWidgets

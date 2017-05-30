@@ -1,0 +1,1 @@
+A FRTFontOverviewWidget is the widget that shows general information about a font on the font page. It also contains a family's sample text.

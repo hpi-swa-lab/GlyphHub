@@ -1,4 +1,4 @@
-initialize-release
+callbacks
 openCreateCommentPage
 
 	self font then: [:font |

@@ -9,6 +9,6 @@ initializeDiscussionsTab
 	threadsContainer := BTPage column
 		expand: true.
 	
-	^ BTPage column
+	^ discussionsTab := BTPage column
 		add: showClosedThreadsCheckbox;
 		add: threadsContainer

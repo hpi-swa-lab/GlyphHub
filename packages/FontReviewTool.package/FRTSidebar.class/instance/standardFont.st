@@ -1,4 +1,4 @@
 constants
 standardFont
 
-	^ FRTSystemFont new.
+	^ FRTSystemFont new

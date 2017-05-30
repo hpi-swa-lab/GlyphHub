@@ -1,4 +1,4 @@
-as yet unclassified
+callbacks
 saveSampleText: aRichText
 
 	| title family |
@@ -9,16 +9,13 @@ saveSampleText: aRichText
 		self topLevel displayNotification: 'Sample cannot be empty' type: #danger.
 		^ self].
 	
-	^ (((family standardSampleText
+	^ ((family standardSampleText
 		title: title;
 		text: aRichText jsonString;
 		author: self topLevel user;
 		shouldBeInOverview: false;
 		saveTo: self topLevel backend)
-		then: [:sampleText | family
-			standardSampleText: sampleText;
-			save])
-		then: [:savedFamily |
+		then: [:savedSampleText|
 			self topLevel displayNotification: 'Saving successful' type: #success.
-			savedFamily standardSampleText])
+			savedSampleText])
 		catch: [:error | self topLevel displayNotification: 'Saving failed. Please try again.' type: #danger]

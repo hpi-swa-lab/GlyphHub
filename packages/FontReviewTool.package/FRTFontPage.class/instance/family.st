@@ -1,4 +1,4 @@
 accessing
 family
 
-	^ family
+	^ self font family
