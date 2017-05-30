@@ -7,7 +7,7 @@ import traceback
 from functools import wraps
 
 from flask import request, jsonify, current_app, send_from_directory, Response, send_file
-from werkzeug.exceptions import Unauthorized
+from werkzeug.exceptions import Unauthorized, BadRequest
 from werkzeug.utils import secure_filename
 from eve.auth import requires_auth
 from eve_sqlalchemy import sqla_object_to_dict
@@ -61,7 +61,7 @@ def register_routes(app):
         username = data.get('username')
         
         if not email or not password or not username:
-            raise Unauthorized('Missing email, password and/or username')
+            raise BadRequest('Missing email, password and/or username')
         else:
             user = User(username=username, email=email, password=password)
             session = app.data.driver.session
