@@ -1,4 +1,4 @@
-accessing
+callbacks
 openLoginPage
 
-	self topLevel openPage: FRTLoginPage new with: nil
+	self topLevel openPage: FRTLoginPage new

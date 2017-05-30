@@ -1,4 +1,4 @@
 actions
 openProfilePageOfCurrentUser
 
-	self openPage: FRTMyProfilePage new with: nil
+	self openPage: FRTMyProfilePage new

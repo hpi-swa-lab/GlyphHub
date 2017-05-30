@@ -11,6 +11,5 @@ initialize
 		passwordField1: (BTPasswordArea placeholder: 'Enter a password');
 		passwordField2: (BTPasswordArea placeholder: 'Enter password again');
 		initializeRegistrationBox;
-		"loader: (BTLoader new align: #(center center); expand: true);"
 		add: self registrationBox;
 		yourself

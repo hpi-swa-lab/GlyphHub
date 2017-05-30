@@ -6,7 +6,7 @@ testBackward
 	page2 := BTApplicationPage new.
 	app := FRTApplication firstPage: page1.
 	
-	app openPage: page2 with: nil.
+	app openPage: page2.
 	(self expect: app openPage) to be: page2.
 	app navigationStack goBack.
 	(self expect: app openPage) to be: page1
