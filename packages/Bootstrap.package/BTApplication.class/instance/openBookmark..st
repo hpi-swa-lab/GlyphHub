@@ -1,4 +1,4 @@
 navigation
 openBookmark: aBTPageBookmark
 
-	self openPage: aBTPageBookmark pageClass new with: aBTPageBookmark input
+	self openNewPage: aBTPageBookmark page with: aBTPageBookmark input

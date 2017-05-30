@@ -1,4 +1,4 @@
 callbacks
 openSampleTexts
 
-	self topLevel openPage: FRTSampleTextOverviewPage new
+	self topLevel openPage: FRTSampleTextOverviewPage new with: nil

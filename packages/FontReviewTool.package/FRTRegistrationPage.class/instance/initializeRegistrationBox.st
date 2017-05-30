@@ -10,7 +10,7 @@ initializeRegistrationBox
 		add: self registrationButton;
 		add: (BTPage row
 			add: (BTLabel bold: 'Already have an account?')
-			oppositeTo: self initializeLoginButton;
+			oppositeTo: self loginButton;
 			yourself);
 		primaryFormClickable: self registrationButton;
 		yourself)

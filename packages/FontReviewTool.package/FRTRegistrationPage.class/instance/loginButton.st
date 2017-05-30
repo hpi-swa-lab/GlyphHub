@@ -1,5 +1,5 @@
-initialize-release
-initializeLoginButton
+callbacks
+loginButton
 
 	^ BTButton new
 		text: 'Login to your Account';
