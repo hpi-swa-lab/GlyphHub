@@ -6,8 +6,8 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"page",
-		"input" ],
+		"input",
+		"pageClass" ],
 	"name" : "BTPageBookmark",
 	"pools" : [
 		 ],

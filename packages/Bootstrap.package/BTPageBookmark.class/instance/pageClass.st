@@ -1,0 +1,4 @@
+accessing
+pageClass
+
+	^ pageClass

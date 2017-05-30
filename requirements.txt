@@ -1,0 +1,6 @@
+-e git+https://github.com/tom95/eve@nested-embedded#egg=eve
+eve-sqlalchemy
+pytest
+fontmake
+pygit2
+Pillow

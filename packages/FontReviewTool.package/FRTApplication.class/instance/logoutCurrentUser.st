@@ -5,7 +5,7 @@ logoutCurrentUser
 		then: [
 			self
 				user: nil;
-				openPage: FRTLoginPage new with: nil;
+				openPage: FRTLoginPage new;
 				showSidebar: false;
 				showHeader: false])
 		catch: [:error | self topLevel displayNotification: 'Failed to logout!' type: #danger]

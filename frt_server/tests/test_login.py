@@ -19,7 +19,7 @@ class LoginTestCase(TestMinimal):
     def test_register_new_user(self):
         session = self.connection.session() 
         count = session.query(func.count(User._id)).scalar()
-        response = self.post('/register', dict(email='eve@eviler.com', username='Eva', password='eveisevil')) 
+        response = self.post('/register', dict(email='eve@evil.com', username='Eva', password='eveisevil')) 
         self.assertEqual(response[1], 200)
         newCount = session.query(func.count(User._id)).scalar()
         self.assertGreater(newCount, count)
@@ -28,6 +28,6 @@ class LoginTestCase(TestMinimal):
         session = self.connection.session()
         count = session.query(func.count(User._id)).scalar()
         response = self.post('/register', dict(email='', username='Eva', password='eveisevil')) 
-        self.assertEqual(response[1], 400)
+        self.assertEqual(response[1], 401)
         newCount = session.query(func.count(User._id)).scalar()
         self.assertEqual(newCount, count)

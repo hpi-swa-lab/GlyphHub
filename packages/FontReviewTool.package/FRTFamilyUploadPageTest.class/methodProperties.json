@@ -2,7 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"enterPage" : "TB 5/22/2017 15:05",
+		"enterPage" : "TB 5/30/2017 10:35",
 		"setUp" : "TB 5/22/2017 14:31",
 		"simulateFinishUploadWithError:" : "TB 5/22/2017 16:05",
 		"testBiographyIsSaved" : "TB 5/23/2017 10:10",
@@ -10,7 +10,7 @@
 		"testDisplaysExistingBiography" : "TB 5/22/2017 18:17",
 		"testFontTextIsSaved" : "TB 5/23/2017 10:10",
 		"testGoToFontPageAutosaves" : "TB 5/22/2017 18:08",
-		"testInhibtsLeavingWithUnsavedChanges" : "TB 5/23/2017 10:43",
+		"testInhibtsLeavingWithUnsavedChanges" : "TB 5/30/2017 10:35",
 		"testLoadingIndicator" : "TB 5/22/2017 16:05",
 		"testReenteringShowsSameUpload" : "TB 5/22/2017 17:50",
 		"testReenteringShowsWaitingForUpload" : "TB 5/22/2017 17:55",
