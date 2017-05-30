@@ -4,7 +4,7 @@ initialize
 	super initialize.
 
 	self
-		bookmark: (BTPageBookmark page: FRTDashboard);
+		bookmark: (BTPageBookmark pageClass: FRTDashboard);
 		initializeRegistrationButton;
 		emailField: (BTTextArea placeholder: 'Enter your email address');
 		usernameField: (BTTextArea placeholder: 'Enter a username');

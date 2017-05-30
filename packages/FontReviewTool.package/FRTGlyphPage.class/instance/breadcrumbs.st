@@ -8,5 +8,5 @@ breadcrumbs
 		add: (BTBreadcrumb
 			icon: #info_circle
 			text: 'Glyph ', self glyph glyphName
-			bookmark: (BTPageBookmark page: self class input: self glyph));
+			bookmark: (BTPageBookmark pageClass: self class input: self glyph));
 		yourself

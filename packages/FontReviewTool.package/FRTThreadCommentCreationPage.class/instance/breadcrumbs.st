@@ -13,7 +13,7 @@ breadcrumbs
 				add: (BTBreadcrumb
 					icon: #info_circle
 					text: 'Glyph ', self enteredFromGlyph glyphName
-					bookmark: (BTPageBookmark page: FRTGlyphPage input: self enteredFromGlyph))].
+					bookmark: (BTPageBookmark pageClass: FRTGlyphPage input: self enteredFromGlyph))].
 	
 	self thread isCreated ifTrue: [
 		breadcrumbs add: (BTBreadcrumb

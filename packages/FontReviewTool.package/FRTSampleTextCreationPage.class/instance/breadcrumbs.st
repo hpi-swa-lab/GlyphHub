@@ -2,7 +2,7 @@ navigation
 breadcrumbs
 
 	| bookmark |
-	bookmark := (BTPageBookmark page: FRTSampleTextCreationPage).
+	bookmark := (BTPageBookmark pageClass: FRTSampleTextCreationPage).
 
 	^ FRTSampleTextOverviewPage new breadcrumbs
 		add: (BTBreadcrumb

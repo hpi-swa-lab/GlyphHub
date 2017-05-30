@@ -2,7 +2,7 @@ ui
 breadcrumbs
 
 	| bookmark |
-	bookmark := (BTPageBookmark page: FRTSampleTextPage input: self sampleText).
+	bookmark := (BTPageBookmark pageClass: FRTSampleTextPage input: self sampleText).
 
 	^ FRTSampleTextOverviewPage new breadcrumbs
 		add: (BTBreadcrumb
