@@ -1,4 +1,4 @@
-loading
+navigation
 breadcrumbs
 
 	^ super breadcrumbs add: (BTBreadcrumb
