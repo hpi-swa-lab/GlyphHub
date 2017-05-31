@@ -73,7 +73,7 @@ class Font(CommonColumns):
         """return the contents of the file at path at the version of version_hash.
         if version_hash is None, the newest will be returned"""
         if not version_hash:
-            with open(os.path.join(self.folder_path(), path)) as file:
+            with open(os.path.join(self.folder_path(), path), encoding='utf-8') as file:
                 return file.read()
 
         self.family.ensure_source_folder_exists()

@@ -1,4 +1,4 @@
 accessing
 checked: aBoolean
 
-	check checked: aBoolean  
+	checkbox checked: aBoolean  

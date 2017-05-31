@@ -1,4 +1,4 @@
 accessing
 excludeInstVars
 
-	^ #(versionMessages lastUploadError uploadStatus)
+	^ #(versionMessages lastUploadError uploadStatus), super excludeInstVars

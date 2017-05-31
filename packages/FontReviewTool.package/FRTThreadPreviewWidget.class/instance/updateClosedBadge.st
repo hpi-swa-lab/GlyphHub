@@ -1,11 +1,11 @@
 updating
-updateOpenClosedBadge
+updateClosedBadge
 
 	self thread closed
 		ifTrue: [
-			openClosedBadge
+			closedBadge
 				text: 'Closed';
 				visible: true;
 				colorType: #danger]
 		ifFalse: [
-			openClosedBadge visible: false]
+			closedBadge visible: false]
