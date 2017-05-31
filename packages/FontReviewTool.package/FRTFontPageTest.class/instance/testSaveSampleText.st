@@ -8,7 +8,7 @@ testSaveSampleText
 	(self expect: family standardSampleText) to be: nil.
 	sampleTextEditor := page overviewTab sampleTextEditor.
 	sampleTextEditor fromJsonString: self mockSampleTextJson.
-	sampleTextSavePromise := page overviewTab saveSampleText: sampleTextEditor richText.
+	sampleTextSavePromise := page overviewTab trySaveSampleText: sampleTextEditor richText.
 	(self expect: sampleTextSavePromise) to resolve.
 
 	familyLoadPromise := FRTFamily load: family id populate: #('standardSampleText' 'standardSampleText.author') from: self topLevel.

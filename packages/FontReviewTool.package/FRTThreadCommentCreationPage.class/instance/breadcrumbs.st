@@ -19,12 +19,12 @@ breadcrumbs
 		breadcrumbs add: (BTBreadcrumb
 			icon: #comments
 			text: self thread title
-			bookmark: (BTPageBookmark page: FRTThreadPage input: {self thread. self enteredFromGlyph}))].
+			bookmark: (BTPageBookmark pageClass: FRTThreadPage input: {self thread. self enteredFromGlyph}))].
 	
 	breadcrumbs
 		add: (BTBreadcrumb
 			icon: #pencil
 			text: title
-			bookmark: (BTPageBookmark page: self class input: {self thread. self enteredFromGlyph})).
+			bookmark: (BTPageBookmark pageClass: self class input: {self thread. self enteredFromGlyph})).
 		
 	^ breadcrumbs
