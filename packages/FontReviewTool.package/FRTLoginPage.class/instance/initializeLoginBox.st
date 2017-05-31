@@ -12,10 +12,10 @@ initializeLoginBox
 			add: (BTLabel bold: 'Don''t have an account yet?')
 			oppositeTo: self registerAccountButton;
 			yourself);
-		add: ((BTLabel text:
+		add: (BTLabel text:
 			'If you forgot your login or have other problems,',
 			String crlf,
 			'please contact us at ',
 			self ourMail)
-			secondarySubHeading);
+			secondarySubHeading;
 		yourself)
