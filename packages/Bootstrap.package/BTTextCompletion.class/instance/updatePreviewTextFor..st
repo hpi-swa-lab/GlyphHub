@@ -6,7 +6,7 @@ updatePreviewTextFor: aString
 		(self activeSuggestionDo: #plainText ifNone: [
 			self
 				completableSuggestionFor: aString
-				do: [:item | aString, '<span color="#ccc">', (item plainText allButFirst: aString size), '</span>']
-				ifNone: [aString]]).
+				do: [:item | aString, '<span color="#ccc">', (item plainText allButFirst: aString size) escapeEntities, '</span>']
+				ifNone: [aString escapeEntities]]).
 
 	self changed
