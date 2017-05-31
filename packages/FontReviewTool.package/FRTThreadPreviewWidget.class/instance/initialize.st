@@ -8,7 +8,7 @@ initialize
 	commentCount := BTButton new
 		when: #clicked send: #openThread to: self.
 	author := BTLabel new secondary.
-	openClosedBadge := BTBadge new.
+	closedBadge := BTBadge new.
 	
 	self
 		when: #clicked send: #openThread to: self;
@@ -17,6 +17,8 @@ initialize
 		padding: BTWidget spacing;
 		add: (BTPage row
 			add: threadTitle;
-			add: author oppositeTo: openClosedBadge;
-			add:  commentCount);
+			add: author;
+			add: BTWidget spacer;
+			add: closedBadge;
+			add: commentCount);
 		add: commentPreview

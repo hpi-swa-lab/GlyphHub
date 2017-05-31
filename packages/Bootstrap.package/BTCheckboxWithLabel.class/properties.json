@@ -6,8 +6,8 @@
 		 ],
 	"commentStamp" : "TB 3/23/2017 15:07",
 	"instvars" : [
-		"check",
-		"label" ],
+		"label",
+		"checkbox" ],
 	"name" : "BTCheckboxWithLabel",
 	"pools" : [
 		 ],

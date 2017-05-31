@@ -3,7 +3,7 @@ thread: aThread
 
 	thread := aThread.
 	threadTitle text: aThread title.
-	self updateOpenClosedBadge.
+	self updateClosedBadge.
 	(thread comments sortedBy: #id) ifNotEmptyDo: [:list | | firstComment |
 		firstComment := list first.
 		latestComment := list last.

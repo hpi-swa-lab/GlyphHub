@@ -1,5 +1,5 @@
 testing
-testCloseThreadDisplayedForThreadStarter
+testCloseThreadDisplayedForThreadAuthor
 	
 	self changeLoggedInUserToThreadAuthor.
 	self enterPage.

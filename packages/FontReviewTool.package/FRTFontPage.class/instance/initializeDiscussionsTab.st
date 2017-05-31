@@ -2,7 +2,7 @@ initialize-release
 initializeDiscussionsTab
 
 	showClosedThreadsCheckbox := (BTCheckboxWithLabel label: 'Show closed threads').
-	showClosedThreadsCheckbox check
+	showClosedThreadsCheckbox checkbox
 		when: #toggled
 		send: #updateThreadsContainer
 		to: self.
