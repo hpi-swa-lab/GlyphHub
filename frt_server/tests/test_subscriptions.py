@@ -1,6 +1,7 @@
 from frt_server.tests import TestMinimal
 from frt_server.tables import Thread, ThreadSubscription, User
 from time import sleep
+from datetime import datetime, timedelta
 
 class SubscriptionTestCase(TestMinimal):
     def setUp(self):
@@ -10,7 +11,10 @@ class SubscriptionTestCase(TestMinimal):
         self.session = self.connection.session
         self.user = self.session.query(User).get(self.user_id)
         self.thread = Thread(title="Test", closed=False)
-        self.subscription = ThreadSubscription(user=self.user, thread=self.thread)
+        self.subscription = ThreadSubscription(
+                user=self.user,
+                thread=self.thread,
+                last_visited=datetime.utcnow() - timedelta(days=1))
         self.auth_header = [('Authorization', self.cachedApiToken)]
 
         self.session.add(self.thread, self.subscription) 
@@ -19,7 +23,6 @@ class SubscriptionTestCase(TestMinimal):
 
     def test_update_last_visited(self):
         oldTime = self.subscription.last_visited
-        sleep(1)
 
         data, status = self.patch('/thread/' + str(self.thread._id) + '/visit', None, headers=self.auth_header) 
         self.assertEqual(status, 200)

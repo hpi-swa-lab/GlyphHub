@@ -304,6 +304,7 @@ def register_routes(app):
             subscription = session.query(ThreadSubscription).filter_by(user_id = user._id, thread_id = thread_id).one()
         except orm.exc.NoResultFound:
             return jsonify({'error' : 'You are not subscribed to this thread'}), 404
+        # should be caught by unique constraint on thread id / user id in database
         except orm.exc.MultipleResultsFound:
             return jsonify({'error' : 'Multiple subscriptions found. Please contact the devs about this'}), 500
         subscription.last_visited = func.now()
