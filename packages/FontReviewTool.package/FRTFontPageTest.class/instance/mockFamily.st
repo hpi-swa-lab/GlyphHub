@@ -12,6 +12,7 @@ mockFamily
 				shouldBeInOverview: false;
 				author: author);
 		versionMessages: #();
+		author: author;
 		yourself.
 
 	family fonts add: (FRTFont new

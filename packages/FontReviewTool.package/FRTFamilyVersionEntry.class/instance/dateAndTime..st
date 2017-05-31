@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 dateAndTime: aDateAndTime
 
 	dateAndTime := aDateAndTime

@@ -2,7 +2,7 @@ lifecycle
 enteringWith: aFont
 
 	^ (FRTFont load: aFont id populate: self fontFields from: self backend)
-		then: [:newFont |
+		then: [:newFont |.
 			self updateFont: newFont.
 			
 			self font author id = self topLevel user id
