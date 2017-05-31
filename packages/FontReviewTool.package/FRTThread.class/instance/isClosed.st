@@ -1,0 +1,4 @@
+testing
+isClosed
+
+	^ self closed

@@ -10,8 +10,7 @@ testDisplaysCommentCount
 	(self expect: (self topLevel updateLastVisited: thread)) to resolve.
 	(self expect: (previewWidget thread: thread)) to resolve.
 	(self expect: previewWidget) to haveText: ((BTIcon icon: #comments_o), ' 1 comment').
-	
-	subscription lastVisited: DateAndTime yesterday.
+
 	comment := FRTComment new
 		text: 'blah';
 		thread: thread;

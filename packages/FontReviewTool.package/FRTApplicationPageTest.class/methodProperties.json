@@ -4,7 +4,7 @@
 	"instance" : {
 		"addEntity:" : "TB 5/9/2017 18:28",
 		"findDialog:labelled:" : "lcj 5/11/2017 16:03",
-		"mockBigThread" : "lcj 5/24/2017 15:27",
+		"mockBigThread" : "TB 5/31/2017 12:21",
 		"mockFont" : "lcj 5/29/2017 13:51",
 		"mockGlyph" : "lcj 5/26/2017 12:27",
 		"mockGlyphLowerA" : "lcj 5/26/2017 12:23",
@@ -12,7 +12,7 @@
 		"mockGlyphUpperA" : "lcj 5/26/2017 12:23",
 		"mockSampleText" : "lcj 5/24/2017 17:49",
 		"mockSampleTextNotInOverview" : "lcj 5/24/2017 17:50",
-		"mockSubscription" : "lcj 5/24/2017 16:14",
+		"mockSubscription" : "TB 5/31/2017 12:22",
 		"mockThread" : "lcj 5/26/2017 12:03",
 		"mockThreadWithMultipleGlyphs" : "lcj 5/26/2017 12:26",
 		"mockUser" : "TB 5/22/2017 18:17",

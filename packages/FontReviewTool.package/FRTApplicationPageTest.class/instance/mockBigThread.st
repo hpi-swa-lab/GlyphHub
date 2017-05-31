@@ -13,6 +13,7 @@ mockBigThread
 		add: (FRTComment new
 			text: 'third comment text';
 			author: self mockUserOther;
+			" we use future to make sure that this comment is definitely unread by us "
 			createdAt: DateAndTime tomorrow).
 			
 	^ newThread
