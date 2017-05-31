@@ -1,14 +1,6 @@
 lifecycle
 previewTextLabelFor: aSampleText
 
-	| text richText |
-
-	richText := (FRTRichText new
-			fromJson: (Json readFrom: aSampleText text readStream)).
-	richText firstParagraph
-		ifNotNil: [text := richText firstParagraph text]
-		ifNil: [text := ''].
-
-	^ (BTLabel
-		text: text)
+	^ BTLabel new
+		text: (FRTRichText fromJsonString: aSampleText text) previewText;
 		ellipsize: #end

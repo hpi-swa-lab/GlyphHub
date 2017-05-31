@@ -1,4 +1,4 @@
-accessing
+*bootstrap-promises
 isApplicationError
 
 	^ true

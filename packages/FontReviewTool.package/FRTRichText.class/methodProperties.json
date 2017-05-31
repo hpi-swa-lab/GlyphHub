@@ -1,5 +1,6 @@
 {
 	"class" : {
+		"fromJsonString:" : "al 5/31/2017 17:54",
 		"standardEmptyFamilyText" : "TB 5/30/2017 13:58" },
 	"instance" : {
 		"addEmptyParagraph" : "al 5/12/2017 10:24",
@@ -8,10 +9,10 @@
 		"addEmptyParagraphWithPlaceholder:pointSize:deletable:" : "TB 5/30/2017 14:00",
 		"addParagraph:" : "TB 5/5/2017 17:45",
 		"editable:" : "TB 5/5/2017 16:03",
-		"firstParagraph" : "al 5/26/2017 11:13",
+		"firstParagraph" : "al 5/31/2017 17:28",
 		"focusParagraph:" : "TB 5/5/2017 17:48",
 		"font:" : "al 5/19/2017 10:47",
-		"fromJson:" : "al 5/26/2017 10:56",
+		"fromJson:" : "al 5/31/2017 17:29",
 		"ifEmpty:" : "al 5/31/2017 11:22",
 		"ifEmpty:ifNotEmpty:" : "al 5/31/2017 11:21",
 		"initialize" : "al 5/12/2017 10:44",
@@ -20,6 +21,8 @@
 		"minimumNumberOfParagraphs" : "al 5/12/2017 10:43",
 		"minimumNumberOfParagraphs:" : "al 5/12/2017 10:43",
 		"paragraphs" : "TB 5/5/2017 14:52",
+		"previewText" : "al 5/31/2017 17:54",
+		"removeAllParagraphs" : "al 5/31/2017 17:29",
 		"removeParagraph:" : "al 5/16/2017 16:35",
 		"selectedAlignment:" : "TB 5/5/2017 15:34",
 		"selectedFont:" : "TB 5/5/2017 17:23",

@@ -1,0 +1,14 @@
+{
+	"category" : "Bootstrap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"message" ],
+	"name" : "BTValidationFailure",
+	"pools" : [
+		 ],
+	"super" : "Exception",
+	"type" : "normal" }
