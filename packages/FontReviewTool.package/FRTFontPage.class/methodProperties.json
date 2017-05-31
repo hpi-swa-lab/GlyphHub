@@ -14,21 +14,12 @@
 		"fontFields" : "TB 5/30/2017 13:31",
 		"gridWidget" : "JH 4/7/2017 16:47",
 		"gridWidget:" : "JH 4/7/2017 16:47",
-<<<<<<< HEAD
 		"initialize" : "TB 5/30/2017 13:09",
 		"initializeAllGlyphTab" : "TB 5/30/2017 12:04",
 		"initializeDiscussionsTab" : "TB 5/31/2017 14:45",
 		"initializeOverviewTab" : "TB 5/30/2017 12:03",
 		"initializeRecentChangesTab" : "TB 5/30/2017 12:05",
-=======
-		"initialize" : "al 5/20/2017 17:22",
-		"initializeAllGlyphTab" : "al 5/16/2017 16:21",
-		"initializeDiscussionsTab" : "al 5/26/2017 13:41",
-		"initializeMetadataArea" : "al 5/11/2017 11:54",
-		"initializeOverviewTab" : "al 5/11/2017 12:14",
-		"initializeRecentChangesTab" : "TB 5/16/2017 18:14",
 		"initializeSampleTextArea" : "al 5/11/2017 11:53",
->>>>>>> 40a0194... added scroll areas to scalable things
 		"leaving" : "ek 4/24/2017 11:30",
 		"loadSortedGlyphData" : "TB 5/24/2017 21:25",
 		"loadTabsContent" : "TB 5/30/2017 12:12",
