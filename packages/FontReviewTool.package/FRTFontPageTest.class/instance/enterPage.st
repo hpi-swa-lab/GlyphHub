@@ -1,5 +1,4 @@
 running
 enterPage
 
-	font := family defaultFont.
-	self openPage: page with: font
+	self openPage: (page := FRTFontPage new) with: font

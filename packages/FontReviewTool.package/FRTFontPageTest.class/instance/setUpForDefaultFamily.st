@@ -4,4 +4,8 @@ setUpForDefaultFamily
 
 	family := self mockFamily.
 	font := family defaultFont.
-	self setUpForPage: FRTFontPage new with: font prepare: [:topLevel | topLevel addEntity: family]
+	otherUser := self mockUserOther.
+	self setUpForPage: FRTFontPage new with: font prepare: [:topLevel |
+		topLevel
+			addEntity: otherUser;
+			addEntity: family]
