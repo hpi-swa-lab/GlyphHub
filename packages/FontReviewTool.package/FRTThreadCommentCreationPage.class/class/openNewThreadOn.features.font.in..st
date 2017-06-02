@@ -1,10 +1,10 @@
 examples
-openNewThreadOn: aString features: aCollection font: aFont in: aTopLevel
+openNewThreadOn: aString features: aFeaturesString font: aFont in: aTopLevel
 
 	| thread glyphNamesAndIndices |
 	thread := FRTThread new.
 	
-	((((aTopLevel backend convertUnicodeToGlyphNames: aString features: aCollection of: aFont)
+	((((aTopLevel backend convertUnicodeToGlyphNames: aString features: aFeaturesString of: aFont)
 		then: [:glyphNames |
 			glyphNamesAndIndices := glyphNames.
 			FRTGlyph ensureExists: (glyphNamesAndIndices collect: #first) font: aFont in: aTopLevel backend.])

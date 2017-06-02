@@ -1,8 +1,8 @@
 font-upload
-convertUnicodeToGlyphNames: aString features: aCollection of: aFontOrId
+convertUnicodeToGlyphNames: aString features: aFeatureString of: aFontOrId
 
 	| data id |
-	data := {'unicode' -> aString. 'features' -> aCollection} as: Dictionary.
+	data := {'unicode' -> aString. 'features' -> aFeatureString} as: Dictionary.
 	id := aFontOrId isBTModel ifTrue: [aFontOrId id] ifFalse: [aFontOrId].
 	
 	^ self
