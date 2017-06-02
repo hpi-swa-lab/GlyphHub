@@ -10,7 +10,8 @@
 		"text",
 		"author",
 		"tags",
-		"families" ],
+		"families",
+		"shouldBeInOverview" ],
 	"name" : "FRTSampleText",
 	"pools" : [
 		 ],

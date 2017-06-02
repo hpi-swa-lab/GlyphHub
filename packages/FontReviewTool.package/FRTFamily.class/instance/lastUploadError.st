@@ -1,0 +1,4 @@
+accessing
+lastUploadError
+
+	^ lastUploadError

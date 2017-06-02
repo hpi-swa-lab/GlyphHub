@@ -21,7 +21,9 @@ initialize
 	tagArea := (BTPage row)
 		spacing: BTWidget spacing / 3;
 		yourself.
-	commentArea := BTPage column.
+		
+	commentArea := BTPage column
+		spacing: 0.
 	
 	self
 		withLayout;
@@ -34,7 +36,8 @@ initialize
 			add: subscriptionButton);		
 		add: preview;
 		add: tagArea;
-		add: commentArea;
+		add: (BTScrollArea new
+			add: commentArea);
 		add: ((BTButton text:  (BTIcon icon: #comment_o), ' Add new comment')
 			colorType: #primary;
 			align: #(end start);

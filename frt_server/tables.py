@@ -1,4 +1,4 @@
-from sqlalchemy import Table, Column, DateTime, ForeignKey, Integer, String, Text, Float, LargeBinary, Boolean, Enum, func
+from sqlalchemy import Table, Column, DateTime, ForeignKey, UniqueConstraint, Integer, String, Text, Float, LargeBinary, Boolean, Enum, func
 from sqlalchemy.orm import column_property, relationship, validates
 from eve_sqlalchemy.decorators import registerSchema
 
@@ -21,6 +21,7 @@ class SampleText(CommonColumns):
     author = relationship(User)
     tags = relationship('Tag', secondary=tag_sample_text_association_table)
     families = relationship('Family', back_populates='standard_sample_text')
+    should_be_in_overview = Column(Boolean, default=False)
 
 class ThreadGlyphAssociation(CommonColumns):
     __tablename__ = 'thread_glyph_association'
@@ -29,6 +30,8 @@ class ThreadGlyphAssociation(CommonColumns):
     glyph_id = Column(Integer, ForeignKey('glyph._id'))
     thread = relationship('Thread', back_populates='thread_glyph_associations')
     glyph = relationship('Glyph', back_populates='thread_glyph_associations')
+    string_index = Column(Integer)
+    __table_args__ = (UniqueConstraint('thread_id', 'glyph_id', 'string_index'),)
 
 class ThreadSubscription(CommonColumns):
     __tablename__ = 'thread_subscription'
@@ -37,7 +40,8 @@ class ThreadSubscription(CommonColumns):
     thread_id = Column(Integer, ForeignKey('thread._id'))
     user = relationship('User', back_populates='thread_subscriptions')
     thread = relationship('Thread', back_populates='thread_subscriptions')
-    """maybe use this table for 'last seen' or something to find unread updates of a thread?"""
+    last_visited = Column(DateTime, server_default=func.now())
+    __table_args__ = (UniqueConstraint('user_id', 'thread_id'),)
 
 class Glyph(CommonColumns):
     __tablename__ = 'glyph'
@@ -46,6 +50,7 @@ class Glyph(CommonColumns):
     font_id = Column(Integer, ForeignKey('font._id'))
     font = relationship('Font', back_populates='glyphs')
     thread_glyph_associations = relationship('ThreadGlyphAssociation', back_populates='glyph')
+    __table_args__ = (UniqueConstraint('glyph_name', 'font_id', name='glyph_name_font_id_unique'),)
 
 class Thread(CommonColumns):
     __tablename__ = 'thread'

@@ -2,11 +2,14 @@
 	"class" : {
 		 },
 	"instance" : {
+		"addTo:withThread:" : "TB 5/31/2017 12:30",
 		"drawOn:" : "ek 4/7/2017 11:25",
 		"enteredFromGlyph" : "al 4/9/2017 11:31",
 		"enteredFromGlyph:" : "al 4/9/2017 11:31",
-		"initialize" : "al 5/20/2017 15:30",
+		"hasNewComments" : "lcj 5/23/2017 14:15",
+		"initialize" : "TB 5/31/2017 15:25",
 		"openThread" : "al 4/9/2017 11:50",
 		"thread" : "ek 4/7/2017 12:37",
-		"thread:" : "al 5/20/2017 15:16",
-		"updateOpenClosedBadge" : "al 5/20/2017 15:43" } }
+		"thread:" : "TB 5/31/2017 15:22",
+		"updateClosedBadge" : "TB 5/31/2017 15:22",
+		"updateCommentCount" : "lcj 5/23/2017 12:25" } }

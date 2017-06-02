@@ -1,4 +1,4 @@
-as yet unclassified
+helpers
 changeLoggedInUserToThreadAuthor
 
-	 self topLevel user: (thread comments sortedBy: #createdAt) first author
+	 self topLevel user: thread author

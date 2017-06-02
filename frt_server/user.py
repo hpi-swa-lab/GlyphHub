@@ -1,4 +1,4 @@
-from sqlalchemy import Column, ForeignKey, String, Text
+from sqlalchemy import Column, ForeignKey, UniqueConstraint, String, Text
 from sqlalchemy.orm import relationship
 from sqlalchemy.orm import column_property, relationship, validates
 
@@ -19,9 +19,11 @@ class User(CommonColumns):
     __tablename__ = 'user'
     username = Column(String(120))
     password = Column(String(120))
-    email = Column(String(120))
+    email = Column(String(120), unique=True)
     salt = Column(String(120))
+    biography = Column(Text)
     fonts = relationship('Font', back_populates='author')
+    families = relationship('Family', back_populates='author')
     attachments = relationship('Attachment', back_populates='owner')
     thread_subscriptions = relationship('ThreadSubscription', back_populates='user')
 

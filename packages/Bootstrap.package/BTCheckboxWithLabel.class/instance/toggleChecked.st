@@ -1,4 +1,4 @@
 accessing
 toggleChecked
 
-	check toggleChecked
+	checkbox toggleChecked

@@ -9,7 +9,9 @@
 		"entities",
 		"id",
 		"extraGlifs",
-		"fileUploads" ],
+		"fileUploads",
+		"nextConfirmAnswer",
+		"glyphLoader" ],
 	"name" : "FRTMockTopLevel",
 	"pools" : [
 		 ],

@@ -1,4 +1,4 @@
 initialize-release
 initializeOverviewTab
 
-	^ FRTFontOverviewWidget new
+	^ overviewTab := FRTFontOverviewWidget new

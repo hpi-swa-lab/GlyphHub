@@ -1,4 +1,4 @@
 paragraphs
-addEmptyParagraphWithPlaceholder: aString pointSize: aPtSizeNumber
+addEmptyParagraphWithPlaceholder: aString pointSize: aPointSizeNumber
 
-	self addEmptyParagraphWithPlaceholder: aString pointSize: aPtSizeNumber deletable: true
+	self addEmptyParagraphWithPlaceholder: aString pointSize: aPointSizeNumber deletable: true

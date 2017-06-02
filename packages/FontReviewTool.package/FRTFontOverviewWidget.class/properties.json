@@ -4,10 +4,12 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "TB 5/30/2017 15:11",
 	"instvars" : [
 		"sampleTextEditor",
-		"font" ],
+		"font",
+		"about",
+		"biography" ],
 	"name" : "FRTFontOverviewWidget",
 	"pools" : [
 		 ],

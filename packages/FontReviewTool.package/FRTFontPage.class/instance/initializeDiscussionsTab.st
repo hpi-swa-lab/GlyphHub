@@ -2,13 +2,14 @@ initialize-release
 initializeDiscussionsTab
 
 	showClosedThreadsCheckbox := (BTCheckboxWithLabel label: 'Show closed threads').
-	showClosedThreadsCheckbox check
+	showClosedThreadsCheckbox checkbox
 		when: #toggled
 		send: #updateThreadsContainer
 		to: self.
 	threadsContainer := BTPage column
 		expand: true.
 	
-	^ BTPage column
+	^ discussionsTab := BTPage column
 		add: showClosedThreadsCheckbox;
-		add: threadsContainer
+		add: (BTScrollArea new
+			add: threadsContainer)

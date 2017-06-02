@@ -4,7 +4,7 @@ login: anEmailString password: aPasswordString expectSuccessfulLogIn: aBoolean
 	| loginPromise |
 	page emailField text: anEmailString.
 	page passwordField text: aPasswordString.
-	page bookmark: (BTPageBookmark page: BTApplicationPage).
+	page bookmark: (BTPageBookmark pageClass: BTApplicationPage).
 	
 	loginPromise := self safePromise: page tryLogin.  
 	

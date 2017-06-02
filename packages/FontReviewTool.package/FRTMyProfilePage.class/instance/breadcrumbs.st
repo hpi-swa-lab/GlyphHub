@@ -1,9 +1,9 @@
-as yet unclassified
+navigation
 breadcrumbs
 
 	^ FRTDashboard new breadcrumbs
 		add: (BTBreadcrumb
 			icon: #user
 			text: 'My Profile'
-			bookmark: (BTPageBookmark page: self class input: self user));
+			bookmark: (BTPageBookmark pageClass: self class input: self user));
 		yourself

@@ -1,4 +1,4 @@
 accessing
 versionMessages
 
-	^ versionMessages
+	^ versionMessages ifNil: [#()]

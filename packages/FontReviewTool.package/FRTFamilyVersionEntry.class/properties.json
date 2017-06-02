@@ -9,7 +9,6 @@
 		"versionHash",
 		"message",
 		"dateAndTime",
-		"font",
 		"family" ],
 	"name" : "FRTFamilyVersionEntry",
 	"pools" : [

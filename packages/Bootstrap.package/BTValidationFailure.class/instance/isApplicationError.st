@@ -1,0 +1,4 @@
+*bootstrap-promises
+isApplicationError
+
+	^ true

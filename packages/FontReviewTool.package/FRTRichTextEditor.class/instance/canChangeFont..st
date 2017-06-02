@@ -1,4 +1,4 @@
-initialize-release
+accessing
 canChangeFont: aBoolean
 
 	canChangeFont := aBoolean.

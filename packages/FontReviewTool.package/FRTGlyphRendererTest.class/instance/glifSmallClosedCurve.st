@@ -1,7 +1,7 @@
 as yet unclassified
 glifSmallClosedCurve
 
-	^ XMLDOMParser parseDocumentFrom: '<?xml version="1.0" encoding="UTF-8"?>
+	^ '<?xml version="1.0" encoding="UTF-8"?>
 <glyph name="a" format="2">
 	<advance width="100"/>
 	<unicode hex="0061"/>
@@ -15,4 +15,4 @@ glifSmallClosedCurve
 			<point x="50" y="10"/>
 		</contour>
 	</outline>
-</glyph>' readStream
+</glyph>'

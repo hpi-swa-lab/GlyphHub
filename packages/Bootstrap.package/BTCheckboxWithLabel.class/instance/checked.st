@@ -1,4 +1,4 @@
 accessing
 checked
 
-	^ check checked
+	^ checkbox checked

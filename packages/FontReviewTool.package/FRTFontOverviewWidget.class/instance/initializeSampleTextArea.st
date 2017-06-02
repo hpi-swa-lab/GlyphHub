@@ -1,7 +1,7 @@
-as yet unclassified
+initialize-release
 initializeSampleTextArea
 
 	sampleTextEditor := FRTFontOverviewEditor new.
-	sampleTextEditor when: #saved send: #saveSampleText: to: self.
+	sampleTextEditor when: #saved send: #trySaveSampleText: to: self.
 
 	^ BTPage column add: sampleTextEditor

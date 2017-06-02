@@ -1,4 +1,4 @@
-as yet unclassified
+helpers
 changeLoggedInUserToThreadFontAuthor
 
-	self topLevel user: thread glyphs anyOne font author
+	self topLevel user: thread font author

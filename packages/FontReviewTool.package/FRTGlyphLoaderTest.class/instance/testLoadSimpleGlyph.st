@@ -1,4 +1,4 @@
-as yet unclassified
+testing
 testLoadSimpleGlyph
 
 	| glyphPromise |
@@ -9,4 +9,4 @@ testLoadSimpleGlyph
 		
 	(self expect: glyphPromise) to resolve.
 		
-	(self expect: glyphPromise value glif asString) to equal: (XMLDOMParser parseDocumentFrom: self simpleGlif readStream) asString
+	(self expect: glyphPromise value asString) to equal: (XMLDOMParser parseDocumentFrom: self simpleGlif readStream) asString

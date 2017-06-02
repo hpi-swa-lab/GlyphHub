@@ -1,12 +1,15 @@
 {
 	"class" : {
 		"associations" : "al 5/11/2017 16:15",
-		"modelName" : "lcj 4/7/2017 10:55" },
+		"modelName" : "lcj 4/7/2017 10:55",
+		"standardEmptyFamilyText" : "lcj 5/29/2017 14:01" },
 	"instance" : {
 		"author" : "lcj 4/7/2017 10:54",
 		"author:" : "ek 4/11/2017 16:03",
 		"families" : "al 5/11/2017 16:16",
 		"families:" : "al 5/11/2017 16:16",
+		"shouldBeInOverview" : "lcj 5/24/2017 17:38",
+		"shouldBeInOverview:" : "lcj 5/24/2017 17:37",
 		"tags" : "lcj 4/7/2017 11:12",
 		"tags:" : "lcj 4/7/2017 11:33",
 		"text" : "lcj 4/7/2017 10:56",

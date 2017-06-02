@@ -7,12 +7,13 @@ import traceback
 from functools import wraps
 
 from flask import request, jsonify, current_app, send_from_directory, Response, send_file
-from werkzeug.exceptions import Unauthorized
+from werkzeug.exceptions import Unauthorized, BadRequest
 from werkzeug.utils import secure_filename
 from eve.auth import requires_auth
 from eve_sqlalchemy import sqla_object_to_dict
+from sqlalchemy import func, orm
 
-from frt_server.tables import User, Font, Family, Attachment, AttachmentType, Feedback
+from frt_server.tables import User, Font, Family, Attachment, AttachmentType, Feedback, ThreadSubscription, Thread
 import frt_server.config
 import frt_server.font
 import frt_server.settings
@@ -60,7 +61,7 @@ def register_routes(app):
         username = data.get('username')
         
         if not email or not password or not username:
-            raise Unauthorized('Missing email, password and/or username')
+            raise BadRequest('Missing email, password and/or username')
         else:
             user = User(username=username, email=email, password=password)
             session = app.data.driver.session
@@ -102,7 +103,10 @@ def register_routes(app):
     def family_status(family_id):
         session = app.data.driver.session
         family = session.query(Family).get(family_id)
-        return jsonify({'status': str(family.upload_status), 'error': family.last_upload_error})
+        if not family:
+            return jsonify({'error': 'no such family'}), 404
+
+        return jsonify({'status': str(family.upload_status).split('.')[-1], 'error': family.last_upload_error})
 
     @app.route('/font/<font_id>/convert', methods=['POST'])
     @requires_auth('')
@@ -121,7 +125,9 @@ def register_routes(app):
         if len(unicode_text) < 1:
             return jsonify([])
 
-        return Response(json.dumps(font.convert(unicode_text)),
+        feature_string = data.get('features') or ''
+
+        return Response(json.dumps(font.convert(unicode_text, feature_string)),
                 mimetype='application/json')
 
     @app.route('/font/<font_id>/otf', methods=['GET'])
@@ -285,6 +291,25 @@ def register_routes(app):
     @requires_auth('')
     def upload_feedback(feedback_id):
         return _upload_feedback_image(feedback_id)
+
+    @app.route('/thread/<thread_id>/visit', methods=['PATCH'])
+    @requires_auth('')
+    def update_last_visited(thread_id):
+        session = app.data.driver.session
+        user = app.auth.get_request_auth_value()
+ 
+        if not session.query(Thread).get(thread_id):
+            return jsonify({'error' : 'Thread not found'}), 404
+        try:
+            subscription = session.query(ThreadSubscription).filter_by(user_id = user._id, thread_id = thread_id).one()
+        except orm.exc.NoResultFound:
+            return jsonify({'error' : 'You are not subscribed to this thread'}), 404
+        # should be caught by unique constraint on thread id / user id in database
+        except orm.exc.MultipleResultsFound:
+            return jsonify({'error' : 'Multiple subscriptions found. Please contact the devs about this'}), 500
+        subscription.last_visited = func.now()
+        session.commit()
+        return jsonify(''), 200
 
     if frt_server.config.DEBUG:
         @app.before_request

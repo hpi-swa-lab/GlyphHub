@@ -1,10 +1,9 @@
-lifecycle
+updating
 propagateFont
 
-	self topLevel selectedFont: self font.			
-	self renderer
-		backend: self backend;
-		font: self font.
+	self topLevel selectedFont: self font.
+	uploadPopover family: self family.		
+	self renderer font: self font.
 	
 	versionWidgets
 		removeAllMorphs;

@@ -8,7 +8,7 @@ import os
 class UploadTestCase(TestMinimal):
     def setUp(self):
         super(UploadTestCase, self).setUp()
-        self.login_as('Eva', 'eveisevil')
+        self.login_as('eve@evil.com', 'eveisevil')
 
         self.session = self.connection.session
         self.user = self.session.query(User).one()

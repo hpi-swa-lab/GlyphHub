@@ -1,16 +1,10 @@
 callbacks
 updateThreadsContainer
 
-	| threadsToShow |
 	threadsContainer removeAllMorphs.
-
-	threadsToShow := threads.
-	self showClosedThreads 
-		ifFalse: [threadsToShow := threadsToShow reject: [:thread | thread closed]].		
-	threadsToShow notEmpty
-		ifTrue: [
+	
+	(threads select: [:thread | self showClosedThreads or: [thread isOpen]])
+		ifNotEmptyDo: [:threadsToShow |
 			threadsToShow do: [:thread |
-				threadsContainer add: (FRTThreadPreviewWidget new thread: thread)]]
-		ifFalse: [threadsContainer
-			add: ((BTIcon newFor: #comments) pointSize: 32; alignment: #center);
-			add: ((BTLabel secondarySubHeading: 'Discussions about this font will appear here.') alignment: #center)]
+				FRTThreadPreviewWidget new addTo: threadsContainer withThread: thread]]
+		ifEmpty: [self showNoThreadsNotice]

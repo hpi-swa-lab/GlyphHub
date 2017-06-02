@@ -11,6 +11,7 @@ initialize
 	
 	self
 		withLayout;
+		padding: BTWidget spacing / 2;
 		spacing: BTWidget spacing;
 		vResizing: #shrinkWrap;
 		vertical: false;

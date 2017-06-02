@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 versionHash: aString
 
 	versionHash := aString

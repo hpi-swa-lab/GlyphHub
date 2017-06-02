@@ -1,7 +1,10 @@
-initialize-release
+callbacks
 openCreateCommentPage
 
-	self flag: #todo. " resolve applied OT features "
-	(self font) then: [:font |
+	self font then: [:font |
 		self selectedText ifNotEmptyDo: [:text |
-			FRTThreadCommentCreationPage openNewThreadOn: text font: font in: self topLevel]]
+			FRTThreadCommentCreationPage
+				openNewThreadOn: text
+				features: self selectedOpenTypeFeatures
+				font: font
+				in: self topLevel]]

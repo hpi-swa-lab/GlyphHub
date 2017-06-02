@@ -2,19 +2,9 @@
 	"class" : {
 		"example" : "al 4/6/2017 16:41" },
 	"instance" : {
-		"breadcrumbs" : "lcj 5/20/2017 11:07",
-		"chooseFile" : "lcj 5/9/2017 16:17",
-		"enteringWith:" : "ek 5/11/2017 14:03",
-		"imageFileStream" : "lcj 5/9/2017 16:16",
-		"imageFileStream:" : "lcj 5/9/2017 16:16",
-		"initialize" : "al 5/15/2017 15:33",
-		"initializeChangeAvatarArea" : "al 5/15/2017 15:32",
-		"initializeChangePasswordArea" : "al 5/15/2017 15:32",
-		"initializeChangeUsernameArea" : "al 5/15/2017 15:32",
+		"breadcrumbs" : "TB 5/30/2017 11:23",
+		"enteringWith:" : "al 5/23/2017 15:50",
+		"initialize" : "lcj 5/23/2017 21:59",
 		"initializeHeadingArea" : "al 5/15/2017 15:32",
-		"trySavingAvatar" : "TB 5/11/2017 18:52",
-		"trySavingPassword" : "al 5/15/2017 11:57",
-		"trySavingUsername" : "lcj 5/9/2017 16:24",
-		"updateUserAvatarImage" : "TB 5/11/2017 18:53",
-		"user" : "al 4/6/2017 10:33",
-		"user:" : "lcj 4/9/2017 11:57" } }
+		"user" : "lcj 5/23/2017 21:54",
+		"user:" : "lcj 5/23/2017 21:55" } }

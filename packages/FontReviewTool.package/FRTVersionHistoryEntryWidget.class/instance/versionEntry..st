@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 versionEntry: aVersionEntry
 
 	versionEntry := aVersionEntry.

@@ -6,9 +6,11 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
+		"font",
 		"family",
 		"thread",
-		"author" ],
+		"author",
+		"otherUser" ],
 	"name" : "FRTFontPageTest",
 	"pools" : [
 		 ],

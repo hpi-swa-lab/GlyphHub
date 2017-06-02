@@ -7,10 +7,9 @@
 	"commentStamp" : "TB 3/23/2017 14:12",
 	"instvars" : [
 		"model",
-		"field",
-		"message" ],
+		"field" ],
 	"name" : "BTModelValidationFailure",
 	"pools" : [
 		 ],
-	"super" : "Exception",
+	"super" : "BTValidationFailure",
 	"type" : "normal" }

@@ -2,10 +2,10 @@
 	"class" : {
 		"label:" : "al 5/20/2017 16:21" },
 	"instance" : {
-		"check" : "al 5/20/2017 16:20",
-		"checked" : "al 5/20/2017 16:20",
-		"checked:" : "al 5/20/2017 16:20",
-		"initialize" : "al 5/20/2017 16:20",
+		"checkbox" : "TB 5/31/2017 14:42",
+		"checked" : "TB 5/31/2017 14:42",
+		"checked:" : "TB 5/31/2017 14:42",
+		"initialize" : "TB 5/31/2017 14:41",
 		"label" : "al 5/20/2017 16:20",
 		"label:" : "al 5/20/2017 16:21",
-		"toggleChecked" : "al 5/20/2017 16:21" } }
+		"toggleChecked" : "TB 5/31/2017 14:42" } }

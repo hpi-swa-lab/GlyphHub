@@ -7,13 +7,9 @@
 	"commentStamp" : "lcj 4/6/2017 16:52",
 	"instvars" : [
 		"user",
-		"usernameLabel",
 		"userAvatarImage",
-		"newUsernameField",
-		"newPasswordField1",
-		"newPasswordField2",
-		"uploadedFileLabel",
-		"imageFileStream" ],
+		"page",
+		"usernameLabel" ],
 	"name" : "FRTProfilePage",
 	"pools" : [
 		 ],

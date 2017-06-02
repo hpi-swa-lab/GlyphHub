@@ -1,0 +1,4 @@
+accessing
+selectedOpenTypeFeatures
+
+	^ richText selectedOpenTypeFeatures

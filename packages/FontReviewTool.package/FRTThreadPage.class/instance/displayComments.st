@@ -1,5 +1,7 @@
 loading
 displayComments
 
-	(self thread comments sortedBy: #id) do: [:comment |
-		commentArea add: (FRTCommentWidget new comment: comment)].
+	(self thread comments sortedBy: #createdAt) do: [:comment | 
+		FRTCommentWidget new
+			addTo: commentArea withComment: comment;
+			lastVisited: self subscription lastVisited]

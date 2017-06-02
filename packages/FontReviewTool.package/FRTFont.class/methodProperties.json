@@ -4,6 +4,7 @@
 		"loadExample" : "TB 4/26/2017 14:32",
 		"modelName" : "lcj 4/7/2017 10:43" },
 	"instance" : {
+		"allUniqueThreads" : "TB 5/30/2017 13:14",
 		"author" : "TB 4/5/2017 11:07",
 		"author:" : "ek 4/11/2017 16:02",
 		"codepoints" : "lcj 4/6/2017 14:26",
@@ -18,6 +19,7 @@
 		"glyphs:" : "lcj 4/6/2017 14:27",
 		"latestVersionHash" : "TB 5/19/2017 11:58",
 		"loadAllGlyphNames" : "TB 5/5/2017 11:41",
+		"loadUfoDetails:version:" : "TB 5/24/2017 21:16",
 		"previewGlyphs" : "TB 5/5/2017 11:51",
 		"tags" : "lcj 4/7/2017 11:10",
 		"tags:" : "lcj 4/7/2017 11:33" } }

@@ -7,9 +7,11 @@ mockThread
 		closed: false.
 		
 	glyph := self mockGlyph.
-	thread threadGlyphAssociations add: (FRTThreadGlyphAssociation new glyph: glyph).
-	thread comments add: (FRTComment new
-		text: 'comment text';
-		author: glyph font author).
+	thread threadGlyphAssociations add: (FRTThreadGlyphAssociation new glyph: glyph; stringIndex: 0).
+	thread comments
+		add: (FRTComment new
+			text: 'comment text';
+			author: glyph font author;
+			createdAt: DateAndTime yesterday).
 	
 	^ thread

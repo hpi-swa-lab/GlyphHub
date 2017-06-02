@@ -21,11 +21,11 @@ class HbConvertTestCase(TestMinimal):
         family = self.session.query(Family).get(self.family_id)
         return family.fonts[-1]._id
 
-    def helper_convert_sequence(self, fonts_file, text='Aas', result=[['A', 0], ['a', 1], ['s', 2]]):
+    def helper_convert_sequence(self, fonts_file, text='Aas', result=[['A', 0], ['a', 1], ['s', 2]], features=''):
         """upload the given file, convert a text and assert against the result"""
         font_id = self.helper_upload_font(fonts_file)
 
-        data, status = self.post('font/{}/convert'.format(font_id), {'unicode': text})
+        data, status = self.post('font/{}/convert'.format(font_id), {'unicode': text, 'features': features})
         self.assert200(status)
         self.assertIsNotNone(data)
         self.assertCountEqual(data, result)
@@ -46,3 +46,7 @@ class HbConvertTestCase(TestMinimal):
 
     def test_convert_sequence_with_unknown(self):
         self.helper_convert_sequence('testFiles/RiblonSans/RiblonSans.ufo.zip', 'Aß', [['A', 0], ['.notdef', 1]])
+
+    def test_convert_with_features(self):
+        self.helper_convert_sequence('testFiles/RiblonSans/RiblonSans-withSmcp.glyphs', 'A', [['A.sc', 0]], 'c2sc')
+

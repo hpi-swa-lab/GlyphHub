@@ -1,4 +1,6 @@
 accessing
 glyph
 
-	^ glyph
+	glyph
+		ifNotNil: [^ glyph]
+		ifNil: [^ FRTUndefinedGlyph new]

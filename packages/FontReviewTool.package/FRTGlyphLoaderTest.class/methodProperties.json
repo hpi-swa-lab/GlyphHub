@@ -2,9 +2,12 @@
 	"class" : {
 		 },
 	"instance" : {
-		"glifs" : "TB 5/15/2017 16:26",
+		"componentBasedGlif" : "TB 5/20/2017 22:36",
+		"glifs" : "TB 5/20/2017 22:39",
 		"setUp" : "TB 5/15/2017 14:52",
 		"simpleGlif" : "TB 5/15/2017 14:46",
+		"testFontinfoLoaded" : "TB 5/21/2017 11:17",
 		"testLoadMultipleGlyphs" : "TB 5/15/2017 18:17",
-		"testLoadSimpleGlyph" : "TB 5/15/2017 18:13",
+		"testLoadSimpleGlyph" : "TB 5/21/2017 10:24",
+		"testReadyComponentGlyph" : "TB 5/21/2017 11:12",
 		"testReadyGlyphs" : "TB 5/15/2017 16:36" } }

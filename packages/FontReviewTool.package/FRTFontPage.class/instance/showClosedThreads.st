@@ -1,4 +1,4 @@
-initialize-release
+accessing
 showClosedThreads
 
 	^ showClosedThreadsCheckbox checked

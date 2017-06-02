@@ -1,7 +1,11 @@
-as yet unclassified
+accessing
 font: aFont
 
 	font := aFont.
-	sampleTextEditor font: aFont.
+
+	sampleTextEditor
+		displaySampleTextIfNotEmpty: aFont family standardSampleText;
+		font: aFont.
 	
-	aFont family standardSampleText ifNotNilDo: [:sampleText | sampleTextEditor sampleText: sampleText]
+	about text: font family about.
+	biography text: font author biography

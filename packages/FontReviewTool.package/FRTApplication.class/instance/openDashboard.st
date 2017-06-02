@@ -1,4 +1,4 @@
 actions
 openDashboard
 
-	self openBookmark: (BTPageBookmark page: FRTDashboard)
+	self openBookmark: (BTPageBookmark pageClass: FRTDashboard)

@@ -8,8 +8,10 @@ updateGlyphLinks: aThread
 		ifTrue: [glyphLinkContainer visible: false]
 		ifFalse: [ | button |
 			glyphLinkContainer visible: true.
-			checkboxes := (thread threadGlyphAssociations collect: [:threadGlyph |
-					(BTCheckboxWithLabel label: 'Link comment with ', threadGlyph glyph glyphName) checked: true]).
+			checkboxes := ((thread threadGlyphAssociations sortedBy: #stringIndex) collect: [:threadGlyph |
+				threadGlyph glyph ifNotNil: [
+					threadGlyph glyph glyphName ~= '.notdef' ifTrue: [
+						(BTCheckboxWithLabel label: 'Link comment with ', threadGlyph glyph glyphName) checked: true]]] thenSelect: #notNil).
 			
 			button := ((BTButton label: 'Unlink all')
 				small;
@@ -17,4 +19,6 @@ updateGlyphLinks: aThread
 					
 			glyphLinkContainer
 				add: button;
-				addAll: checkboxes]
+				add: (BTScrollArea new
+					add: (BTPage column
+						addAll: checkboxes))]

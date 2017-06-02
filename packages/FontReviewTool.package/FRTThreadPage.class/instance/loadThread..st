@@ -1,13 +1,16 @@
 loading
 loadThread: aThread
 
-	^ (FRTThread load: aThread id populate: self threadFields from: self backend)
+	^ ((FRTThread load: aThread id populate: self threadFields from: self backend)
 		then: [:newThread |
 			self
 				thread: newThread;
-				updateTitle: newThread;
-				updateCloseButton: newThread;
-				loadGlyphPreviewForThread: newThread;
+				updateTitle: self thread;
+				updateCloseButton: self thread;
+				loadGlyphPreviewForThread: self thread;
+				loadThreadSubscriptionStatus: self thread])
+		then: [
+			self
 				displayComments;
-				loadThreadSubscriptionStatus: newThread;
-				changed].
+				updateLastVisited: self thread;
+				changed]

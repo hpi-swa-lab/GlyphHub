@@ -1,4 +1,6 @@
-as yet unclassified
+mock-data
 glifs
 
-	^ {'simpleGlif' -> self simpleGlif}
+	^ {
+		'simpleGlif' -> self simpleGlif.
+		'componentBasedGlif' -> self componentBasedGlif}

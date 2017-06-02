@@ -1,7 +1,7 @@
 printing
 printOn: aStream
 
-	aStream nextPutAll: 'a Promise'.
+	aStream nextPutAll: 'a BTPromise'.
 	self isResolved ifTrue: [
 		aStream
 			nextPutAll: '(resolved: ';
@@ -11,4 +11,7 @@ printOn: aStream
 		aStream
 			nextPutAll: '(rejected: ';
 			nextPutAll: error printString;
-			nextPutAll: ')']
+			nextPutAll: ')'].
+	self isPending ifTrue: [
+		aStream
+			nextPutAll: '(pending)']

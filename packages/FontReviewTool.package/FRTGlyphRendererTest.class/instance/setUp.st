@@ -1,11 +1,18 @@
 as yet unclassified
 setUp
 
+	| font |
 	super setUp.
 	
 	renderer := FRTGlyphRenderer new
-		fontinfo: self simpleFontinfo.
+		font: (font := self mockFont).
 	
-	renderer loadedGlifs
-		at: 'B' put: self glifSingleClosedCurve;
-		at: 'C' put: self glifSmallClosedCurve
+	self setUpWithoutPagePrepare: [:topLevel |
+		topLevel
+			addEntity: font;
+			extraGlifs: {
+				'singleClosedCurve' -> self glifSingleClosedCurve.
+				'smallClosedCurve' -> self glifSmallClosedCurve}.
+				
+		(self expect: renderer loadDataForAllGlyphs) to resolve]
+	

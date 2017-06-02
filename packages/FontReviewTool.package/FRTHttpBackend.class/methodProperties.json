@@ -1,16 +1,21 @@
 {
 	"class" : {
+		"defaultApiRoolUrl" : "TB 5/29/2017 11:38",
 		"loadExample" : "TB 4/26/2017 14:32" },
 	"instance" : {
-		"convertUnicodeToGlyphNames:of:" : "lcj 4/10/2017 09:55",
+		"convertUnicodeToGlyphNames:features:of:" : "al 6/2/2017 12:02",
 		"downloadFontOtf:" : "al 5/17/2017 14:40",
 		"downloadFontOtf:into:named:" : "lcj 5/16/2017 16:53",
 		"downloadUserAvatar:" : "al 5/15/2017 14:08",
 		"familyStatus:" : "TB 5/20/2017 18:49",
+		"glyphLoader" : "TB 5/24/2017 20:39",
+		"initialize" : "TB 5/24/2017 20:39",
 		"loadUfoDetails:font:" : "lcj 4/9/2017 11:11",
+		"loadUfoDetails:font:versionHash:" : "TB 5/21/2017 10:21",
 		"logout" : "lcj 4/9/2017 13:21",
 		"pickFontToUpload" : "al 5/15/2017 11:40",
 		"pickImageToUpload" : "al 5/15/2017 11:41",
+		"updateLastVisited:" : "lcj 5/22/2017 14:34",
 		"upload:toFamily:" : "al 5/15/2017 15:52",
 		"upload:toFamily:commitMessage:" : "TB 5/14/2017 20:05",
 		"uploadAvatar:" : "al 5/15/2017 15:52",

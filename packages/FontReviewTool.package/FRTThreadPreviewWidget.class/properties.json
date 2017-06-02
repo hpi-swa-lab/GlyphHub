@@ -12,9 +12,10 @@
 		"commentCount",
 		"author",
 		"enteredFromGlyph",
-		"openClosedBadge" ],
+		"latestComment",
+		"closedBadge" ],
 	"name" : "FRTThreadPreviewWidget",
 	"pools" : [
 		 ],
-	"super" : "BTWidget",
+	"super" : "BTClickable",
 	"type" : "normal" }

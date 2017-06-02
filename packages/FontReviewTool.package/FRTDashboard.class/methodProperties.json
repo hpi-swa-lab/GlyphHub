@@ -2,9 +2,12 @@
 	"class" : {
 		 },
 	"instance" : {
-		"breadcrumbs" : "lcj 5/19/2017 14:53",
-		"enteringWith:" : "lcj 5/20/2017 10:44",
+		"breadcrumbs" : "TB 5/30/2017 11:22",
+		"enteringWith:" : "TB 5/30/2017 11:43",
 		"heading" : "lcj 5/18/2017 15:16",
 		"heading:" : "lcj 5/18/2017 15:15",
-		"initialize" : "lcj 5/20/2017 10:54",
-		"loadThreadSubscriptionsFor:" : "lcj 5/20/2017 11:47" } }
+		"initialize" : "TB 5/30/2017 11:42",
+		"initializeMyProjectsPage" : "TB 5/30/2017 11:42",
+		"initializeSubscriptionPage" : "TB 5/30/2017 11:42",
+		"loadThreadSubscriptionsFor:" : "TB 5/31/2017 12:31",
+		"subscriptionFields" : "TB 5/30/2017 11:47" } }

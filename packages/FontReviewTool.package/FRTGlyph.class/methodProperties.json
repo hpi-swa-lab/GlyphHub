@@ -1,14 +1,14 @@
 {
 	"class" : {
 		"associations" : "ek 4/11/2017 14:19",
-		"ensureExists:font:in:" : "TB 5/9/2017 17:15",
+		"ensureExists:font:in:" : "TB 5/29/2017 11:35",
 		"modelName" : "lcj 4/7/2017 10:51" },
 	"instance" : {
 		"font" : "lcj 4/7/2017 10:51",
 		"font:" : "ek 4/11/2017 16:03",
 		"glyphName" : "lcj 4/7/2017 10:51",
 		"glyphName:" : "lcj 4/7/2017 10:51",
-		"loadGlif" : "ek 4/7/2017 14:16",
+		"loadGlif" : "TB 5/24/2017 20:08",
 		"threadGlyphAssociations" : "TB 4/9/2017 12:38",
 		"threadGlyphAssociations:" : "TB 4/9/2017 12:38",
 		"threads" : "TB 5/8/2017 14:07",

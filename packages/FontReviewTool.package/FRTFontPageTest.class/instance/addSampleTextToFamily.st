@@ -7,6 +7,7 @@ addSampleTextToFamily
 	text := FRTSampleText new
 		text: self mockSampleTextJson;
 		title: 'boop';
+		shouldBeInOverview: false;
 		author: author.
 		
 	text families add: family.

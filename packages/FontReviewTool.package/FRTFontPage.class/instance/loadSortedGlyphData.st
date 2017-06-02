@@ -1,6 +1,5 @@
-initialize-release
+loading
 loadSortedGlyphData
-
+	
 	^ self renderer loadDataForAllGlyphs
-		then: [:renderer |
-			self gridWidget glyphNames: (self sortedGlyphNamesFrom: renderer)]
+		then: [self gridWidget glyphNames: (self sortedGlyphNamesFrom: self renderer)]

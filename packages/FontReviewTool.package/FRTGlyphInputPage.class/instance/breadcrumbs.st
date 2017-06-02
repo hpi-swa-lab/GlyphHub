@@ -8,5 +8,5 @@ breadcrumbs
 				add: (BTBreadcrumb
 					icon: #font
 					text: self font fontName
-					bookmark: (BTPageBookmark page: self class input: self font));
+					bookmark: (BTPageBookmark pageClass: self class input: self font));
 				yourself]
