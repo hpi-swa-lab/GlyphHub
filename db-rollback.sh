@@ -3,12 +3,12 @@ set -e
 FILE=$1
 if [ ! -f "$FILE"  ]; then
   echo "$FILE does not exist"
-    exit 1
+  exit 1
 fi
 
 read -p "Create a database backup before resetting? (y/n) "
 echo    # (optional) move to a new line
-if [[ $REPLY =~ ^[Yy]$  ]]
+if [[ $REPLY =~ ^[Yy]$ ]]
 then
   echo "creating backup.."
   /bin/bash db-backup.sh "$HOME/emergency_backups"
