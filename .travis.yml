@@ -1,12 +1,6 @@
 language: smalltalk
 sudo: false
 
-# Select compatible Smalltalk image(s)
-smalltalk:
-  #- Squeak-trunk
-  - Squeak-5.1
-  #- Squeak-5.0
-
 before_script:
   # Move testFiles into smalltalkCI build directory
   - "[[ -d $SMALLTALK_CI_BUILD/BP2016H1 ]] || mkdir -p $SMALLTALK_CI_BUILD/BP2016H1"
@@ -37,3 +31,7 @@ matrix:
       python: "3.5"
       script: python3 setup.py test
       sudo: required
+    - language: smalltalk
+      sudo: false
+      smalltalk:
+        Squeak-5.1
