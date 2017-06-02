@@ -1,4 +1,4 @@
-as yet unclassified
+testing
 testOnlyAuthorCanSave
 
 	self topLevel user: sampleText author.

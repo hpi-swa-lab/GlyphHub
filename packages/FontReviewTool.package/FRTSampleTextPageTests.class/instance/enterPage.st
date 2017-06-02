@@ -1,4 +1,4 @@
-as yet unclassified
+navigation
 enterPage
 
 	self openPage: page with: sampleText

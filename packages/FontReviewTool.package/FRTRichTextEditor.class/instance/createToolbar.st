@@ -2,7 +2,7 @@ initialize-release
 createToolbar
 
 	| newToolbar |
-	saveButton	when: #clicked send: #triggerSaved: to: self with: richText.
+	saveButton when: #clicked send: #triggerSaved: to: self with: richText.
 	newToolbar := BTPage row
 		add: ((BTButton icon: #plus) when: #clicked send: #addEmptyParagraph to: richText);
 		add: self createFontPropertiesGroup;
