@@ -74,6 +74,7 @@ frt_hb_convert_to_glyphnames(PyObject *self, PyObject *args)
 
 	/* Shape it! */
 	hb_shape (hb_font, hb_buffer, features, feature_index);
+	free(features);
 
 	/* Get glyph information and positions out of the buffer. */
 	unsigned int len = hb_buffer_get_length (hb_buffer);
