@@ -5,7 +5,7 @@ from sqlalchemy.orm import joinedload
 
 import os
 
-GIT_COMMIT_HASH_LENGHT = 40
+GIT_COMMIT_HASH_LENGTH = 40
 
 class VersionsTestCase(TestMinimal):
 
@@ -37,7 +37,7 @@ class VersionsTestCase(TestMinimal):
         family = self.get_test_family()
         self.assertEqual(len(family.fonts), 1)
         self.assertEqual(len(family.versions()), 1)
-        self.assertEqual(len(family.versions()[0]['version_hash']), GIT_COMMIT_HASH_LENGHT)
+        self.assertEqual(len(family.versions()[0]['version_hash']), GIT_COMMIT_HASH_LENGTH)
 
     def testMultipleVersions(self):
         self.upload_glyphs_file(None, '-v2')
@@ -46,7 +46,7 @@ class VersionsTestCase(TestMinimal):
         self.assertEqual(len(family.fonts), 1)
         self.assertEqual(len(family.versions()), 2)
         for i in range(0, 2):
-            self.assertEqual(len(family.versions()[i]['version_hash']), GIT_COMMIT_HASH_LENGHT)
+            self.assertEqual(len(family.versions()[i]['version_hash']), GIT_COMMIT_HASH_LENGTH)
 
     def testCommitMessage(self):
         MESSAGE = 'My newest version!'
