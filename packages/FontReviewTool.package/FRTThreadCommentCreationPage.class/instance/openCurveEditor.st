@@ -2,7 +2,9 @@ actions
 openCurveEditor
 
 	| glyph |
-	glyph := FRTGlyphEditor new edit: glyphsPreview glyphNames anyOne atPtSize: 512 fromRenderer: glyphsPreview renderer.
+	glyph := glyphsPreview asEditable
+		pointSize: 512;
+		yourself.
 	
 	(BTDialog title: 'Edit Curves to create diff')
 		content: (BTPage column

@@ -1,0 +1,16 @@
+{
+	"category" : "FontReviewTool-LiveGlyphEditing",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"glyphWidgetArea",
+		"textEntry",
+		"font" ],
+	"name" : "FRTGlyphEditingPage",
+	"pools" : [
+		 ],
+	"super" : "FRTApplicationPage",
+	"type" : "normal" }

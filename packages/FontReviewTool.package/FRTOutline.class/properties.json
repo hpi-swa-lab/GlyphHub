@@ -9,7 +9,8 @@
 		"pointSize",
 		"fontinfo",
 		"glif",
-		"fontUnitsOriginDelta" ],
+		"fontUnitsOriginDelta",
+		"glyphWidget" ],
 	"name" : "FRTOutline",
 	"pools" : [
 		 ],

@@ -3,11 +3,13 @@ ensureExists: aGlyphNameStringCollection font: aFont in: aBackend
 
 	| allGlyphs |
 	^ ((self loadWhere: {#glyphName -> aGlyphNameStringCollection. #font -> aFont} populate: #(font 'font.family') from: aBackend)
-		then: [:glyphs | | existingGlyphs |
+		then: [:glyphs | | glyphsExistingInDatabase |
 			allGlyphs := glyphs asOrderedCollection.
-			existingGlyphs := glyphs collect: #glyphName.
-			((aGlyphNameStringCollection
-				reject: [:glyphName | (existingGlyphs includes: glyphName) or: [glyphName = '.notdef']])
+			glyphsExistingInDatabase := glyphs collect: #glyphName.
+			((aGlyphNameStringCollection 
+				copyWithoutAll: (glyphsExistingInDatabase
+					add: '.notdef';
+					yourself))
 				collect: [:glyphName | self new glyphName: glyphName; font: aFont] as: BTModelList)
 				saveTo: aBackend])
 		then: [:newGlyphs |

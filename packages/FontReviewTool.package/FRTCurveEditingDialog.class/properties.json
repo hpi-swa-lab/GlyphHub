@@ -1,0 +1,16 @@
+{
+	"category" : "FontReviewTool-LiveGlyphEditing",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"outlineArea",
+		"saveButton",
+		"outlines" ],
+	"name" : "FRTCurveEditingDialog",
+	"pools" : [
+		 ],
+	"super" : "BTDialog",
+	"type" : "normal" }
