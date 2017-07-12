@@ -6,11 +6,12 @@ saveComment
 		then: [:thread | | comment |
 			comment := FRTComment new
 				author: self topLevel user;
-				text: commentText text.
+				text: commentText text;
+				thread: thread.
 			
 			self thread comments add: comment.
 			comment saveTo: self backend])
 		then: [:comment | self saveAttachmentTo: comment])
-		then: [:comment | self subscribeToThreadOf: comment])
+		then: [:comment | self subscribeToThread: self thread])
 		then: [:comment | self topLevel openPage: FRTThreadPage new with: {self thread. self enteredFromGlyph}])
 		catch: [:error | self topLevel displayNotification: 'Saving failed. Please try again.' type: #danger]

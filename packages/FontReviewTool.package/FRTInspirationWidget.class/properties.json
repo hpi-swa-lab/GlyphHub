@@ -1,0 +1,14 @@
+{
+	"category" : "FontReviewTool",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "FRTInspirationWidget",
+	"pools" : [
+		 ],
+	"super" : "BTWidget",
+	"type" : "normal" }

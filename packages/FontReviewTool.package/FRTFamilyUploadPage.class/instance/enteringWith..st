@@ -5,7 +5,7 @@ enteringWith: unused
 	familyName text: 'Untitled Family'.
 	biographyText text: (self topLevel user biography ifNil: ['']).
 	
-	((FRTFamily loadWhere: {#author -> self user} populate: #(fonts) from: self backend)
+	^ ((FRTFamily loadWhere: {#author -> self user} populate: #(fonts) from: self backend)
 		then: [:families |
 			families
 				detect: [:family | family fonts isEmpty]

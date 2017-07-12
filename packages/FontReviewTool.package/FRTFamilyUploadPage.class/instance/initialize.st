@@ -3,11 +3,11 @@ initialize
 
 	super initialize.
 	
-	saveButton := ((BTButton text: 'Save Settings')
+	saveButton := (BTButton text: 'Save Settings')
 		colorType: #primary;
 		disabled: true;
 		when: #clicked send: #saveSettings to: self;
-		yourself) align: #(end start).
+		align: #(end start).
 	
 	familyName := (BTTextArea text: 'Untitled Family')
 		placeholder: 'Family Name';
@@ -24,5 +24,7 @@ initialize
 			add: BTWidget spacer;
 			add: loadingIndicator;
 			add: saveButton);
-		add: alertArea;
-		add: self initializeInputArea
+		add: (BTScrollArea new
+			add: (BTPage column
+				add: alertArea;
+				add: self initializeInputArea))

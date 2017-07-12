@@ -4,7 +4,7 @@ initialize
 	super initialize.
 	
 	preview := FRTGlyphWidget new
-		pointSize: 64;
+		pointSize: 128;
 		centered: true.
 	
 	subscriptionButton := BTButton new
