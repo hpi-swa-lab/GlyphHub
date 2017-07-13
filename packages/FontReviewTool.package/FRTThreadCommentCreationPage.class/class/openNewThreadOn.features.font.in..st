@@ -7,7 +7,7 @@ openNewThreadOn: aString features: aFeaturesString font: aFont in: aTopLevel
 	((((aTopLevel backend convertUnicodeToGlyphNames: aString features: aFeaturesString of: aFont)
 		then: [:glyphNames |
 			glyphNamesAndIndices := glyphNames.
-			FRTGlyph ensureExists: (glyphNamesAndIndices collect: #first) font: aFont in: aTopLevel backend.])
+			FRTGlyph ensureExists: ((glyphNamesAndIndices collect: #first) as: Set) font: aFont in: aTopLevel backend.])
 		then: [:glyphs | | glyphsDictionary indexedGlyphs |
 			glyphsDictionary := Dictionary new.
 			glyphs do: [:glyphModel | glyphsDictionary at: glyphModel glyphName put: glyphModel].
